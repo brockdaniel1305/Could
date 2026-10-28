@@ -1,21 +1,23 @@
-# Review – 001 Could Manuel Neuer save the Titanic?
+# Review – 001 Could Manuel Neuer save the Titanic? (v2, Vollbild)
 
-**Render:** 1080×1920, 30 fps, 110.6 s, H.264/AAC. Ton auf −14.8 LUFS normalisiert (true peak −1.1 dB), gemessen, nicht gehört.
+**Render:** 1080×1920, 30 fps, 110.7 s, H.264/AAC. Ton auf −14.8 LUFS normalisiert (true peak −1.1 dB), gemessen, nicht gehört.
+**Stimme in diesem Render:** Kokoro `bm_george` als Vorschau (`--preview`). `narration.json` steht auf VoiceStudio `fable`,
+der finale Ton entsteht lokal mit `sh tools/make_episode.sh episodes/001-neuer-titanic`.
 
-## Entscheidungen
-- Layout: Fakten-Panel oben, Cartoon-Bühne "LIVE RECONSTRUCTION" in der Mitte, Karaoke-Untertitel darunter, unterhalb von 1330 px nur Deko (TikTok-UI).
-- Cartoon: Neuer als Karikatur (grünes Trikot, Nr. 1), Eisberg mit selbstgefälligem Gesicht als Gegenspieler, kochende Linien.
-- Running Gags: Score-Bug "ICEBERG 1 : 0 TITANIC", roter "NO."-Stempel, "Chance he tries anyway: 100 %".
-- Stimme Kokoro `bm_george` (offline, kostenlos). Keine Musik eingebaut, die kann in der TikTok-App kommen.
+## Änderungen gegenüber v1 (Wunsch des Creators)
+- Fakten-Panel und Rahmen entfernt: Die Animation läuft im Vollbild.
+- Fakten sind Cartoon-Karten, die auf ihrem Wort hineinfliegen und wieder verschwinden. Jede Szene startet mit einem Kapitel-Banner.
+- Die untere Bildhälfte zeigt die Unterwasserwelt (90 % des Eisbergs, Fische) bzw. den Strafraum, aus dem Neuer hinausläuft.
 
 ## Geprüft
-- `lint`: 0 Fehler. `check`: 0 Fehler, verbleibend nur Warnungen zu kleiner Deko-Schrift im Cartoon.
-- Snapshots an 20 Pointen-Zeitpunkten und 4 Frames aus dem fertigen MP4 angesehen.
+- `lint` und `check`: 0 Fehler, 0 Warnungen.
+- 27 Snapshots an Pointen-Zeitpunkten und 6 Frames aus dem fertigen MP4 angesehen.
 
-## Nicht geprüft
-- Wie der Ton klingt (nur gemessen). Die Wort-Timings der Untertitel sind teils interpoliert (Zahlen, Namen).
+## Nicht geprüft / offen
+- Die VoiceStudio-Stimme selbst: Von der Cloud aus ist die App nicht erreichbar. Mit ihr ändern sich die Timings,
+  `build_episode.py` und `build_all.sh` ziehen alle Animationen automatisch nach.
+- Wie der Ton klingt (nur gemessen).
 
 ## Schwächste Stellen
-- s5 (Sprint): Neuer läuft auf dem Bootsdeck vor den Schornsteinen, das Ziel "Brücke" ist klein.
-- s6: Nach "He is a pump" steht Neuer fast im Wasser, das Gesicht ist halb verdeckt.
-- Mit mehr Zeit: Kamera-Punch-ins auf die Pointen, eine zweite Figur (Kapitän) in Plan B.
+- s6: Die Wand im Rumpf ist eine große, ruhige Fläche, solange das Wasser noch niedrig steht.
+- s5: Das "!!" des Ausgucks steht am rechten Bildrand, der Ausguck selbst ist außerhalb des Bildes.
