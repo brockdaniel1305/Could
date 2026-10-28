@@ -33,6 +33,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 006 · Gefährliche Szenarien (Züge, Höhe, Feuer …): nie den Unfall zeigen (vorher schneiden), die Lösung ungefährlich machen
+  ("he takes the train") und am Ende ein klarer Satz "Please do not try this." (TikTok-Richtlinien zu gefährlichen Handlungen).
+- 006 · Querverweise zahlen sich aus: die benötigten 7 m Sprunghöhe = Höhe der Chinesischen Mauer aus 003 (gleiches Part wiederverwendet).
 - 005 · Running Gags aus dem echten Leben der Person tragen eine ganze Folge (Haalands Meditations-Jubel als Lösung gegen den Löwen,
   "in the back of the net" gegen den Retiarius). Ein Stimmungs-Barometer (Daumen runter/hoch) füllt die untere Hälfte.
 - 004 · Historische Kriege/NS-Zeit: nie Hitler als Figur, nie NS-Symbole oder Abzeichen (§ 86a StGB, TikTok-Richtlinien), Panzer neutral grau.
@@ -49,6 +52,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- Wechselnder Text (Anzeigetafel, Zähler) immer über einen Proxy-Tween mit `onUpdate` als Funktion der Zeit setzen
+  (`board([[t, text], …])` in `episodes/006-ronaldo-train/src/rail.py`), nicht mit `tl.set(el, {textContent})`.
 - `svgOrigin` nicht für Elemente in verschachtelten, verschobenen Gruppen verwenden (Zeiger flog aus dem Bild). Besser `transformOrigin: "50% 100%"`.
 - `build_episode.py` schneidet die Stille am Anfang und Ende jedes Stimm-Stücks ab und kürzt Satzpausen innerhalb eines Stücks
   auf ~0.22 s (Kokoro lässt 0.35–0.4 s stehen). Nur `||x||` erzeugt längere Pausen.

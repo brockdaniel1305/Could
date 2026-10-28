@@ -1,0 +1,223 @@
+<template>
+  <!-- COULD? scene s7-verdict · full-frame cartoon + flying fact cards. Source: src/s7.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+    .stamp { position: absolute; left: 150px; top: 520px; width: 780px; height: 420px; border: 26px solid #d6332a; border-radius: 34px;
+             display: flex; align-items: center; justify-content: center; font: 900 270px/1 "Inter"; color: #d6332a; opacity: 0;
+             background: rgba(244, 239, 230, 0.2); }
+  </style>
+  <div id="root" data-composition-id="s7-verdict" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s7-verdict-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s7-verdict-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s7-verdict-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s7-verdict-boil)">
+<!-- Station side view, full frame 1080x1920: sky, canopy, platform at the back, departures board (s7-verdict-st-board, text in s7-verdict-st-boardt),
+     tracks with rail top at y=1200, ballast and sleepers below (no text there). -->
+<g id="s7-verdict-st">
+  <rect x="0" y="0" width="1080" height="1920" fill="#a9d3ef" />
+  <g fill="#fff" stroke="#1a1a2e" stroke-width="4"><path d="M640,300 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <path d="M0,560 L1080,560 L1080,600 L0,600 Z" fill="#6b7177" stroke="#1a1a2e" stroke-width="5" />
+  <g stroke="#3a3f48" stroke-width="16"><path d="M140,600 L140,900 M540,600 L540,900 M940,600 L940,900" /></g>
+  <rect x="0" y="900" width="1080" height="200" fill="#b9b2a6" stroke="#1a1a2e" stroke-width="5" />
+  <rect x="0" y="1090" width="1080" height="16" fill="#ffd23f" />
+  <g transform="translate(700,420)"><g id="s7-verdict-st-board"><rect x="0" y="0" width="300" height="120" rx="10" fill="#1d2a5c" stroke="#1a1a2e" stroke-width="6" />
+    <text x="20" y="48" font-family="CouldMono" font-weight="700" font-size="30" fill="#f4efe6">ICE 7</text>
+    <text id="s7-verdict-st-boardt" x="20" y="96" font-family="CouldMono" font-weight="700" font-size="34" fill="#ffd23f">on time</text></g></g>
+  <rect x="0" y="1106" width="1080" height="814" fill="#8a8378" />
+  <g fill="#6f685e"><circle cx="0" cy="1260" r="6" /><circle cx="97" cy="1313" r="7" /><circle cx="194" cy="1366" r="8" /><circle cx="291" cy="1419" r="9" /><circle cx="388" cy="1472" r="10" /><circle cx="485" cy="1525" r="6" /><circle cx="582" cy="1578" r="7" /><circle cx="679" cy="1631" r="8" /><circle cx="776" cy="1684" r="9" /><circle cx="873" cy="1737" r="10" /><circle cx="970" cy="1790" r="6" /><circle cx="1067" cy="1843" r="7" /><circle cx="84" cy="1896" r="8" /><circle cx="181" cy="1309" r="9" /><circle cx="278" cy="1362" r="10" /><circle cx="375" cy="1415" r="6" /><circle cx="472" cy="1468" r="7" /><circle cx="569" cy="1521" r="8" /><circle cx="666" cy="1574" r="9" /><circle cx="763" cy="1627" r="10" /><circle cx="860" cy="1680" r="6" /><circle cx="957" cy="1733" r="7" /><circle cx="1054" cy="1786" r="8" /><circle cx="71" cy="1839" r="9" /><circle cx="168" cy="1892" r="10" /><circle cx="265" cy="1305" r="6" /><circle cx="362" cy="1358" r="7" /><circle cx="459" cy="1411" r="8" /><circle cx="556" cy="1464" r="9" /><circle cx="653" cy="1517" r="10" /><circle cx="750" cy="1570" r="6" /><circle cx="847" cy="1623" r="7" /><circle cx="944" cy="1676" r="8" /><circle cx="1041" cy="1729" r="9" /><circle cx="58" cy="1782" r="10" /><circle cx="155" cy="1835" r="6" /><circle cx="252" cy="1888" r="7" /><circle cx="349" cy="1301" r="8" /><circle cx="446" cy="1354" r="9" /><circle cx="543" cy="1407" r="10" /><circle cx="640" cy="1460" r="6" /><circle cx="737" cy="1513" r="7" /><circle cx="834" cy="1566" r="8" /><circle cx="931" cy="1619" r="9" /><circle cx="1028" cy="1672" r="10" /><circle cx="45" cy="1725" r="6" /><circle cx="142" cy="1778" r="7" /><circle cx="239" cy="1831" r="8" /><circle cx="336" cy="1884" r="9" /><circle cx="433" cy="1297" r="10" /><circle cx="530" cy="1350" r="6" /><circle cx="627" cy="1403" r="7" /><circle cx="724" cy="1456" r="8" /><circle cx="821" cy="1509" r="9" /><circle cx="918" cy="1562" r="10" /><circle cx="1015" cy="1615" r="6" /><circle cx="32" cy="1668" r="7" /><circle cx="129" cy="1721" r="8" /><circle cx="226" cy="1774" r="9" /><circle cx="323" cy="1827" r="10" /><circle cx="420" cy="1880" r="6" /><circle cx="517" cy="1293" r="7" /><circle cx="614" cy="1346" r="8" /><circle cx="711" cy="1399" r="9" /><circle cx="808" cy="1452" r="10" /><circle cx="905" cy="1505" r="6" /><circle cx="1002" cy="1558" r="7" /><circle cx="19" cy="1611" r="8" /><circle cx="116" cy="1664" r="9" /><circle cx="213" cy="1717" r="10" /><circle cx="310" cy="1770" r="6" /><circle cx="407" cy="1823" r="7" /><circle cx="504" cy="1876" r="8" /><circle cx="601" cy="1289" r="9" /><circle cx="698" cy="1342" r="10" /><circle cx="795" cy="1395" r="6" /><circle cx="892" cy="1448" r="7" /><circle cx="989" cy="1501" r="8" /><circle cx="6" cy="1554" r="9" /><circle cx="103" cy="1607" r="10" /><circle cx="200" cy="1660" r="6" /><circle cx="297" cy="1713" r="7" /><circle cx="394" cy="1766" r="8" /><circle cx="491" cy="1819" r="9" /><circle cx="588" cy="1872" r="10" /><circle cx="685" cy="1285" r="6" /><circle cx="782" cy="1338" r="7" /><circle cx="879" cy="1391" r="8" /><circle cx="976" cy="1444" r="9" /><circle cx="1073" cy="1497" r="10" /><circle cx="90" cy="1550" r="6" /><circle cx="187" cy="1603" r="7" /><circle cx="284" cy="1656" r="8" /><circle cx="381" cy="1709" r="9" /><circle cx="478" cy="1762" r="10" /><circle cx="575" cy="1815" r="6" /><circle cx="672" cy="1868" r="7" /><circle cx="769" cy="1281" r="8" /><circle cx="866" cy="1334" r="9" /><circle cx="963" cy="1387" r="10" /><circle cx="1060" cy="1440" r="6" /><circle cx="77" cy="1493" r="7" /><circle cx="174" cy="1546" r="8" /><circle cx="271" cy="1599" r="9" /><circle cx="368" cy="1652" r="10" /><circle cx="465" cy="1705" r="6" /><circle cx="562" cy="1758" r="7" /><circle cx="659" cy="1811" r="8" /><circle cx="756" cy="1864" r="9" /><circle cx="853" cy="1277" r="10" /><circle cx="950" cy="1330" r="6" /><circle cx="1047" cy="1383" r="7" /><circle cx="64" cy="1436" r="8" /><circle cx="161" cy="1489" r="9" /><circle cx="258" cy="1542" r="10" /><circle cx="355" cy="1595" r="6" /><circle cx="452" cy="1648" r="7" /><circle cx="549" cy="1701" r="8" /><circle cx="646" cy="1754" r="9" /><circle cx="743" cy="1807" r="10" /></g>
+  <g fill="#6b4a2a" stroke="#1a1a2e" stroke-width="4"><rect x="10" y="1194" width="70" height="30" rx="4" /><rect x="120" y="1194" width="70" height="30" rx="4" /><rect x="230" y="1194" width="70" height="30" rx="4" /><rect x="340" y="1194" width="70" height="30" rx="4" /><rect x="450" y="1194" width="70" height="30" rx="4" /><rect x="560" y="1194" width="70" height="30" rx="4" /><rect x="670" y="1194" width="70" height="30" rx="4" /><rect x="780" y="1194" width="70" height="30" rx="4" /><rect x="890" y="1194" width="70" height="30" rx="4" /><rect x="1000" y="1194" width="70" height="30" rx="4" /></g>
+  <path d="M0,1200 L1080,1200" stroke="#9aa0a6" stroke-width="12" /><path d="M0,1210 L1080,1210" stroke="#1a1a2e" stroke-width="4" />
+  <g stroke="#5f5a52" stroke-width="18" opacity="0.6"><path d="M60,1400 L-20,1920" /><path d="M220,1400 L140,1920" /><path d="M380,1400 L300,1920" /><path d="M540,1400 L460,1920" /><path d="M700,1400 L620,1920" /><path d="M860,1400 L780,1920" /><path d="M1020,1400 L940,1920" /><path d="M1180,1400 L1100,1920" /></g>
+  <path d="M0,1500 L1080,1500 M0,1700 L1080,1700" stroke="#9aa0a6" stroke-width="16" />
+</g>
+<g transform="translate(0,1200)"><g id="s7-verdict-train"><g transform="translate(200,0) scale(1.2)"><!-- White high-speed train with a red stripe (ICE-style, no logo), side view, nose to the LEFT. 100 px = 1 m vertically at scale 1:
+     roof at y -389 (3.89 m). Origin = rail top under the nose tip. ~1620 long (nose + 3 cars). Animatable: s7-verdict-tt (drive x), s7-verdict-tt-face (eyes),
+     s7-verdict-tt-browL/-browR, s7-verdict-tt-smirk / s7-verdict-tt-o. -->
+<g id="s7-verdict-tt">
+  <rect x="330" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="360" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="430" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="500" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="570" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="640" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="330" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="400" cy="-40" r="34" /><circle cx="480" cy="-40" r="34" /><circle cx="600" cy="-40" r="34" /><circle cx="680" cy="-40" r="34" /></g><rect x="760" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="790" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="860" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="930" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1000" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1070" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="760" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="830" cy="-40" r="34" /><circle cx="910" cy="-40" r="34" /><circle cx="1030" cy="-40" r="34" /><circle cx="1110" cy="-40" r="34" /></g><rect x="1190" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="1220" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1290" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1360" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1430" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1500" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1190" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="1260" cy="-40" r="34" /><circle cx="1340" cy="-40" r="34" /><circle cx="1460" cy="-40" r="34" /><circle cx="1540" cy="-40" r="34" /></g>
+  <path d="M330,-389 L330,-49 L40,-49 Q-10,-49 0,-90 Q40,-250 190,-350 Q250,-389 330,-389 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <path d="M150,-330 Q210,-370 300,-372 L300,-290 L110,-280 Q120,-310 150,-330 Z" fill="#2e3b4e" />
+  <path d="M20,-150 L330,-150 L330,-128 L12,-128 Z" fill="#e0412f" />
+  <g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="150" cy="-40" r="34" /><circle cx="250" cy="-40" r="34" /></g>
+  <g id="s7-verdict-tt-face">
+    <ellipse cx="170" cy="-318" rx="18" ry="20" fill="#fff" stroke="#1a1a2e" stroke-width="4" /><circle cx="164" cy="-316" r="8" fill="#1a1a2e" />
+    <ellipse cx="236" cy="-322" rx="18" ry="20" fill="#fff" stroke="#1a1a2e" stroke-width="4" /><circle cx="230" cy="-320" r="8" fill="#1a1a2e" />
+    <path id="s7-verdict-tt-browL" d="M146,-350 L190,-342" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round" />
+    <path id="s7-verdict-tt-browR" d="M214,-346 L258,-354" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round" />
+    <path id="s7-verdict-tt-smirk" d="M120,-210 Q170,-190 220,-214" fill="none" stroke="#1a1a2e" stroke-width="7" stroke-linecap="round" />
+    <ellipse id="s7-verdict-tt-o" cx="170" cy="-206" rx="18" ry="14" fill="#1a1a2e" opacity="0" />
+  </g>
+</g>
+</g></g></g><g transform="translate(300,1090)"><g id="s7-verdict-kwrap"><g transform="scale(0.85)"><!-- Forward in a plain red/green kit, slick dark hair (Cristiano-Ronaldo-style caricature, not a likeness, no badges).
+     Origin = between the feet. ~330 tall. Same rig ids as keeper.svg.
+     Animatable: s7-verdict-r (whole), s7-verdict-r-body, s7-verdict-r-armL/-armR (rotate, origin top), s7-verdict-r-legL/-legR, s7-verdict-r-head,
+     s7-verdict-r-pupL/-pupR (x/y look), s7-verdict-r-browL/-browR, s7-verdict-r-m-smile / -m-o / -m-flat (show one), s7-verdict-r-lids (blink). -->
+<g id="s7-verdict-r">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s7-verdict-r-body">
+    <g id="s7-verdict-r-legL"><rect x="-32" y="-96" width="26" height="96" rx="10" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="#c8102e" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s7-verdict-r-legR"><rect x="6" y="-96" width="26" height="96" rx="10" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="#c8102e" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#0a6b4a" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#c8102e" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <text id="s7-verdict-r-num" data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#ffd23f" stroke="#1a1a2e" stroke-width="2">7</text>
+    <g transform="translate(-54,-196)"><g id="s7-verdict-r-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s7-verdict-r-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s7-verdict-r-head">
+      <circle cx="-44" cy="4" r="10" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#d9a074" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-46,-10 Q-52,-64 4,-66 Q54,-64 46,-14 Q40,-44 10,-46 Q-30,-48 -46,-10 Z" fill="#2a1a10" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s7-verdict-r-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s7-verdict-r-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s7-verdict-r-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#d9a074" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#d9a074" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s7-verdict-r-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s7-verdict-r-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s7-verdict-r-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s7-verdict-r-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s7-verdict-r-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(560,710) scale(1.4)"><!-- Comic impact burst with a word. Origin = centre. Replace SIUUU!. Animate s7-verdict-siu (pop in, scale). -->
+<g id="s7-verdict-siu">
+  <path d="M0,-90 L22,-40 L78,-62 L48,-12 L100,14 L42,26 L58,84 L10,46 L-26,92 L-30,38 L-92,52 L-52,6 L-96,-34 L-38,-30 L-48,-86 L-8,-48 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <text x="0" y="14" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="#e0412f" stroke="#1a1a2e" stroke-width="2" transform="rotate(-8)">SIUUU!</text>
+</g>
+</g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s7-verdict-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 330px;"><div class="bk">THE VERDICT</div><div class="bt">Could he dodge it?</div></div>
+    <div class="card gold" id="s7-verdict-c-gm" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">IN GERMANY</div><div class="cv">The train might not move</div></div>
+    <div class="card red" id="s7-verdict-c-p1" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">CHANCE HE CLEARS THE ROOF</div><div class="cv">0 %</div></div>
+    <div class="card gold" id="s7-verdict-c-p2" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 560px;"><div class="ck">CHANCE HE CELEBRATES ANYWAY</div><div class="cv"><span id="s7-verdict-p3v">100 %</span></div></div>
+    <div class="card red" id="s7-verdict-c-sf" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">PLEASE</div><div class="cv">Don't try this. Anywhere.</div></div>
+    <div class="stamp" id="s7-verdict-stamp">NO.</div>
+    <div class="dip" id="s7-verdict-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s7-verdict-";
+      const D = 19.563;
+      const C = {"q": 0.943, "no": 5.46, "but": 6.51, "p1": 9.23, "p2": 12.01, "p3": 13.913, "safe": 15.233};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s7-verdict-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s7-verdict"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      // departures board text as a pure function of scene time: steps = [[t, text], ...]
+      const board = (steps) => {
+        const el = document.querySelector(S + "st-boardt");
+        tl.to({}, { duration: D, ease: "none", onUpdate() {
+          const t = this.time(); let txt = steps[0][1];
+          for (const [at, s] of steps) if (t >= at) txt = s;
+          if (el.textContent !== txt) el.textContent = txt;
+        } }, 0);
+      };
+      // jump (feet ~0.7 m = 84 px), spin in the air, land arms down-out: SIUUU
+      const jump = (at, h = 84, air = 0.75) => {
+        tl.to(S + "kwrap", { y: 12, duration: 0.14, ease: "power2.in" }, at - 0.14);
+        tl.to(S + "kwrap", { y: -h, duration: air / 2, ease: "power2.out" }, at);
+        tl.to(S + "kwrap", { y: 0, duration: air / 2, ease: "power2.in" }, at + air / 2);
+      };
+      const siu = (at) => {
+        jump(at);
+        tl.to(S + "kwrap", { scaleX: -1, transformOrigin: "50% 100%", duration: 0.18, ease: "none", yoyo: true, repeat: 1 }, at + 0.02);
+        tl.to(S + "r-num", { scaleX: -1, transformOrigin: "50% 50%", duration: 0.18, ease: "none", yoyo: true, repeat: 1 }, at + 0.02);
+        tl.to(S + "r-armL", { rotation: 40, duration: 0.15 }, at + 0.75);
+        tl.to(S + "r-armR", { rotation: -40, duration: 0.15 }, at + 0.75);
+        tl.to(S + "r-legL", { rotation: 22, duration: 0.15 }, at + 0.75);
+        tl.to(S + "r-legR", { rotation: -22, duration: 0.15 }, at + 0.75);
+        tl.set(S + "r-m-smile", { opacity: 0 }, at + 0.75); tl.set(S + "r-m-o", { opacity: 1 }, at + 0.75);
+      };
+
+      fly("b", 0.1, C.no - 0.15, { from: "top" });
+      board([[0, "+120 min"]]);
+      tl.fromTo(S + "stamp", { opacity: 0, scale: 2.4, rotation: -4 }, { opacity: 1, scale: 1, rotation: -9, duration: 0.18, ease: "power4.in" }, C.no);
+      tl.fromTo(S + "svg", { x: 0 }, { x: 10, duration: 0.04, repeat: 5, yoyo: true }, C.no + 0.18);
+      tl.to(S + "stamp", { opacity: 0, scale: 0.9, duration: 0.25, ease: "power2.in" }, C.but - 0.1);
+      swap(S + "r-m-smile", S + "r-m-o", C.no + 0.2); swap(S + "r-m-o", S + "r-m-smile", C.but + 0.4);
+      fly("gm", C.but, C.p1 - 0.1);
+      tl.to([S + "tt-browL", S + "tt-browR"], { y: 8, duration: 0.3 }, C.but + 0.3);
+      swap(S + "tt-smirk", S + "tt-o", C.but + 0.3);
+      fly("p1", C.p1, C.safe - 0.1);
+      fly("p2", C.p2, C.safe - 0.1, { from: "right" });
+      tl.fromTo(S + "p3v", { opacity: 0 }, { opacity: 1, duration: 0.15 }, C.p3);
+      siu(C.p3 - 0.3);
+      tl.fromTo(S + "siu", { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(3)" }, C.p3 + 0.1);
+      tl.to(S + "siu", { opacity: 0, duration: 0.2 }, C.safe - 0.1);
+      fly("sf", C.safe, null, { from: "top" });
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s7-verdict"] = tl;
+    })();
+  </script>
+</template>

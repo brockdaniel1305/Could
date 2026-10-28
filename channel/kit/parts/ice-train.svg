@@ -1,0 +1,18 @@
+<!-- White high-speed train with a red stripe (ICE-style, no logo), side view, nose to the LEFT. 100 px = 1 m vertically at scale 1:
+     roof at y -389 (3.89 m). Origin = rail top under the nose tip. ~1620 long (nose + 3 cars). Animatable: PFX (drive x), PFX-face (eyes),
+     PFX-browL/-browR, PFX-smirk / PFX-o. -->
+<g id="PFX">
+  <rect x="330" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="360" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="430" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="500" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="570" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="640" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="330" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="400" cy="-40" r="34" /><circle cx="480" cy="-40" r="34" /><circle cx="600" cy="-40" r="34" /><circle cx="680" cy="-40" r="34" /></g><rect x="760" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="790" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="860" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="930" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1000" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1070" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="760" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="830" cy="-40" r="34" /><circle cx="910" cy="-40" r="34" /><circle cx="1030" cy="-40" r="34" /><circle cx="1110" cy="-40" r="34" /></g><rect x="1190" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="1220" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1290" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1360" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1430" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1500" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1190" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="1260" cy="-40" r="34" /><circle cx="1340" cy="-40" r="34" /><circle cx="1460" cy="-40" r="34" /><circle cx="1540" cy="-40" r="34" /></g>
+  <path d="M330,-389 L330,-49 L40,-49 Q-10,-49 0,-90 Q40,-250 190,-350 Q250,-389 330,-389 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <path d="M150,-330 Q210,-370 300,-372 L300,-290 L110,-280 Q120,-310 150,-330 Z" fill="#2e3b4e" />
+  <path d="M20,-150 L330,-150 L330,-128 L12,-128 Z" fill="#e0412f" />
+  <g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="150" cy="-40" r="34" /><circle cx="250" cy="-40" r="34" /></g>
+  <g id="PFX-face">
+    <ellipse cx="170" cy="-318" rx="18" ry="20" fill="#fff" stroke="#1a1a2e" stroke-width="4" /><circle cx="164" cy="-316" r="8" fill="#1a1a2e" />
+    <ellipse cx="236" cy="-322" rx="18" ry="20" fill="#fff" stroke="#1a1a2e" stroke-width="4" /><circle cx="230" cy="-320" r="8" fill="#1a1a2e" />
+    <path id="PFX-browL" d="M146,-350 L190,-342" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round" />
+    <path id="PFX-browR" d="M214,-346 L258,-354" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round" />
+    <path id="PFX-smirk" d="M120,-210 Q170,-190 220,-214" fill="none" stroke="#1a1a2e" stroke-width="7" stroke-linecap="round" />
+    <ellipse id="PFX-o" cx="170" cy="-206" rx="18" ry="14" fill="#1a1a2e" opacity="0" />
+  </g>
+</g>

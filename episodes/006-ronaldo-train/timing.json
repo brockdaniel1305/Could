@@ -1,0 +1,1546 @@
+{
+ "duration": 110.255,
+ "voice": "kokoro:bm_george",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 8.34,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 7.79,
+   "cues": {
+    "ev": 4.03,
+    "sci": 5.558,
+    "long": 6.71
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.493
+    },
+    {
+     "text": "Cristiano",
+     "start": 0.493,
+     "end": 1.11
+    },
+    {
+     "text": "Ronaldo",
+     "start": 1.11,
+     "end": 1.59
+    },
+    {
+     "text": "jump",
+     "start": 1.59,
+     "end": 1.864
+    },
+    {
+     "text": "high",
+     "start": 1.864,
+     "end": 2.139
+    },
+    {
+     "text": "enough",
+     "start": 2.139,
+     "end": 2.55
+    },
+    {
+     "text": "to",
+     "start": 2.55,
+     "end": 2.698
+    },
+    {
+     "text": "dodge",
+     "start": 2.698,
+     "end": 3.068
+    },
+    {
+     "text": "a",
+     "start": 3.068,
+     "end": 3.142
+    },
+    {
+     "text": "moving",
+     "start": 3.142,
+     "end": 3.586
+    },
+    {
+     "text": "train?",
+     "start": 3.586,
+     "end": 4.03
+    },
+    {
+     "text": "We",
+     "start": 4.03,
+     "end": 4.176
+    },
+    {
+     "text": "looked",
+     "start": 4.176,
+     "end": 4.612
+    },
+    {
+     "text": "at",
+     "start": 4.612,
+     "end": 4.758
+    },
+    {
+     "text": "the",
+     "start": 4.758,
+     "end": 4.976
+    },
+    {
+     "text": "evidence.",
+     "start": 4.976,
+     "end": 5.558
+    },
+    {
+     "text": "Scientifically.",
+     "start": 5.558,
+     "end": 6.65
+    },
+    {
+     "text": "From",
+     "start": 6.71,
+     "end": 7.21
+    },
+    {
+     "text": "the",
+     "start": 7.21,
+     "end": 7.585
+    },
+    {
+     "text": "platform.",
+     "start": 7.585,
+     "end": 8.71
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s2-ronaldo",
+   "start": 8.34,
+   "duration": 16.967,
+   "voice": "assets/voice/s2-ronaldo.wav",
+   "voiceStart": 0.15,
+   "speech": 16.417,
+   "cues": {
+    "name": 1.481,
+    "h": 3.098,
+    "hdr": 5.95,
+    "nba": 10.61,
+    "siu": 13.437,
+    "word": 15.957
+   },
+   "words": [
+    {
+     "text": "On",
+     "start": 0.15,
+     "end": 0.34
+    },
+    {
+     "text": "the",
+     "start": 0.34,
+     "end": 0.625
+    },
+    {
+     "text": "platform:",
+     "start": 0.625,
+     "end": 1.481
+    },
+    {
+     "text": "Cristiano",
+     "start": 1.481,
+     "end": 2.337
+    },
+    {
+     "text": "Ronaldo.",
+     "start": 2.337,
+     "end": 3.098
+    },
+    {
+     "text": "1.87",
+     "start": 3.098,
+     "end": 3.505
+    },
+    {
+     "text": "metres",
+     "start": 3.505,
+     "end": 4.048
+    },
+    {
+     "text": "of",
+     "start": 4.048,
+     "end": 4.239
+    },
+    {
+     "text": "Portuguese",
+     "start": 4.239,
+     "end": 5.189
+    },
+    {
+     "text": "forward.",
+     "start": 5.189,
+     "end": 5.95
+    },
+    {
+     "text": "In",
+     "start": 5.95,
+     "end": 6.172
+    },
+    {
+     "text": "2019,",
+     "start": 6.172,
+     "end": 6.727
+    },
+    {
+     "text": "he",
+     "start": 6.727,
+     "end": 6.949
+    },
+    {
+     "text": "headed",
+     "start": 6.949,
+     "end": 7.614
+    },
+    {
+     "text": "a",
+     "start": 7.614,
+     "end": 7.725
+    },
+    {
+     "text": "ball",
+     "start": 7.725,
+     "end": 8.169
+    },
+    {
+     "text": "at",
+     "start": 8.169,
+     "end": 8.391
+    },
+    {
+     "text": "a",
+     "start": 8.391,
+     "end": 8.502
+    },
+    {
+     "text": "height",
+     "start": 8.502,
+     "end": 9.168
+    },
+    {
+     "text": "of",
+     "start": 9.168,
+     "end": 9.39
+    },
+    {
+     "text": "2.56",
+     "start": 9.39,
+     "end": 9.878
+    },
+    {
+     "text": "metres.",
+     "start": 9.878,
+     "end": 10.61
+    },
+    {
+     "text": "A",
+     "start": 10.61,
+     "end": 10.689
+    },
+    {
+     "text": "coach",
+     "start": 10.689,
+     "end": 11.082
+    },
+    {
+     "text": "compared",
+     "start": 11.082,
+     "end": 11.712
+    },
+    {
+     "text": "him",
+     "start": 11.712,
+     "end": 11.948
+    },
+    {
+     "text": "to",
+     "start": 11.948,
+     "end": 12.105
+    },
+    {
+     "text": "an",
+     "start": 12.105,
+     "end": 12.263
+    },
+    {
+     "text": "NBA",
+     "start": 12.263,
+     "end": 12.499
+    },
+    {
+     "text": "player.",
+     "start": 12.499,
+     "end": 13.05
+    },
+    {
+     "text": "He",
+     "start": 13.437,
+     "end": 13.595
+    },
+    {
+     "text": "lands",
+     "start": 13.595,
+     "end": 13.988
+    },
+    {
+     "text": "every",
+     "start": 13.988,
+     "end": 14.382
+    },
+    {
+     "text": "jump",
+     "start": 14.382,
+     "end": 14.697
+    },
+    {
+     "text": "with",
+     "start": 14.697,
+     "end": 15.012
+    },
+    {
+     "text": "the",
+     "start": 15.012,
+     "end": 15.248
+    },
+    {
+     "text": "same",
+     "start": 15.248,
+     "end": 15.563
+    },
+    {
+     "text": "word.",
+     "start": 15.563,
+     "end": 15.957
+    },
+    {
+     "text": "Siuuu.",
+     "start": 15.957,
+     "end": 16.567
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s3-train",
+   "start": 25.307,
+   "duration": 12.925,
+   "voice": "assets/voice/s3-train.wav",
+   "voiceStart": 0.15,
+   "speech": 12.375,
+   "cues": {
+    "name": 1.283,
+    "h": 3.456,
+    "len": 4.872,
+    "v": 6.667,
+    "late": 10.505
+   },
+   "words": [
+    {
+     "text": "On",
+     "start": 0.15,
+     "end": 0.339
+    },
+    {
+     "text": "the",
+     "start": 0.339,
+     "end": 0.622
+    },
+    {
+     "text": "tracks:",
+     "start": 0.622,
+     "end": 1.283
+    },
+    {
+     "text": "a",
+     "start": 1.283,
+     "end": 1.378
+    },
+    {
+     "text": "German",
+     "start": 1.378,
+     "end": 1.944
+    },
+    {
+     "text": "high",
+     "start": 1.944,
+     "end": 2.38
+    },
+    {
+     "text": "speed",
+     "start": 2.38,
+     "end": 2.889
+    },
+    {
+     "text": "train.",
+     "start": 2.889,
+     "end": 3.456
+    },
+    {
+     "text": "3.89",
+     "start": 3.456,
+     "end": 3.861
+    },
+    {
+     "text": "metres",
+     "start": 3.861,
+     "end": 4.4
+    },
+    {
+     "text": "tall.",
+     "start": 4.4,
+     "end": 4.872
+    },
+    {
+     "text": "About",
+     "start": 4.872,
+     "end": 5.344
+    },
+    {
+     "text": "two",
+     "start": 5.344,
+     "end": 5.537
+    },
+    {
+     "text": "hundred",
+     "start": 5.537,
+     "end": 5.885
+    },
+    {
+     "text": "metres",
+     "start": 5.885,
+     "end": 6.194
+    },
+    {
+     "text": "long.",
+     "start": 6.194,
+     "end": 6.667
+    },
+    {
+     "text": "Top",
+     "start": 6.667,
+     "end": 6.95
+    },
+    {
+     "text": "speed",
+     "start": 6.95,
+     "end": 7.394
+    },
+    {
+     "text": "in",
+     "start": 7.394,
+     "end": 7.572
+    },
+    {
+     "text": "service:",
+     "start": 7.572,
+     "end": 8.283
+    },
+    {
+     "text": "three",
+     "start": 8.283,
+     "end": 8.572
+    },
+    {
+     "text": "hundred",
+     "start": 8.572,
+     "end": 8.944
+    },
+    {
+     "text": "kilometres",
+     "start": 8.944,
+     "end": 9.439
+    },
+    {
+     "text": "per",
+     "start": 9.439,
+     "end": 9.706
+    },
+    {
+     "text": "hour.",
+     "start": 9.706,
+     "end": 10.15
+    },
+    {
+     "text": "Arrival",
+     "start": 10.505,
+     "end": 11.141
+    },
+    {
+     "text": "time:",
+     "start": 11.141,
+     "end": 11.505
+    },
+    {
+     "text": "theoretical.",
+     "start": 11.505,
+     "end": 12.505
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-height",
+   "start": 38.232,
+   "duration": 14.935,
+   "voice": "assets/voice/s4-height.wav",
+   "voiceStart": 0.15,
+   "speech": 14.385,
+   "cues": {
+    "t": 0.999,
+    "need": 1.77,
+    "has": 5.49,
+    "short": 9.65,
+    "slow": 11.805
+   },
+   "words": [
+    {
+     "text": "Problem",
+     "start": 0.15,
+     "end": 0.69
+    },
+    {
+     "text": "one.",
+     "start": 0.69,
+     "end": 0.999
+    },
+    {
+     "text": "The",
+     "start": 0.999,
+     "end": 1.23
+    },
+    {
+     "text": "height.",
+     "start": 1.23,
+     "end": 1.77
+    },
+    {
+     "text": "To",
+     "start": 1.77,
+     "end": 1.956
+    },
+    {
+     "text": "clear",
+     "start": 1.956,
+     "end": 2.421
+    },
+    {
+     "text": "the",
+     "start": 2.421,
+     "end": 2.7
+    },
+    {
+     "text": "roof,",
+     "start": 2.7,
+     "end": 3.165
+    },
+    {
+     "text": "his",
+     "start": 3.165,
+     "end": 3.444
+    },
+    {
+     "text": "feet",
+     "start": 3.444,
+     "end": 3.816
+    },
+    {
+     "text": "must",
+     "start": 3.816,
+     "end": 4.188
+    },
+    {
+     "text": "pass",
+     "start": 4.188,
+     "end": 4.56
+    },
+    {
+     "text": "three",
+     "start": 4.56,
+     "end": 4.784
+    },
+    {
+     "text": "point",
+     "start": 4.784,
+     "end": 5.009
+    },
+    {
+     "text": "nine",
+     "start": 5.009,
+     "end": 5.201
+    },
+    {
+     "text": "metres.",
+     "start": 5.201,
+     "end": 5.49
+    },
+    {
+     "text": "His",
+     "start": 5.49,
+     "end": 5.679
+    },
+    {
+     "text": "famous",
+     "start": 5.679,
+     "end": 6.056
+    },
+    {
+     "text": "header",
+     "start": 6.056,
+     "end": 6.433
+    },
+    {
+     "text": "lifted",
+     "start": 6.433,
+     "end": 6.81
+    },
+    {
+     "text": "his",
+     "start": 6.81,
+     "end": 6.999
+    },
+    {
+     "text": "feet",
+     "start": 6.999,
+     "end": 7.25
+    },
+    {
+     "text": "about",
+     "start": 7.25,
+     "end": 7.637
+    },
+    {
+     "text": "seventy",
+     "start": 7.637,
+     "end": 8.049
+    },
+    {
+     "text": "centimetres",
+     "start": 8.049,
+     "end": 8.644
+    },
+    {
+     "text": "off",
+     "start": 8.644,
+     "end": 8.876
+    },
+    {
+     "text": "the",
+     "start": 8.876,
+     "end": 9.108
+    },
+    {
+     "text": "ground.",
+     "start": 9.108,
+     "end": 9.65
+    },
+    {
+     "text": "He",
+     "start": 9.65,
+     "end": 9.79
+    },
+    {
+     "text": "is",
+     "start": 9.79,
+     "end": 9.93
+    },
+    {
+     "text": "roughly",
+     "start": 9.93,
+     "end": 10.42
+    },
+    {
+     "text": "three",
+     "start": 10.42,
+     "end": 10.77
+    },
+    {
+     "text": "metres",
+     "start": 10.77,
+     "end": 11.19
+    },
+    {
+     "text": "short.",
+     "start": 11.19,
+     "end": 11.61
+    },
+    {
+     "text": "The",
+     "start": 11.805,
+     "end": 12.043
+    },
+    {
+     "text": "train",
+     "start": 12.043,
+     "end": 12.44
+    },
+    {
+     "text": "does",
+     "start": 12.44,
+     "end": 12.758
+    },
+    {
+     "text": "not",
+     "start": 12.758,
+     "end": 12.996
+    },
+    {
+     "text": "slow",
+     "start": 12.996,
+     "end": 13.314
+    },
+    {
+     "text": "down",
+     "start": 13.314,
+     "end": 13.631
+    },
+    {
+     "text": "for",
+     "start": 13.631,
+     "end": 13.87
+    },
+    {
+     "text": "legends.",
+     "start": 13.87,
+     "end": 14.505
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh",
+     "cue": "slow",
+     "offset": 0.3,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s5-hang",
+   "start": 53.167,
+   "duration": 17.56,
+   "voice": "assets/voice/s5-hang.wav",
+   "voiceStart": 0.15,
+   "speech": 17.01,
+   "cues": {
+    "t": 1.14,
+    "pass": 1.95,
+    "air": 7.13,
+    "need": 10.57,
+    "wall": 14.29
+   },
+   "words": [
+    {
+     "text": "Problem",
+     "start": 0.15,
+     "end": 0.78
+    },
+    {
+     "text": "two.",
+     "start": 0.78,
+     "end": 1.14
+    },
+    {
+     "text": "Hang",
+     "start": 1.14,
+     "end": 1.5
+    },
+    {
+     "text": "time.",
+     "start": 1.5,
+     "end": 1.95
+    },
+    {
+     "text": "At",
+     "start": 1.95,
+     "end": 2.119
+    },
+    {
+     "text": "three",
+     "start": 2.119,
+     "end": 2.393
+    },
+    {
+     "text": "hundred",
+     "start": 2.393,
+     "end": 2.745
+    },
+    {
+     "text": "kilometres",
+     "start": 2.745,
+     "end": 3.215
+    },
+    {
+     "text": "per",
+     "start": 3.215,
+     "end": 3.468
+    },
+    {
+     "text": "hour,",
+     "start": 3.468,
+     "end": 3.89
+    },
+    {
+     "text": "the",
+     "start": 3.89,
+     "end": 4.168
+    },
+    {
+     "text": "whole",
+     "start": 4.168,
+     "end": 4.631
+    },
+    {
+     "text": "train",
+     "start": 4.631,
+     "end": 5.093
+    },
+    {
+     "text": "needs",
+     "start": 5.093,
+     "end": 5.556
+    },
+    {
+     "text": "two",
+     "start": 5.556,
+     "end": 5.633
+    },
+    {
+     "text": "point",
+     "start": 5.633,
+     "end": 5.741
+    },
+    {
+     "text": "four",
+     "start": 5.741,
+     "end": 5.834
+    },
+    {
+     "text": "seconds",
+     "start": 5.834,
+     "end": 6.482
+    },
+    {
+     "text": "to",
+     "start": 6.482,
+     "end": 6.667
+    },
+    {
+     "text": "pass.",
+     "start": 6.667,
+     "end": 7.13
+    },
+    {
+     "text": "Ronaldo",
+     "start": 7.13,
+     "end": 7.574
+    },
+    {
+     "text": "stays",
+     "start": 7.574,
+     "end": 7.891
+    },
+    {
+     "text": "in",
+     "start": 7.891,
+     "end": 8.018
+    },
+    {
+     "text": "the",
+     "start": 8.018,
+     "end": 8.208
+    },
+    {
+     "text": "air",
+     "start": 8.208,
+     "end": 8.398
+    },
+    {
+     "text": "for",
+     "start": 8.398,
+     "end": 8.589
+    },
+    {
+     "text": "about",
+     "start": 8.589,
+     "end": 8.906
+    },
+    {
+     "text": "three",
+     "start": 8.906,
+     "end": 9.223
+    },
+    {
+     "text": "quarters",
+     "start": 9.223,
+     "end": 9.73
+    },
+    {
+     "text": "of",
+     "start": 9.73,
+     "end": 9.898
+    },
+    {
+     "text": "a",
+     "start": 9.898,
+     "end": 9.982
+    },
+    {
+     "text": "second.",
+     "start": 9.982,
+     "end": 10.57
+    },
+    {
+     "text": "To",
+     "start": 10.57,
+     "end": 10.707
+    },
+    {
+     "text": "stay",
+     "start": 10.707,
+     "end": 10.981
+    },
+    {
+     "text": "up",
+     "start": 10.981,
+     "end": 11.118
+    },
+    {
+     "text": "long",
+     "start": 11.118,
+     "end": 11.392
+    },
+    {
+     "text": "enough,",
+     "start": 11.392,
+     "end": 11.871
+    },
+    {
+     "text": "he",
+     "start": 11.871,
+     "end": 12.008
+    },
+    {
+     "text": "would",
+     "start": 12.008,
+     "end": 12.35
+    },
+    {
+     "text": "have",
+     "start": 12.35,
+     "end": 12.624
+    },
+    {
+     "text": "to",
+     "start": 12.624,
+     "end": 12.761
+    },
+    {
+     "text": "jump",
+     "start": 12.761,
+     "end": 13.035
+    },
+    {
+     "text": "seven",
+     "start": 13.035,
+     "end": 13.377
+    },
+    {
+     "text": "metres",
+     "start": 13.377,
+     "end": 13.788
+    },
+    {
+     "text": "high.",
+     "start": 13.788,
+     "end": 14.13
+    },
+    {
+     "text": "That",
+     "start": 14.29,
+     "end": 14.597
+    },
+    {
+     "text": "is",
+     "start": 14.597,
+     "end": 14.751
+    },
+    {
+     "text": "the",
+     "start": 14.751,
+     "end": 14.981
+    },
+    {
+     "text": "height",
+     "start": 14.981,
+     "end": 15.441
+    },
+    {
+     "text": "of",
+     "start": 15.441,
+     "end": 15.595
+    },
+    {
+     "text": "the",
+     "start": 15.595,
+     "end": 15.825
+    },
+    {
+     "text": "Great",
+     "start": 15.825,
+     "end": 16.209
+    },
+    {
+     "text": "Wall",
+     "start": 16.209,
+     "end": 16.516
+    },
+    {
+     "text": "of",
+     "start": 16.516,
+     "end": 16.669
+    },
+    {
+     "text": "China.",
+     "start": 16.669,
+     "end": 17.13
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s6-timetable",
+   "start": 70.727,
+   "duration": 13.375,
+   "voice": "assets/voice/s6-timetable.wav",
+   "voiceStart": 0.15,
+   "speech": 12.825,
+   "cues": {
+    "t": 1.2,
+    "db": 2.25,
+    "wait": 7.983,
+    "again": 9.575,
+    "board": 10.275
+   },
+   "words": [
+    {
+     "text": "Problem",
+     "start": 0.15,
+     "end": 0.715
+    },
+    {
+     "text": "three.",
+     "start": 0.715,
+     "end": 1.2
+    },
+    {
+     "text": "The",
+     "start": 1.2,
+     "end": 1.442
+    },
+    {
+     "text": "timetable.",
+     "start": 1.442,
+     "end": 2.25
+    },
+    {
+     "text": "In",
+     "start": 2.25,
+     "end": 2.471
+    },
+    {
+     "text": "2025,",
+     "start": 2.471,
+     "end": 3.024
+    },
+    {
+     "text": "only",
+     "start": 3.024,
+     "end": 3.466
+    },
+    {
+     "text": "sixty",
+     "start": 3.466,
+     "end": 3.611
+    },
+    {
+     "text": "percent",
+     "start": 3.611,
+     "end": 3.797
+    },
+    {
+     "text": "of",
+     "start": 3.797,
+     "end": 4.018
+    },
+    {
+     "text": "German",
+     "start": 4.018,
+     "end": 4.681
+    },
+    {
+     "text": "long",
+     "start": 4.681,
+     "end": 5.123
+    },
+    {
+     "text": "distance",
+     "start": 5.123,
+     "end": 6.007
+    },
+    {
+     "text": "trains",
+     "start": 6.007,
+     "end": 6.67
+    },
+    {
+     "text": "arrived",
+     "start": 6.67,
+     "end": 7.327
+    },
+    {
+     "text": "on",
+     "start": 7.327,
+     "end": 7.514
+    },
+    {
+     "text": "time.",
+     "start": 7.514,
+     "end": 7.983
+    },
+    {
+     "text": "So",
+     "start": 7.983,
+     "end": 8.171
+    },
+    {
+     "text": "Ronaldo",
+     "start": 8.171,
+     "end": 8.827
+    },
+    {
+     "text": "waits.",
+     "start": 8.827,
+     "end": 9.39
+    },
+    {
+     "text": "And",
+     "start": 9.575,
+     "end": 9.808
+    },
+    {
+     "text": "waits.",
+     "start": 9.808,
+     "end": 10.275
+    },
+    {
+     "text": "Then",
+     "start": 10.275,
+     "end": 10.586
+    },
+    {
+     "text": "he",
+     "start": 10.586,
+     "end": 10.742
+    },
+    {
+     "text": "gives",
+     "start": 10.742,
+     "end": 11.131
+    },
+    {
+     "text": "up",
+     "start": 11.131,
+     "end": 11.286
+    },
+    {
+     "text": "and",
+     "start": 11.286,
+     "end": 11.519
+    },
+    {
+     "text": "simply",
+     "start": 11.519,
+     "end": 11.986
+    },
+    {
+     "text": "takes",
+     "start": 11.986,
+     "end": 12.375
+    },
+    {
+     "text": "the",
+     "start": 12.375,
+     "end": 12.608
+    },
+    {
+     "text": "train.",
+     "start": 12.608,
+     "end": 13.075
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s7-verdict",
+   "start": 84.102,
+   "duration": 19.563,
+   "voice": "assets/voice/s7-verdict.wav",
+   "voiceStart": 0.15,
+   "speech": 18.413,
+   "cues": {
+    "q": 0.943,
+    "no": 5.46,
+    "but": 6.51,
+    "p1": 9.23,
+    "p2": 12.01,
+    "p3": 13.913,
+    "safe": 15.233
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.366
+    },
+    {
+     "text": "verdict.",
+     "start": 0.366,
+     "end": 0.871
+    },
+    {
+     "text": "Could",
+     "start": 0.943,
+     "end": 1.304
+    },
+    {
+     "text": "Cristiano",
+     "start": 1.304,
+     "end": 1.953
+    },
+    {
+     "text": "Ronaldo",
+     "start": 1.953,
+     "end": 2.458
+    },
+    {
+     "text": "jump",
+     "start": 2.458,
+     "end": 2.746
+    },
+    {
+     "text": "high",
+     "start": 2.746,
+     "end": 3.035
+    },
+    {
+     "text": "enough",
+     "start": 3.035,
+     "end": 3.468
+    },
+    {
+     "text": "to",
+     "start": 3.468,
+     "end": 3.612
+    },
+    {
+     "text": "dodge",
+     "start": 3.612,
+     "end": 3.972
+    },
+    {
+     "text": "a",
+     "start": 3.972,
+     "end": 4.045
+    },
+    {
+     "text": "moving",
+     "start": 4.045,
+     "end": 4.477
+    },
+    {
+     "text": "train?",
+     "start": 4.477,
+     "end": 4.91
+    },
+    {
+     "text": "No.",
+     "start": 5.46,
+     "end": 5.96
+    },
+    {
+     "text": "But",
+     "start": 6.51,
+     "end": 6.725
+    },
+    {
+     "text": "in",
+     "start": 6.725,
+     "end": 6.868
+    },
+    {
+     "text": "Germany,",
+     "start": 6.868,
+     "end": 7.441
+    },
+    {
+     "text": "the",
+     "start": 7.441,
+     "end": 7.655
+    },
+    {
+     "text": "train",
+     "start": 7.655,
+     "end": 8.013
+    },
+    {
+     "text": "might",
+     "start": 8.013,
+     "end": 8.371
+    },
+    {
+     "text": "not",
+     "start": 8.371,
+     "end": 8.586
+    },
+    {
+     "text": "be",
+     "start": 8.586,
+     "end": 8.729
+    },
+    {
+     "text": "moving.",
+     "start": 8.729,
+     "end": 9.23
+    },
+    {
+     "text": "Chance",
+     "start": 9.23,
+     "end": 9.897
+    },
+    {
+     "text": "he",
+     "start": 9.897,
+     "end": 10.12
+    },
+    {
+     "text": "clears",
+     "start": 10.12,
+     "end": 10.787
+    },
+    {
+     "text": "the",
+     "start": 10.787,
+     "end": 11.12
+    },
+    {
+     "text": "roof:",
+     "start": 11.12,
+     "end": 11.676
+    },
+    {
+     "text": "zero",
+     "start": 11.676,
+     "end": 11.801
+    },
+    {
+     "text": "percent.",
+     "start": 11.801,
+     "end": 12.01
+    },
+    {
+     "text": "Chance",
+     "start": 12.01,
+     "end": 12.437
+    },
+    {
+     "text": "he",
+     "start": 12.437,
+     "end": 12.58
+    },
+    {
+     "text": "celebrates",
+     "start": 12.58,
+     "end": 13.292
+    },
+    {
+     "text": "anyway:",
+     "start": 13.292,
+     "end": 13.79
+    },
+    {
+     "text": "one",
+     "start": 13.913,
+     "end": 14.253
+    },
+    {
+     "text": "hundred.",
+     "start": 14.253,
+     "end": 14.933
+    },
+    {
+     "text": "Please",
+     "start": 15.233,
+     "end": 15.764
+    },
+    {
+     "text": "do",
+     "start": 15.764,
+     "end": 15.94
+    },
+    {
+     "text": "not",
+     "start": 15.94,
+     "end": 16.206
+    },
+    {
+     "text": "try",
+     "start": 16.206,
+     "end": 16.471
+    },
+    {
+     "text": "this.",
+     "start": 16.471,
+     "end": 16.913
+    },
+    {
+     "text": "At",
+     "start": 16.913,
+     "end": 17.09
+    },
+    {
+     "text": "home,",
+     "start": 17.09,
+     "end": 17.444
+    },
+    {
+     "text": "or",
+     "start": 17.444,
+     "end": 17.62
+    },
+    {
+     "text": "at",
+     "start": 17.62,
+     "end": 17.797
+    },
+    {
+     "text": "a",
+     "start": 17.797,
+     "end": 17.886
+    },
+    {
+     "text": "station.",
+     "start": 17.886,
+     "end": 18.593
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "no",
+     "offset": 0.14,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s8-outro",
+   "start": 103.665,
+   "duration": 6.59,
+   "voice": "assets/voice/s8-outro.wav",
+   "voiceStart": 0.15,
+   "speech": 4.84,
+   "cues": {
+    "c": 3.47
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.489
+    },
+    {
+     "text": "you",
+     "start": 0.489,
+     "end": 0.692
+    },
+    {
+     "text": "imagine",
+     "start": 0.692,
+     "end": 1.166
+    },
+    {
+     "text": "another",
+     "start": 1.166,
+     "end": 1.641
+    },
+    {
+     "text": "scenario",
+     "start": 1.641,
+     "end": 2.183
+    },
+    {
+     "text": "that",
+     "start": 2.183,
+     "end": 2.454
+    },
+    {
+     "text": "we",
+     "start": 2.454,
+     "end": 2.589
+    },
+    {
+     "text": "should",
+     "start": 2.589,
+     "end": 2.996
+    },
+    {
+     "text": "do",
+     "start": 2.996,
+     "end": 3.131
+    },
+    {
+     "text": "next?",
+     "start": 3.131,
+     "end": 3.47
+    },
+    {
+     "text": "Write",
+     "start": 3.47,
+     "end": 3.865
+    },
+    {
+     "text": "it",
+     "start": 3.865,
+     "end": 4.023
+    },
+    {
+     "text": "in",
+     "start": 4.023,
+     "end": 4.181
+    },
+    {
+     "text": "the",
+     "start": 4.181,
+     "end": 4.419
+    },
+    {
+     "text": "comments.",
+     "start": 4.419,
+     "end": 5.13
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}
