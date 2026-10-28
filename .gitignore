@@ -1,0 +1,4 @@
+*.mp4
+.build/
+voices/
+__pycache__/

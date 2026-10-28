@@ -1,0 +1,144 @@
+{
+  "id": "001",
+  "title": "Could Manuel Neuer save the Titanic?",
+  "scenes": [
+    {
+      "type": "title",
+      "kicker": "CASE FILE No. 001",
+      "headline": "Could Manuel Neuer save the Titanic?",
+      "vo": "Could Manuel Neuer save the Titanic from sinking? We looked at the evidence. Scientifically. And for far too long."
+    },
+    {
+      "type": "profile",
+      "label": "SUBJECT A",
+      "name": "RMS Titanic",
+      "sub": "Passenger liner · {1912|nineteen twelve}",
+      "initials": "T",
+      "stats": [
+        [
+          "Displacement",
+          "52,310 t"
+        ],
+        [
+          "Top speed",
+          "~23 knots"
+        ],
+        [
+          "Lifeboats",
+          "20"
+        ],
+        [
+          "Confidence",
+          "Unsinkable"
+        ]
+      ],
+      "vo": "The R M S Titanic. Fifty two thousand tonnes of Edwardian confidence. Practically unsinkable. In April {1912|nineteen twelve}, it met an iceberg. The iceberg won."
+    },
+    {
+      "type": "profile",
+      "label": "SUBJECT B",
+      "name": "Manuel Neuer",
+      "sub": "Goalkeeper · World Champion {2014|twenty fourteen}",
+      "initials": "MN",
+      "stats": [
+        [
+          "Height",
+          "1.93 m"
+        ],
+        [
+          "Position",
+          "Sweeper-keeper"
+        ],
+        [
+          "Shots stopped",
+          "Thousands"
+        ],
+        [
+          "Icebergs stopped",
+          "0"
+        ]
+      ],
+      "vo": "Manuel Neuer. One point nine three metres of German goalkeeper. World champion. Inventor of leaving his own goal for no apparent reason. He has stopped thousands of fast-moving objects. None of them were icebergs."
+    },
+    {
+      "type": "compare",
+      "heading": "PLAN A",
+      "title": "The Punch",
+      "rows": [
+        [
+          "Football",
+          "0.43 kg",
+          0.03
+        ],
+        [
+          "Iceberg (est.)",
+          "1,500,000,000 kg",
+          1.6
+        ]
+      ],
+      "result": "≈ 3.5 billion footballs",
+      "vo": "Plan A. The punch. A football weighs zero point four three kilograms. The iceberg: an estimated one point five million tonnes. That is three and a half billion footballs. A busy evening, even for Neuer."
+    },
+    {
+      "type": "compare",
+      "heading": "PLAN B",
+      "title": "The Sweeper-Keeper",
+      "rows": [
+        [
+          "Warning time",
+          "~37 s",
+          0.74
+        ],
+        [
+          "Neuer sprints 269 m deck",
+          "~34 s",
+          0.68
+        ]
+      ],
+      "result": "3 seconds to spare",
+      "vo": "Plan B. The sweeper-keeper. The lookout spotted the iceberg about thirty seven seconds before impact. Neuer sprints the two hundred and sixty nine metre deck in thirty four. He reaches the bridge with three seconds to spare, and does what goalkeepers do best. He shouts."
+    },
+    {
+      "type": "compare",
+      "heading": "PLAN C",
+      "title": "The Bucket",
+      "rows": [
+        [
+          "Water in (est.)",
+          "~6,700 L / s",
+          1.6
+        ],
+        [
+          "One goalkeeper scoop",
+          "2 L",
+          0.02
+        ]
+      ],
+      "result": "3,350 scoops per second",
+      "vo": "Plan C. The bucket. Water entered the ship at an estimated four hundred tonnes per minute. At two litres per scoop, Neuer needs three thousand, three hundred scoops per second. At that point, he is not a goalkeeper. He is a pump."
+    },
+    {
+      "type": "verdict",
+      "heading": "THE VERDICT",
+      "stamp": "NO.",
+      "lines": [
+        [
+          "Chance of success",
+          "0.03 %"
+        ],
+        [
+          "Chance he tries anyway",
+          "100 %"
+        ]
+      ],
+      "vo": "The verdict. Could Manuel Neuer save the Titanic? No. But no goalkeeper in history would have come further off his line. Chance of success: zero point zero three percent. Chance he tries anyway: one hundred."
+    },
+    {
+      "type": "outro",
+      "headline": "Who should we send next?",
+      "sub": "Comment your matchup",
+      "vo": "Who should we send next? Tell us in the comments."
+    }
+  ],
+  "caption": "Could Manuel Neuer save the Titanic? We did the maths. Nobody asked. 🧊⚽ #could #manuelneuer #titanic #documentary #football #whatif #fyp"
+}
