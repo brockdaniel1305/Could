@@ -1,6 +1,8 @@
 # Review – 004 Could Dayot Upamecano have stopped Hitler from conquering France?
 
-**Render:** 1080×1920, 30 fps, 110.8 s. Ton −14.9 LUFS (true peak −1.5 dB), gemessen, nicht gehört.
+**Render (v2):** 1080×1920, 30 fps, 99.1 s. Ton −14.8 LUFS (true peak −1.5 dB), gemessen, nicht gehört.
+v2 nach Feedback: Aussprache ("Dah-yot Oopah-mekano", Maginot, Ardennes) über `channel/pronunciation.json`, unnötige Pausen entfernt,
+Satzpausen auf ~0.22 s, wortgenaue Timings. Längere Stille nur noch nach der Schlusspointe (1.3 s) und am Ende.
 **Stimme:** Kokoro-Vorschau; `narration.json` steht auf VoiceStudio `fable` (lokal `sh tools/make_episode.sh episodes/004-upamecano-1940`).
 
 ## Aufbau
