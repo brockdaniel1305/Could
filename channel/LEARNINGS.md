@@ -5,6 +5,8 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-28 · 004 · Bei Fußballer-Folgen darf (und soll, wenn gewünscht) der Erzähler **stark sarkastisch** loben
+  ("one of the best centre backs in the world right now. Genuinely."). Die Karten spielen mit ("SARCASM LEVEL: Genuinely zero", "*mostly").
 - 2026-10-28 · ab 003 · **Jedes Video endet mit dem Satz: "Could you imagine another scenario that we should do next? Write it in the comments."**
   Outro-Banner: NEXT CASE / "Could you imagine another scenario?", Karte: WRITE IT IN THE COMMENTS ↓ ↓ ↓.
 - 2026-10-28 · 002 · "perfekt, genau so müssen die Videos aussehen": 002 (Bolt vs T-Rex) ist zusammen mit 001 v2 die Referenz.
@@ -27,6 +29,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 004 · Historische Kriege/NS-Zeit: nie Hitler als Figur, nie NS-Symbole oder Abzeichen (§ 86a StGB, TikTok-Richtlinien), Panzer neutral grau.
+  Der Witz zielt nur auf den "Helden" der Folge. Den Creator vorher kurz auf das Reichweiten-Risiko solcher Titel hinweisen.
 - 003 · Physik-Gags gewinnen, wenn das Bild maßstabsgetreu ist (100 px/m, Höhenlineal am Rand) und die Bahnen echt gerechnet werden
   (`episodes/003-curry-wall/src/shot.py`). Querverweise auf frühere Folgen ("Faster than Usain Bolt") verbinden die Serie.
 - 003 · Auch Bauwerke bekommen ein selbstgefälliges Gesicht (Mauer), das passt zum Running Gag mit Eisberg und T-Rex.
@@ -39,6 +43,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- GSAP-`y`/`x` niemals auf ein `<g>` tweenen, das selbst ein `transform="translate(...)"` trägt: GSAP übernimmt die Verschiebung als x/y
+  und ein absolutes `y: 0` springt an den Bildrand. Immer `<g transform=…><g id=…>` verschachteln.
 - `src/build_all.sh` baut nur `s[0-9]*.py`. Hilfsmodule der Folge (z. B. `race.py`, `shot.py`) dürfen also nicht mit `s<Ziffer>` beginnen.
 - Dreht sich eine Figur mit `scaleX: -1` um, auch die Rückennummer (`PFX-num`) zurückspiegeln.
 - Bei schräg gestellten Karten meldet `check` eine Überlappung zwischen Beschriftung und Wert. Karten tragen deshalb `data-layout-allow-overlap`.

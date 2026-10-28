@@ -1,0 +1,23 @@
+<!-- Cartoon tank, side view, facing LEFT. Plain grey, no insignia. Origin = ground under the centre. ~300 long, ~170 tall.
+     Animatable: PFX (drive x), PFX-body (bob), PFX-turret (recoil), PFX-wheels (rotate each .wh), PFX-browL/-browR, PFX-smirk / PFX-grin / PFX-o. -->
+<g id="PFX">
+  <ellipse cx="0" cy="4" rx="150" ry="12" fill="#000" opacity="0.25" />
+  <g id="PFX-body">
+    <rect x="-150" y="-62" width="300" height="60" rx="30" fill="#3d4038" stroke="#1a1a2e" stroke-width="6" />
+    <g id="PFX-wheels" fill="#8a8e80" stroke="#1a1a2e" stroke-width="4">
+      <circle class="wh" cx="-112" cy="-32" r="20" /><circle class="wh" cx="-56" cy="-32" r="20" /><circle class="wh" cx="0" cy="-32" r="20" /><circle class="wh" cx="56" cy="-32" r="20" /><circle class="wh" cx="112" cy="-32" r="20" />
+    </g>
+    <path d="M-160,-62 L-120,-108 L130,-108 L150,-62 Z" fill="#7b7f6e" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+    <g id="PFX-turret">
+      <path d="M-300,-138 L-80,-138 L-80,-124 L-300,-124 Z" fill="#6b6f60" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-90,-108 Q-90,-172 0,-172 Q80,-172 84,-108 Z" fill="#8a8e7c" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <ellipse cx="-44" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-48" cy="-139" r="5" fill="#1a1a2e" />
+      <ellipse cx="-8" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-12" cy="-139" r="5" fill="#1a1a2e" />
+      <path id="PFX-browL" d="M-60,-160 L-30,-154" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="PFX-browR" d="M-22,-154 L8,-160" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="PFX-smirk" d="M-52,-118 Q-30,-110 -6,-122" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="PFX-grin" d="M-56,-122 Q-30,-100 -2,-124 Z" fill="#1a1a2e" opacity="0" />
+      <ellipse id="PFX-o" cx="-30" cy="-118" rx="9" ry="8" fill="#1a1a2e" opacity="0" />
+    </g>
+  </g>
+</g>

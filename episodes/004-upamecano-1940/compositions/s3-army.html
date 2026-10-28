@@ -1,0 +1,295 @@
+<template>
+  <!-- COULD? scene s3-army · full-frame cartoon + flying fact cards. Source: src/s3.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  .banner .bt { font-size: 74px; }
+  </style>
+  <div id="root" data-composition-id="s3-army" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s3-army-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s3-army-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s3-army-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s3-army-boil)">
+
+<defs><linearGradient id="s3-army-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd0f0" /><stop offset="1" stop-color="#e6f1dc" /></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="1920" fill="url(#s3-army-sky)" />
+<g fill="#fff" stroke="#1a1a2e" stroke-width="4"><path id="s3-army-cl1" d="M130,330 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path id="s3-army-cl2" d="M700,260 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+<path d="M0,820 Q180,700 360,790 Q540,690 720,780 Q900,700 1080,790 L1080,1000 L0,1000 Z" fill="#8cbf7a" stroke="#1a1a2e" stroke-width="5" />
+
+<rect x="0" y="910" width="1080" height="1010" fill="#5aa04c" />
+<g fill="#4f9443"><rect x="0" y="910" width="135" height="1010" /><rect x="270" y="910" width="135" height="1010" /><rect x="540" y="910" width="135" height="1010" /><rect x="810" y="910" width="135" height="1010" /></g>
+<path d="M0,910 L1080,910" stroke="#1a1a2e" stroke-width="5" />
+<g id="s3-army-lines" stroke="#f4efe6" stroke-width="8" fill="none" opacity="0.85">
+  <path d="M0,1190 L1080,1190" /><path d="M540,930 L540,1340" /><ellipse cx="540" cy="1190" rx="170" ry="60" />
+</g><g id="s3-army-forest" opacity="0"><g transform="translate(80,1000) scale(1.0)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s3-army-ft0">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(300,1020) scale(1.1)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s3-army-ft1">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(560,1000) scale(1.0)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s3-army-ft2">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(820,1020) scale(1.15)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s3-army-ft3">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(1010,1000) scale(1.0)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s3-army-ft4">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g></g><g transform="translate(260,1150)"><g id="s3-army-mag"><!-- Maginot Line bunker segment, side view. Origin = ground centre. ~520 wide, ~210 tall. -->
+<g id="s3-army-mg">
+  <path d="M-260,0 L-220,-170 L220,-170 L260,0 Z" fill="#9aa0a6" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <rect x="-160" y="-130" width="90" height="26" rx="6" fill="#1a1a2e" /><rect x="70" y="-130" width="90" height="26" rx="6" fill="#1a1a2e" />
+  <path d="M-60,-170 Q0,-230 60,-170 Z" fill="#80868c" stroke="#1a1a2e" stroke-width="6" />
+  <path d="M-220,-170 L220,-170" stroke="#6b7177" stroke-width="10" />
+</g>
+</g></g><g transform="translate(1300,1150)"><g id="s3-army-k0"><g transform="scale(0.85)"><!-- Cartoon tank, side view, facing LEFT. Plain grey, no insignia. Origin = ground under the centre. ~300 long, ~170 tall.
+     Animatable: s3-army-k0t (drive x), s3-army-k0t-body (bob), s3-army-k0t-turret (recoil), s3-army-k0t-wheels (rotate each .wh), s3-army-k0t-browL/-browR, s3-army-k0t-smirk / s3-army-k0t-grin / s3-army-k0t-o. -->
+<g id="s3-army-k0t">
+  <ellipse cx="0" cy="4" rx="150" ry="12" fill="#000" opacity="0.25" />
+  <g id="s3-army-k0t-body">
+    <rect x="-150" y="-62" width="300" height="60" rx="30" fill="#3d4038" stroke="#1a1a2e" stroke-width="6" />
+    <g id="s3-army-k0t-wheels" fill="#8a8e80" stroke="#1a1a2e" stroke-width="4">
+      <circle class="wh" cx="-112" cy="-32" r="20" /><circle class="wh" cx="-56" cy="-32" r="20" /><circle class="wh" cx="0" cy="-32" r="20" /><circle class="wh" cx="56" cy="-32" r="20" /><circle class="wh" cx="112" cy="-32" r="20" />
+    </g>
+    <path d="M-160,-62 L-120,-108 L130,-108 L150,-62 Z" fill="#7b7f6e" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+    <g id="s3-army-k0t-turret">
+      <path d="M-300,-138 L-80,-138 L-80,-124 L-300,-124 Z" fill="#6b6f60" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-90,-108 Q-90,-172 0,-172 Q80,-172 84,-108 Z" fill="#8a8e7c" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <ellipse cx="-44" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-48" cy="-139" r="5" fill="#1a1a2e" />
+      <ellipse cx="-8" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-12" cy="-139" r="5" fill="#1a1a2e" />
+      <path id="s3-army-k0t-browL" d="M-60,-160 L-30,-154" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k0t-browR" d="M-22,-154 L8,-160" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k0t-smirk" d="M-52,-118 Q-30,-110 -6,-122" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s3-army-k0t-grin" d="M-56,-122 Q-30,-100 -2,-124 Z" fill="#1a1a2e" opacity="0" />
+      <ellipse id="s3-army-k0t-o" cx="-30" cy="-118" rx="9" ry="8" fill="#1a1a2e" opacity="0" />
+    </g>
+  </g>
+</g>
+</g></g></g><g transform="translate(1630,1110)"><g id="s3-army-k1"><g transform="scale(0.85)"><!-- Cartoon tank, side view, facing LEFT. Plain grey, no insignia. Origin = ground under the centre. ~300 long, ~170 tall.
+     Animatable: s3-army-k1t (drive x), s3-army-k1t-body (bob), s3-army-k1t-turret (recoil), s3-army-k1t-wheels (rotate each .wh), s3-army-k1t-browL/-browR, s3-army-k1t-smirk / s3-army-k1t-grin / s3-army-k1t-o. -->
+<g id="s3-army-k1t">
+  <ellipse cx="0" cy="4" rx="150" ry="12" fill="#000" opacity="0.25" />
+  <g id="s3-army-k1t-body">
+    <rect x="-150" y="-62" width="300" height="60" rx="30" fill="#3d4038" stroke="#1a1a2e" stroke-width="6" />
+    <g id="s3-army-k1t-wheels" fill="#8a8e80" stroke="#1a1a2e" stroke-width="4">
+      <circle class="wh" cx="-112" cy="-32" r="20" /><circle class="wh" cx="-56" cy="-32" r="20" /><circle class="wh" cx="0" cy="-32" r="20" /><circle class="wh" cx="56" cy="-32" r="20" /><circle class="wh" cx="112" cy="-32" r="20" />
+    </g>
+    <path d="M-160,-62 L-120,-108 L130,-108 L150,-62 Z" fill="#7b7f6e" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+    <g id="s3-army-k1t-turret">
+      <path d="M-300,-138 L-80,-138 L-80,-124 L-300,-124 Z" fill="#6b6f60" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-90,-108 Q-90,-172 0,-172 Q80,-172 84,-108 Z" fill="#8a8e7c" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <ellipse cx="-44" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-48" cy="-139" r="5" fill="#1a1a2e" />
+      <ellipse cx="-8" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-12" cy="-139" r="5" fill="#1a1a2e" />
+      <path id="s3-army-k1t-browL" d="M-60,-160 L-30,-154" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k1t-browR" d="M-22,-154 L8,-160" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k1t-smirk" d="M-52,-118 Q-30,-110 -6,-122" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s3-army-k1t-grin" d="M-56,-122 Q-30,-100 -2,-124 Z" fill="#1a1a2e" opacity="0" />
+      <ellipse id="s3-army-k1t-o" cx="-30" cy="-118" rx="9" ry="8" fill="#1a1a2e" opacity="0" />
+    </g>
+  </g>
+</g>
+</g></g></g><g transform="translate(1960,1150)"><g id="s3-army-k2"><g transform="scale(0.85)"><!-- Cartoon tank, side view, facing LEFT. Plain grey, no insignia. Origin = ground under the centre. ~300 long, ~170 tall.
+     Animatable: s3-army-k2t (drive x), s3-army-k2t-body (bob), s3-army-k2t-turret (recoil), s3-army-k2t-wheels (rotate each .wh), s3-army-k2t-browL/-browR, s3-army-k2t-smirk / s3-army-k2t-grin / s3-army-k2t-o. -->
+<g id="s3-army-k2t">
+  <ellipse cx="0" cy="4" rx="150" ry="12" fill="#000" opacity="0.25" />
+  <g id="s3-army-k2t-body">
+    <rect x="-150" y="-62" width="300" height="60" rx="30" fill="#3d4038" stroke="#1a1a2e" stroke-width="6" />
+    <g id="s3-army-k2t-wheels" fill="#8a8e80" stroke="#1a1a2e" stroke-width="4">
+      <circle class="wh" cx="-112" cy="-32" r="20" /><circle class="wh" cx="-56" cy="-32" r="20" /><circle class="wh" cx="0" cy="-32" r="20" /><circle class="wh" cx="56" cy="-32" r="20" /><circle class="wh" cx="112" cy="-32" r="20" />
+    </g>
+    <path d="M-160,-62 L-120,-108 L130,-108 L150,-62 Z" fill="#7b7f6e" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+    <g id="s3-army-k2t-turret">
+      <path d="M-300,-138 L-80,-138 L-80,-124 L-300,-124 Z" fill="#6b6f60" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-90,-108 Q-90,-172 0,-172 Q80,-172 84,-108 Z" fill="#8a8e7c" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <ellipse cx="-44" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-48" cy="-139" r="5" fill="#1a1a2e" />
+      <ellipse cx="-8" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-12" cy="-139" r="5" fill="#1a1a2e" />
+      <path id="s3-army-k2t-browL" d="M-60,-160 L-30,-154" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k2t-browR" d="M-22,-154 L8,-160" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k2t-smirk" d="M-52,-118 Q-30,-110 -6,-122" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s3-army-k2t-grin" d="M-56,-122 Q-30,-100 -2,-124 Z" fill="#1a1a2e" opacity="0" />
+      <ellipse id="s3-army-k2t-o" cx="-30" cy="-118" rx="9" ry="8" fill="#1a1a2e" opacity="0" />
+    </g>
+  </g>
+</g>
+</g></g></g><g transform="translate(2290,1110)"><g id="s3-army-k3"><g transform="scale(0.85)"><!-- Cartoon tank, side view, facing LEFT. Plain grey, no insignia. Origin = ground under the centre. ~300 long, ~170 tall.
+     Animatable: s3-army-k3t (drive x), s3-army-k3t-body (bob), s3-army-k3t-turret (recoil), s3-army-k3t-wheels (rotate each .wh), s3-army-k3t-browL/-browR, s3-army-k3t-smirk / s3-army-k3t-grin / s3-army-k3t-o. -->
+<g id="s3-army-k3t">
+  <ellipse cx="0" cy="4" rx="150" ry="12" fill="#000" opacity="0.25" />
+  <g id="s3-army-k3t-body">
+    <rect x="-150" y="-62" width="300" height="60" rx="30" fill="#3d4038" stroke="#1a1a2e" stroke-width="6" />
+    <g id="s3-army-k3t-wheels" fill="#8a8e80" stroke="#1a1a2e" stroke-width="4">
+      <circle class="wh" cx="-112" cy="-32" r="20" /><circle class="wh" cx="-56" cy="-32" r="20" /><circle class="wh" cx="0" cy="-32" r="20" /><circle class="wh" cx="56" cy="-32" r="20" /><circle class="wh" cx="112" cy="-32" r="20" />
+    </g>
+    <path d="M-160,-62 L-120,-108 L130,-108 L150,-62 Z" fill="#7b7f6e" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+    <g id="s3-army-k3t-turret">
+      <path d="M-300,-138 L-80,-138 L-80,-124 L-300,-124 Z" fill="#6b6f60" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-90,-108 Q-90,-172 0,-172 Q80,-172 84,-108 Z" fill="#8a8e7c" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <ellipse cx="-44" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-48" cy="-139" r="5" fill="#1a1a2e" />
+      <ellipse cx="-8" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-12" cy="-139" r="5" fill="#1a1a2e" />
+      <path id="s3-army-k3t-browL" d="M-60,-160 L-30,-154" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k3t-browR" d="M-22,-154 L8,-160" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k3t-smirk" d="M-52,-118 Q-30,-110 -6,-122" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s3-army-k3t-grin" d="M-56,-122 Q-30,-100 -2,-124 Z" fill="#1a1a2e" opacity="0" />
+      <ellipse id="s3-army-k3t-o" cx="-30" cy="-118" rx="9" ry="8" fill="#1a1a2e" opacity="0" />
+    </g>
+  </g>
+</g>
+</g></g></g><g transform="translate(2620,1150)"><g id="s3-army-k4"><g transform="scale(0.85)"><!-- Cartoon tank, side view, facing LEFT. Plain grey, no insignia. Origin = ground under the centre. ~300 long, ~170 tall.
+     Animatable: s3-army-k4t (drive x), s3-army-k4t-body (bob), s3-army-k4t-turret (recoil), s3-army-k4t-wheels (rotate each .wh), s3-army-k4t-browL/-browR, s3-army-k4t-smirk / s3-army-k4t-grin / s3-army-k4t-o. -->
+<g id="s3-army-k4t">
+  <ellipse cx="0" cy="4" rx="150" ry="12" fill="#000" opacity="0.25" />
+  <g id="s3-army-k4t-body">
+    <rect x="-150" y="-62" width="300" height="60" rx="30" fill="#3d4038" stroke="#1a1a2e" stroke-width="6" />
+    <g id="s3-army-k4t-wheels" fill="#8a8e80" stroke="#1a1a2e" stroke-width="4">
+      <circle class="wh" cx="-112" cy="-32" r="20" /><circle class="wh" cx="-56" cy="-32" r="20" /><circle class="wh" cx="0" cy="-32" r="20" /><circle class="wh" cx="56" cy="-32" r="20" /><circle class="wh" cx="112" cy="-32" r="20" />
+    </g>
+    <path d="M-160,-62 L-120,-108 L130,-108 L150,-62 Z" fill="#7b7f6e" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+    <g id="s3-army-k4t-turret">
+      <path d="M-300,-138 L-80,-138 L-80,-124 L-300,-124 Z" fill="#6b6f60" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-90,-108 Q-90,-172 0,-172 Q80,-172 84,-108 Z" fill="#8a8e7c" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <ellipse cx="-44" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-48" cy="-139" r="5" fill="#1a1a2e" />
+      <ellipse cx="-8" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-12" cy="-139" r="5" fill="#1a1a2e" />
+      <path id="s3-army-k4t-browL" d="M-60,-160 L-30,-154" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k4t-browR" d="M-22,-154 L8,-160" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s3-army-k4t-smirk" d="M-52,-118 Q-30,-110 -6,-122" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s3-army-k4t-grin" d="M-56,-122 Q-30,-100 -2,-124 Z" fill="#1a1a2e" opacity="0" />
+      <ellipse id="s3-army-k4t-o" cx="-30" cy="-118" rx="9" ry="8" fill="#1a1a2e" opacity="0" />
+    </g>
+  </g>
+</g>
+</g></g></g>
+<g id="s3-army-board">
+  <rect x="50" y="1370" width="980" height="500" rx="26" fill="#23412f" stroke="#7a5230" stroke-width="18" />
+  <g stroke="#e8efe6" stroke-width="5" fill="none" opacity="0.75"><rect x="100" y="1420" width="880" height="400" rx="6" /><path d="M540,1420 L540,1820" /><circle cx="540" cy="1620" r="70" /></g>
+  <g id="s3-army-def" fill="#4f7cff" stroke="#e8efe6" stroke-width="4">
+    <circle id="s3-army-d0" cx="360" cy="1480" r="18" /><circle id="s3-army-d1" cx="360" cy="1580" r="22" /><circle id="s3-army-d2" cx="360" cy="1680" r="18" /><circle id="s3-army-d3" cx="360" cy="1770" r="18" />
+  </g>
+  <g id="s3-army-att" stroke="#c9ccc2" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path id="s3-army-a0" d="M940,1480 Q700,1460 420,1500" /><path id="s3-army-a1" d="M940,1600 Q700,1620 420,1600" /><path id="s3-army-a2" d="M940,1730 Q700,1760 420,1720" />
+  </g>
+</g><g id="s3-army-mline" opacity="0"><rect x="300" y="1440" width="34" height="360" rx="8" fill="#9aa0a6" stroke="#e8efe6" stroke-width="4" /></g><path id="s3-army-route" d="M940,1600 Q860,1420 600,1440 Q380,1440 300,1400 Q200,1390 140,1460" fill="none" stroke="#c9ccc2" stroke-width="10" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="1200" />
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s3-army-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 330px;"><div class="bk">IN ATTACK</div><div class="bt">The German Army, 1940</div></div>
+    <div class="card " id="s3-army-c-m" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 540px;"><div class="ck">SOLDIERS</div><div class="cv">~3 million</div></div>
+    <div class="card gold" id="s3-army-c-t" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 540px;"><div class="ck">TANKS</div><div class="cv">~2,500</div></div>
+    <div class="card " id="s3-army-c-mg" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">MAGINOT LINE</div><div class="cv">~320 km of bunkers</div></div>
+    <div class="card red" id="s3-army-c-ar" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">ROUTE</div><div class="cv">Around it</div></div>
+    <div class="card gold" id="s3-army-c-ad" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 560px;"><div class="ck">VIA</div><div class="cv">The Ardennes</div></div>
+    <div class="dip" id="s3-army-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s3-army-";
+      const D = 14.853;
+      const C = {"name": 0.921, "men": 2.817, "tanks": 4.892, "mag": 7.618, "around": 10.349, "ard": 13.102};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s3-army-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s3-army"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      tl.set(S + "a0", { opacity: 0 }, 0); tl.set([S + "a1", S + "a2"], { opacity: 0 }, 0);
+      fly("b", C.name, C.mag - 0.1);
+      fly("m", C.men, C.tanks - 0.1, { from: "right" });
+      fly("t", C.tanks, C.mag - 0.1, { from: "right" });
+      // the column rolls in from the east
+      for (let i = 0; i < 5; i++) {
+        tl.fromTo(S + "k" + i, { x: 0 }, { x: -840, duration: 4.2, ease: "power1.out" }, C.name + i * 0.35);
+        tl.fromTo(S + "k" + i + "t-body", { y: 0 }, { y: -3, duration: 0.12, repeat: R(D, 0.12), yoyo: true }, 0);
+      }
+      // the Maginot Line rises ... the arrow goes around it
+      tl.fromTo(S + "mag", { y: 260, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.6)" }, C.mag);
+      tl.fromTo(S + "mline", { opacity: 0 }, { opacity: 1, duration: 0.3 }, C.mag + 0.2);
+      fly("mg", C.mag + 0.2, C.ard - 0.1);
+      tl.fromTo(S + "route", { strokeDashoffset: 1200 }, { strokeDashoffset: 0, duration: 1.6, ease: "power2.inOut" }, C.around);
+      fly("ar", C.around + 0.3, null, { from: "right" });
+      for (let i = 0; i < 5; i++) tl.to(S + "k" + i, { x: -840 - 1400, duration: 2.2, ease: "power2.in" }, C.around + 0.6 + i * 0.15);
+      // ... through the Ardennes
+      tl.fromTo(S + "forest", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.6)" }, C.ard);
+      fly("ad", C.ard + 0.2, null);
+      tl.to(S + "mag", { y: 260, duration: 0.5, ease: "power2.in" }, C.ard);
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s3-army"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,262 @@
+<template>
+  <!-- COULD? scene s5-tackle · full-frame cartoon + flying fact cards. Source: src/s5.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+  </style>
+  <div id="root" data-composition-id="s5-tackle" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s5-tackle-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s5-tackle-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s5-tackle-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s5-tackle-boil)">
+
+<defs><linearGradient id="s5-tackle-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd0f0" /><stop offset="1" stop-color="#e6f1dc" /></linearGradient></defs>
+<rect x="0" y="0" width="1080" height="1920" fill="url(#s5-tackle-sky)" />
+<g fill="#fff" stroke="#1a1a2e" stroke-width="4"><path id="s5-tackle-cl1" d="M130,330 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path id="s5-tackle-cl2" d="M700,260 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+<path d="M0,820 Q180,700 360,790 Q540,690 720,780 Q900,700 1080,790 L1080,1000 L0,1000 Z" fill="#8cbf7a" stroke="#1a1a2e" stroke-width="5" />
+<g transform="translate(60,900) scale(0.8)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s5-tackle-t0">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(190,880) scale(0.7)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s5-tackle-t1">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(330,905) scale(0.85)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s5-tackle-t2">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(470,885) scale(0.7)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s5-tackle-t3">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(610,900) scale(0.8)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s5-tackle-t4">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(750,880) scale(0.72)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s5-tackle-t5">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(890,905) scale(0.85)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s5-tackle-t6">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g><g transform="translate(1030,890) scale(0.75)"><!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="s5-tackle-t7">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>
+</g>
+<rect x="0" y="910" width="1080" height="1010" fill="#5aa04c" />
+<g fill="#4f9443"><rect x="0" y="910" width="135" height="1010" /><rect x="270" y="910" width="135" height="1010" /><rect x="540" y="910" width="135" height="1010" /><rect x="810" y="910" width="135" height="1010" /></g>
+<path d="M0,910 L1080,910" stroke="#1a1a2e" stroke-width="5" />
+<g id="s5-tackle-lines" stroke="#f4efe6" stroke-width="8" fill="none" opacity="0.85">
+  <path d="M0,1190 L1080,1190" /><path d="M540,930 L540,1340" /><ellipse cx="540" cy="1190" rx="170" ry="60" />
+</g><g transform="translate(800,1150)"><g id="s5-tackle-k1"><g transform="scale(1.1)"><!-- Cartoon tank, side view, facing LEFT. Plain grey, no insignia. Origin = ground under the centre. ~300 long, ~170 tall.
+     Animatable: s5-tackle-k1t (drive x), s5-tackle-k1t-body (bob), s5-tackle-k1t-turret (recoil), s5-tackle-k1t-wheels (rotate each .wh), s5-tackle-k1t-browL/-browR, s5-tackle-k1t-smirk / s5-tackle-k1t-grin / s5-tackle-k1t-o. -->
+<g id="s5-tackle-k1t">
+  <ellipse cx="0" cy="4" rx="150" ry="12" fill="#000" opacity="0.25" />
+  <g id="s5-tackle-k1t-body">
+    <rect x="-150" y="-62" width="300" height="60" rx="30" fill="#3d4038" stroke="#1a1a2e" stroke-width="6" />
+    <g id="s5-tackle-k1t-wheels" fill="#8a8e80" stroke="#1a1a2e" stroke-width="4">
+      <circle class="wh" cx="-112" cy="-32" r="20" /><circle class="wh" cx="-56" cy="-32" r="20" /><circle class="wh" cx="0" cy="-32" r="20" /><circle class="wh" cx="56" cy="-32" r="20" /><circle class="wh" cx="112" cy="-32" r="20" />
+    </g>
+    <path d="M-160,-62 L-120,-108 L130,-108 L150,-62 Z" fill="#7b7f6e" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+    <g id="s5-tackle-k1t-turret">
+      <path d="M-300,-138 L-80,-138 L-80,-124 L-300,-124 Z" fill="#6b6f60" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-90,-108 Q-90,-172 0,-172 Q80,-172 84,-108 Z" fill="#8a8e7c" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <ellipse cx="-44" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-48" cy="-139" r="5" fill="#1a1a2e" />
+      <ellipse cx="-8" cy="-140" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="-12" cy="-139" r="5" fill="#1a1a2e" />
+      <path id="s5-tackle-k1t-browL" d="M-60,-160 L-30,-154" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s5-tackle-k1t-browR" d="M-22,-154 L8,-160" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path id="s5-tackle-k1t-smirk" d="M-52,-118 Q-30,-110 -6,-122" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-tackle-k1t-grin" d="M-56,-122 Q-30,-100 -2,-124 Z" fill="#1a1a2e" opacity="0" />
+      <ellipse id="s5-tackle-k1t-o" cx="-30" cy="-118" rx="9" ry="8" fill="#1a1a2e" opacity="0" />
+    </g>
+  </g>
+</g>
+</g></g></g><g transform="translate(240,1150)"><g id="s5-tackle-kwrap"><g transform="scale(1.15)"><!-- Centre-back in a plain blue/white/red kit (Dayot-Upamecano-style caricature, not a likeness, no badges). Origin = between the feet. ~310 tall.
+     Same rig ids as keeper.svg.
+     Animatable: s5-tackle-u (whole), s5-tackle-u-body, s5-tackle-u-armL/-armR (rotate, origin top), s5-tackle-u-legL/-legR, s5-tackle-u-head,
+     s5-tackle-u-pupL/-pupR (x/y look), s5-tackle-u-browL/-browR, s5-tackle-u-m-smile / -m-o / -m-flat (show one), s5-tackle-u-lids (blink). -->
+<g id="s5-tackle-u">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-tackle-u-body">
+    <g id="s5-tackle-u-legL"><rect x="-32" y="-96" width="26" height="88" rx="10" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="#e0412f" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s5-tackle-u-legR"><rect x="6" y="-96" width="26" height="88" rx="10" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="#e0412f" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#f4efe6" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#24408e" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    
+    <g transform="translate(-54,-196)"><g id="s5-tackle-u-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s5-tackle-u-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s5-tackle-u-head">
+      <circle cx="-44" cy="4" r="10" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#5b3520" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-44,-14 Q-46,-56 0,-56 Q46,-56 44,-14 Q36,-38 0,-40 Q-34,-38 -44,-14 Z" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-tackle-u-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s5-tackle-u-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s5-tackle-u-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#5b3520" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#5b3520" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s5-tackle-u-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-tackle-u-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-tackle-u-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-tackle-u-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-tackle-u-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(600,930) scale(1.2)"><!-- Comic impact burst with a word. Origin = centre. Replace CLEAN!. Animate s5-tackle-bang (pop in, scale). -->
+<g id="s5-tackle-bang">
+  <path d="M0,-90 L22,-40 L78,-62 L48,-12 L100,14 L42,26 L58,84 L10,46 L-26,92 L-30,38 L-92,52 L-52,6 L-96,-34 L-38,-30 L-48,-86 L-8,-48 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <text x="0" y="14" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="#e0412f" stroke="#1a1a2e" stroke-width="2" transform="rotate(-8)">CLEAN!</text>
+</g>
+</g><g transform="translate(700,1130)"><g id="s5-tackle-ball"><g transform="scale(1.1)"><!-- Football. Origin = centre, r = 22. -->
+<g id="s5-tackle-fb">
+  <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
+  <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
+</g>
+</g></g></g><g transform="translate(860,630)"><g id="s5-tackle-yc"><rect x="-55" y="-80" width="110" height="160" rx="12" fill="#ffd23f" stroke="#1a1a2e" stroke-width="7" /></g></g>
+<g id="s5-tackle-board">
+  <rect x="50" y="1370" width="980" height="500" rx="26" fill="#23412f" stroke="#7a5230" stroke-width="18" />
+  <g stroke="#e8efe6" stroke-width="5" fill="none" opacity="0.75"><rect x="100" y="1420" width="880" height="400" rx="6" /><path d="M540,1420 L540,1820" /><circle cx="540" cy="1620" r="70" /></g>
+  <g id="s5-tackle-def" fill="#4f7cff" stroke="#e8efe6" stroke-width="4">
+    <circle id="s5-tackle-d0" cx="360" cy="1480" r="18" /><circle id="s5-tackle-d1" cx="360" cy="1580" r="22" /><circle id="s5-tackle-d2" cx="360" cy="1680" r="18" /><circle id="s5-tackle-d3" cx="360" cy="1770" r="18" />
+  </g>
+  <g id="s5-tackle-att" stroke="#c9ccc2" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path id="s5-tackle-a0" d="M940,1480 Q700,1460 420,1500" /><path id="s5-tackle-a1" d="M940,1600 Q700,1620 420,1600" /><path id="s5-tackle-a2" d="M940,1730 Q700,1760 420,1720" />
+  </g>
+</g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s5-tackle-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 330px;"><div class="bk">PHASE 2</div><div class="bt">The Tackle</div></div>
+    <div class="card " id="s5-tackle-c-tk" data-layout-allow-overflow data-layout-allow-overlap style="left: 500px; top: 540px;"><div class="ck">ONE TANK</div><div class="cv">~20 tonnes</div></div>
+    <div class="card gold" id="s5-tackle-c-up" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 540px;"><div class="ck">UPAMECANO</div><div class="cv">~90 kg</div></div>
+    <div class="card gold" id="s5-tackle-c-cl" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">TACKLE</div><div class="cv">Clean. All ball.</div></div>
+    <div class="card red" id="s5-tackle-c-bk" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 560px;"><div class="ck">BOOKED</div><div class="cv">The tank (simulation)</div></div>
+    <div class="dip" id="s5-tackle-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s5-tackle-";
+      const D = 15.189;
+      const C = {"t": 0.888, "tank": 1.683, "upa": 4.067, "slide": 6.337, "clean": 10.086, "card": 12.457};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s5-tackle-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s5-tackle"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      fly("b", C.t, C.tank + 1.0);
+      fly("tk", C.tank, C.slide - 0.1, { from: "right" });
+      fly("up", C.upa, C.slide - 0.1);
+      tl.fromTo(S + "k1t-body", { y: 0 }, { y: -3, duration: 0.12, repeat: R(D, 0.12), yoyo: true }, 0);
+      tl.fromTo(S + "k1", { x: 160 }, { x: 0, duration: 2.5, ease: "power1.out" }, 0);
+      // the run-up and the slide
+      swap(S + "u-m-smile", S + "u-m-flat", C.slide);
+      tl.to(S + "kwrap", { x: 120, duration: 0.8, ease: "power2.in" }, C.slide + 0.4);
+      tl.to(S + "kwrap", { x: 360, rotation: -72, transformOrigin: "50% 100%", y: -20, duration: 0.5, ease: "power2.out" }, 9.236);
+      tl.to(S + "u-legR", { rotation: -60, duration: 0.3 }, 9.236);
+      tl.fromTo(S + "bang", { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(3)" }, 9.736);
+      tl.to(S + "bang", { opacity: 0, duration: 0.2 }, 10.736);
+      // all ball: the ball pops out, the tank spins round
+      tl.fromTo(S + "ball", { x: 0, y: 0 }, { x: -520, y: -60, rotation: -720, duration: 0.9, ease: "power2.out" }, 9.736);
+      tl.to(S + "k1", { rotation: 18, transformOrigin: "50% 100%", duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, 9.736);
+      swap(S + "k1t-smirk", S + "k1t-o", 9.836);
+      fly("cl", C.clean, C.card - 0.1);
+      tl.to(S + "kwrap", { rotation: 0, y: 0, duration: 0.4, ease: "back.out(2)" }, 11.136);
+      tl.to(S + "u-legR", { rotation: 0, duration: 0.3 }, 11.136);
+      swap(S + "u-m-flat", S + "u-m-smile", 11.236);
+      // the tank goes down holding its ... turret. Yellow card.
+      tl.to(S + "k1t-turret", { rotation: -10, svgOrigin: "0 -120", duration: 0.3, yoyo: true, repeat: 3 }, C.card - 0.6);
+      tl.fromTo(S + "yc", { opacity: 0, y: 80, rotation: 0 }, { opacity: 1, y: 0, rotation: 8, duration: 0.35, ease: "back.out(2)" }, C.card + 0.25);
+      fly("bk", C.card + 0.3, null, { from: "right" });
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s5-tackle"] = tl;
+    })();
+  </script>
+</template>

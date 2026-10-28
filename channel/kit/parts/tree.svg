@@ -1,0 +1,6 @@
+<!-- Pine tree. Origin = ground at the trunk. ~260 tall at scale 1. -->
+<g id="PFX">
+  <rect x="-12" y="-50" width="24" height="52" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-260 L70,-150 L40,-150 L95,-50 L-95,-50 L-40,-150 L-70,-150 Z" fill="#2f7d4a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,-260 L30,-214 L0,-200 Z M-40,-150 L-10,-120 L-40,-110 Z" fill="#3f9a5c" />
+</g>

@@ -7,6 +7,7 @@ Status: ✅ fertig · 📝 Skript · 💡 Idee
 | 001 | Could Manuel Neuer save the Titanic from sinking? | ✅ (HyperFrames + Cartoon) |
 | 002 | Could Usain Bolt beat a T-Rex in a 100 m race? | ✅ |
 | 003 | Could Steph Curry make a three over the Great Wall of China? | ✅ |
+| 004 | Could Dayot Upamecano have stopped Hitler from conquering France? | ✅ |
 | 021 | Could Usain Bolt outrun a Deutsche Bahn ICE? (Spoiler: on a delayed day, yes) | 💡 |
 | 003 | Could 100 grandmas knit a sweater for the Statue of Liberty? | 💡 |
 | 004 | Could Gordon Ramsay cater for the entire Roman army? | 💡 |
