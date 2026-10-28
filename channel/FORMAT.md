@@ -27,6 +27,7 @@ Ziel-Länge: **90–115 s** (über 60 s = Creator-Rewards-fähig).
 1. **Zahlen sind echt** oder klar als "estimated" markiert. Die Logik ist der Witz, nicht falsche Fakten.
 2. **Kurze Sätze.** Punkt. Pause (`||0.5||`). Pointe. Britisches Understatement ("A busy evening, even for Neuer.").
 3. **Drei Pläne mit Eskalation:** A = naheliegend-dumm, B = überraschend fast plausibel, C = komplett absurd.
+   Bei Duellen und Rennen ("Could X beat Y?") stattdessen drei Abschnitte des Ereignisses mit Stats (z. B. 0–30 m, 30–80 m, 80–100 m).
 4. **Running Gags des Kanals:** "We looked at the evidence…", der rote Stempel, "Chance he tries anyway: 100 %", ein Score-Bug ("ICEBERG 1 : 0 TITANIC").
 5. **Respektvoll bei echten Personen:** über die bekannte Eigenschaft lachen (Torwart, Sprinter, Koch), nie über Privates. Cartoon = Karikatur, keine Fotos.
 6. **Fliegende Fakten:** jede Szene beginnt mit einem Kapitel-Banner (z. B. PLAN A / The Punch). Jede Zahl des Erzählers fliegt als Karte auf ihrem Wort ins Bild und fliegt wieder hinaus, sobald die nächste kommt.

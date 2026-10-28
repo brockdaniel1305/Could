@@ -1,0 +1,272 @@
+<template>
+  <!-- COULD? scene s6-finish · full-frame cartoon + flying fact cards. Source: src/s6.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+  </style>
+  <div id="root" data-composition-id="s6-finish" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s6-finish-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s6-finish-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s6-finish-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s6-finish-boil)">
+
+<!-- Full-frame athletics stadium 1080x1920, side view: sky, crowd (600..860), red track from y 860 with lane lines.
+     Runner baselines: far lane feet y~1050, near lane feet y~1160. Static backdrop; distance markers go in a panning course group. -->
+<g id="s6-finish-track">
+  <rect x="0" y="0" width="1080" height="1920" fill="#8fd3ff" />
+  <g fill="#fff" stroke="#1a1a2e" stroke-width="4"><path d="M140,330 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path d="M690,250 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <path d="M0,600 L1080,600 L1080,860 L0,860 Z" fill="#3a3f58" stroke="#1a1a2e" stroke-width="5" />
+  <circle cx="10" cy="640" r="11" fill="#ffcf4a" /><circle cx="70" cy="640" r="11" fill="#e0412f" /><circle cx="130" cy="640" r="11" fill="#f4efe6" /><circle cx="190" cy="640" r="11" fill="#1f9d55" /><circle cx="250" cy="640" r="11" fill="#ffcf4a" /><circle cx="310" cy="640" r="11" fill="#e0412f" /><circle cx="370" cy="640" r="11" fill="#f4efe6" /><circle cx="430" cy="640" r="11" fill="#1f9d55" /><circle cx="490" cy="640" r="11" fill="#ffcf4a" /><circle cx="550" cy="640" r="11" fill="#e0412f" /><circle cx="610" cy="640" r="11" fill="#f4efe6" /><circle cx="670" cy="640" r="11" fill="#1f9d55" /><circle cx="730" cy="640" r="11" fill="#ffcf4a" /><circle cx="790" cy="640" r="11" fill="#e0412f" /><circle cx="850" cy="640" r="11" fill="#f4efe6" /><circle cx="910" cy="640" r="11" fill="#1f9d55" /><circle cx="970" cy="640" r="11" fill="#ffcf4a" /><circle cx="1030" cy="640" r="11" fill="#e0412f" /><circle cx="40" cy="686" r="11" fill="#e0412f" /><circle cx="100" cy="686" r="11" fill="#f4efe6" /><circle cx="160" cy="686" r="11" fill="#1f9d55" /><circle cx="220" cy="686" r="11" fill="#ffcf4a" /><circle cx="280" cy="686" r="11" fill="#e0412f" /><circle cx="340" cy="686" r="11" fill="#f4efe6" /><circle cx="400" cy="686" r="11" fill="#1f9d55" /><circle cx="460" cy="686" r="11" fill="#ffcf4a" /><circle cx="520" cy="686" r="11" fill="#e0412f" /><circle cx="580" cy="686" r="11" fill="#f4efe6" /><circle cx="640" cy="686" r="11" fill="#1f9d55" /><circle cx="700" cy="686" r="11" fill="#ffcf4a" /><circle cx="760" cy="686" r="11" fill="#e0412f" /><circle cx="820" cy="686" r="11" fill="#f4efe6" /><circle cx="880" cy="686" r="11" fill="#1f9d55" /><circle cx="940" cy="686" r="11" fill="#ffcf4a" /><circle cx="1000" cy="686" r="11" fill="#e0412f" /><circle cx="1060" cy="686" r="11" fill="#f4efe6" /><circle cx="10" cy="732" r="11" fill="#f4efe6" /><circle cx="70" cy="732" r="11" fill="#1f9d55" /><circle cx="130" cy="732" r="11" fill="#ffcf4a" /><circle cx="190" cy="732" r="11" fill="#e0412f" /><circle cx="250" cy="732" r="11" fill="#f4efe6" /><circle cx="310" cy="732" r="11" fill="#1f9d55" /><circle cx="370" cy="732" r="11" fill="#ffcf4a" /><circle cx="430" cy="732" r="11" fill="#e0412f" /><circle cx="490" cy="732" r="11" fill="#f4efe6" /><circle cx="550" cy="732" r="11" fill="#1f9d55" /><circle cx="610" cy="732" r="11" fill="#ffcf4a" /><circle cx="670" cy="732" r="11" fill="#e0412f" /><circle cx="730" cy="732" r="11" fill="#f4efe6" /><circle cx="790" cy="732" r="11" fill="#1f9d55" /><circle cx="850" cy="732" r="11" fill="#ffcf4a" /><circle cx="910" cy="732" r="11" fill="#e0412f" /><circle cx="970" cy="732" r="11" fill="#f4efe6" /><circle cx="1030" cy="732" r="11" fill="#1f9d55" /><circle cx="40" cy="778" r="11" fill="#1f9d55" /><circle cx="100" cy="778" r="11" fill="#ffcf4a" /><circle cx="160" cy="778" r="11" fill="#e0412f" /><circle cx="220" cy="778" r="11" fill="#f4efe6" /><circle cx="280" cy="778" r="11" fill="#1f9d55" /><circle cx="340" cy="778" r="11" fill="#ffcf4a" /><circle cx="400" cy="778" r="11" fill="#e0412f" /><circle cx="460" cy="778" r="11" fill="#f4efe6" /><circle cx="520" cy="778" r="11" fill="#1f9d55" /><circle cx="580" cy="778" r="11" fill="#ffcf4a" /><circle cx="640" cy="778" r="11" fill="#e0412f" /><circle cx="700" cy="778" r="11" fill="#f4efe6" /><circle cx="760" cy="778" r="11" fill="#1f9d55" /><circle cx="820" cy="778" r="11" fill="#ffcf4a" /><circle cx="880" cy="778" r="11" fill="#e0412f" /><circle cx="940" cy="778" r="11" fill="#f4efe6" /><circle cx="1000" cy="778" r="11" fill="#1f9d55" /><circle cx="1060" cy="778" r="11" fill="#ffcf4a" /><circle cx="10" cy="824" r="11" fill="#ffcf4a" /><circle cx="70" cy="824" r="11" fill="#e0412f" /><circle cx="130" cy="824" r="11" fill="#f4efe6" /><circle cx="190" cy="824" r="11" fill="#1f9d55" /><circle cx="250" cy="824" r="11" fill="#ffcf4a" /><circle cx="310" cy="824" r="11" fill="#e0412f" /><circle cx="370" cy="824" r="11" fill="#f4efe6" /><circle cx="430" cy="824" r="11" fill="#1f9d55" /><circle cx="490" cy="824" r="11" fill="#ffcf4a" /><circle cx="550" cy="824" r="11" fill="#e0412f" /><circle cx="610" cy="824" r="11" fill="#f4efe6" /><circle cx="670" cy="824" r="11" fill="#1f9d55" /><circle cx="730" cy="824" r="11" fill="#ffcf4a" /><circle cx="790" cy="824" r="11" fill="#e0412f" /><circle cx="850" cy="824" r="11" fill="#f4efe6" /><circle cx="910" cy="824" r="11" fill="#1f9d55" /><circle cx="970" cy="824" r="11" fill="#ffcf4a" /><circle cx="1030" cy="824" r="11" fill="#e0412f" />
+  <rect x="0" y="860" width="1080" height="1060" fill="#c4553f" />
+  <rect x="0" y="860" width="1080" height="16" fill="#a8432f" />
+  <path d="M0,880 L1080,880" stroke="#f4efe6" stroke-width="6" /><path d="M0,1060 L1080,1060" stroke="#f4efe6" stroke-width="6" /><path d="M0,1170 L1080,1170" stroke="#f4efe6" stroke-width="7" /><path d="M0,1330 L1080,1330" stroke="#f4efe6" stroke-width="8" /><path d="M0,1540 L1080,1540" stroke="#f4efe6" stroke-width="10" /><path d="M0,1800 L1080,1800" stroke="#f4efe6" stroke-width="12" />
+</g>
+
+
+<g id="s6-finish-course">
+  <rect x="-8" y="876" width="16" height="1044" fill="#f4efe6" />
+  <text data-layout-ignore x="-110" y="1520" font-family="Inter" font-weight="900" font-size="200" fill="#f4efe6" opacity="0.85">4</text>
+  <text data-layout-ignore x="-110" y="1800" font-family="Inter" font-weight="900" font-size="200" fill="#f4efe6" opacity="0.85">5</text>
+  <path d="M750,876 L750,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(750,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">10 m</text></g><path d="M1500,876 L1500,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(1500,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">20 m</text></g><path d="M2250,876 L2250,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(2250,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">30 m</text></g><path d="M3000,876 L3000,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(3000,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">40 m</text></g><path d="M3750,876 L3750,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(3750,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">50 m</text></g><path d="M4500,876 L4500,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(4500,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">60 m</text></g><path d="M5250,876 L5250,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(5250,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">70 m</text></g><path d="M6000,876 L6000,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(6000,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">80 m</text></g><path d="M6750,876 L6750,1920" stroke="#f4efe6" stroke-width="5" opacity="0.7" /><g transform="translate(6750,836)"><rect x="-52" y="-30" width="104" height="52" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /><text data-layout-ignore y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">90 m</text></g>
+  <rect x="7500" y="876" width="28" height="1044" fill="#f4efe6" /><rect x="7500" y="876" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="890" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="904" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="918" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="932" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="946" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="960" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="974" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="988" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1002" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1016" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1030" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1044" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1058" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1072" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1086" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1100" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1114" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1128" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1142" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1156" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1170" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1184" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1198" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1212" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1226" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1240" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1254" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1268" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1282" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1296" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1310" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1324" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1338" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1352" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1366" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1380" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1394" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1408" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1422" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1436" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1450" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1464" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1478" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1492" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1506" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1520" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1534" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1548" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1562" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1576" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1590" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1604" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1618" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1632" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1646" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1660" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1674" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1688" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1702" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1716" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1730" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1744" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1758" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1772" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1786" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1800" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1814" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1828" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1842" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1856" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1870" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1884" width="14" height="14" fill="#1a1a2e" /><rect x="7514" y="1898" width="14" height="14" fill="#1a1a2e" /><rect x="7500" y="1912" width="14" height="14" fill="#1a1a2e" />
+  <g transform="translate(7514,0)"><path d="M-120,860 L-120,520 M120,860 L120,520" stroke="#1a1a2e" stroke-width="14" />
+    <rect x="-170" y="500" width="340" height="80" rx="12" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" />
+    <text data-layout-ignore y="556" text-anchor="middle" font-family="Inter" font-weight="900" font-size="52" fill="#fff">FINISH</text></g>
+  <path id="s6-finish-tape" d="M7514,960 L7514,1190" stroke="#ffd23f" stroke-width="8" />
+  
+  <g id="s6-finish-rex"><g transform="translate(0,1100) scale(1.5)"><!-- Cartoon Tyrannosaurus rex, side view, facing RIGHT. Origin = ground under the hip. Tail tip x=-330, nose x=+270 (600 = "12 m").
+     ~330 tall. Animatable: s6-finish-r (whole), s6-finish-r-body (bob/lean), s6-finish-r-head (nod, origin neck), s6-finish-r-jaw (open: rotate +), s6-finish-r-pup (look),
+     s6-finish-r-brow, s6-finish-r-armL/-armR (tiny wiggle), s6-finish-r-legL (far) / s6-finish-r-legR (near) (rotate from hip), s6-finish-r-tail (swish). -->
+<g id="s6-finish-r">
+  <ellipse cx="-10" cy="4" rx="120" ry="14" fill="#000" opacity="0.25" />
+  <g id="s6-finish-r-body">
+    <g transform="translate(-10,-176)"><g id="s6-finish-r-legL"><path d="M-30,0 Q-44,60 -14,104 L-26,150 L-4,170 L44,170 L14,142 L24,92 Q38,40 30,0 Z" fill="#3e7d34" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g></g>
+    <g id="s6-finish-r-tail"><path d="M-70,-238 Q-210,-246 -330,-196 Q-220,-196 -70,-178 Z" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g>
+    <path d="M-96,-250 Q-30,-306 70,-282 Q132,-262 124,-200 Q110,-146 10,-142 Q-76,-140 -100,-190 Z" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-60,-170 Q10,-150 96,-176 Q90,-150 10,-146 Q-50,-146 -60,-170 Z" fill="#a8d672" />
+    <g fill="#3e7d34"><path d="M-70,-262 l14,-20 l10,22 Z" /><path d="M-30,-282 l14,-20 l10,22 Z" /><path d="M14,-288 l14,-20 l10,22 Z" /></g>
+    <g transform="translate(112,-206)"><g id="s6-finish-r-armL"><path d="M0,0 L26,14 L36,6 M26,14 L34,22" fill="none" stroke="#1a1a2e" stroke-width="9" stroke-linecap="round" /><path d="M0,0 L26,14" stroke="#5fa84a" stroke-width="5" stroke-linecap="round" /></g></g>
+    <g transform="translate(96,-200)"><g id="s6-finish-r-armR"><path d="M0,0 L26,14 L36,6 M26,14 L34,22" fill="none" stroke="#1a1a2e" stroke-width="9" stroke-linecap="round" /><path d="M0,0 L26,14" stroke="#5fa84a" stroke-width="5" stroke-linecap="round" /></g></g>
+    <g transform="translate(-6,-176)"><g id="s6-finish-r-legR"><path d="M-34,0 Q-50,64 -16,108 L-28,152 L-6,172 L48,172 L16,144 L26,94 Q42,40 34,0 Z" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g></g>
+    <g transform="translate(110,-262)"><g id="s6-finish-r-head">
+      <g id="s6-finish-r-jaw"><path d="M-6,18 L152,14 Q150,44 108,50 L6,46 Z" fill="#4f9440" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+        <path d="M30,18 l8,-12 l8,12 M60,17 l8,-12 l8,12 M90,16 l8,-12 l8,12 M120,15 l8,-12 l8,12" fill="#fff" stroke="#1a1a2e" stroke-width="3" stroke-linejoin="round" /></g>
+      <path d="M-24,-6 Q30,-70 120,-52 Q164,-42 162,-2 L160,16 L-10,22 Z" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <path d="M24,22 l8,14 l8,-14 M54,21 l8,14 l8,-14 M84,20 l8,14 l8,-14 M114,19 l8,14 l8,-14 M140,18 l7,12 l7,-12" fill="#fff" stroke="#1a1a2e" stroke-width="3" stroke-linejoin="round" />
+      <circle cx="146" cy="-24" r="4" fill="#1a1a2e" />
+      <circle cx="74" cy="-26" r="14" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
+      <circle id="s6-finish-r-pup" cx="78" cy="-26" r="6" fill="#1a1a2e" />
+      <path id="s6-finish-r-brow" d="M54,-48 L94,-38" stroke="#1a1a2e" stroke-width="7" stroke-linecap="round" />
+    </g></g>
+  </g>
+</g>
+</g></g>
+  <g id="s6-finish-bolt"><g transform="translate(0,1180) scale(1.3)"><!-- Sprinter in a yellow/green Jamaica kit (Usain-Bolt-style caricature, not a likeness). Origin = between the feet. ~310 tall.
+     Same rig ids as keeper.svg.
+     Animatable: s6-finish-b (whole), s6-finish-b-body, s6-finish-b-armL/-armR (rotate, origin top), s6-finish-b-legL/-legR, s6-finish-b-head,
+     s6-finish-b-pupL/-pupR (x/y look), s6-finish-b-browL/-browR, s6-finish-b-m-smile / -m-o / -m-flat (show one), s6-finish-b-lids (blink). -->
+<g id="s6-finish-b">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s6-finish-b-body">
+    <g id="s6-finish-b-legL"><rect x="-32" y="-96" width="26" height="88" rx="10" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#ffd23f" stroke="#1a1a2e" stroke-width="4" /></g>
+    <g id="s6-finish-b-legR"><rect x="6" y="-96" width="26" height="88" rx="10" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#ffd23f" stroke="#1a1a2e" stroke-width="4" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#1f9d55" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-44,-190 L-38,-118 M44,-190 L38,-118" stroke="#1f9d55" stroke-width="10" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <rect x="-26" y="-172" width="52" height="38" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><text data-layout-ignore x="0" y="-144" text-anchor="middle" font-family="Inter" font-weight="900" font-size="26" fill="#1a1a2e">4</text>
+    <g transform="translate(-54,-196)"><g id="s6-finish-b-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s6-finish-b-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s6-finish-b-head">
+      <circle cx="-44" cy="4" r="10" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#6b3f22" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-44,-14 Q-46,-56 0,-56 Q46,-56 44,-14 Q36,-38 0,-40 Q-34,-38 -44,-14 Z" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s6-finish-b-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s6-finish-b-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s6-finish-b-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#6b3f22" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#6b3f22" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s6-finish-b-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s6-finish-b-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s6-finish-b-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s6-finish-b-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s6-finish-b-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g></g>
+</g>
+
+<g id="s6-finish-trk">
+  <rect x="70" y="1440" width="960" height="160" rx="30" fill="#1a1a2e" opacity="0.35" />
+  <rect x="90" y="1500" width="900" height="40" rx="20" fill="#f4efe6" stroke="#1a1a2e" stroke-width="5" /><path d="M180,1500 L180,1540" stroke="#1a1a2e" stroke-width="4" /><path d="M270,1500 L270,1540" stroke="#1a1a2e" stroke-width="4" /><path d="M360,1500 L360,1540" stroke="#1a1a2e" stroke-width="4" /><path d="M450,1500 L450,1540" stroke="#1a1a2e" stroke-width="4" /><path d="M540,1500 L540,1540" stroke="#1a1a2e" stroke-width="4" /><path d="M630,1500 L630,1540" stroke="#1a1a2e" stroke-width="4" /><path d="M720,1500 L720,1540" stroke="#1a1a2e" stroke-width="4" /><path d="M810,1500 L810,1540" stroke="#1a1a2e" stroke-width="4" /><path d="M900,1500 L900,1540" stroke="#1a1a2e" stroke-width="4" />
+  <rect x="990" y="1480" width="24" height="84" fill="#f4efe6" stroke="#1a1a2e" stroke-width="3" /><rect x="990" y="1480" width="12" height="12" fill="#1a1a2e" /><rect x="1002" y="1492" width="12" height="12" fill="#1a1a2e" /><rect x="990" y="1504" width="12" height="12" fill="#1a1a2e" /><rect x="1002" y="1516" width="12" height="12" fill="#1a1a2e" /><rect x="990" y="1528" width="12" height="12" fill="#1a1a2e" /><rect x="1002" y="1540" width="12" height="12" fill="#1a1a2e" /><rect x="990" y="1552" width="12" height="12" fill="#1a1a2e" />
+  <g id="s6-finish-tb"><circle cx="90" cy="1478" r="26" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" /><path d="M90,1462 L80,1480 L92,1480 L86,1496" fill="none" stroke="#1f9d55" stroke-width="5" stroke-linejoin="round" /></g>
+  <g id="s6-finish-tr"><circle cx="90" cy="1562" r="26" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" /><path d="M74,1566 l6,-10 l6,10 l6,-10 l6,10 l6,-10" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" /></g>
+</g>
+<rect id="s6-finish-flash" x="0" y="0" width="1080" height="1920" fill="#fff" opacity="0" />
+
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s6-finish-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 330px;"><div class="bk">80–100 M</div><div class="bt">The Finish</div></div>
+    <div class="card " id="s6-finish-c-clk" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 330px;"><div class="ck">RACE CLOCK</div><div class="cv"><span id="s6-finish-clock">7.90 s</span></div></div>
+    <div class="card gold" id="s6-finish-c-bt" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">BOLT</div><div class="cv">9.58 s</div></div>
+    <div class="card red" id="s6-finish-c-rp" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">T-REX AT</div><div class="cv">64 m</div></div>
+    <div class="card " id="s6-finish-c-p1" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 400px;"><div class="ck">PHOTO 1</div><div class="cv">Bolt, 9.58 s</div></div>
+    <div class="card gold" id="s6-finish-c-p2" data-layout-allow-overflow data-layout-allow-overlap style="left: 300px; top: 600px;"><div class="ck">PHOTO 2</div><div class="cv">T-Rex, 16.3 s</div></div>
+    <div class="dip" id="s6-finish-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s6-finish-";
+      const D = 16.071;
+      const C = {"t": 2.469, "win": 3.396, "where": 6.743, "lean": 9.546, "photo": 12.613};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s6-finish-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s6-finish"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      // ---- race driver: everything below is a pure function of scene time ----
+      const PX = 75, NOSE = 405;
+      const SPL = [[0,0],[1.89,10],[2.88,20],[3.78,30],[4.64,40],[5.47,50],[6.29,60],[7.10,70],[7.92,80],[8.75,90],[9.58,100]];
+      const boltM = (t) => {
+        if (t <= 0) return 0;
+        if (t >= 9.58) { const d = Math.min(t - 9.58, 2); return 100 + 10.4 * d - 2.6 * d * d; }
+        for (let i = 1; i < SPL.length; i++) if (t <= SPL[i][0]) { const [t0, m0] = SPL[i - 1], [t1, m1] = SPL[i]; return m0 + (m1 - m0) * (t - t0) / (t1 - t0); }
+      };
+      const rexM = (t) => 12 + 5.4 * Math.max(0, t);
+      const lerpK = (k, x) => {
+        if (x <= k[0][0]) return k[0][1];
+        for (let i = 1; i < k.length; i++) if (x <= k[i][0]) return k[i - 1][1] + (k[i][1] - k[i - 1][1]) * (x - k[i - 1][0]) / (k[i][0] - k[i - 1][0]);
+        return k[k.length - 1][1];
+      };
+      const KEYS = [[0, 7.9], [3.396, 9.58], [6.743, 9.58], [6.753, 9.58]], CAMS = [[0, 'bolt'], [3.796, 101], [6.743, 'rex']];
+      const target = (mode, b, r) => typeof mode === "number" ? mode : mode === "bolt" ? b + 1.5 : mode === "rex" ? r - 5 : (b + r - 5) / 2;
+      const ss = (x) => x * x * (3 - 2 * x);
+      const camAt = (lt, b, r) => {
+        let i = 0; while (i + 1 < CAMS.length && lt >= CAMS[i + 1][0]) i++;
+        const cur = target(CAMS[i][1], b, r);
+        if (i === 0) return cur;
+        const k = Math.min(1, (lt - CAMS[i][0]) / 0.7);
+        return target(CAMS[i - 1][1], b, r) + (cur - target(CAMS[i - 1][1], b, r)) * ss(k);
+      };
+      const bolt = document.querySelector(S + "bolt"), rex = document.querySelector(S + "rex"), course = document.querySelector(S + "course");
+      const clock = document.querySelector(S + "clock");
+      const RIG = (p) => document.querySelector(S + p);
+      const legsB = [RIG("b-legL"), RIG("b-legR"), RIG("b-armL"), RIG("b-armR")], legsR = [RIG("r-legL"), RIG("r-legR")];
+      const race = { rt: 0 };
+      tl.to({}, { duration: D, ease: "none", onUpdate() {
+        const lt = this.time(), rt = lerpK(KEYS, lt), moving = lerpK(KEYS, lt + 0.05) > rt + 1e-4;
+        race.rt = rt;
+        const b = boltM(rt), r = rexM(rt);
+        gsap.set(bolt, { x: b * PX });
+        gsap.set(rex, { x: r * PX - NOSE });
+        gsap.set(course, { x: 540 - camAt(lt, b, r) * PX });
+        if (clock) clock.textContent = rt.toFixed(2) + " s";
+        const tb = document.querySelector(S + "tb"), tr = document.querySelector(S + "tr");
+        if (tb) { gsap.set(tb, { x: Math.min(b, 100) * 9 }); gsap.set(tr, { x: Math.min(r, 100) * 9 }); }
+        if (moving && rt > 0.15 && boltM(rt) < 110.3) {
+          const a = Math.sin(rt * Math.PI * 2 * 2.2) * 38;
+          gsap.set(legsB[0], { rotation: a }); gsap.set(legsB[1], { rotation: -a });
+          gsap.set(legsB[2], { rotation: -a * 1.2 }); gsap.set(legsB[3], { rotation: a * 1.2 });
+          gsap.set(RIG("b-body"), { rotation: 7, transformOrigin: "50% 100%" });
+        }
+        if (moving) {
+          const q = Math.sin(rt * Math.PI * 2 * 1.4) * 24;
+          gsap.set(legsR[0], { rotation: q }); gsap.set(legsR[1], { rotation: -q });
+          gsap.set(RIG("r-body"), { y: Math.abs(Math.sin(rt * Math.PI * 2 * 1.4)) * -10 });
+        }
+      } }, 0);
+
+      fly("b", 0.2, C.win - 0.1);
+      fly("clk", 0.1, C.where - 0.1, { from: "right" });
+      fly("bt", C.win, C.where - 0.1);
+      fly("rp", C.where + 0.5, C.photo - 0.1);
+      fly("p1", C.photo, null, { rot: -5 });
+      fly("p2", C.photo + 0.9, null, { from: "right", rot: 4 });
+      // Bolt breaks the tape, the race clock freezes
+      tl.to(S + "tape", { opacity: 0, duration: 0.05 }, C.win);
+      tl.fromTo(S + "flash", { opacity: 0 }, { opacity: 0.7, duration: 0.05, yoyo: true, repeat: 1 }, C.win);
+      tl.set([S + "b-legL", S + "b-legR", S + "b-armL", S + "b-armR"], { rotation: 0 }, C.win + 0.6);
+      tl.set(S + "b-body", { rotation: 0 }, C.win + 0.6);
+      tl.to(S + "b-armR", { rotation: -160, duration: 0.3, ease: "back.out(2)" }, C.win + 0.7);
+      tl.to(S + "b-armL", { rotation: 160, duration: 0.3, ease: "back.out(2)" }, C.win + 0.8);
+      swap(S + "b-m-flat", S + "b-m-smile", C.win + 0.7);
+      // freeze frame back at 64 m: the T-Rex tries a dip finish with no arms
+      tl.fromTo(S + "r-body", { rotation: 0 }, { rotation: 14, svgOrigin: "0 -176", duration: 0.5, ease: "power2.inOut" }, C.lean);
+      tl.fromTo([S + "r-armL", S + "r-armR"], { rotation: -20 }, { rotation: 30, duration: 0.1, ease: "sine.inOut", repeat: 13, yoyo: true }, C.lean + 0.3);
+      tl.to(S + "r-pup", { x: 6, y: 4, duration: 0.2 }, C.lean);
+      tl.fromTo(S + "flash", { opacity: 0 }, { opacity: 0.6, duration: 0.05, yoyo: true, repeat: 1 }, C.photo);
+      tl.fromTo(S + "flash", { opacity: 0 }, { opacity: 0.6, duration: 0.05, yoyo: true, repeat: 1 }, C.photo + 0.9);
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s6-finish"] = tl;
+    })();
+  </script>
+</template>

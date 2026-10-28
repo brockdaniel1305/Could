@@ -1,0 +1,1332 @@
+{
+ "duration": 110.475,
+ "voice": "kokoro:bm_george",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 8.894,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 8.294,
+   "cues": {
+    "ev": 3.682,
+    "sci": 5.755,
+    "long": 7.271
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.549
+    },
+    {
+     "text": "Usain",
+     "start": 0.549,
+     "end": 0.948
+    },
+    {
+     "text": "Bolt",
+     "start": 0.948,
+     "end": 1.289
+    },
+    {
+     "text": "beat",
+     "start": 1.289,
+     "end": 1.631
+    },
+    {
+     "text": "a",
+     "start": 1.631,
+     "end": 1.802
+    },
+    {
+     "text": "T-Rex",
+     "start": 1.802,
+     "end": 2.201
+    },
+    {
+     "text": "in",
+     "start": 2.201,
+     "end": 2.429
+    },
+    {
+     "text": "a",
+     "start": 2.429,
+     "end": 2.599
+    },
+    {
+     "text": "100",
+     "start": 2.599,
+     "end": 2.884
+    },
+    {
+     "text": "metre",
+     "start": 2.884,
+     "end": 3.283
+    },
+    {
+     "text": "race?",
+     "start": 3.283,
+     "end": 3.682
+    },
+    {
+     "text": "We",
+     "start": 3.682,
+     "end": 3.91
+    },
+    {
+     "text": "looked",
+     "start": 3.91,
+     "end": 4.365
+    },
+    {
+     "text": "at",
+     "start": 4.365,
+     "end": 4.593
+    },
+    {
+     "text": "the",
+     "start": 4.593,
+     "end": 4.878
+    },
+    {
+     "text": "evidence.",
+     "start": 4.878,
+     "end": 5.505
+    },
+    {
+     "text": "Scientifically.",
+     "start": 5.755,
+     "end": 6.971
+    },
+    {
+     "text": "With",
+     "start": 7.271,
+     "end": 7.606
+    },
+    {
+     "text": "a",
+     "start": 7.606,
+     "end": 7.774
+    },
+    {
+     "text": "stopwatch.",
+     "start": 7.774,
+     "end": 8.444
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s2-bolt",
+   "start": 8.894,
+   "duration": 13.331,
+   "voice": "assets/voice/s2-bolt.wav",
+   "voiceStart": 0.15,
+   "speech": 12.731,
+   "cues": {
+    "name": 1.462,
+    "h": 2.542,
+    "wr": 5.551,
+    "gold": 8.02,
+    "pose": 10.811
+   },
+   "words": [
+    {
+     "text": "In",
+     "start": 0.15,
+     "end": 0.459
+    },
+    {
+     "text": "lane",
+     "start": 0.459,
+     "end": 0.922
+    },
+    {
+     "text": "four:",
+     "start": 0.922,
+     "end": 1.462
+    },
+    {
+     "text": "Usain",
+     "start": 1.462,
+     "end": 2.002
+    },
+    {
+     "text": "Bolt.",
+     "start": 2.002,
+     "end": 2.542
+    },
+    {
+     "text": "1.95",
+     "start": 2.542,
+     "end": 3.005
+    },
+    {
+     "text": "metres",
+     "start": 3.005,
+     "end": 3.622
+    },
+    {
+     "text": "of",
+     "start": 3.622,
+     "end": 3.93
+    },
+    {
+     "text": "Jamaican",
+     "start": 3.93,
+     "end": 4.702
+    },
+    {
+     "text": "sprinter.",
+     "start": 4.702,
+     "end": 5.551
+    },
+    {
+     "text": "World",
+     "start": 5.551,
+     "end": 6.091
+    },
+    {
+     "text": "record:",
+     "start": 6.091,
+     "end": 6.785
+    },
+    {
+     "text": "9.58",
+     "start": 6.785,
+     "end": 7.248
+    },
+    {
+     "text": "seconds.",
+     "start": 7.248,
+     "end": 8.02
+    },
+    {
+     "text": "Eight",
+     "start": 8.02,
+     "end": 8.56
+    },
+    {
+     "text": "Olympic",
+     "start": 8.56,
+     "end": 9.254
+    },
+    {
+     "text": "gold",
+     "start": 9.254,
+     "end": 9.717
+    },
+    {
+     "text": "medals.",
+     "start": 9.717,
+     "end": 10.411
+    },
+    {
+     "text": "And",
+     "start": 10.811,
+     "end": 11.145
+    },
+    {
+     "text": "one",
+     "start": 11.145,
+     "end": 11.479
+    },
+    {
+     "text": "very",
+     "start": 11.479,
+     "end": 11.879
+    },
+    {
+     "text": "famous",
+     "start": 11.879,
+     "end": 12.413
+    },
+    {
+     "text": "pose.",
+     "start": 12.413,
+     "end": 12.881
+    }
+   ],
+   "sfx": [
+    {
+     "name": "pop",
+     "cue": "gold",
+     "offset": 0.6,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s3-trex",
+   "start": 22.225,
+   "duration": 15.657,
+   "voice": "assets/voice/s3-trex.wav",
+   "voiceStart": 0.15,
+   "speech": 15.057,
+   "cues": {
+    "name": 1.259,
+    "len": 2.63,
+    "kg": 4.131,
+    "bite": 5.697,
+    "arms": 9.361,
+    "ext": 12.327
+   },
+   "words": [
+    {
+     "text": "In",
+     "start": 0.15,
+     "end": 0.411
+    },
+    {
+     "text": "lane",
+     "start": 0.411,
+     "end": 0.803
+    },
+    {
+     "text": "five:",
+     "start": 0.803,
+     "end": 1.259
+    },
+    {
+     "text": "Tyrannosaurus",
+     "start": 1.259,
+     "end": 2.238
+    },
+    {
+     "text": "rex.",
+     "start": 2.238,
+     "end": 2.63
+    },
+    {
+     "text": "Twelve",
+     "start": 2.63,
+     "end": 3.152
+    },
+    {
+     "text": "metres",
+     "start": 3.152,
+     "end": 3.674
+    },
+    {
+     "text": "long.",
+     "start": 3.674,
+     "end": 4.131
+    },
+    {
+     "text": "Around",
+     "start": 4.131,
+     "end": 4.653
+    },
+    {
+     "text": "eight",
+     "start": 4.653,
+     "end": 5.11
+    },
+    {
+     "text": "tonnes.",
+     "start": 5.11,
+     "end": 5.697
+    },
+    {
+     "text": "An",
+     "start": 5.697,
+     "end": 5.959
+    },
+    {
+     "text": "estimated",
+     "start": 5.959,
+     "end": 6.676
+    },
+    {
+     "text": "bite",
+     "start": 6.676,
+     "end": 7.068
+    },
+    {
+     "text": "force",
+     "start": 7.068,
+     "end": 7.525
+    },
+    {
+     "text": "of",
+     "start": 7.525,
+     "end": 7.786
+    },
+    {
+     "text": "35,000",
+     "start": 7.786,
+     "end": 8.308
+    },
+    {
+     "text": "newtons.",
+     "start": 8.308,
+     "end": 8.961
+    },
+    {
+     "text": "And",
+     "start": 9.361,
+     "end": 9.657
+    },
+    {
+     "text": "arms",
+     "start": 9.657,
+     "end": 10.013
+    },
+    {
+     "text": "that",
+     "start": 10.013,
+     "end": 10.368
+    },
+    {
+     "text": "are,",
+     "start": 10.368,
+     "end": 10.724
+    },
+    {
+     "text": "mostly,",
+     "start": 10.724,
+     "end": 11.257
+    },
+    {
+     "text": "decorative.",
+     "start": 11.257,
+     "end": 12.027
+    },
+    {
+     "text": "Last",
+     "start": 12.327,
+     "end": 12.77
+    },
+    {
+     "text": "race:",
+     "start": 12.77,
+     "end": 13.287
+    },
+    {
+     "text": "66",
+     "start": 13.287,
+     "end": 13.583
+    },
+    {
+     "text": "million",
+     "start": 13.583,
+     "end": 14.247
+    },
+    {
+     "text": "years",
+     "start": 14.247,
+     "end": 14.764
+    },
+    {
+     "text": "ago.",
+     "start": 14.764,
+     "end": 15.207
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "bite",
+     "offset": 0.5,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s4-start",
+   "start": 37.882,
+   "duration": 19.251,
+   "voice": "assets/voice/s4-start.wav",
+   "voiceStart": 0.15,
+   "speech": 18.651,
+   "cues": {
+    "t": 1.892,
+    "gun": 3.031,
+    "react": 4.135,
+    "rex": 6.63,
+    "roar": 10.607,
+    "lead": 12.161,
+    "ahead": 15.942
+   },
+   "words": [
+    {
+     "text": "Zero",
+     "start": 0.15,
+     "end": 0.537
+    },
+    {
+     "text": "to",
+     "start": 0.537,
+     "end": 0.795
+    },
+    {
+     "text": "thirty",
+     "start": 0.795,
+     "end": 1.312
+    },
+    {
+     "text": "metres.",
+     "start": 1.312,
+     "end": 1.892
+    },
+    {
+     "text": "The",
+     "start": 1.892,
+     "end": 2.215
+    },
+    {
+     "text": "start.",
+     "start": 2.215,
+     "end": 2.731
+    },
+    {
+     "text": "Bang.",
+     "start": 3.031,
+     "end": 3.735
+    },
+    {
+     "text": "Bolt",
+     "start": 4.135,
+     "end": 4.563
+    },
+    {
+     "text": "reacts",
+     "start": 4.563,
+     "end": 5.133
+    },
+    {
+     "text": "in",
+     "start": 5.133,
+     "end": 5.418
+    },
+    {
+     "text": "0.146",
+     "start": 5.418,
+     "end": 5.917
+    },
+    {
+     "text": "seconds.",
+     "start": 5.917,
+     "end": 6.63
+    },
+    {
+     "text": "The",
+     "start": 6.63,
+     "end": 6.986
+    },
+    {
+     "text": "T-Rex",
+     "start": 6.986,
+     "end": 7.485
+    },
+    {
+     "text": "has",
+     "start": 7.485,
+     "end": 7.842
+    },
+    {
+     "text": "never",
+     "start": 7.842,
+     "end": 8.34
+    },
+    {
+     "text": "heard",
+     "start": 8.34,
+     "end": 8.839
+    },
+    {
+     "text": "a",
+     "start": 8.839,
+     "end": 9.053
+    },
+    {
+     "text": "starting",
+     "start": 9.053,
+     "end": 9.766
+    },
+    {
+     "text": "pistol,",
+     "start": 9.766,
+     "end": 10.407
+    },
+    {
+     "text": "and",
+     "start": 10.607,
+     "end": 10.875
+    },
+    {
+     "text": "takes",
+     "start": 10.875,
+     "end": 11.25
+    },
+    {
+     "text": "it",
+     "start": 11.25,
+     "end": 11.464
+    },
+    {
+     "text": "personally.",
+     "start": 11.464,
+     "end": 12.161
+    },
+    {
+     "text": "But",
+     "start": 12.161,
+     "end": 12.428
+    },
+    {
+     "text": "measured",
+     "start": 12.428,
+     "end": 12.964
+    },
+    {
+     "text": "nose",
+     "start": 12.964,
+     "end": 13.285
+    },
+    {
+     "text": "first,",
+     "start": 13.285,
+     "end": 13.714
+    },
+    {
+     "text": "it",
+     "start": 13.714,
+     "end": 13.928
+    },
+    {
+     "text": "starts",
+     "start": 13.928,
+     "end": 14.357
+    },
+    {
+     "text": "twelve",
+     "start": 14.357,
+     "end": 14.785
+    },
+    {
+     "text": "metres",
+     "start": 14.785,
+     "end": 15.214
+    },
+    {
+     "text": "ahead.",
+     "start": 15.214,
+     "end": 15.642
+    },
+    {
+     "text": "After",
+     "start": 15.942,
+     "end": 16.32
+    },
+    {
+     "text": "three",
+     "start": 16.32,
+     "end": 16.697
+    },
+    {
+     "text": "seconds,",
+     "start": 16.697,
+     "end": 17.236
+    },
+    {
+     "text": "the",
+     "start": 17.236,
+     "end": 17.506
+    },
+    {
+     "text": "dinosaur",
+     "start": 17.506,
+     "end": 18.046
+    },
+    {
+     "text": "is",
+     "start": 18.046,
+     "end": 18.261
+    },
+    {
+     "text": "winning.",
+     "start": 18.261,
+     "end": 18.801
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "gun",
+     "offset": -0.04,
+     "volume": 0.3
+    },
+    {
+     "name": "whoosh",
+     "cue": "react",
+     "offset": -0.1,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s5-speed",
+   "start": 57.133,
+   "duration": 18.068,
+   "voice": "assets/voice/s5-speed.wav",
+   "voiceStart": 0.15,
+   "speech": 17.468,
+   "cues": {
+    "t": 1.943,
+    "bolt": 2.747,
+    "rex": 5.344,
+    "pass": 9.858,
+    "look": 13.969,
+    "wise": 15.655
+   },
+   "words": [
+    {
+     "text": "Thirty",
+     "start": 0.15,
+     "end": 0.645
+    },
+    {
+     "text": "to",
+     "start": 0.645,
+     "end": 0.892
+    },
+    {
+     "text": "eighty",
+     "start": 0.892,
+     "end": 1.387
+    },
+    {
+     "text": "metres.",
+     "start": 1.387,
+     "end": 1.943
+    },
+    {
+     "text": "Top",
+     "start": 1.943,
+     "end": 2.252
+    },
+    {
+     "text": "speed.",
+     "start": 2.252,
+     "end": 2.747
+    },
+    {
+     "text": "Bolt",
+     "start": 2.747,
+     "end": 3.118
+    },
+    {
+     "text": "hits",
+     "start": 3.118,
+     "end": 3.489
+    },
+    {
+     "text": "44.7",
+     "start": 3.489,
+     "end": 3.86
+    },
+    {
+     "text": "kilometres",
+     "start": 3.86,
+     "end": 4.602
+    },
+    {
+     "text": "per",
+     "start": 4.602,
+     "end": 4.911
+    },
+    {
+     "text": "hour.",
+     "start": 4.911,
+     "end": 5.344
+    },
+    {
+     "text": "The",
+     "start": 5.344,
+     "end": 5.654
+    },
+    {
+     "text": "T-Rex,",
+     "start": 5.654,
+     "end": 6.148
+    },
+    {
+     "text": "according",
+     "start": 6.148,
+     "end": 6.828
+    },
+    {
+     "text": "to",
+     "start": 6.828,
+     "end": 7.076
+    },
+    {
+     "text": "its",
+     "start": 7.076,
+     "end": 7.385
+    },
+    {
+     "text": "own",
+     "start": 7.385,
+     "end": 7.694
+    },
+    {
+     "text": "bones,",
+     "start": 7.694,
+     "end": 8.189
+    },
+    {
+     "text": "manages",
+     "start": 8.189,
+     "end": 8.745
+    },
+    {
+     "text": "about",
+     "start": 8.745,
+     "end": 9.178
+    },
+    {
+     "text": "nineteen.",
+     "start": 9.178,
+     "end": 9.858
+    },
+    {
+     "text": "At",
+     "start": 9.858,
+     "end": 10.106
+    },
+    {
+     "text": "around",
+     "start": 10.106,
+     "end": 10.6
+    },
+    {
+     "text": "thirty",
+     "start": 10.6,
+     "end": 11.095
+    },
+    {
+     "text": "five",
+     "start": 11.095,
+     "end": 11.466
+    },
+    {
+     "text": "metres,",
+     "start": 11.466,
+     "end": 12.023
+    },
+    {
+     "text": "Bolt",
+     "start": 12.023,
+     "end": 12.394
+    },
+    {
+     "text": "takes",
+     "start": 12.394,
+     "end": 12.827
+    },
+    {
+     "text": "the",
+     "start": 12.827,
+     "end": 13.136
+    },
+    {
+     "text": "lead.",
+     "start": 13.136,
+     "end": 13.569
+    },
+    {
+     "text": "He",
+     "start": 13.969,
+     "end": 14.167
+    },
+    {
+     "text": "does",
+     "start": 14.167,
+     "end": 14.464
+    },
+    {
+     "text": "not",
+     "start": 14.464,
+     "end": 14.712
+    },
+    {
+     "text": "look",
+     "start": 14.712,
+     "end": 15.009
+    },
+    {
+     "text": "back.",
+     "start": 15.009,
+     "end": 15.355
+    },
+    {
+     "text": "This",
+     "start": 15.655,
+     "end": 15.992
+    },
+    {
+     "text": "is",
+     "start": 15.992,
+     "end": 16.216
+    },
+    {
+     "text": "the",
+     "start": 16.216,
+     "end": 16.496
+    },
+    {
+     "text": "correct",
+     "start": 16.496,
+     "end": 17.001
+    },
+    {
+     "text": "decision.",
+     "start": 17.001,
+     "end": 17.618
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh-short",
+     "cue": "pass",
+     "offset": 0.3,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s6-finish",
+   "start": 75.201,
+   "duration": 16.071,
+   "voice": "assets/voice/s6-finish.wav",
+   "voiceStart": 0.15,
+   "speech": 15.471,
+   "cues": {
+    "t": 2.469,
+    "win": 3.396,
+    "where": 6.743,
+    "lean": 9.546,
+    "photo": 12.613
+   },
+   "words": [
+    {
+     "text": "Eighty",
+     "start": 0.15,
+     "end": 0.68
+    },
+    {
+     "text": "to",
+     "start": 0.68,
+     "end": 0.945
+    },
+    {
+     "text": "one",
+     "start": 0.945,
+     "end": 1.276
+    },
+    {
+     "text": "hundred",
+     "start": 1.276,
+     "end": 1.872
+    },
+    {
+     "text": "metres.",
+     "start": 1.872,
+     "end": 2.469
+    },
+    {
+     "text": "The",
+     "start": 2.469,
+     "end": 2.8
+    },
+    {
+     "text": "finish.",
+     "start": 2.8,
+     "end": 3.396
+    },
+    {
+     "text": "Bolt",
+     "start": 3.396,
+     "end": 3.794
+    },
+    {
+     "text": "crosses",
+     "start": 3.794,
+     "end": 4.39
+    },
+    {
+     "text": "the",
+     "start": 4.39,
+     "end": 4.721
+    },
+    {
+     "text": "line",
+     "start": 4.721,
+     "end": 5.118
+    },
+    {
+     "text": "in",
+     "start": 5.118,
+     "end": 5.383
+    },
+    {
+     "text": "9.58",
+     "start": 5.383,
+     "end": 5.781
+    },
+    {
+     "text": "seconds.",
+     "start": 5.781,
+     "end": 6.443
+    },
+    {
+     "text": "The",
+     "start": 6.743,
+     "end": 7.053
+    },
+    {
+     "text": "T-Rex",
+     "start": 7.053,
+     "end": 7.487
+    },
+    {
+     "text": "is",
+     "start": 7.487,
+     "end": 7.735
+    },
+    {
+     "text": "at",
+     "start": 7.735,
+     "end": 7.983
+    },
+    {
+     "text": "sixty",
+     "start": 7.983,
+     "end": 8.416
+    },
+    {
+     "text": "four",
+     "start": 8.416,
+     "end": 8.788
+    },
+    {
+     "text": "metres,",
+     "start": 8.788,
+     "end": 9.346
+    },
+    {
+     "text": "attempting",
+     "start": 9.546,
+     "end": 10.257
+    },
+    {
+     "text": "a",
+     "start": 10.257,
+     "end": 10.435
+    },
+    {
+     "text": "dip",
+     "start": 10.435,
+     "end": 10.731
+    },
+    {
+     "text": "finish",
+     "start": 10.731,
+     "end": 11.205
+    },
+    {
+     "text": "with",
+     "start": 11.205,
+     "end": 11.561
+    },
+    {
+     "text": "no",
+     "start": 11.561,
+     "end": 11.798
+    },
+    {
+     "text": "arms.",
+     "start": 11.798,
+     "end": 12.213
+    },
+    {
+     "text": "The",
+     "start": 12.613,
+     "end": 12.954
+    },
+    {
+     "text": "photo",
+     "start": 12.954,
+     "end": 13.433
+    },
+    {
+     "text": "finish",
+     "start": 13.433,
+     "end": 13.98
+    },
+    {
+     "text": "requires",
+     "start": 13.98,
+     "end": 14.664
+    },
+    {
+     "text": "two",
+     "start": 14.664,
+     "end": 15.005
+    },
+    {
+     "text": "photos.",
+     "start": 15.005,
+     "end": 15.621
+    }
+   ],
+   "sfx": [
+    {
+     "name": "ping",
+     "cue": "win",
+     "offset": 0.2,
+     "volume": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s7-verdict",
+   "start": 91.272,
+   "duration": 14.722,
+   "voice": "assets/voice/s7-verdict.wav",
+   "voiceStart": 0.15,
+   "speech": 13.572,
+   "cues": {
+    "q": 1.012,
+    "yes": 3.937,
+    "by": 5.562,
+    "but": 7.099,
+    "line": 9.461,
+    "rex": 12.143
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.437
+    },
+    {
+     "text": "verdict.",
+     "start": 0.437,
+     "end": 1.012
+    },
+    {
+     "text": "Could",
+     "start": 1.012,
+     "end": 1.414
+    },
+    {
+     "text": "Usain",
+     "start": 1.414,
+     "end": 1.816
+    },
+    {
+     "text": "Bolt",
+     "start": 1.816,
+     "end": 2.16
+    },
+    {
+     "text": "beat",
+     "start": 2.16,
+     "end": 2.505
+    },
+    {
+     "text": "a",
+     "start": 2.505,
+     "end": 2.677
+    },
+    {
+     "text": "T-Rex?",
+     "start": 2.677,
+     "end": 3.137
+    },
+    {
+     "text": "Yes.",
+     "start": 3.937,
+     "end": 4.662
+    },
+    {
+     "text": "By",
+     "start": 5.562,
+     "end": 5.774
+    },
+    {
+     "text": "almost",
+     "start": 5.774,
+     "end": 6.198
+    },
+    {
+     "text": "seven",
+     "start": 6.198,
+     "end": 6.569
+    },
+    {
+     "text": "seconds.",
+     "start": 6.569,
+     "end": 7.099
+    },
+    {
+     "text": "There",
+     "start": 7.099,
+     "end": 7.47
+    },
+    {
+     "text": "is,",
+     "start": 7.47,
+     "end": 7.735
+    },
+    {
+     "text": "however,",
+     "start": 7.735,
+     "end": 8.266
+    },
+    {
+     "text": "one",
+     "start": 8.266,
+     "end": 8.531
+    },
+    {
+     "text": "problem.",
+     "start": 8.531,
+     "end": 9.061
+    },
+    {
+     "text": "The",
+     "start": 9.461,
+     "end": 9.739
+    },
+    {
+     "text": "race",
+     "start": 9.739,
+     "end": 10.073
+    },
+    {
+     "text": "ends",
+     "start": 10.073,
+     "end": 10.407
+    },
+    {
+     "text": "at",
+     "start": 10.407,
+     "end": 10.63
+    },
+    {
+     "text": "the",
+     "start": 10.63,
+     "end": 10.908
+    },
+    {
+     "text": "finish",
+     "start": 10.908,
+     "end": 11.354
+    },
+    {
+     "text": "line.",
+     "start": 11.354,
+     "end": 11.743
+    },
+    {
+     "text": "The",
+     "start": 12.143,
+     "end": 12.472
+    },
+    {
+     "text": "T-Rex",
+     "start": 12.472,
+     "end": 12.933
+    },
+    {
+     "text": "does",
+     "start": 12.933,
+     "end": 13.327
+    },
+    {
+     "text": "not.",
+     "start": 13.327,
+     "end": 13.722
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "yes",
+     "offset": 0.14,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s8-outro",
+   "start": 105.994,
+   "duration": 4.481,
+   "voice": "assets/voice/s8-outro.wav",
+   "voiceStart": 0.15,
+   "speech": 2.731,
+   "cues": {
+    "c": 1.515
+   },
+   "words": [
+    {
+     "text": "Who",
+     "start": 0.15,
+     "end": 0.378
+    },
+    {
+     "text": "should",
+     "start": 0.378,
+     "end": 0.742
+    },
+    {
+     "text": "we",
+     "start": 0.742,
+     "end": 0.924
+    },
+    {
+     "text": "race",
+     "start": 0.924,
+     "end": 1.197
+    },
+    {
+     "text": "next?",
+     "start": 1.197,
+     "end": 1.515
+    },
+    {
+     "text": "Tell",
+     "start": 1.515,
+     "end": 1.788
+    },
+    {
+     "text": "us",
+     "start": 1.788,
+     "end": 1.97
+    },
+    {
+     "text": "in",
+     "start": 1.97,
+     "end": 2.152
+    },
+    {
+     "text": "the",
+     "start": 2.152,
+     "end": 2.38
+    },
+    {
+     "text": "comments.",
+     "start": 2.38,
+     "end": 2.881
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}

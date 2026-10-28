@@ -5,6 +5,10 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-28 · 001 · **Der Stil von 001 v2 ist "perfekt" und gilt als Referenz für alle Folgen**: Vollbild-Cartoon, fliegende Fakten-Karten,
+  Kapitel-Banner, Karaoke-Untertitel, Stempel im Urteil, Kommentar-Aufruf am Ende. Nicht ohne Wunsch des Creators ändern.
+- 2026-10-28 · 002 · Ablauf, den der Creator für Duelle/Rennen vorgibt: **Headline zuerst → beide Parteien vorstellen → das Ereignis mit Stats
+  durchgehen → am Ende, wer gewinnt.** Bei Rennen ersetzen die Rennabschnitte (0–30 m, 30–80 m, 80–100 m) die Pläne A/B/C.
 - 2026-10-28 · 001 · **Kein Info-Feld/Rahmen um die Animation.** Nur die Animation im Vollbild. Die Infos sind fest in der Animation
   integriert: Sie fliegen als Karten hinein und verschwinden wieder. Die Animation selbst gefiel ("super"), also beibehalten.
 - 2026-10-28 · 001 · Stimme aus VoiceStudio nutzen (siehe unten). Standard ist `"voice": "fable"` (eingebauter Name, VoiceStudio bildet ihn
@@ -19,6 +23,10 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 002 · Der Creator schrieb "Can …", der Kanal heißt aber COULD?. Die Headline wurde zu "Could …" vereinheitlicht (beim Creator nachgefragt: offen).
+- 002 · Rennen aus einem echten Modell (Zwischenzeiten + Geschwindigkeit) treiben, in Zeitlupe, mit Rennuhr-Karte. So stimmen alle
+  Zahlen (Führungswechsel, Abstand im Ziel) mit dem Bild überein. Vorlage: `episodes/002-bolt-trex/src/race.py`.
+- 002 · Unter den Untertiteln eine Live-Grafik ohne Text (Fortschrittsbalken 0–100 m mit Symbolen) füllt die untere Hälfte sinnvoll.
 - 001 · Die erste Version (Piper-Stimme, Standbilder) war mit 133 s zu lang und zu statisch. Ziel sind 90–115 s mit Bewegung auf jedem Satz.
 - 001 · Keine echten Fotos von Personen: Karikatur als Cartoon-Figur ist sicherer und passt zum Stil.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.

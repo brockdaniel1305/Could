@@ -1,0 +1,106 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "c062784c605b8b758870a54661f1ad109fe90675",
+  "words": []
+ },
+ "s1-hook.part1.wav": {
+  "key": "f04df5f92042030cf18d0e93b3595b055e09d157",
+  "words": []
+ },
+ "s1-hook.part2.wav": {
+  "key": "f087d042303ab8b309fd2557d9c30dd12672bb12",
+  "words": []
+ },
+ "s2-bolt.part0.wav": {
+  "key": "508002423b3ee132a27b71fb16835f90f204e610",
+  "words": []
+ },
+ "s2-bolt.part1.wav": {
+  "key": "fab052f6497a017c64253994604570a9fe273037",
+  "words": []
+ },
+ "s3-trex.part0.wav": {
+  "key": "51096dfb9acb57fe332b22c94737568be5a5f864",
+  "words": []
+ },
+ "s3-trex.part1.wav": {
+  "key": "91a5eed3ca0b453e919f9bd7093c65edd5a4da5c",
+  "words": []
+ },
+ "s3-trex.part2.wav": {
+  "key": "0d636e7da4cfdf1b3047e872c8fd56c72ba456c0",
+  "words": []
+ },
+ "s4-start.part0.wav": {
+  "key": "c8f9e205dec8e776554d8c5cd2bb23092de5dab6",
+  "words": []
+ },
+ "s4-start.part1.wav": {
+  "key": "72abd306b33735c79dad38fe8e42a6b720d7e267",
+  "words": []
+ },
+ "s4-start.part2.wav": {
+  "key": "bc29bb7daac06fa099c2d417b7282a8d0b03942e",
+  "words": []
+ },
+ "s4-start.part3.wav": {
+  "key": "0f9600f3d2a29df8028c0bbfb269ed125b0a0bd5",
+  "words": []
+ },
+ "s4-start.part4.wav": {
+  "key": "a7b1329a22a70ad9570d9daf4a93f7d543212fa4",
+  "words": []
+ },
+ "s5-speed.part0.wav": {
+  "key": "534062611cd2efbc2ff4d743f2f8271e39b75a23",
+  "words": []
+ },
+ "s5-speed.part1.wav": {
+  "key": "6fc19dc997b35ddae62fb2ad722bbac0adb8ee56",
+  "words": []
+ },
+ "s5-speed.part2.wav": {
+  "key": "1da2cbf9006e623bb020c32c6621c8356bb1189c",
+  "words": []
+ },
+ "s6-finish.part0.wav": {
+  "key": "4d2b7ec4f0a8e923079beae4d96fa6018d46f9d5",
+  "words": []
+ },
+ "s6-finish.part1.wav": {
+  "key": "e03050e16d427ece85d346e11eb5310f6193fb00",
+  "words": []
+ },
+ "s6-finish.part2.wav": {
+  "key": "1a159f77cc9a5a376afb3be6950a6ca72bb6e04b",
+  "words": []
+ },
+ "s6-finish.part3.wav": {
+  "key": "2c254e324262c55fc3ef853d7a1761563a79ed86",
+  "words": []
+ },
+ "s7-verdict.part0.wav": {
+  "key": "2800db34bc03fd2c5c3aacb3c317d29fba7e3722",
+  "words": []
+ },
+ "s7-verdict.part1.wav": {
+  "key": "7ca001655eafa4b7280ed8cdbe5c631ee260b7bf",
+  "words": []
+ },
+ "s7-verdict.part2.wav": {
+  "key": "f00de77324ac9f8c0da7232012ec4f09ccb613fb",
+  "words": []
+ },
+ "s7-verdict.part3.wav": {
+  "key": "c58b9886bdfb5feda00fc2bdd014735749478adf",
+  "words": []
+ },
+ "s7-verdict.part4.wav": {
+  "key": "3840ba7c5e6d7f8baa56dc88896d040884572a45",
+  "words": []
+ },
+ "s8-outro.part0.wav": {
+  "key": "10f62c36bbd209a7b56af8f802d9eba99eaa1a20",
+  "words": []
+ }
+}

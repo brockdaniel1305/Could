@@ -5,7 +5,8 @@ Status: ✅ fertig · 📝 Skript · 💡 Idee
 | # | Frage | Status |
 |---|-------|--------|
 | 001 | Could Manuel Neuer save the Titanic from sinking? | ✅ (HyperFrames + Cartoon) |
-| 002 | Could Usain Bolt outrun a Deutsche Bahn ICE? (Spoiler: on a delayed day, yes) | 💡 |
+| 002 | Could Usain Bolt beat a T-Rex in a 100 m race? | ✅ |
+| 021 | Could Usain Bolt outrun a Deutsche Bahn ICE? (Spoiler: on a delayed day, yes) | 💡 |
 | 003 | Could 100 grandmas knit a sweater for the Statue of Liberty? | 💡 |
 | 004 | Could Gordon Ramsay cater for the entire Roman army? | 💡 |
 | 005 | Could a golden retriever pass the German driving test? | 💡 |

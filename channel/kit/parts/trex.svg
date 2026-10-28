@@ -1,0 +1,26 @@
+<!-- Cartoon Tyrannosaurus rex, side view, facing RIGHT. Origin = ground under the hip. Tail tip x=-330, nose x=+270 (600 = "12 m").
+     ~330 tall. Animatable: PFX (whole), PFX-body (bob/lean), PFX-head (nod, origin neck), PFX-jaw (open: rotate +), PFX-pup (look),
+     PFX-brow, PFX-armL/-armR (tiny wiggle), PFX-legL (far) / PFX-legR (near) (rotate from hip), PFX-tail (swish). -->
+<g id="PFX">
+  <ellipse cx="-10" cy="4" rx="120" ry="14" fill="#000" opacity="0.25" />
+  <g id="PFX-body">
+    <g transform="translate(-10,-176)"><g id="PFX-legL"><path d="M-30,0 Q-44,60 -14,104 L-26,150 L-4,170 L44,170 L14,142 L24,92 Q38,40 30,0 Z" fill="#3e7d34" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g></g>
+    <g id="PFX-tail"><path d="M-70,-238 Q-210,-246 -330,-196 Q-220,-196 -70,-178 Z" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g>
+    <path d="M-96,-250 Q-30,-306 70,-282 Q132,-262 124,-200 Q110,-146 10,-142 Q-76,-140 -100,-190 Z" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-60,-170 Q10,-150 96,-176 Q90,-150 10,-146 Q-50,-146 -60,-170 Z" fill="#a8d672" />
+    <g fill="#3e7d34"><path d="M-70,-262 l14,-20 l10,22 Z" /><path d="M-30,-282 l14,-20 l10,22 Z" /><path d="M14,-288 l14,-20 l10,22 Z" /></g>
+    <g transform="translate(112,-206)"><g id="PFX-armL"><path d="M0,0 L26,14 L36,6 M26,14 L34,22" fill="none" stroke="#1a1a2e" stroke-width="9" stroke-linecap="round" /><path d="M0,0 L26,14" stroke="#5fa84a" stroke-width="5" stroke-linecap="round" /></g></g>
+    <g transform="translate(96,-200)"><g id="PFX-armR"><path d="M0,0 L26,14 L36,6 M26,14 L34,22" fill="none" stroke="#1a1a2e" stroke-width="9" stroke-linecap="round" /><path d="M0,0 L26,14" stroke="#5fa84a" stroke-width="5" stroke-linecap="round" /></g></g>
+    <g transform="translate(-6,-176)"><g id="PFX-legR"><path d="M-34,0 Q-50,64 -16,108 L-28,152 L-6,172 L48,172 L16,144 L26,94 Q42,40 34,0 Z" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g></g>
+    <g transform="translate(110,-262)"><g id="PFX-head">
+      <g id="PFX-jaw"><path d="M-6,18 L152,14 Q150,44 108,50 L6,46 Z" fill="#4f9440" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+        <path d="M30,18 l8,-12 l8,12 M60,17 l8,-12 l8,12 M90,16 l8,-12 l8,12 M120,15 l8,-12 l8,12" fill="#fff" stroke="#1a1a2e" stroke-width="3" stroke-linejoin="round" /></g>
+      <path d="M-24,-6 Q30,-70 120,-52 Q164,-42 162,-2 L160,16 L-10,22 Z" fill="#5fa84a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <path d="M24,22 l8,14 l8,-14 M54,21 l8,14 l8,-14 M84,20 l8,14 l8,-14 M114,19 l8,14 l8,-14 M140,18 l7,12 l7,-12" fill="#fff" stroke="#1a1a2e" stroke-width="3" stroke-linejoin="round" />
+      <circle cx="146" cy="-24" r="4" fill="#1a1a2e" />
+      <circle cx="74" cy="-26" r="14" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
+      <circle id="PFX-pup" cx="78" cy="-26" r="6" fill="#1a1a2e" />
+      <path id="PFX-brow" d="M54,-48 L94,-38" stroke="#1a1a2e" stroke-width="7" stroke-linecap="round" />
+    </g></g>
+  </g>
+</g>
