@@ -1,0 +1,17 @@
+<!-- Full-frame Chinese mountain landscape 1080x1920 with the Great Wall snaking along the far ridges; ground (grass) from y=GY.
+     Lower area: grass with a stone path. PFX-cloud1/2 drift. -->
+<g id="PFX">
+  <defs><linearGradient id="PFX-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4f0" /><stop offset="1" stop-color="#fde7c4" /></linearGradient></defs>
+  <rect x="0" y="0" width="1080" height="1920" fill="url(#PFX-sky)" />
+  <circle cx="860" cy="420" r="60" fill="#ffd56a" stroke="#1a1a2e" stroke-width="4" opacity="0.9" />
+  <g id="PFX-cloud1" fill="#fff" stroke="#1a1a2e" stroke-width="4"><path d="M120,330 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <g id="PFX-cloud2" fill="#fff" stroke="#1a1a2e" stroke-width="4"><path d="M680,250 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <path d="M0,700 L160,560 L300,640 L460,500 L620,620 L780,480 L940,600 L1080,520 L1080,1300 L0,1300 Z" fill="#a9c9a4" opacity="0.8" />
+  <path d="M0,820 L120,700 L220,760 L360,620 L470,720 L600,600 L720,700 L840,580 L960,690 L1080,620 L1080,1300 L0,1300 Z" fill="#6fae63" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,760 L120,650 L220,700 L360,570 L470,660 L600,550 L720,640 L840,530 L960,630 L1080,570" fill="none" stroke="#b59a72" stroke-width="16" stroke-linejoin="round" />
+  <path d="M0,760 L120,650 L220,700 L360,570 L470,660 L600,550 L720,640 L840,530 L960,630 L1080,570" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-dasharray="6 10" />
+  <rect x="346" y="530" width="28" height="40" fill="#b59a72" stroke="#1a1a2e" stroke-width="3" /><rect x="586" y="510" width="28" height="40" fill="#b59a72" stroke="#1a1a2e" stroke-width="3" /><rect x="826" y="490" width="28" height="40" fill="#b59a72" stroke="#1a1a2e" stroke-width="3" />
+  <rect x="0" y="GY" width="1080" height="1000" fill="#5d9e4f" />
+  <path d="M0,GY L1080,GY" stroke="#1a1a2e" stroke-width="6" />
+  <g fill="#4c8a40"><ellipse cx="120" cy="1560" rx="90" ry="22" /><ellipse cx="760" cy="1700" rx="120" ry="26" /><ellipse cx="420" cy="1820" rx="100" ry="22" /></g>
+</g>

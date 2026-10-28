@@ -1,0 +1,82 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "f28a8583acf2d4581ae9fd07e346ff81461d2d79",
+  "words": []
+ },
+ "s1-hook.part1.wav": {
+  "key": "f04df5f92042030cf18d0e93b3595b055e09d157",
+  "words": []
+ },
+ "s1-hook.part2.wav": {
+  "key": "228d86ca14ecccd848f23fe9836f5cc7fd4f507f",
+  "words": []
+ },
+ "s2-curry.part0.wav": {
+  "key": "f6bf572b5a5c0b52295e30cfb3cc62b68f2d2166",
+  "words": []
+ },
+ "s2-curry.part1.wav": {
+  "key": "4053ad3951a73df947c1abb2a968d62c395d8244",
+  "words": []
+ },
+ "s3-wall.part0.wav": {
+  "key": "4d4f58d1dea9a4726e83ebe6cf7e8ac882abfdce",
+  "words": []
+ },
+ "s3-wall.part1.wav": {
+  "key": "9d158dfce079ff2300b93ab77c48027c44d185ad",
+  "words": []
+ },
+ "s4-normal.part0.wav": {
+  "key": "970fb2b54d00dd09bf208f9ef683cf5ba58f4b3c",
+  "words": []
+ },
+ "s4-normal.part1.wav": {
+  "key": "dcdecedb7b63d53b9cfb25da7c26c50d7f69deac",
+  "words": []
+ },
+ "s4-normal.part2.wav": {
+  "key": "2bfc4c752b662011f3701a813da3df624a500328",
+  "words": []
+ },
+ "s5-moon.part0.wav": {
+  "key": "ba9cbfcc60c2aa7db3c4399ae600830ada058e85",
+  "words": []
+ },
+ "s5-moon.part1.wav": {
+  "key": "33485a4f0b1212ad5094b6afd675a27b382f7a33",
+  "words": []
+ },
+ "s6-blind.part0.wav": {
+  "key": "e8bea67ce185c9ec50550ec0e55334bd5694e6d3",
+  "words": []
+ },
+ "s6-blind.part1.wav": {
+  "key": "49e5b5ff0f6c5d5f54493a3c2c38c569539ad013",
+  "words": []
+ },
+ "s7-verdict.part0.wav": {
+  "key": "7e2d762350fabc57610643c5214d78110119c25b",
+  "words": []
+ },
+ "s7-verdict.part1.wav": {
+  "key": "19e969bfc796d21463b410eab7466019d459de6a",
+  "words": []
+ },
+ "s7-verdict.part2.wav": {
+  "key": "76a06c2a8217924d468373b3aa85405497fa1b76",
+  "words": []
+ },
+ "s7-verdict.part3.wav": {
+  "key": "6916386d10e762680f3f97ccb1ea09ec105782ab",
+  "words": []
+ },
+ "s7-verdict.part4.wav": {
+  "key": "c040590bd1535f7302bdf43b86b1b89b423e2edd",
+  "words": []
+ },
+ "s8-outro.part0.wav": {
+  "key": "f965a3ad1f4b2f9e4dd8a4ae92cf2d603d4c57e3",
+  "words": []
+ }
+}

@@ -1,0 +1,8 @@
+<!-- Basketball hoop, side view, facing LEFT (shooter on the left). Origin = ground under the pole. Rim front at (-122,-305), rim back (-78,-305)
+     at 100 px/m (rim 3.05 m, diameter 0.45 m). Animatable: PFX-net (swish: scaleY), PFX-board (shake). -->
+<g id="PFX">
+  <path d="M0,0 L0,-330 L-40,-330" fill="none" stroke="#3a3f58" stroke-width="14" stroke-linejoin="round" />
+  <g id="PFX-board"><rect x="-66" y="-395" width="14" height="110" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /></g>
+  <path d="M-122,-305 L-66,-305" stroke="#e0412f" stroke-width="7" stroke-linecap="round" />
+  <g id="PFX-net"><path d="M-120,-303 L-112,-262 L-84,-262 L-72,-303 M-116,-284 L-78,-284 M-114,-270 L-82,-270 M-106,-303 L-100,-262 M-90,-303 L-94,-262" fill="none" stroke="#f4efe6" stroke-width="3" /></g>
+</g>

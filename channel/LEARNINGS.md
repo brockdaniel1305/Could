@@ -5,6 +5,8 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-28 · 002 · "perfekt, genau so müssen die Videos aussehen": 002 (Bolt vs T-Rex) ist zusammen mit 001 v2 die Referenz.
+  Gedankenexperimente "im gleichen lustigen Stil" erzählen: Headline → beide vorstellen → drei Anläufe/Abschnitte mit Stats → Urteil.
 - 2026-10-28 · 001 · **Der Stil von 001 v2 ist "perfekt" und gilt als Referenz für alle Folgen**: Vollbild-Cartoon, fliegende Fakten-Karten,
   Kapitel-Banner, Karaoke-Untertitel, Stempel im Urteil, Kommentar-Aufruf am Ende. Nicht ohne Wunsch des Creators ändern.
 - 2026-10-28 · 002 · Ablauf, den der Creator für Duelle/Rennen vorgibt: **Headline zuerst → beide Parteien vorstellen → das Ereignis mit Stats
@@ -23,6 +25,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 003 · Physik-Gags gewinnen, wenn das Bild maßstabsgetreu ist (100 px/m, Höhenlineal am Rand) und die Bahnen echt gerechnet werden
+  (`episodes/003-curry-wall/src/shot.py`). Querverweise auf frühere Folgen ("Faster than Usain Bolt") verbinden die Serie.
+- 003 · Auch Bauwerke bekommen ein selbstgefälliges Gesicht (Mauer), das passt zum Running Gag mit Eisberg und T-Rex.
 - 002 · Der Creator schrieb "Can …", der Kanal heißt aber COULD?. Die Headline wurde zu "Could …" vereinheitlicht (beim Creator nachgefragt: offen).
 - 002 · Rennen aus einem echten Modell (Zwischenzeiten + Geschwindigkeit) treiben, in Zeitlupe, mit Rennuhr-Karte. So stimmen alle
   Zahlen (Führungswechsel, Abstand im Ziel) mit dem Bild überein. Vorlage: `episodes/002-bolt-trex/src/race.py`.
@@ -32,6 +37,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- `src/build_all.sh` baut nur `s[0-9]*.py`. Hilfsmodule der Folge (z. B. `race.py`, `shot.py`) dürfen also nicht mit `s<Ziffer>` beginnen.
+- Dreht sich eine Figur mit `scaleX: -1` um, auch die Rückennummer (`PFX-num`) zurückspiegeln.
 - Bei schräg gestellten Karten meldet `check` eine Überlappung zwischen Beschriftung und Wert. Karten tragen deshalb `data-layout-allow-overlap`.
 - Die vordere Wellenschicht ist nur ein schmaler Streifen, sonst verdeckt sie die Unterwasserwelt (Eisberg-Unterteil, Fische).
 - Die untere Bildhälfte nie leer lassen: Unterwasserwelt, Rasen mit Strafraum usw. zeichnen (unter 1330 px nur Bild, kein Text).

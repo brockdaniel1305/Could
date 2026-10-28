@@ -1,0 +1,204 @@
+<template>
+  <!-- COULD? scene s1-hook · full-frame cartoon + flying fact cards. Source: src/s1.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+  </style>
+  <div id="root" data-composition-id="s1-hook" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s1-hook-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s1-hook-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s1-hook-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s1-hook-boil)">
+
+<!-- Full-frame Chinese mountain landscape 1080x1920 with the Great Wall snaking along the far ridges; ground (grass) from y=1250.
+     Lower area: grass with a stone path. s1-hook-land-cloud1/2 drift. -->
+<g id="s1-hook-land">
+  <defs><linearGradient id="s1-hook-land-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4f0" /><stop offset="1" stop-color="#fde7c4" /></linearGradient></defs>
+  <rect x="0" y="0" width="1080" height="1920" fill="url(#s1-hook-land-sky)" />
+  <circle cx="860" cy="420" r="60" fill="#ffd56a" stroke="#1a1a2e" stroke-width="4" opacity="0.9" />
+  <g id="s1-hook-land-cloud1" fill="#fff" stroke="#1a1a2e" stroke-width="4"><path d="M120,330 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <g id="s1-hook-land-cloud2" fill="#fff" stroke="#1a1a2e" stroke-width="4"><path d="M680,250 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <path d="M0,700 L160,560 L300,640 L460,500 L620,620 L780,480 L940,600 L1080,520 L1080,1300 L0,1300 Z" fill="#a9c9a4" opacity="0.8" />
+  <path d="M0,820 L120,700 L220,760 L360,620 L470,720 L600,600 L720,700 L840,580 L960,690 L1080,620 L1080,1300 L0,1300 Z" fill="#6fae63" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M0,760 L120,650 L220,700 L360,570 L470,660 L600,550 L720,640 L840,530 L960,630 L1080,570" fill="none" stroke="#b59a72" stroke-width="16" stroke-linejoin="round" />
+  <path d="M0,760 L120,650 L220,700 L360,570 L470,660 L600,550 L720,640 L840,530 L960,630 L1080,570" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-dasharray="6 10" />
+  <rect x="346" y="530" width="28" height="40" fill="#b59a72" stroke="#1a1a2e" stroke-width="3" /><rect x="586" y="510" width="28" height="40" fill="#b59a72" stroke="#1a1a2e" stroke-width="3" /><rect x="826" y="490" width="28" height="40" fill="#b59a72" stroke="#1a1a2e" stroke-width="3" />
+  <rect x="0" y="1250" width="1080" height="1000" fill="#5d9e4f" />
+  <path d="M0,1250 L1080,1250" stroke="#1a1a2e" stroke-width="6" />
+  <g fill="#4c8a40"><ellipse cx="120" cy="1560" rx="90" ry="22" /><ellipse cx="760" cy="1700" rx="120" ry="26" /><ellipse cx="420" cy="1820" rx="100" ry="22" /></g>
+</g>
+
+<rect x="0" y="1250" width="1080" height="700" fill="#d99a5b" /><path d="M0,1290 L1080,1290" stroke="#b9783f" stroke-width="3" /><path d="M0,1336 L1080,1336" stroke="#b9783f" stroke-width="3" /><path d="M0,1382 L1080,1382" stroke="#b9783f" stroke-width="3" /><path d="M0,1428 L1080,1428" stroke="#b9783f" stroke-width="3" /><path d="M0,1474 L1080,1474" stroke="#b9783f" stroke-width="3" /><path d="M0,1520 L1080,1520" stroke="#b9783f" stroke-width="3" /><path d="M0,1566 L1080,1566" stroke="#b9783f" stroke-width="3" /><path d="M0,1612 L1080,1612" stroke="#b9783f" stroke-width="3" /><path d="M0,1658 L1080,1658" stroke="#b9783f" stroke-width="3" /><path d="M0,1704 L1080,1704" stroke="#b9783f" stroke-width="3" /><path d="M0,1750 L1080,1750" stroke="#b9783f" stroke-width="3" /><path d="M0,1796 L1080,1796" stroke="#b9783f" stroke-width="3" /><path d="M0,1842 L1080,1842" stroke="#b9783f" stroke-width="3" /><path d="M0,1888 L1080,1888" stroke="#b9783f" stroke-width="3" />
+<path d="M404.0,1920 Q354.0,1500 494.0,1256" fill="none" stroke="#f4efe6" stroke-width="10" />
+<rect x="684.0" y="1256" width="300" height="680" fill="#1d428a" opacity="0.55" />
+<path d="M0,1250 L1080,1250" stroke="#1a1a2e" stroke-width="6" />
+<g id="s1-hook-ruler" opacity="0.85"><path d="M40,250 L40,1250" stroke="#1a1a2e" stroke-width="5" /><path d="M40,1250 L70,1250" stroke="#1a1a2e" stroke-width="5" /><path d="M40,1150 L58,1150" stroke="#1a1a2e" stroke-width="5" /><path d="M40,1050 L70,1050" stroke="#1a1a2e" stroke-width="5" /><text data-layout-ignore x="78" y="1060" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">2 m</text><path d="M40,950 L58,950" stroke="#1a1a2e" stroke-width="5" /><path d="M40,850 L70,850" stroke="#1a1a2e" stroke-width="5" /><text data-layout-ignore x="78" y="860" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">4 m</text><path d="M40,750 L58,750" stroke="#1a1a2e" stroke-width="5" /><path d="M40,650 L70,650" stroke="#1a1a2e" stroke-width="5" /><text data-layout-ignore x="78" y="660" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">6 m</text><path d="M40,550 L58,550" stroke="#1a1a2e" stroke-width="5" /><path d="M40,450 L70,450" stroke="#1a1a2e" stroke-width="5" /><text data-layout-ignore x="78" y="460" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">8 m</text><path d="M40,350 L58,350" stroke="#1a1a2e" stroke-width="5" /><path d="M40,250 L70,250" stroke="#1a1a2e" stroke-width="5" /><text data-layout-ignore x="78" y="260" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">10 m</text></g>
+<g transform="translate(512.0,1250)"><!-- Great Wall cross-section (the ball flies over it), 100 px/m: 7 m tall, 4.5 m wide on top, 5.5 m at the base, battlements on both edges.
+     Origin = ground centre. Animatable: s1-hook-w (shake), s1-hook-w-face, s1-hook-w-browL/-browR, s1-hook-w-smirk / s1-hook-w-grin (show one). -->
+<g id="s1-hook-w">
+  <path d="M-275,0 L-225,-700 L225,-700 L275,0 Z" fill="#c9ae84" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <rect x="-271" y="-50" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-191" y="-50" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-111" y="-50" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-31" y="-50" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="49" y="-50" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="129" y="-50" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="209" y="-50" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-228" y="-100" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-148" y="-100" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-68" y="-100" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="12" y="-100" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="92" y="-100" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="172" y="-100" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-264" y="-150" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-184" y="-150" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-104" y="-150" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-24" y="-150" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="56" y="-150" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="136" y="-150" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-221" y="-200" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-141" y="-200" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-61" y="-200" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="19" y="-200" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="99" y="-200" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="179" y="-200" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-257" y="-250" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-177" y="-250" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-97" y="-250" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-17" y="-250" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="63" y="-250" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="143" y="-250" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-214" y="-300" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-134" y="-300" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-54" y="-300" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="26" y="-300" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="106" y="-300" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="186" y="-300" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-250" y="-350" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-170" y="-350" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-90" y="-350" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-10" y="-350" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="70" y="-350" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="150" y="-350" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-206" y="-400" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-126" y="-400" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-46" y="-400" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="34" y="-400" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="114" y="-400" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-243" y="-450" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-163" y="-450" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-83" y="-450" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-3" y="-450" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="77" y="-450" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="157" y="-450" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-199" y="-500" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-119" y="-500" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-39" y="-500" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="41" y="-500" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="121" y="-500" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-236" y="-550" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-156" y="-550" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-76" y="-550" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="4" y="-550" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="84" y="-550" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="164" y="-550" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-192" y="-600" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-112" y="-600" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-32" y="-600" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="48" y="-600" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="128" y="-600" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-229" y="-650" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-149" y="-650" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-69" y="-650" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="11" y="-650" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="91" y="-650" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-185" y="-700" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-105" y="-700" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="-25" y="-700" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="55" y="-700" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" /><rect x="135" y="-700" width="76" height="46" rx="4" fill="#b59a72" opacity="0.55" />
+  <path d="M-225,-700 L225,-700 L225,-686 L-225,-686 Z" fill="#8f7a5a" />
+  <rect x="-225" y="-760" width="40" height="60" fill="#c9ae84" stroke="#1a1a2e" stroke-width="5" /><rect x="-150" y="-760" width="40" height="60" fill="#c9ae84" stroke="#1a1a2e" stroke-width="5" /><rect x="110" y="-760" width="40" height="60" fill="#c9ae84" stroke="#1a1a2e" stroke-width="5" /><rect x="185" y="-760" width="40" height="60" fill="#c9ae84" stroke="#1a1a2e" stroke-width="5" />
+  <path d="M-275,0 L-225,-700 M275,0 L225,-700" stroke="#1a1a2e" stroke-width="6" />
+  <g id="s1-hook-w-face">
+    <ellipse cx="-80" cy="-430" rx="26" ry="30" fill="#1a1a2e" /><ellipse cx="80" cy="-430" rx="26" ry="30" fill="#1a1a2e" />
+    <path d="M-116,-440 L-44,-440 M44,-440 L116,-440" stroke="#c9ae84" stroke-width="22" />
+    <path id="s1-hook-w-browL" d="M-124,-486 L-40,-470" stroke="#1a1a2e" stroke-width="14" stroke-linecap="round" />
+    <path id="s1-hook-w-browR" d="M40,-470 L124,-486" stroke="#1a1a2e" stroke-width="14" stroke-linecap="round" />
+    <path id="s1-hook-w-smirk" d="M-80,-330 Q0,-300 86,-352" fill="none" stroke="#1a1a2e" stroke-width="14" stroke-linecap="round" />
+    <path id="s1-hook-w-grin" d="M-96,-340 Q0,-250 96,-344 Z" fill="#1a1a2e" opacity="0" />
+  </g>
+</g>
+</g>
+<g transform="translate(974.0,1250)"><!-- Basketball hoop, side view, facing LEFT (shooter on the left). Origin = ground under the pole. Rim front at (-122,-305), rim back (-78,-305)
+     at 100 px/m (rim 3.05 m, diameter 0.45 m). Animatable: s1-hook-h-net (swish: scaleY), s1-hook-h-board (shake). -->
+<g id="s1-hook-h">
+  <path d="M0,0 L0,-330 L-40,-330" fill="none" stroke="#3a3f58" stroke-width="14" stroke-linejoin="round" />
+  <g id="s1-hook-h-board"><rect x="-66" y="-395" width="14" height="110" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /></g>
+  <path d="M-122,-305 L-66,-305" stroke="#e0412f" stroke-width="7" stroke-linecap="round" />
+  <g id="s1-hook-h-net"><path d="M-120,-303 L-112,-262 L-84,-262 L-72,-303 M-116,-284 L-78,-284 M-114,-270 L-82,-270 M-106,-303 L-100,-262 M-90,-303 L-94,-262" fill="none" stroke="#f4efe6" stroke-width="3" /></g>
+</g>
+</g>
+<g transform="translate(150,1250)"><g id="s1-hook-kwrap"><g transform="scale(0.845)"><!-- Point guard in a blue/gold basketball kit (Steph-Curry-style caricature, not a likeness). Origin = between the feet. ~310 tall.
+     Same rig ids as keeper.svg; raised hands (armL 170 / armR -170) are at about y -284.
+     Animatable: s1-hook-p (whole), s1-hook-p-body, s1-hook-p-armL/-armR (rotate, origin top), s1-hook-p-legL/-legR, s1-hook-p-head,
+     s1-hook-p-pupL/-pupR (x/y look), s1-hook-p-browL/-browR, s1-hook-p-m-smile / -m-o / -m-flat (show one), s1-hook-p-lids (blink). -->
+<g id="s1-hook-p">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s1-hook-p-body">
+    <g id="s1-hook-p-legL"><rect x="-32" y="-96" width="26" height="88" rx="10" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /></g>
+    <g id="s1-hook-p-legR"><rect x="6" y="-96" width="26" height="88" rx="10" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#1d428a" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#1d428a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-44,-190 L-38,-118 M44,-190 L38,-118" stroke="#ffc72c" stroke-width="8" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <text id="s1-hook-p-num" data-layout-ignore x="0" y="-138" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44" fill="#ffc72c" stroke="#1a1a2e" stroke-width="2">30</text>
+    <g transform="translate(-54,-196)"><g id="s1-hook-p-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s1-hook-p-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s1-hook-p-head">
+      <circle cx="-44" cy="4" r="10" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#b97c52" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-44,-14 Q-46,-56 0,-56 Q46,-56 44,-14 Q36,-38 0,-40 Q-34,-38 -44,-14 Z" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s1-hook-p-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s1-hook-p-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s1-hook-p-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#b97c52" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#b97c52" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s1-hook-p-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s1-hook-p-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path d="M-26,30 Q0,58 26,30" fill="none" stroke="#1a1a2e" stroke-width="4" opacity="0.6" />
+      <path id="s1-hook-p-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s1-hook-p-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s1-hook-p-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g></g></g>
+<g id="s1-hook-ball"><g><!-- Basketball. Origin = centre, r = 14 at scale 1 (0.24 m at 100 px/m would be r 12). Animate s1-hook-ballb (x/y/rotation). -->
+<g id="s1-hook-ballb">
+  <circle r="15" fill="#f08a24" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M-15,0 L15,0 M0,-15 L0,15 M-10,-11 Q-4,0 -10,11 M10,-11 Q4,0 10,11" fill="none" stroke="#1a1a2e" stroke-width="2.5" />
+</g>
+</g></g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s1-hook-c-q" data-layout-allow-overflow data-layout-allow-overlap style="left: 50px; top: 330px;"><div class="bk">CASE FILE 003</div><div class="bt">Could Steph Curry<br>make a three over<br>the Great Wall?</div></div>
+    <div class="card " id="s1-hook-c-m" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 420px;"><div class="ck">METHOD</div><div class="cv">Scientific</div></div>
+    <div class="card gold" id="s1-hook-c-pr" data-layout-allow-overflow data-layout-allow-overlap style="left: 520px; top: 600px;"><div class="ck">EQUIPMENT</div><div class="cv">1 protractor</div></div>
+    <div class="dip" id="s1-hook-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s1-hook-";
+      const D = 8.766;
+      const C = {"ev": 3.879, "sci": 5.584, "long": 7.1};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s1-hook-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s1-hook"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      // frame 0 is the thumbnail: the question is already on screen
+      tl.fromTo(S + "c-q", { opacity: 1, x: 0, y: 0, rotation: -2 }, { y: -1100, rotation: 8, duration: 0.4, ease: "power3.in" }, C.sci - 0.45);
+      fly("m", C.sci, null, { from: "right" });
+      fly("pr", C.long, null, { from: "right" });
+      // Curry dribbles, the wall looks down on him
+      const bx = 150 + 46, n = R(D, 0.5);
+      tl.fromTo(S + "ball", { x: bx, y: 1060 }, { x: bx, y: 1232, duration: 0.25, ease: "power2.in", repeat: n * 2 + 1, yoyo: true }, 0);
+      tl.fromTo(S + "p-armR", { rotation: -10 }, { rotation: -30, duration: 0.25, ease: "sine.inOut", repeat: n * 2 + 1, yoyo: true }, 0);
+      blink(S + "p-lids", 1.5); blink(S + "p-lids", 5.0);
+      tl.to([S + "p-pupL", S + "p-pupR"], { x: 6, y: -7, duration: 0.3 }, C.ev);
+      tl.to([S + "w-browL", S + "w-browR"], { y: -16, duration: 0.25, ease: "back.out(3)" }, C.sci);
+      swap(S + "w-smirk", S + "w-grin", C.sci + 0.2);
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s1-hook"] = tl;
+    })();
+  </script>
+</template>

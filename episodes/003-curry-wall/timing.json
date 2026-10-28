@@ -1,0 +1,1387 @@
+{
+ "duration": 101.461,
+ "voice": "kokoro:bm_george",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 8.766,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 8.166,
+   "cues": {
+    "ev": 3.879,
+    "sci": 5.584,
+    "long": 7.1
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.468
+    },
+    {
+     "text": "Steph",
+     "start": 0.468,
+     "end": 0.787
+    },
+    {
+     "text": "Curry",
+     "start": 0.787,
+     "end": 1.105
+    },
+    {
+     "text": "make",
+     "start": 1.105,
+     "end": 1.378
+    },
+    {
+     "text": "a",
+     "start": 1.378,
+     "end": 1.514
+    },
+    {
+     "text": "three",
+     "start": 1.514,
+     "end": 1.833
+    },
+    {
+     "text": "pointer",
+     "start": 1.833,
+     "end": 2.242
+    },
+    {
+     "text": "over",
+     "start": 2.242,
+     "end": 2.515
+    },
+    {
+     "text": "the",
+     "start": 2.515,
+     "end": 2.742
+    },
+    {
+     "text": "Great",
+     "start": 2.742,
+     "end": 3.06
+    },
+    {
+     "text": "Wall",
+     "start": 3.06,
+     "end": 3.333
+    },
+    {
+     "text": "of",
+     "start": 3.333,
+     "end": 3.515
+    },
+    {
+     "text": "China?",
+     "start": 3.515,
+     "end": 3.879
+    },
+    {
+     "text": "We",
+     "start": 3.879,
+     "end": 4.061
+    },
+    {
+     "text": "looked",
+     "start": 4.061,
+     "end": 4.425
+    },
+    {
+     "text": "at",
+     "start": 4.425,
+     "end": 4.606
+    },
+    {
+     "text": "the",
+     "start": 4.606,
+     "end": 4.834
+    },
+    {
+     "text": "evidence.",
+     "start": 4.834,
+     "end": 5.334
+    },
+    {
+     "text": "Scientifically.",
+     "start": 5.584,
+     "end": 6.8
+    },
+    {
+     "text": "With",
+     "start": 7.1,
+     "end": 7.432
+    },
+    {
+     "text": "a",
+     "start": 7.432,
+     "end": 7.597
+    },
+    {
+     "text": "protractor.",
+     "start": 7.597,
+     "end": 8.316
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s2-curry",
+   "start": 8.766,
+   "duration": 15.357,
+   "voice": "assets/voice/s2-curry.wav",
+   "voiceStart": 0.15,
+   "speech": 14.757,
+   "cues": {
+    "name": 0.951,
+    "h": 1.923,
+    "rec": 3.811,
+    "arc": 8.216,
+    "walk": 12.219
+   },
+   "words": [
+    {
+     "text": "On",
+     "start": 0.15,
+     "end": 0.379
+    },
+    {
+     "text": "offence:",
+     "start": 0.379,
+     "end": 0.951
+    },
+    {
+     "text": "Stephen",
+     "start": 0.951,
+     "end": 1.466
+    },
+    {
+     "text": "Curry.",
+     "start": 1.466,
+     "end": 1.923
+    },
+    {
+     "text": "1.88",
+     "start": 1.923,
+     "end": 2.266
+    },
+    {
+     "text": "metres",
+     "start": 2.266,
+     "end": 2.724
+    },
+    {
+     "text": "of",
+     "start": 2.724,
+     "end": 2.953
+    },
+    {
+     "text": "point",
+     "start": 2.953,
+     "end": 3.353
+    },
+    {
+     "text": "guard.",
+     "start": 3.353,
+     "end": 3.811
+    },
+    {
+     "text": "The",
+     "start": 3.811,
+     "end": 4.097
+    },
+    {
+     "text": "first",
+     "start": 4.097,
+     "end": 4.497
+    },
+    {
+     "text": "player",
+     "start": 4.497,
+     "end": 4.955
+    },
+    {
+     "text": "in",
+     "start": 4.955,
+     "end": 5.184
+    },
+    {
+     "text": "history",
+     "start": 5.184,
+     "end": 5.699
+    },
+    {
+     "text": "to",
+     "start": 5.699,
+     "end": 5.927
+    },
+    {
+     "text": "make",
+     "start": 5.927,
+     "end": 6.271
+    },
+    {
+     "text": "four",
+     "start": 6.271,
+     "end": 6.614
+    },
+    {
+     "text": "thousand",
+     "start": 6.614,
+     "end": 7.186
+    },
+    {
+     "text": "three",
+     "start": 7.186,
+     "end": 7.586
+    },
+    {
+     "text": "pointers.",
+     "start": 7.586,
+     "end": 8.216
+    },
+    {
+     "text": "His",
+     "start": 8.216,
+     "end": 8.502
+    },
+    {
+     "text": "shot",
+     "start": 8.502,
+     "end": 8.845
+    },
+    {
+     "text": "leaves",
+     "start": 8.845,
+     "end": 9.302
+    },
+    {
+     "text": "the",
+     "start": 9.302,
+     "end": 9.588
+    },
+    {
+     "text": "hand",
+     "start": 9.588,
+     "end": 9.932
+    },
+    {
+     "text": "at",
+     "start": 9.932,
+     "end": 10.16
+    },
+    {
+     "text": "about",
+     "start": 10.16,
+     "end": 10.561
+    },
+    {
+     "text": "fifty",
+     "start": 10.561,
+     "end": 10.961
+    },
+    {
+     "text": "two",
+     "start": 10.961,
+     "end": 11.247
+    },
+    {
+     "text": "degrees.",
+     "start": 11.247,
+     "end": 11.819
+    },
+    {
+     "text": "He",
+     "start": 12.219,
+     "end": 12.439
+    },
+    {
+     "text": "often",
+     "start": 12.439,
+     "end": 12.823
+    },
+    {
+     "text": "turns",
+     "start": 12.823,
+     "end": 13.207
+    },
+    {
+     "text": "around",
+     "start": 13.207,
+     "end": 13.646
+    },
+    {
+     "text": "before",
+     "start": 13.646,
+     "end": 14.084
+    },
+    {
+     "text": "it",
+     "start": 14.084,
+     "end": 14.304
+    },
+    {
+     "text": "goes",
+     "start": 14.304,
+     "end": 14.633
+    },
+    {
+     "text": "in.",
+     "start": 14.633,
+     "end": 14.907
+    }
+   ],
+   "sfx": [
+    {
+     "name": "pop",
+     "cue": "rec",
+     "offset": 0.6,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s3-wall",
+   "start": 24.123,
+   "duration": 13.309,
+   "voice": "assets/voice/s3-wall.wav",
+   "voiceStart": 0.15,
+   "speech": 12.709,
+   "cues": {
+    "name": 1.201,
+    "h": 3.453,
+    "w": 5.705,
+    "len": 8.107,
+    "def": 10.534
+   },
+   "words": [
+    {
+     "text": "On",
+     "start": 0.15,
+     "end": 0.45
+    },
+    {
+     "text": "defence:",
+     "start": 0.45,
+     "end": 1.201
+    },
+    {
+     "text": "The",
+     "start": 1.201,
+     "end": 1.576
+    },
+    {
+     "text": "Great",
+     "start": 1.576,
+     "end": 2.102
+    },
+    {
+     "text": "Wall",
+     "start": 2.102,
+     "end": 2.552
+    },
+    {
+     "text": "of",
+     "start": 2.552,
+     "end": 2.852
+    },
+    {
+     "text": "China.",
+     "start": 2.852,
+     "end": 3.453
+    },
+    {
+     "text": "Up",
+     "start": 3.453,
+     "end": 3.753
+    },
+    {
+     "text": "to",
+     "start": 3.753,
+     "end": 4.054
+    },
+    {
+     "text": "seven",
+     "start": 4.054,
+     "end": 4.579
+    },
+    {
+     "text": "metres",
+     "start": 4.579,
+     "end": 5.18
+    },
+    {
+     "text": "tall.",
+     "start": 5.18,
+     "end": 5.705
+    },
+    {
+     "text": "Four",
+     "start": 5.705,
+     "end": 6.155
+    },
+    {
+     "text": "to",
+     "start": 6.155,
+     "end": 6.456
+    },
+    {
+     "text": "five",
+     "start": 6.456,
+     "end": 6.906
+    },
+    {
+     "text": "metres",
+     "start": 6.906,
+     "end": 7.507
+    },
+    {
+     "text": "thick.",
+     "start": 7.507,
+     "end": 8.107
+    },
+    {
+     "text": "21,196",
+     "start": 8.107,
+     "end": 8.708
+    },
+    {
+     "text": "kilometres",
+     "start": 8.708,
+     "end": 9.609
+    },
+    {
+     "text": "long.",
+     "start": 9.609,
+     "end": 10.134
+    },
+    {
+     "text": "It",
+     "start": 10.534,
+     "end": 10.779
+    },
+    {
+     "text": "has",
+     "start": 10.779,
+     "end": 11.085
+    },
+    {
+     "text": "never",
+     "start": 11.085,
+     "end": 11.513
+    },
+    {
+     "text": "conceded",
+     "start": 11.513,
+     "end": 12.125
+    },
+    {
+     "text": "a",
+     "start": 12.125,
+     "end": 12.309
+    },
+    {
+     "text": "basket.",
+     "start": 12.309,
+     "end": 12.859
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-normal",
+   "start": 37.432,
+   "duration": 11.207,
+   "voice": "assets/voice/s4-normal.wav",
+   "voiceStart": 0.15,
+   "speech": 10.607,
+   "cues": {
+    "t": 0.96,
+    "apex": 2.039,
+    "wall": 5.223,
+    "bonk": 6.965,
+    "int": 9.647
+   },
+   "words": [
+    {
+     "text": "Attempt",
+     "start": 0.15,
+     "end": 0.636
+    },
+    {
+     "text": "one.",
+     "start": 0.636,
+     "end": 0.96
+    },
+    {
+     "text": "The",
+     "start": 0.96,
+     "end": 1.229
+    },
+    {
+     "text": "normal",
+     "start": 1.229,
+     "end": 1.661
+    },
+    {
+     "text": "shot.",
+     "start": 1.661,
+     "end": 2.039
+    },
+    {
+     "text": "A",
+     "start": 2.039,
+     "end": 2.201
+    },
+    {
+     "text": "regular",
+     "start": 2.201,
+     "end": 2.687
+    },
+    {
+     "text": "Curry",
+     "start": 2.687,
+     "end": 3.064
+    },
+    {
+     "text": "three",
+     "start": 3.064,
+     "end": 3.442
+    },
+    {
+     "text": "peaks",
+     "start": 3.442,
+     "end": 3.82
+    },
+    {
+     "text": "at",
+     "start": 3.82,
+     "end": 4.036
+    },
+    {
+     "text": "about",
+     "start": 4.036,
+     "end": 4.414
+    },
+    {
+     "text": "five",
+     "start": 4.414,
+     "end": 4.738
+    },
+    {
+     "text": "metres.",
+     "start": 4.738,
+     "end": 5.223
+    },
+    {
+     "text": "The",
+     "start": 5.223,
+     "end": 5.493
+    },
+    {
+     "text": "wall",
+     "start": 5.493,
+     "end": 5.817
+    },
+    {
+     "text": "is",
+     "start": 5.817,
+     "end": 6.033
+    },
+    {
+     "text": "seven.",
+     "start": 6.033,
+     "end": 6.465
+    },
+    {
+     "text": "The",
+     "start": 6.965,
+     "end": 7.265
+    },
+    {
+     "text": "ball",
+     "start": 7.265,
+     "end": 7.625
+    },
+    {
+     "text": "is",
+     "start": 7.625,
+     "end": 7.866
+    },
+    {
+     "text": "returned",
+     "start": 7.866,
+     "end": 8.466
+    },
+    {
+     "text": "to",
+     "start": 8.466,
+     "end": 8.707
+    },
+    {
+     "text": "sender.",
+     "start": 8.707,
+     "end": 9.247
+    },
+    {
+     "text": "With",
+     "start": 9.647,
+     "end": 10.039
+    },
+    {
+     "text": "interest.",
+     "start": 10.039,
+     "end": 10.757
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "bonk",
+     "offset": -0.09,
+     "volume": 0.25
+    },
+    {
+     "name": "pop",
+     "cue": "int",
+     "offset": -0.45,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "id": "s5-moon",
+   "start": 48.639,
+   "duration": 17.369,
+   "voice": "assets/voice/s5-moon.wav",
+   "voiceStart": 0.15,
+   "speech": 16.769,
+   "cues": {
+    "t": 0.955,
+    "ang": 1.815,
+    "apex": 6.54,
+    "v": 8.473,
+    "bolt": 11.565,
+    "air": 13.11
+   },
+   "words": [
+    {
+     "text": "Attempt",
+     "start": 0.15,
+     "end": 0.633
+    },
+    {
+     "text": "two.",
+     "start": 0.633,
+     "end": 0.955
+    },
+    {
+     "text": "The",
+     "start": 0.955,
+     "end": 1.224
+    },
+    {
+     "text": "moonball.",
+     "start": 1.224,
+     "end": 1.815
+    },
+    {
+     "text": "To",
+     "start": 1.815,
+     "end": 2.029
+    },
+    {
+     "text": "clear",
+     "start": 2.029,
+     "end": 2.405
+    },
+    {
+     "text": "the",
+     "start": 2.405,
+     "end": 2.674
+    },
+    {
+     "text": "wall,",
+     "start": 2.674,
+     "end": 3.049
+    },
+    {
+     "text": "the",
+     "start": 3.049,
+     "end": 3.318
+    },
+    {
+     "text": "ball",
+     "start": 3.318,
+     "end": 3.64
+    },
+    {
+     "text": "must",
+     "start": 3.64,
+     "end": 3.962
+    },
+    {
+     "text": "leave",
+     "start": 3.962,
+     "end": 4.338
+    },
+    {
+     "text": "his",
+     "start": 4.338,
+     "end": 4.607
+    },
+    {
+     "text": "hand",
+     "start": 4.607,
+     "end": 4.929
+    },
+    {
+     "text": "at",
+     "start": 4.929,
+     "end": 5.144
+    },
+    {
+     "text": "seventy",
+     "start": 5.144,
+     "end": 5.627
+    },
+    {
+     "text": "seven",
+     "start": 5.627,
+     "end": 6.003
+    },
+    {
+     "text": "degrees,",
+     "start": 6.003,
+     "end": 6.54
+    },
+    {
+     "text": "climbing",
+     "start": 6.54,
+     "end": 7.077
+    },
+    {
+     "text": "over",
+     "start": 7.077,
+     "end": 7.399
+    },
+    {
+     "text": "ten",
+     "start": 7.399,
+     "end": 7.667
+    },
+    {
+     "text": "metres",
+     "start": 7.667,
+     "end": 8.097
+    },
+    {
+     "text": "high.",
+     "start": 8.097,
+     "end": 8.473
+    },
+    {
+     "text": "Launch",
+     "start": 8.473,
+     "end": 8.902
+    },
+    {
+     "text": "speed:",
+     "start": 8.902,
+     "end": 9.332
+    },
+    {
+     "text": "forty",
+     "start": 9.332,
+     "end": 9.708
+    },
+    {
+     "text": "six",
+     "start": 9.708,
+     "end": 9.976
+    },
+    {
+     "text": "kilometres",
+     "start": 9.976,
+     "end": 10.62
+    },
+    {
+     "text": "per",
+     "start": 10.62,
+     "end": 10.889
+    },
+    {
+     "text": "hour.",
+     "start": 10.889,
+     "end": 11.265
+    },
+    {
+     "text": "Faster",
+     "start": 11.565,
+     "end": 12.006
+    },
+    {
+     "text": "than",
+     "start": 12.006,
+     "end": 12.338
+    },
+    {
+     "text": "Usain",
+     "start": 12.338,
+     "end": 12.724
+    },
+    {
+     "text": "Bolt.",
+     "start": 12.724,
+     "end": 13.11
+    },
+    {
+     "text": "Hang",
+     "start": 13.11,
+     "end": 13.442
+    },
+    {
+     "text": "time:",
+     "start": 13.442,
+     "end": 13.828
+    },
+    {
+     "text": "two",
+     "start": 13.828,
+     "end": 14.104
+    },
+    {
+     "text": "and",
+     "start": 14.104,
+     "end": 14.38
+    },
+    {
+     "text": "a",
+     "start": 14.38,
+     "end": 14.546
+    },
+    {
+     "text": "half",
+     "start": 14.546,
+     "end": 14.877
+    },
+    {
+     "text": "seconds.",
+     "start": 14.877,
+     "end": 15.429
+    },
+    {
+     "text": "Double",
+     "start": 15.429,
+     "end": 15.87
+    },
+    {
+     "text": "a",
+     "start": 15.87,
+     "end": 16.036
+    },
+    {
+     "text": "normal",
+     "start": 16.036,
+     "end": 16.478
+    },
+    {
+     "text": "three.",
+     "start": 16.478,
+     "end": 16.919
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh",
+     "cue": "ang",
+     "offset": 0.4,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s6-blind",
+   "start": 66.008,
+   "duration": 16.701,
+   "voice": "assets/voice/s6-blind.wav",
+   "voiceStart": 0.15,
+   "speech": 16.101,
+   "cues": {
+    "t": 1.153,
+    "see": 2.275,
+    "err": 4.636,
+    "tol": 8.413,
+    "miss": 11.174,
+    "walk": 12.832
+   },
+   "words": [
+    {
+     "text": "Attempt",
+     "start": 0.15,
+     "end": 0.681
+    },
+    {
+     "text": "three.",
+     "start": 0.681,
+     "end": 1.153
+    },
+    {
+     "text": "The",
+     "start": 1.153,
+     "end": 1.448
+    },
+    {
+     "text": "blind",
+     "start": 1.448,
+     "end": 1.862
+    },
+    {
+     "text": "shot.",
+     "start": 1.862,
+     "end": 2.275
+    },
+    {
+     "text": "Curry",
+     "start": 2.275,
+     "end": 2.688
+    },
+    {
+     "text": "can",
+     "start": 2.688,
+     "end": 2.983
+    },
+    {
+     "text": "no",
+     "start": 2.983,
+     "end": 3.219
+    },
+    {
+     "text": "longer",
+     "start": 3.219,
+     "end": 3.691
+    },
+    {
+     "text": "see",
+     "start": 3.691,
+     "end": 3.986
+    },
+    {
+     "text": "the",
+     "start": 3.986,
+     "end": 4.282
+    },
+    {
+     "text": "rim.",
+     "start": 4.282,
+     "end": 4.636
+    },
+    {
+     "text": "One",
+     "start": 4.636,
+     "end": 4.931
+    },
+    {
+     "text": "degree",
+     "start": 4.931,
+     "end": 5.403
+    },
+    {
+     "text": "too",
+     "start": 5.403,
+     "end": 5.698
+    },
+    {
+     "text": "steep,",
+     "start": 5.698,
+     "end": 6.17
+    },
+    {
+     "text": "and",
+     "start": 6.17,
+     "end": 6.465
+    },
+    {
+     "text": "he",
+     "start": 6.465,
+     "end": 6.701
+    },
+    {
+     "text": "misses",
+     "start": 6.701,
+     "end": 7.174
+    },
+    {
+     "text": "by",
+     "start": 7.174,
+     "end": 7.41
+    },
+    {
+     "text": "half",
+     "start": 7.41,
+     "end": 7.764
+    },
+    {
+     "text": "a",
+     "start": 7.764,
+     "end": 7.941
+    },
+    {
+     "text": "metre.",
+     "start": 7.941,
+     "end": 8.413
+    },
+    {
+     "text": "His",
+     "start": 8.413,
+     "end": 8.708
+    },
+    {
+     "text": "margin",
+     "start": 8.708,
+     "end": 9.18
+    },
+    {
+     "text": "of",
+     "start": 9.18,
+     "end": 9.416
+    },
+    {
+     "text": "error:",
+     "start": 9.416,
+     "end": 9.889
+    },
+    {
+     "text": "0.2",
+     "start": 9.889,
+     "end": 10.184
+    },
+    {
+     "text": "degrees.",
+     "start": 10.184,
+     "end": 10.774
+    },
+    {
+     "text": "Every",
+     "start": 11.174,
+     "end": 11.537
+    },
+    {
+     "text": "miss",
+     "start": 11.537,
+     "end": 11.848
+    },
+    {
+     "text": "lands",
+     "start": 11.848,
+     "end": 12.21
+    },
+    {
+     "text": "in",
+     "start": 12.21,
+     "end": 12.417
+    },
+    {
+     "text": "China.",
+     "start": 12.417,
+     "end": 12.832
+    },
+    {
+     "text": "Walking",
+     "start": 12.832,
+     "end": 13.298
+    },
+    {
+     "text": "around",
+     "start": 13.298,
+     "end": 13.713
+    },
+    {
+     "text": "the",
+     "start": 13.713,
+     "end": 13.972
+    },
+    {
+     "text": "wall",
+     "start": 13.972,
+     "end": 14.283
+    },
+    {
+     "text": "to",
+     "start": 14.283,
+     "end": 14.49
+    },
+    {
+     "text": "fetch",
+     "start": 14.49,
+     "end": 14.852
+    },
+    {
+     "text": "it:",
+     "start": 14.852,
+     "end": 15.112
+    },
+    {
+     "text": "eighty",
+     "start": 15.112,
+     "end": 15.526
+    },
+    {
+     "text": "eight",
+     "start": 15.526,
+     "end": 15.889
+    },
+    {
+     "text": "days.",
+     "start": 15.889,
+     "end": 16.251
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s7-verdict",
+   "start": 82.709,
+   "duration": 14.293,
+   "voice": "assets/voice/s7-verdict.wav",
+   "voiceStart": 0.15,
+   "speech": 13.143,
+   "cues": {
+    "q": 0.848,
+    "yes": 4.534,
+    "yes2": 6.051,
+    "prob": 6.393,
+    "turn": 9.317,
+    "p3": 12.248
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.383
+    },
+    {
+     "text": "verdict.",
+     "start": 0.383,
+     "end": 0.848
+    },
+    {
+     "text": "Could",
+     "start": 0.848,
+     "end": 1.174
+    },
+    {
+     "text": "Steph",
+     "start": 1.174,
+     "end": 1.5
+    },
+    {
+     "text": "Curry",
+     "start": 1.5,
+     "end": 1.826
+    },
+    {
+     "text": "make",
+     "start": 1.826,
+     "end": 2.105
+    },
+    {
+     "text": "a",
+     "start": 2.105,
+     "end": 2.245
+    },
+    {
+     "text": "three",
+     "start": 2.245,
+     "end": 2.57
+    },
+    {
+     "text": "over",
+     "start": 2.57,
+     "end": 2.85
+    },
+    {
+     "text": "the",
+     "start": 2.85,
+     "end": 3.082
+    },
+    {
+     "text": "Great",
+     "start": 3.082,
+     "end": 3.408
+    },
+    {
+     "text": "Wall?",
+     "start": 3.408,
+     "end": 3.734
+    },
+    {
+     "text": "Technically.",
+     "start": 4.534,
+     "end": 5.451
+    },
+    {
+     "text": "Yes.",
+     "start": 6.051,
+     "end": 6.393
+    },
+    {
+     "text": "Estimated",
+     "start": 6.393,
+     "end": 7.021
+    },
+    {
+     "text": "chance",
+     "start": 7.021,
+     "end": 7.477
+    },
+    {
+     "text": "per",
+     "start": 7.477,
+     "end": 7.762
+    },
+    {
+     "text": "shot:",
+     "start": 7.762,
+     "end": 8.161
+    },
+    {
+     "text": "two",
+     "start": 8.161,
+     "end": 8.446
+    },
+    {
+     "text": "percent.",
+     "start": 8.446,
+     "end": 9.017
+    },
+    {
+     "text": "Chance",
+     "start": 9.317,
+     "end": 9.756
+    },
+    {
+     "text": "he",
+     "start": 9.756,
+     "end": 9.976
+    },
+    {
+     "text": "turns",
+     "start": 9.976,
+     "end": 10.36
+    },
+    {
+     "text": "around",
+     "start": 10.36,
+     "end": 10.8
+    },
+    {
+     "text": "before",
+     "start": 10.8,
+     "end": 11.239
+    },
+    {
+     "text": "it",
+     "start": 11.239,
+     "end": 11.459
+    },
+    {
+     "text": "lands:",
+     "start": 11.459,
+     "end": 11.898
+    },
+    {
+     "text": "one",
+     "start": 12.248,
+     "end": 12.596
+    },
+    {
+     "text": "hundred.",
+     "start": 12.596,
+     "end": 13.293
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "yes",
+     "offset": 0.14,
+     "volume": 0.4
+    },
+    {
+     "name": "ping",
+     "cue": "p3",
+     "offset": -0.2,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "id": "s8-outro",
+   "start": 97.002,
+   "duration": 4.459,
+   "voice": "assets/voice/s8-outro.wav",
+   "voiceStart": 0.15,
+   "speech": 2.709,
+   "cues": {
+    "c": 1.505
+   },
+   "words": [
+    {
+     "text": "Who",
+     "start": 0.15,
+     "end": 0.376
+    },
+    {
+     "text": "should",
+     "start": 0.376,
+     "end": 0.737
+    },
+    {
+     "text": "we",
+     "start": 0.737,
+     "end": 0.918
+    },
+    {
+     "text": "send",
+     "start": 0.918,
+     "end": 1.189
+    },
+    {
+     "text": "next?",
+     "start": 1.189,
+     "end": 1.505
+    },
+    {
+     "text": "Tell",
+     "start": 1.505,
+     "end": 1.776
+    },
+    {
+     "text": "us",
+     "start": 1.776,
+     "end": 1.956
+    },
+    {
+     "text": "in",
+     "start": 1.956,
+     "end": 2.137
+    },
+    {
+     "text": "the",
+     "start": 2.137,
+     "end": 2.363
+    },
+    {
+     "text": "comments.",
+     "start": 2.363,
+     "end": 2.859
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}

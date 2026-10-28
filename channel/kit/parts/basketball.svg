@@ -1,0 +1,5 @@
+<!-- Basketball. Origin = centre, r = 14 at scale 1 (0.24 m at 100 px/m would be r 12). Animate PFX (x/y/rotation). -->
+<g id="PFX">
+  <circle r="15" fill="#f08a24" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M-15,0 L15,0 M0,-15 L0,15 M-10,-11 Q-4,0 -10,11 M10,-11 Q4,0 10,11" fill="none" stroke="#1a1a2e" stroke-width="2.5" />
+</g>
