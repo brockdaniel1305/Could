@@ -2,16 +2,21 @@
 
 Gebaut mit **HyperFrames** (HTML → Video). Hochformat 1080×1920, 30 fps.
 
-## Layout (TikTok-sicher)
+## Layout (TikTok-sicher) – Vollbild-Animation
+Die Cartoon-Animation füllt das ganze Bild (1080×1920). Es gibt **kein** Fakten-Panel und keinen Rahmen mehr.
+Die Fakten sind Cartoon-Karten, die auf ihrem Wort ins Bild **hineinfliegen**, kurz landen und wieder **hinausfliegen**.
 
 | Bereich | y (px) | Inhalt |
 |---------|--------|--------|
-| 0–168 | – | frei (TikTok-Statusleiste) |
-| 178–240 | Header | `COULD?`-Logo links, `CASE FILE 001` rechts, Haarlinie |
-| 262–598 | Fakten-Panel | Kicker (Mono, Gold) · Headline (Serif, Creme) · bis 3 Zeilen Schlüssel/Wert |
-| 620–1180 | Bühne | Cartoon 984×560, abgerundet, cremefarbener Rahmen, Label `● LIVE RECONSTRUCTION`, optional Score-Bug oben rechts |
-| 1196–1320 | Untertitel | Karaoke-Untertitel aus den echten Wort-Timings (Gold = aktuelles Wort) |
-| ab 1330 | nur Deko | TikTok-UI (Caption, Buttons), nur "ABSURD QUESTIONS / SERIOUS ANSWERS" |
+| 0–168 | – | nur Himmel o. ä. (TikTok-Statusleiste) |
+| 184–270 | oben links | kleines `COULD?`-Logo und `● LIVE RECONSTRUCTION` (Teil der Animation) |
+| 300–900 | Himmel | fliegende Karten: Kapitel-Banner (`banner`) und Fakten-Karten (`card`, Varianten `gold`, `red`) |
+| 700–1200 | Bühne | die Handlung (Figuren, Schiff, Eisberg) |
+| 1196–1320 | Untertitel | Karaoke-Untertitel aus den echten Wort-Timings |
+| ab 1330 | Unterwasserwelt / Rasen | nur Bild, kein Text (TikTok-UI): Eisberg unter Wasser, Fische, Strafraum |
+
+- Karten kommen von links, rechts oder oben und verlassen das Bild auf dem gleichen Weg (sie kreuzen sich nie).
+- Pro Moment höchstens zwei Karten. Kein Text rechts unter x 960 ab y 700 (TikTok-Buttons).
 
 ## Farben & Schrift
 - Grund `#0f0e0c`, Creme `#f4efe6`, Gold `#d9a441` / `#f3c55b`, Grau `#8c8476`, Rot (Stempel) `#d6332a`.

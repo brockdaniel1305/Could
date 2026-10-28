@@ -31,18 +31,21 @@ Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `provi
 - `sfx`: `{"name", "cue", "offset", "volume"}` aus `.claude/skills/media-use/audio/assets/sfx/manifest.json`.
   `offset` so wählen, dass die Spitze des Sounds 1 Frame nach dem Bild liegt (Spitzen: `npx hyperframes audio <file> --json`).
 
-Dann: `python3 tools/build_episode.py episodes/<ep>`. Das erzeugt Stimme, Wort-Timings und Cue-Zeiten (`timing.json`),
+Dann: `python3 tools/build_episode.py episodes/<ep>` (in der Cloud mit `--preview`, dann spricht die Kokoro-Stimme statt VoiceStudio). Das erzeugt Stimme, Wort-Timings und Cue-Zeiten (`timing.json`),
 Untertitel, `index.html` und Stub-Szenen. Die Ausgabe listet die Cue-Zeiten je Szene. Gesamtlänge prüfen, sonst Text kürzen.
 
-## 3. Szenen: `episodes/<ep>/src/sN.py`
+## 3. Szenen: `episodes/<ep>/src/sN.py` (Vollbild-Cartoon + fliegende Karten)
 Jede Szene ist ein kleines Python-Skript mit `from scene import *` (`tools/scene.py`):
-`scene(sid, kicker, headline, rows, world_svg, js, extra_css="", overlay="")`.
-- `rows`: max. 3 `(KEY, value[, "gold"])`. Jede Zeile erscheint per `show(S + "rN", C.cue)` auf ihrem Wort.
-- `world_svg`: Cartoon in 984×560 aus `part("<name>", sid + "-x", WL=…)` (`python3 tools/kit.py --list`).
+`scene(sid, world_svg, js, cards, extra_css="")`.
+- `world_svg`: der Cartoon im Vollbild 1080×1920 aus `part("<name>", sid + "-x", WL=…)` (`python3 tools/kit.py --list`).
+  Wasserlinie bzw. Boden bei etwa y 1150–1250. Die untere Hälfte füllen (z. B. `iceberg-under`, Fische, Strafraum), dort aber kein Text.
   Fehlt eine Figur oder ein Objekt, zeichne es als neues `channel/kit/parts/<name>.svg` (Kopfkommentar: Ursprung, Größe, animierbare ids).
-- `js`: GSAP auf `tl`, Zeiten aus `C.<cue>`, Helfer: `show`, `pop`, `swap`, `blink`, `waves`, `puffs`.
+- `cards`: `banner(sid, name, kicker, title, x, y)` für das Kapitel und `card(sid, name, label, value, x, y, kind)` für jede Zahl.
+  Position im Himmel (y 300–900, x 50–900).
+- `js`: `fly(name, C.in, C.out, {from: "left"|"right"|"top"})` lässt eine Karte auf ihrem Cue einfliegen und auf dem nächsten
+  wieder hinaus (`null` = bleibt bis zum Schnitt). Höchstens zwei Karten gleichzeitig. Weitere Helfer: `pop`, `swap`, `blink`, `waves`, `puffs`, `R`.
 - Jede Aussage des Erzählers hat eine Aktion im Cartoon auf ihrem Cue. Die Pointe bekommt eine Reaktion, die gehalten wird.
-- Frame 0 (Thumbnail) zeigt schon Frage, Hauptfigur und Gegner.
+- Frame 0 (Thumbnail) zeigt schon die Frage als Banner, die Hauptfigur und den Gegner.
 
 `sh episodes/<ep>/src/build_all.sh` schreibt `compositions/*.html`.
 
@@ -53,6 +56,7 @@ Jede Szene ist ein kleines Python-Skript mit `from scene import *` (`tools/scene
 3. Nach dem Render (`render --quality looks`): mit `ffprobe` die Dauer prüfen, mit `npx hyperframes audio <mp4> --json` den Ton.
 
 ## 5. Rendern und liefern
+Lokal beim Creator erledigt `sh tools/make_episode.sh episodes/<ep>` alles in einem Schritt: VoiceStudio-Stimme, Szenen, Render und Lautheit.
 - `npx hyperframes render --quality looks --output renders/<ep>.mp4` (dauert in der Cloud-Sandbox etwa 6 Minuten, im Hintergrund laufen lassen).
 - Lautheit auf Social-Niveau bringen: `ffmpeg -i renders/<ep>.mp4 -c:v copy -af loudnorm=I=-15:TP=-1.5:LRA=11 -c:a aac -b:a 192k -movflags +faststart renders/<ep>-final.mp4`
   und mit `npx hyperframes audio … --json` nachmessen (Ziel −16 bis −14 LUFS).

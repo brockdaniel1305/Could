@@ -1,59 +1,62 @@
 <template>
-  <!-- COULD? scene s7-verdict · fact panel (top) + live cartoon reconstruction (stage). Cues: timing.json -->
+  <!-- COULD? scene s7-verdict · full-frame cartoon + flying fact cards. Source: src/s7.py, cues: timing.json -->
   <style>
     @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
     @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
     @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
     @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
-    #root { position: absolute; inset: 0; }
-    .fp { position: absolute; left: 60px; right: 60px; top: 262px; height: 336px; }
-    .kick { font: 400 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #d9a441; }
-    .head { margin-top: 14px; font: 700 80px/1.02 "CouldSerif"; color: #f4efe6; letter-spacing: -0.01em; }
-    .rows { margin-top: 14px; }
-    .row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0 10px; border-bottom: 2px solid #2e2b26; }
-    .rk { font: 400 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #8c8476; }
-    .rv { font: 900 40px/1 "Inter"; color: #f4efe6; }
-    .rv.gold { color: #f3c55b; }
-    .stage { position: absolute; left: 48px; top: 620px; width: 984px; height: 560px; border-radius: 26px; overflow: hidden; background: #10223a; }
-    .stage-border { position: absolute; left: 48px; top: 620px; width: 984px; height: 560px; border-radius: 26px; border: 5px solid #ece4d4; }
-    .live { position: absolute; left: 76px; top: 644px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.72);
-            font: 700 28px/1 "CouldMono"; letter-spacing: 0.12em; color: #f4efe6; }
-    .live i { display: inline-block; width: 14px; height: 14px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
-    .bug { position: absolute; right: 76px; top: 644px; padding: 8px 14px; border-radius: 10px; background: #f4efe6; border: 3px solid #1a1a2e;
-           font: 900 30px/1 "Inter"; color: #1a1a2e; opacity: 0; }
-    .bug b { color: #e0412f; }
-    .stage svg { position: absolute; inset: 0; width: 984px; height: 560px; }
-  .stamp { position: absolute; left: 240px; top: 700px; width: 600px; height: 380px; border: 22px solid #d6332a; border-radius: 30px; display: flex; align-items: center; justify-content: center; font: 900 260px/1 'Inter'; color: #d6332a; opacity: 0; background: rgba(244,239,230,0.12); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+    .stamp { position: absolute; left: 170px; top: 560px; width: 740px; height: 440px; border: 26px solid #d6332a; border-radius: 34px;
+             display: flex; align-items: center; justify-content: center; font: 900 300px/1 "Inter"; color: #d6332a; opacity: 0;
+             background: rgba(244, 239, 230, 0.16); }
   </style>
   <div id="root" data-composition-id="s7-verdict" data-width="1080" data-height="1920">
-    <div class="fp">
-      <div class="kick" id="s7-verdict-kick">THE VERDICT</div>
-      <div class="head" id="s7-verdict-head">Could he save it?</div>
-      <div class="rows">
-        <div class="row" id="s7-verdict-r1"><span class="rk">OFF HIS LINE BY</span><span class="rv ">≈ 4,800 km</span></div>
-        <div class="row" id="s7-verdict-r2"><span class="rk">CHANCE OF SUCCESS</span><span class="rv ">0.03 %</span></div>
-        <div class="row" id="s7-verdict-r3"><span class="rk">CHANCE HE TRIES ANYWAY</span><span class="rv gold"><span id="s7-verdict-r3v">100 %</span></span></div>
-      </div>
-    </div>
-    <div class="stage" data-layout-allow-overflow>
-      <svg viewBox="0 0 984 560" id="s7-verdict-svg">
-        <defs>
-          <filter id="s7-verdict-boil"><feTurbulence id="s7-verdict-turb" type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="5" /></filter>
-        </defs>
-        <g filter="url(#s7-verdict-boil)">
+    <svg class="world" viewBox="0 0 1080 1920" id="s7-verdict-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s7-verdict-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s7-verdict-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s7-verdict-boil)">
 
-<!-- Night sky + sea for the 984x560 stage. Waterline at y=430 (replace). s7-verdict-sea-waves1/2 move x by -160 (seamless). -->
+<!-- Full-frame night sky + sea, 1080x1920. Waterline y=1150 (replace, ~1150). Move s7-verdict-sea-waves1 x by -160 (seamless). Fish: s7-verdict-sea-fish1..3. -->
 <g id="s7-verdict-sea">
-  <defs><linearGradient id="s7-verdict-sea-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1428" /><stop offset="1" stop-color="#223e66" /></linearGradient></defs>
-  <rect x="0" y="0" width="984" height="560" fill="url(#s7-verdict-sea-sky)" />
-  <circle cx="820" cy="96" r="38" fill="#fff4cf" stroke="#1a1a2e" stroke-width="4" />
-  <circle cx="806" cy="88" r="7" fill="#e8dcae" /><circle cx="832" cy="108" r="5" fill="#e8dcae" />
-  <g fill="#fff4cf"><circle cx="90" cy="70" r="3" /><circle cx="180" cy="130" r="2" /><circle cx="260" cy="58" r="3" /><circle cx="360" cy="110" r="2" /><circle cx="450" cy="46" r="3" /><circle cx="540" cy="120" r="2" /><circle cx="620" cy="60" r="3" /><circle cx="700" cy="150" r="2" /><circle cx="930" cy="170" r="3" /><circle cx="140" cy="200" r="2" /><circle cx="400" cy="190" r="2" /><circle cx="900" cy="40" r="2" /></g>
-  <rect x="0" y="430" width="984" height="600" fill="#16365a" />
-  <path id="s7-verdict-sea-waves1" d="M-160,430 q40,-14 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 l0,600 l-1280,0 Z" fill="#1f4a78" stroke="#1a1a2e" stroke-width="4" />
+  <defs><linearGradient id="s7-verdict-sea-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#08101f" /><stop offset="0.6" stop-color="#1a3358" /><stop offset="1" stop-color="#2a4c7a" /></linearGradient></defs>
+  <rect x="0" y="0" width="1080" height="1920" fill="url(#s7-verdict-sea-sky)" />
+  <g id="s7-verdict-sea-moon"><circle cx="860" cy="430" r="58" fill="#fff4cf" stroke="#1a1a2e" stroke-width="5" /><circle cx="838" cy="418" r="10" fill="#e8dcae" /><circle cx="878" cy="452" r="7" fill="#e8dcae" /></g>
+  <g fill="#fff4cf"><circle cx="503" cy="480" r="2" /><circle cx="831" cy="660" r="3" /><circle cx="204" cy="238" r="2" /><circle cx="842" cy="732" r="3" /><circle cx="140" cy="397" r="3" /><circle cx="586" cy="968" r="3" /><circle cx="237" cy="438" r="3" /><circle cx="72" cy="826" r="3" /><circle cx="576" cy="368" r="3" /><circle cx="654" cy="466" r="3" /><circle cx="197" cy="790" r="3" /><circle cx="814" cy="688" r="3" /><circle cx="384" cy="423" r="4" /><circle cx="593" cy="261" r="3" /><circle cx="34" cy="468" r="3" /><circle cx="419" cy="593" r="4" /><circle cx="610" cy="611" r="4" /><circle cx="350" cy="408" r="3" /><circle cx="551" cy="986" r="2" /><circle cx="186" cy="217" r="4" /><circle cx="594" cy="701" r="4" /><circle cx="722" cy="318" r="3" /><circle cx="156" cy="592" r="3" /><circle cx="923" cy="452" r="3" /><circle cx="748" cy="616" r="3" /><circle cx="426" cy="501" r="2" /><circle cx="146" cy="895" r="3" /><circle cx="588" cy="953" r="3" /><circle cx="270" cy="509" r="3" /><circle cx="615" cy="640" r="2" /><circle cx="107" cy="535" r="2" /><circle cx="605" cy="922" r="3" /><circle cx="57" cy="500" r="3" /><circle cx="678" cy="326" r="4" /></g>
+  <rect x="0" y="1150" width="1080" height="1000" fill="#16365a" />
+  <path id="s7-verdict-sea-waves1" d="M-160,1150 q40,-14 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 l0,1000 l-1600,0 Z" fill="#1f4a78" stroke="#1a1a2e" stroke-width="5" />
+  <defs><linearGradient id="s7-verdict-sea-deep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16365a" stop-opacity="0" /><stop offset="1" stop-color="#071526" /></linearGradient></defs>
+  <rect x="0" y="1150" width="1080" height="1000" fill="url(#s7-verdict-sea-deep)" />
+  <g fill="#ffffff" opacity="0.06"><path d="M120,1150 L220,1150 L120,1920 L-40,1920 Z" /><path d="M520,1150 L600,1150 L560,1920 L400,1920 Z" /><path d="M860,1150 L940,1150 L1080,1920 L900,1920 Z" /></g>
+  <g transform="translate(140,1560) scale(1.0)"><g id="s7-verdict-sea-fish1"><path d="M0,0 Q40,-26 80,0 Q40,26 0,0 Z M80,0 L110,-20 L110,20 Z" fill="#ff9f43" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" /><circle cx="22" cy="-4" r="4" fill="#1a1a2e" /></g></g>
+  <g transform="translate(640,1700) scale(0.8)"><g id="s7-verdict-sea-fish2"><path d="M0,0 Q40,-26 80,0 Q40,26 0,0 Z M80,0 L110,-20 L110,20 Z" fill="#feca57" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" /><circle cx="22" cy="-4" r="4" fill="#1a1a2e" /></g></g>
+  <g transform="translate(860,1480) scale(0.7)"><g id="s7-verdict-sea-fish3"><path d="M0,0 Q40,-26 80,0 Q40,26 0,0 Z M80,0 L110,-20 L110,20 Z" fill="#ff9f43" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" /><circle cx="22" cy="-4" r="4" fill="#1a1a2e" /></g></g>
 </g>
 
-<g transform="translate(120,460) scale(0.62)"><g id="s7-verdict-ship"><!-- RMS Titanic, side view, bow to the RIGHT. Origin = waterline at the stern (left). 650 long.
+<g transform="translate(40,1190) scale(0.9)"><g id="s7-verdict-ship"><!-- RMS Titanic, side view, bow to the RIGHT. Origin = waterline at the stern (left). 650 long.
      Animatable: s7-verdict-tit (whole: x drift, rotation for sinking), s7-verdict-tit-smoke1..4 (puffs). -->
 <g id="s7-verdict-tit">
   <path d="M0,-64 L652,-64 L622,16 L30,16 Q4,6 0,-64 Z" fill="#1d1d24" stroke="#0d0d14" stroke-width="5" stroke-linejoin="round" />
@@ -80,15 +83,19 @@
   </g>
 </g>
 </g></g>
-<g id="s7-verdict-map" opacity="0"><g transform="translate(30,60)">
-  <path d="M120,120 Q480,10 820,150" fill="none" stroke="#f4efe6" stroke-width="5" stroke-dasharray="14 12" />
-  <circle cx="120" cy="120" r="12" fill="#e0412f" stroke="#1a1a2e" stroke-width="4" /><circle cx="820" cy="150" r="12" fill="#ffd23f" stroke="#1a1a2e" stroke-width="4" />
-  <text x="150" y="96" text-anchor="middle" font-family="Inter" font-weight="900" font-size="28" fill="#f4efe6">HIS GOAL (MUNICH)</text>
-  <text x="820" y="196" text-anchor="middle" font-family="Inter" font-weight="900" font-size="28" fill="#f4efe6">HIM</text>
-  <rect x="380" y="40" width="200" height="50" rx="10" fill="#f4efe6" stroke="#1a1a2e" stroke-width="4" />
-  <text x="480" y="74" text-anchor="middle" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">≈ 4,800 km</text></g>
+<g id="s7-verdict-map" opacity="0">
+  <path d="M150,640 Q470,420 740,600" fill="none" stroke="#f4efe6" stroke-width="7" stroke-dasharray="18 14" />
+  <circle cx="150" cy="640" r="16" fill="#e0412f" stroke="#1a1a2e" stroke-width="5" /><circle cx="740" cy="600" r="16" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" />
+  <text x="150" y="700" text-anchor="middle" font-family="Inter" font-weight="900" font-size="32" fill="#f4efe6" stroke="#1a1a2e" stroke-width="1">HIS GOAL</text>
+  <text x="150" y="736" text-anchor="middle" font-family="Inter" font-weight="900" font-size="28" fill="#f4efe6">(MUNICH)</text>
 </g>
-<g transform="translate(780,430)"><g id="s7-verdict-icewrap"><!-- Smug iceberg with a face. Origin = waterline centre. ~260 wide, ~230 tall above water.
+<g transform="translate(760,1150)"><g id="s7-verdict-icewrap"><g transform="scale(1.5)"><!-- The 90 % of the iceberg below the waterline. Origin = waterline centre (same as iceberg.svg). ~520 wide, ~500 deep.
+     Place it BEFORE the sea-front part, at the same transform as the iceberg above water. -->
+<g id="s7-verdict-iu" opacity="0.85">
+  <path d="M-150,0 L150,0 L250,120 L270,300 L190,470 L40,520 L-120,480 L-240,330 L-260,150 Z" fill="#8fc3e6" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M60,0 L150,0 L250,120 L270,300 L190,470 L110,490 L170,300 Z" fill="#6fa9d3" />
+</g>
+<!-- Smug iceberg with a face. Origin = waterline centre. ~260 wide, ~230 tall above water.
      Animatable: s7-verdict-ice (whole), s7-verdict-ice-face (x/y), s7-verdict-ice-browL/-browR (rotate), s7-verdict-ice-grin / s7-verdict-ice-smirk (show one). -->
 <g id="s7-verdict-ice">
   <path d="M-150,0 L-110,-120 L-70,-96 L-30,-232 L20,-168 L60,-200 L110,-92 L150,0 Z" fill="#e8f6ff" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
@@ -137,18 +144,21 @@
     </g></g>
   </g>
 </g>
-</g></g></g></g>
-<!-- Foreground wave strip drawn OVER ships/characters at waterline y=448. Move s7-verdict-front-waves2 x by -160. -->
-<g id="s7-verdict-front"><path id="s7-verdict-front-waves2" d="M-160,448 q40,12 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 l0,600 l-1280,0 Z" fill="#16365a" stroke="#1a1a2e" stroke-width="4" /></g>
+</g></g></g></g></g>
+<!-- Foreground waves drawn OVER ships/characters at waterline y=1172, full width 1080. Move s7-verdict-front-waves2 x by -160. -->
+<g id="s7-verdict-front"><path id="s7-verdict-front-waves2" d="M-160,1172 q40,14 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 l0,46 l-1600,0 Z" fill="#16365a" stroke="#1a1a2e" stroke-width="5" /></g>
 
 
-        </g>
-        <rect id="s7-verdict-dip" x="0" y="0" width="984" height="560" fill="#000" opacity="0" />
-      </svg>
-    </div>
-    <div class="stage-border" data-layout-ignore></div>
-    <div class="live" id="s7-verdict-live"><i></i>LIVE RECONSTRUCTION</div>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s7-verdict-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 330px;"><div class="bk">THE VERDICT</div><div class="bt">Could he save it?</div></div>
+    <div class="card gold" id="s7-verdict-c-km" data-layout-allow-overflow data-layout-allow-overlap style="left: 280px; top: 330px;"><div class="ck">OFF HIS LINE BY</div><div class="cv">≈ 4,800 km</div></div>
+    <div class="card " id="s7-verdict-c-p1" data-layout-allow-overflow data-layout-allow-overlap style="left: 80px; top: 360px;"><div class="ck">CHANCE OF SUCCESS</div><div class="cv">0.03 %</div></div>
+    <div class="card gold" id="s7-verdict-c-p2" data-layout-allow-overflow data-layout-allow-overlap style="left: 80px; top: 540px;"><div class="ck">CHANCE HE TRIES ANYWAY</div><div class="cv"><span id="s7-verdict-p3v">100 %</span></div></div>
     <div class="stamp" id="s7-verdict-stamp">NO.</div>
+    <div class="dip" id="s7-verdict-dip" data-layout-ignore></div>
   </div>
   <script>
     (function () {
@@ -161,48 +171,66 @@
       // rig pivots: limbs swing from their top, heads nod from the neck
       const root = document.querySelector('[data-composition-id="s7-verdict"]');
       root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
-      root.querySelectorAll('[id$="-head"]').forEach((el) => { if (el.tagName === "g") gsap.set(el, { transformOrigin: "50% 100%" }); });
-      // helpers
-      const show = (sel, at, d = 0.35) => tl.fromTo(sel, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: d, ease: "expo.out" }, at);
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
       const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
       const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
       const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
       const waves = (a, b) => {
-        const n = Math.max(1, Math.floor(D / 2));
-        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: n - 1 }, 0);
-        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: Math.floor(D / 1.4) }, 0);
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
       };
       const puffs = (pfx) => {
-        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
-          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: Math.floor(D / 1.6) }, i * 0.35));
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
       };
 
       waves(S + "sea-waves1", S + "front-waves2");
-      tl.fromTo(S + "head", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.1);
-      show(S + "r1", C.line + 0.6); show(S + "r2", C.p1); show(S + "r3", C.p2);
-      tl.fromTo(S + "r3v", { opacity: 0 }, { opacity: 1, duration: 0.15 }, C.p3);
+      fly("b", 0.1, C.no - 0.15, { from: "top" });
+      fly("km", C.line + 1.3, C.p1 - 0.1, { from: "right" });
+      fly("p1", C.p1, null);
+      fly("p2", C.p2, null, { from: "right" });
+      tl.fromTo(S + "p3v", { opacity: 0 }, { opacity: 1, duration: 0.15 }, C.p3);
       // the Titanic goes down in the background regardless
-      tl.fromTo(S + "ship", { rotation: 6, y: 0, svgOrigin: "600 0" }, { rotation: 24, y: 160, duration: D, ease: "power1.in" }, 0);
-      tl.fromTo(S + "icewrap", { y: 0 }, { y: 6, duration: 1.6, ease: "sine.inOut", repeat: Math.floor(D / 1.6), yoyo: true }, 0);
+      tl.fromTo(S + "ship", { rotation: 6, y: 0, svgOrigin: "600 0" }, { rotation: 24, y: 180, duration: D, ease: "power1.in" }, 0);
+      tl.fromTo(S + "icewrap", { y: 0 }, { y: 8, duration: 1.6, ease: "sine.inOut", repeat: R(D, 1.6), yoyo: true }, 0);
       // he looks at us, hopeful
       tl.to([S + "k-pupL", S + "k-pupR"], { y: 3, duration: 0.3 }, C.q);
       tl.fromTo(S + "k-armR", { rotation: 0 }, { rotation: -160, duration: 0.4, ease: "back.out(2)" }, C.q + 0.4);
       // NO.
       const land = C.no + 0.18;
       tl.fromTo(S + "stamp", { opacity: 0, scale: 2.4, rotation: -4 }, { opacity: 1, scale: 1, rotation: -9, duration: 0.18, ease: "power4.in" }, C.no);
-      tl.fromTo(S + "svg", { x: 0 }, { x: 8, duration: 0.04, repeat: 5, yoyo: true }, land);
+      tl.fromTo(S + "svg", { x: 0 }, { x: 10, duration: 0.04, repeat: 5, yoyo: true }, land);
       swap(S + "k-m-smile", S + "k-m-o", land);
       tl.to(S + "k-armR", { rotation: -20, duration: 0.3 }, land);
       tl.to(S + "stamp", { opacity: 0, scale: 0.9, duration: 0.25, ease: "power2.in" }, C.line + 0.2);
-      // ... but furthest off his line in history
+      // ... but no goalkeeper ever came further off his line
       tl.fromTo(S + "map", { opacity: 0 }, { opacity: 1, duration: 0.3 }, C.line + 0.5);
-      tl.fromTo(S + "map path", { strokeDashoffset: 300 }, { strokeDashoffset: 0, duration: 1.2, ease: "power2.out" }, C.line + 0.5);
+      tl.fromTo(S + "map path", { strokeDashoffset: 400 }, { strokeDashoffset: 0, duration: 1.2, ease: "power2.out" }, C.line + 0.5);
       swap(S + "k-m-o", S + "k-m-smile", C.line + 1.2);
       tl.to(S + "k-armR", { rotation: -150, duration: 0.35, ease: "back.out(2)" }, C.line + 1.4);
       tl.to(S + "k-armL", { rotation: 150, duration: 0.35, ease: "back.out(2)" }, C.line + 1.5);
-      tl.to(S + "map", { opacity: 0, duration: 0.3 }, C.p1 + 0.2);
+      tl.to(S + "map", { opacity: 0, duration: 0.3 }, C.p1 - 0.1);
       // chance he tries anyway: 100 %
-      tl.fromTo(S + "kwrap", { y: 0 }, { y: -30, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 3 }, C.p3);
+      tl.fromTo(S + "kwrap", { y: 0 }, { y: -40, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 3 }, C.p3);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
       // render end -> start once so every element starts in its earliest state

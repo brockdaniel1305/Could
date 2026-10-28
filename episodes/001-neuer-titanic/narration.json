@@ -1,7 +1,10 @@
 {
   "id": "001",
   "title": "Could Manuel Neuer save the Titanic?",
-  "voice": "bm_george",
+  "provider": "voicestudio",
+  "voice": "fable",
+  "model": "tts-1",
+  "preview_voice": "bm_george",
   "speed": 1.08,
   "caption": "Could Manuel Neuer save the Titanic? We did the maths. Nobody asked. 🧊⚽ #could #manuelneuer #titanic #documentary #football #whatif #fyp",
   "scenes": [
@@ -16,7 +19,7 @@
         {
           "name": "pop",
           "cue": "won",
-          "offset": 0.21,
+          "offset": 0.66,
           "volume": 0.45
         }
       ],

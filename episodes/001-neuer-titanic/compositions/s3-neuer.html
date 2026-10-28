@@ -1,59 +1,58 @@
 <template>
-  <!-- COULD? scene s3-neuer · fact panel (top) + live cartoon reconstruction (stage). Cues: timing.json -->
+  <!-- COULD? scene s3-neuer · full-frame cartoon + flying fact cards. Source: src/s3.py, cues: timing.json -->
   <style>
     @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
     @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
     @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
     @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
-    #root { position: absolute; inset: 0; }
-    .fp { position: absolute; left: 60px; right: 60px; top: 262px; height: 336px; }
-    .kick { font: 400 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #d9a441; }
-    .head { margin-top: 14px; font: 700 80px/1.02 "CouldSerif"; color: #f4efe6; letter-spacing: -0.01em; }
-    .rows { margin-top: 14px; }
-    .row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0 10px; border-bottom: 2px solid #2e2b26; }
-    .rk { font: 400 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #8c8476; }
-    .rv { font: 900 40px/1 "Inter"; color: #f4efe6; }
-    .rv.gold { color: #f3c55b; }
-    .stage { position: absolute; left: 48px; top: 620px; width: 984px; height: 560px; border-radius: 26px; overflow: hidden; background: #10223a; }
-    .stage-border { position: absolute; left: 48px; top: 620px; width: 984px; height: 560px; border-radius: 26px; border: 5px solid #ece4d4; }
-    .live { position: absolute; left: 76px; top: 644px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.72);
-            font: 700 28px/1 "CouldMono"; letter-spacing: 0.12em; color: #f4efe6; }
-    .live i { display: inline-block; width: 14px; height: 14px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
-    .bug { position: absolute; right: 76px; top: 644px; padding: 8px 14px; border-radius: 10px; background: #f4efe6; border: 3px solid #1a1a2e;
-           font: 900 30px/1 "Inter"; color: #1a1a2e; opacity: 0; }
-    .bug b { color: #e0412f; }
-    .stage svg { position: absolute; inset: 0; width: 984px; height: 560px; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
   
   </style>
   <div id="root" data-composition-id="s3-neuer" data-width="1080" data-height="1920">
-    <div class="fp">
-      <div class="kick" id="s3-neuer-kick">SUBJECT B</div>
-      <div class="head" id="s3-neuer-head">Manuel Neuer</div>
-      <div class="rows">
-        <div class="row" id="s3-neuer-r1"><span class="rk">HEIGHT</span><span class="rv ">1.93 m</span></div>
-        <div class="row" id="s3-neuer-r2"><span class="rk">WORLD CUP</span><span class="rv ">2014 ✓</span></div>
-        <div class="row" id="s3-neuer-r3"><span class="rk">HABITAT</span><span class="rv gold">Outside his box</span></div>
-      </div>
-    </div>
-    <div class="stage" data-layout-allow-overflow>
-      <svg viewBox="0 0 984 560" id="s3-neuer-svg">
-        <defs>
-          <filter id="s3-neuer-boil"><feTurbulence id="s3-neuer-turb" type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="5" /></filter>
-        </defs>
-        <g filter="url(#s3-neuer-boil)">
+    <svg class="world" viewBox="0 0 1080 1920" id="s3-neuer-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s3-neuer-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s3-neuer-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s3-neuer-boil)">
 
-<!-- Daytime stadium for the 984x560 stage: sky, stands, striped grass from y=300. -->
+<!-- Full-frame daytime stadium 1080x1920: sky, crowd in the stands (y 600..900), striped grass from y=900 (~900). -->
 <g id="s3-neuer-pitch">
-  <rect x="0" y="0" width="984" height="560" fill="#8fd3ff" />
-  <path d="M0,120 L984,120 L984,300 L0,300 Z" fill="#3a3f58" />
-  <g fill="#ffcf4a"><circle cx="40" cy="160" r="8" /><circle cx="120" cy="180" r="8" /><circle cx="210" cy="150" r="8" /><circle cx="300" cy="185" r="8" /><circle cx="390" cy="160" r="8" /><circle cx="480" cy="190" r="8" /><circle cx="570" cy="155" r="8" /><circle cx="660" cy="180" r="8" /><circle cx="750" cy="150" r="8" /><circle cx="840" cy="185" r="8" /><circle cx="930" cy="165" r="8" /></g>
-  <g fill="#e0412f"><circle cx="80" cy="200" r="8" /><circle cx="170" cy="215" r="8" /><circle cx="260" cy="205" r="8" /><circle cx="350" cy="220" r="8" /><circle cx="440" cy="200" r="8" /><circle cx="530" cy="225" r="8" /><circle cx="620" cy="210" r="8" /><circle cx="710" cy="220" r="8" /><circle cx="800" cy="200" r="8" /><circle cx="890" cy="215" r="8" /></g>
-  <rect x="0" y="300" width="984" height="600" fill="#4caf50" />
-  <g fill="#43a047"><rect x="0" y="300" width="120" height="600" /><rect x="240" y="300" width="120" height="600" /><rect x="480" y="300" width="120" height="600" /><rect x="720" y="300" width="120" height="600" /></g>
-  <path d="M0,300 L984,300" stroke="#1a1a2e" stroke-width="5" />
+  <rect x="0" y="0" width="1080" height="1920" fill="#8fd3ff" />
+  <g fill="#fff" stroke="#1a1a2e" stroke-width="4" opacity="0.95"><path d="M120,330 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path d="M700,250 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <path d="M0,600 L1080,600 L1080,900 L0,900 Z" fill="#3a3f58" stroke="#1a1a2e" stroke-width="5" />
+  <circle cx="10" cy="640" r="11" fill="#ffcf4a" /><circle cx="70" cy="640" r="11" fill="#e0412f" /><circle cx="130" cy="640" r="11" fill="#f4efe6" /><circle cx="190" cy="640" r="11" fill="#ffcf4a" /><circle cx="250" cy="640" r="11" fill="#e0412f" /><circle cx="310" cy="640" r="11" fill="#f4efe6" /><circle cx="370" cy="640" r="11" fill="#ffcf4a" /><circle cx="430" cy="640" r="11" fill="#e0412f" /><circle cx="490" cy="640" r="11" fill="#f4efe6" /><circle cx="550" cy="640" r="11" fill="#ffcf4a" /><circle cx="610" cy="640" r="11" fill="#e0412f" /><circle cx="670" cy="640" r="11" fill="#f4efe6" /><circle cx="730" cy="640" r="11" fill="#ffcf4a" /><circle cx="790" cy="640" r="11" fill="#e0412f" /><circle cx="850" cy="640" r="11" fill="#f4efe6" /><circle cx="910" cy="640" r="11" fill="#ffcf4a" /><circle cx="970" cy="640" r="11" fill="#e0412f" /><circle cx="1030" cy="640" r="11" fill="#f4efe6" /><circle cx="40" cy="688" r="11" fill="#e0412f" /><circle cx="100" cy="688" r="11" fill="#f4efe6" /><circle cx="160" cy="688" r="11" fill="#ffcf4a" /><circle cx="220" cy="688" r="11" fill="#e0412f" /><circle cx="280" cy="688" r="11" fill="#f4efe6" /><circle cx="340" cy="688" r="11" fill="#ffcf4a" /><circle cx="400" cy="688" r="11" fill="#e0412f" /><circle cx="460" cy="688" r="11" fill="#f4efe6" /><circle cx="520" cy="688" r="11" fill="#ffcf4a" /><circle cx="580" cy="688" r="11" fill="#e0412f" /><circle cx="640" cy="688" r="11" fill="#f4efe6" /><circle cx="700" cy="688" r="11" fill="#ffcf4a" /><circle cx="760" cy="688" r="11" fill="#e0412f" /><circle cx="820" cy="688" r="11" fill="#f4efe6" /><circle cx="880" cy="688" r="11" fill="#ffcf4a" /><circle cx="940" cy="688" r="11" fill="#e0412f" /><circle cx="1000" cy="688" r="11" fill="#f4efe6" /><circle cx="1060" cy="688" r="11" fill="#ffcf4a" /><circle cx="10" cy="736" r="11" fill="#f4efe6" /><circle cx="70" cy="736" r="11" fill="#ffcf4a" /><circle cx="130" cy="736" r="11" fill="#e0412f" /><circle cx="190" cy="736" r="11" fill="#f4efe6" /><circle cx="250" cy="736" r="11" fill="#ffcf4a" /><circle cx="310" cy="736" r="11" fill="#e0412f" /><circle cx="370" cy="736" r="11" fill="#f4efe6" /><circle cx="430" cy="736" r="11" fill="#ffcf4a" /><circle cx="490" cy="736" r="11" fill="#e0412f" /><circle cx="550" cy="736" r="11" fill="#f4efe6" /><circle cx="610" cy="736" r="11" fill="#ffcf4a" /><circle cx="670" cy="736" r="11" fill="#e0412f" /><circle cx="730" cy="736" r="11" fill="#f4efe6" /><circle cx="790" cy="736" r="11" fill="#ffcf4a" /><circle cx="850" cy="736" r="11" fill="#e0412f" /><circle cx="910" cy="736" r="11" fill="#f4efe6" /><circle cx="970" cy="736" r="11" fill="#ffcf4a" /><circle cx="1030" cy="736" r="11" fill="#e0412f" /><circle cx="40" cy="784" r="11" fill="#ffcf4a" /><circle cx="100" cy="784" r="11" fill="#e0412f" /><circle cx="160" cy="784" r="11" fill="#f4efe6" /><circle cx="220" cy="784" r="11" fill="#ffcf4a" /><circle cx="280" cy="784" r="11" fill="#e0412f" /><circle cx="340" cy="784" r="11" fill="#f4efe6" /><circle cx="400" cy="784" r="11" fill="#ffcf4a" /><circle cx="460" cy="784" r="11" fill="#e0412f" /><circle cx="520" cy="784" r="11" fill="#f4efe6" /><circle cx="580" cy="784" r="11" fill="#ffcf4a" /><circle cx="640" cy="784" r="11" fill="#e0412f" /><circle cx="700" cy="784" r="11" fill="#f4efe6" /><circle cx="760" cy="784" r="11" fill="#ffcf4a" /><circle cx="820" cy="784" r="11" fill="#e0412f" /><circle cx="880" cy="784" r="11" fill="#f4efe6" /><circle cx="940" cy="784" r="11" fill="#ffcf4a" /><circle cx="1000" cy="784" r="11" fill="#e0412f" /><circle cx="1060" cy="784" r="11" fill="#f4efe6" /><circle cx="10" cy="832" r="11" fill="#e0412f" /><circle cx="70" cy="832" r="11" fill="#f4efe6" /><circle cx="130" cy="832" r="11" fill="#ffcf4a" /><circle cx="190" cy="832" r="11" fill="#e0412f" /><circle cx="250" cy="832" r="11" fill="#f4efe6" /><circle cx="310" cy="832" r="11" fill="#ffcf4a" /><circle cx="370" cy="832" r="11" fill="#e0412f" /><circle cx="430" cy="832" r="11" fill="#f4efe6" /><circle cx="490" cy="832" r="11" fill="#ffcf4a" /><circle cx="550" cy="832" r="11" fill="#e0412f" /><circle cx="610" cy="832" r="11" fill="#f4efe6" /><circle cx="670" cy="832" r="11" fill="#ffcf4a" /><circle cx="730" cy="832" r="11" fill="#e0412f" /><circle cx="790" cy="832" r="11" fill="#f4efe6" /><circle cx="850" cy="832" r="11" fill="#ffcf4a" /><circle cx="910" cy="832" r="11" fill="#e0412f" /><circle cx="970" cy="832" r="11" fill="#f4efe6" /><circle cx="1030" cy="832" r="11" fill="#ffcf4a" />
+  <rect x="0" y="900" width="1080" height="1100" fill="#4caf50" />
+  <g fill="#43a047"><rect x="0" y="900" width="135" height="1100" /><rect x="270" y="900" width="135" height="1100" /><rect x="540" y="900" width="135" height="1100" /><rect x="810" y="900" width="135" height="1100" /></g>
+  <path d="M0,900 L1080,900" stroke="#1a1a2e" stroke-width="5" />
 </g>
 
-<g transform="translate(190,470)"><!-- Football goal, front-on. Origin = centre of the goal line. 300 wide, 120 tall. -->
+<g id="s3-neuer-box" fill="none" stroke="#f4efe6" stroke-width="10" stroke-linejoin="round" opacity="0.9">
+  <path d="M-80,1250 L-200,1700 L860,1700 L740,1250" /><path d="M110,1250 L80,1420 L580,1420 L550,1250" />
+  <circle cx="330" cy="1560" r="10" fill="#f4efe6" /><path d="M150,1700 Q330,1800 510,1700" />
+</g>
+<g transform="translate(330,1250) scale(2.3)"><!-- Football goal, front-on. Origin = centre of the goal line. 300 wide, 120 tall. -->
 <g id="s3-neuer-goal">
   <g stroke="#cfd8dc" stroke-width="2" opacity="0.8">
     <path d="M-140,-112 L-140,0 M-110,-112 L-110,0 M-80,-112 L-80,0 M-50,-112 L-50,0 M-20,-112 L-20,0 M10,-112 L10,0 M40,-112 L40,0 M70,-112 L70,0 M100,-112 L100,0 M130,-112 L130,0" />
@@ -63,7 +62,7 @@
   <path d="M-150,0 L-150,-120 L150,-120 L150,0" fill="none" stroke="#1a1a2e" stroke-width="3" />
 </g>
 </g>
-<g transform="translate(190,500)"><g id="s3-neuer-kwrap"><g transform="scale(0.78)"><!-- Manuel-Neuer-style goalkeeper (caricature, not a likeness). Origin = between the feet. ~300 tall.
+<g transform="translate(330,1250)"><g id="s3-neuer-kwrap"><!-- Manuel-Neuer-style goalkeeper (caricature, not a likeness). Origin = between the feet. ~300 tall.
      Animatable: s3-neuer-k (whole), s3-neuer-k-body, s3-neuer-k-armL/-armR (rotate, origin top), s3-neuer-k-legL/-legR, s3-neuer-k-head,
      s3-neuer-k-pupL/-pupR (x/y look), s3-neuer-k-browL/-browR, s3-neuer-k-m-smile / -m-o / -m-flat (show one), s3-neuer-k-lids (blink). -->
 <g id="s3-neuer-k">
@@ -96,13 +95,13 @@
     </g></g>
   </g>
 </g>
-</g></g></g>
-<g id="s3-neuer-ruler" transform="translate(300,500)">
-  <path d="M0,0 L0,-236 M-12,0 L12,0 M-12,-236 L12,-236 M-7,-59 L7,-59 M-7,-118 L7,-118 M-7,-177 L7,-177" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
-  <rect x="16" y="-142" width="118" height="44" rx="8" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
-  <text x="75" y="-108" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#1a1a2e">1.93 m</text>
+</g></g>
+<g id="s3-neuer-ruler" transform="translate(490,1250)">
+  <path d="M0,0 L0,-300 M-16,0 L16,0 M-16,-300 L16,-300 M-9,-75 L9,-75 M-9,-150 L9,-150 M-9,-225 L9,-225" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+  <rect x="22" y="-180" width="170" height="64" rx="12" fill="#fff" stroke="#1a1a2e" stroke-width="5" />
+  <text x="107" y="-135" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="#1a1a2e">1.93 m</text>
 </g>
-<g transform="translate(190,240)"><g id="s3-neuer-cup"><!-- Gold cup. Origin = base centre. ~120 tall. -->
+<g transform="translate(330,920) scale(1.4)"><g id="s3-neuer-cup"><!-- Gold cup. Origin = base centre. ~120 tall. -->
 <g id="s3-neuer-tro" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round">
   <path d="M-30,0 L30,0 L24,-16 L-24,-16 Z" fill="#8a5a1f" />
   <path d="M-10,-16 L10,-16 L8,-46 L-8,-46 Z" fill="#f3c55b" />
@@ -111,29 +110,29 @@
   <path d="M-22,-104 Q-24,-70 -6,-60" fill="none" stroke="#fff3c4" stroke-width="5" />
 </g>
 </g></g>
-<g id="s3-neuer-q" transform="translate(190,390)"><circle r="38" fill="#fff" stroke="#1a1a2e" stroke-width="5" /><text y="16" text-anchor="middle" font-family="Inter" font-weight="900" font-size="48" fill="#1a1a2e">?</text></g>
-<g transform="translate(1060,260)"><g id="s3-neuer-b1"><!-- Football. Origin = centre, r = 22. -->
+<g id="s3-neuer-q" transform="translate(330,1110)"><circle r="52" fill="#fff" stroke="#1a1a2e" stroke-width="6" /><text y="22" text-anchor="middle" font-family="Inter" font-weight="900" font-size="64" fill="#1a1a2e">?</text></g>
+<g transform="translate(1200,1050)"><g id="s3-neuer-b1"><g transform="scale(1.5)"><!-- Football. Origin = centre, r = 22. -->
 <g id="s3-neuer-fb1">
   <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
   <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
   <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
 </g>
-</g></g>
-<g transform="translate(1060,310)"><g id="s3-neuer-b2"><!-- Football. Origin = centre, r = 22. -->
+</g></g></g>
+<g transform="translate(1200,1110)"><g id="s3-neuer-b2"><g transform="scale(1.5)"><!-- Football. Origin = centre, r = 22. -->
 <g id="s3-neuer-fb2">
   <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
   <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
   <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
 </g>
-</g></g>
-<g transform="translate(1060,220)"><g id="s3-neuer-b3"><!-- Football. Origin = centre, r = 22. -->
+</g></g></g>
+<g transform="translate(1200,990)"><g id="s3-neuer-b3"><g transform="scale(1.5)"><!-- Football. Origin = centre, r = 22. -->
 <g id="s3-neuer-fb3">
   <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
   <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
   <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
 </g>
-</g></g>
-<g transform="translate(0,500)"><g id="s3-neuer-miniice"><g transform="translate(1100,0) scale(0.34)"><!-- Smug iceberg with a face. Origin = waterline centre. ~260 wide, ~230 tall above water.
+</g></g></g>
+<g transform="translate(0,1250)"><g id="s3-neuer-miniice"><g transform="translate(1260,0) scale(0.45)"><!-- Smug iceberg with a face. Origin = waterline centre. ~260 wide, ~230 tall above water.
      Animatable: s3-neuer-ice (whole), s3-neuer-ice-face (x/y), s3-neuer-ice-browL/-browR (rotate), s3-neuer-ice-grin / s3-neuer-ice-smirk (show one). -->
 <g id="s3-neuer-ice">
   <path d="M-150,0 L-110,-120 L-70,-96 L-30,-232 L20,-168 L60,-200 L110,-92 L150,0 Z" fill="#e8f6ff" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
@@ -150,13 +149,16 @@
 </g>
 </g></g></g>
 
-        </g>
-        <rect id="s3-neuer-dip" x="0" y="0" width="984" height="560" fill="#000" opacity="0" />
-      </svg>
-    </div>
-    <div class="stage-border" data-layout-ignore></div>
-    <div class="live" id="s3-neuer-live"><i></i>LIVE RECONSTRUCTION</div>
-    <div class="bug" id="s3-neuer-zero">ICEBERGS STOPPED: <b>0</b></div>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s3-neuer-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 330px;"><div class="bk">SUBJECT B</div><div class="bt">Manuel Neuer</div></div>
+    <div class="card " id="s3-neuer-c-wc" data-layout-allow-overflow data-layout-allow-overlap style="left: 470px; top: 360px;"><div class="ck">WORLD CUP</div><div class="cv">2014 ✓</div></div>
+    <div class="card gold" id="s3-neuer-c-hab" data-layout-allow-overflow data-layout-allow-overlap style="left: 90px; top: 400px;"><div class="ck">HABITAT</div><div class="cv">Outside his box</div></div>
+    <div class="card " id="s3-neuer-c-sv" data-layout-allow-overflow data-layout-allow-overlap style="left: 300px; top: 360px;"><div class="ck">SHOTS STOPPED</div><div class="cv">Thousands</div></div>
+    <div class="card red" id="s3-neuer-c-z" data-layout-allow-overflow data-layout-allow-overlap style="left: 160px; top: 420px;"><div class="ck">ICEBERGS STOPPED</div><div class="cv">0</div></div>
+    <div class="dip" id="s3-neuer-dip" data-layout-ignore></div>
   </div>
   <script>
     (function () {
@@ -169,41 +171,59 @@
       // rig pivots: limbs swing from their top, heads nod from the neck
       const root = document.querySelector('[data-composition-id="s3-neuer"]');
       root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
-      root.querySelectorAll('[id$="-head"]').forEach((el) => { if (el.tagName === "g") gsap.set(el, { transformOrigin: "50% 100%" }); });
-      // helpers
-      const show = (sel, at, d = 0.35) => tl.fromTo(sel, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: d, ease: "expo.out" }, at);
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
       const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
       const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
       const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
       const waves = (a, b) => {
-        const n = Math.max(1, Math.floor(D / 2));
-        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: n - 1 }, 0);
-        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: Math.floor(D / 1.4) }, 0);
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
       };
       const puffs = (pfx) => {
-        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
-          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: Math.floor(D / 1.6) }, i * 0.35));
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
       };
 
-      // facts
-      tl.fromTo(S + "head", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, C.name);
-      show(S + "r1", C.h); show(S + "r2", C.wc); show(S + "r3", C.out + 0.4);
+      fly("b", C.name, C.wc - 0.1);
+      fly("wc", C.wc, C.out, { from: "right" });
+      fly("hab", C.out + 0.4, C.ice - 0.1);
+      fly("sv", C.ice, C.zero - 0.1, { from: "right" });
+      fly("z", C.zero + 0.9, null, { from: "top", rot: 3 });
       // idle in goal: ready stance, blinking
-      tl.fromTo([S + "k-armL"], { rotation: 25 }, { rotation: 40, duration: 0.5, ease: "sine.inOut", repeat: 3, yoyo: true }, 0);
-      tl.fromTo([S + "k-armR"], { rotation: -25 }, { rotation: -40, duration: 0.55, ease: "sine.inOut", repeat: 3, yoyo: true }, 0.1);
+      tl.fromTo(S + "k-armL", { rotation: 25 }, { rotation: 40, duration: 0.5, ease: "sine.inOut", repeat: 3, yoyo: true }, 0);
+      tl.fromTo(S + "k-armR", { rotation: -25 }, { rotation: -40, duration: 0.55, ease: "sine.inOut", repeat: 3, yoyo: true }, 0.1);
       blink(S + "k-lids", 1.4); blink(S + "k-lids", 3.6);
-      // height ruler
-      tl.fromTo(S + "ruler", { opacity: 0, scaleY: 0, svgOrigin: "300 500" }, { opacity: 1, scaleY: 1, duration: 0.5, ease: "expo.out" }, C.h);
+      // height ruler grows next to him
+      tl.fromTo(S + "ruler", { opacity: 0, scaleY: 0, transformOrigin: "50% 100%" }, { opacity: 1, scaleY: 1, duration: 0.5, ease: "expo.out" }, C.h);
       tl.to(S + "ruler", { opacity: 0, duration: 0.25 }, C.wc);
       // world champion: cup + arms up
       pop(S + "cup", C.wc + 0.3);
       tl.to(S + "k-armL", { rotation: 160, duration: 0.35, ease: "back.out(2)" }, C.wc + 0.3);
       tl.to(S + "k-armR", { rotation: -160, duration: 0.35, ease: "back.out(2)" }, C.wc + 0.38);
       tl.to(S + "cup", { opacity: 0, duration: 0.2 }, C.out);
-      // leaves his goal for no reason: sprint right, goal left empty
+      // leaves his goal for no reason: sprint right, the goal stays empty
       const run0 = C.out + 0.4, run1 = run0 + 1.6;
       tl.to([S + "k-armL", S + "k-armR"], { rotation: 0, duration: 0.2 }, C.out);
-      tl.fromTo(S + "kwrap", { x: 0, rotation: 0 }, { x: 560, rotation: 8, duration: run1 - run0, ease: "power2.inOut" }, run0);
+      tl.fromTo(S + "kwrap", { x: 0, rotation: 0 }, { x: 540, rotation: 8, duration: run1 - run0, ease: "power2.inOut" }, run0);
       tl.to(S + "kwrap", { rotation: 0, duration: 0.3, ease: "back.out(2)" }, run1);
       tl.fromTo(S + "k-legL", { rotation: -30 }, { rotation: 30, duration: 0.16, ease: "sine.inOut", repeat: 9, yoyo: true }, run0);
       tl.fromTo(S + "k-legR", { rotation: 30 }, { rotation: -30, duration: 0.16, ease: "sine.inOut", repeat: 9, yoyo: true }, run0);
@@ -212,23 +232,21 @@
       tl.set([S + "k-legL", S + "k-legR", S + "k-armL", S + "k-armR"], { rotation: 0 }, run1 + 0.02);
       swap(S + "k-m-smile", S + "k-m-o", run0); swap(S + "k-m-o", S + "k-m-smile", run1);
       pop(S + "q", run1 + 0.5);
-      // hands on hips, pleased
       tl.to(S + "k-armL", { rotation: 30, duration: 0.3 }, run1 + 0.3);
       tl.to(S + "k-armR", { rotation: -30, duration: 0.3 }, run1 + 0.3);
-      // stops fast-moving objects: three balls, three saves (glove at keeper x 750)
+      // stops fast-moving objects: three balls, three saves (glove at x ~ 870)
       [0, 1, 2].forEach((i) => {
         const at = C.ice + 0.4 + i * 0.9;
-        tl.fromTo(S + "b" + (i + 1), { x: 0, rotation: 0 }, { x: -260, rotation: -540, duration: 0.45, ease: "power2.in" }, at);
+        tl.fromTo(S + "b" + (i + 1), { x: 0, rotation: 0 }, { x: -270, rotation: -540, duration: 0.45, ease: "power2.in" }, at);
         tl.to(S + "k-armR", { rotation: -120 + i * 25, duration: 0.15, ease: "power3.out" }, at + 0.3);
-        tl.to(S + "b" + (i + 1), { x: -200, y: 260, duration: 0.5, ease: "power2.in" }, at + 0.46);
+        tl.to(S + "b" + (i + 1), { x: -200, y: 300, duration: 0.5, ease: "power2.in" }, at + 0.46);
         tl.to(S + "k-armR", { rotation: -30, duration: 0.3 }, at + 0.6);
       });
       // none of them were icebergs
-      tl.fromTo(S + "miniice", { x: 0 }, { x: -260, duration: 0.9, ease: "power3.out" }, C.zero);
+      tl.fromTo(S + "miniice", { x: 0 }, { x: -270, duration: 0.9, ease: "power3.out" }, C.zero);
       tl.to([S + "k-pupL", S + "k-pupR"], { x: 6, y: 5, duration: 0.25 }, C.zero + 0.6);
-      tl.to(S + "k-browL", { y: -8, rotation: -12, svgOrigin: "-17 -19", duration: 0.25 }, C.zero + 0.7);
+      tl.to(S + "k-browL", { y: -8, duration: 0.25 }, C.zero + 0.7);
       swap(S + "k-m-smile", S + "k-m-flat", C.zero + 0.7);
-      tl.fromTo(S + "zero", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2.5)" }, C.zero + 0.9);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
       // render end -> start once so every element starts in its earliest state

@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Voice + timing + captions + root timeline for a COULD? HyperFrames episode.
 
-    python3 tools/build_episode.py episodes/001-neuer-titanic
+    python3 tools/build_episode.py episodes/001-neuer-titanic            # voice from narration.json "provider"
+    python3 tools/build_episode.py episodes/001-neuer-titanic --preview  # Kokoro preview voice (no VoiceStudio needed)
 
 Reads   <ep>/narration.json
 Writes  <ep>/assets/voice/<scene>.wav      voice-over: Kokoro (npx hyperframes tts) or VoiceStudio
         <ep>/timing.json                   scene slots, word times, cue times (local to each scene)
         <ep>/compositions/captions.html    karaoke captions from the real word timings
-        <ep>/index.html                    root: scene hosts, frame, captions, voice, sfx, music
+        <ep>/index.html                    root: scene hosts, captions, voice, sfx, music
         <ep>/compositions/<scene>.html     stub from channel/kit/scene-template.html if missing
 
 Narration markup:
@@ -222,10 +223,15 @@ def captions_html(groups, total):
 
 
 def main():
-    ep = Path(sys.argv[1]).resolve()
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    preview = "--preview" in sys.argv
+    ep = Path(args[0]).resolve()
     cfg = json.loads((ep / "narration.json").read_text())
     voice, speed = cfg.get("voice", "bm_george"), cfg.get("speed", 1.0)
     TTS["provider"] = cfg.get("provider", "kokoro")
+    if preview and TTS["provider"] != "kokoro":
+        print(f"PREVIEW: Kokoro {cfg.get('preview_voice', 'bm_george')} instead of {TTS['provider']} voice {voice!r}")
+        TTS["provider"], voice = "kokoro", cfg.get("preview_voice", "bm_george")
     TTS["model"] = cfg.get("model", "tts-1")
     if TTS["provider"] not in ("kokoro", "voicestudio"):
         sys.exit(f"unknown provider {TTS['provider']!r} (kokoro | voicestudio)")
@@ -255,7 +261,8 @@ def main():
         all_words += [{**w, "start": round(w["start"] + t, 3), "end": round(w["end"] + t, 3)} for w in local_words]
         t += dur
     total = round(t, 3)
-    (ep / "timing.json").write_text(json.dumps({"duration": total, "scenes": scenes}, indent=1))
+    (ep / "timing.json").write_text(json.dumps({"duration": total, "voice": f"{TTS['provider']}:{voice}",
+                                                "scenes": scenes}, indent=1))
 
     # captions
     (ep / "compositions/captions.html").write_text(captions_html(caption_groups(all_words), total))
@@ -296,9 +303,7 @@ def main():
         audio_tags.append(f'      <audio id="music" class="clip" src="{music["src"]}" data-start="0" data-duration="{total}" '
                           f'data-track-index="24" data-volume="{music.get("volume", 0.14)}" data-fade-out="1.5"></audio>')
 
-    hosts = [f'      <div id="frame" data-composition-id="frame" data-composition-src="compositions/frame.html" '
-             f'data-start="0" data-duration="{total}" data-track-index="0" data-track-kind="graphics" '
-             f'data-width="{W}" data-height="{H}" style="z-index:1"></div>']
+    hosts = []
     for i, s in enumerate(scenes):
         hosts.append(f'      <div id="{s["id"]}" data-composition-id="{s["id"]}" data-composition-src="compositions/{s["id"]}.html" '
                      f'data-start="{s["start"]}" data-duration="{s["duration"]}" data-track-index="{1 + i % 2}" '
@@ -306,9 +311,6 @@ def main():
     hosts.append(f'      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" '
                  f'data-start="0" data-duration="{total}" data-track-index="10" data-track-kind="captions" '
                  f'data-width="{W}" data-height="{H}" style="z-index:5"></div>')
-    if not (ep / "compositions/frame.html").exists():
-        (ep / "compositions/frame.html").write_text((KIT / "frame.html").read_text().replace("__CASE__", html.escape(cfg["id"]))
-                                                    .replace("__DURATION__", str(total)))
 
     idx = (KIT / "index-template.html").read_text()
     idx = (idx.replace("__TITLE__", html.escape(cfg["title"])).replace("__DURATION__", str(total))

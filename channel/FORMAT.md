@@ -2,8 +2,8 @@
 
 **Kanal-Idee:** Englischsprachige Mockumentary-Shorts. Jede Folge stellt eine absichtlich absurde Frage
 (*"Could Manuel Neuer save the Titanic?"*) und beantwortet sie mit todernstem Doku-Ton, echten Zahlen
-und vollkommen unsinniger Logik. Das Ereignis läuft dabei als **Cartoon live mit**, die Fakten des Erzählers
-erscheinen daneben als Text.
+und vollkommen unsinniger Logik. Das Ereignis läuft dabei als **Cartoon im Vollbild live mit**, die Fakten des Erzählers
+fliegen als Karten in die Animation hinein und wieder hinaus.
 
 ## Der Witz in einem Satz
 Absurde Frage + seriöse Fakten + streng "rationale" Rechnung = Lacher. Der Erzähler lacht **nie**, der Cartoon darf.
@@ -29,5 +29,5 @@ Ziel-Länge: **90–115 s** (über 60 s = Creator-Rewards-fähig).
 3. **Drei Pläne mit Eskalation:** A = naheliegend-dumm, B = überraschend fast plausibel, C = komplett absurd.
 4. **Running Gags des Kanals:** "We looked at the evidence…", der rote Stempel, "Chance he tries anyway: 100 %", ein Score-Bug ("ICEBERG 1 : 0 TITANIC").
 5. **Respektvoll bei echten Personen:** über die bekannte Eigenschaft lachen (Torwart, Sprinter, Koch), nie über Privates. Cartoon = Karikatur, keine Fotos.
-6. **Fakten-Panel:** pro Szene Kicker + Headline + max. 3 Zeilen (Schlüssel/Wert). Jede Zeile erscheint auf dem Wort, das sie ausspricht.
+6. **Fliegende Fakten:** jede Szene beginnt mit einem Kapitel-Banner (z. B. PLAN A / The Punch). Jede Zahl des Erzählers fliegt als Karte auf ihrem Wort ins Bild und fliegt wieder hinaus, sobald die nächste kommt.
 7. **Sprech-Markup:** `{1912|nineteen twelve}` (Untertitel/Stimme), `{{cue}}` (Zeitmarke für Animationen), `||0.6||` (Kunstpause).

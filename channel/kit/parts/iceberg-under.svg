@@ -1,0 +1,6 @@
+<!-- The 90 % of the iceberg below the waterline. Origin = waterline centre (same as iceberg.svg). ~520 wide, ~500 deep.
+     Place it BEFORE the sea-front part, at the same transform as the iceberg above water. -->
+<g id="PFX" opacity="0.85">
+  <path d="M-150,0 L150,0 L250,120 L270,300 L190,470 L40,520 L-120,480 L-240,330 L-260,150 Z" fill="#8fc3e6" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M60,0 L150,0 L250,120 L270,300 L190,470 L110,490 L170,300 Z" fill="#6fa9d3" />
+</g>

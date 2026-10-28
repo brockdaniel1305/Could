@@ -1,5 +1,6 @@
 {
  "duration": 110.595,
+ "voice": "kokoro:bm_george",
  "scenes": [
   {
    "id": "s1-hook",
@@ -267,7 +268,7 @@
     {
      "name": "pop",
      "cue": "won",
-     "offset": 0.21,
+     "offset": 0.66,
      "volume": 0.45
     }
    ]
