@@ -8,28 +8,82 @@
   "speed": 1.08,
   "caption": "Could Dayot Upamecano have stopped the 1940 invasion of France? Elite defending. What could possibly go wrong. 🛡️🇫🇷 #could #upamecano #football #defender #history #whatif #fyp",
   "scenes": [
-    {"id": "s1-hook",
-     "text": "Could Dayot Upamecano have stopped Hitler from conquering France? {{ev}}We looked at the evidence. ||0.25|| {{sci}}Scientifically. ||0.3|| {{long}}Mostly the highlights."},
-    {"id": "s2-upa",
-     "text": "In defence: {{name}}Dayot Upamecano. {{best}}One of the best centre backs in the world right now. ||0.3|| {{really}}Genuinely. ||0.3|| {{h}}{1.86|One point eight six} metres of French international. {{calm}}Famous for his calm, completely error free defending. ||0.6|| {{wink}}Mostly."},
-    {"id": "s3-army",
-     "text": "In attack: {{name}}the German army, May {1940|nineteen forty}. {{men}}Around three million soldiers. {{tanks}}Roughly two and a half thousand tanks. {{mag}}France had built the Maginot Line. ||0.3|| {{around}}So the Germans simply went around it. ||0.3|| {{ard}}Through the Ardennes."},
-    {"id": "s4-space",
-     "text": "Phase one. {{t}}Space defending. {{space}}The Ardennes is a lot of space. ||0.3|| {{loves}}Upamecano loves space. {{line}}He holds a perfect high line {{shift}}and shifts across the entire forest. ||0.4|| {{none}}Not one tank gets through the half space.",
-     "sfx": [{"name": "whoosh-short", "cue": "shift", "offset": 0.2, "volume": 0.35}]},
-    {"id": "s5-tackle",
-     "text": "Phase two. {{t}}The tackle. {{tank}}A tank weighs around twenty tonnes. {{upa}}Upamecano: around ninety kilograms. {{slide}}He goes in with a perfectly timed sliding tackle. ||0.4|| {{clean}}Clean. ||0.2|| All ball. ||0.4|| {{card}}The tank is booked for simulation.",
-     "sfx": [{"name": "impact-bass-1", "cue": "clean", "offset": -0.35, "volume": 0.3},
-             {"name": "pop", "cue": "card", "offset": 0.35, "volume": 0.45}]},
-    {"id": "s6-offside",
-     "text": "Phase three. {{t}}The offside trap. {{step}}On his signal, the French defence steps up as one. {{off}}Three million soldiers. ||0.2|| All offside. ||0.4|| {{var}}The video review takes six weeks.",
-     "sfx": [{"name": "ping", "cue": "off", "offset": 0.3, "volume": 0.45}]},
-    {"id": "s7-verdict",
-     "text": "The verdict. {{q}}Could Dayot Upamecano have stopped the invasion? ||0.8|| {{yes}}Yes. ||0.7|| {{but}}With one small risk. {{risk}}At some point, under no pressure at all, he tries one simple pass. ||0.4|| {{oops}}And the entire German army walks past him. {{p1}}Chance he stops them: ninety nine percent. {{p2}}Chance of one famous easy mistake: ||0.35|| {{p3}}also ninety nine.",
-     "tail": 1.0,
-     "sfx": [{"name": "impact-bass-1", "cue": "yes", "offset": 0.14, "volume": 0.4},
-             {"name": "error", "cue": "oops", "offset": 0.2, "volume": 0.3}]},
-    {"id": "s8-outro",
-     "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments."}
+    {
+      "id": "s1-hook",
+      "text": "Could Dayot Upamecano have stopped Hitler from conquering France? {{ev}}We looked at the evidence. {{sci}}Scientifically. ||0.2|| {{long}}Mostly the highlights."
+    },
+    {
+      "id": "s2-upa",
+      "text": "In defence: {{name}}Dayot Upamecano. {{best}}One of the best centre backs in the world right now. {{really}}Genuinely. {{h}}{1.86|One point eight six} metres of French international. {{calm}}Famous for his calm, completely error free defending. ||0.4|| {{wink}}Mostly."
+    },
+    {
+      "id": "s3-army",
+      "text": "In attack: {{name}}the German army, May {1940|nineteen forty}. {{men}}Around three million soldiers. {{tanks}}Roughly two and a half thousand tanks. {{mag}}France had built the Maginot Line. {{around}}So the Germans simply went around it. {{ard}}Through the Ardennes."
+    },
+    {
+      "id": "s4-space",
+      "text": "Phase one. {{t}}Space defending. {{space}}The Ardennes is a lot of space. {{loves}}Upamecano loves space. {{line}}He holds a perfect high line {{shift}}and shifts across the entire forest. {{none}}Not one tank gets through the half space.",
+      "sfx": [
+        {
+          "name": "whoosh-short",
+          "cue": "shift",
+          "offset": 0.2,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s5-tackle",
+      "text": "Phase two. {{t}}The tackle. {{tank}}A tank weighs around twenty tonnes. {{upa}}Upamecano: around ninety kilograms. {{slide}}He goes in with a perfectly timed sliding tackle. ||0.3|| {{clean}}Clean. All ball. {{card}}The tank is booked for simulation.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "clean",
+          "offset": -0.35,
+          "volume": 0.3
+        },
+        {
+          "name": "pop",
+          "cue": "card",
+          "offset": 0.35,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "id": "s6-offside",
+      "text": "Phase three. {{t}}The offside trap. {{step}}On his signal, the French defence steps up as one. {{off}}Three million soldiers. All offside. {{var}}The video review takes six weeks.",
+      "sfx": [
+        {
+          "name": "ping",
+          "cue": "off",
+          "offset": 0.3,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "id": "s7-verdict",
+      "text": "The verdict. {{q}}Could Dayot Upamecano have stopped the invasion? ||0.5|| {{yes}}Yes. ||0.4|| {{but}}With one small risk. {{risk}}At some point, under no pressure at all, he tries one simple pass. ||0.25|| {{oops}}And the entire German army walks past him. {{p1}}Chance he stops them: ninety nine percent. {{p2}}Chance of one famous easy mistake: ||0.25|| {{p3}}also ninety nine.",
+      "tail": 1.0,
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "yes",
+          "offset": 0.14,
+          "volume": 0.4
+        },
+        {
+          "name": "error",
+          "cue": "oops",
+          "offset": 0.2,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s8-outro",
+      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments."
+    }
   ]
 }

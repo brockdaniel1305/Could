@@ -225,8 +225,8 @@
   <script>
     (function () {
       const S = "#s3-army-";
-      const D = 14.853;
-      const C = {"name": 0.921, "men": 2.817, "tanks": 4.892, "mag": 7.618, "around": 10.349, "ard": 13.102};
+      const D = 12.78;
+      const C = {"name": 1.03, "men": 3.181, "tanks": 5.43, "mag": 7.19, "around": 9.094, "ard": 11.063};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s3-army-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

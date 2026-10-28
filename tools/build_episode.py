@@ -38,11 +38,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SFX_LIB = ROOT / ".claude/skills/media-use/audio/assets/sfx"
 KIT = ROOT / "channel/kit"
+LEXICON = {k: v for k, v in json.loads((ROOT / "channel/pronunciation.json").read_text()).items() if not k.startswith("_")}
 SFX_MANIFEST = json.loads((SFX_LIB / "manifest.json").read_text())
 W, H = 1080, 1920
-LEAD, TAIL, OUTRO_TAIL = 0.15, 0.45, 1.6
+LEAD, TAIL, OUTRO_TAIL = 0.15, 0.4, 1.6
 
 UNIT = re.compile(r"\{\{(\w+)\}\}|\{([^|{}]*)\|([^{}]*)\}|(\S+)")
+
+
+def say(token):
+    """Pronunciation fix for one spoken token (keeps surrounding punctuation)."""
+    m = re.match(r"^(\W*)(.*?)(\W*)$", token)
+    pre, word, post = m.groups()
+    return pre + LEXICON.get(word, word) + post
 
 
 def parse(text):
@@ -52,11 +60,11 @@ def parse(text):
         if m.group(1):
             cues[m.group(1)] = len(units)
         elif m.group(2) is not None:
-            units.append({"shown": m.group(2), "spoken": m.group(3).split()})
+            units.append({"shown": m.group(2), "spoken": [say(t) for t in m.group(3).split()]})
         elif units and not norm(m.group(4)):
             units[-1]["shown"] += m.group(4)  # punctuation after a {shown|spoken} unit
         else:
-            units.append({"shown": m.group(4), "spoken": [m.group(4)]})
+            units.append({"shown": m.group(4), "spoken": [say(m.group(4))]})
     return units, cues
 
 
@@ -104,6 +112,8 @@ def voice_scene(sc, vdir, voice, speed, cache):
         spoken = " ".join(tok for x in u for tok in x["spoken"])
         part = vdir / f"{sc['id']}.part{k}.wav"
         words = synth(spoken, part, voice, speed, cache)
+        if not words:
+            print(f"  ! no word timings for {part.name}, captions will be estimated", flush=True)
         with wave.open(str(part)) as w:
             params = w.getparams()
             data = w.readframes(w.getnframes())
@@ -125,28 +135,63 @@ def norm(s):
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
-def run(cmd, **kw):
+def run(cmd, both=False, **kw):
     r = subprocess.run(cmd, capture_output=True, text=True, **kw)
     if r.returncode:
         sys.exit(f"command failed: {' '.join(cmd)}\n{r.stdout}\n{r.stderr}")
-    return r.stdout
+    return r.stdout + "\n" + r.stderr if both else r.stdout
 
 
 TTS = {"provider": "kokoro", "model": "tts-1"}
 
 
+def trim(wav, max_gap=0.24, keep_gap=0.22, floor_db=-40):
+    """Cut the TTS engine's own leading/trailing silence and shorten its long sentence gaps,
+    so only our ||pauses|| decide where the narrator stops."""
+    import array
+    with wave.open(str(wav)) as w:
+        params, rate = w.getparams(), w.getframerate()
+        assert w.getsampwidth() == 2 and w.getnchannels() == 1, "expects 16-bit mono"
+        x = array.array("h", w.readframes(w.getnframes()))
+    hop = rate // 100                                     # 10 ms frames
+    limit = 32768 * 10 ** (floor_db / 20)
+    loud = [max(abs(v) for v in x[i:i + hop] or [0]) > limit for i in range(0, len(x), hop)]
+    if not any(loud):
+        return
+    first, last = loud.index(True), len(loud) - 1 - loud[::-1].index(True)
+    keep, run_start = [], None
+    for i in range(first, last + 1):
+        if loud[i]:
+            if run_start is not None:
+                n = i - run_start
+                keep += range(run_start, run_start + (round(keep_gap * 100) if n > max_gap * 100 else n))
+                run_start = None
+            keep.append(i)
+        elif run_start is None:
+            run_start = i
+    frames = [max(0, first - 4)] + keep + [min(len(loud) - 1, last + 8)]
+    out = array.array("h")
+    for i in sorted(set(range(max(0, first - 4), first)) | set(keep) | set(range(last + 1, min(len(loud), last + 9)))):
+        out.extend(x[i * hop:(i + 1) * hop])
+    with wave.open(str(wav), "wb") as w:
+        w.setparams(params)
+        w.writeframes(out.tobytes())
+
+
 def synth(text, out, voice, speed, cache):
     tag = f"{voice}|{speed}" if TTS["provider"] == "kokoro" else f"voicestudio|{TTS['model']}|{voice}|{speed}"
-    key = hashlib.sha1(f"{tag}|{text}".encode()).hexdigest()
+    key = hashlib.sha1(f"{tag}|trim4|{text}".encode()).hexdigest()
     if cache.get(out.name, {}).get("key") == key and out.exists():
         return cache[out.name]["words"]
     if TTS["provider"] == "voicestudio":
         voicestudio_tts(text, out, voice, speed, TTS["model"])
     else:
         run(["npx", "--yes", "hyperframes", "tts", text, "-v", voice, "-s", str(speed), "-o", str(out), "--json"])
+    trim(out)
     words = []
+    # the word events arrive on stderr (progress stream), the summary on stdout: read both
     for line in run(["npx", "--yes", "hyperframes", "transcribe", str(out), "--model", "small.en", "--json"],
-                    cwd=out.parent).splitlines():
+                    both=True, cwd=out.parent).splitlines():
         try:
             ev = json.loads(line)
         except ValueError:

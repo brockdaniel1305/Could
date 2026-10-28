@@ -1,656 +1,656 @@
 {
- "duration": 110.679,
+ "duration": 99.004,
  "voice": "kokoro:bm_george",
  "scenes": [
   {
    "id": "s1-hook",
    "start": 0.0,
-   "duration": 9.342,
+   "duration": 8.49,
    "voice": "assets/voice/s1-hook.wav",
    "voiceStart": 0.15,
-   "speech": 8.742,
+   "speech": 7.94,
    "cues": {
-    "ev": 3.948,
-    "sci": 5.819,
-    "long": 7.335
+    "ev": 3.95,
+    "sci": 5.353,
+    "long": 6.56
    },
    "words": [
     {
      "text": "Could",
      "start": 0.15,
-     "end": 0.504
+     "end": 0.489
     },
     {
      "text": "Dayot",
-     "start": 0.504,
-     "end": 0.859
+     "start": 0.489,
+     "end": 0.832
     },
     {
      "text": "Upamecano",
-     "start": 0.859,
-     "end": 1.416
+     "start": 0.832,
+     "end": 1.371
     },
     {
      "text": "have",
-     "start": 1.416,
-     "end": 1.72
+     "start": 1.371,
+     "end": 1.643
     },
     {
      "text": "stopped",
-     "start": 1.72,
-     "end": 2.176
+     "start": 1.643,
+     "end": 2.118
     },
     {
      "text": "Hitler",
-     "start": 2.176,
-     "end": 2.581
+     "start": 2.118,
+     "end": 2.525
     },
     {
      "text": "from",
-     "start": 2.581,
-     "end": 2.885
+     "start": 2.525,
+     "end": 2.796
     },
     {
      "text": "conquering",
-     "start": 2.885,
-     "end": 3.492
+     "start": 2.796,
+     "end": 3.475
     },
     {
      "text": "France?",
-     "start": 3.492,
-     "end": 3.948
+     "start": 3.475,
+     "end": 3.95
     },
     {
      "text": "We",
-     "start": 3.948,
-     "end": 4.151
+     "start": 3.95,
+     "end": 4.078
     },
     {
      "text": "looked",
-     "start": 4.151,
-     "end": 4.556
+     "start": 4.078,
+     "end": 4.46
     },
     {
      "text": "at",
-     "start": 4.556,
-     "end": 4.758
+     "start": 4.46,
+     "end": 4.588
     },
     {
      "text": "the",
-     "start": 4.758,
-     "end": 5.012
+     "start": 4.588,
+     "end": 4.779
     },
     {
      "text": "evidence.",
-     "start": 5.012,
-     "end": 5.569
+     "start": 4.779,
+     "end": 5.353
     },
     {
      "text": "Scientifically.",
-     "start": 5.819,
-     "end": 7.035
+     "start": 5.353,
+     "end": 6.31
     },
     {
      "text": "Mostly",
-     "start": 7.335,
-     "end": 7.814
+     "start": 6.56,
+     "end": 6.968
     },
     {
      "text": "the",
-     "start": 7.814,
-     "end": 8.113
+     "start": 6.968,
+     "end": 7.172
     },
     {
      "text": "highlights.",
-     "start": 8.113,
-     "end": 8.892
+     "start": 7.172,
+     "end": 7.92
     }
    ],
    "sfx": []
   },
   {
    "id": "s2-upa",
-   "start": 9.342,
-   "duration": 15.859,
+   "start": 8.49,
+   "duration": 13.85,
    "voice": "assets/voice/s2-upa.wav",
    "voiceStart": 0.15,
-   "speech": 15.259,
+   "speech": 13.3,
    "cues": {
-    "name": 0.941,
-    "best": 2.015,
-    "really": 5.933,
-    "h": 7.193,
-    "calm": 9.907,
-    "wink": 14.513
+    "name": 0.862,
+    "best": 1.929,
+    "really": 4.989,
+    "h": 5.63,
+    "calm": 8.255,
+    "wink": 12.58
    },
    "words": [
     {
      "text": "In",
      "start": 0.15,
-     "end": 0.376
+     "end": 0.292
     },
     {
      "text": "defence:",
-     "start": 0.376,
-     "end": 0.941
+     "start": 0.292,
+     "end": 0.862
     },
     {
      "text": "Dayot",
-     "start": 0.941,
-     "end": 1.337
+     "start": 0.862,
+     "end": 1.255
     },
     {
      "text": "Upamecano.",
-     "start": 1.337,
-     "end": 2.015
+     "start": 1.255,
+     "end": 1.929
     },
     {
      "text": "One",
-     "start": 2.015,
-     "end": 2.298
+     "start": 1.929,
+     "end": 2.143
     },
     {
      "text": "of",
-     "start": 2.298,
-     "end": 2.524
+     "start": 2.143,
+     "end": 2.285
     },
     {
      "text": "the",
-     "start": 2.524,
-     "end": 2.807
+     "start": 2.285,
+     "end": 2.499
     },
     {
      "text": "best",
-     "start": 2.807,
-     "end": 3.146
+     "start": 2.499,
+     "end": 2.783
     },
     {
      "text": "centre",
-     "start": 3.146,
-     "end": 3.598
+     "start": 2.783,
+     "end": 3.238
     },
     {
      "text": "backs",
-     "start": 3.598,
-     "end": 3.994
+     "start": 3.238,
+     "end": 3.637
     },
     {
      "text": "in",
-     "start": 3.994,
-     "end": 4.22
+     "start": 3.637,
+     "end": 3.78
     },
     {
      "text": "the",
-     "start": 4.22,
-     "end": 4.502
+     "start": 3.78,
+     "end": 3.993
     },
     {
      "text": "world",
-     "start": 4.502,
-     "end": 4.898
+     "start": 3.993,
+     "end": 4.349
     },
     {
      "text": "right",
-     "start": 4.898,
-     "end": 5.294
+     "start": 4.349,
+     "end": 4.705
     },
     {
      "text": "now.",
-     "start": 5.294,
-     "end": 5.633
+     "start": 4.705,
+     "end": 4.989
     },
     {
      "text": "Genuinely.",
-     "start": 5.933,
-     "end": 6.893
+     "start": 4.989,
+     "end": 5.63
     },
     {
      "text": "1.86",
-     "start": 7.193,
-     "end": 7.58
+     "start": 5.63,
+     "end": 5.958
     },
     {
      "text": "metres",
-     "start": 7.58,
-     "end": 8.097
+     "start": 5.958,
+     "end": 6.45
     },
     {
      "text": "of",
-     "start": 8.097,
-     "end": 8.356
+     "start": 6.45,
+     "end": 6.614
     },
     {
      "text": "French",
-     "start": 8.356,
-     "end": 8.873
+     "start": 6.614,
+     "end": 7.106
     },
     {
      "text": "international.",
-     "start": 8.873,
-     "end": 9.907
+     "start": 7.106,
+     "end": 8.255
     },
     {
      "text": "Famous",
-     "start": 9.907,
-     "end": 10.423
+     "start": 8.255,
+     "end": 8.747
     },
     {
      "text": "for",
-     "start": 10.423,
-     "end": 10.747
+     "start": 8.747,
+     "end": 8.993
     },
     {
      "text": "his",
-     "start": 10.747,
-     "end": 11.07
+     "start": 8.993,
+     "end": 9.239
     },
     {
      "text": "calm,",
-     "start": 11.07,
-     "end": 11.522
+     "start": 9.239,
+     "end": 9.649
     },
     {
      "text": "completely",
-     "start": 11.522,
-     "end": 12.297
+     "start": 9.649,
+     "end": 10.469
     },
     {
      "text": "error",
-     "start": 12.297,
-     "end": 12.75
+     "start": 10.469,
+     "end": 10.911
     },
     {
      "text": "free",
-     "start": 12.75,
-     "end": 13.137
+     "start": 10.911,
+     "end": 11.29
     },
     {
      "text": "defending.",
-     "start": 13.137,
-     "end": 13.913
+     "start": 11.29,
+     "end": 12.11
     },
     {
      "text": "Mostly.",
-     "start": 14.513,
-     "end": 15.409
+     "start": 12.58,
+     "end": 13.38
     }
    ],
    "sfx": []
   },
   {
    "id": "s3-army",
-   "start": 25.201,
-   "duration": 14.853,
+   "start": 22.34,
+   "duration": 12.78,
    "voice": "assets/voice/s3-army.wav",
    "voiceStart": 0.15,
-   "speech": 14.253,
+   "speech": 12.23,
    "cues": {
-    "name": 0.921,
-    "men": 2.817,
-    "tanks": 4.892,
-    "mag": 7.618,
-    "around": 10.349,
-    "ard": 13.102
+    "name": 1.03,
+    "men": 3.181,
+    "tanks": 5.43,
+    "mag": 7.19,
+    "around": 9.094,
+    "ard": 11.063
    },
    "words": [
     {
      "text": "In",
      "start": 0.15,
-     "end": 0.387
+     "end": 0.346
     },
     {
      "text": "attack:",
-     "start": 0.387,
-     "end": 0.921
+     "start": 0.346,
+     "end": 1.03
     },
     {
      "text": "the",
-     "start": 0.921,
-     "end": 1.217
+     "start": 1.03,
+     "end": 1.323
     },
     {
      "text": "German",
-     "start": 1.217,
-     "end": 1.691
+     "start": 1.323,
+     "end": 1.91
     },
     {
      "text": "army,",
-     "start": 1.691,
-     "end": 2.106
+     "start": 1.91,
+     "end": 2.399
     },
     {
      "text": "May",
-     "start": 2.106,
-     "end": 2.402
+     "start": 2.399,
+     "end": 2.692
     },
     {
      "text": "1940.",
-     "start": 2.402,
-     "end": 2.817
+     "start": 2.692,
+     "end": 3.181
     },
     {
      "text": "Around",
-     "start": 2.817,
-     "end": 3.291
+     "start": 3.181,
+     "end": 3.768
     },
     {
      "text": "three",
-     "start": 3.291,
-     "end": 3.706
+     "start": 3.768,
+     "end": 3.866
     },
     {
      "text": "million",
-     "start": 3.706,
-     "end": 4.24
+     "start": 3.866,
+     "end": 4.55
     },
     {
      "text": "soldiers.",
-     "start": 4.24,
-     "end": 4.892
+     "start": 4.55,
+     "end": 5.43
     },
     {
      "text": "Roughly",
-     "start": 4.892,
-     "end": 5.425
+     "start": 5.43,
+     "end": 6.114
     },
     {
      "text": "two",
-     "start": 5.425,
-     "end": 5.722
+     "start": 6.114,
+     "end": 6.198
     },
     {
      "text": "and",
-     "start": 5.722,
-     "end": 6.018
+     "start": 6.198,
+     "end": 6.283
     },
     {
      "text": "a",
-     "start": 6.018,
-     "end": 6.196
+     "start": 6.283,
+     "end": 6.333
     },
     {
      "text": "half",
-     "start": 6.196,
-     "end": 6.552
+     "start": 6.333,
+     "end": 6.434
     },
     {
      "text": "thousand",
-     "start": 6.552,
-     "end": 7.144
+     "start": 6.434,
+     "end": 6.603
     },
     {
      "text": "tanks.",
-     "start": 7.144,
-     "end": 7.618
+     "start": 6.603,
+     "end": 7.19
     },
     {
      "text": "France",
-     "start": 7.618,
-     "end": 8.093
+     "start": 7.19,
+     "end": 7.584
     },
     {
      "text": "had",
-     "start": 8.093,
-     "end": 8.389
+     "start": 7.584,
+     "end": 7.781
     },
     {
      "text": "built",
-     "start": 8.389,
-     "end": 8.804
+     "start": 7.781,
+     "end": 8.109
     },
     {
      "text": "the",
-     "start": 8.804,
-     "end": 9.1
+     "start": 8.109,
+     "end": 8.306
     },
     {
      "text": "Maginot",
-     "start": 9.1,
-     "end": 9.634
+     "start": 8.306,
+     "end": 8.765
     },
     {
      "text": "Line.",
-     "start": 9.634,
-     "end": 10.049
+     "start": 8.765,
+     "end": 9.094
     },
     {
      "text": "So",
-     "start": 10.349,
-     "end": 10.567
+     "start": 9.094,
+     "end": 9.225
     },
     {
      "text": "the",
-     "start": 10.567,
-     "end": 10.839
+     "start": 9.225,
+     "end": 9.422
     },
     {
      "text": "Germans",
-     "start": 10.839,
-     "end": 11.33
+     "start": 9.422,
+     "end": 9.881
     },
     {
      "text": "simply",
-     "start": 11.33,
-     "end": 11.766
+     "start": 9.881,
+     "end": 10.275
     },
     {
      "text": "went",
-     "start": 11.766,
-     "end": 12.093
+     "start": 10.275,
+     "end": 10.538
     },
     {
      "text": "around",
-     "start": 12.093,
-     "end": 12.529
+     "start": 10.538,
+     "end": 10.932
     },
     {
      "text": "it.",
-     "start": 12.529,
-     "end": 12.802
+     "start": 10.932,
+     "end": 11.063
     },
     {
      "text": "Through",
-     "start": 13.102,
-     "end": 13.57
+     "start": 11.063,
+     "end": 11.522
     },
     {
      "text": "the",
-     "start": 13.57,
-     "end": 13.831
+     "start": 11.522,
+     "end": 11.719
     },
     {
      "text": "Ardennes.",
-     "start": 13.831,
-     "end": 14.403
+     "start": 11.719,
+     "end": 12.38
     }
    ],
    "sfx": []
   },
   {
    "id": "s4-space",
-   "start": 40.054,
-   "duration": 14.121,
+   "start": 35.12,
+   "duration": 12.268,
    "voice": "assets/voice/s4-space.wav",
    "voiceStart": 0.15,
-   "speech": 13.521,
+   "speech": 11.718,
    "cues": {
-    "t": 0.877,
-    "space": 1.938,
-    "loves": 4.418,
-    "line": 5.97,
-    "shift": 8.059,
-    "none": 11.026
+    "t": 0.841,
+    "space": 1.992,
+    "loves": 3.91,
+    "line": 5.456,
+    "shift": 7.234,
+    "none": 9.63
    },
    "words": [
     {
      "text": "Phase",
      "start": 0.15,
-     "end": 0.541
+     "end": 0.534
     },
     {
      "text": "one.",
-     "start": 0.541,
-     "end": 0.877
+     "start": 0.534,
+     "end": 0.841
     },
     {
      "text": "Space",
-     "start": 0.877,
-     "end": 1.268
+     "start": 0.841,
+     "end": 1.224
     },
     {
      "text": "defending.",
-     "start": 1.268,
-     "end": 1.938
+     "start": 1.224,
+     "end": 1.992
     },
     {
      "text": "The",
-     "start": 1.938,
-     "end": 2.218
+     "start": 1.992,
+     "end": 2.222
     },
     {
      "text": "Ardennes",
-     "start": 2.218,
-     "end": 2.777
+     "start": 2.222,
+     "end": 2.836
     },
     {
      "text": "is",
-     "start": 2.777,
-     "end": 3.0
+     "start": 2.836,
+     "end": 2.989
     },
     {
      "text": "a",
-     "start": 3.0,
-     "end": 3.168
+     "start": 2.989,
+     "end": 3.066
     },
     {
      "text": "lot",
-     "start": 3.168,
-     "end": 3.447
+     "start": 3.066,
+     "end": 3.296
     },
     {
      "text": "of",
-     "start": 3.447,
-     "end": 3.671
+     "start": 3.296,
+     "end": 3.45
     },
     {
      "text": "space.",
-     "start": 3.671,
-     "end": 4.118
+     "start": 3.45,
+     "end": 3.91
     },
     {
      "text": "Upamecano",
-     "start": 4.418,
-     "end": 5.075
+     "start": 3.91,
+     "end": 4.606
     },
     {
      "text": "loves",
-     "start": 5.075,
-     "end": 5.492
+     "start": 4.606,
+     "end": 4.992
     },
     {
      "text": "space.",
-     "start": 5.492,
-     "end": 5.97
+     "start": 4.992,
+     "end": 5.456
     },
     {
      "text": "He",
-     "start": 5.97,
-     "end": 6.209
+     "start": 5.456,
+     "end": 5.611
     },
     {
      "text": "holds",
-     "start": 6.209,
-     "end": 6.627
+     "start": 5.611,
+     "end": 5.997
     },
     {
      "text": "a",
-     "start": 6.627,
-     "end": 6.806
+     "start": 5.997,
+     "end": 6.074
     },
     {
      "text": "perfect",
-     "start": 6.806,
-     "end": 7.343
+     "start": 6.074,
+     "end": 6.615
     },
     {
      "text": "high",
-     "start": 7.343,
-     "end": 7.701
+     "start": 6.615,
+     "end": 6.925
     },
     {
      "text": "line",
-     "start": 7.701,
-     "end": 8.059
+     "start": 6.925,
+     "end": 7.234
     },
     {
      "text": "and",
-     "start": 8.059,
-     "end": 8.358
+     "start": 7.234,
+     "end": 7.466
     },
     {
      "text": "shifts",
-     "start": 8.358,
-     "end": 8.835
+     "start": 7.466,
+     "end": 7.929
     },
     {
      "text": "across",
-     "start": 8.835,
-     "end": 9.313
+     "start": 7.929,
+     "end": 8.393
     },
     {
      "text": "the",
-     "start": 9.313,
-     "end": 9.611
+     "start": 8.393,
+     "end": 8.625
     },
     {
      "text": "entire",
-     "start": 9.611,
-     "end": 10.089
+     "start": 8.625,
+     "end": 9.089
     },
     {
      "text": "forest.",
-     "start": 10.089,
-     "end": 10.626
+     "start": 9.089,
+     "end": 9.63
     },
     {
      "text": "Not",
-     "start": 11.026,
-     "end": 11.291
+     "start": 9.63,
+     "end": 9.824
     },
     {
      "text": "one",
-     "start": 11.291,
-     "end": 11.555
+     "start": 9.824,
+     "end": 10.018
     },
     {
      "text": "tank",
-     "start": 11.555,
-     "end": 11.873
+     "start": 10.018,
+     "end": 10.277
     },
     {
      "text": "gets",
-     "start": 11.873,
-     "end": 12.19
+     "start": 10.277,
+     "end": 10.536
     },
     {
      "text": "through",
-     "start": 12.19,
-     "end": 12.666
+     "start": 10.536,
+     "end": 10.989
     },
     {
      "text": "the",
-     "start": 12.666,
-     "end": 12.931
+     "start": 10.989,
+     "end": 11.183
     },
     {
      "text": "half",
-     "start": 12.931,
-     "end": 13.248
+     "start": 11.183,
+     "end": 11.442
     },
     {
      "text": "space.",
-     "start": 13.248,
-     "end": 13.671
+     "start": 11.442,
+     "end": 11.83
     }
    ],
    "sfx": [
@@ -664,179 +664,179 @@
   },
   {
    "id": "s5-tackle",
-   "start": 54.175,
-   "duration": 15.189,
+   "start": 47.388,
+   "duration": 13.289,
    "voice": "assets/voice/s5-tackle.wav",
    "voiceStart": 0.15,
-   "speech": 14.589,
+   "speech": 12.739,
    "cues": {
-    "t": 0.888,
-    "tank": 1.683,
-    "upa": 4.067,
-    "slide": 6.337,
-    "clean": 10.086,
-    "card": 12.457
+    "t": 0.92,
+    "tank": 1.776,
+    "upa": 4.135,
+    "slide": 6.47,
+    "clean": 9.631,
+    "card": 10.671
    },
    "words": [
     {
      "text": "Phase",
      "start": 0.15,
-     "end": 0.547
+     "end": 0.578
     },
     {
      "text": "two.",
-     "start": 0.547,
-     "end": 0.888
+     "start": 0.578,
+     "end": 0.92
     },
     {
      "text": "The",
-     "start": 0.888,
-     "end": 1.172
+     "start": 0.92,
+     "end": 1.177
     },
     {
      "text": "tackle.",
-     "start": 1.172,
-     "end": 1.683
+     "start": 1.177,
+     "end": 1.776
     },
     {
      "text": "A",
-     "start": 1.683,
-     "end": 1.853
+     "start": 1.776,
+     "end": 1.862
     },
     {
      "text": "tank",
-     "start": 1.853,
-     "end": 2.193
+     "start": 1.862,
+     "end": 2.204
     },
     {
      "text": "weighs",
-     "start": 2.193,
-     "end": 2.648
+     "start": 2.204,
+     "end": 2.717
     },
     {
      "text": "around",
-     "start": 2.648,
-     "end": 3.102
+     "start": 2.717,
+     "end": 3.231
     },
     {
      "text": "twenty",
-     "start": 3.102,
-     "end": 3.556
+     "start": 3.231,
+     "end": 3.656
     },
     {
      "text": "tonnes.",
-     "start": 3.556,
-     "end": 4.067
+     "start": 3.656,
+     "end": 4.135
     },
     {
      "text": "Upamecano:",
-     "start": 4.067,
-     "end": 4.748
+     "start": 4.135,
+     "end": 4.773
     },
     {
      "text": "around",
-     "start": 4.748,
-     "end": 5.202
+     "start": 4.773,
+     "end": 5.339
     },
     {
      "text": "ninety",
-     "start": 5.202,
-     "end": 5.656
+     "start": 5.339,
+     "end": 5.527
     },
     {
      "text": "kilograms.",
-     "start": 5.656,
-     "end": 6.337
+     "start": 5.527,
+     "end": 6.47
     },
     {
      "text": "He",
-     "start": 6.337,
-     "end": 6.564
+     "start": 6.47,
+     "end": 6.609
     },
     {
      "text": "goes",
-     "start": 6.564,
-     "end": 6.905
+     "start": 6.609,
+     "end": 6.886
     },
     {
      "text": "in",
-     "start": 6.905,
-     "end": 7.132
+     "start": 6.886,
+     "end": 7.024
     },
     {
      "text": "with",
-     "start": 7.132,
-     "end": 7.472
+     "start": 7.024,
+     "end": 7.301
     },
     {
      "text": "a",
-     "start": 7.472,
-     "end": 7.643
+     "start": 7.301,
+     "end": 7.37
     },
     {
      "text": "perfectly",
-     "start": 7.643,
-     "end": 8.267
+     "start": 7.37,
+     "end": 7.994
     },
     {
      "text": "timed",
-     "start": 8.267,
-     "end": 8.664
+     "start": 7.994,
+     "end": 8.34
     },
     {
      "text": "sliding",
-     "start": 8.664,
-     "end": 9.175
+     "start": 8.34,
+     "end": 8.825
     },
     {
      "text": "tackle.",
-     "start": 9.175,
-     "end": 9.686
+     "start": 8.825,
+     "end": 9.31
     },
     {
      "text": "Clean.",
-     "start": 10.086,
-     "end": 10.854
+     "start": 9.631,
+     "end": 10.031
     },
     {
      "text": "All",
-     "start": 11.054,
-     "end": 11.472
+     "start": 10.031,
+     "end": 10.271
     },
     {
      "text": "ball.",
-     "start": 11.472,
-     "end": 12.057
+     "start": 10.271,
+     "end": 10.671
     },
     {
      "text": "The",
-     "start": 12.457,
-     "end": 12.735
+     "start": 10.671,
+     "end": 10.911
     },
     {
      "text": "tank",
-     "start": 12.735,
-     "end": 13.069
+     "start": 10.911,
+     "end": 11.231
     },
     {
      "text": "is",
-     "start": 13.069,
-     "end": 13.292
+     "start": 11.231,
+     "end": 11.391
     },
     {
      "text": "booked",
-     "start": 13.292,
-     "end": 13.737
+     "start": 11.391,
+     "end": 11.871
     },
     {
      "text": "for",
-     "start": 13.737,
-     "end": 14.016
+     "start": 11.871,
+     "end": 12.111
     },
     {
      "text": "simulation.",
-     "start": 14.016,
-     "end": 14.739
+     "start": 12.111,
+     "end": 12.991
     }
    ],
    "sfx": [
@@ -856,147 +856,147 @@
   },
   {
    "id": "s6-offside",
-   "start": 69.364,
-   "duration": 11.333,
+   "start": 60.677,
+   "duration": 9.87,
    "voice": "assets/voice/s6-offside.wav",
    "voiceStart": 0.15,
-   "speech": 10.733,
+   "speech": 9.32,
    "cues": {
-    "t": 0.958,
-    "step": 2.089,
-    "off": 5.373,
-    "var": 8.643
+    "t": 0.962,
+    "step": 2.07,
+    "off": 4.99,
+    "var": 7.53
    },
    "words": [
     {
      "text": "Phase",
      "start": 0.15,
-     "end": 0.527
+     "end": 0.519
     },
     {
      "text": "three.",
-     "start": 0.527,
-     "end": 0.958
+     "start": 0.519,
+     "end": 0.962
     },
     {
      "text": "The",
-     "start": 0.958,
-     "end": 1.227
+     "start": 0.962,
+     "end": 1.184
     },
     {
      "text": "offside",
-     "start": 1.227,
-     "end": 1.712
+     "start": 1.184,
+     "end": 1.701
     },
     {
      "text": "trap.",
-     "start": 1.712,
-     "end": 2.089
+     "start": 1.701,
+     "end": 2.07
     },
     {
      "text": "On",
-     "start": 2.089,
-     "end": 2.304
+     "start": 2.07,
+     "end": 2.212
     },
     {
      "text": "his",
-     "start": 2.304,
-     "end": 2.573
+     "start": 2.212,
+     "end": 2.426
     },
     {
      "text": "signal,",
-     "start": 2.573,
-     "end": 3.058
+     "start": 2.426,
+     "end": 2.925
     },
     {
      "text": "the",
-     "start": 3.058,
-     "end": 3.327
+     "start": 2.925,
+     "end": 3.138
     },
     {
      "text": "French",
-     "start": 3.327,
-     "end": 3.758
+     "start": 3.138,
+     "end": 3.566
     },
     {
      "text": "defence",
-     "start": 3.758,
-     "end": 4.243
+     "start": 3.566,
+     "end": 4.064
     },
     {
      "text": "steps",
-     "start": 4.243,
-     "end": 4.62
+     "start": 4.064,
+     "end": 4.42
     },
     {
      "text": "up",
-     "start": 4.62,
-     "end": 4.835
+     "start": 4.42,
+     "end": 4.563
     },
     {
      "text": "as",
-     "start": 4.835,
-     "end": 5.05
+     "start": 4.563,
+     "end": 4.705
     },
     {
      "text": "one.",
-     "start": 5.05,
-     "end": 5.373
+     "start": 4.705,
+     "end": 4.99
     },
     {
      "text": "Three",
-     "start": 5.373,
-     "end": 5.75
+     "start": 4.99,
+     "end": 5.387
     },
     {
      "text": "million",
-     "start": 5.75,
-     "end": 6.235
+     "start": 5.387,
+     "end": 5.942
     },
     {
      "text": "soldiers.",
-     "start": 6.235,
-     "end": 6.827
+     "start": 5.942,
+     "end": 6.657
     },
     {
      "text": "All",
-     "start": 7.027,
-     "end": 7.433
+     "start": 6.657,
+     "end": 6.895
     },
     {
      "text": "offside.",
-     "start": 7.433,
-     "end": 8.243
+     "start": 6.895,
+     "end": 7.53
     },
     {
      "text": "The",
-     "start": 8.643,
-     "end": 8.923
+     "start": 7.53,
+     "end": 7.751
     },
     {
      "text": "video",
-     "start": 8.923,
-     "end": 9.315
+     "start": 7.751,
+     "end": 8.119
     },
     {
      "text": "review",
-     "start": 9.315,
-     "end": 9.763
+     "start": 8.119,
+     "end": 8.56
     },
     {
      "text": "takes",
-     "start": 9.763,
-     "end": 10.155
+     "start": 8.56,
+     "end": 8.928
     },
     {
      "text": "six",
-     "start": 10.155,
-     "end": 10.435
+     "start": 8.928,
+     "end": 9.149
     },
     {
      "text": "weeks.",
-     "start": 10.435,
-     "end": 10.883
+     "start": 9.149,
+     "end": 9.59
     }
    ],
    "sfx": [
@@ -1010,276 +1010,276 @@
   },
   {
    "id": "s7-verdict",
-   "start": 80.697,
-   "duration": 23.219,
+   "start": 70.547,
+   "duration": 21.867,
    "voice": "assets/voice/s7-verdict.wav",
    "voiceStart": 0.15,
-   "speech": 22.069,
+   "speech": 20.717,
    "cues": {
-    "q": 0.943,
-    "yes": 4.705,
-    "but": 6.13,
-    "risk": 7.501,
-    "oops": 12.29,
-    "p1": 15.148,
-    "p2": 17.95,
-    "p3": 20.597
+    "q": 0.887,
+    "yes": 4.45,
+    "but": 5.55,
+    "risk": 6.876,
+    "oops": 11.38,
+    "p1": 13.98,
+    "p2": 16.08,
+    "p3": 19.267
    },
    "words": [
     {
      "text": "The",
      "start": 0.15,
-     "end": 0.414
+     "end": 0.371
     },
     {
      "text": "verdict.",
-     "start": 0.414,
-     "end": 0.943
+     "start": 0.371,
+     "end": 0.887
     },
     {
      "text": "Could",
-     "start": 0.943,
-     "end": 1.313
+     "start": 0.887,
+     "end": 1.256
     },
     {
      "text": "Dayot",
-     "start": 1.313,
-     "end": 1.684
+     "start": 1.256,
+     "end": 1.629
     },
     {
      "text": "Upamecano",
-     "start": 1.684,
-     "end": 2.265
+     "start": 1.629,
+     "end": 2.214
     },
     {
      "text": "have",
-     "start": 2.265,
-     "end": 2.583
+     "start": 2.214,
+     "end": 2.509
     },
     {
      "text": "stopped",
-     "start": 2.583,
-     "end": 3.059
+     "start": 2.509,
+     "end": 3.025
     },
     {
      "text": "the",
-     "start": 3.059,
-     "end": 3.323
+     "start": 3.025,
+     "end": 3.246
     },
     {
      "text": "invasion?",
-     "start": 3.323,
-     "end": 3.905
+     "start": 3.246,
+     "end": 3.91
     },
     {
      "text": "Yes.",
-     "start": 4.705,
-     "end": 5.43
+     "start": 4.45,
+     "end": 4.95
     },
     {
      "text": "With",
-     "start": 6.13,
-     "end": 6.459
+     "start": 5.55,
+     "end": 5.862
     },
     {
      "text": "one",
-     "start": 6.459,
-     "end": 6.733
+     "start": 5.862,
+     "end": 6.096
     },
     {
      "text": "small",
-     "start": 6.733,
-     "end": 7.117
+     "start": 6.096,
+     "end": 6.486
     },
     {
      "text": "risk.",
-     "start": 7.117,
-     "end": 7.501
+     "start": 6.486,
+     "end": 6.876
     },
     {
      "text": "At",
-     "start": 7.501,
-     "end": 7.721
+     "start": 6.876,
+     "end": 7.033
     },
     {
      "text": "some",
-     "start": 7.721,
-     "end": 8.05
+     "start": 7.033,
+     "end": 7.345
     },
     {
      "text": "point,",
-     "start": 8.05,
-     "end": 8.489
+     "start": 7.345,
+     "end": 7.813
     },
     {
      "text": "under",
-     "start": 8.489,
-     "end": 8.873
+     "start": 7.813,
+     "end": 8.203
     },
     {
      "text": "no",
-     "start": 8.873,
-     "end": 9.092
+     "start": 8.203,
+     "end": 8.359
     },
     {
      "text": "pressure",
-     "start": 9.092,
-     "end": 9.641
+     "start": 8.359,
+     "end": 8.983
     },
     {
      "text": "at",
-     "start": 9.641,
-     "end": 9.86
+     "start": 8.983,
+     "end": 9.139
     },
     {
      "text": "all,",
-     "start": 9.86,
-     "end": 10.189
+     "start": 9.139,
+     "end": 9.451
     },
     {
      "text": "he",
-     "start": 10.189,
-     "end": 10.409
+     "start": 9.451,
+     "end": 9.607
     },
     {
      "text": "tries",
-     "start": 10.409,
-     "end": 10.793
+     "start": 9.607,
+     "end": 9.998
     },
     {
      "text": "one",
-     "start": 10.793,
-     "end": 11.067
+     "start": 9.998,
+     "end": 10.232
     },
     {
      "text": "simple",
-     "start": 11.067,
-     "end": 11.506
+     "start": 10.232,
+     "end": 10.7
     },
     {
      "text": "pass.",
-     "start": 11.506,
-     "end": 11.89
+     "start": 10.7,
+     "end": 11.09
     },
     {
      "text": "And",
-     "start": 12.29,
-     "end": 12.57
+     "start": 11.38,
+     "end": 11.603
     },
     {
      "text": "the",
-     "start": 12.57,
-     "end": 12.85
+     "start": 11.603,
+     "end": 11.826
     },
     {
      "text": "entire",
-     "start": 12.85,
-     "end": 13.299
+     "start": 11.826,
+     "end": 12.271
     },
     {
      "text": "German",
-     "start": 13.299,
-     "end": 13.747
+     "start": 12.271,
+     "end": 12.717
     },
     {
      "text": "army",
-     "start": 13.747,
-     "end": 14.083
+     "start": 12.717,
+     "end": 13.014
     },
     {
      "text": "walks",
-     "start": 14.083,
-     "end": 14.475
+     "start": 13.014,
+     "end": 13.386
     },
     {
      "text": "past",
-     "start": 14.475,
-     "end": 14.812
+     "start": 13.386,
+     "end": 13.683
     },
     {
      "text": "him.",
-     "start": 14.812,
-     "end": 15.148
+     "start": 13.683,
+     "end": 13.98
     },
     {
      "text": "Chance",
-     "start": 15.148,
-     "end": 15.596
+     "start": 13.98,
+     "end": 14.58
     },
     {
      "text": "he",
-     "start": 15.596,
-     "end": 15.82
+     "start": 14.58,
+     "end": 14.78
     },
     {
      "text": "stops",
-     "start": 15.82,
-     "end": 16.213
+     "start": 14.78,
+     "end": 15.28
     },
     {
      "text": "them:",
-     "start": 16.213,
-     "end": 16.605
+     "start": 15.28,
+     "end": 15.78
     },
     {
      "text": "ninety",
-     "start": 16.605,
-     "end": 17.053
+     "start": 15.78,
+     "end": 15.88
     },
     {
      "text": "nine",
-     "start": 17.053,
-     "end": 17.389
+     "start": 15.88,
+     "end": 15.955
     },
     {
      "text": "percent.",
-     "start": 17.389,
-     "end": 17.95
+     "start": 15.955,
+     "end": 16.08
     },
     {
      "text": "Chance",
-     "start": 17.95,
-     "end": 18.398
+     "start": 16.08,
+     "end": 16.68
     },
     {
      "text": "of",
-     "start": 18.398,
-     "end": 18.622
+     "start": 16.68,
+     "end": 16.88
     },
     {
      "text": "one",
-     "start": 18.622,
-     "end": 18.902
+     "start": 16.88,
+     "end": 17.18
     },
     {
      "text": "famous",
-     "start": 18.902,
-     "end": 19.351
+     "start": 17.18,
+     "end": 17.78
     },
     {
      "text": "easy",
-     "start": 19.351,
-     "end": 19.687
+     "start": 17.78,
+     "end": 18.18
     },
     {
      "text": "mistake:",
-     "start": 19.687,
-     "end": 20.247
+     "start": 18.18,
+     "end": 18.98
     },
     {
      "text": "also",
-     "start": 20.597,
-     "end": 21.061
+     "start": 19.267,
+     "end": 20.181
     },
     {
      "text": "ninety",
-     "start": 21.061,
-     "end": 21.678
+     "start": 20.181,
+     "end": 20.547
     },
     {
      "text": "nine.",
-     "start": 21.678,
-     "end": 22.219
+     "start": 20.547,
+     "end": 20.867
     }
    ],
    "sfx": [
@@ -1299,89 +1299,89 @@
   },
   {
    "id": "s8-outro",
-   "start": 103.916,
-   "duration": 6.763,
+   "start": 92.414,
+   "duration": 6.59,
    "voice": "assets/voice/s8-outro.wav",
    "voiceStart": 0.15,
-   "speech": 5.013,
+   "speech": 4.84,
    "cues": {
-    "c": 3.609
+    "c": 3.47
    },
    "words": [
     {
      "text": "Could",
      "start": 0.15,
-     "end": 0.501
+     "end": 0.489
     },
     {
      "text": "you",
-     "start": 0.501,
-     "end": 0.752
+     "start": 0.489,
+     "end": 0.692
     },
     {
      "text": "imagine",
-     "start": 0.752,
-     "end": 1.203
+     "start": 0.692,
+     "end": 1.166
     },
     {
      "text": "another",
-     "start": 1.203,
-     "end": 1.654
+     "start": 1.166,
+     "end": 1.641
     },
     {
      "text": "scenario",
-     "start": 1.654,
-     "end": 2.155
+     "start": 1.641,
+     "end": 2.183
     },
     {
      "text": "that",
-     "start": 2.155,
-     "end": 2.456
+     "start": 2.183,
+     "end": 2.454
     },
     {
      "text": "we",
-     "start": 2.456,
-     "end": 2.657
+     "start": 2.454,
+     "end": 2.589
     },
     {
      "text": "should",
-     "start": 2.657,
-     "end": 3.058
+     "start": 2.589,
+     "end": 2.996
     },
     {
      "text": "do",
-     "start": 3.058,
-     "end": 3.258
+     "start": 2.996,
+     "end": 3.131
     },
     {
      "text": "next?",
-     "start": 3.258,
-     "end": 3.609
+     "start": 3.131,
+     "end": 3.47
     },
     {
      "text": "Write",
-     "start": 3.609,
-     "end": 3.96
+     "start": 3.47,
+     "end": 3.865
     },
     {
      "text": "it",
-     "start": 3.96,
-     "end": 4.161
+     "start": 3.865,
+     "end": 4.023
     },
     {
      "text": "in",
-     "start": 4.161,
-     "end": 4.361
+     "start": 4.023,
+     "end": 4.181
     },
     {
      "text": "the",
-     "start": 4.361,
-     "end": 4.612
+     "start": 4.181,
+     "end": 4.419
     },
     {
      "text": "comments.",
-     "start": 4.612,
-     "end": 5.163
+     "start": 4.419,
+     "end": 5.13
     }
    ],
    "sfx": []

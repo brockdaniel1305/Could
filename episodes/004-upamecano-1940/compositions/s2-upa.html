@@ -184,8 +184,8 @@
   <script>
     (function () {
       const S = "#s2-upa-";
-      const D = 15.859;
-      const C = {"name": 0.941, "best": 2.015, "really": 5.933, "h": 7.193, "calm": 9.907, "wink": 14.513};
+      const D = 13.85;
+      const C = {"name": 0.862, "best": 1.929, "really": 4.989, "h": 5.63, "calm": 8.255, "wink": 12.58};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s2-upa-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

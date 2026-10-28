@@ -174,8 +174,8 @@
   <script>
     (function () {
       const S = "#s8-outro-";
-      const D = 6.763;
-      const C = {"c": 3.609};
+      const D = 6.59;
+      const C = {"c": 3.47};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s8-outro-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

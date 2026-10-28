@@ -289,8 +289,8 @@
   <script>
     (function () {
       const S = "#s6-offside-";
-      const D = 11.333;
-      const C = {"t": 0.958, "step": 2.089, "off": 5.373, "var": 8.643};
+      const D = 9.87;
+      const C = {"t": 0.962, "step": 2.07, "off": 4.99, "var": 7.53};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s6-offside-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

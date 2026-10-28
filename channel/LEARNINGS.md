@@ -5,6 +5,10 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-28 · 004 · **Der Erzähler darf nicht nach KI klingen:** keine unnötigen Stopps, Namen korrekt aussprechen.
+  → Pausen-Marker `||x||` nur für echte Pointen (vor dem Urteil, vor "Mostly."), sonst durchsprechen lassen.
+  → Jeder Name, den die Stimme falsch sagt, kommt in `channel/pronunciation.json` (gilt für alle Folgen) und wird per
+    tts + transcribe geprüft (die Transkription muss den echten Namen zurückliefern).
 - 2026-10-28 · 004 · Bei Fußballer-Folgen darf (und soll, wenn gewünscht) der Erzähler **stark sarkastisch** loben
   ("one of the best centre backs in the world right now. Genuinely."). Die Karten spielen mit ("SARCASM LEVEL: Genuinely zero", "*mostly").
 - 2026-10-28 · ab 003 · **Jedes Video endet mit dem Satz: "Could you imagine another scenario that we should do next? Write it in the comments."**
@@ -43,6 +47,10 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- `build_episode.py` schneidet die Stille am Anfang und Ende jedes Stimm-Stücks ab und kürzt Satzpausen innerhalb eines Stücks
+  auf ~0.22 s (Kokoro lässt 0.35–0.4 s stehen). Nur `||x||` erzeugt längere Pausen.
+- Die Wort-Zeitstempel von `npx hyperframes transcribe` kommen auf **stderr**. Bis Folge 004 v1 wurden sie deshalb nicht gelesen,
+  und alle Timings waren geschätzt. Seit dem Fix sind Untertitel und Cues wortgenau; 001–003 bei Gelegenheit neu bauen.
 - GSAP-`y`/`x` niemals auf ein `<g>` tweenen, das selbst ein `transform="translate(...)"` trägt: GSAP übernimmt die Verschiebung als x/y
   und ein absolutes `y: 0` springt an den Bildrand. Immer `<g transform=…><g id=…>` verschachteln.
 - `src/build_all.sh` baut nur `s[0-9]*.py`. Hilfsmodule der Folge (z. B. `race.py`, `shot.py`) dürfen also nicht mit `s<Ziffer>` beginnen.

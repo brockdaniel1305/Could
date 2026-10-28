@@ -261,8 +261,8 @@
   <script>
     (function () {
       const S = "#s7-verdict-";
-      const D = 23.219;
-      const C = {"q": 0.943, "yes": 4.705, "but": 6.13, "risk": 7.501, "oops": 12.29, "p1": 15.148, "p2": 17.95, "p3": 20.597};
+      const D = 21.867;
+      const C = {"q": 0.887, "yes": 4.45, "but": 5.55, "risk": 6.876, "oops": 11.38, "p1": 13.98, "p2": 16.08, "p3": 19.267};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s7-verdict-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

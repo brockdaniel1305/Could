@@ -223,8 +223,8 @@
   <script>
     (function () {
       const S = "#s4-space-";
-      const D = 14.121;
-      const C = {"t": 0.877, "space": 1.938, "loves": 4.418, "line": 5.97, "shift": 8.059, "none": 11.026};
+      const D = 12.268;
+      const C = {"t": 0.841, "space": 1.992, "loves": 3.91, "line": 5.456, "shift": 7.234, "none": 9.63};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s4-space-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

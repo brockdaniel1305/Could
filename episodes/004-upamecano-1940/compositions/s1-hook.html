@@ -198,8 +198,8 @@
   <script>
     (function () {
       const S = "#s1-hook-";
-      const D = 9.342;
-      const C = {"ev": 3.948, "sci": 5.819, "long": 7.335};
+      const D = 8.49;
+      const C = {"ev": 3.95, "sci": 5.353, "long": 6.56};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s1-hook-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

@@ -1,0 +1,9 @@
+{
+  "_comment": "How the narrator should SAY words it gets wrong. Applied to the spoken text of every episode by tools/build_episode.py (whole words, case-sensitive). Captions keep the real spelling. Check a new entry with: npx hyperframes tts \"<sentence>\" then npx hyperframes transcribe (it should come back spelled correctly).",
+  "Dayot": "Dah-yot",
+  "Upamecano": "Oopah-mekano",
+  "Maginot": "Mazhee-no",
+  "Ardennes": "Ar-den",
+  "Neuer": "Noyer",
+  "Tyrannosaurus": "Tie-rannosaurus"
+}
