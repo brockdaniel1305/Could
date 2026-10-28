@@ -49,7 +49,9 @@ Jede Szene ist ein kleines Python-Skript mit `from scene import *` (`tools/scene
 3. Nach dem Render (`render --quality looks`): mit `ffprobe` die Dauer prüfen, mit `npx hyperframes audio <mp4> --json` den Ton.
 
 ## 5. Rendern und liefern
-- `npx hyperframes render --quality looks --output renders/<ep>.mp4` (dauert in der Cloud-Sandbox mehrere Minuten, im Hintergrund laufen lassen).
+- `npx hyperframes render --quality looks --output renders/<ep>.mp4` (dauert in der Cloud-Sandbox etwa 6 Minuten, im Hintergrund laufen lassen).
+- Lautheit auf Social-Niveau bringen: `ffmpeg -i renders/<ep>.mp4 -c:v copy -af loudnorm=I=-15:TP=-1.5:LRA=11 -c:a aac -b:a 192k -movflags +faststart renders/<ep>-final.mp4`
+  und mit `npx hyperframes audio … --json` nachmessen (Ziel −16 bis −14 LUFS).
 - Dem Creator schicken: Video, Caption mit Hashtags und eine Kurzfassung von `REVIEW.md` (was gemessen wurde und was nicht, die schwächste Stelle).
 - `channel/IDEAS.md`: Status der Folge auf ✅ setzen, neue Ideen aus dem Gespräch ergänzen.
 - Committen und auf den Arbeitsbranch pushen. Videos, Stimmen und Builds sind per `.gitignore` ausgeschlossen.
