@@ -5,8 +5,8 @@ import math  # noqa: E402
 sid = "s8-outro"
 D = TIMING[sid]["duration"]
 w = world(sid) + ball(sid)
-cards = (banner(sid, "b", "NEXT CASE", "Who should we<br>send next?", 60, 330)
-         + card(sid, "c", "COMMENT YOUR MATCHUP", "↓ ↓ ↓", 520, 620, "gold"))
+cards = (banner(sid, "b", "NEXT CASE", "Could you imagine<br>another scenario?", 50, 330)
+         + card(sid, "c", "WRITE IT IN THE COMMENTS", "↓ ↓ ↓", 330, 1010, "gold"))
 js = """
       fly("b", 0.05, null, { from: "top" });
       fly("c", C.c, null, { from: "right" });

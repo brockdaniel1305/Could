@@ -19,7 +19,7 @@ Absurde Frage + seriöse Fakten + streng "rationale" Rechnung = Lacher. Der Erz�
 | 5 | `s5-…` PLAN B | Überraschend fast plausibel | Fast-Erfolg, Countdown o. ä. | 15–18 s |
 | 6 | `s6-…` PLAN C | Komplett absurd | Eskalation | 13–16 s |
 | 7 | `s7-verdict` | Frage wiederholen → Pause → "No." / "Yes." / "Technically." → Trostpreis → zwei Prozentwerte | Roter Stempel knallt aufs Bild | 14–17 s |
-| 8 | `s8-outro` | "Who should we send next? Tell us in the comments." | Figuren winken | 4–5 s |
+| 8 | `s8-outro` | **Immer:** "Could you imagine another scenario that we should do next? Write it in the comments." | Figuren winken / laufen weiter, Banner + Kommentar-Karte | 6–7 s |
 
 Ziel-Länge: **90–115 s** (über 60 s = Creator-Rewards-fähig).
 

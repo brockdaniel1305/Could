@@ -1,5 +1,5 @@
 {
- "duration": 101.461,
+ "duration": 103.765,
  "voice": "kokoro:bm_george",
  "scenes": [
   {
@@ -1322,63 +1322,88 @@
   {
    "id": "s8-outro",
    "start": 97.002,
-   "duration": 4.459,
+   "duration": 6.763,
    "voice": "assets/voice/s8-outro.wav",
    "voiceStart": 0.15,
-   "speech": 2.709,
+   "speech": 5.013,
    "cues": {
-    "c": 1.505
+    "c": 3.609
    },
    "words": [
     {
-     "text": "Who",
+     "text": "Could",
      "start": 0.15,
-     "end": 0.376
+     "end": 0.501
     },
     {
-     "text": "should",
-     "start": 0.376,
-     "end": 0.737
+     "text": "you",
+     "start": 0.501,
+     "end": 0.752
+    },
+    {
+     "text": "imagine",
+     "start": 0.752,
+     "end": 1.203
+    },
+    {
+     "text": "another",
+     "start": 1.203,
+     "end": 1.654
+    },
+    {
+     "text": "scenario",
+     "start": 1.654,
+     "end": 2.155
+    },
+    {
+     "text": "that",
+     "start": 2.155,
+     "end": 2.456
     },
     {
      "text": "we",
-     "start": 0.737,
-     "end": 0.918
+     "start": 2.456,
+     "end": 2.657
     },
     {
-     "text": "send",
-     "start": 0.918,
-     "end": 1.189
+     "text": "should",
+     "start": 2.657,
+     "end": 3.058
+    },
+    {
+     "text": "do",
+     "start": 3.058,
+     "end": 3.258
     },
     {
      "text": "next?",
-     "start": 1.189,
-     "end": 1.505
+     "start": 3.258,
+     "end": 3.609
     },
     {
-     "text": "Tell",
-     "start": 1.505,
-     "end": 1.776
+     "text": "Write",
+     "start": 3.609,
+     "end": 3.96
     },
     {
-     "text": "us",
-     "start": 1.776,
-     "end": 1.956
+     "text": "it",
+     "start": 3.96,
+     "end": 4.161
     },
     {
      "text": "in",
-     "start": 1.956,
-     "end": 2.137
+     "start": 4.161,
+     "end": 4.361
     },
     {
      "text": "the",
-     "start": 2.137,
-     "end": 2.363
+     "start": 4.361,
+     "end": 4.612
     },
     {
      "text": "comments.",
-     "start": 2.363,
-     "end": 2.859
+     "start": 4.612,
+     "end": 5.163
     }
    ],
    "sfx": []

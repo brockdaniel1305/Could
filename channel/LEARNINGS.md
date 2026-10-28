@@ -5,6 +5,8 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-28 · ab 003 · **Jedes Video endet mit dem Satz: "Could you imagine another scenario that we should do next? Write it in the comments."**
+  Outro-Banner: NEXT CASE / "Could you imagine another scenario?", Karte: WRITE IT IN THE COMMENTS ↓ ↓ ↓.
 - 2026-10-28 · 002 · "perfekt, genau so müssen die Videos aussehen": 002 (Bolt vs T-Rex) ist zusammen mit 001 v2 die Referenz.
   Gedankenexperimente "im gleichen lustigen Stil" erzählen: Headline → beide vorstellen → drei Anläufe/Abschnitte mit Stats → Urteil.
 - 2026-10-28 · 001 · **Der Stil von 001 v2 ist "perfekt" und gilt als Referenz für alle Folgen**: Vollbild-Cartoon, fliegende Fakten-Karten,

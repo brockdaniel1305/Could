@@ -27,6 +27,7 @@ Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `provi
   `build_episode.py` ab: dann nicht still auf Kokoro wechseln, sondern dem Creator sagen, dass er den Build lokal startet,
   oder mit `"provider": "kokoro"`, `"voice": "bm_george"` eine Vorschau bauen und das klar sagen.
 - Szenenfolge und Längen laut FORMAT.md (8 Szenen, 90–115 s).
+- Letzte Szene `s8-outro` immer mit genau diesem Text: `Could you imagine another scenario that we should do next? {{c}}Write it in the comments.`
 - Markup: `{shown|spoken}`, `{{cue}}` vor jedem Wort, auf dem etwas passieren soll, `||0.6||` für Kunstpausen.
 - `sfx`: `{"name", "cue", "offset", "volume"}` aus `.claude/skills/media-use/audio/assets/sfx/manifest.json`.
   `offset` so wählen, dass die Spitze des Sounds 1 Frame nach dem Bild liegt (Spitzen: `npx hyperframes audio <file> --json`).
