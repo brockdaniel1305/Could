@@ -33,6 +33,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 005 · Running Gags aus dem echten Leben der Person tragen eine ganze Folge (Haalands Meditations-Jubel als Lösung gegen den Löwen,
+  "in the back of the net" gegen den Retiarius). Ein Stimmungs-Barometer (Daumen runter/hoch) füllt die untere Hälfte.
 - 004 · Historische Kriege/NS-Zeit: nie Hitler als Figur, nie NS-Symbole oder Abzeichen (§ 86a StGB, TikTok-Richtlinien), Panzer neutral grau.
   Der Witz zielt nur auf den "Helden" der Folge. Den Creator vorher kurz auf das Reichweiten-Risiko solcher Titel hinweisen.
 - 003 · Physik-Gags gewinnen, wenn das Bild maßstabsgetreu ist (100 px/m, Höhenlineal am Rand) und die Bahnen echt gerechnet werden
@@ -47,6 +49,7 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- `svgOrigin` nicht für Elemente in verschachtelten, verschobenen Gruppen verwenden (Zeiger flog aus dem Bild). Besser `transformOrigin: "50% 100%"`.
 - `build_episode.py` schneidet die Stille am Anfang und Ende jedes Stimm-Stücks ab und kürzt Satzpausen innerhalb eines Stücks
   auf ~0.22 s (Kokoro lässt 0.35–0.4 s stehen). Nur `||x||` erzeugt längere Pausen.
 - Die Wort-Zeitstempel von `npx hyperframes transcribe` kommen auf **stderr**. Bis Folge 004 v1 wurden sie deshalb nicht gelesen,

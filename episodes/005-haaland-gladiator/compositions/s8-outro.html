@@ -1,0 +1,228 @@
+<template>
+  <!-- COULD? scene s8-outro · full-frame cartoon + flying fact cards. Source: src/s8.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+  </style>
+  <div id="root" data-composition-id="s8-outro" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s8-outro-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s8-outro-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s8-outro-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s8-outro-boil)">
+<!-- Inside the Colosseum, full frame 1080x1920: sky with awning, three tiers of arches with spectators, sand arena from y=1150.
+     Below the fighters: sand with rake lines and the arena wall shadow. s8-outro-col-crowd (wave: y). -->
+<g id="s8-outro-col">
+  <rect x="0" y="0" width="1080" height="1920" fill="#f3c98b" />
+  <path d="M0,0 L1080,0 L1080,170 Q540,260 0,170 Z" fill="#e8d7b5" stroke="#1a1a2e" stroke-width="5" />
+  <path d="M0,170 Q540,260 1080,170" fill="none" stroke="#b8352a" stroke-width="14" />
+  <rect x="0" y="520" width="1080" height="420" fill="#d8b88a" stroke="#1a1a2e" stroke-width="5" />
+  <g id="s8-outro-col-crowd"><path d="M20,680 L20,600 Q65.0,554 110,600 L110,680 Z" fill="#5a4636" /><circle cx="38" cy="652" r="9" fill="#f4efe6" /><circle cx="65" cy="650" r="9" fill="#e0412f" /><circle cx="92" cy="660" r="9" fill="#8a5a24" /><path d="M118,680 L118,600 Q163.0,554 208,600 L208,680 Z" fill="#5a4636" /><circle cx="136" cy="659" r="9" fill="#ffd23f" /><circle cx="163" cy="644" r="9" fill="#e0412f" /><circle cx="190" cy="646" r="9" fill="#f4efe6" /><path d="M216,680 L216,600 Q261.0,554 306,600 L306,680 Z" fill="#5a4636" /><circle cx="234" cy="661" r="9" fill="#e0412f" /><circle cx="261" cy="649" r="9" fill="#4f7cff" /><circle cx="288" cy="660" r="9" fill="#f4efe6" /><path d="M314,680 L314,600 Q359.0,554 404,600 L404,680 Z" fill="#5a4636" /><circle cx="332" cy="660" r="9" fill="#8a5a24" /><circle cx="359" cy="649" r="9" fill="#e0412f" /><circle cx="386" cy="644" r="9" fill="#e0412f" /><path d="M412,680 L412,600 Q457.0,554 502,600 L502,680 Z" fill="#5a4636" /><circle cx="430" cy="655" r="9" fill="#8a5a24" /><circle cx="457" cy="661" r="9" fill="#8a5a24" /><circle cx="484" cy="644" r="9" fill="#4f7cff" /><path d="M510,680 L510,600 Q555.0,554 600,600 L600,680 Z" fill="#5a4636" /><circle cx="528" cy="661" r="9" fill="#f4efe6" /><circle cx="555" cy="661" r="9" fill="#8a5a24" /><circle cx="582" cy="658" r="9" fill="#ffd23f" /><path d="M608,680 L608,600 Q653.0,554 698,600 L698,680 Z" fill="#5a4636" /><circle cx="626" cy="649" r="9" fill="#f4efe6" /><circle cx="653" cy="645" r="9" fill="#e0412f" /><circle cx="680" cy="644" r="9" fill="#ffd23f" /><path d="M706,680 L706,600 Q751.0,554 796,600 L796,680 Z" fill="#5a4636" /><circle cx="724" cy="645" r="9" fill="#f4efe6" /><circle cx="751" cy="659" r="9" fill="#8a5a24" /><circle cx="778" cy="644" r="9" fill="#f4efe6" /><path d="M804,680 L804,600 Q849.0,554 894,600 L894,680 Z" fill="#5a4636" /><circle cx="822" cy="651" r="9" fill="#e0412f" /><circle cx="849" cy="645" r="9" fill="#e0412f" /><circle cx="876" cy="644" r="9" fill="#e0412f" /><path d="M902,680 L902,600 Q947.0,554 992,600 L992,680 Z" fill="#5a4636" /><circle cx="920" cy="643" r="9" fill="#f4efe6" /><circle cx="947" cy="647" r="9" fill="#8a5a24" /><circle cx="974" cy="649" r="9" fill="#ffd23f" /><path d="M1000,680 L1000,600 Q1045.0,554 1090,600 L1090,680 Z" fill="#5a4636" /><circle cx="1018" cy="648" r="9" fill="#8a5a24" /><circle cx="1045" cy="648" r="9" fill="#ffd23f" /><circle cx="1072" cy="653" r="9" fill="#f4efe6" /><path d="M30,800 L30,730 Q75.0,684 120,730 L120,800 Z" fill="#5a4636" /><circle cx="48" cy="777" r="9" fill="#f4efe6" /><circle cx="75" cy="780" r="9" fill="#8a5a24" /><circle cx="102" cy="773" r="9" fill="#8a5a24" /><path d="M128,800 L128,730 Q173.0,684 218,730 L218,800 Z" fill="#5a4636" /><circle cx="146" cy="767" r="9" fill="#ffd23f" /><circle cx="173" cy="768" r="9" fill="#ffd23f" /><circle cx="200" cy="763" r="9" fill="#e0412f" /><path d="M226,800 L226,730 Q271.0,684 316,730 L316,800 Z" fill="#5a4636" /><circle cx="244" cy="779" r="9" fill="#8a5a24" /><circle cx="271" cy="769" r="9" fill="#f4efe6" /><circle cx="298" cy="772" r="9" fill="#f4efe6" /><path d="M324,800 L324,730 Q369.0,684 414,730 L414,800 Z" fill="#5a4636" /><circle cx="342" cy="767" r="9" fill="#4f7cff" /><circle cx="369" cy="781" r="9" fill="#e0412f" /><circle cx="396" cy="765" r="9" fill="#8a5a24" /><path d="M422,800 L422,730 Q467.0,684 512,730 L512,800 Z" fill="#5a4636" /><circle cx="440" cy="772" r="9" fill="#ffd23f" /><circle cx="467" cy="771" r="9" fill="#8a5a24" /><circle cx="494" cy="767" r="9" fill="#8a5a24" /><path d="M520,800 L520,730 Q565.0,684 610,730 L610,800 Z" fill="#5a4636" /><circle cx="538" cy="768" r="9" fill="#e0412f" /><circle cx="565" cy="780" r="9" fill="#ffd23f" /><circle cx="592" cy="767" r="9" fill="#e0412f" /><path d="M618,800 L618,730 Q663.0,684 708,730 L708,800 Z" fill="#5a4636" /><circle cx="636" cy="781" r="9" fill="#ffd23f" /><circle cx="663" cy="762" r="9" fill="#8a5a24" /><circle cx="690" cy="768" r="9" fill="#ffd23f" /><path d="M716,800 L716,730 Q761.0,684 806,730 L806,800 Z" fill="#5a4636" /><circle cx="734" cy="770" r="9" fill="#ffd23f" /><circle cx="761" cy="782" r="9" fill="#4f7cff" /><circle cx="788" cy="771" r="9" fill="#f4efe6" /><path d="M814,800 L814,730 Q859.0,684 904,730 L904,800 Z" fill="#5a4636" /><circle cx="832" cy="763" r="9" fill="#e0412f" /><circle cx="859" cy="767" r="9" fill="#e0412f" /><circle cx="886" cy="776" r="9" fill="#ffd23f" /><path d="M912,800 L912,730 Q957.0,684 1002,730 L1002,800 Z" fill="#5a4636" /><circle cx="930" cy="778" r="9" fill="#f4efe6" /><circle cx="957" cy="770" r="9" fill="#4f7cff" /><circle cx="984" cy="767" r="9" fill="#e0412f" /><path d="M1010,800 L1010,730 Q1055.0,684 1100,730 L1100,800 Z" fill="#5a4636" /><circle cx="1028" cy="777" r="9" fill="#4f7cff" /><circle cx="1055" cy="770" r="9" fill="#8a5a24" /><circle cx="1082" cy="774" r="9" fill="#f4efe6" /><path d="M20,910 L20,850 Q65.0,804 110,850 L110,910 Z" fill="#5a4636" /><circle cx="38" cy="879" r="9" fill="#8a5a24" /><circle cx="65" cy="884" r="9" fill="#4f7cff" /><circle cx="92" cy="881" r="9" fill="#4f7cff" /><path d="M118,910 L118,850 Q163.0,804 208,850 L208,910 Z" fill="#5a4636" /><circle cx="136" cy="885" r="9" fill="#f4efe6" /><circle cx="163" cy="890" r="9" fill="#f4efe6" /><circle cx="190" cy="888" r="9" fill="#f4efe6" /><path d="M216,910 L216,850 Q261.0,804 306,850 L306,910 Z" fill="#5a4636" /><circle cx="234" cy="885" r="9" fill="#e0412f" /><circle cx="261" cy="877" r="9" fill="#8a5a24" /><circle cx="288" cy="887" r="9" fill="#ffd23f" /><path d="M314,910 L314,850 Q359.0,804 404,850 L404,910 Z" fill="#5a4636" /><circle cx="332" cy="883" r="9" fill="#e0412f" /><circle cx="359" cy="888" r="9" fill="#4f7cff" /><circle cx="386" cy="875" r="9" fill="#ffd23f" /><path d="M412,910 L412,850 Q457.0,804 502,850 L502,910 Z" fill="#5a4636" /><circle cx="430" cy="873" r="9" fill="#8a5a24" /><circle cx="457" cy="882" r="9" fill="#f4efe6" /><circle cx="484" cy="876" r="9" fill="#8a5a24" /><path d="M510,910 L510,850 Q555.0,804 600,850 L600,910 Z" fill="#5a4636" /><circle cx="528" cy="872" r="9" fill="#e0412f" /><circle cx="555" cy="878" r="9" fill="#8a5a24" /><circle cx="582" cy="880" r="9" fill="#4f7cff" /><path d="M608,910 L608,850 Q653.0,804 698,850 L698,910 Z" fill="#5a4636" /><circle cx="626" cy="880" r="9" fill="#4f7cff" /><circle cx="653" cy="889" r="9" fill="#4f7cff" /><circle cx="680" cy="872" r="9" fill="#4f7cff" /><path d="M706,910 L706,850 Q751.0,804 796,850 L796,910 Z" fill="#5a4636" /><circle cx="724" cy="891" r="9" fill="#f4efe6" /><circle cx="751" cy="890" r="9" fill="#f4efe6" /><circle cx="778" cy="878" r="9" fill="#f4efe6" /><path d="M804,910 L804,850 Q849.0,804 894,850 L894,910 Z" fill="#5a4636" /><circle cx="822" cy="889" r="9" fill="#ffd23f" /><circle cx="849" cy="873" r="9" fill="#e0412f" /><circle cx="876" cy="889" r="9" fill="#e0412f" /><path d="M902,910 L902,850 Q947.0,804 992,850 L992,910 Z" fill="#5a4636" /><circle cx="920" cy="874" r="9" fill="#f4efe6" /><circle cx="947" cy="875" r="9" fill="#e0412f" /><circle cx="974" cy="881" r="9" fill="#8a5a24" /><path d="M1000,910 L1000,850 Q1045.0,804 1090,850 L1090,910 Z" fill="#5a4636" /><circle cx="1018" cy="892" r="9" fill="#e0412f" /><circle cx="1045" cy="886" r="9" fill="#8a5a24" /><circle cx="1072" cy="880" r="9" fill="#f4efe6" /></g>
+  <path d="M0,550 L1080,550 M0,680 L1080,680 M0,800 L1080,800" stroke="#a9875d" stroke-width="10" />
+  <rect x="0" y="910" width="1080" height="40" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" />
+  <rect x="0" y="950" width="1080" height="970" fill="#e9c78f" />
+  <g stroke="#d9b277" stroke-width="5" fill="none"><path d="M0,1350 Q540,1380 1080,1350" /><path d="M0,1420 Q540,1450 1080,1420" /><path d="M0,1490 Q540,1520 1080,1490" /><path d="M0,1560 Q540,1590 1080,1560" /><path d="M0,1630 Q540,1660 1080,1630" /><path d="M0,1700 Q540,1730 1080,1700" /><path d="M0,1770 Q540,1800 1080,1770" /><path d="M0,1840 Q540,1870 1080,1840" /><path d="M0,1910 Q540,1940 1080,1910" /></g>
+  <path d="M0,1150 L1080,1150" stroke="#cfa868" stroke-width="5" opacity="0.6" />
+</g>
+<g transform="translate(900,1150)"><g id="s8-outro-mur"><g transform="scale(0.9)"><!-- Murmillo gladiator: crested helmet with grille, big rectangular shield (left arm), short sword (right arm). Origin = feet. ~330 tall.
+     Animatable: s8-outro-murp, s8-outro-murp-body, s8-outro-murp-head, s8-outro-murp-armL/-armR, s8-outro-murp-legL/-legR, s8-outro-murp-shield (front, can break: s8-outro-murp-shieldL/-shieldR halves), s8-outro-murp-sword, s8-outro-murp-pupL/-pupR, s8-outro-murp-brow. -->
+<g id="s8-outro-murp"><ellipse cx="0" cy="4" rx="60" ry="10" fill="#000" opacity="0.25" />
+  <g id="s8-outro-murp-body">
+    <g id="s8-outro-murp-legL"><rect x="-30" y="-100" width="24" height="94" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-56" width="32" height="46" rx="6" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#7a5230" /></g>
+    <g id="s8-outro-murp-legR"><rect x="6" y="-100" width="24" height="94" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#7a5230" /></g>
+    <path d="M-42,-124 L42,-124 L50,-86 L-50,-86 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <rect x="-44" y="-132" width="88" height="14" rx="5" fill="#7a5230" stroke="#1a1a2e" stroke-width="4" />
+    <path d="M-46,-206 Q-52,-150 -40,-130 L40,-130 Q52,-150 46,-206 Q0,-220 -46,-206 Z" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-176 Q0,-166 20,-176 M-6,-150 L6,-150" stroke="#b5845a" stroke-width="4" fill="none" />
+    <g transform="translate(56,-200)"><g id="s8-outro-murp-armR"><rect x="-12" y="0" width="24" height="78" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><rect x="-14" y="10" width="28" height="40" rx="6" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" /><g id="s8-outro-murp-sword"><rect x="-5" y="86" width="10" height="90" rx="3" fill="#cfd8dc" stroke="#1a1a2e" stroke-width="4" /><rect x="-16" y="80" width="32" height="10" rx="3" fill="#7a5230" stroke="#1a1a2e" stroke-width="3" /></g><circle cx="0" cy="86" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    
+    <g transform="translate(0,-250)"><g id="s8-outro-murp-head">
+      <path d="M-50,30 Q-56,-40 0,-46 Q56,-40 50,30 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-30,-46 Q0,-110 40,-60 Q20,-70 -10,-44 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-34" y="-12" width="68" height="40" rx="8" fill="#1a1a2e" />
+      <g stroke="#c9a24a" stroke-width="4"><path d="M-22,-12 L-22,28 M-8,-12 L-8,28 M6,-12 L6,28 M20,-12 L20,28" /></g>
+      <circle id="s8-outro-murp-pupL" cx="-14" cy="4" r="5" fill="#fff" /><circle id="s8-outro-murp-pupR" cx="14" cy="4" r="5" fill="#fff" />
+      <path id="s8-outro-murp-brow" d="M-30,-20 L-6,-14 M6,-14 L30,-20" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path d="M-60,34 L60,34" stroke="#c9a24a" stroke-width="10" stroke-linecap="round" />
+    </g></g>
+    <g id="s8-outro-murp-shield"><g id="s8-outro-murp-shieldL"><path d="M-110,-210 L-20,-210 L-20,-30 L-110,-30 Q-124,-120 -110,-210 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M-96,-192 L-20,-192 M-96,-48 L-20,-48" stroke="#c9a24a" stroke-width="8" /></g>
+      <g id="s8-outro-murp-shieldR"><path d="M-20,-210 L70,-210 Q84,-120 70,-30 L-20,-30 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M-20,-192 L58,-192 M-20,-48 L58,-48" stroke="#c9a24a" stroke-width="8" /><circle cx="-20" cy="-120" r="22" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(300,1150)"><g id="s8-outro-kwrap"><g transform="scale(1.15)"><!-- Tall striker in a plain sky-blue kit with a blond man-bun (Erling-Haaland-style caricature, not a likeness, no badges).
+     Origin = between the feet. ~330 tall. Same rig ids as keeper.svg.
+     Animatable: s8-outro-h (whole), s8-outro-h-body, s8-outro-h-armL/-armR (rotate, origin top), s8-outro-h-legL/-legR, s8-outro-h-head,
+     s8-outro-h-pupL/-pupR (x/y look), s8-outro-h-browL/-browR, s8-outro-h-m-smile / -m-o / -m-flat (show one), s8-outro-h-lids (blink). -->
+<g id="s8-outro-h">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s8-outro-h-body">
+    <g id="s8-outro-h-legL"><rect x="-32" y="-96" width="26" height="96" rx="10" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="#8ecdf2" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s8-outro-h-legR"><rect x="6" y="-96" width="26" height="96" rx="10" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="#8ecdf2" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#f4efe6" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#8ecdf2" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <text id="s8-outro-h-num" data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#ffffff" stroke="#1a1a2e" stroke-width="2">9</text>
+    <g transform="translate(-54,-196)"><g id="s8-outro-h-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s8-outro-h-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s8-outro-h-head">
+      <circle cx="-44" cy="4" r="10" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="4" cy="-66" r="17" fill="#e8c96a" stroke="#1a1a2e" stroke-width="4" /><path d="M-46,-6 Q-50,-58 0,-58 Q50,-58 46,-6 Q38,-34 0,-38 Q-36,-34 -46,-6 Z" fill="#e8c96a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s8-outro-h-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s8-outro-h-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s8-outro-h-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#f0c49a" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#f0c49a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s8-outro-h-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s8-outro-h-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s8-outro-h-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s8-outro-h-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s8-outro-h-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(0,1150)"><g transform="translate(640,0) scale(0.85)"><!-- Cartoon lion, side view facing LEFT. Origin = ground under the body. ~380 long. Two poses: s8-outro-l-stand and s8-outro-l-sit (show one).
+     Animatable: s8-outro-l, s8-outro-l-stand / s8-outro-l-sit, s8-outro-l-tail, s8-outro-l-legF / s8-outro-l-legB (stand pose), s8-outro-l-jaw, s8-outro-l-pup, s8-outro-l-brow, s8-outro-l-q (question mark). -->
+<g id="s8-outro-l">
+  <ellipse cx="0" cy="4" rx="150" ry="12" fill="#000" opacity="0.25" />
+  <g id="s8-outro-l-stand">
+    <g id="s8-outro-l-tail"><path d="M130,-120 Q210,-150 200,-60" fill="none" stroke="#1a1a2e" stroke-width="12" stroke-linecap="round" /><path d="M130,-120 Q210,-150 200,-60" fill="none" stroke="#d9a14a" stroke-width="6" stroke-linecap="round" /><circle cx="200" cy="-56" r="14" fill="#8a5a24" stroke="#1a1a2e" stroke-width="4" /></g>
+    <g transform="translate(90,-80)"><g id="s8-outro-l-legB"><rect x="-18" y="0" width="36" height="78" rx="14" fill="#d9a14a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <ellipse cx="20" cy="-110" rx="130" ry="56" fill="#e0aa55" stroke="#1a1a2e" stroke-width="5" />
+    <g transform="translate(-60,-80)"><g id="s8-outro-l-legF"><rect x="-18" y="0" width="36" height="78" rx="14" fill="#d9a14a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(-110,-150)"><g id="s8-outro-l-head">
+      <circle cx="0" cy="0" r="78" fill="#8a5a24" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="-14" cy="6" r="50" fill="#e0aa55" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="-34" cy="-6" rx="9" ry="11" fill="#1a1a2e" /><ellipse cx="4" cy="-6" rx="9" ry="11" fill="#1a1a2e" />
+      <circle id="s8-outro-l-pup" cx="-30" cy="-9" r="3" fill="#fff" />
+      <path id="s8-outro-l-brow" d="M-48,-24 L-24,-18 M-8,-18 L16,-24" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path d="M-26,14 L-14,24 L-2,14 Z" fill="#5a2e1a" />
+      <g id="s8-outro-l-jaw"><path d="M-40,30 Q-14,52 12,30" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" /></g>
+    </g></g>
+  </g>
+  <g id="s8-outro-l-sit" opacity="0">
+    <path d="M150,-10 Q230,-30 210,-100" fill="none" stroke="#1a1a2e" stroke-width="12" stroke-linecap="round" /><path d="M150,-10 Q230,-30 210,-100" fill="none" stroke="#d9a14a" stroke-width="6" stroke-linecap="round" />
+    <path d="M-40,0 Q-60,-150 20,-200 Q120,-200 150,-60 Q160,0 120,0 Z" fill="#e0aa55" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <rect x="-56" y="-90" width="34" height="92" rx="14" fill="#d9a14a" stroke="#1a1a2e" stroke-width="5" />
+    <g transform="translate(-20,-230)"><circle cx="0" cy="0" r="78" fill="#8a5a24" stroke="#1a1a2e" stroke-width="5" /><circle cx="-14" cy="6" r="50" fill="#e0aa55" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="-34" cy="-6" rx="9" ry="11" fill="#1a1a2e" /><ellipse cx="4" cy="-6" rx="9" ry="11" fill="#1a1a2e" />
+      <path d="M-48,-30 L-24,-22 M-8,-22 L16,-30" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+      <path d="M-26,14 L-14,24 L-2,14 Z" fill="#5a2e1a" /><path d="M-30,36 L4,36" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" /></g>
+  </g>
+  <g id="s8-outro-l-q" opacity="0" transform="translate(60,-370)"><circle r="40" fill="#fff" stroke="#1a1a2e" stroke-width="5" /><text y="18" text-anchor="middle" font-family="Inter" font-weight="900" font-size="54" fill="#1a1a2e">?</text></g>
+</g>
+</g></g>
+<g id="s8-outro-gauge">
+  <path d="M240,1760 A300,300 0 0 1 840,1760 Z" fill="#f4efe6" stroke="#1a1a2e" stroke-width="8" />
+  <path d="M240,1760 A300,300 0 0 1 390,1500 L540,1760 Z" fill="#e0412f" opacity="0.8" />
+  <path d="M690,1500 A300,300 0 0 1 840,1760 L540,1760 Z" fill="#1f9d55" opacity="0.8" />
+  <path d="M240,1760 L280,1760" stroke="#1a1a2e" stroke-width="8" /><path d="M280,1610 L315,1630" stroke="#1a1a2e" stroke-width="8" /><path d="M390,1500 L410,1535" stroke="#1a1a2e" stroke-width="8" /><path d="M540,1460 L540,1500" stroke="#1a1a2e" stroke-width="8" /><path d="M690,1500 L670,1535" stroke="#1a1a2e" stroke-width="8" /><path d="M800,1610 L765,1630" stroke="#1a1a2e" stroke-width="8" /><path d="M840,1760 L800,1760" stroke="#1a1a2e" stroke-width="8" />
+  <g transform="translate(170,1760) scale(1,-1)"><rect x="-30" y="-18" width="60" height="50" rx="16" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" /><rect x="-12" y="-62" width="22" height="50" rx="10" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" /></g><g transform="translate(910,1760) scale(1,1)"><rect x="-30" y="-18" width="60" height="50" rx="16" fill="#1f9d55" stroke="#1a1a2e" stroke-width="6" /><rect x="-12" y="-62" width="22" height="50" rx="10" fill="#1f9d55" stroke="#1a1a2e" stroke-width="6" /></g>
+  <g transform="translate(540,1760)"><g id="s8-outro-needle"><path d="M-14,0 L0,-250 L14,0 Z" fill="#1a1a2e" /></g></g>
+  <circle cx="540" cy="1760" r="30" fill="#ffd23f" stroke="#1a1a2e" stroke-width="7" />
+</g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s8-outro-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 50px; top: 330px;"><div class="bk">NEXT CASE</div><div class="bt">Could you imagine<br>another scenario?</div></div>
+    <div class="card gold" id="s8-outro-c-c" data-layout-allow-overflow data-layout-allow-overlap style="left: 330px; top: 640px;"><div class="ck">WRITE IT IN THE COMMENTS</div><div class="cv">↓ ↓ ↓</div></div>
+    <div class="dip" id="s8-outro-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s8-outro-";
+      const D = 6.59;
+      const C = {"c": 3.47};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s8-outro-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s8-outro"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      // sit down cross-legged and float a little (Haaland's meditation celebration)
+      const meditate = (at) => {
+        tl.to(S + "kwrap", { y: 80, duration: 0.35, ease: "power2.inOut" }, at);
+        tl.to(S + "h-legL", { rotation: 75, duration: 0.35 }, at);
+        tl.to(S + "h-legR", { rotation: -75, duration: 0.35 }, at);
+        tl.to(S + "h-armL", { rotation: 40, duration: 0.35 }, at + 0.1);
+        tl.to(S + "h-armR", { rotation: -40, duration: 0.35 }, at + 0.1);
+        tl.to(S + "h-lids", { opacity: 1, duration: 0.01 }, at + 0.4);
+        tl.fromTo(S + "kwrap", { y: 80 }, { y: 60, duration: 0.9, ease: "sine.inOut", repeat: R(D - at - 0.4, 0.9), yoyo: true }, at + 0.4);
+      };
+      const needle = (deg, at, d = 0.6) => tl.to(S + "needle", { rotation: deg, transformOrigin: "50% 100%", duration: d, ease: "back.out(1.6)" }, at);
+
+      fly("b", 0.05, null, { from: "top" });
+      fly("c", C.c, null, { from: "right" });
+      tl.set(S + "l-stand", { opacity: 0 }, 0); tl.set(S + "l-sit", { opacity: 1 }, 0);
+      tl.fromTo(S + "h-armR", { rotation: -150 }, { rotation: -115, duration: 0.3, ease: "sine.inOut", repeat: R(D, 0.3), yoyo: true }, 0);
+      tl.fromTo(S + "col-crowd", { y: 0 }, { y: -10, duration: 0.25, ease: "sine.inOut", repeat: R(D, 0.25), yoyo: true }, 0);
+      needle(90, 0.2);
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s8-outro"] = tl;
+    })();
+  </script>
+</template>

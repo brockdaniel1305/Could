@@ -1,0 +1,1395 @@
+{
+ "duration": 97.976,
+ "voice": "kokoro:bm_george",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 8.3,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 7.75,
+   "cues": {
+    "ev": 3.79,
+    "sci": 5.237,
+    "long": 6.46
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.507
+    },
+    {
+     "text": "Erling",
+     "start": 0.507,
+     "end": 0.935
+    },
+    {
+     "text": "Haaland",
+     "start": 0.935,
+     "end": 1.435
+    },
+    {
+     "text": "survive",
+     "start": 1.435,
+     "end": 1.934
+    },
+    {
+     "text": "as",
+     "start": 1.934,
+     "end": 2.077
+    },
+    {
+     "text": "a",
+     "start": 2.077,
+     "end": 2.148
+    },
+    {
+     "text": "gladiator",
+     "start": 2.148,
+     "end": 2.791
+    },
+    {
+     "text": "in",
+     "start": 2.791,
+     "end": 2.934
+    },
+    {
+     "text": "ancient",
+     "start": 2.934,
+     "end": 3.433
+    },
+    {
+     "text": "Rome?",
+     "start": 3.433,
+     "end": 3.79
+    },
+    {
+     "text": "We",
+     "start": 3.79,
+     "end": 3.928
+    },
+    {
+     "text": "looked",
+     "start": 3.928,
+     "end": 4.341
+    },
+    {
+     "text": "at",
+     "start": 4.341,
+     "end": 4.479
+    },
+    {
+     "text": "the",
+     "start": 4.479,
+     "end": 4.686
+    },
+    {
+     "text": "evidence.",
+     "start": 4.686,
+     "end": 5.237
+    },
+    {
+     "text": "Scientifically.",
+     "start": 5.237,
+     "end": 6.27
+    },
+    {
+     "text": "From",
+     "start": 6.46,
+     "end": 6.762
+    },
+    {
+     "text": "a",
+     "start": 6.762,
+     "end": 6.838
+    },
+    {
+     "text": "safe",
+     "start": 6.838,
+     "end": 7.14
+    },
+    {
+     "text": "distance.",
+     "start": 7.14,
+     "end": 7.82
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s2-haaland",
+   "start": 8.3,
+   "duration": 15.459,
+   "voice": "assets/voice/s2-haaland.wav",
+   "voiceStart": 0.15,
+   "speech": 14.909,
+   "cues": {
+    "name": 1.631,
+    "h": 3.012,
+    "sp": 5.875,
+    "goals": 8.372,
+    "diet": 10.86,
+    "zen": 13.629
+   },
+   "words": [
+    {
+     "text": "In",
+     "start": 0.15,
+     "end": 0.347
+    },
+    {
+     "text": "the",
+     "start": 0.347,
+     "end": 0.644
+    },
+    {
+     "text": "red",
+     "start": 0.644,
+     "end": 0.94
+    },
+    {
+     "text": "corner:",
+     "start": 0.94,
+     "end": 1.631
+    },
+    {
+     "text": "Erling",
+     "start": 1.631,
+     "end": 2.223
+    },
+    {
+     "text": "Haaland.",
+     "start": 2.223,
+     "end": 3.012
+    },
+    {
+     "text": "1.94",
+     "start": 3.012,
+     "end": 3.407
+    },
+    {
+     "text": "metres",
+     "start": 3.407,
+     "end": 3.999
+    },
+    {
+     "text": "of",
+     "start": 3.999,
+     "end": 4.197
+    },
+    {
+     "text": "Norwegian",
+     "start": 4.197,
+     "end": 5.085
+    },
+    {
+     "text": "striker.",
+     "start": 5.085,
+     "end": 5.875
+    },
+    {
+     "text": "Top",
+     "start": 5.875,
+     "end": 6.171
+    },
+    {
+     "text": "speed:",
+     "start": 6.171,
+     "end": 6.763
+    },
+    {
+     "text": "around",
+     "start": 6.763,
+     "end": 7.355
+    },
+    {
+     "text": "thirty",
+     "start": 7.355,
+     "end": 7.481
+    },
+    {
+     "text": "six",
+     "start": 7.481,
+     "end": 7.56
+    },
+    {
+     "text": "kilometres",
+     "start": 7.56,
+     "end": 7.75
+    },
+    {
+     "text": "per",
+     "start": 7.75,
+     "end": 7.983
+    },
+    {
+     "text": "hour.",
+     "start": 7.983,
+     "end": 8.372
+    },
+    {
+     "text": "Thirty",
+     "start": 8.372,
+     "end": 8.467
+    },
+    {
+     "text": "six",
+     "start": 8.467,
+     "end": 8.527
+    },
+    {
+     "text": "Premier",
+     "start": 8.527,
+     "end": 9.072
+    },
+    {
+     "text": "League",
+     "start": 9.072,
+     "end": 9.538
+    },
+    {
+     "text": "goals",
+     "start": 9.538,
+     "end": 9.927
+    },
+    {
+     "text": "in",
+     "start": 9.927,
+     "end": 10.082
+    },
+    {
+     "text": "one",
+     "start": 10.082,
+     "end": 10.316
+    },
+    {
+     "text": "season.",
+     "start": 10.316,
+     "end": 10.86
+    },
+    {
+     "text": "He",
+     "start": 10.86,
+     "end": 11.015
+    },
+    {
+     "text": "famously",
+     "start": 11.015,
+     "end": 11.637
+    },
+    {
+     "text": "eats",
+     "start": 11.637,
+     "end": 11.948
+    },
+    {
+     "text": "cow",
+     "start": 11.948,
+     "end": 12.182
+    },
+    {
+     "text": "heart",
+     "start": 12.182,
+     "end": 12.57
+    },
+    {
+     "text": "and",
+     "start": 12.57,
+     "end": 12.804
+    },
+    {
+     "text": "liver.",
+     "start": 12.804,
+     "end": 13.27
+    },
+    {
+     "text": "Then",
+     "start": 13.629,
+     "end": 13.974
+    },
+    {
+     "text": "he",
+     "start": 13.974,
+     "end": 14.147
+    },
+    {
+     "text": "meditates.",
+     "start": 14.147,
+     "end": 15.009
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s3-arena",
+   "start": 23.759,
+   "duration": 11.83,
+   "voice": "assets/voice/s3-arena.wav",
+   "voiceStart": 0.15,
+   "speech": 11.28,
+   "cues": {
+    "name": 1.359,
+    "cap": 2.341,
+    "opp": 4.079,
+    "barley": 6.775,
+    "veg": 9.45
+   },
+   "words": [
+    {
+     "text": "In",
+     "start": 0.15,
+     "end": 0.301
+    },
+    {
+     "text": "the",
+     "start": 0.301,
+     "end": 0.528
+    },
+    {
+     "text": "blue",
+     "start": 0.528,
+     "end": 0.83
+    },
+    {
+     "text": "corner:",
+     "start": 0.83,
+     "end": 1.359
+    },
+    {
+     "text": "the",
+     "start": 1.359,
+     "end": 1.586
+    },
+    {
+     "text": "Colosseum.",
+     "start": 1.586,
+     "end": 2.341
+    },
+    {
+     "text": "Around",
+     "start": 2.341,
+     "end": 2.794
+    },
+    {
+     "text": "fifty",
+     "start": 2.794,
+     "end": 2.981
+    },
+    {
+     "text": "thousand",
+     "start": 2.981,
+     "end": 3.248
+    },
+    {
+     "text": "spectators.",
+     "start": 3.248,
+     "end": 4.079
+    },
+    {
+     "text": "Opponents",
+     "start": 4.079,
+     "end": 4.759
+    },
+    {
+     "text": "with",
+     "start": 4.759,
+     "end": 5.061
+    },
+    {
+     "text": "swords,",
+     "start": 5.061,
+     "end": 5.59
+    },
+    {
+     "text": "nets",
+     "start": 5.59,
+     "end": 5.886
+    },
+    {
+     "text": "and",
+     "start": 5.886,
+     "end": 6.108
+    },
+    {
+     "text": "tridents.",
+     "start": 6.108,
+     "end": 6.775
+    },
+    {
+     "text": "Gladiators",
+     "start": 6.775,
+     "end": 7.515
+    },
+    {
+     "text": "were",
+     "start": 7.515,
+     "end": 7.811
+    },
+    {
+     "text": "nicknamed",
+     "start": 7.811,
+     "end": 8.478
+    },
+    {
+     "text": "barley",
+     "start": 8.478,
+     "end": 8.774
+    },
+    {
+     "text": "men.",
+     "start": 8.774,
+     "end": 9.07
+    },
+    {
+     "text": "They",
+     "start": 9.45,
+     "end": 9.78
+    },
+    {
+     "text": "were",
+     "start": 9.78,
+     "end": 10.109
+    },
+    {
+     "text": "mostly",
+     "start": 10.109,
+     "end": 10.604
+    },
+    {
+     "text": "vegetarian.",
+     "start": 10.604,
+     "end": 11.51
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-murmillo",
+   "start": 35.589,
+   "duration": 11.89,
+   "voice": "assets/voice/s4-murmillo.wav",
+   "voiceStart": 0.15,
+   "speech": 11.34,
+   "cues": {
+    "t": 0.829,
+    "arm": 1.735,
+    "shot": 4.83,
+    "kick": 6.595,
+    "hit": 7.54,
+    "goal": 9.126
+   },
+   "words": [
+    {
+     "text": "Round",
+     "start": 0.15,
+     "end": 0.527
+    },
+    {
+     "text": "one.",
+     "start": 0.527,
+     "end": 0.829
+    },
+    {
+     "text": "The",
+     "start": 0.829,
+     "end": 1.056
+    },
+    {
+     "text": "murmillo.",
+     "start": 1.056,
+     "end": 1.735
+    },
+    {
+     "text": "Sword,",
+     "start": 1.735,
+     "end": 2.188
+    },
+    {
+     "text": "big",
+     "start": 2.188,
+     "end": 2.415
+    },
+    {
+     "text": "helmet,",
+     "start": 2.415,
+     "end": 2.943
+    },
+    {
+     "text": "and",
+     "start": 2.943,
+     "end": 3.169
+    },
+    {
+     "text": "a",
+     "start": 3.169,
+     "end": 3.245
+    },
+    {
+     "text": "shield",
+     "start": 3.245,
+     "end": 3.698
+    },
+    {
+     "text": "the",
+     "start": 3.698,
+     "end": 3.924
+    },
+    {
+     "text": "size",
+     "start": 3.924,
+     "end": 4.226
+    },
+    {
+     "text": "of",
+     "start": 4.226,
+     "end": 4.377
+    },
+    {
+     "text": "a",
+     "start": 4.377,
+     "end": 4.453
+    },
+    {
+     "text": "door.",
+     "start": 4.453,
+     "end": 4.83
+    },
+    {
+     "text": "Haaland",
+     "start": 4.83,
+     "end": 5.254
+    },
+    {
+     "text": "does",
+     "start": 5.254,
+     "end": 5.536
+    },
+    {
+     "text": "what",
+     "start": 5.536,
+     "end": 5.818
+    },
+    {
+     "text": "he",
+     "start": 5.818,
+     "end": 5.959
+    },
+    {
+     "text": "does",
+     "start": 5.959,
+     "end": 6.242
+    },
+    {
+     "text": "best.",
+     "start": 6.242,
+     "end": 6.595
+    },
+    {
+     "text": "He",
+     "start": 6.595,
+     "end": 6.736
+    },
+    {
+     "text": "shoots.",
+     "start": 6.736,
+     "end": 7.23
+    },
+    {
+     "text": "The",
+     "start": 7.54,
+     "end": 7.738
+    },
+    {
+     "text": "shield",
+     "start": 7.738,
+     "end": 8.135
+    },
+    {
+     "text": "does",
+     "start": 8.135,
+     "end": 8.399
+    },
+    {
+     "text": "not",
+     "start": 8.399,
+     "end": 8.598
+    },
+    {
+     "text": "survive.",
+     "start": 8.598,
+     "end": 9.126
+    },
+    {
+     "text": "Neither",
+     "start": 9.126,
+     "end": 9.589
+    },
+    {
+     "text": "does",
+     "start": 9.589,
+     "end": 9.854
+    },
+    {
+     "text": "the",
+     "start": 9.854,
+     "end": 10.052
+    },
+    {
+     "text": "murmillo's",
+     "start": 10.052,
+     "end": 10.713
+    },
+    {
+     "text": "confidence.",
+     "start": 10.713,
+     "end": 11.44
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "hit",
+     "offset": -0.1,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s5-retiarius",
+   "start": 47.479,
+   "duration": 10.767,
+   "voice": "assets/voice/s5-retiarius.wav",
+   "voiceStart": 0.15,
+   "speech": 10.217,
+   "cues": {
+    "t": 0.837,
+    "net": 1.829,
+    "throw": 3.965,
+    "home": 5.45,
+    "feel": 8.946
+   },
+   "words": [
+    {
+     "text": "Round",
+     "start": 0.15,
+     "end": 0.532
+    },
+    {
+     "text": "two.",
+     "start": 0.532,
+     "end": 0.837
+    },
+    {
+     "text": "The",
+     "start": 0.837,
+     "end": 1.066
+    },
+    {
+     "text": "retiarius.",
+     "start": 1.066,
+     "end": 1.829
+    },
+    {
+     "text": "He",
+     "start": 1.829,
+     "end": 1.981
+    },
+    {
+     "text": "fights",
+     "start": 1.981,
+     "end": 2.439
+    },
+    {
+     "text": "with",
+     "start": 2.439,
+     "end": 2.744
+    },
+    {
+     "text": "a",
+     "start": 2.744,
+     "end": 2.821
+    },
+    {
+     "text": "trident",
+     "start": 2.821,
+     "end": 3.355
+    },
+    {
+     "text": "and",
+     "start": 3.355,
+     "end": 3.584
+    },
+    {
+     "text": "a",
+     "start": 3.584,
+     "end": 3.66
+    },
+    {
+     "text": "net.",
+     "start": 3.66,
+     "end": 3.965
+    },
+    {
+     "text": "He",
+     "start": 3.965,
+     "end": 4.118
+    },
+    {
+     "text": "throws",
+     "start": 4.118,
+     "end": 4.576
+    },
+    {
+     "text": "the",
+     "start": 4.576,
+     "end": 4.805
+    },
+    {
+     "text": "net.",
+     "start": 4.805,
+     "end": 5.11
+    },
+    {
+     "text": "Haaland",
+     "start": 5.45,
+     "end": 5.96
+    },
+    {
+     "text": "has",
+     "start": 5.96,
+     "end": 6.178
+    },
+    {
+     "text": "spent",
+     "start": 6.178,
+     "end": 6.543
+    },
+    {
+     "text": "his",
+     "start": 6.543,
+     "end": 6.761
+    },
+    {
+     "text": "entire",
+     "start": 6.761,
+     "end": 7.198
+    },
+    {
+     "text": "career",
+     "start": 7.198,
+     "end": 7.635
+    },
+    {
+     "text": "in",
+     "start": 7.635,
+     "end": 7.781
+    },
+    {
+     "text": "the",
+     "start": 7.781,
+     "end": 7.999
+    },
+    {
+     "text": "back",
+     "start": 7.999,
+     "end": 8.291
+    },
+    {
+     "text": "of",
+     "start": 8.291,
+     "end": 8.436
+    },
+    {
+     "text": "the",
+     "start": 8.436,
+     "end": 8.655
+    },
+    {
+     "text": "net.",
+     "start": 8.655,
+     "end": 8.946
+    },
+    {
+     "text": "He",
+     "start": 8.946,
+     "end": 9.092
+    },
+    {
+     "text": "feels",
+     "start": 9.092,
+     "end": 9.456
+    },
+    {
+     "text": "right",
+     "start": 9.456,
+     "end": 9.82
+    },
+    {
+     "text": "at",
+     "start": 9.82,
+     "end": 9.966
+    },
+    {
+     "text": "home.",
+     "start": 9.966,
+     "end": 10.33
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh",
+     "cue": "throw",
+     "offset": 0.0,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s6-lion",
+   "start": 58.246,
+   "duration": 13.67,
+   "voice": "assets/voice/s6-lion.wav",
+   "voiceStart": 0.15,
+   "speech": 13.12,
+   "cues": {
+    "t": 1.03,
+    "v": 1.67,
+    "h": 4.71,
+    "run": 6.31,
+    "zen": 8.37,
+    "lion": 10.41
+   },
+   "words": [
+    {
+     "text": "Round",
+     "start": 0.15,
+     "end": 0.55
+    },
+    {
+     "text": "three.",
+     "start": 0.55,
+     "end": 1.03
+    },
+    {
+     "text": "The",
+     "start": 1.03,
+     "end": 1.27
+    },
+    {
+     "text": "lion.",
+     "start": 1.27,
+     "end": 1.67
+    },
+    {
+     "text": "A",
+     "start": 1.67,
+     "end": 1.75
+    },
+    {
+     "text": "lion",
+     "start": 1.75,
+     "end": 2.07
+    },
+    {
+     "text": "sprints",
+     "start": 2.07,
+     "end": 2.63
+    },
+    {
+     "text": "at",
+     "start": 2.63,
+     "end": 2.79
+    },
+    {
+     "text": "up",
+     "start": 2.79,
+     "end": 2.95
+    },
+    {
+     "text": "to",
+     "start": 2.95,
+     "end": 3.11
+    },
+    {
+     "text": "eighty",
+     "start": 3.11,
+     "end": 3.494
+    },
+    {
+     "text": "kilometres",
+     "start": 3.494,
+     "end": 4.07
+    },
+    {
+     "text": "per",
+     "start": 4.07,
+     "end": 4.31
+    },
+    {
+     "text": "hour.",
+     "start": 4.31,
+     "end": 4.71
+    },
+    {
+     "text": "Haaland:",
+     "start": 4.71,
+     "end": 5.377
+    },
+    {
+     "text": "thirty",
+     "start": 5.377,
+     "end": 5.91
+    },
+    {
+     "text": "six.",
+     "start": 5.91,
+     "end": 6.31
+    },
+    {
+     "text": "Running",
+     "start": 6.31,
+     "end": 6.814
+    },
+    {
+     "text": "away",
+     "start": 6.814,
+     "end": 7.102
+    },
+    {
+     "text": "is",
+     "start": 7.102,
+     "end": 7.246
+    },
+    {
+     "text": "not",
+     "start": 7.246,
+     "end": 7.462
+    },
+    {
+     "text": "an",
+     "start": 7.462,
+     "end": 7.606
+    },
+    {
+     "text": "option.",
+     "start": 7.606,
+     "end": 8.11
+    },
+    {
+     "text": "So",
+     "start": 8.37,
+     "end": 8.533
+    },
+    {
+     "text": "he",
+     "start": 8.533,
+     "end": 8.696
+    },
+    {
+     "text": "sits",
+     "start": 8.696,
+     "end": 9.023
+    },
+    {
+     "text": "down",
+     "start": 9.023,
+     "end": 9.349
+    },
+    {
+     "text": "and",
+     "start": 9.349,
+     "end": 9.594
+    },
+    {
+     "text": "meditates.",
+     "start": 9.594,
+     "end": 10.41
+    },
+    {
+     "text": "The",
+     "start": 10.41,
+     "end": 10.667
+    },
+    {
+     "text": "lion,",
+     "start": 10.667,
+     "end": 11.096
+    },
+    {
+     "text": "confused,",
+     "start": 11.096,
+     "end": 11.867
+    },
+    {
+     "text": "sits",
+     "start": 11.867,
+     "end": 12.21
+    },
+    {
+     "text": "down",
+     "start": 12.21,
+     "end": 12.553
+    },
+    {
+     "text": "next",
+     "start": 12.553,
+     "end": 12.896
+    },
+    {
+     "text": "to",
+     "start": 12.896,
+     "end": 13.067
+    },
+    {
+     "text": "him.",
+     "start": 13.067,
+     "end": 13.41
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s7-verdict",
+   "start": 71.916,
+   "duration": 19.47,
+   "voice": "assets/voice/s7-verdict.wav",
+   "voiceStart": 0.15,
+   "speech": 18.32,
+   "cues": {
+    "q": 0.867,
+    "yes": 4.13,
+    "hist": 5.23,
+    "crowd": 9.71,
+    "p1": 12.39,
+    "p2": 14.27,
+    "p3": 17.09
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.365
+    },
+    {
+     "text": "verdict.",
+     "start": 0.365,
+     "end": 0.867
+    },
+    {
+     "text": "Could",
+     "start": 0.867,
+     "end": 1.225
+    },
+    {
+     "text": "Erling",
+     "start": 1.225,
+     "end": 1.655
+    },
+    {
+     "text": "Haaland",
+     "start": 1.655,
+     "end": 2.157
+    },
+    {
+     "text": "survive",
+     "start": 2.157,
+     "end": 2.658
+    },
+    {
+     "text": "as",
+     "start": 2.658,
+     "end": 2.802
+    },
+    {
+     "text": "a",
+     "start": 2.802,
+     "end": 2.873
+    },
+    {
+     "text": "gladiator?",
+     "start": 2.873,
+     "end": 3.59
+    },
+    {
+     "text": "Yes.",
+     "start": 4.13,
+     "end": 4.63
+    },
+    {
+     "text": "Historically,",
+     "start": 5.23,
+     "end": 6.245
+    },
+    {
+     "text": "around",
+     "start": 6.245,
+     "end": 6.714
+    },
+    {
+     "text": "nine",
+     "start": 6.714,
+     "end": 7.026
+    },
+    {
+     "text": "in",
+     "start": 7.026,
+     "end": 7.182
+    },
+    {
+     "text": "ten",
+     "start": 7.182,
+     "end": 7.339
+    },
+    {
+     "text": "gladiator",
+     "start": 7.339,
+     "end": 8.041
+    },
+    {
+     "text": "fights",
+     "start": 8.041,
+     "end": 8.51
+    },
+    {
+     "text": "ended",
+     "start": 8.51,
+     "end": 8.826
+    },
+    {
+     "text": "without",
+     "start": 8.826,
+     "end": 9.268
+    },
+    {
+     "text": "a",
+     "start": 9.268,
+     "end": 9.331
+    },
+    {
+     "text": "death.",
+     "start": 9.331,
+     "end": 9.71
+    },
+    {
+     "text": "And",
+     "start": 9.71,
+     "end": 9.954
+    },
+    {
+     "text": "fifty",
+     "start": 9.954,
+     "end": 10.155
+    },
+    {
+     "text": "thousand",
+     "start": 10.155,
+     "end": 10.441
+    },
+    {
+     "text": "Romans",
+     "start": 10.441,
+     "end": 10.928
+    },
+    {
+     "text": "would",
+     "start": 10.928,
+     "end": 11.334
+    },
+    {
+     "text": "chant",
+     "start": 11.334,
+     "end": 11.74
+    },
+    {
+     "text": "his",
+     "start": 11.74,
+     "end": 11.984
+    },
+    {
+     "text": "name.",
+     "start": 11.984,
+     "end": 12.39
+    },
+    {
+     "text": "Chance",
+     "start": 12.39,
+     "end": 12.903
+    },
+    {
+     "text": "of",
+     "start": 12.903,
+     "end": 13.074
+    },
+    {
+     "text": "survival:",
+     "start": 13.074,
+     "end": 13.843
+    },
+    {
+     "text": "high.",
+     "start": 13.843,
+     "end": 14.27
+    },
+    {
+     "text": "Chance",
+     "start": 14.27,
+     "end": 14.644
+    },
+    {
+     "text": "he",
+     "start": 14.644,
+     "end": 14.769
+    },
+    {
+     "text": "meditates",
+     "start": 14.769,
+     "end": 15.33
+    },
+    {
+     "text": "in",
+     "start": 15.33,
+     "end": 15.454
+    },
+    {
+     "text": "the",
+     "start": 15.454,
+     "end": 15.641
+    },
+    {
+     "text": "middle",
+     "start": 15.641,
+     "end": 16.015
+    },
+    {
+     "text": "of",
+     "start": 16.015,
+     "end": 16.14
+    },
+    {
+     "text": "the",
+     "start": 16.14,
+     "end": 16.327
+    },
+    {
+     "text": "Colosseum:",
+     "start": 16.327,
+     "end": 16.95
+    },
+    {
+     "text": "one",
+     "start": 17.09,
+     "end": 17.377
+    },
+    {
+     "text": "hundred",
+     "start": 17.377,
+     "end": 17.895
+    },
+    {
+     "text": "percent.",
+     "start": 17.895,
+     "end": 18.47
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "yes",
+     "offset": 0.14,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s8-outro",
+   "start": 91.386,
+   "duration": 6.59,
+   "voice": "assets/voice/s8-outro.wav",
+   "voiceStart": 0.15,
+   "speech": 4.84,
+   "cues": {
+    "c": 3.47
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.489
+    },
+    {
+     "text": "you",
+     "start": 0.489,
+     "end": 0.692
+    },
+    {
+     "text": "imagine",
+     "start": 0.692,
+     "end": 1.166
+    },
+    {
+     "text": "another",
+     "start": 1.166,
+     "end": 1.641
+    },
+    {
+     "text": "scenario",
+     "start": 1.641,
+     "end": 2.183
+    },
+    {
+     "text": "that",
+     "start": 2.183,
+     "end": 2.454
+    },
+    {
+     "text": "we",
+     "start": 2.454,
+     "end": 2.589
+    },
+    {
+     "text": "should",
+     "start": 2.589,
+     "end": 2.996
+    },
+    {
+     "text": "do",
+     "start": 2.996,
+     "end": 3.131
+    },
+    {
+     "text": "next?",
+     "start": 3.131,
+     "end": 3.47
+    },
+    {
+     "text": "Write",
+     "start": 3.47,
+     "end": 3.865
+    },
+    {
+     "text": "it",
+     "start": 3.865,
+     "end": 4.023
+    },
+    {
+     "text": "in",
+     "start": 4.023,
+     "end": 4.181
+    },
+    {
+     "text": "the",
+     "start": 4.181,
+     "end": 4.419
+    },
+    {
+     "text": "comments.",
+     "start": 4.419,
+     "end": 5.13
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}
