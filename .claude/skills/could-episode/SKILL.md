@@ -20,8 +20,12 @@ und lernst aus jeder Rückmeldung. Antworte dem Creator auf Deutsch; alles im Vi
   Rechnungen (z. B. "3.5 billion footballs") nachrechnen und den Rechenweg notieren.
 
 ## 2. Skript: `narration.json`
-Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `voice` (`bm_george`), `speed` (1.08), `caption`
+Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `provider`, `voice`, `speed` (1.08), `caption`
 (Posting-Text mit Hashtags, immer `#could`), `scenes[]` mit `id`, `text`, optional `tail` und `sfx`.
+- Stimme: `"provider": "voicestudio"` mit `voice` = VoiceStudio-Profil-ID, wenn der Creator VoiceStudio nutzt (läuft nur lokal
+  auf seinem Rechner, Port 3900, `VOICESTUDIO_BASE_URL` / `VOICESTUDIO_API_KEY`). Ist es nicht erreichbar, bricht
+  `build_episode.py` ab: dann nicht still auf Kokoro wechseln, sondern dem Creator sagen, dass er den Build lokal startet,
+  oder mit `"provider": "kokoro"`, `"voice": "bm_george"` eine Vorschau bauen und das klar sagen.
 - Szenenfolge und Längen laut FORMAT.md (8 Szenen, 90–115 s).
 - Markup: `{shown|spoken}`, `{{cue}}` vor jedem Wort, auf dem etwas passieren soll, `||0.6||` für Kunstpausen.
 - `sfx`: `{"name", "cue", "offset", "volume"}` aus `.claude/skills/media-use/audio/assets/sfx/manifest.json`.

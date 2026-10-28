@@ -10,6 +10,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Videos werden mit **HyperFrames** gebaut (`npx skills add heygen-com/hyperframes`), nicht mit eigenen Render-Skripten.
 - 2026-10-28 · Das Ereignis wird als **Cartoon in witziger Darstellung live nachverfolgt**, die Fakten des Erzählers
   laufen **nebenher als Schrift** (Fakten-Panel über der Cartoon-Bühne).
+- 2026-10-28 · Stimme: Der Creator nutzt **VoiceStudio** (lokale Desktop-App, OpenAI-kompatible API auf Port 3900).
+  In `narration.json` `"provider": "voicestudio"` und `"voice": "<Profil-ID>"` setzen. Die Profil-ID muss der Creator noch nennen.
+  In der Cloud-Sandbox ist VoiceStudio nicht erreichbar, dort entsteht nur eine Kokoro-Vorschau (immer dazusagen).
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen

@@ -26,6 +26,6 @@ Gebaut mit **HyperFrames** (HTML → Video). Hochformat 1080×1920, 30 fps.
 - Gegner (Eisberg & Co.) bekommen ein Gesicht und reagieren selbstgefällig.
 
 ## Sound
-- Stimme: Kokoro `bm_george` (britisch, trocken), Tempo 1.08. Optional HeyGen- oder ElevenLabs-Stimme, wenn ein Zugang eingerichtet ist.
+- Stimme: **VoiceStudio** (lokal, eigenes Stimmprofil, `"provider": "voicestudio"`). Vorschau und Fallback: Kokoro `bm_george` (britisch, trocken), Tempo 1.08.
 - SFX nur mit Ursache im Bild: `pop` (Badge), `whoosh` (Sprint), `impact-bass-1` (Schlag/Stempel), `ping` (Ziel erreicht). Spitze 1 Frame nach dem Bild.
 - Musik: keine eingebaut (keine freie Quelle hier). Entweder `"music": {"src": "assets/music/x.mp3"}` in `narration.json` oder in der TikTok-App einen Sound drunterlegen (hilft auch der Reichweite).

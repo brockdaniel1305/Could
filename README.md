@@ -24,7 +24,9 @@ in [`channel/LEARNINGS.md`](channel/LEARNINGS.md) ein, damit sie ab der nächste
 ## Von Hand bauen
 ```bash
 npx skills add heygen-com/hyperframes          # einmalig (liegt schon in .claude/skills)
-pip install kokoro-onnx soundfile               # Offline-Stimme
+pip install kokoro-onnx soundfile               # Offline-Stimme (Vorschau) – oder VoiceStudio-App starten:
+export VOICESTUDIO_BASE_URL="http://localhost:3900/v1" VOICESTUDIO_API_KEY="local"
+#   in narration.json: "provider": "voicestudio", "voice": "<deine Profil-ID>"
 python3 tools/build_episode.py episodes/001-neuer-titanic
 sh episodes/001-neuer-titanic/src/build_all.sh
 cd episodes/001-neuer-titanic

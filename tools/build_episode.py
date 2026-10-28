@@ -4,7 +4,7 @@
     python3 tools/build_episode.py episodes/001-neuer-titanic
 
 Reads   <ep>/narration.json
-Writes  <ep>/assets/voice/<scene>.wav      Kokoro voice-over (npx hyperframes tts)
+Writes  <ep>/assets/voice/<scene>.wav      voice-over: Kokoro (npx hyperframes tts) or VoiceStudio
         <ep>/timing.json                   scene slots, word times, cue times (local to each scene)
         <ep>/compositions/captions.html    karaoke captions from the real word timings
         <ep>/index.html                    root: scene hosts, frame, captions, voice, sfx, music
@@ -14,6 +14,11 @@ Narration markup:
     {1912|nineteen twelve}  shown "1912" in captions, spoken "nineteen twelve"
     {{punch}}               cue marker: timing.json gets the time of the next word as cues.punch
     ||0.8||                 dramatic pause of 0.8 s in the voice-over
+
+Voice provider (narration.json "provider"):
+    "kokoro"       offline, voice e.g. "bm_george" (default)
+    "voicestudio"  local VoiceStudio app (OpenAI-compatible API), voice = a VoiceStudio voice profile id.
+                   Env: VOICESTUDIO_BASE_URL (default http://localhost:3900/v1), VOICESTUDIO_API_KEY (default "local").
 """
 import difflib
 import hashlib
@@ -21,8 +26,11 @@ import html
 import json
 import re
 import shutil
+import os
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 import wave
 from pathlib import Path
 
@@ -52,6 +60,37 @@ def parse(text):
 
 
 PAUSE = re.compile(r"\|\|([\d.]+)\|\|")
+
+
+VS_URL = os.environ.get("VOICESTUDIO_BASE_URL", "http://localhost:3900/v1").rstrip("/")
+VS_KEY = os.environ.get("VOICESTUDIO_API_KEY", "local")
+
+
+def voicestudio_health():
+    url = VS_URL.rsplit("/v1", 1)[0] + "/health"
+    try:
+        with urllib.request.urlopen(url, timeout=5) as r:
+            info = json.loads(r.read())
+    except (urllib.error.URLError, OSError, ValueError) as e:
+        sys.exit(f"VoiceStudio is not reachable at {url} ({e}).\n"
+                 "Start the VoiceStudio app (or set VOICESTUDIO_BASE_URL), or set \"provider\": \"kokoro\" in narration.json.")
+    print(f"VoiceStudio {info.get('version')} on {info.get('device')}")
+
+
+def voicestudio_tts(text, out, voice, speed, model):
+    body = json.dumps({"model": model, "voice": voice, "input": text, "response_format": "wav", "speed": speed}).encode()
+    req = urllib.request.Request(f"{VS_URL}/audio/speech", data=body, method="POST", headers={
+        "Authorization": f"Bearer {VS_KEY}", "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=300) as r:
+            raw = r.read()
+    except urllib.error.HTTPError as e:
+        sys.exit(f"VoiceStudio refused the request ({e.code}): {e.read().decode(errors='replace')[:400]}")
+    tmp = out.with_suffix(".raw")
+    tmp.write_bytes(raw)
+    # one format for every segment so pauses and parts concatenate cleanly
+    run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-ac", "1", "-ar", "24000", "-sample_fmt", "s16", str(out)])
+    tmp.unlink()
 
 
 def voice_scene(sc, vdir, voice, speed, cache):
@@ -92,11 +131,18 @@ def run(cmd, **kw):
     return r.stdout
 
 
+TTS = {"provider": "kokoro", "model": "tts-1"}
+
+
 def synth(text, out, voice, speed, cache):
-    key = hashlib.sha1(f"{voice}|{speed}|{text}".encode()).hexdigest()
+    tag = f"{voice}|{speed}" if TTS["provider"] == "kokoro" else f"voicestudio|{TTS['model']}|{voice}|{speed}"
+    key = hashlib.sha1(f"{tag}|{text}".encode()).hexdigest()
     if cache.get(out.name, {}).get("key") == key and out.exists():
         return cache[out.name]["words"]
-    run(["npx", "--yes", "hyperframes", "tts", text, "-v", voice, "-s", str(speed), "-o", str(out), "--json"])
+    if TTS["provider"] == "voicestudio":
+        voicestudio_tts(text, out, voice, speed, TTS["model"])
+    else:
+        run(["npx", "--yes", "hyperframes", "tts", text, "-v", voice, "-s", str(speed), "-o", str(out), "--json"])
     words = []
     for line in run(["npx", "--yes", "hyperframes", "transcribe", str(out), "--model", "small.en", "--json"],
                     cwd=out.parent).splitlines():
@@ -179,6 +225,12 @@ def main():
     ep = Path(sys.argv[1]).resolve()
     cfg = json.loads((ep / "narration.json").read_text())
     voice, speed = cfg.get("voice", "bm_george"), cfg.get("speed", 1.0)
+    TTS["provider"] = cfg.get("provider", "kokoro")
+    TTS["model"] = cfg.get("model", "tts-1")
+    if TTS["provider"] not in ("kokoro", "voicestudio"):
+        sys.exit(f"unknown provider {TTS['provider']!r} (kokoro | voicestudio)")
+    if TTS["provider"] == "voicestudio":
+        voicestudio_health()
     vdir = ep / "assets/voice"
     vdir.mkdir(parents=True, exist_ok=True)
     (ep / "compositions").mkdir(exist_ok=True)
