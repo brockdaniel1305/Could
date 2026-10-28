@@ -5,6 +5,11 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-28 · 006 · **Das Ergebnis darf nicht von Anfang an offensichtlich sein** ("a little bit boring … obvious from the beginning").
+  → Vor dem Skript prüfen: Weiß der Zuschauer nach dem Vorstellen schon die Antwort? Dann umbauen, z. B. "Best of three" mit
+    Score-Bug, bei dem jede Runde anders ausgeht und die letzte bis zum Sprung offen bleibt (006 v2), oder ein überraschendes "Yes".
+  → Bei größeren Umbauten zuerst die Idee vorschlagen und auf das OK warten (so gewünscht).
+- 2026-10-28 · 006 · Der Running Gag "der Zug ist immer zu spät" (Deutsche Bahn) kam gut an. Verspätung als eigene Runde/Lösung nutzen.
 - 2026-10-28 · 004 · **Der Erzähler darf nicht nach KI klingen:** keine unnötigen Stopps, Namen korrekt aussprechen.
   → Pausen-Marker `||x||` nur für echte Pointen (vor dem Urteil, vor "Mostly."), sonst durchsprechen lassen.
   → Jeder Name, den die Stimme falsch sagt, kommt in `channel/pronunciation.json` (gilt für alle Folgen) und wird per
@@ -52,6 +57,10 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- Maßstabswechsel für Winziges (006 Runde 3): eigene Szene auf Bodenhöhe (12 px/cm), Figur nur ab den Knien (`boots()` in
+  `episodes/006-ronaldo-train/src/rail.py`), dasselbe Part verkleinert mit `.mini * { vector-effect: non-scaling-stroke }`,
+  sonst werden die Konturen haarfein. Zeitlupe immer mit Label "SLOW MOTION" kennzeichnen.
+- Score-Bug oben rechts neben dem Logo (`scorebug()` / `score(at, a, b, who)` in rail.py) trägt Runden-Formate.
 - Wechselnder Text (Anzeigetafel, Zähler) immer über einen Proxy-Tween mit `onUpdate` als Funktion der Zeit setzen
   (`board([[t, text], …])` in `episodes/006-ronaldo-train/src/rail.py`), nicht mit `tl.set(el, {textContent})`.
 - `svgOrigin` nicht für Elemente in verschachtelten, verschobenen Gruppen verwenden (Zeiger flog aus dem Bild). Besser `transformOrigin: "50% 100%"`.

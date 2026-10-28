@@ -29,6 +29,11 @@
     .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
     .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
   
+    .score { position: absolute; left: 560px; top: 184px; display: flex; align-items: center; gap: 14px; padding: 10px 22px;
+             background: #1a1a2e; border: 5px solid #f4efe6; border-radius: 18px; }
+    .score .sn { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #f4efe6; }
+    .score .sv { font: 900 56px/1 "Inter"; color: #ffd23f; min-width: 34px; text-align: center; }
+    .score .sc { font: 900 48px/1 "Inter"; color: #f4efe6; }
   </style>
   <div id="root" data-composition-id="s2-ronaldo" data-width="1080" data-height="1920">
     <svg class="world" viewBox="0 0 1080 1920" id="s2-ronaldo-svg" data-layout-allow-overflow>
@@ -36,7 +41,7 @@
         <filter id="s2-ronaldo-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s2-ronaldo-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
       </defs>
       <g filter="url(#s2-ronaldo-boil)">
-<!-- Station side view, full frame 1080x1920: sky, canopy, platform at the back, departures board (s2-ronaldo-st-board, text in s2-ronaldo-st-boardt),
+<!-- Station side view, full frame 1080x1920: sky, canopy, platform at the back, departures board (s2-ronaldo-st-board, train name in s2-ronaldo-st-boardn, status in s2-ronaldo-st-boardt),
      tracks with rail top at y=1200, ballast and sleepers below (no text there). -->
 <g id="s2-ronaldo-st">
   <rect x="0" y="0" width="1080" height="1920" fill="#a9d3ef" />
@@ -46,7 +51,7 @@
   <rect x="0" y="900" width="1080" height="200" fill="#b9b2a6" stroke="#1a1a2e" stroke-width="5" />
   <rect x="0" y="1090" width="1080" height="16" fill="#ffd23f" />
   <g transform="translate(700,420)"><g id="s2-ronaldo-st-board"><rect x="0" y="0" width="300" height="120" rx="10" fill="#1d2a5c" stroke="#1a1a2e" stroke-width="6" />
-    <text x="20" y="48" font-family="CouldMono" font-weight="700" font-size="30" fill="#f4efe6">ICE 7</text>
+    <text id="s2-ronaldo-st-boardn" x="20" y="48" font-family="CouldMono" font-weight="700" font-size="30" fill="#f4efe6">ICE 7</text>
     <text id="s2-ronaldo-st-boardt" x="20" y="96" font-family="CouldMono" font-weight="700" font-size="34" fill="#ffd23f">on time</text></g></g>
   <rect x="0" y="1106" width="1080" height="814" fill="#8a8378" />
   <g fill="#6f685e"><circle cx="0" cy="1260" r="6" /><circle cx="97" cy="1313" r="7" /><circle cx="194" cy="1366" r="8" /><circle cx="291" cy="1419" r="9" /><circle cx="388" cy="1472" r="10" /><circle cx="485" cy="1525" r="6" /><circle cx="582" cy="1578" r="7" /><circle cx="679" cy="1631" r="8" /><circle cx="776" cy="1684" r="9" /><circle cx="873" cy="1737" r="10" /><circle cx="970" cy="1790" r="6" /><circle cx="1067" cy="1843" r="7" /><circle cx="84" cy="1896" r="8" /><circle cx="181" cy="1309" r="9" /><circle cx="278" cy="1362" r="10" /><circle cx="375" cy="1415" r="6" /><circle cx="472" cy="1468" r="7" /><circle cx="569" cy="1521" r="8" /><circle cx="666" cy="1574" r="9" /><circle cx="763" cy="1627" r="10" /><circle cx="860" cy="1680" r="6" /><circle cx="957" cy="1733" r="7" /><circle cx="1054" cy="1786" r="8" /><circle cx="71" cy="1839" r="9" /><circle cx="168" cy="1892" r="10" /><circle cx="265" cy="1305" r="6" /><circle cx="362" cy="1358" r="7" /><circle cx="459" cy="1411" r="8" /><circle cx="556" cy="1464" r="9" /><circle cx="653" cy="1517" r="10" /><circle cx="750" cy="1570" r="6" /><circle cx="847" cy="1623" r="7" /><circle cx="944" cy="1676" r="8" /><circle cx="1041" cy="1729" r="9" /><circle cx="58" cy="1782" r="10" /><circle cx="155" cy="1835" r="6" /><circle cx="252" cy="1888" r="7" /><circle cx="349" cy="1301" r="8" /><circle cx="446" cy="1354" r="9" /><circle cx="543" cy="1407" r="10" /><circle cx="640" cy="1460" r="6" /><circle cx="737" cy="1513" r="7" /><circle cx="834" cy="1566" r="8" /><circle cx="931" cy="1619" r="9" /><circle cx="1028" cy="1672" r="10" /><circle cx="45" cy="1725" r="6" /><circle cx="142" cy="1778" r="7" /><circle cx="239" cy="1831" r="8" /><circle cx="336" cy="1884" r="9" /><circle cx="433" cy="1297" r="10" /><circle cx="530" cy="1350" r="6" /><circle cx="627" cy="1403" r="7" /><circle cx="724" cy="1456" r="8" /><circle cx="821" cy="1509" r="9" /><circle cx="918" cy="1562" r="10" /><circle cx="1015" cy="1615" r="6" /><circle cx="32" cy="1668" r="7" /><circle cx="129" cy="1721" r="8" /><circle cx="226" cy="1774" r="9" /><circle cx="323" cy="1827" r="10" /><circle cx="420" cy="1880" r="6" /><circle cx="517" cy="1293" r="7" /><circle cx="614" cy="1346" r="8" /><circle cx="711" cy="1399" r="9" /><circle cx="808" cy="1452" r="10" /><circle cx="905" cy="1505" r="6" /><circle cx="1002" cy="1558" r="7" /><circle cx="19" cy="1611" r="8" /><circle cx="116" cy="1664" r="9" /><circle cx="213" cy="1717" r="10" /><circle cx="310" cy="1770" r="6" /><circle cx="407" cy="1823" r="7" /><circle cx="504" cy="1876" r="8" /><circle cx="601" cy="1289" r="9" /><circle cx="698" cy="1342" r="10" /><circle cx="795" cy="1395" r="6" /><circle cx="892" cy="1448" r="7" /><circle cx="989" cy="1501" r="8" /><circle cx="6" cy="1554" r="9" /><circle cx="103" cy="1607" r="10" /><circle cx="200" cy="1660" r="6" /><circle cx="297" cy="1713" r="7" /><circle cx="394" cy="1766" r="8" /><circle cx="491" cy="1819" r="9" /><circle cx="588" cy="1872" r="10" /><circle cx="685" cy="1285" r="6" /><circle cx="782" cy="1338" r="7" /><circle cx="879" cy="1391" r="8" /><circle cx="976" cy="1444" r="9" /><circle cx="1073" cy="1497" r="10" /><circle cx="90" cy="1550" r="6" /><circle cx="187" cy="1603" r="7" /><circle cx="284" cy="1656" r="8" /><circle cx="381" cy="1709" r="9" /><circle cx="478" cy="1762" r="10" /><circle cx="575" cy="1815" r="6" /><circle cx="672" cy="1868" r="7" /><circle cx="769" cy="1281" r="8" /><circle cx="866" cy="1334" r="9" /><circle cx="963" cy="1387" r="10" /><circle cx="1060" cy="1440" r="6" /><circle cx="77" cy="1493" r="7" /><circle cx="174" cy="1546" r="8" /><circle cx="271" cy="1599" r="9" /><circle cx="368" cy="1652" r="10" /><circle cx="465" cy="1705" r="6" /><circle cx="562" cy="1758" r="7" /><circle cx="659" cy="1811" r="8" /><circle cx="756" cy="1864" r="9" /><circle cx="853" cy="1277" r="10" /><circle cx="950" cy="1330" r="6" /><circle cx="1047" cy="1383" r="7" /><circle cx="64" cy="1436" r="8" /><circle cx="161" cy="1489" r="9" /><circle cx="258" cy="1542" r="10" /><circle cx="355" cy="1595" r="6" /><circle cx="452" cy="1648" r="7" /><circle cx="549" cy="1701" r="8" /><circle cx="646" cy="1754" r="9" /><circle cx="743" cy="1807" r="10" /></g>
@@ -105,18 +110,18 @@
     </svg>
     <div class="logo" data-layout-ignore>COULD<b>?</b></div>
     <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
-    <div class="banner" id="s2-ronaldo-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 330px;"><div class="bk">ON THE PLATFORM</div><div class="bt">Cristiano Ronaldo</div></div>
+    <div class="banner" id="s2-ronaldo-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 330px;"><div class="bk">THE CHALLENGER</div><div class="bt">Cristiano Ronaldo</div></div>
     <div class="card " id="s2-ronaldo-c-h" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 520px;"><div class="ck">HEIGHT</div><div class="cv">1.87 m</div></div>
     <div class="card gold" id="s2-ronaldo-c-hd" data-layout-allow-overflow data-layout-allow-overlap style="left: 520px; top: 380px;"><div class="ck">HEADER HEIGHT (2019)</div><div class="cv">2.56 m</div></div>
-    <div class="card " id="s2-ronaldo-c-nb" data-layout-allow-overflow data-layout-allow-overlap style="left: 520px; top: 560px;"><div class="ck">COMPARED TO</div><div class="cv">An NBA player</div></div>
     <div class="card " id="s2-ronaldo-c-wd" data-layout-allow-overflow data-layout-allow-overlap style="left: 480px; top: 380px;"><div class="ck">LANDING WORD</div><div class="cv">Always the same</div></div>
+    <div class="score" id="s2-ronaldo-score"><span class="sn">CR7</span><span class="sv" id="s2-ronaldo-sa">0</span><span class="sc">:</span><span class="sv" id="s2-ronaldo-sb">0</span><span class="sn">TRAINS</span></div>
     <div class="dip" id="s2-ronaldo-dip" data-layout-ignore></div>
   </div>
   <script>
     (function () {
       const S = "#s2-ronaldo-";
-      const D = 16.967;
-      const C = {"name": 1.481, "h": 3.098, "hdr": 5.95, "nba": 10.61, "siu": 13.437, "word": 15.957};
+      const D = 13.48;
+      const C = {"name": 1.426, "h": 2.976, "hdr": 5.71, "siu": 10.07, "word": 12.43};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s2-ronaldo-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
@@ -181,11 +186,22 @@
         tl.set(S + "r-m-smile", { opacity: 0 }, at + 0.75); tl.set(S + "r-m-o", { opacity: 1 }, at + 0.75);
       };
 
+      // score bug: a pure function of time; the side that scores pops
+      const score = (at, a, b, who) => {
+        const ea = document.querySelector(S + "sa"), eb = document.querySelector(S + "sb"), a0 = ea.textContent, b0 = eb.textContent;
+        tl.to({}, { duration: D, ease: "none", onUpdate() {
+          const on = this.time() >= at; ea.textContent = on ? a : a0; eb.textContent = on ? b : b0;
+        } }, 0);
+        tl.fromTo(S + (who || "sa"), { scale: 1 }, { scale: 1.8, duration: 0.16, yoyo: true, repeat: 1, ease: "power2.out" }, at);
+        tl.fromTo(S + "score", { rotation: 0 }, { rotation: -4, duration: 0.08, yoyo: true, repeat: 3 }, at);
+      };
+      const boardName = (txt) => { const n = document.querySelector(S + "st-boardn"); if (n) n.textContent = txt; };
+
+      boardName("ICE 7");
       tl.fromTo(S + "spot", { opacity: 0 }, { opacity: 0.6, duration: 0.4 }, C.name - 0.2);
       fly("b", C.name, C.hdr - 0.1);
       fly("h", C.h, C.hdr - 0.1, { from: "right" });
       fly("hd", C.hdr, C.siu - 0.1, { from: "right" });
-      fly("nb", C.nba, C.siu - 0.1, { from: "right" });
       // the 2.56 m header: line, ball, jump, header
       tl.fromTo(S + "hdr", { opacity: 0 }, { opacity: 1, duration: 0.3 }, C.hdr + 0.3);
       tl.fromTo(S + "ball", { x: 500, y: -200, opacity: 1 }, { x: 0, y: 0, duration: 0.7, ease: "power1.in" }, C.hdr + 1.0);
@@ -193,7 +209,6 @@
       tl.to(S + "ball", { x: 900, y: -260, duration: 0.6, ease: "power2.out" }, C.hdr + 1.72);
       tl.to(S + "hdr", { opacity: 0, duration: 0.3 }, C.siu);
       fly("wd", C.siu, null, { from: "right" });
-      // SIUUU
       siu(C.word - 0.3);
       tl.fromTo(S + "siu", { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(3)" }, C.word + 0.1);
       blink(S + "r-lids", 2.0); blink(S + "r-lids", 8.0);

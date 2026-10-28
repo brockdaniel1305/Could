@@ -1,0 +1,199 @@
+<template>
+  <!-- COULD? scene s5-round3 · full-frame cartoon + flying fact cards. Source: src/s5.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+    .score { position: absolute; left: 560px; top: 184px; display: flex; align-items: center; gap: 14px; padding: 10px 22px;
+             background: #1a1a2e; border: 5px solid #f4efe6; border-radius: 18px; }
+    .score .sn { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #f4efe6; }
+    .score .sv { font: 900 56px/1 "Inter"; color: #ffd23f; min-width: 34px; text-align: center; }
+    .score .sc { font: 900 48px/1 "Inter"; color: #f4efe6; }
+    .mini * { vector-effect: non-scaling-stroke; stroke-width: 3px; }
+    .slowmo { position: absolute; left: 56px; top: 300px; padding: 8px 14px; border-radius: 10px; background: #e0412f;
+              font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #fff; opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="s5-round3" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s5-round3-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s5-round3-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s5-round3-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s5-round3-boil)">
+<rect x="0" y="0" width="1080" height="1200" fill="#f6ead2" /><rect x="0" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="120" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="240" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="360" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="480" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="600" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="720" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="840" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="960" y="0" width="40" height="1200" fill="#efe1c4" /><rect x="0" y="1110" width="1080" height="90" fill="#e8d6b0" stroke="#1a1a2e" stroke-width="5" /><rect x="0" y="1200" width="1080" height="720" fill="#c8915a" /><path d="M0,1300 L1080,1300" stroke="#9c6b3c" stroke-width="5" /><path d="M0,1410 L1080,1410" stroke="#9c6b3c" stroke-width="5" /><path d="M0,1520 L1080,1520" stroke="#9c6b3c" stroke-width="5" /><path d="M0,1630 L1080,1630" stroke="#9c6b3c" stroke-width="5" /><path d="M0,1740 L1080,1740" stroke="#9c6b3c" stroke-width="5" /><path d="M0,1850 L1080,1850" stroke="#9c6b3c" stroke-width="5" /><path d="M90,1300 L90,1410" stroke="#9c6b3c" stroke-width="5" /><path d="M260,1410 L260,1520" stroke="#9c6b3c" stroke-width="5" /><path d="M430,1520 L430,1630" stroke="#9c6b3c" stroke-width="5" /><path d="M600,1630 L600,1740" stroke="#9c6b3c" stroke-width="5" /><path d="M770,1740 L770,1850" stroke="#9c6b3c" stroke-width="5" /><path d="M940,1300 L940,1410" stroke="#9c6b3c" stroke-width="5" /><rect x="0" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="60" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="120" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="180" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="240" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="300" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="360" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="420" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="480" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="540" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="600" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="660" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="720" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="780" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="840" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="900" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="960" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="1020" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><rect x="1080" y="1198" width="34" height="14" rx="3" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /><path d="M0,1200 L1080,1200" stroke="#9aa0a6" stroke-width="6" /><path d="M0,1206 L1080,1206" stroke="#1a1a2e" stroke-width="3" /><g id="s5-round3-ruler" opacity="0.85"><path d="M30,360 L30,1200" stroke="#1a1a2e" stroke-width="5" /><path d="M30,1200 L62,1200" stroke="#1a1a2e" stroke-width="5" /><path d="M30,1080 L50,1080" stroke="#1a1a2e" stroke-width="5" /><path d="M30,960 L62,960" stroke="#1a1a2e" stroke-width="5" /><text data-layout-ignore x="70" y="970" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">20 cm</text><path d="M30,840 L50,840" stroke="#1a1a2e" stroke-width="5" /><path d="M30,720 L62,720" stroke="#1a1a2e" stroke-width="5" /><text data-layout-ignore x="70" y="730" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">40 cm</text><path d="M30,600 L50,600" stroke="#1a1a2e" stroke-width="5" /><path d="M30,480 L62,480" stroke="#1a1a2e" stroke-width="5" /><text data-layout-ignore x="70" y="490" font-family="Inter" font-weight="900" font-size="28" fill="#1a1a2e">60 cm</text><path d="M30,360 L50,360" stroke="#1a1a2e" stroke-width="5" /></g><g id="s5-round3-h4" opacity="0"><path d="M30,1146.0 L1080,1146.0" stroke="#e0412f" stroke-width="7" stroke-dasharray="22 14" /></g><g id="s5-round3-j70" opacity="0"><path d="M30,360 L1080,360" stroke="#ffd23f" stroke-width="7" stroke-dasharray="22 14" /></g><g id="s5-round3-gap" opacity="0"><path d="M800,1146.0 L800,360 M776,1146.0 L824,1146.0 M776,360 L824,360" stroke="#1f9d55" stroke-width="10" stroke-linecap="round" /></g><g transform="translate(0,1200)"><g id="s5-round3-mt"><g class="mini" transform="translate(1100,0) scale(0.223,0.138)"><!-- White high-speed train with a red stripe (ICE-style, no logo), side view, nose to the LEFT. 100 px = 1 m vertically at scale 1:
+     roof at y -389 (3.89 m). Origin = rail top under the nose tip. ~1620 long (nose + 3 cars). Animatable: s5-round3-mtt (drive x), s5-round3-mtt-face (eyes),
+     s5-round3-mtt-browL/-browR, s5-round3-mtt-smirk / s5-round3-mtt-o. -->
+<g id="s5-round3-mtt">
+  <rect x="330" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="360" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="430" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="500" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="570" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="640" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="330" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="400" cy="-40" r="34" /><circle cx="480" cy="-40" r="34" /><circle cx="600" cy="-40" r="34" /><circle cx="680" cy="-40" r="34" /></g><rect x="760" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="790" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="860" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="930" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1000" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1070" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="760" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="830" cy="-40" r="34" /><circle cx="910" cy="-40" r="34" /><circle cx="1030" cy="-40" r="34" /><circle cx="1110" cy="-40" r="34" /></g><rect x="1190" y="-389" width="420" height="340" rx="22" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="1220" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1290" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1360" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1430" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1500" y="-300" width="50" height="60" rx="10" fill="#2e3b4e" /><rect x="1190" y="-150" width="420" height="22" fill="#e0412f" /><g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="1260" cy="-40" r="34" /><circle cx="1340" cy="-40" r="34" /><circle cx="1460" cy="-40" r="34" /><circle cx="1540" cy="-40" r="34" /></g>
+  <path d="M330,-389 L330,-49 L40,-49 Q-10,-49 0,-90 Q40,-250 190,-350 Q250,-389 330,-389 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <path d="M150,-330 Q210,-370 300,-372 L300,-290 L110,-280 Q120,-310 150,-330 Z" fill="#2e3b4e" />
+  <path d="M20,-150 L330,-150 L330,-128 L12,-128 Z" fill="#e0412f" />
+  <g fill="#3a3f48" stroke="#1a1a2e" stroke-width="4"><circle cx="150" cy="-40" r="34" /><circle cx="250" cy="-40" r="34" /></g>
+  <g id="s5-round3-mtt-face">
+    <ellipse cx="170" cy="-318" rx="18" ry="20" fill="#fff" stroke="#1a1a2e" stroke-width="4" /><circle cx="164" cy="-316" r="8" fill="#1a1a2e" />
+    <ellipse cx="236" cy="-322" rx="18" ry="20" fill="#fff" stroke="#1a1a2e" stroke-width="4" /><circle cx="230" cy="-320" r="8" fill="#1a1a2e" />
+    <path id="s5-round3-mtt-browL" d="M146,-350 L190,-342" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round" />
+    <path id="s5-round3-mtt-browR" d="M214,-346 L258,-354" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round" />
+    <path id="s5-round3-mtt-smirk" d="M120,-210 Q170,-190 220,-214" fill="none" stroke="#1a1a2e" stroke-width="7" stroke-linecap="round" />
+    <ellipse id="s5-round3-mtt-o" cx="170" cy="-206" rx="18" ry="14" fill="#1a1a2e" opacity="0" />
+  </g>
+</g>
+</g></g></g><g transform="translate(430,1200)"><g id="s5-round3-kwrap"><g id="s5-round3-legB"><g transform="translate(70,0)"><rect x="-38" y="-1500" width="76" height="1440" fill="#d9d9d6" stroke="#1a1a2e" stroke-width="6" /><rect x="-38" y="-760" width="76" height="40" fill="#e0412f" /><rect x="-38" y="-700" width="76" height="22" fill="#1f9d55" /><path d="M-46,-70 L44,-70 Q70,-40 130,-34 Q160,-30 158,-8 L158,0 L-46,0 Z" fill="#c9302a" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M-30,-40 L120,-30" stroke="#ffd23f" stroke-width="8" stroke-linecap="round" /><g fill="#1a1a2e"><rect x="-30" y="0" width="14" height="12" /><rect x="40" y="0" width="14" height="12" /><rect x="110" y="0" width="14" height="12" /></g></g></g><g id="s5-round3-legF"><g transform="translate(0,0)"><rect x="-38" y="-1500" width="76" height="1440" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" /><rect x="-38" y="-760" width="76" height="40" fill="#e0412f" /><rect x="-38" y="-700" width="76" height="22" fill="#1f9d55" /><path d="M-46,-70 L44,-70 Q70,-40 130,-34 Q160,-30 158,-8 L158,0 L-46,0 Z" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M-30,-40 L120,-30" stroke="#ffd23f" stroke-width="8" stroke-linecap="round" /><g fill="#1a1a2e"><rect x="-30" y="0" width="14" height="12" /><rect x="40" y="0" width="14" height="12" /><rect x="110" y="0" width="14" height="12" /></g></g></g></g></g><g transform="translate(800,680) scale(1.6)"><!-- Comic impact burst with a word. Origin = centre. Replace SIUUU!. Animate s5-round3-siu (pop in, scale). -->
+<g id="s5-round3-siu">
+  <path d="M0,-90 L22,-40 L78,-62 L48,-12 L100,14 L42,26 L58,84 L10,46 L-26,92 L-30,38 L-92,52 L-52,6 L-96,-34 L-38,-30 L-48,-86 L-8,-48 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <text x="0" y="14" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="#e0412f" stroke="#1a1a2e" stroke-width="2" transform="rotate(-8)">SIUUU!</text>
+</g>
+</g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s5-round3-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 330px;"><div class="bk">ROUND 3 OF 3 · DECIDER</div><div class="bt">A model train</div></div>
+    <div class="card " id="s5-round3-c-sc" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 560px;"><div class="ck">SCALE</div><div class="cv">1 : 87</div></div>
+    <div class="card red" id="s5-round3-c-h" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">HEIGHT</div><div class="cv">4.5 cm</div></div>
+    <div class="card " id="s5-round3-c-v" data-layout-allow-overflow data-layout-allow-overlap style="left: 520px; top: 560px;"><div class="ck">SCALE SPEED</div><div class="cv">300 km/h</div></div>
+    <div class="card gold" id="s5-round3-c-rl" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 560px;"><div class="ck">REAL SPEED</div><div class="cv">1 m/s</div></div>
+    <div class="card gold" id="s5-round3-c-hs" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">HIS JUMP</div><div class="cv">70 cm</div></div>
+    <div class="card gold" id="s5-round3-c-cl" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">TO SPARE</div><div class="cv">65 cm</div></div>
+    <div class="score" id="s5-round3-score"><span class="sn">CR7</span><span class="sv" id="s5-round3-sa">1</span><span class="sc">:</span><span class="sv" id="s5-round3-sb">1</span><span class="sn">TRAINS</span></div>
+    <div class="slowmo" id="s5-round3-slow">SLOW MOTION</div>
+    <div class="dip" id="s5-round3-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s5-round3-";
+      const D = 22.23;
+      const C = {"name": 1.665, "scale": 2.735, "h": 3.708, "v": 5.944, "real": 8.983, "has": 11.476, "go": 13.82, "jump": 15.86, "clear": 17.19, "score": 18.643};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s5-round3-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s5-round3"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      // departures board text as a pure function of scene time: steps = [[t, text], ...]
+      const board = (steps) => {
+        const el = document.querySelector(S + "st-boardt");
+        tl.to({}, { duration: D, ease: "none", onUpdate() {
+          const t = this.time(); let txt = steps[0][1];
+          for (const [at, s] of steps) if (t >= at) txt = s;
+          if (el.textContent !== txt) el.textContent = txt;
+        } }, 0);
+      };
+      // jump (feet ~0.7 m = 84 px), spin in the air, land arms down-out: SIUUU
+      const jump = (at, h = 84, air = 0.75) => {
+        tl.to(S + "kwrap", { y: 12, duration: 0.14, ease: "power2.in" }, at - 0.14);
+        tl.to(S + "kwrap", { y: -h, duration: air / 2, ease: "power2.out" }, at);
+        tl.to(S + "kwrap", { y: 0, duration: air / 2, ease: "power2.in" }, at + air / 2);
+      };
+      const siu = (at) => {
+        jump(at);
+        tl.to(S + "kwrap", { scaleX: -1, transformOrigin: "50% 100%", duration: 0.18, ease: "none", yoyo: true, repeat: 1 }, at + 0.02);
+        tl.to(S + "r-num", { scaleX: -1, transformOrigin: "50% 50%", duration: 0.18, ease: "none", yoyo: true, repeat: 1 }, at + 0.02);
+        tl.to(S + "r-armL", { rotation: 40, duration: 0.15 }, at + 0.75);
+        tl.to(S + "r-armR", { rotation: -40, duration: 0.15 }, at + 0.75);
+        tl.to(S + "r-legL", { rotation: 22, duration: 0.15 }, at + 0.75);
+        tl.to(S + "r-legR", { rotation: -22, duration: 0.15 }, at + 0.75);
+        tl.set(S + "r-m-smile", { opacity: 0 }, at + 0.75); tl.set(S + "r-m-o", { opacity: 1 }, at + 0.75);
+      };
+
+      // score bug: a pure function of time; the side that scores pops
+      const score = (at, a, b, who) => {
+        const ea = document.querySelector(S + "sa"), eb = document.querySelector(S + "sb"), a0 = ea.textContent, b0 = eb.textContent;
+        tl.to({}, { duration: D, ease: "none", onUpdate() {
+          const on = this.time() >= at; ea.textContent = on ? a : a0; eb.textContent = on ? b : b0;
+        } }, 0);
+        tl.fromTo(S + (who || "sa"), { scale: 1 }, { scale: 1.8, duration: 0.16, yoyo: true, repeat: 1, ease: "power2.out" }, at);
+        tl.fromTo(S + "score", { rotation: 0 }, { rotation: -4, duration: 0.08, yoyo: true, repeat: 3 }, at);
+      };
+      const boardName = (txt) => { const n = document.querySelector(S + "st-boardn"); if (n) n.textContent = txt; };
+
+      fly("b", C.name, C.h - 0.1);
+      // the model whizzes past once at its real speed (1 m/s = 1200 px/s)
+      tl.fromTo(S + "mt", { x: 50 }, { x: -1700, duration: 1.25, ease: "none" }, C.name + 0.3);
+      fly("sc", C.scale, C.v - 0.1, { from: "right" });
+      tl.fromTo(S + "h4", { opacity: 0 }, { opacity: 1, duration: 0.3 }, C.h);
+      fly("h", C.h, C.real - 0.1);
+      fly("v", C.v, C.has - 0.1, { from: "right" });
+      fly("rl", C.real, C.go - 0.1);
+      tl.fromTo(S + "j70", { opacity: 0 }, { opacity: 1, duration: 0.3 }, C.has);
+      fly("hs", C.has, C.go - 0.1, { from: "right" });
+      // position: the boots bounce on the spot, the train appears on the right
+      tl.fromTo(S + "kwrap", { y: 0 }, { y: -26, duration: 0.22, ease: "sine.inOut", yoyo: true, repeat: 5 }, C.go + 0.2);
+      tl.to(S + "h4", { opacity: 0.5, duration: 0.2 }, C.go);
+      // the jump, in slow motion (x0.5): 70 cm up, 1.4 s in the air; the train passes under at 700 px/s
+      tl.fromTo(S + "slow", { opacity: 0 }, { opacity: 1, duration: 0.15 }, C.jump - 0.4);
+      tl.to(S + "slow", { opacity: 0, duration: 0.15 }, C.clear + 0.6);
+      tl.fromTo(S + "mt", { x: 50 }, { x: -1700, duration: 2.5, ease: "none" }, C.jump - 0.35);
+      jump(C.jump + 0.1, 840, 1.4);
+      swap(S + "mtt-smirk", S + "mtt-o", C.jump + 0.4);
+      tl.fromTo(S + "gap", { opacity: 0, scaleY: 0, transformOrigin: "50% 100%" }, { opacity: 1, scaleY: 1, duration: 0.4, ease: "expo.out" }, C.clear);
+      fly("cl", C.clear + 0.1, C.score - 0.1, { from: "right" });
+      // landed: SIUUU, 2 : 1
+      tl.to([S + "gap", S + "j70", S + "h4"], { opacity: 0, duration: 0.2 }, C.score);
+      tl.to(S + "legB", { x: 120, duration: 0.15, ease: "power2.out" }, C.score);
+      tl.fromTo(S + "siu", { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(3)" }, C.score);
+      score(C.score, 2, 1, "sa");
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s5-round3"] = tl;
+    })();
+  </script>
+</template>

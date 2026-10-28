@@ -1,266 +1,276 @@
 {
  "s1-hook.part0.wav": {
-  "key": "374bec30f167a30158818beecf1a66a3f8c125a9",
+  "key": "a8565f389a40bebeb8e09ff860799315cfe0e06c",
   "words": [
    {
     "text": "Could",
     "start": 0,
-    "end": 0.343
+    "end": 0.326
    },
    {
     "text": "Cristiano",
-    "start": 0.343,
-    "end": 0.96
+    "start": 0.326,
+    "end": 0.912
    },
    {
     "text": "Ronaldo",
-    "start": 0.96,
-    "end": 1.44
+    "start": 0.912,
+    "end": 1.368
    },
    {
     "text": "jump",
-    "start": 1.44,
-    "end": 1.714
+    "start": 1.368,
+    "end": 1.629
    },
    {
     "text": "high",
-    "start": 1.714,
-    "end": 1.989
+    "start": 1.629,
+    "end": 1.889
    },
    {
     "text": "enough",
-    "start": 1.989,
-    "end": 2.4
+    "start": 1.889,
+    "end": 2.28
    },
    {
     "text": "to",
-    "start": 2.4,
-    "end": 2.548
+    "start": 2.28,
+    "end": 2.424
    },
    {
     "text": "dodge",
-    "start": 2.548,
-    "end": 2.918
+    "start": 2.424,
+    "end": 2.784
    },
    {
     "text": "a",
-    "start": 2.918,
-    "end": 2.992
+    "start": 2.784,
+    "end": 2.856
    },
    {
     "text": "moving",
-    "start": 2.992,
-    "end": 3.436
+    "start": 2.856,
+    "end": 3.288
    },
    {
     "text": "train?",
-    "start": 3.436,
-    "end": 3.88
+    "start": 3.288,
+    "end": 3.72
    },
    {
     "text": "We",
-    "start": 3.88,
-    "end": 4.026
+    "start": 3.72,
+    "end": 3.887
    },
    {
-    "text": "looked",
-    "start": 4.026,
-    "end": 4.462
+    "text": "tested",
+    "start": 3.887,
+    "end": 4.389
    },
    {
-    "text": "at",
-    "start": 4.462,
-    "end": 4.608
+    "text": "it.",
+    "start": 4.389,
+    "end": 4.64
    },
    {
-    "text": "the",
-    "start": 4.608,
-    "end": 4.826
+    "text": "Three",
+    "start": 4.64,
+    "end": 5.073
    },
    {
-    "text": "evidence",
-    "start": 4.826,
-    "end": 5.408
+    "text": "trains,",
+    "start": 5.073,
+    "end": 5.68
    },
    {
-    "text": "scientifically.",
-    "start": 5.408,
-    "end": 6.5
+    "text": "three",
+    "start": 5.68,
+    "end": 6.113
+   },
+   {
+    "text": "rounds.",
+    "start": 6.113,
+    "end": 6.72
    }
   ]
  },
  "s1-hook.part1.wav": {
-  "key": "245484dcd61ebda13190dba7c7dab691d8519a87",
+  "key": "4a43261ea03866847ba0de2627019ec6b105f582",
   "words": [
    {
-    "text": "from",
+    "text": "Best",
     "start": 0,
-    "end": 0.5
+    "end": 0.413
    },
    {
-    "text": "the",
-    "start": 0.5,
-    "end": 0.875
+    "text": "of",
+    "start": 0.413,
+    "end": 0.62
    },
    {
-    "text": "platform.",
-    "start": 0.875,
-    "end": 2
+    "text": "three.",
+    "start": 0.62,
+    "end": 1.24
    }
   ]
  },
  "s2-ronaldo.part0.wav": {
-  "key": "5b2efd4c9f73a4ee9a59b48ea075602858e8ecfe",
+  "key": "d9e39187d7d7631e909f9fa72540ed29d6885866",
   "words": [
    {
-    "text": "On",
+    "text": "The",
     "start": 0,
-    "end": 0.19
+    "end": 0.273
    },
    {
-    "text": "the",
-    "start": 0.19,
-    "end": 0.475
-   },
-   {
-    "text": "platform,",
-    "start": 0.475,
-    "end": 1.331
+    "text": "challenger,",
+    "start": 0.273,
+    "end": 1.276
    },
    {
     "text": "Cristiano",
-    "start": 1.331,
-    "end": 2.187
+    "start": 1.276,
+    "end": 2.096
    },
    {
     "text": "Ronaldo,",
-    "start": 2.187,
-    "end": 2.948
+    "start": 2.096,
+    "end": 2.826
    },
    {
     "text": "1.87",
-    "start": 2.948,
-    "end": 3.328
+    "start": 2.826,
+    "end": 3.19
    },
    {
-    "text": "meters",
-    "start": 3.328,
-    "end": 3.898
+    "text": "metres",
+    "start": 3.19,
+    "end": 3.737
    },
    {
     "text": "of",
-    "start": 3.898,
-    "end": 4.089
+    "start": 3.737,
+    "end": 3.919
    },
    {
     "text": "Portuguese",
-    "start": 4.089,
-    "end": 5.039
+    "start": 3.919,
+    "end": 4.831
    },
    {
     "text": "forward.",
-    "start": 5.039,
-    "end": 5.8
+    "start": 4.831,
+    "end": 5.56
    },
    {
     "text": "In",
-    "start": 5.8,
-    "end": 6.022
+    "start": 5.56,
+    "end": 5.768
    },
    {
     "text": "2019,",
-    "start": 6.022,
-    "end": 6.577
+    "start": 5.768,
+    "end": 6.287
    },
    {
     "text": "he",
-    "start": 6.577,
-    "end": 6.799
+    "start": 6.287,
+    "end": 6.494
    },
    {
     "text": "headed",
-    "start": 6.799,
-    "end": 7.464
+    "start": 6.494,
+    "end": 7.117
    },
    {
     "text": "a",
-    "start": 7.464,
-    "end": 7.575
+    "start": 7.117,
+    "end": 7.221
    },
    {
     "text": "ball",
-    "start": 7.575,
-    "end": 8.019
+    "start": 7.221,
+    "end": 7.636
    },
    {
     "text": "at",
-    "start": 8.019,
-    "end": 8.241
+    "start": 7.636,
+    "end": 7.844
    },
    {
     "text": "a",
-    "start": 8.241,
-    "end": 8.352
+    "start": 7.844,
+    "end": 7.948
    },
    {
     "text": "height",
-    "start": 8.352,
-    "end": 9.018
+    "start": 7.948,
+    "end": 8.57
    },
    {
     "text": "of",
-    "start": 9.018,
-    "end": 9.24
+    "start": 8.57,
+    "end": 8.778
    },
    {
     "text": "2.56",
-    "start": 9.24,
-    "end": 9.683
+    "start": 8.778,
+    "end": 9.193
    },
    {
-    "text": "meters.",
-    "start": 9.683,
-    "end": 10.46
+    "text": "metres.",
+    "start": 9.193,
+    "end": 9.92
    },
    {
-    "text": "A",
-    "start": 10.46,
-    "end": 10.539
+    "text": "He",
+    "start": 9.92,
+    "end": 10.067
    },
    {
-    "text": "coach",
-    "start": 10.539,
-    "end": 10.932
+    "text": "lands",
+    "start": 10.067,
+    "end": 10.436
    },
    {
-    "text": "compared",
-    "start": 10.932,
-    "end": 11.562
+    "text": "every",
+    "start": 10.436,
+    "end": 10.805
    },
    {
-    "text": "him",
-    "start": 11.562,
-    "end": 11.798
+    "text": "jump",
+    "start": 10.805,
+    "end": 11.1
    },
    {
-    "text": "to",
-    "start": 11.798,
-    "end": 11.955
+    "text": "with",
+    "start": 11.1,
+    "end": 11.395
    },
    {
-    "text": "an",
-    "start": 11.955,
-    "end": 12.113
+    "text": "the",
+    "start": 11.395,
+    "end": 11.616
    },
    {
-    "text": "NBA",
-    "start": 12.113,
-    "end": 12.349
+    "text": "same",
+    "start": 11.616,
+    "end": 11.911
    },
    {
-    "text": "player.",
-    "start": 12.349,
-    "end": 12.9
+    "text": "word.",
+    "start": 11.911,
+    "end": 12.28
+   },
+   {
+    "text": "See",
+    "start": 12.28,
+    "end": 12.494
+   },
+   {
+    "text": "you.",
+    "start": 12.494,
+    "end": 12.78
    }
   ]
  },
@@ -1170,182 +1180,117 @@
   ]
  },
  "s7-verdict.part1.wav": {
-  "key": "cc977be75cb9853a41d668142c5f19a6845ac66e",
+  "key": "a1e8387a1cf1a11a5e469d22a255bcf5841411fb",
   "words": [
    {
-    "text": "No!",
+    "text": "Yes!",
     "start": 0,
     "end": 0.5
    }
   ]
  },
  "s7-verdict.part2.wav": {
-  "key": "2b6dbc7cd2a72bd42fe6ab72b621201184b54a66",
+  "key": "67ac3ebba1a16bde18d21bdc59109dced3c6a0a6",
   "words": [
    {
-    "text": "But",
+    "text": "if",
     "start": 0,
-    "end": 0.215
-   },
-   {
-    "text": "in",
-    "start": 0.215,
-    "end": 0.358
-   },
-   {
-    "text": "Germany,",
-    "start": 0.358,
-    "end": 0.931
+    "end": 0.173
    },
    {
     "text": "the",
-    "start": 0.931,
-    "end": 1.145
+    "start": 0.173,
+    "end": 0.433
    },
    {
     "text": "train",
-    "start": 1.145,
-    "end": 1.503
+    "start": 0.433,
+    "end": 0.867
    },
    {
-    "text": "might",
-    "start": 1.503,
-    "end": 1.861
+    "text": "is",
+    "start": 0.867,
+    "end": 1.04
    },
    {
-    "text": "not",
-    "start": 1.861,
-    "end": 2.076
+    "text": "small",
+    "start": 1.04,
+    "end": 1.473
    },
    {
-    "text": "be",
-    "start": 2.076,
-    "end": 2.219
-   },
-   {
-    "text": "moving.",
-    "start": 2.219,
-    "end": 2.72
-   },
-   {
-    "text": "Chance",
-    "start": 2.72,
-    "end": 3.387
-   },
-   {
-    "text": "he",
-    "start": 3.387,
-    "end": 3.61
-   },
-   {
-    "text": "clears",
-    "start": 3.61,
-    "end": 4.277
-   },
-   {
-    "text": "the",
-    "start": 4.277,
-    "end": 4.61
-   },
-   {
-    "text": "roof,",
-    "start": 4.61,
-    "end": 5.166
-   },
-   {
-    "text": "0%.",
-    "start": 5.166,
-    "end": 5.5
-   },
-   {
-    "text": "Chance",
-    "start": 5.5,
-    "end": 5.927
-   },
-   {
-    "text": "he",
-    "start": 5.927,
-    "end": 6.07
-   },
-   {
-    "text": "celebrates",
-    "start": 6.07,
-    "end": 6.782
-   },
-   {
-    "text": "anyway.",
-    "start": 6.782,
-    "end": 7.28
+    "text": "enough.",
+    "start": 1.473,
+    "end": 2.08
    }
   ]
  },
  "s7-verdict.part3.wav": {
-  "key": "08ad2ffbf41e5341f9262659e6b9208acb086690",
+  "key": "8a2cf88f6fab533c35488ddd919faecd002815c4",
   "words": [
    {
-    "text": "100.",
+    "text": "or,",
     "start": 0,
-    "end": 1
+    "end": 0.266
+   },
+   {
+    "text": "late",
+    "start": 0.266,
+    "end": 0.621
+   },
+   {
+    "text": "enough,",
+    "start": 0.621,
+    "end": 1.243
+   },
+   {
+    "text": "final",
+    "start": 1.243,
+    "end": 1.687
+   },
+   {
+    "text": "score,",
+    "start": 1.687,
+    "end": 2.22
+   },
+   {
+    "text": "Ronaldo",
+    "start": 2.22,
+    "end": 2.841
+   },
+   {
+    "text": "2",
+    "start": 2.841,
+    "end": 2.93
+   },
+   {
+    "text": "trains",
+    "start": 2.93,
+    "end": 3.462
+   },
+   {
+    "text": "1.",
+    "start": 3.462,
+    "end": 3.64
    }
   ]
  },
  "s7-verdict.part4.wav": {
-  "key": "72559f0c04216ddc50429c2962edcc37a4b114bb",
+  "key": "d118a20a609e3fccfec0ca6ff6f27cfdef4a1da3",
   "words": [
    {
-    "text": "Please",
+    "text": "See",
     "start": 0,
-    "end": 0.531
+    "end": 0.191
    },
    {
-    "text": "do",
-    "start": 0.531,
-    "end": 0.707
+    "text": "you,",
+    "start": 0.191,
+    "end": 0.445
    },
    {
-    "text": "not",
-    "start": 0.707,
-    "end": 0.973
-   },
-   {
-    "text": "try",
-    "start": 0.973,
-    "end": 1.238
-   },
-   {
-    "text": "this,",
-    "start": 1.238,
-    "end": 1.68
-   },
-   {
-    "text": "at",
-    "start": 1.68,
-    "end": 1.857
-   },
-   {
-    "text": "home",
-    "start": 1.857,
-    "end": 2.211
-   },
-   {
-    "text": "or",
-    "start": 2.211,
-    "end": 2.387
-   },
-   {
-    "text": "at",
-    "start": 2.387,
-    "end": 2.564
-   },
-   {
-    "text": "a",
-    "start": 2.564,
-    "end": 2.653
-   },
-   {
-    "text": "station.",
-    "start": 2.653,
-    "end": 3.36
+    "text": "ooh!",
+    "start": 0.445,
+    "end": 0.7
    }
   ]
  },
@@ -1426,6 +1371,891 @@
     "text": "comments.",
     "start": 4.269,
     "end": 4.98
+   }
+  ]
+ },
+ "s3-round1.part0.wav": {
+  "key": "6e12b5291fae00313c173b57eed11fa96eb943c1",
+  "words": [
+   {
+    "text": "Round",
+    "start": 0,
+    "end": 0.497
+   },
+   {
+    "text": "1,",
+    "start": 0.497,
+    "end": 0.696
+   },
+   {
+    "text": "a",
+    "start": 0.696,
+    "end": 0.795
+   },
+   {
+    "text": "German",
+    "start": 0.795,
+    "end": 1.392
+   },
+   {
+    "text": "high-speed",
+    "start": 1.392,
+    "end": 2.385
+   },
+   {
+    "text": "train,",
+    "start": 2.385,
+    "end": 2.982
+   },
+   {
+    "text": "3.89",
+    "start": 2.982,
+    "end": 3.379
+   },
+   {
+    "text": "metres",
+    "start": 3.379,
+    "end": 3.976
+   },
+   {
+    "text": "tall,",
+    "start": 3.976,
+    "end": 4.473
+   },
+   {
+    "text": "300",
+    "start": 4.473,
+    "end": 4.771
+   },
+   {
+    "text": "kilometres",
+    "start": 4.771,
+    "end": 5.765
+   },
+   {
+    "text": "per",
+    "start": 5.765,
+    "end": 6.063
+   },
+   {
+    "text": "hour.",
+    "start": 6.063,
+    "end": 6.56
+   },
+   {
+    "text": "To",
+    "start": 6.56,
+    "end": 6.716
+   },
+   {
+    "text": "clear",
+    "start": 6.716,
+    "end": 7.107
+   },
+   {
+    "text": "the",
+    "start": 7.107,
+    "end": 7.342
+   },
+   {
+    "text": "roof,",
+    "start": 7.342,
+    "end": 7.733
+   },
+   {
+    "text": "his",
+    "start": 7.733,
+    "end": 7.967
+   },
+   {
+    "text": "feet",
+    "start": 7.967,
+    "end": 8.28
+   },
+   {
+    "text": "must",
+    "start": 8.28,
+    "end": 8.593
+   },
+   {
+    "text": "pass",
+    "start": 8.593,
+    "end": 8.905
+   },
+   {
+    "text": "almost",
+    "start": 8.905,
+    "end": 9.375
+   },
+   {
+    "text": "4",
+    "start": 9.375,
+    "end": 9.453
+   },
+   {
+    "text": "metres.",
+    "start": 9.453,
+    "end": 10
+   },
+   {
+    "text": "His",
+    "start": 10,
+    "end": 10.226
+   },
+   {
+    "text": "famous",
+    "start": 10.226,
+    "end": 10.678
+   },
+   {
+    "text": "header",
+    "start": 10.678,
+    "end": 11.131
+   },
+   {
+    "text": "lifted",
+    "start": 11.131,
+    "end": 11.583
+   },
+   {
+    "text": "them",
+    "start": 11.583,
+    "end": 11.885
+   },
+   {
+    "text": "70",
+    "start": 11.885,
+    "end": 12.035
+   },
+   {
+    "text": "centimetres,",
+    "start": 12.035,
+    "end": 12.94
+   },
+   {
+    "text": "3",
+    "start": 12.94,
+    "end": 13.015
+   },
+   {
+    "text": "metres",
+    "start": 13.015,
+    "end": 13.468
+   },
+   {
+    "text": "short.",
+    "start": 13.468,
+    "end": 13.92
+   }
+  ]
+ },
+ "s3-round1.part1.wav": {
+  "key": "6a9790111ab614c7234f04d562374f47e4f3258b",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.215
+   },
+   {
+    "text": "train",
+    "start": 0.215,
+    "end": 0.574
+   },
+   {
+    "text": "does",
+    "start": 0.574,
+    "end": 0.861
+   },
+   {
+    "text": "not",
+    "start": 0.861,
+    "end": 1.076
+   },
+   {
+    "text": "slow",
+    "start": 1.076,
+    "end": 1.364
+   },
+   {
+    "text": "down",
+    "start": 1.364,
+    "end": 1.651
+   },
+   {
+    "text": "for",
+    "start": 1.651,
+    "end": 1.866
+   },
+   {
+    "text": "legends.",
+    "start": 1.866,
+    "end": 2.44
+   },
+   {
+    "text": "Round",
+    "start": 2.44,
+    "end": 2.934
+   },
+   {
+    "text": "one,",
+    "start": 2.934,
+    "end": 3.33
+   },
+   {
+    "text": "the",
+    "start": 3.33,
+    "end": 3.627
+   },
+   {
+    "text": "train.",
+    "start": 3.627,
+    "end": 4.22
+   }
+  ]
+ },
+ "s4-round2.part0.wav": {
+  "key": "3ddf3eafcfde78e1867215978925f65c55b50d9a",
+  "words": [
+   {
+    "text": "Round",
+    "start": 0,
+    "end": 0.51
+   },
+   {
+    "text": "2,",
+    "start": 0.51,
+    "end": 0.714
+   },
+   {
+    "text": "an",
+    "start": 0.714,
+    "end": 0.918
+   },
+   {
+    "text": "intercity,",
+    "start": 0.918,
+    "end": 1.937
+   },
+   {
+    "text": "only",
+    "start": 1.937,
+    "end": 2.345
+   },
+   {
+    "text": "200km",
+    "start": 2.345,
+    "end": 2.855
+   },
+   {
+    "text": "per",
+    "start": 2.855,
+    "end": 3.161
+   },
+   {
+    "text": "hour,",
+    "start": 3.161,
+    "end": 3.671
+   },
+   {
+    "text": "Ronaldo",
+    "start": 3.671,
+    "end": 4.384
+   },
+   {
+    "text": "is",
+    "start": 4.384,
+    "end": 4.588
+   },
+   {
+    "text": "ready.",
+    "start": 4.588,
+    "end": 5.2
+   }
+  ]
+ },
+ "s4-round2.part1.wav": {
+  "key": "a7bd2bcd6c2f230136e369c7b4fe651ba656474c",
+  "words": [
+   {
+    "text": "But",
+    "start": 0,
+    "end": 0.319
+   },
+   {
+    "text": "in",
+    "start": 0.319,
+    "end": 0.532
+   },
+   {
+    "text": "2025,",
+    "start": 0.532,
+    "end": 1.064
+   },
+   {
+    "text": "only",
+    "start": 1.064,
+    "end": 1.489
+   },
+   {
+    "text": "60%",
+    "start": 1.489,
+    "end": 1.808
+   },
+   {
+    "text": "of",
+    "start": 1.808,
+    "end": 2.021
+   },
+   {
+    "text": "German",
+    "start": 2.021,
+    "end": 2.659
+   },
+   {
+    "text": "long-distance",
+    "start": 2.659,
+    "end": 4.042
+   },
+   {
+    "text": "trains",
+    "start": 4.042,
+    "end": 4.68
+   },
+   {
+    "text": "arrived",
+    "start": 4.68,
+    "end": 5.31
+   },
+   {
+    "text": "on",
+    "start": 5.31,
+    "end": 5.49
+   },
+   {
+    "text": "time,",
+    "start": 5.49,
+    "end": 5.94
+   },
+   {
+    "text": "so",
+    "start": 5.94,
+    "end": 6.12
+   },
+   {
+    "text": "he",
+    "start": 6.12,
+    "end": 6.3
+   },
+   {
+    "text": "waits.",
+    "start": 6.3,
+    "end": 6.84
+   }
+  ]
+ },
+ "s4-round2.part2.wav": {
+  "key": "78851b477f294f25db9e7191fd716dadbbc50ee7",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.238
+   },
+   {
+    "text": "waits,",
+    "start": 0.238,
+    "end": 0.714
+   },
+   {
+    "text": "then",
+    "start": 0.714,
+    "end": 1.032
+   },
+   {
+    "text": "the",
+    "start": 1.032,
+    "end": 1.27
+   },
+   {
+    "text": "train",
+    "start": 1.27,
+    "end": 1.667
+   },
+   {
+    "text": "is",
+    "start": 1.667,
+    "end": 1.826
+   },
+   {
+    "text": "canceled.",
+    "start": 1.826,
+    "end": 2.54
+   }
+  ]
+ },
+ "s4-round2.part3.wav": {
+  "key": "7964adca6b16e2eca3481811a0065d868083e763",
+  "words": [
+   {
+    "text": "A",
+    "start": 0,
+    "end": 0.071
+   },
+   {
+    "text": "train",
+    "start": 0.071,
+    "end": 0.425
+   },
+   {
+    "text": "that",
+    "start": 0.425,
+    "end": 0.709
+   },
+   {
+    "text": "never",
+    "start": 0.709,
+    "end": 1.063
+   },
+   {
+    "text": "arrives",
+    "start": 1.063,
+    "end": 1.559
+   },
+   {
+    "text": "cannot",
+    "start": 1.559,
+    "end": 1.984
+   },
+   {
+    "text": "hit",
+    "start": 1.984,
+    "end": 2.197
+   },
+   {
+    "text": "you.",
+    "start": 2.197,
+    "end": 2.48
+   },
+   {
+    "text": "Round",
+    "start": 2.48,
+    "end": 2.962
+   },
+   {
+    "text": "two,",
+    "start": 2.962,
+    "end": 3.348
+   },
+   {
+    "text": "Ronaldo.",
+    "start": 3.348,
+    "end": 4.12
+   }
+  ]
+ },
+ "s5-round3.part0.wav": {
+  "key": "2a528355eb8f5df29172c1e2c8758921f133edc3",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.267
+   },
+   {
+    "text": "deciding",
+    "start": 0.267,
+    "end": 0.981
+   },
+   {
+    "text": "round,",
+    "start": 0.981,
+    "end": 1.515
+   },
+   {
+    "text": "a",
+    "start": 1.515,
+    "end": 1.605
+   },
+   {
+    "text": "model",
+    "start": 1.605,
+    "end": 2.05
+   },
+   {
+    "text": "train,",
+    "start": 2.05,
+    "end": 2.585
+   },
+   {
+    "text": "scale",
+    "start": 2.585,
+    "end": 3.031
+   },
+   {
+    "text": "1",
+    "start": 3.031,
+    "end": 3.12
+   },
+   {
+    "text": "to",
+    "start": 3.12,
+    "end": 3.298
+   },
+   {
+    "text": "87,",
+    "start": 3.298,
+    "end": 3.566
+   },
+   {
+    "text": "4",
+    "start": 3.566,
+    "end": 3.655
+   },
+   {
+    "text": "and",
+    "start": 3.655,
+    "end": 3.922
+   },
+   {
+    "text": "a",
+    "start": 3.922,
+    "end": 4.011
+   },
+   {
+    "text": "half",
+    "start": 4.011,
+    "end": 4.368
+   },
+   {
+    "text": "centimetres",
+    "start": 4.368,
+    "end": 5.349
+   },
+   {
+    "text": "tall,",
+    "start": 5.349,
+    "end": 5.794
+   },
+   {
+    "text": "scale",
+    "start": 5.794,
+    "end": 6.24
+   },
+   {
+    "text": "speed",
+    "start": 6.24,
+    "end": 6.739
+   },
+   {
+    "text": "300",
+    "start": 6.739,
+    "end": 7.038
+   },
+   {
+    "text": "kilometres",
+    "start": 7.038,
+    "end": 8.035
+   },
+   {
+    "text": "per",
+    "start": 8.035,
+    "end": 8.334
+   },
+   {
+    "text": "hour,",
+    "start": 8.334,
+    "end": 8.833
+   },
+   {
+    "text": "reel",
+    "start": 8.833,
+    "end": 9.232
+   },
+   {
+    "text": "speed",
+    "start": 9.232,
+    "end": 9.73
+   },
+   {
+    "text": "1",
+    "start": 9.73,
+    "end": 9.83
+   },
+   {
+    "text": "metre",
+    "start": 9.83,
+    "end": 10.328
+   },
+   {
+    "text": "per",
+    "start": 10.328,
+    "end": 10.628
+   },
+   {
+    "text": "second,",
+    "start": 10.628,
+    "end": 11.326
+   },
+   {
+    "text": "is",
+    "start": 11.326,
+    "end": 11.525
+   },
+   {
+    "text": "jump",
+    "start": 11.525,
+    "end": 11.924
+   },
+   {
+    "text": "70",
+    "start": 11.924,
+    "end": 12.123
+   },
+   {
+    "text": "centimetres.",
+    "start": 12.123,
+    "end": 13.32
+   }
+  ]
+ },
+ "s5-round3.part1.wav": {
+  "key": "09ab12c97bc59514a98e849120c513ed75b520cc",
+  "words": [
+   {
+    "text": "Ronaldo",
+    "start": 0,
+    "end": 0.595
+   },
+   {
+    "text": "gets",
+    "start": 0.595,
+    "end": 0.935
+   },
+   {
+    "text": "into",
+    "start": 0.935,
+    "end": 1.275
+   },
+   {
+    "text": "position,",
+    "start": 1.275,
+    "end": 2.04
+   },
+   {
+    "text": "he",
+    "start": 2.04,
+    "end": 2.21
+   },
+   {
+    "text": "jumps.",
+    "start": 2.21,
+    "end": 2.72
+   }
+  ]
+ },
+ "s5-round3.part2.wav": {
+  "key": "831822b2a3a0207bf393f27e823bb9b495ad92c6",
+  "words": [
+   {
+    "text": "65cm",
+    "start": 0,
+    "end": 0.484
+   },
+   {
+    "text": "to",
+    "start": 0.484,
+    "end": 0.726
+   },
+   {
+    "text": "spare,",
+    "start": 0.726,
+    "end": 1.453
+   },
+   {
+    "text": "round",
+    "start": 1.453,
+    "end": 2.058
+   },
+   {
+    "text": "3",
+    "start": 2.058,
+    "end": 2.179
+   },
+   {
+    "text": "and",
+    "start": 2.179,
+    "end": 2.542
+   },
+   {
+    "text": "the",
+    "start": 2.542,
+    "end": 2.905
+   },
+   {
+    "text": "match,",
+    "start": 2.905,
+    "end": 3.632
+   },
+   {
+    "text": "Ronaldo.",
+    "start": 3.632,
+    "end": 4.6
+   }
+  ]
+ },
+ "s6-twist.part0.wav": {
+  "key": "4b4649745abe0c15608cddd7fb984aeaaaed1ce2",
+  "words": [
+   {
+    "text": "One",
+    "start": 0,
+    "end": 0.22
+   },
+   {
+    "text": "more",
+    "start": 0.22,
+    "end": 0.513
+   },
+   {
+    "text": "thing,",
+    "start": 0.513,
+    "end": 0.953
+   },
+   {
+    "text": "the",
+    "start": 0.953,
+    "end": 1.173
+   },
+   {
+    "text": "model",
+    "start": 1.173,
+    "end": 1.54
+   },
+   {
+    "text": "train",
+    "start": 1.54,
+    "end": 1.907
+   },
+   {
+    "text": "was",
+    "start": 1.907,
+    "end": 2.127
+   },
+   {
+    "text": "3",
+    "start": 2.127,
+    "end": 2.2
+   },
+   {
+    "text": "minutes",
+    "start": 2.2,
+    "end": 2.713
+   },
+   {
+    "text": "late.",
+    "start": 2.713,
+    "end": 3.08
+   }
+  ]
+ },
+ "s6-twist.part1.wav": {
+  "key": "0e8a10cab83af1cef31060964897ddf8ca2d7d1c",
+  "words": [
+   {
+    "text": "It",
+    "start": 0,
+    "end": 0.215
+   },
+   {
+    "text": "was",
+    "start": 0.215,
+    "end": 0.537
+   },
+   {
+    "text": "made",
+    "start": 0.537,
+    "end": 0.966
+   },
+   {
+    "text": "in",
+    "start": 0.966,
+    "end": 1.181
+   },
+   {
+    "text": "Germany.",
+    "start": 1.181,
+    "end": 2.04
+   }
+  ]
+ },
+ "s7-verdict.part5.wav": {
+  "key": "93eb3da8bcd29b6945d68416d81cd92be880f0df",
+  "words": [
+   {
+    "text": "Please",
+    "start": 0,
+    "end": 0.48
+   },
+   {
+    "text": "do",
+    "start": 0.48,
+    "end": 0.64
+   },
+   {
+    "text": "not",
+    "start": 0.64,
+    "end": 0.88
+   },
+   {
+    "text": "try",
+    "start": 0.88,
+    "end": 1.12
+   },
+   {
+    "text": "this,",
+    "start": 1.12,
+    "end": 1.52
+   },
+   {
+    "text": "with",
+    "start": 1.52,
+    "end": 1.84
+   },
+   {
+    "text": "any",
+    "start": 1.84,
+    "end": 2.08
+   },
+   {
+    "text": "train,",
+    "start": 2.08,
+    "end": 2.56
+   },
+   {
+    "text": "not",
+    "start": 2.56,
+    "end": 2.8
+   },
+   {
+    "text": "even",
+    "start": 2.8,
+    "end": 3.12
+   },
+   {
+    "text": "a",
+    "start": 3.12,
+    "end": 3.2
+   },
+   {
+    "text": "small",
+    "start": 3.2,
+    "end": 3.6
+   },
+   {
+    "text": "one.",
+    "start": 3.6,
+    "end": 3.92
    }
   ]
  }

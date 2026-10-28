@@ -1,35 +1,28 @@
-import sys; sys.path.insert(0, __file__.rsplit('/episodes/', 1)[0] + '/tools')  # noqa: E702
+import sys; sys.path.insert(0, __file__.rsplit("/episodes/", 1)[0] + "/tools")  # noqa: E702
 from scene import *  # noqa: F403
-from rail import station, ruler, ronaldo, train, hline, y_m, SIU_JS, GY, PLAT, M  # noqa: E402
-sid = "s6-timetable"
+from rail import *  # noqa: E402,F403
+sid = "s6-twist"
 D = TIMING[sid]["duration"]
-w = (station(sid) + train(sid, 1300) + ronaldo(sid, 300, PLAT, 0.8)
-     + f'<g transform="translate(470,{PLAT - 330})"><g id="{sid}-zz"><text font-family="Inter" font-weight="900" font-size="54" fill="#1a1a2e">z z Z</text></g></g>'
-     + f'<g transform="translate(560,{PLAT - 120})"><g id="{sid}-door" opacity="0"><rect x="-60" y="-200" width="120" height="200" rx="10" fill="#2e3b4e" stroke="#1a1a2e" stroke-width="5" /></g></g>')
-cards = (banner(sid, "b", "PROBLEM 3", "The Timetable", 60, 330)
-         + card(sid, "db", "LONG-DISTANCE TRAINS ON TIME, 2025", "~60 %", 40, 380, "gold")
-         + card(sid, "wt", "WAITING", '<span id="s6-timetable-wclk">0 min</span>', 520, 560)
-         + card(sid, "so", "SOLUTION", "Take the train", 60, 380, "gold"))
-js = SIU_JS + """
-      fly("b", C.t, C.db - 0.1);
-      fly("db", C.db, C.board - 0.1);
-      board([[0, "on time"], [C.db + 0.8, "+10 min"], [C.wait, "+30 min"], [C.again, "+55 min"], [C.again + 0.5, "+90 min"], [C.board, "arriving"]]);
-      // he waits ... and waits
-      fly("wt", C.wait, C.board - 0.1, { from: "right" });
-      const wc = document.getElementById("s6-timetable-wclk"), w = { v: 0 };
-      tl.fromTo(w, { v: 0 }, { v: 90, duration: C.board - C.wait, ease: "power1.in", onUpdate() { wc.textContent = Math.round(w.v) + " min"; } }, C.wait);
-      tl.to(S + "r-armL", { rotation: -40, duration: 0.3 }, C.wait);
-      tl.to(S + "r-armR", { rotation: 40, duration: 0.3 }, C.wait);
-      tl.to(S + "r-lids", { opacity: 1, duration: 0.01 }, C.again);
-      tl.fromTo(S + "zz", { opacity: 0, y: 0 }, { opacity: 1, y: -40, duration: 1.0, repeat: 1 }, C.again);
-      // the train finally rolls in, stops, door opens, he gets on
-      tl.fromTo(S + "train", { x: 0 }, { x: -1100, duration: 1.4, ease: "power3.out" }, C.board - 1.2);
-      tl.to(S + "zz", { opacity: 0, duration: 0.1 }, C.board - 0.3);
-      tl.to(S + "r-lids", { opacity: 0, duration: 0.01 }, C.board);
-      tl.to([S + "r-armL", S + "r-armR"], { rotation: 0, duration: 0.3 }, C.board);
-      tl.fromTo(S + "door", { opacity: 0 }, { opacity: 1, duration: 0.2 }, C.board + 0.3);
-      tl.to(S + "kwrap", { x: 260, duration: 1.0, ease: "power1.inOut" }, C.board + 0.6);
-      tl.to(S + "kwrap", { opacity: 0, duration: 0.3 }, C.board + 1.5);
-      fly("so", C.board + 0.4, null);
+mini_board = (f'<g transform="translate(700,{FY - 250})"><rect x="0" y="0" width="230" height="90" rx="8" fill="#1d2a5c" stroke="#1a1a2e" stroke-width="5" />'
+              f'<path d="M60,90 L60,250 M170,90 L170,250" stroke="#3a3f48" stroke-width="10" />'
+              f'<text data-layout-ignore id="{sid}-mbt" x="22" y="60" font-family="CouldMono" font-weight="700" font-size="40" fill="#ffd23f">on time</text></g>')
+w = room(sid) + mini_board + model_train(sid, 380) + boots(sid, 120)
+cards = (banner(sid, "b", "ONE MORE THING", "Round 3, timetable", 60, 330)
+         + card(sid, "lt", "MODEL TRAIN DELAY", "+3 min", 60, 380, "red")
+         + card(sid, "md", "MADE IN", '<span class="flag"></span>Germany', 520, 560, "gold")
+         + scorebug(sid, 2, 1))
+css = SCORE_CSS + MINI_CSS + """
+    .flag { display: inline-block; width: 84px; height: 54px; margin-right: 18px; vertical-align: -4px; border: 4px solid #1a1a2e;
+            background: linear-gradient(#1a1a2e 0 33.3%, #e0412f 33.3% 66.6%, #ffd23f 66.6%); }"""
+js = SIU_JS + SCORE_JS + """
+      const mb = document.getElementById("s6-twist-mbt");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { const t = this.time(); mb.textContent = t >= C.late ? "+3 min" : "on time"; } }, 0);
+      fly("b", 0.1, C.late - 0.1, { from: "top" });
+      // the model finally rolls in and stops
+      tl.fromTo(S + "mt", { x: 900 }, { x: 0, duration: 1.0, ease: "power2.out" }, C.late);
+      tl.fromTo(S + "kwrap", { rotation: 0 }, { rotation: -2, transformOrigin: "50% 100%", duration: 0.25, yoyo: true, repeat: R(D - C.late, 0.25) }, C.late);
+      fly("lt", C.late + 0.2, null);
+      fly("md", C.why, null, { from: "right" });
+      tl.to([S + "mtt-browL", S + "mtt-browR"], { y: -10, duration: 0.2 }, C.why + 0.3);
 """
-scene(sid, w, js, cards)
+scene(sid, w, js, cards, extra_css=css)

@@ -1,17 +1,20 @@
-# Review – 006 Could Cristiano Ronaldo jump high enough to dodge a moving train?
+# Review – 006 v2 Could Cristiano Ronaldo jump high enough to dodge a moving train?
 
-**Render:** 1080×1920, 30 fps, 110.3 s. Ton −14.9 LUFS (true peak −1.5 dB), gemessen, nicht gehört.
-**Stimme:** Kokoro-Vorschau mit Aussprache-Wörterbuch ("Siuuu"); `narration.json` steht auf VoiceStudio `fable`. Wort-Timings echt gemessen.
+**Warum v2:** Der Creator fand v1 langweilig, weil von Anfang an klar war, dass Ronaldo es nicht schafft.
+v2 ist ein "Best of three" mit Score-Bug (CR7 : TRAINS), bei dem jede Runde anders ausgeht.
 
 ## Aufbau
-Headline → Ronaldo (1.87 m, 2.56-m-Kopfball, "NBA", SIUUU) → Zug (3.89 m, ~200 m, 300 km/h, "Arrival time: theoretical")
-→ Problem 1 Höhe (Füße 0.7 m vs. Dach 3.9 m, ~3 m zu kurz; Schnitt bevor der Zug ankommt) → Problem 2 Hang Time (2.4 s vs. 0.75 s → 7 m Sprung = Chinesische Mauer)
-→ Problem 3 Fahrplan (60 % pünktlich, Tafel +10 … +90 min, er schläft ein und steigt ein) → Urteil "NO." / "in Germany the train might not move"
-→ 0 % / 100 % mit SIUUU → "Please do not try this" → Pflicht-Outro.
+Headline + "Three trains, three rounds, best of three" → Ronaldo (1.87 m, 2.56-m-Kopfball, SIUUU)
+→ Runde 1 ICE: 3.9 m Dach vs. 0.7 m, 3 m zu kurz, er rettet sich auf den Bahnsteig, der Zug rauscht durch (0:1)
+→ Runde 2 Intercity: Tafel +10 … +47 min → "cancelled", "A train that never arrives cannot hit you" (1:1)
+→ Runde 3 Modell-ICE 1:87 auf Bodenhöhe: 4.5 cm, 1 m/s, Zeitlupen-Sprung, das Modell fährt unter ihm durch, 65 cm Luft, SIUUU (2:1)
+→ Twist: das Modell hatte +3 min Verspätung, "made in Germany" → Urteil-Stempel "YES." "If the train is small enough. Or late enough."
+→ Final score 2:1, SIUUU, "Please do not try this. With any train. Not even a small one." → Pflicht-Outro.
 
 ## Geprüft
-- `lint` 0/0, `check` 0 Fehler (1 Warnung: Kontrast der noch nicht gesprochenen Untertitel-Wörter, Karaoke-Stil). Snapshots an 23 Zeitpunkten, 8 Frames aus dem MP4.
+- `lint` 0/0, `check` ok. Snapshots an 26 Zeitpunkten (u. a. Sprung über das Modell an 4 Zeitpunkten).
+- Stimme: Kokoro-Vorschau, `narration.json` steht auf VoiceStudio `fable`. Länge 114.5 s.
 
 ## Schwächste Stellen
-- Ronaldo ist maßstabsgetreu eher klein neben dem 3,89-m-Zug.
-- Die Anzeigetafel wird zeitweise von Karten verdeckt.
+- Runde 3 zeigt Ronaldo nur ab den Knien (Maßstab 12 px/cm), das Modell ist klein; der Erzähler und die Karten tragen die Szene.
+- Der Zug in Runde 2 erscheint nie (das ist der Witz), die Szene lebt nur von Tafel, Uhr und Schlaf-"zzZ".

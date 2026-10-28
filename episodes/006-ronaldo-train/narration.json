@@ -6,26 +6,64 @@
   "model": "tts-1",
   "preview_voice": "bm_george",
   "speed": 1.08,
-  "caption": "Could Cristiano Ronaldo jump high enough to dodge a moving train? Physics says no. Deutsche Bahn says maybe. 🚄⚽ Don't try this. #could #ronaldo #cr7 #siuuu #physics #deutschebahn #whatif #fyp",
+  "caption": "Could Cristiano Ronaldo jump high enough to dodge a moving train? Three trains. Best of three. One of them never showed up. 🚄⚽ Don't try this with any train. #could #ronaldo #cr7 #siuuu #physics #deutschebahn #whatif #fyp",
   "scenes": [
-    {"id": "s1-hook",
-     "text": "Could Cristiano Ronaldo jump high enough to dodge a moving train? {{ev}}We looked at the evidence. {{sci}}Scientifically. ||0.2|| {{long}}From the platform."},
-    {"id": "s2-ronaldo",
-     "text": "On the platform: {{name}}Cristiano Ronaldo. {{h}}{1.87|One point eight seven} metres of Portuguese forward. {{hdr}}In {2019|twenty nineteen}, he headed a ball at a height of {2.56|two point five six} metres. {{nba}}A coach compared him to an NBA player. ||0.3|| {{siu}}He lands every jump with the same word. {{word}}Siuuu."},
-    {"id": "s3-train",
-     "text": "On the tracks: {{name}}a German high speed train. {{h}}{3.89|Three point eight nine} metres tall. {{len}}About two hundred metres long. {{v}}Top speed in service: three hundred kilometres per hour. ||0.3|| {{late}}Arrival time: theoretical."},
-    {"id": "s4-height",
-     "text": "Problem one. {{t}}The height. {{need}}To clear the roof, his feet must pass three point nine metres. {{has}}His famous header lifted his feet about seventy centimetres off the ground. {{short}}He is roughly three metres short. ||0.3|| {{slow}}The train does not slow down for legends.",
-     "sfx": [{"name": "whoosh", "cue": "slow", "offset": 0.3, "volume": 0.35}]},
-    {"id": "s5-hang",
-     "text": "Problem two. {{t}}Hang time. {{pass}}At three hundred kilometres per hour, the whole train needs two point four seconds to pass. {{air}}Ronaldo stays in the air for about three quarters of a second. {{need}}To stay up long enough, he would have to jump seven metres high. ||0.3|| {{wall}}That is the height of the Great Wall of China."},
-    {"id": "s6-timetable",
-     "text": "Problem three. {{t}}The timetable. {{db}}In {2025|twenty twenty five}, only sixty percent of German long distance trains arrived on time. {{wait}}So Ronaldo waits. ||0.3|| {{again}}And waits. {{board}}Then he gives up and simply takes the train."},
-    {"id": "s7-verdict",
-     "text": "The verdict. {{q}}Could Cristiano Ronaldo jump high enough to dodge a moving train? ||0.5|| {{no}}No. ||0.4|| {{but}}But in Germany, the train might not be moving. {{p1}}Chance he clears the roof: zero percent. {{p2}}Chance he celebrates anyway: ||0.25|| {{p3}}one hundred. ||0.3|| {{safe}}Please do not try this. At home, or at a station.",
-     "tail": 1.0,
-     "sfx": [{"name": "impact-bass-1", "cue": "no", "offset": 0.14, "volume": 0.4}]},
-    {"id": "s8-outro",
-     "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments."}
+    {
+      "id": "s1-hook",
+      "text": "Could Cristiano Ronaldo jump high enough to dodge a moving train? {{ev}}We tested it. {{three}}Three trains. {{rounds}}Three rounds. ||0.2|| {{score}}Best of three."
+    },
+    {
+      "id": "s2-ronaldo",
+      "text": "The challenger: {{name}}Cristiano Ronaldo. {{h}}{1.87|One point eight seven} metres of Portuguese forward. {{hdr}}In {2019|twenty nineteen}, he headed a ball at a height of {2.56|two point five six} metres. {{siu}}He lands every jump with the same word. {{word}}Siuuu."
+    },
+    {
+      "id": "s3-round1",
+      "text": "Round one. {{name}}A German high speed train. {{h}}{3.89|Three point eight nine} metres tall. {{v}}Three hundred kilometres per hour. {{need}}To clear the roof, his feet must pass almost four metres. {{has}}His famous header lifted them seventy centimetres. {{short}}Three metres short. ||0.3|| {{slow}}The train does not slow down for legends. {{score}}Round one: the train.",
+      "sfx": [
+        {
+          "name": "whoosh",
+          "cue": "slow",
+          "offset": 0.5,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s4-round2",
+      "text": "Round two. {{name}}An Intercity. {{v}}Only two hundred kilometres per hour. {{ready}}Ronaldo is ready. ||0.3|| {{db}}But in {2025|twenty twenty five}, only sixty percent of German long distance trains arrived on time. {{wait}}So he waits. ||0.3|| {{again}}And waits. {{cancel}}Then the train is cancelled. ||0.4|| {{logic}}A train that never arrives cannot hit you. {{score}}Round two: Ronaldo."
+    },
+    {
+      "id": "s5-round3",
+      "text": "The deciding round. {{name}}A model train. {{scale}}Scale one to eighty seven. {{h}}Four and a half centimetres tall. {{v}}Scale speed: three hundred kilometres per hour. {{real}}Real speed: one metre per second. {{has}}His jump: seventy centimetres. ||0.3|| {{go}}Ronaldo gets into position. {{jump}}He jumps. ||0.6|| {{clear}}Sixty five centimetres to spare. {{score}}Round three, and the match: Ronaldo.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "score",
+          "offset": 0.14,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s6-twist",
+      "text": "One more thing. {{late}}The model train was three minutes late. ||0.3|| {{why}}It was made in Germany."
+    },
+    {
+      "id": "s7-verdict",
+      "text": "The verdict. {{q}}Could Cristiano Ronaldo jump high enough to dodge a moving train? ||0.5|| {{yes}}Yes. ||0.4|| {{small}}If the train is small enough. ||0.2|| {{late}}Or late enough. {{p1}}Final score: Ronaldo two, trains one. ||0.3|| {{siu}}Siuuu. ||0.3|| {{safe}}Please do not try this. With any train. Not even a small one.",
+      "tail": 1.0,
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "yes",
+          "offset": 0.14,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s8-outro",
+      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments."
+    }
   ]
 }
