@@ -1,0 +1,1360 @@
+{
+ "duration": 110.595,
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 8.553,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 7.953,
+   "cues": {
+    "ev": 3.133,
+    "sci": 5.029,
+    "long": 6.545
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.51
+    },
+    {
+     "text": "Manuel",
+     "start": 0.51,
+     "end": 0.922
+    },
+    {
+     "text": "Neuer",
+     "start": 0.922,
+     "end": 1.282
+    },
+    {
+     "text": "save",
+     "start": 1.282,
+     "end": 1.59
+    },
+    {
+     "text": "the",
+     "start": 1.59,
+     "end": 1.847
+    },
+    {
+     "text": "Titanic",
+     "start": 1.847,
+     "end": 2.31
+    },
+    {
+     "text": "from",
+     "start": 2.31,
+     "end": 2.619
+    },
+    {
+     "text": "sinking?",
+     "start": 2.619,
+     "end": 3.133
+    },
+    {
+     "text": "We",
+     "start": 3.133,
+     "end": 3.339
+    },
+    {
+     "text": "looked",
+     "start": 3.339,
+     "end": 3.751
+    },
+    {
+     "text": "at",
+     "start": 3.751,
+     "end": 3.956
+    },
+    {
+     "text": "the",
+     "start": 3.956,
+     "end": 4.214
+    },
+    {
+     "text": "evidence.",
+     "start": 4.214,
+     "end": 4.779
+    },
+    {
+     "text": "Scientifically.",
+     "start": 5.029,
+     "end": 6.245
+    },
+    {
+     "text": "And",
+     "start": 6.545,
+     "end": 6.834
+    },
+    {
+     "text": "for",
+     "start": 6.834,
+     "end": 7.122
+    },
+    {
+     "text": "far",
+     "start": 7.122,
+     "end": 7.411
+    },
+    {
+     "text": "too",
+     "start": 7.411,
+     "end": 7.699
+    },
+    {
+     "text": "long.",
+     "start": 7.699,
+     "end": 8.103
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s2-titanic",
+   "start": 8.553,
+   "duration": 14.273,
+   "voice": "assets/voice/s2-titanic.wav",
+   "voiceStart": 0.15,
+   "speech": 13.123,
+   "cues": {
+    "name": 0.987,
+    "tons": 2.532,
+    "uns": 6.265,
+    "date": 8.775,
+    "won": 12.014
+   },
+   "words": [
+    {
+     "text": "Subject",
+     "start": 0.15,
+     "end": 0.729
+    },
+    {
+     "text": "A.",
+     "start": 0.729,
+     "end": 0.987
+    },
+    {
+     "text": "The",
+     "start": 0.987,
+     "end": 1.309
+    },
+    {
+     "text": "R",
+     "start": 1.309,
+     "end": 1.502
+    },
+    {
+     "text": "M",
+     "start": 1.502,
+     "end": 1.695
+    },
+    {
+     "text": "S",
+     "start": 1.695,
+     "end": 1.888
+    },
+    {
+     "text": "Titanic.",
+     "start": 1.888,
+     "end": 2.532
+    },
+    {
+     "text": "Fifty",
+     "start": 2.532,
+     "end": 2.982
+    },
+    {
+     "text": "two",
+     "start": 2.982,
+     "end": 3.304
+    },
+    {
+     "text": "thousand",
+     "start": 3.304,
+     "end": 3.948
+    },
+    {
+     "text": "tonnes",
+     "start": 3.948,
+     "end": 4.463
+    },
+    {
+     "text": "of",
+     "start": 4.463,
+     "end": 4.72
+    },
+    {
+     "text": "Edwardian",
+     "start": 4.72,
+     "end": 5.428
+    },
+    {
+     "text": "confidence.",
+     "start": 5.428,
+     "end": 6.265
+    },
+    {
+     "text": "Officially,",
+     "start": 6.265,
+     "end": 7.101
+    },
+    {
+     "text": "practically",
+     "start": 7.101,
+     "end": 7.938
+    },
+    {
+     "text": "unsinkable.",
+     "start": 7.938,
+     "end": 8.775
+    },
+    {
+     "text": "In",
+     "start": 8.775,
+     "end": 9.032
+    },
+    {
+     "text": "April",
+     "start": 9.032,
+     "end": 9.483
+    },
+    {
+     "text": "1912,",
+     "start": 9.483,
+     "end": 9.934
+    },
+    {
+     "text": "it",
+     "start": 9.934,
+     "end": 10.191
+    },
+    {
+     "text": "met",
+     "start": 10.191,
+     "end": 10.513
+    },
+    {
+     "text": "an",
+     "start": 10.513,
+     "end": 10.77
+    },
+    {
+     "text": "iceberg.",
+     "start": 10.77,
+     "end": 11.414
+    },
+    {
+     "text": "The",
+     "start": 12.014,
+     "end": 12.329
+    },
+    {
+     "text": "iceberg",
+     "start": 12.329,
+     "end": 12.895
+    },
+    {
+     "text": "won.",
+     "start": 12.895,
+     "end": 13.273
+    }
+   ],
+   "sfx": [
+    {
+     "name": "pop",
+     "cue": "won",
+     "offset": 0.21,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "id": "s3-neuer",
+   "start": 22.826,
+   "duration": 18.415,
+   "voice": "assets/voice/s3-neuer.wav",
+   "voiceStart": 0.15,
+   "speech": 17.815,
+   "cues": {
+    "name": 0.959,
+    "h": 1.954,
+    "wc": 4.381,
+    "out": 5.936,
+    "ice": 12.282,
+    "zero": 16.216
+   },
+   "words": [
+    {
+     "text": "Subject",
+     "start": 0.15,
+     "end": 0.71
+    },
+    {
+     "text": "B.",
+     "start": 0.71,
+     "end": 0.959
+    },
+    {
+     "text": "Manuel",
+     "start": 0.959,
+     "end": 1.457
+    },
+    {
+     "text": "Neuer.",
+     "start": 1.457,
+     "end": 1.954
+    },
+    {
+     "text": "1.93",
+     "start": 1.954,
+     "end": 2.328
+    },
+    {
+     "text": "metres",
+     "start": 2.328,
+     "end": 2.825
+    },
+    {
+     "text": "of",
+     "start": 2.825,
+     "end": 3.074
+    },
+    {
+     "text": "German",
+     "start": 3.074,
+     "end": 3.572
+    },
+    {
+     "text": "goalkeeper.",
+     "start": 3.572,
+     "end": 4.381
+    },
+    {
+     "text": "World",
+     "start": 4.381,
+     "end": 4.816
+    },
+    {
+     "text": "champion,",
+     "start": 4.816,
+     "end": 5.501
+    },
+    {
+     "text": "2014.",
+     "start": 5.501,
+     "end": 5.936
+    },
+    {
+     "text": "Widely",
+     "start": 5.936,
+     "end": 6.434
+    },
+    {
+     "text": "credited",
+     "start": 6.434,
+     "end": 7.056
+    },
+    {
+     "text": "with",
+     "start": 7.056,
+     "end": 7.429
+    },
+    {
+     "text": "inventing",
+     "start": 7.429,
+     "end": 8.114
+    },
+    {
+     "text": "the",
+     "start": 8.114,
+     "end": 8.425
+    },
+    {
+     "text": "act",
+     "start": 8.425,
+     "end": 8.736
+    },
+    {
+     "text": "of",
+     "start": 8.736,
+     "end": 8.985
+    },
+    {
+     "text": "leaving",
+     "start": 8.985,
+     "end": 9.544
+    },
+    {
+     "text": "his",
+     "start": 9.544,
+     "end": 9.856
+    },
+    {
+     "text": "own",
+     "start": 9.856,
+     "end": 10.167
+    },
+    {
+     "text": "goal",
+     "start": 10.167,
+     "end": 10.54
+    },
+    {
+     "text": "for",
+     "start": 10.54,
+     "end": 10.851
+    },
+    {
+     "text": "no",
+     "start": 10.851,
+     "end": 11.1
+    },
+    {
+     "text": "apparent",
+     "start": 11.1,
+     "end": 11.722
+    },
+    {
+     "text": "reason.",
+     "start": 11.722,
+     "end": 12.282
+    },
+    {
+     "text": "He",
+     "start": 12.282,
+     "end": 12.531
+    },
+    {
+     "text": "has",
+     "start": 12.531,
+     "end": 12.842
+    },
+    {
+     "text": "stopped",
+     "start": 12.842,
+     "end": 13.402
+    },
+    {
+     "text": "thousands",
+     "start": 13.402,
+     "end": 14.086
+    },
+    {
+     "text": "of",
+     "start": 14.086,
+     "end": 14.335
+    },
+    {
+     "text": "fast-moving",
+     "start": 14.335,
+     "end": 15.144
+    },
+    {
+     "text": "objects.",
+     "start": 15.144,
+     "end": 15.766
+    },
+    {
+     "text": "None",
+     "start": 16.216,
+     "end": 16.534
+    },
+    {
+     "text": "of",
+     "start": 16.534,
+     "end": 16.746
+    },
+    {
+     "text": "them",
+     "start": 16.746,
+     "end": 17.064
+    },
+    {
+     "text": "were",
+     "start": 17.064,
+     "end": 17.382
+    },
+    {
+     "text": "icebergs.",
+     "start": 17.382,
+     "end": 17.965
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh-short",
+     "cue": "out",
+     "offset": 0.27,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s4-punch",
+   "start": 41.241,
+   "duration": 15.002,
+   "voice": "assets/voice/s4-punch.wav",
+   "voiceStart": 0.15,
+   "speech": 14.402,
+   "cues": {
+    "t": 0.842,
+    "ball": 1.742,
+    "berg": 4.441,
+    "ratio": 8.662,
+    "busy": 12.227
+   },
+   "words": [
+    {
+     "text": "Plan",
+     "start": 0.15,
+     "end": 0.565
+    },
+    {
+     "text": "A.",
+     "start": 0.565,
+     "end": 0.842
+    },
+    {
+     "text": "The",
+     "start": 0.842,
+     "end": 1.188
+    },
+    {
+     "text": "punch.",
+     "start": 1.188,
+     "end": 1.742
+    },
+    {
+     "text": "A",
+     "start": 1.742,
+     "end": 1.949
+    },
+    {
+     "text": "football",
+     "start": 1.949,
+     "end": 2.641
+    },
+    {
+     "text": "weighs",
+     "start": 2.641,
+     "end": 3.195
+    },
+    {
+     "text": "0.43",
+     "start": 3.195,
+     "end": 3.61
+    },
+    {
+     "text": "kilograms.",
+     "start": 3.61,
+     "end": 4.441
+    },
+    {
+     "text": "The",
+     "start": 4.441,
+     "end": 4.787
+    },
+    {
+     "text": "iceberg",
+     "start": 4.787,
+     "end": 5.41
+    },
+    {
+     "text": "weighed",
+     "start": 5.41,
+     "end": 6.033
+    },
+    {
+     "text": "an",
+     "start": 6.033,
+     "end": 6.309
+    },
+    {
+     "text": "estimated",
+     "start": 6.309,
+     "end": 7.071
+    },
+    {
+     "text": "1.5",
+     "start": 7.071,
+     "end": 7.417
+    },
+    {
+     "text": "million",
+     "start": 7.417,
+     "end": 8.04
+    },
+    {
+     "text": "tonnes.",
+     "start": 8.04,
+     "end": 8.662
+    },
+    {
+     "text": "That",
+     "start": 8.662,
+     "end": 9.078
+    },
+    {
+     "text": "is",
+     "start": 9.078,
+     "end": 9.354
+    },
+    {
+     "text": "roughly",
+     "start": 9.354,
+     "end": 9.977
+    },
+    {
+     "text": "3.5",
+     "start": 9.977,
+     "end": 10.323
+    },
+    {
+     "text": "billion",
+     "start": 10.323,
+     "end": 10.946
+    },
+    {
+     "text": "footballs.",
+     "start": 10.946,
+     "end": 11.777
+    },
+    {
+     "text": "A",
+     "start": 12.227,
+     "end": 12.41
+    },
+    {
+     "text": "busy",
+     "start": 12.41,
+     "end": 12.777
+    },
+    {
+     "text": "evening,",
+     "start": 12.777,
+     "end": 13.389
+    },
+    {
+     "text": "even",
+     "start": 13.389,
+     "end": 13.756
+    },
+    {
+     "text": "for",
+     "start": 13.756,
+     "end": 14.062
+    },
+    {
+     "text": "Neuer.",
+     "start": 14.062,
+     "end": 14.552
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "ratio",
+     "offset": 0.46,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s5-sprint",
+   "start": 56.243,
+   "duration": 17.633,
+   "voice": "assets/voice/s5-sprint.wav",
+   "voiceStart": 0.15,
+   "speech": 17.033,
+   "cues": {
+    "t": 0.76,
+    "look": 2.163,
+    "run": 6.677,
+    "spare": 9.605,
+    "shout": 13.265,
+    "he": 16.266
+   },
+   "words": [
+    {
+     "text": "Plan",
+     "start": 0.15,
+     "end": 0.516
+    },
+    {
+     "text": "B.",
+     "start": 0.516,
+     "end": 0.76
+    },
+    {
+     "text": "The",
+     "start": 0.76,
+     "end": 1.065
+    },
+    {
+     "text": "sweeper",
+     "start": 1.065,
+     "end": 1.614
+    },
+    {
+     "text": "keeper.",
+     "start": 1.614,
+     "end": 2.163
+    },
+    {
+     "text": "The",
+     "start": 2.163,
+     "end": 2.468
+    },
+    {
+     "text": "lookout",
+     "start": 2.468,
+     "end": 3.017
+    },
+    {
+     "text": "spotted",
+     "start": 3.017,
+     "end": 3.566
+    },
+    {
+     "text": "the",
+     "start": 3.566,
+     "end": 3.871
+    },
+    {
+     "text": "iceberg",
+     "start": 3.871,
+     "end": 4.42
+    },
+    {
+     "text": "about",
+     "start": 4.42,
+     "end": 4.847
+    },
+    {
+     "text": "37",
+     "start": 4.847,
+     "end": 5.091
+    },
+    {
+     "text": "seconds",
+     "start": 5.091,
+     "end": 5.64
+    },
+    {
+     "text": "before",
+     "start": 5.64,
+     "end": 6.128
+    },
+    {
+     "text": "impact.",
+     "start": 6.128,
+     "end": 6.677
+    },
+    {
+     "text": "Neuer",
+     "start": 6.677,
+     "end": 7.104
+    },
+    {
+     "text": "sprints",
+     "start": 7.104,
+     "end": 7.653
+    },
+    {
+     "text": "the",
+     "start": 7.653,
+     "end": 7.958
+    },
+    {
+     "text": "269",
+     "start": 7.958,
+     "end": 8.263
+    },
+    {
+     "text": "metre",
+     "start": 8.263,
+     "end": 8.69
+    },
+    {
+     "text": "deck",
+     "start": 8.69,
+     "end": 9.056
+    },
+    {
+     "text": "in",
+     "start": 9.056,
+     "end": 9.3
+    },
+    {
+     "text": "34.",
+     "start": 9.3,
+     "end": 9.605
+    },
+    {
+     "text": "He",
+     "start": 9.605,
+     "end": 9.849
+    },
+    {
+     "text": "reaches",
+     "start": 9.849,
+     "end": 10.398
+    },
+    {
+     "text": "the",
+     "start": 10.398,
+     "end": 10.703
+    },
+    {
+     "text": "bridge",
+     "start": 10.703,
+     "end": 11.191
+    },
+    {
+     "text": "with",
+     "start": 11.191,
+     "end": 11.557
+    },
+    {
+     "text": "three",
+     "start": 11.557,
+     "end": 11.984
+    },
+    {
+     "text": "seconds",
+     "start": 11.984,
+     "end": 12.533
+    },
+    {
+     "text": "to",
+     "start": 12.533,
+     "end": 12.777
+    },
+    {
+     "text": "spare,",
+     "start": 12.777,
+     "end": 13.265
+    },
+    {
+     "text": "and",
+     "start": 13.265,
+     "end": 13.57
+    },
+    {
+     "text": "does",
+     "start": 13.57,
+     "end": 13.936
+    },
+    {
+     "text": "what",
+     "start": 13.936,
+     "end": 14.302
+    },
+    {
+     "text": "goalkeepers",
+     "start": 14.302,
+     "end": 15.095
+    },
+    {
+     "text": "do",
+     "start": 15.095,
+     "end": 15.339
+    },
+    {
+     "text": "best.",
+     "start": 15.339,
+     "end": 15.766
+    },
+    {
+     "text": "He",
+     "start": 16.266,
+     "end": 16.548
+    },
+    {
+     "text": "shouts.",
+     "start": 16.548,
+     "end": 17.183
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh",
+     "cue": "run",
+     "offset": -0.03,
+     "volume": 0.35
+    },
+    {
+     "name": "ping",
+     "cue": "spare",
+     "offset": -0.24,
+     "volume": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s6-bucket",
+   "start": 73.876,
+   "duration": 15.479,
+   "voice": "assets/voice/s6-bucket.wav",
+   "voiceStart": 0.15,
+   "speech": 14.879,
+   "cues": {
+    "t": 0.762,
+    "in": 1.62,
+    "scoop": 6.091,
+    "rate": 8.786,
+    "pump": 10.562,
+    "is": 13.941
+   },
+   "words": [
+    {
+     "text": "Plan",
+     "start": 0.15,
+     "end": 0.517
+    },
+    {
+     "text": "C.",
+     "start": 0.517,
+     "end": 0.762
+    },
+    {
+     "text": "The",
+     "start": 0.762,
+     "end": 1.069
+    },
+    {
+     "text": "bucket.",
+     "start": 1.069,
+     "end": 1.62
+    },
+    {
+     "text": "Water",
+     "start": 1.62,
+     "end": 2.049
+    },
+    {
+     "text": "entered",
+     "start": 2.049,
+     "end": 2.6
+    },
+    {
+     "text": "the",
+     "start": 2.6,
+     "end": 2.906
+    },
+    {
+     "text": "ship",
+     "start": 2.906,
+     "end": 3.274
+    },
+    {
+     "text": "at",
+     "start": 3.274,
+     "end": 3.519
+    },
+    {
+     "text": "an",
+     "start": 3.519,
+     "end": 3.764
+    },
+    {
+     "text": "estimated",
+     "start": 3.764,
+     "end": 4.437
+    },
+    {
+     "text": "400",
+     "start": 4.437,
+     "end": 4.744
+    },
+    {
+     "text": "tonnes",
+     "start": 4.744,
+     "end": 5.234
+    },
+    {
+     "text": "per",
+     "start": 5.234,
+     "end": 5.54
+    },
+    {
+     "text": "minute.",
+     "start": 5.54,
+     "end": 6.091
+    },
+    {
+     "text": "At",
+     "start": 6.091,
+     "end": 6.336
+    },
+    {
+     "text": "two",
+     "start": 6.336,
+     "end": 6.642
+    },
+    {
+     "text": "litres",
+     "start": 6.642,
+     "end": 7.132
+    },
+    {
+     "text": "per",
+     "start": 7.132,
+     "end": 7.438
+    },
+    {
+     "text": "scoop,",
+     "start": 7.438,
+     "end": 7.928
+    },
+    {
+     "text": "Neuer",
+     "start": 7.928,
+     "end": 8.357
+    },
+    {
+     "text": "needs",
+     "start": 8.357,
+     "end": 8.786
+    },
+    {
+     "text": "3,300",
+     "start": 8.786,
+     "end": 9.215
+    },
+    {
+     "text": "scoops",
+     "start": 9.215,
+     "end": 9.705
+    },
+    {
+     "text": "per",
+     "start": 9.705,
+     "end": 10.011
+    },
+    {
+     "text": "second.",
+     "start": 10.011,
+     "end": 10.562
+    },
+    {
+     "text": "At",
+     "start": 10.562,
+     "end": 10.807
+    },
+    {
+     "text": "that",
+     "start": 10.807,
+     "end": 11.175
+    },
+    {
+     "text": "point,",
+     "start": 11.175,
+     "end": 11.664
+    },
+    {
+     "text": "he",
+     "start": 11.664,
+     "end": 11.909
+    },
+    {
+     "text": "is",
+     "start": 11.909,
+     "end": 12.154
+    },
+    {
+     "text": "not",
+     "start": 12.154,
+     "end": 12.461
+    },
+    {
+     "text": "a",
+     "start": 12.461,
+     "end": 12.644
+    },
+    {
+     "text": "goalkeeper.",
+     "start": 12.644,
+     "end": 13.441
+    },
+    {
+     "text": "He",
+     "start": 13.941,
+     "end": 14.182
+    },
+    {
+     "text": "is",
+     "start": 14.182,
+     "end": 14.424
+    },
+    {
+     "text": "a",
+     "start": 14.424,
+     "end": 14.606
+    },
+    {
+     "text": "pump.",
+     "start": 14.606,
+     "end": 15.029
+    }
+   ],
+   "sfx": [
+    {
+     "name": "pop",
+     "cue": "is",
+     "offset": 0.36,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "id": "s7-verdict",
+   "start": 89.355,
+   "duration": 16.781,
+   "voice": "assets/voice/s7-verdict.wav",
+   "voiceStart": 0.15,
+   "speech": 15.831,
+   "cues": {
+    "q": 0.961,
+    "no": 4.086,
+    "line": 5.669,
+    "p1": 10.527,
+    "p2": 12.864,
+    "p3": 14.936
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.42
+    },
+    {
+     "text": "verdict.",
+     "start": 0.42,
+     "end": 0.961
+    },
+    {
+     "text": "Could",
+     "start": 0.961,
+     "end": 1.34
+    },
+    {
+     "text": "Manuel",
+     "start": 1.34,
+     "end": 1.772
+    },
+    {
+     "text": "Neuer",
+     "start": 1.772,
+     "end": 2.151
+    },
+    {
+     "text": "save",
+     "start": 2.151,
+     "end": 2.475
+    },
+    {
+     "text": "the",
+     "start": 2.475,
+     "end": 2.745
+    },
+    {
+     "text": "Titanic?",
+     "start": 2.745,
+     "end": 3.286
+    },
+    {
+     "text": "No.",
+     "start": 4.086,
+     "end": 4.769
+    },
+    {
+     "text": "But",
+     "start": 5.669,
+     "end": 5.976
+    },
+    {
+     "text": "no",
+     "start": 5.976,
+     "end": 6.222
+    },
+    {
+     "text": "goalkeeper",
+     "start": 6.222,
+     "end": 6.96
+    },
+    {
+     "text": "in",
+     "start": 6.96,
+     "end": 7.206
+    },
+    {
+     "text": "history",
+     "start": 7.206,
+     "end": 7.76
+    },
+    {
+     "text": "would",
+     "start": 7.76,
+     "end": 8.19
+    },
+    {
+     "text": "have",
+     "start": 8.19,
+     "end": 8.559
+    },
+    {
+     "text": "come",
+     "start": 8.559,
+     "end": 8.928
+    },
+    {
+     "text": "further",
+     "start": 8.928,
+     "end": 9.482
+    },
+    {
+     "text": "off",
+     "start": 9.482,
+     "end": 9.789
+    },
+    {
+     "text": "his",
+     "start": 9.789,
+     "end": 10.097
+    },
+    {
+     "text": "line.",
+     "start": 10.097,
+     "end": 10.527
+    },
+    {
+     "text": "Chance",
+     "start": 10.527,
+     "end": 11.019
+    },
+    {
+     "text": "of",
+     "start": 11.019,
+     "end": 11.265
+    },
+    {
+     "text": "success:",
+     "start": 11.265,
+     "end": 11.88
+    },
+    {
+     "text": "0.03",
+     "start": 11.88,
+     "end": 12.249
+    },
+    {
+     "text": "percent.",
+     "start": 12.249,
+     "end": 12.864
+    },
+    {
+     "text": "Chance",
+     "start": 12.864,
+     "end": 13.356
+    },
+    {
+     "text": "he",
+     "start": 13.356,
+     "end": 13.602
+    },
+    {
+     "text": "tries",
+     "start": 13.602,
+     "end": 14.033
+    },
+    {
+     "text": "anyway:",
+     "start": 14.033,
+     "end": 14.586
+    },
+    {
+     "text": "100%.",
+     "start": 14.936,
+     "end": 15.981
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "no",
+     "offset": 0.14,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s8-outro",
+   "start": 106.136,
+   "duration": 4.459,
+   "voice": "assets/voice/s8-outro.wav",
+   "voiceStart": 0.15,
+   "speech": 2.709,
+   "cues": {
+    "c": 1.505
+   },
+   "words": [
+    {
+     "text": "Who",
+     "start": 0.15,
+     "end": 0.376
+    },
+    {
+     "text": "should",
+     "start": 0.376,
+     "end": 0.737
+    },
+    {
+     "text": "we",
+     "start": 0.737,
+     "end": 0.918
+    },
+    {
+     "text": "send",
+     "start": 0.918,
+     "end": 1.189
+    },
+    {
+     "text": "next?",
+     "start": 1.189,
+     "end": 1.505
+    },
+    {
+     "text": "Tell",
+     "start": 1.505,
+     "end": 1.776
+    },
+    {
+     "text": "us",
+     "start": 1.776,
+     "end": 1.956
+    },
+    {
+     "text": "in",
+     "start": 1.956,
+     "end": 2.137
+    },
+    {
+     "text": "the",
+     "start": 2.137,
+     "end": 2.363
+    },
+    {
+     "text": "comments.",
+     "start": 2.363,
+     "end": 2.859
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}

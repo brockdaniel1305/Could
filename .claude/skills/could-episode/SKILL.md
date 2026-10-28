@@ -1,0 +1,64 @@
+---
+name: could-episode
+description: Make a new episode of the "COULD?" TikTok mockumentary channel from a one-line idea ("Could X do Y?", "Neue Folge: …", "Idee: …"), or apply the creator's feedback to an episode and remember it. Builds the English documentary-style vertical video with HyperFrames - narrator voice, live cartoon reconstruction, facts as text, karaoke captions - renders it and records every new preference in channel/LEARNINGS.md so later episodes follow it automatically.
+---
+
+# COULD? – Folge aus einer Idee
+
+Der Creator schreibt nur die Idee (z. B. *"Could Usain Bolt outrun a Deutsche Bahn ICE?"*). Du lieferst die fertige Folge
+und lernst aus jeder Rückmeldung. Antworte dem Creator auf Deutsch; alles im Video ist Englisch.
+
+## 0. Zuerst lesen, jedes Mal
+1. `channel/LEARNINGS.md`: verbindliche Wünsche und Erfahrungen. **Hat Vorrang vor allem anderen.**
+2. `channel/FORMAT.md` (Aufbau und Skriptregeln), `channel/STYLE.md` (Layout, Cartoon, Sound), `channel/IDEAS.md`.
+3. Die HyperFrames-Skills (`/hyperframes`, `/hyperframes-cli`, `/media-use`) für Vertrag, Lint- und Check-Regeln.
+   Die letzte Folge (`episodes/<höchste Nr>/src/`) ist die Referenz-Implementierung.
+
+## 1. Folge anlegen
+- Nummer = nächste freie Nummer in `episodes/`, Ordner `episodes/<nnn>-<slug>/` (z. B. `002-bolt-ice`).
+- `FACTS.md`: jede Zahl, die im Video vorkommt, mit Quelle (WebSearch, falls verfügbar). Unsichere Zahlen heißen im Skript "estimated".
+  Rechnungen (z. B. "3.5 billion footballs") nachrechnen und den Rechenweg notieren.
+
+## 2. Skript: `narration.json`
+Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `voice` (`bm_george`), `speed` (1.08), `caption`
+(Posting-Text mit Hashtags, immer `#could`), `scenes[]` mit `id`, `text`, optional `tail` und `sfx`.
+- Szenenfolge und Längen laut FORMAT.md (8 Szenen, 90–115 s).
+- Markup: `{shown|spoken}`, `{{cue}}` vor jedem Wort, auf dem etwas passieren soll, `||0.6||` für Kunstpausen.
+- `sfx`: `{"name", "cue", "offset", "volume"}` aus `.claude/skills/media-use/audio/assets/sfx/manifest.json`.
+  `offset` so wählen, dass die Spitze des Sounds 1 Frame nach dem Bild liegt (Spitzen: `npx hyperframes audio <file> --json`).
+
+Dann: `python3 tools/build_episode.py episodes/<ep>`. Das erzeugt Stimme, Wort-Timings und Cue-Zeiten (`timing.json`),
+Untertitel, `index.html` und Stub-Szenen. Die Ausgabe listet die Cue-Zeiten je Szene. Gesamtlänge prüfen, sonst Text kürzen.
+
+## 3. Szenen: `episodes/<ep>/src/sN.py`
+Jede Szene ist ein kleines Python-Skript mit `from scene import *` (`tools/scene.py`):
+`scene(sid, kicker, headline, rows, world_svg, js, extra_css="", overlay="")`.
+- `rows`: max. 3 `(KEY, value[, "gold"])`. Jede Zeile erscheint per `show(S + "rN", C.cue)` auf ihrem Wort.
+- `world_svg`: Cartoon in 984×560 aus `part("<name>", sid + "-x", WL=…)` (`python3 tools/kit.py --list`).
+  Fehlt eine Figur oder ein Objekt, zeichne es als neues `channel/kit/parts/<name>.svg` (Kopfkommentar: Ursprung, Größe, animierbare ids).
+- `js`: GSAP auf `tl`, Zeiten aus `C.<cue>`, Helfer: `show`, `pop`, `swap`, `blink`, `waves`, `puffs`.
+- Jede Aussage des Erzählers hat eine Aktion im Cartoon auf ihrem Cue. Die Pointe bekommt eine Reaktion, die gehalten wird.
+- Frame 0 (Thumbnail) zeigt schon Frage, Hauptfigur und Gegner.
+
+`sh episodes/<ep>/src/build_all.sh` schreibt `compositions/*.html`.
+
+## 4. Prüfen
+1. `cd episodes/<ep> && npx hyperframes lint` und `npx hyperframes check --json`: alle Fehler beheben, Warnungen abwägen.
+2. `npx hyperframes snapshot --at <Cue-Zeiten + 0.5 s>` für jede Pointe, die Bilder ansehen (Kontaktbogen per PIL).
+   Achten auf: Überdeckung von LIVE-Label oder Score-Bug, zu kleiner Text, Figuren außerhalb der Bühne, Aktionen zum falschen Wort.
+3. Nach dem Render (`render --quality looks`): mit `ffprobe` die Dauer prüfen, mit `npx hyperframes audio <mp4> --json` den Ton.
+
+## 5. Rendern und liefern
+- `npx hyperframes render --quality looks --output renders/<ep>.mp4` (dauert in der Cloud-Sandbox mehrere Minuten, im Hintergrund laufen lassen).
+- Dem Creator schicken: Video, Caption mit Hashtags und eine Kurzfassung von `REVIEW.md` (was gemessen wurde und was nicht, die schwächste Stelle).
+- `channel/IDEAS.md`: Status der Folge auf ✅ setzen, neue Ideen aus dem Gespräch ergänzen.
+- Committen und auf den Arbeitsbranch pushen. Videos, Stimmen und Builds sind per `.gitignore` ausgeschlossen.
+
+## 6. Dazulernen (wichtig)
+Jede Rückmeldung des Creators ("zu lang", "mehr Slapstick", "andere Stimme", "nie wieder X") ist eine Regel für die Zukunft:
+1. In der aktuellen Folge umsetzen.
+2. In `channel/LEARNINGS.md` unter "Wünsche des Creators" mit Datum und Folge eintragen, als allgemeine Regel formuliert.
+3. Ist es eine Stil- oder Formatfrage, auch `FORMAT.md`, `STYLE.md` oder den Kit (`scene-template.html`, Parts, `scene.py`) anpassen,
+   damit die nächste Folge es von selbst richtig macht.
+4. Technische Erkenntnisse (Bug, Workaround) unter "Technik" eintragen.
+5. Committen. Widerspricht eine neue Regel einer alten, die alte ersetzen und nicht beide stehen lassen.

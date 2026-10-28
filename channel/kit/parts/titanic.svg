@@ -1,0 +1,26 @@
+<!-- RMS Titanic, side view, bow to the RIGHT. Origin = waterline at the stern (left). 650 long.
+     Animatable: PFX (whole: x drift, rotation for sinking), PFX-smoke1..4 (puffs). -->
+<g id="PFX">
+  <path d="M0,-64 L652,-64 L622,16 L30,16 Q4,6 0,-64 Z" fill="#1d1d24" stroke="#0d0d14" stroke-width="5" stroke-linejoin="round" />
+  <path d="M28,10 L624,10 L620,18 L32,18 Z" fill="#b8352a" />
+  <rect x="0" y="-66" width="652" height="7" fill="#f4efe6" />
+  <g fill="#ffd76a">
+    <circle cx="80" cy="-38" r="5" /><circle cx="120" cy="-38" r="5" /><circle cx="160" cy="-38" r="5" /><circle cx="200" cy="-38" r="5" /><circle cx="240" cy="-38" r="5" /><circle cx="280" cy="-38" r="5" /><circle cx="320" cy="-38" r="5" /><circle cx="360" cy="-38" r="5" /><circle cx="400" cy="-38" r="5" /><circle cx="440" cy="-38" r="5" /><circle cx="480" cy="-38" r="5" /><circle cx="520" cy="-38" r="5" /><circle cx="560" cy="-38" r="5" />
+  </g>
+  <rect x="96" y="-102" width="470" height="38" fill="#f4efe6" stroke="#0d0d14" stroke-width="4" />
+  <rect x="130" y="-126" width="400" height="26" fill="#ece4d4" stroke="#0d0d14" stroke-width="4" />
+  <g fill="#ffd76a"><rect x="110" y="-92" width="18" height="12" /><rect x="150" y="-92" width="18" height="12" /><rect x="190" y="-92" width="18" height="12" /><rect x="230" y="-92" width="18" height="12" /><rect x="270" y="-92" width="18" height="12" /><rect x="310" y="-92" width="18" height="12" /><rect x="350" y="-92" width="18" height="12" /><rect x="390" y="-92" width="18" height="12" /><rect x="430" y="-92" width="18" height="12" /><rect x="470" y="-92" width="18" height="12" /><rect x="510" y="-92" width="18" height="12" /></g>
+  <g stroke="#0d0d14" stroke-width="4" stroke-linejoin="round">
+    <path d="M166,-126 L204,-126 L214,-212 L178,-212 Z" fill="#e3a03a" /><path d="M178,-212 L214,-212 L211,-190 L175,-190 Z" fill="#1d1d24" />
+    <path d="M256,-126 L294,-126 L304,-212 L268,-212 Z" fill="#e3a03a" /><path d="M268,-212 L304,-212 L301,-190 L265,-190 Z" fill="#1d1d24" />
+    <path d="M346,-126 L384,-126 L394,-212 L358,-212 Z" fill="#e3a03a" /><path d="M358,-212 L394,-212 L391,-190 L355,-190 Z" fill="#1d1d24" />
+    <path d="M436,-126 L474,-126 L484,-212 L448,-212 Z" fill="#e3a03a" /><path d="M448,-212 L484,-212 L481,-190 L445,-190 Z" fill="#1d1d24" />
+  </g>
+  <path d="M590,-64 L590,-262 M40,-64 L40,-232" stroke="#0d0d14" stroke-width="5" />
+  <path d="M40,-226 L590,-256" stroke="#0d0d14" stroke-width="2" />
+  <rect x="578" y="-206" width="24" height="16" rx="3" fill="#7a5230" stroke="#0d0d14" stroke-width="3" />
+  <g fill="#9aa3ad" opacity="0.9">
+    <circle id="PFX-smoke1" cx="196" cy="-232" r="16" /><circle id="PFX-smoke2" cx="286" cy="-232" r="16" />
+    <circle id="PFX-smoke3" cx="376" cy="-232" r="16" /><circle id="PFX-smoke4" cx="466" cy="-232" r="16" />
+  </g>
+</g>

@@ -1,0 +1,2 @@
+<!-- Foreground wave strip drawn OVER ships/characters at waterline y=WL. Move PFX-waves2 x by -160. -->
+<g id="PFX"><path id="PFX-waves2" d="M-160,WL q40,12 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 l0,600 l-1280,0 Z" fill="#16365a" stroke="#1a1a2e" stroke-width="4" /></g>

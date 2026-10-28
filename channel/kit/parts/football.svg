@@ -1,0 +1,6 @@
+<!-- Football. Origin = centre, r = 22. -->
+<g id="PFX">
+  <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
+  <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
+</g>

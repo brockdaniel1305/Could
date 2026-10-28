@@ -1,0 +1,106 @@
+{
+ "s1-hook.wav": {
+  "key": "b14581a14b5c54b8b5b5f4d236267f620510426f",
+  "words": []
+ },
+ "s2-titanic.wav": {
+  "key": "8c3b88ec4bbfbfba50e1f16798472481792cd602",
+  "words": []
+ },
+ "s3-neuer.wav": {
+  "key": "066beebc23563a097bb2338dac646f1e6dadc88b",
+  "words": []
+ },
+ "s4-punch.wav": {
+  "key": "a28e0b21c1afa00362b584d5c835454ffe67c6cb",
+  "words": []
+ },
+ "s5-sprint.wav": {
+  "key": "bc4d8bf3c889a55c8280f2139d97172af73bc7f7",
+  "words": []
+ },
+ "s6-bucket.wav": {
+  "key": "2b4549f50cdb363f342d556ff6e823a8c40f29b4",
+  "words": []
+ },
+ "s7-verdict.wav": {
+  "key": "58e1ba365143d38f00e7ed9ed3490cbb09cf29fa",
+  "words": []
+ },
+ "s8-outro.wav": {
+  "key": "3781656e489b4ac451b5e8f9f6c13c08839bf85c",
+  "words": []
+ },
+ "s1-hook.part0.wav": {
+  "key": "e9a658fdd296cd952cc2f1d1c097d4ed98080965",
+  "words": []
+ },
+ "s1-hook.part1.wav": {
+  "key": "f04df5f92042030cf18d0e93b3595b055e09d157",
+  "words": []
+ },
+ "s1-hook.part2.wav": {
+  "key": "683e66b4575714f64768fac5b9d3f48ac6a5b3a4",
+  "words": []
+ },
+ "s2-titanic.part0.wav": {
+  "key": "82a52511a22f23624253a6e18049501397b6cc97",
+  "words": []
+ },
+ "s2-titanic.part1.wav": {
+  "key": "ae1550be90671986df6c12741a4442ef2440e495",
+  "words": []
+ },
+ "s3-neuer.part0.wav": {
+  "key": "5690bd475a6e68a1b68aef13e76d25843308d308",
+  "words": []
+ },
+ "s3-neuer.part1.wav": {
+  "key": "4c8b05f3b6a94c23136d63f5873be417464efc5e",
+  "words": []
+ },
+ "s4-punch.part0.wav": {
+  "key": "844fda6d2293eff1bbaf28568bbca2f637e24ab8",
+  "words": []
+ },
+ "s4-punch.part1.wav": {
+  "key": "dab67663da64152269ab93329d3ac83800dc28bc",
+  "words": []
+ },
+ "s5-sprint.part0.wav": {
+  "key": "4fc7f6dda3ea483830345f3185fb7cad50adc34d",
+  "words": []
+ },
+ "s5-sprint.part1.wav": {
+  "key": "17783255c334554e3d6fe4a7f393f7763aa2198f",
+  "words": []
+ },
+ "s6-bucket.part0.wav": {
+  "key": "898bcb2fceee78c3938824434cd3974b72be2580",
+  "words": []
+ },
+ "s6-bucket.part1.wav": {
+  "key": "df3c97118f4167f639739133793a924659c99282",
+  "words": []
+ },
+ "s7-verdict.part0.wav": {
+  "key": "cc7a0bcb8c039b1cfe0078f48d7e5202379a1899",
+  "words": []
+ },
+ "s7-verdict.part1.wav": {
+  "key": "e132653ec5ea8823125b0515d00daf7e2492524e",
+  "words": []
+ },
+ "s7-verdict.part2.wav": {
+  "key": "f14085a901333f31529d6371feeb9793986a16a2",
+  "words": []
+ },
+ "s7-verdict.part3.wav": {
+  "key": "c040590bd1535f7302bdf43b86b1b89b423e2edd",
+  "words": []
+ },
+ "s8-outro.part0.wav": {
+  "key": "f965a3ad1f4b2f9e4dd8a4ae92cf2d603d4c57e3",
+  "words": []
+ }
+}

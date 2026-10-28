@@ -1,0 +1,197 @@
+<template>
+  <!-- COULD? scene s1-hook · fact panel (top) + live cartoon reconstruction (stage). Cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; }
+    .fp { position: absolute; left: 60px; right: 60px; top: 262px; height: 336px; }
+    .kick { font: 400 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #d9a441; }
+    .head { margin-top: 14px; font: 700 80px/1.02 "CouldSerif"; color: #f4efe6; letter-spacing: -0.01em; }
+    .rows { margin-top: 14px; }
+    .row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0 10px; border-bottom: 2px solid #2e2b26; }
+    .rk { font: 400 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #8c8476; }
+    .rv { font: 900 40px/1 "Inter"; color: #f4efe6; }
+    .rv.gold { color: #f3c55b; }
+    .stage { position: absolute; left: 48px; top: 620px; width: 984px; height: 560px; border-radius: 26px; overflow: hidden; background: #10223a; }
+    .stage-border { position: absolute; left: 48px; top: 620px; width: 984px; height: 560px; border-radius: 26px; border: 5px solid #ece4d4; }
+    .live { position: absolute; left: 76px; top: 644px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.72);
+            font: 700 28px/1 "CouldMono"; letter-spacing: 0.12em; color: #f4efe6; }
+    .live i { display: inline-block; width: 14px; height: 14px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    .bug { position: absolute; right: 76px; top: 644px; padding: 8px 14px; border-radius: 10px; background: #f4efe6; border: 3px solid #1a1a2e;
+           font: 900 30px/1 "Inter"; color: #1a1a2e; opacity: 0; }
+    .bug b { color: #e0412f; }
+    .stage svg { position: absolute; inset: 0; width: 984px; height: 560px; }
+  .head { font-size: 76px; } #s1-hook-head .hl { color: #f4efe6; }
+  </style>
+  <div id="root" data-composition-id="s1-hook" data-width="1080" data-height="1920">
+    <div class="fp">
+      <div class="kick" id="s1-hook-kick">THE QUESTION</div>
+      <div class="head" id="s1-hook-head">Could Manuel Neuer save the <span class="hl">Titanic</span>?</div>
+      <div class="rows">
+        <div class="row" id="s1-hook-r1"><span class="rk">METHOD</span><span class="rv ">Scientific</span></div>
+        <div class="row" id="s1-hook-r2"><span class="rk">TIME SPENT</span><span class="rv gold">Far too long</span></div>
+      </div>
+    </div>
+    <div class="stage" data-layout-allow-overflow>
+      <svg viewBox="0 0 984 560" id="s1-hook-svg">
+        <defs>
+          <filter id="s1-hook-boil"><feTurbulence id="s1-hook-turb" type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="5" /></filter>
+        </defs>
+        <g filter="url(#s1-hook-boil)">
+
+<!-- Night sky + sea for the 984x560 stage. Waterline at y=400 (replace). s1-hook-sea-waves1/2 move x by -160 (seamless). -->
+<g id="s1-hook-sea">
+  <defs><linearGradient id="s1-hook-sea-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1428" /><stop offset="1" stop-color="#223e66" /></linearGradient></defs>
+  <rect x="0" y="0" width="984" height="560" fill="url(#s1-hook-sea-sky)" />
+  <circle cx="820" cy="96" r="38" fill="#fff4cf" stroke="#1a1a2e" stroke-width="4" />
+  <circle cx="806" cy="88" r="7" fill="#e8dcae" /><circle cx="832" cy="108" r="5" fill="#e8dcae" />
+  <g fill="#fff4cf"><circle cx="90" cy="70" r="3" /><circle cx="180" cy="130" r="2" /><circle cx="260" cy="58" r="3" /><circle cx="360" cy="110" r="2" /><circle cx="450" cy="46" r="3" /><circle cx="540" cy="120" r="2" /><circle cx="620" cy="60" r="3" /><circle cx="700" cy="150" r="2" /><circle cx="930" cy="170" r="3" /><circle cx="140" cy="200" r="2" /><circle cx="400" cy="190" r="2" /><circle cx="900" cy="40" r="2" /></g>
+  <rect x="0" y="400" width="984" height="600" fill="#16365a" />
+  <path id="s1-hook-sea-waves1" d="M-160,400 q40,-14 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 l0,600 l-1280,0 Z" fill="#1f4a78" stroke="#1a1a2e" stroke-width="4" />
+</g>
+
+<g transform="translate(860,400) scale(0.95)"><!-- Smug iceberg with a face. Origin = waterline centre. ~260 wide, ~230 tall above water.
+     Animatable: s1-hook-ice (whole), s1-hook-ice-face (x/y), s1-hook-ice-browL/-browR (rotate), s1-hook-ice-grin / s1-hook-ice-smirk (show one). -->
+<g id="s1-hook-ice">
+  <path d="M-150,0 L-110,-120 L-70,-96 L-30,-232 L20,-168 L60,-200 L110,-92 L150,0 Z" fill="#e8f6ff" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M20,-168 L60,-200 L110,-92 L150,0 L40,0 L56,-110 Z" fill="#b6dcf5" />
+  <path d="M-150,0 L150,0 L120,70 L-120,70 Z" fill="#9cc9ea" opacity="0.35" />
+  <g id="s1-hook-ice-face">
+    <ellipse cx="-36" cy="-104" rx="10" ry="12" fill="#1a1a2e" /><ellipse cx="20" cy="-104" rx="10" ry="12" fill="#1a1a2e" />
+    <path d="M-50,-108 L-22,-108 M6,-108 L34,-108" stroke="#e8f6ff" stroke-width="10" />
+    <path id="s1-hook-ice-browL" d="M-54,-130 L-20,-122" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+    <path id="s1-hook-ice-browR" d="M4,-122 L38,-130" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+    <path id="s1-hook-ice-smirk" d="M-30,-66 Q0,-56 26,-76" fill="none" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+    <path id="s1-hook-ice-grin" d="M-36,-72 Q-4,-40 32,-74 Z" fill="#1a1a2e" opacity="0" />
+  </g>
+</g>
+</g>
+<g transform="translate(-260,420) scale(1.3)"><g id="s1-hook-ship">
+  <!-- RMS Titanic, side view, bow to the RIGHT. Origin = waterline at the stern (left). 650 long.
+     Animatable: s1-hook-tit (whole: x drift, rotation for sinking), s1-hook-tit-smoke1..4 (puffs). -->
+<g id="s1-hook-tit">
+  <path d="M0,-64 L652,-64 L622,16 L30,16 Q4,6 0,-64 Z" fill="#1d1d24" stroke="#0d0d14" stroke-width="5" stroke-linejoin="round" />
+  <path d="M28,10 L624,10 L620,18 L32,18 Z" fill="#b8352a" />
+  <rect x="0" y="-66" width="652" height="7" fill="#f4efe6" />
+  <g fill="#ffd76a">
+    <circle cx="80" cy="-38" r="5" /><circle cx="120" cy="-38" r="5" /><circle cx="160" cy="-38" r="5" /><circle cx="200" cy="-38" r="5" /><circle cx="240" cy="-38" r="5" /><circle cx="280" cy="-38" r="5" /><circle cx="320" cy="-38" r="5" /><circle cx="360" cy="-38" r="5" /><circle cx="400" cy="-38" r="5" /><circle cx="440" cy="-38" r="5" /><circle cx="480" cy="-38" r="5" /><circle cx="520" cy="-38" r="5" /><circle cx="560" cy="-38" r="5" />
+  </g>
+  <rect x="96" y="-102" width="470" height="38" fill="#f4efe6" stroke="#0d0d14" stroke-width="4" />
+  <rect x="130" y="-126" width="400" height="26" fill="#ece4d4" stroke="#0d0d14" stroke-width="4" />
+  <g fill="#ffd76a"><rect x="110" y="-92" width="18" height="12" /><rect x="150" y="-92" width="18" height="12" /><rect x="190" y="-92" width="18" height="12" /><rect x="230" y="-92" width="18" height="12" /><rect x="270" y="-92" width="18" height="12" /><rect x="310" y="-92" width="18" height="12" /><rect x="350" y="-92" width="18" height="12" /><rect x="390" y="-92" width="18" height="12" /><rect x="430" y="-92" width="18" height="12" /><rect x="470" y="-92" width="18" height="12" /><rect x="510" y="-92" width="18" height="12" /></g>
+  <g stroke="#0d0d14" stroke-width="4" stroke-linejoin="round">
+    <path d="M166,-126 L204,-126 L214,-212 L178,-212 Z" fill="#e3a03a" /><path d="M178,-212 L214,-212 L211,-190 L175,-190 Z" fill="#1d1d24" />
+    <path d="M256,-126 L294,-126 L304,-212 L268,-212 Z" fill="#e3a03a" /><path d="M268,-212 L304,-212 L301,-190 L265,-190 Z" fill="#1d1d24" />
+    <path d="M346,-126 L384,-126 L394,-212 L358,-212 Z" fill="#e3a03a" /><path d="M358,-212 L394,-212 L391,-190 L355,-190 Z" fill="#1d1d24" />
+    <path d="M436,-126 L474,-126 L484,-212 L448,-212 Z" fill="#e3a03a" /><path d="M448,-212 L484,-212 L481,-190 L445,-190 Z" fill="#1d1d24" />
+  </g>
+  <path d="M590,-64 L590,-262 M40,-64 L40,-232" stroke="#0d0d14" stroke-width="5" />
+  <path d="M40,-226 L590,-256" stroke="#0d0d14" stroke-width="2" />
+  <rect x="578" y="-206" width="24" height="16" rx="3" fill="#7a5230" stroke="#0d0d14" stroke-width="3" />
+  <g fill="#9aa3ad" opacity="0.9">
+    <circle id="s1-hook-tit-smoke1" cx="196" cy="-232" r="16" /><circle id="s1-hook-tit-smoke2" cx="286" cy="-232" r="16" />
+    <circle id="s1-hook-tit-smoke3" cx="376" cy="-232" r="16" /><circle id="s1-hook-tit-smoke4" cx="466" cy="-232" r="16" />
+  </g>
+</g>
+
+  <g transform="translate(585,-64) scale(0.46)"><!-- Manuel-Neuer-style goalkeeper (caricature, not a likeness). Origin = between the feet. ~300 tall.
+     Animatable: s1-hook-k (whole), s1-hook-k-body, s1-hook-k-armL/-armR (rotate, origin top), s1-hook-k-legL/-legR, s1-hook-k-head,
+     s1-hook-k-pupL/-pupR (x/y look), s1-hook-k-browL/-browR, s1-hook-k-m-smile / -m-o / -m-flat (show one), s1-hook-k-lids (blink). -->
+<g id="s1-hook-k">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s1-hook-k-body">
+    <g id="s1-hook-k-legL"><rect x="-32" y="-96" width="26" height="88" rx="10" fill="#8be04e" stroke="#1a1a2e" stroke-width="5" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s1-hook-k-legR"><rect x="6" y="-96" width="26" height="88" rx="10" fill="#8be04e" stroke="#1a1a2e" stroke-width="5" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#22222c" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#8be04e" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <text data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#ffffff" stroke="#1a1a2e" stroke-width="2">1</text>
+    <g transform="translate(-54,-196)"><g id="s1-hook-k-armL"><rect x="-13" y="0" width="26" height="74" rx="13" fill="#8be04e" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="25" fill="#ffffff" stroke="#1a1a2e" stroke-width="5" /><rect x="-22" y="70" width="44" height="10" rx="4" fill="#ff7a1a" /></g></g>
+    <g transform="translate(54,-196)"><g id="s1-hook-k-armR"><rect x="-13" y="0" width="26" height="74" rx="13" fill="#8be04e" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="25" fill="#ffffff" stroke="#1a1a2e" stroke-width="5" /><rect x="-22" y="70" width="44" height="10" rx="4" fill="#ff7a1a" /></g></g>
+    <g transform="translate(0,-250)"><g id="s1-hook-k-head">
+      <circle cx="-44" cy="4" r="10" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#f0c49a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-46,-8 Q-50,-58 0,-58 Q50,-58 46,-8 Q36,-34 0,-36 Q-30,-36 -46,-8 Z" fill="#d9b45a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s1-hook-k-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s1-hook-k-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s1-hook-k-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#f0c49a" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#f0c49a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s1-hook-k-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s1-hook-k-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s1-hook-k-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s1-hook-k-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s1-hook-k-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g>
+</g></g>
+<!-- Foreground wave strip drawn OVER ships/characters at waterline y=414. Move s1-hook-front-waves2 x by -160. -->
+<g id="s1-hook-front"><path id="s1-hook-front-waves2" d="M-160,414 q40,12 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 l0,600 l-1280,0 Z" fill="#16365a" stroke="#1a1a2e" stroke-width="4" /></g>
+
+
+        </g>
+        <rect id="s1-hook-dip" x="0" y="0" width="984" height="560" fill="#000" opacity="0" />
+      </svg>
+    </div>
+    <div class="stage-border" data-layout-ignore></div>
+    <div class="live" id="s1-hook-live"><i></i>LIVE RECONSTRUCTION</div>
+
+  </div>
+  <script>
+    (function () {
+      const S = "#s1-hook-";
+      const D = 8.553;
+      const C = {"ev": 3.133, "sci": 5.029, "long": 6.545};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s1-hook-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s1-hook"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('[id$="-head"]').forEach((el) => { if (el.tagName === "g") gsap.set(el, { transformOrigin: "50% 100%" }); });
+      // helpers
+      const show = (sel, at, d = 0.35) => tl.fromTo(sel, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: d, ease: "expo.out" }, at);
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        const n = Math.max(1, Math.floor(D / 2));
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: n - 1 }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: Math.floor(D / 1.4) }, 0);
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: Math.floor(D / 1.6) }, i * 0.35));
+      };
+
+      waves(S + "sea-waves1", S + "front-waves2");
+      puffs(S + "tit");
+      tl.fromTo(S + "ship", { x: 0, rotation: -0.8, svgOrigin: "325 0" }, { x: 40, rotation: 0.8, duration: D, ease: "sine.inOut" }, 0);
+      // keeper waves at the camera, then notices the iceberg
+      tl.fromTo(S + "k-armR", { rotation: -150 }, { rotation: -120, duration: 0.3, ease: "sine.inOut", repeat: 5, yoyo: true }, 0);
+      tl.to(S + "k-armR", { rotation: 0, duration: 0.4, ease: "power2.inOut" }, 1.9);
+      tl.to([S + "k-pupL", S + "k-pupR"], { x: 5, duration: 0.25, ease: "power2.out" }, C.ev - 0.3);
+      swap(S + "k-m-smile", S + "k-m-o", C.ev);
+      blink(S + "k-lids", 1.2); blink(S + "k-lids", 4.4);
+      // iceberg: smug at 'Scientifically', creeping closer for 'far too long'
+      tl.fromTo([S + "ice-browL", S + "ice-browR"], { y: 0 }, { y: -10, duration: 0.25, ease: "back.out(3)" }, C.sci);
+      swap(S + "ice-smirk", S + "ice-grin", C.sci + 0.2);
+      tl.fromTo(S + "ice", { x: 0 }, { x: -60, duration: D - C.long, ease: "power1.in" }, C.long);
+      // facts
+      tl.fromTo(S + "head .hl", { color: "#f4efe6" }, { color: "#f3c55b", duration: 0.3 }, 1.9);
+      show(S + "r1", C.sci);
+      show(S + "r2", C.long);
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s1-hook"] = tl;
+    })();
+  </script>
+</template>

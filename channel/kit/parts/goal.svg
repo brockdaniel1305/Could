@@ -1,0 +1,9 @@
+<!-- Football goal, front-on. Origin = centre of the goal line. 300 wide, 120 tall. -->
+<g id="PFX">
+  <g stroke="#cfd8dc" stroke-width="2" opacity="0.8">
+    <path d="M-140,-112 L-140,0 M-110,-112 L-110,0 M-80,-112 L-80,0 M-50,-112 L-50,0 M-20,-112 L-20,0 M10,-112 L10,0 M40,-112 L40,0 M70,-112 L70,0 M100,-112 L100,0 M130,-112 L130,0" />
+    <path d="M-150,-90 L150,-90 M-150,-60 L150,-60 M-150,-30 L150,-30" />
+  </g>
+  <path d="M-150,0 L-150,-120 L150,-120 L150,0" fill="none" stroke="#ffffff" stroke-width="12" stroke-linejoin="round" />
+  <path d="M-150,0 L-150,-120 L150,-120 L150,0" fill="none" stroke="#1a1a2e" stroke-width="3" />
+</g>

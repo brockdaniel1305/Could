@@ -1,4 +1,5 @@
 *.mp4
-.build/
-voices/
+renders/
+.hyperframes/
 __pycache__/
+episodes/*/assets/voice/*.part*.wav

@@ -1,0 +1,5 @@
+<!-- Comic impact burst with a word. Origin = centre. Replace WORD. Animate PFX (pop in, scale). -->
+<g id="PFX">
+  <path d="M0,-90 L22,-40 L78,-62 L48,-12 L100,14 L42,26 L58,84 L10,46 L-26,92 L-30,38 L-92,52 L-52,6 L-96,-34 L-38,-30 L-48,-86 L-8,-48 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+  <text x="0" y="14" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="#e0412f" stroke="#1a1a2e" stroke-width="2" transform="rotate(-8)">WORD</text>
+</g>

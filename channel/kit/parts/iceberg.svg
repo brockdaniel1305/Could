@@ -1,0 +1,15 @@
+<!-- Smug iceberg with a face. Origin = waterline centre. ~260 wide, ~230 tall above water.
+     Animatable: PFX (whole), PFX-face (x/y), PFX-browL/-browR (rotate), PFX-grin / PFX-smirk (show one). -->
+<g id="PFX">
+  <path d="M-150,0 L-110,-120 L-70,-96 L-30,-232 L20,-168 L60,-200 L110,-92 L150,0 Z" fill="#e8f6ff" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+  <path d="M20,-168 L60,-200 L110,-92 L150,0 L40,0 L56,-110 Z" fill="#b6dcf5" />
+  <path d="M-150,0 L150,0 L120,70 L-120,70 Z" fill="#9cc9ea" opacity="0.35" />
+  <g id="PFX-face">
+    <ellipse cx="-36" cy="-104" rx="10" ry="12" fill="#1a1a2e" /><ellipse cx="20" cy="-104" rx="10" ry="12" fill="#1a1a2e" />
+    <path d="M-50,-108 L-22,-108 M6,-108 L34,-108" stroke="#e8f6ff" stroke-width="10" />
+    <path id="PFX-browL" d="M-54,-130 L-20,-122" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+    <path id="PFX-browR" d="M4,-122 L38,-130" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+    <path id="PFX-smirk" d="M-30,-66 Q0,-56 26,-76" fill="none" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round" />
+    <path id="PFX-grin" d="M-36,-72 Q-4,-40 32,-74 Z" fill="#1a1a2e" opacity="0" />
+  </g>
+</g>

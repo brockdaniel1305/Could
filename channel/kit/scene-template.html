@@ -1,0 +1,69 @@
+<template>
+  <!--
+    COULD? scene · __ID__
+    Top: fact panel (narrator facts as text). Middle: cartoon stage (the event, live).
+    Times come from timing.json -> scenes[__ID__].cues (seconds local to this scene).
+    Every id is prefixed with the scene id. Copy parts from channel/kit/cartoon.md.
+  -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; }
+    .fp { position: absolute; left: 60px; right: 60px; top: 262px; height: 336px; }
+    .kick { font: 400 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #d9a441; }
+    .head { margin-top: 14px; font: 700 80px/1.02 "CouldSerif"; color: #f4efe6; letter-spacing: -0.01em; }
+    .rows { margin-top: 14px; }
+    .row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0 10px; border-bottom: 2px solid #2e2b26; }
+    .rk { font: 400 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #8c8476; }
+    .rv { font: 900 40px/1 "Inter"; color: #f4efe6; }
+    .rv.gold { color: #f3c55b; }
+    .stage { position: absolute; left: 48px; top: 620px; width: 984px; height: 560px; border-radius: 26px; overflow: hidden; background: #10223a; }
+    .stage-border { position: absolute; left: 48px; top: 620px; width: 984px; height: 560px; border-radius: 26px; border: 5px solid #ece4d4; }
+    .live { position: absolute; left: 76px; top: 644px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.72);
+            font: 700 28px/1 "CouldMono"; letter-spacing: 0.12em; color: #f4efe6; }
+    .live i { display: inline-block; width: 14px; height: 14px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    .bug { position: absolute; right: 76px; top: 644px; padding: 8px 14px; border-radius: 10px; background: #f4efe6; border: 3px solid #1a1a2e;
+           font: 900 30px/1 "Inter"; color: #1a1a2e; opacity: 0; }
+    .bug b { color: #e0412f; }
+    .stage svg { position: absolute; inset: 0; width: 984px; height: 560px; }
+  </style>
+  <div id="root" data-composition-id="__ID__" data-width="1080" data-height="1920">
+    <div class="fp">
+      <div class="kick" id="__ID__-kick">KICKER</div>
+      <div class="head" id="__ID__-head">Headline</div>
+      <div class="rows">
+        <div class="row" id="__ID__-r1"><span class="rk">KEY</span><span class="rv">Value</span></div>
+      </div>
+    </div>
+    <div class="stage" data-layout-allow-overflow>
+      <svg viewBox="0 0 984 560" id="__ID__-svg">
+        <defs>
+          <filter id="__ID__-boil"><feTurbulence id="__ID__-turb" type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="5" /></filter>
+        </defs>
+        <g filter="url(#__ID__-boil)">
+          <!-- cartoon world goes here -->
+        </g>
+      </svg>
+    </div>
+    <div class="stage-border" data-layout-ignore></div>
+    <div class="live" id="__ID__-live"><i></i>LIVE RECONSTRUCTION</div>
+  </div>
+  <script>
+    (function () {
+      const S = "#__ID__-";
+      const D = __DURATION__;
+      const C = {}; // paste cues from timing.json
+      const tl = gsap.timeline({ paused: true });
+      // hand-drawn line boil, 12 fps, seeded by time
+      const turb = document.getElementById("__ID__-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+
+      tl.fromTo(S + "head", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.05);
+      tl.fromTo(S + "r1", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, 1.0);
+
+      window.__timelines["__ID__"] = tl;
+    })();
+  </script>
+</template>

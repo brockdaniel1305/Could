@@ -1,0 +1,97 @@
+{
+  "id": "001",
+  "title": "Could Manuel Neuer save the Titanic?",
+  "voice": "bm_george",
+  "speed": 1.08,
+  "caption": "Could Manuel Neuer save the Titanic? We did the maths. Nobody asked. 🧊⚽ #could #manuelneuer #titanic #documentary #football #whatif #fyp",
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "text": "Could Manuel Neuer save the Titanic from sinking? {{ev}}We looked at the evidence. ||0.25|| {{sci}}Scientifically. ||0.3|| {{long}}And for far too long."
+    },
+    {
+      "id": "s2-titanic",
+      "text": "Subject A. {{name}}The R M S Titanic. {{tons}}Fifty two thousand tonnes of Edwardian confidence. {{uns}}Officially, practically unsinkable. {{date}}In April {1912|nineteen twelve}, it met an iceberg. ||0.6|| {{won}}The iceberg won.",
+      "sfx": [
+        {
+          "name": "pop",
+          "cue": "won",
+          "offset": 0.21,
+          "volume": 0.45
+        }
+      ],
+      "tail": 1.0
+    },
+    {
+      "id": "s3-neuer",
+      "text": "Subject B. {{name}}Manuel Neuer. {{h}}{1.93|One point nine three} metres of German goalkeeper. {{wc}}World champion, {2014.|twenty fourteen.} {{out}}Widely credited with inventing the act of leaving his own goal for no apparent reason. {{ice}}He has stopped thousands of fast-moving objects. ||0.45|| {{zero}}None of them were icebergs.",
+      "sfx": [
+        {
+          "name": "whoosh-short",
+          "cue": "out",
+          "offset": 0.27,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s4-punch",
+      "text": "Plan A. {{t}}The punch. {{ball}}A football weighs {0.43|zero point four three} kilograms. {{berg}}The iceberg weighed an estimated {1.5|one point five} million tonnes. {{ratio}}That is roughly {3.5|three and a half} billion footballs. ||0.45|| {{busy}}A busy evening, even for Neuer.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "ratio",
+          "offset": 0.46,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s5-sprint",
+      "text": "Plan B. {{t}}The sweeper keeper. {{look}}The lookout spotted the iceberg about {37|thirty seven} seconds before impact. {{run}}Neuer sprints the {269|two hundred and sixty nine} metre deck in {34.|thirty four.} {{spare}}He reaches the bridge with three seconds to spare, {{shout}}and does what goalkeepers do best. ||0.5|| {{he}}He shouts.",
+      "sfx": [
+        {
+          "name": "whoosh",
+          "cue": "run",
+          "offset": -0.03,
+          "volume": 0.35
+        },
+        {
+          "name": "ping",
+          "cue": "spare",
+          "offset": -0.24,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "id": "s6-bucket",
+      "text": "Plan C. {{t}}The bucket. {{in}}Water entered the ship at an estimated {400|four hundred} tonnes per minute. {{scoop}}At two litres per scoop, Neuer needs {{rate}}{3,300|three thousand, three hundred} scoops per second. {{pump}}At that point, he is not a goalkeeper. ||0.5|| {{is}}He is a pump.",
+      "sfx": [
+        {
+          "name": "pop",
+          "cue": "is",
+          "offset": 0.36,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "id": "s7-verdict",
+      "text": "The verdict. {{q}}Could Manuel Neuer save the Titanic? ||0.8|| {{no}}No. ||0.9|| {{line}}But no goalkeeper in history would have come further off his line. {{p1}}Chance of success: {0.03|zero point zero three} percent. {{p2}}Chance he tries anyway: ||0.35|| {{p3}}{100%.|one hundred.}",
+      "tail": 0.8,
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "no",
+          "offset": 0.14,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s8-outro",
+      "text": "Who should we send next? {{c}}Tell us in the comments."
+    }
+  ]
+}

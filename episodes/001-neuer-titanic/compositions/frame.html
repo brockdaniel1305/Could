@@ -1,0 +1,21 @@
+<template>
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; background: radial-gradient(120% 70% at 50% 45%, #1c1a16 0%, #0f0e0c 70%); }
+    #fr-head { position: absolute; left: 60px; right: 60px; top: 178px; height: 60px; border-bottom: 2px solid #3a362f; }
+    #fr-logo { position: absolute; left: 0; top: 4px; font: 900 40px/1 "Inter"; letter-spacing: 0.08em; color: #ece4d4; }
+    #fr-logo b { color: #d9a441; }
+    #fr-case { position: absolute; right: 0; top: 12px; font: 400 28px/1 "CouldMono"; letter-spacing: 0.14em; color: #8c8476; }
+    #fr-foot { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 400 26px/1.6 "CouldMono"; letter-spacing: 0.2em; color: #4a453d; }
+  </style>
+  <div id="root" data-composition-id="frame" data-width="1080" data-height="1920" data-no-timeline>
+    <div id="fr-head" data-layout-ignore>
+      <div id="fr-logo">COULD<b>?</b></div>
+      <div id="fr-case">CASE FILE 001</div>
+    </div>
+    <div id="fr-foot" data-layout-ignore data-layout-allow-caption-zone>ABSURD QUESTIONS<br />SERIOUS ANSWERS</div>
+  </div>
+</template>

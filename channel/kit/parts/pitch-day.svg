@@ -1,0 +1,10 @@
+<!-- Daytime stadium for the 984x560 stage: sky, stands, striped grass from y=GY. -->
+<g id="PFX">
+  <rect x="0" y="0" width="984" height="560" fill="#8fd3ff" />
+  <path d="M0,120 L984,120 L984,GY L0,GY Z" fill="#3a3f58" />
+  <g fill="#ffcf4a"><circle cx="40" cy="160" r="8" /><circle cx="120" cy="180" r="8" /><circle cx="210" cy="150" r="8" /><circle cx="300" cy="185" r="8" /><circle cx="390" cy="160" r="8" /><circle cx="480" cy="190" r="8" /><circle cx="570" cy="155" r="8" /><circle cx="660" cy="180" r="8" /><circle cx="750" cy="150" r="8" /><circle cx="840" cy="185" r="8" /><circle cx="930" cy="165" r="8" /></g>
+  <g fill="#e0412f"><circle cx="80" cy="200" r="8" /><circle cx="170" cy="215" r="8" /><circle cx="260" cy="205" r="8" /><circle cx="350" cy="220" r="8" /><circle cx="440" cy="200" r="8" /><circle cx="530" cy="225" r="8" /><circle cx="620" cy="210" r="8" /><circle cx="710" cy="220" r="8" /><circle cx="800" cy="200" r="8" /><circle cx="890" cy="215" r="8" /></g>
+  <rect x="0" y="GY" width="984" height="600" fill="#4caf50" />
+  <g fill="#43a047"><rect x="0" y="GY" width="120" height="600" /><rect x="240" y="GY" width="120" height="600" /><rect x="480" y="GY" width="120" height="600" /><rect x="720" y="GY" width="120" height="600" /></g>
+  <path d="M0,GY L984,GY" stroke="#1a1a2e" stroke-width="5" />
+</g>
