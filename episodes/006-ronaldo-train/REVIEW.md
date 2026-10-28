@@ -13,7 +13,8 @@ Headline + "Three trains, three rounds, best of three" → Ronaldo (1.87 m, 2.56
 
 ## Geprüft
 - `lint` 0/0, `check` ok. Snapshots an 26 Zeitpunkten (u. a. Sprung über das Modell an 4 Zeitpunkten).
-- Stimme: Kokoro-Vorschau, `narration.json` steht auf VoiceStudio `fable`. Länge 114.5 s.
+- Render 1080×1920, 114.6 s, Ton −14.8 LUFS (true peak −1.5 dB), gemessen, nicht gehört. Frames aus dem MP4 geprüft.
+- Stimme: Kokoro-Vorschau, `narration.json` steht auf VoiceStudio `fable`.
 
 ## Schwächste Stellen
 - Runde 3 zeigt Ronaldo nur ab den Knien (Maßstab 12 px/cm), das Modell ist klein; der Erzähler und die Karten tragen die Szene.
