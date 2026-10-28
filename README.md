@@ -18,7 +18,7 @@ in [`channel/LEARNINGS.md`](channel/LEARNINGS.md) ein, damit sie ab der nächste
   - `narration.json`: Skript mit Cues, Pausen und Soundeffekten
   - `src/sN.py`: Quelle der Szenen, `compositions/`: erzeugte Szenen (in der HyperFrames-App bearbeitbar)
   - `FACTS.md`: Zahlen mit Quellen
-- `tools/build_episode.py`: Stimme (Kokoro), Wort-Timings, Untertitel und Zeitleiste aus `narration.json`
+- `tools/build_episode.py`: Stimme (VoiceStudio oder Kokoro), Wort-Timings, Untertitel und Zeitleiste aus `narration.json`
 - `tools/scene.py`, `tools/kit.py`: Szenen-Baukasten
 
 ## Von Hand bauen
