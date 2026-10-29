@@ -7,7 +7,7 @@ dust = "".join(f'<circle cx="{x}" cy="{y}" r="{r}" fill="#cfc8b8" stroke="#1a1a2
 w = (part("paris-street", sid + "-ps")
      + mb(sid, 460) + f'<g transform="translate(460,{GY})"><g id="{sid}-dust" opacity="0">{dust}</g></g>'
      + f'<g transform="translate(160,{GY})"><g id="{sid}-nw"><g transform="scale(0.62)">{part("napoleon-horse", sid + "-n")}</g></g></g>'
-     + gauge(sid))
+    )
 cards = (card(sid, "np", "NAPOLEON", "Bonaparte", 40, 380)
          + card(sid, "hs", "TRANSPORT", "1 horse", 560, 380, "gold")
          + card(sid, "s1", "MBAPPÉ", "38 km/h", 40, 380)
@@ -15,7 +15,6 @@ cards = (card(sid, "np", "NAPOLEON", "Bonaparte", 40, 380)
          + card(sid, "fm", "FASTEST MAN IN FRANCE", "No. 2", 40, 560, "red")
          + calendar(sid, "", "BRUMAIRE", "1799"))
 js = JS + """
-      needle(85, 0, 0.01);
       tl.set(S + "m-crown", { opacity: 1 }, 0); tl.set(S + "m-sash", { opacity: 1 }, 0);
       tl.set(S + "m-armL", { rotation: -62 }, 0); tl.set(S + "m-armR", { rotation: 62 }, 0);
       // Napoleon gallops in from the left and rears up
@@ -48,6 +47,5 @@ js = JS + """
       tl.set(S + "m-m-smile", { opacity: 0 }, R1 + 0.3); tl.set(S + "m-m-flat", { opacity: 1 }, R1 + 0.3);
       look("m", 6, 0, R1);
       fly("fm", C.second, null);
-      needle(10, C.second + 0.3);
 """
 scene(sid, w, js, cards, extra_css=CSS)

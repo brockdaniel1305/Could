@@ -10,7 +10,7 @@ w = (part("paris-street", sid + "-ps")
      + mb(sid, 330)
      + f'<mask id="{sid}-mask"><rect width="1080" height="1920" fill="#fff" /><circle cx="330" cy="{GY - 150}" r="300" fill="#000" /></mask>'
      + f'<rect id="{sid}-dim" width="1080" height="1920" fill="#000" opacity="0" mask="url(#{sid}-mask)" />'
-     + gauge(sid))
+    )
 cards = (banner(sid, "b", "THE CANDIDATE", "Kylian Mbappé", 40, 330)
          + card(sid, "wc", "WORLD CHAMPION", "At 19 · 2018", 560, 380, "gold")
          + card(sid, "sp", "TOP SPEED", counter(sid, "kmh", "0 km/h"), 40, 380, "red")
@@ -20,12 +20,9 @@ cards = (banner(sid, "b", "THE CANDIDATE", "Kylian Mbappé", 40, 330)
 js = JS + """
       tl.fromTo(S + "dim", { opacity: 0 }, { opacity: 0.5, duration: 0.4 }, C.name - 0.3);
       fly("b", C.name, C.wc - 0.1);
-      tl.fromTo(S + "gauge", { y: 400 }, { y: 0, duration: 0.5, ease: "back.out(1.4)" }, C.name);
-      needle(0, 0, 0.01);
       // World Cup at 19
       pop(S + "tro", C.wc);
       fly("wc", C.wc + 0.1, C.spd - 0.1, { from: "right" });
-      needle(25, C.wc + 0.3);
       // 38 km/h: one sprint out to the right and back in from the left
       tl.to(S + "dim", { opacity: 0, duration: 0.3 }, C.spd);
       tl.to(S + "tro", { opacity: 0, duration: 0.2 }, C.spd);
@@ -44,6 +41,5 @@ js = JS + """
       tl.to(S + "m-head", { rotation: -8, duration: 0.3 }, C.dec + 0.6);
       tl.to([S + "m-browL", S + "m-browR"], { y: -5, duration: 0.2 }, C.dec + 0.6);
       look("m", 4, -3, C.dec + 0.6);
-      needle(45, C.dec + 0.8);
 """
 scene(sid, w, js, cards, extra_css=CSS)

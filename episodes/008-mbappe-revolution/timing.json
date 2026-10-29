@@ -455,12 +455,6 @@
      "cue": "cel",
      "offset": 0.3,
      "volume": 0.3
-    },
-    {
-     "name": "ding",
-     "cue": "dec",
-     "offset": 0.8,
-     "volume": 0.18
     }
    ]
   },
@@ -655,11 +649,6 @@
      "name": "stomp",
      "at": 4.28,
      "volume": 0.5
-    },
-    {
-     "name": "ping",
-     "at": 4.73,
-     "volume": 0.2
     },
     {
      "name": "creak",
@@ -961,11 +950,6 @@
      "volume": 0.25
     },
     {
-     "name": "fanfare",
-     "at": 10.53,
-     "volume": 0.3
-    },
-    {
      "name": "roar",
      "at": 10.63,
      "volume": 0.25
@@ -1202,11 +1186,6 @@
      "name": "rumble",
      "at": 6.476,
      "volume": 0.3
-    },
-    {
-     "name": "error",
-     "at": 6.879,
-     "volume": 0.25
     }
    ]
   },

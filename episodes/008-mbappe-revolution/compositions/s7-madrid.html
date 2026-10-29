@@ -227,13 +227,7 @@
   <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
   <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
 </g>
-</g></g></g></g><g id="s7-madrid-gauge">
-  <path d="M240,1760 A300,300 0 0 1 840,1760 Z" fill="#f4efe6" stroke="#1a1a2e" stroke-width="8" />
-  <path d="M240,1760 A300,300 0 0 1 390,1500 L540,1760 Z" fill="#e0412f" opacity="0.8" />
-  <path d="M690,1500 A300,300 0 0 1 840,1760 L540,1760 Z" fill="#1f9d55" opacity="0.8" />
-  <path d="M240,1760 L278,1760" stroke="#1a1a2e" stroke-width="8" /><path d="M280,1610 L313,1629" stroke="#1a1a2e" stroke-width="8" /><path d="M390,1500 L409,1533" stroke="#1a1a2e" stroke-width="8" /><path d="M540,1460 L540,1498" stroke="#1a1a2e" stroke-width="8" /><path d="M690,1500 L671,1533" stroke="#1a1a2e" stroke-width="8" /><path d="M800,1610 L767,1629" stroke="#1a1a2e" stroke-width="8" /><path d="M840,1760 L802,1760" stroke="#1a1a2e" stroke-width="8" /><g transform="translate(170,1760) scale(1,-1)"><rect x="-30" y="-18" width="60" height="50" rx="16" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" /><rect x="-12" y="-62" width="22" height="50" rx="10" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" /></g><g transform="translate(910,1760) scale(1,1)"><rect x="-30" y="-18" width="60" height="50" rx="16" fill="#1f9d55" stroke="#1a1a2e" stroke-width="6" /><rect x="-12" y="-62" width="22" height="50" rx="10" fill="#1f9d55" stroke="#1a1a2e" stroke-width="6" /></g>
-  <g transform="translate(540,1760)"><g id="s7-madrid-needle"><path d="M-14,0 L0,-250 L14,0 Z" fill="#1a1a2e" /></g></g>
-  <circle cx="540" cy="1760" r="30" fill="#ffd23f" stroke="#1a1a2e" stroke-width="7" /></g>
+</g></g></g></g>
       </g>
     </svg>
     <div class="logo" data-layout-ignore>COULD<b>?</b></div>
@@ -347,7 +341,6 @@
       };
       const shakeCrowd = (sel, t0, d, amp = 4) => tl.fromTo(sel, { rotation: -amp }, { rotation: amp, transformOrigin: "50% 100%", duration: 0.2, yoyo: true, repeat: R(d, 0.2), ease: "sine.inOut" }, t0);
 
-      needle(10, 0, 0.01);
       tl.set(S + "m-sash", { opacity: 1 }, 0);
       // enough: off comes the sash, he turns and walks out of the revolution
       fly("en", 0.3, C.go - 0.1);
@@ -364,7 +357,6 @@
       // Madrid
       tl.set(S + "A", { opacity: 0 }, C.rm - 0.15); tl.set(S + "B", { opacity: 1 }, C.rm - 0.15);
       fly("rd", C.rm, C.q - 0.1);
-      needle(40, C.rm + 0.2);
       tl.set(S + "r-armL", { rotation: -62 }, 0); tl.set(S + "r-armR", { rotation: 62 }, 0);
       // who takes the penalties? the team-mates want it; he shakes his head
       fly("q", C.q, null);
@@ -385,7 +377,6 @@
       cross(C.him + 1.0, "r");
       tl.set(S + "r-crown", { opacity: 1 }, C.him + 1.3);
       tl.fromTo(S + "r-crown", { y: -500 }, { y: 0, duration: 0.4, ease: "bounce.out", immediateRender: false }, C.him + 1.3);
-      needle(80, C.him + 0.9);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
       // render end -> start once so every element starts in its earliest state

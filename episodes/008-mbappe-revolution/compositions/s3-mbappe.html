@@ -108,13 +108,7 @@
     </g></g>
   </g>
 </g>
-</g></g></g><mask id="s3-mbappe-mask"><rect width="1080" height="1920" fill="#fff" /><circle cx="330" cy="1050" r="300" fill="#000" /></mask><rect id="s3-mbappe-dim" width="1080" height="1920" fill="#000" opacity="0" mask="url(#s3-mbappe-mask)" /><g id="s3-mbappe-gauge">
-  <path d="M240,1760 A300,300 0 0 1 840,1760 Z" fill="#f4efe6" stroke="#1a1a2e" stroke-width="8" />
-  <path d="M240,1760 A300,300 0 0 1 390,1500 L540,1760 Z" fill="#e0412f" opacity="0.8" />
-  <path d="M690,1500 A300,300 0 0 1 840,1760 L540,1760 Z" fill="#1f9d55" opacity="0.8" />
-  <path d="M240,1760 L278,1760" stroke="#1a1a2e" stroke-width="8" /><path d="M280,1610 L313,1629" stroke="#1a1a2e" stroke-width="8" /><path d="M390,1500 L409,1533" stroke="#1a1a2e" stroke-width="8" /><path d="M540,1460 L540,1498" stroke="#1a1a2e" stroke-width="8" /><path d="M690,1500 L671,1533" stroke="#1a1a2e" stroke-width="8" /><path d="M800,1610 L767,1629" stroke="#1a1a2e" stroke-width="8" /><path d="M840,1760 L802,1760" stroke="#1a1a2e" stroke-width="8" /><g transform="translate(170,1760) scale(1,-1)"><rect x="-30" y="-18" width="60" height="50" rx="16" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" /><rect x="-12" y="-62" width="22" height="50" rx="10" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" /></g><g transform="translate(910,1760) scale(1,1)"><rect x="-30" y="-18" width="60" height="50" rx="16" fill="#1f9d55" stroke="#1a1a2e" stroke-width="6" /><rect x="-12" y="-62" width="22" height="50" rx="10" fill="#1f9d55" stroke="#1a1a2e" stroke-width="6" /></g>
-  <g transform="translate(540,1760)"><g id="s3-mbappe-needle"><path d="M-14,0 L0,-250 L14,0 Z" fill="#1a1a2e" /></g></g>
-  <circle cx="540" cy="1760" r="30" fill="#ffd23f" stroke="#1a1a2e" stroke-width="7" /></g>
+</g></g></g><mask id="s3-mbappe-mask"><rect width="1080" height="1920" fill="#fff" /><circle cx="330" cy="1050" r="300" fill="#000" /></mask><rect id="s3-mbappe-dim" width="1080" height="1920" fill="#000" opacity="0" mask="url(#s3-mbappe-mask)" />
       </g>
     </svg>
     <div class="logo" data-layout-ignore>COULD<b>?</b></div>
@@ -231,12 +225,9 @@
 
       tl.fromTo(S + "dim", { opacity: 0 }, { opacity: 0.5, duration: 0.4 }, C.name - 0.3);
       fly("b", C.name, C.wc - 0.1);
-      tl.fromTo(S + "gauge", { y: 400 }, { y: 0, duration: 0.5, ease: "back.out(1.4)" }, C.name);
-      needle(0, 0, 0.01);
       // World Cup at 19
       pop(S + "tro", C.wc);
       fly("wc", C.wc + 0.1, C.spd - 0.1, { from: "right" });
-      needle(25, C.wc + 0.3);
       // 38 km/h: one sprint out to the right and back in from the left
       tl.to(S + "dim", { opacity: 0, duration: 0.3 }, C.spd);
       tl.to(S + "tro", { opacity: 0, duration: 0.2 }, C.spd);
@@ -255,7 +246,6 @@
       tl.to(S + "m-head", { rotation: -8, duration: 0.3 }, C.dec + 0.6);
       tl.to([S + "m-browL", S + "m-browR"], { y: -5, duration: 0.2 }, C.dec + 0.6);
       look("m", 4, -3, C.dec + 0.6);
-      needle(45, C.dec + 0.8);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
       // render end -> start once so every element starts in its earliest state

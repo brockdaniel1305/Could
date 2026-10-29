@@ -5,6 +5,8 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-29 · 008 · **Kein Barometer/Stimmungs-Meter** unter den Untertiteln mehr (und keine Sounds dazu), "stört das Video".
+  Die untere Hälfte stattdessen mit der Szene selbst füllen (Boden, Menge, Wasser …). Ersetzt die Erfahrung aus 005 (Stimmungs-Barometer).
 - 2026-10-29 · 008 · Lieber **kürzer** (008: ~80 s statt 105 s) und vor allem ein **kurzes Ende**. Pointen über bekannte Eigenschaften
   der Person (Tempo, Jubel, Rolle im Verein) kommen besser an als Vertrags-/Verwaltungs-Gags ("das mit dem Vertrag finde ich komisch").
   Ein Schluss, der die Person in ihre Gegenwart zurückholt (Mbappé → Elfmeter bei Real Madrid), ist gewünscht.
@@ -58,7 +60,7 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   ("he takes the train") und am Ende ein klarer Satz "Please do not try this." (TikTok-Richtlinien zu gefährlichen Handlungen).
 - 006 · Querverweise zahlen sich aus: die benötigten 7 m Sprunghöhe = Höhe der Chinesischen Mauer aus 003 (gleiches Part wiederverwendet).
 - 005 · Running Gags aus dem echten Leben der Person tragen eine ganze Folge (Haalands Meditations-Jubel als Lösung gegen den Löwen,
-  "in the back of the net" gegen den Retiarius). Ein Stimmungs-Barometer (Daumen runter/hoch) füllt die untere Hälfte.
+  "in the back of the net" gegen den Retiarius).
 - 004 · Historische Kriege/NS-Zeit: nie Hitler als Figur, nie NS-Symbole oder Abzeichen (§ 86a StGB, TikTok-Richtlinien), Panzer neutral grau.
   Der Witz zielt nur auf den "Helden" der Folge. Den Creator vorher kurz auf das Reichweiten-Risiko solcher Titel hinweisen.
 - 003 · Physik-Gags gewinnen, wenn das Bild maßstabsgetreu ist (100 px/m, Höhenlineal am Rand) und die Bahnen echt gerechnet werden

@@ -7,7 +7,7 @@ pris = [(140, 1200, 0.7), (270, 1210, 0.72), (400, 1200, 0.7), (530, 1215, 0.72)
 wa = (f'<g id="{sid}-A">' + part("paris-street", sid + "-ps")
       + f'<g transform="translate(800,{GY}) scale(0.72)">{part("bastille", sid + "-bs")}</g>'
       + crowd_defs(sid) + f'<g id="{sid}-crowdA">' + crowd(sid, [(1200, 0.62, 5), (1200, 0.7, 4)], x0=-60, dx=110) + "</g>"
-      + mb(sid, -150) + gauge(sid) + "</g>")
+      + mb(sid, -150) + "</g>")
 wb = (f'<g id="{sid}-B" opacity="0">' + part("cell", sid + "-ce")
       + "".join(cit(sid, f"p{i}", x, y, s, cap="#7a7a72") for i, (x, y, s) in enumerate(pris))
       + mb(sid, 880, 1200, 0.85, name="d") + "</g>")
@@ -20,7 +20,6 @@ cards = (banner(sid, "b", "PLAN A", "Storm the Bastille", 40, 330)
          + calendar(sid, "14", "JULY", "1789"))
 js = JS + """
       fly("b", C.t, C.crowd - 0.1, { from: "top" });
-      needle(45, 0, 0.01);
       // the crowd plods along while the sun crosses the sky
       tl.fromTo(S + "crowdA", { x: 0 }, { x: 180, duration: C.pris - C.crowd, ease: "none" }, C.crowd);
       tl.fromTo(S + "cr", { y: 0 }, { y: -6, duration: 0.3, yoyo: true, repeat: R(C.pris, 0.3) }, 0);
@@ -33,7 +32,6 @@ js = JS + """
       tl.to(S + "bs-bridge", { rotation: -90, transformOrigin: "0% 100%", duration: 0.35, ease: "bounce.out" }, C.mb + 0.15);
       tl.to(S + "mw", { opacity: 0, duration: 0.1 }, C.mb + 0.95);
       fly("mb", C.mb + 0.1, C.pris - 0.2, { from: "right" });
-      needle(60, C.mb + 0.9);
       // inside: seven prisoners; the door creaks open, he stands in the light, arms crossed
       tl.set(S + "A", { opacity: 0 }, C.pris - 0.15); tl.set(S + "B", { opacity: 1 }, C.pris - 0.15);
       tl.set(S + "d-armL", { rotation: -62 }, 0); tl.set(S + "d-armR", { rotation: 62 }, 0);

@@ -10,14 +10,13 @@ wb = (f'<g id="{sid}-B" opacity="0">' + part("pitch-day", sid + "-pd", GY=1010) 
       + mate(sid, "t1", 640, 5) + mate(sid, "t2", 790, 8, hair="#d9b46a")
       + mb(sid, 300, kit=WHITE, name="r") + f'<g transform="translate(372,{GY - 16})"><g id="{sid}-ball"><g transform="scale(0.75)">{part("football", sid + "-fb")}</g></g></g>'
       + "</g>")
-w = wa + wb + gauge(sid)
+w = wa + wb
 cards = (card(sid, "en", "REVOLUTIONS", "Enough", 40, 380)
          + card(sid, "rd", "HIS REAL DICTATORSHIP", "Real Madrid", 40, 380, "gold")
          + card(sid, "q", "WHO TAKES PENALTIES?", "…", 40, 560)
          + card(sid, "hm", "PENALTY TAKER", "Him.", 560, 380, "red")
          + calendar(sid, "", "BRUMAIRE", "1799"))
 js = JS + """
-      needle(10, 0, 0.01);
       tl.set(S + "m-sash", { opacity: 1 }, 0);
       // enough: off comes the sash, he turns and walks out of the revolution
       fly("en", 0.3, C.go - 0.1);
@@ -34,7 +33,6 @@ js = JS + """
       // Madrid
       tl.set(S + "A", { opacity: 0 }, C.rm - 0.15); tl.set(S + "B", { opacity: 1 }, C.rm - 0.15);
       fly("rd", C.rm, C.q - 0.1);
-      needle(40, C.rm + 0.2);
       tl.set(S + "r-armL", { rotation: -62 }, 0); tl.set(S + "r-armR", { rotation: 62 }, 0);
       // who takes the penalties? the team-mates want it; he shakes his head
       fly("q", C.q, null);
@@ -55,6 +53,5 @@ js = JS + """
       cross(C.him + 1.0, "r");
       tl.set(S + "r-crown", { opacity: 1 }, C.him + 1.3);
       tl.fromTo(S + "r-crown", { y: -500 }, { y: 0, duration: 0.4, ease: "bounce.out", immediateRender: false }, C.him + 1.3);
-      needle(80, C.him + 0.9);
 """
 scene(sid, w, js, cards, extra_css=CSS)

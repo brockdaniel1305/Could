@@ -139,13 +139,7 @@
     </g>
   </g>
 </g>
-</g></g></g><g id="s6-horse-gauge">
-  <path d="M240,1760 A300,300 0 0 1 840,1760 Z" fill="#f4efe6" stroke="#1a1a2e" stroke-width="8" />
-  <path d="M240,1760 A300,300 0 0 1 390,1500 L540,1760 Z" fill="#e0412f" opacity="0.8" />
-  <path d="M690,1500 A300,300 0 0 1 840,1760 L540,1760 Z" fill="#1f9d55" opacity="0.8" />
-  <path d="M240,1760 L278,1760" stroke="#1a1a2e" stroke-width="8" /><path d="M280,1610 L313,1629" stroke="#1a1a2e" stroke-width="8" /><path d="M390,1500 L409,1533" stroke="#1a1a2e" stroke-width="8" /><path d="M540,1460 L540,1498" stroke="#1a1a2e" stroke-width="8" /><path d="M690,1500 L671,1533" stroke="#1a1a2e" stroke-width="8" /><path d="M800,1610 L767,1629" stroke="#1a1a2e" stroke-width="8" /><path d="M840,1760 L802,1760" stroke="#1a1a2e" stroke-width="8" /><g transform="translate(170,1760) scale(1,-1)"><rect x="-30" y="-18" width="60" height="50" rx="16" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" /><rect x="-12" y="-62" width="22" height="50" rx="10" fill="#e0412f" stroke="#1a1a2e" stroke-width="6" /></g><g transform="translate(910,1760) scale(1,1)"><rect x="-30" y="-18" width="60" height="50" rx="16" fill="#1f9d55" stroke="#1a1a2e" stroke-width="6" /><rect x="-12" y="-62" width="22" height="50" rx="10" fill="#1f9d55" stroke="#1a1a2e" stroke-width="6" /></g>
-  <g transform="translate(540,1760)"><g id="s6-horse-needle"><path d="M-14,0 L0,-250 L14,0 Z" fill="#1a1a2e" /></g></g>
-  <circle cx="540" cy="1760" r="30" fill="#ffd23f" stroke="#1a1a2e" stroke-width="7" /></g>
+</g></g></g>
       </g>
     </svg>
     <div class="logo" data-layout-ignore>COULD<b>?</b></div>
@@ -260,7 +254,6 @@
       };
       const shakeCrowd = (sel, t0, d, amp = 4) => tl.fromTo(sel, { rotation: -amp }, { rotation: amp, transformOrigin: "50% 100%", duration: 0.2, yoyo: true, repeat: R(d, 0.2), ease: "sine.inOut" }, t0);
 
-      needle(85, 0, 0.01);
       tl.set(S + "m-crown", { opacity: 1 }, 0); tl.set(S + "m-sash", { opacity: 1 }, 0);
       tl.set(S + "m-armL", { rotation: -62 }, 0); tl.set(S + "m-armR", { rotation: 62 }, 0);
       // Napoleon gallops in from the left and rears up
@@ -293,7 +286,6 @@
       tl.set(S + "m-m-smile", { opacity: 0 }, R1 + 0.3); tl.set(S + "m-m-flat", { opacity: 1 }, R1 + 0.3);
       look("m", 6, 0, R1);
       fly("fm", C.second, null);
-      needle(10, C.second + 0.3);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
       // render end -> start once so every element starts in its earliest state
