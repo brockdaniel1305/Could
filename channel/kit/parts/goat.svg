@@ -1,0 +1,16 @@
+<!-- Small white goat (G.O.A.T. gag), side view facing LEFT. Origin = between the feet, ~150 tall, ~170 long.
+     Animatable: PFX, PFX-legF/-legB (walk), PFX-head (nod), PFX-jaw. -->
+<g id="PFX">
+  <ellipse cx="0" cy="4" rx="70" ry="8" fill="#000" opacity="0.22" />
+  <g id="PFX-legB"><rect x="30" y="-62" width="14" height="60" rx="6" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="4" /><rect x="50" y="-62" width="14" height="60" rx="6" fill="#e6e6e3" stroke="#1a1a2e" stroke-width="4" /></g>
+  <g id="PFX-legF"><rect x="-44" y="-62" width="14" height="60" rx="6" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="4" /><rect x="-24" y="-62" width="14" height="60" rx="6" fill="#e6e6e3" stroke="#1a1a2e" stroke-width="4" /></g>
+  <ellipse cx="10" cy="-82" rx="70" ry="38" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" />
+  <path d="M78,-104 q16,-10 14,8" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+  <g transform="translate(-56,-104)"><g id="PFX-head">
+    <path d="M-6,-34 Q-24,-60 -6,-70 M6,-34 Q2,-62 20,-66" fill="none" stroke="#8a6f52" stroke-width="7" stroke-linecap="round" />
+    <ellipse cx="-14" cy="-10" rx="26" ry="32" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" transform="rotate(-20 -14 -10)" />
+    <path d="M8,-30 L30,-40 L22,-22 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+    <circle cx="-16" cy="-18" r="5" fill="#1a1a2e" />
+    <g id="PFX-jaw"><path d="M-36,10 Q-34,34 -26,40 Q-22,26 -20,16 Z" fill="#e6e6e3" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" /></g>
+  </g></g>
+</g>

@@ -1,0 +1,896 @@
+<template>
+  <!-- COULD? scene s5-dribble · full-frame cartoon + flying fact cards. Source: src/s5.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+    .score { position: absolute; left: 560px; top: 184px; display: flex; align-items: center; gap: 14px; padding: 10px 22px;
+             background: #1a1a2e; border: 5px solid #f4efe6; border-radius: 18px; }
+    .score .sn { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #f4efe6; }
+    .score .sv { font: 900 56px/1 "Inter"; color: #ffd23f; min-width: 34px; text-align: center; }
+    .score .sc { font: 900 48px/1 "Inter"; color: #f4efe6; }
+    .card .cv svg { display: block; margin-top: 6px; }
+    .stamp { position: absolute; left: 90px; top: 520px; width: 900px; height: 360px; border: 24px solid #ffd23f; border-radius: 34px;
+             display: flex; align-items: center; justify-content: center; font: 900 118px/1 "Inter"; opacity: 0;
+             background: rgba(26, 26, 46, 0.35); letter-spacing: -0.02em; }
+  </style>
+  <div id="root" data-composition-id="s5-dribble" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s5-dribble-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s5-dribble-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s5-dribble-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s5-dribble-boil)">
+<!-- Battlefield at dawn, full frame 1080x1920: sky (s5-dribble-bf-sky, recolour for night), sun s5-dribble-bf-sun / moon s5-dribble-bf-moon, hills, a small
+     Colosseum on the horizon (y=860), striped grass to the bottom. Chalk pitch lines s5-dribble-bf-lines (paths with pathLength=1: draw on with
+     strokeDashoffset 1 -> 0). Graphics only (no text). -->
+<g id="s5-dribble-bf">
+  <rect id="s5-dribble-bf-sky" x="0" y="0" width="1080" height="870" fill="#f6c58a" />
+  <rect id="s5-dribble-bf-haze" x="0" y="600" width="1080" height="270" fill="#fbe1b4" opacity="0.7" />
+  <g transform="translate(830,470)"><g id="s5-dribble-bf-sun"><circle r="74" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" /></g></g>
+  <g transform="translate(830,470)"><g id="s5-dribble-bf-moon" opacity="0"><path d="M0,-60 A60,60 0 1,0 40,46 A48,48 0 1,1 0,-60 Z" fill="#f4efe6" stroke="#1a1a2e" stroke-width="5" /></g></g>
+  <g fill="#fff" stroke="#1a1a2e" stroke-width="4" opacity="0.9"><path d="M560,300 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path d="M120,420 q24,-32 56,-8 q24,-24 48,0 q24,8 8,32 l-120,0 q-16,-8 8,-24 z" /></g>
+  <path d="M0,830 Q180,760 360,820 Q560,770 760,820 Q920,780 1080,810 L1080,870 L0,870 Z" fill="#9bb36b" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M130,860 L130,790 Q140,760 260,758 Q380,760 390,790 L390,860 Z" fill="#c9ae84" stroke="#1a1a2e" stroke-width="4" /><rect x="150" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="150" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="176" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="176" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="202" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="202" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="228" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="228" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="254" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="254" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="280" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="280" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="306" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="306" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="332" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="332" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="358" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="358" y="812" width="14" height="22" rx="7" fill="#8a6f52" />
+  <rect x="0" y="860" width="1080" height="40" fill="#54a141" /><rect x="0" y="900" width="1080" height="50" fill="#5fae4a" /><rect x="0" y="950" width="1080" height="65" fill="#54a141" /><rect x="0" y="1015" width="1080" height="80" fill="#5fae4a" /><rect x="0" y="1095" width="1080" height="100" fill="#54a141" /><rect x="0" y="1195" width="1080" height="120" fill="#5fae4a" /><rect x="0" y="1315" width="1080" height="145" fill="#54a141" /><rect x="0" y="1460" width="1080" height="180" fill="#5fae4a" /><rect x="0" y="1640" width="1080" height="280" fill="#54a141" />
+  <path d="M0,860 L1080,860" stroke="#1a1a2e" stroke-width="4" />
+  <g id="s5-dribble-bf-lines" fill="none" stroke="#f4f4f2" stroke-width="9" stroke-linecap="round" opacity="0.9">
+    <path id="s5-dribble-bf-line1" pathLength="1" stroke-dasharray="1 1.2" stroke-dashoffset="1.1" d="M455,1920 L520,862" />
+    <path id="s5-dribble-bf-line2" pathLength="1" stroke-dasharray="1 1.2" stroke-dashoffset="1.1" d="M480,1290 C130,1300 130,1420 470,1450 C840,1440 860,1300 480,1290" />
+  </g>
+</g>
+<defs><g id="s5-dribble-L"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-Lp (whole), s5-dribble-Lp-body, s5-dribble-Lp-legL/-legR, s5-dribble-Lp-armR (sword arm, origin top), s5-dribble-Lp-sword, s5-dribble-Lp-shield, s5-dribble-Lp-head,
+     s5-dribble-Lp-pupL/-pupR, s5-dribble-Lp-browL/-browR, s5-dribble-Lp-m-flat (default) / s5-dribble-Lp-m-o / s5-dribble-Lp-m-wavy, s5-dribble-Lp-swirl (dizzy eyes, opacity 0),
+     s5-dribble-Lp-sweat (opacity 0), s5-dribble-Lp-stars (opacity 0; rotate s5-dribble-Lp-rotor to orbit the stars). -->
+<g id="s5-dribble-Lp">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-Lp-body">
+    <g id="s5-dribble-Lp-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-Lp-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-Lp-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-Lp-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-Lp-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-Lp-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-Lp-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-Lp-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-Lp-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-Lp-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-Lp-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-Lp-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-Lp-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-Lp-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-Lp-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-Lp-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-Lp-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></defs><g id="s5-dribble-cam"><g id="s5-dribble-a"><g transform="translate(2799,952) scale(0.459)"><g id="s5-dribble-a4-0"><use href="#s5-dribble-L" /></g></g><g transform="translate(2883,952) scale(0.459)"><g id="s5-dribble-a4-1"><use href="#s5-dribble-L" /></g></g><g transform="translate(2966,952) scale(0.459)"><g id="s5-dribble-a4-2"><use href="#s5-dribble-L" /></g></g><g transform="translate(3050,952) scale(0.459)"><g id="s5-dribble-a4-3"><use href="#s5-dribble-L" /></g></g><g transform="translate(3133,952) scale(0.459)"><g id="s5-dribble-a4-4"><use href="#s5-dribble-L" /></g></g><g transform="translate(3217,952) scale(0.459)"><g id="s5-dribble-a4-5"><use href="#s5-dribble-L" /></g></g><g transform="translate(2765,1014) scale(0.549)"><g id="s5-dribble-a3-0"><use href="#s5-dribble-L" /></g></g><g transform="translate(2855,1014) scale(0.549)"><g id="s5-dribble-a3-1"><use href="#s5-dribble-L" /></g></g><g transform="translate(2945,1014) scale(0.549)"><g id="s5-dribble-a3-2"><use href="#s5-dribble-L" /></g></g><g transform="translate(3036,1014) scale(0.549)"><g id="s5-dribble-a3-3"><use href="#s5-dribble-L" /></g></g><g transform="translate(3126,1014) scale(0.549)"><g id="s5-dribble-a3-4"><use href="#s5-dribble-L" /></g></g><g transform="translate(3216,1014) scale(0.549)"><g id="s5-dribble-a3-5"><use href="#s5-dribble-L" /></g></g><g transform="translate(2731,1076) scale(0.640)"><g id="s5-dribble-a2-0"><use href="#s5-dribble-L" /></g></g><g transform="translate(2828,1076) scale(0.640)"><g id="s5-dribble-a2-1"><use href="#s5-dribble-L" /></g></g><g transform="translate(2925,1076) scale(0.640)"><g id="s5-dribble-a2-2"><use href="#s5-dribble-L" /></g></g><g transform="translate(3021,1076) scale(0.640)"><g id="s5-dribble-a2-3"><use href="#s5-dribble-L" /></g></g><g transform="translate(3118,1076) scale(0.640)"><g id="s5-dribble-a2-4"><use href="#s5-dribble-L" /></g></g><g transform="translate(3215,1076) scale(0.640)"><g id="s5-dribble-a2-5"><use href="#s5-dribble-L" /></g></g><g transform="translate(2697,1138) scale(0.730)"><g id="s5-dribble-a1-0"><use href="#s5-dribble-L" /></g></g><g transform="translate(2800,1138) scale(0.730)"><g id="s5-dribble-a1-1"><use href="#s5-dribble-L" /></g></g><g transform="translate(2904,1138) scale(0.730)"><g id="s5-dribble-a1-2"><use href="#s5-dribble-L" /></g></g><g transform="translate(3007,1138) scale(0.730)"><g id="s5-dribble-a1-3"><use href="#s5-dribble-L" /></g></g><g transform="translate(3111,1138) scale(0.730)"><g id="s5-dribble-a1-4"><use href="#s5-dribble-L" /></g></g><g transform="translate(3214,1138) scale(0.730)"><g id="s5-dribble-a1-5"><use href="#s5-dribble-L" /></g></g><g transform="translate(2663,1200) scale(0.820)"><g id="s5-dribble-a0-0"><use href="#s5-dribble-L" /></g></g><g transform="translate(2773,1200) scale(0.820)"><g id="s5-dribble-a0-1"><use href="#s5-dribble-L" /></g></g><g transform="translate(2883,1200) scale(0.820)"><g id="s5-dribble-a0-2"><use href="#s5-dribble-L" /></g></g><g transform="translate(2993,1200) scale(0.820)"><g id="s5-dribble-a0-3"><use href="#s5-dribble-L" /></g></g><g transform="translate(3103,1200) scale(0.820)"><g id="s5-dribble-a0-4"><use href="#s5-dribble-L" /></g></g><g transform="translate(3213,1200) scale(0.820)"><g id="s5-dribble-a0-5"><use href="#s5-dribble-L" /></g></g></g><g transform="translate(760,1200)"><g id="s5-dribble-f0"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-f0p (whole), s5-dribble-f0p-body, s5-dribble-f0p-legL/-legR, s5-dribble-f0p-armR (sword arm, origin top), s5-dribble-f0p-sword, s5-dribble-f0p-shield, s5-dribble-f0p-head,
+     s5-dribble-f0p-pupL/-pupR, s5-dribble-f0p-browL/-browR, s5-dribble-f0p-m-flat (default) / s5-dribble-f0p-m-o / s5-dribble-f0p-m-wavy, s5-dribble-f0p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-f0p-sweat (opacity 0), s5-dribble-f0p-stars (opacity 0; rotate s5-dribble-f0p-rotor to orbit the stars). -->
+<g id="s5-dribble-f0p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-f0p-body">
+    <g id="s5-dribble-f0p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-f0p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-f0p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-f0p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-f0p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-f0p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-f0p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-f0p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-f0p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-f0p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-f0p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-f0p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-f0p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-f0p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-f0p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-f0p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-f0p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(990,1200)"><g id="s5-dribble-f1"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-f1p (whole), s5-dribble-f1p-body, s5-dribble-f1p-legL/-legR, s5-dribble-f1p-armR (sword arm, origin top), s5-dribble-f1p-sword, s5-dribble-f1p-shield, s5-dribble-f1p-head,
+     s5-dribble-f1p-pupL/-pupR, s5-dribble-f1p-browL/-browR, s5-dribble-f1p-m-flat (default) / s5-dribble-f1p-m-o / s5-dribble-f1p-m-wavy, s5-dribble-f1p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-f1p-sweat (opacity 0), s5-dribble-f1p-stars (opacity 0; rotate s5-dribble-f1p-rotor to orbit the stars). -->
+<g id="s5-dribble-f1p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-f1p-body">
+    <g id="s5-dribble-f1p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-f1p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-f1p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-f1p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-f1p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-f1p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-f1p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-f1p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-f1p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-f1p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-f1p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-f1p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-f1p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-f1p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-f1p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-f1p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-f1p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(1220,1200)"><g id="s5-dribble-f2"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-f2p (whole), s5-dribble-f2p-body, s5-dribble-f2p-legL/-legR, s5-dribble-f2p-armR (sword arm, origin top), s5-dribble-f2p-sword, s5-dribble-f2p-shield, s5-dribble-f2p-head,
+     s5-dribble-f2p-pupL/-pupR, s5-dribble-f2p-browL/-browR, s5-dribble-f2p-m-flat (default) / s5-dribble-f2p-m-o / s5-dribble-f2p-m-wavy, s5-dribble-f2p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-f2p-sweat (opacity 0), s5-dribble-f2p-stars (opacity 0; rotate s5-dribble-f2p-rotor to orbit the stars). -->
+<g id="s5-dribble-f2p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-f2p-body">
+    <g id="s5-dribble-f2p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-f2p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-f2p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-f2p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-f2p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-f2p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-f2p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-f2p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-f2p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-f2p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-f2p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-f2p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-f2p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-f2p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-f2p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-f2p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-f2p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(1450,1200)"><g id="s5-dribble-f3"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-f3p (whole), s5-dribble-f3p-body, s5-dribble-f3p-legL/-legR, s5-dribble-f3p-armR (sword arm, origin top), s5-dribble-f3p-sword, s5-dribble-f3p-shield, s5-dribble-f3p-head,
+     s5-dribble-f3p-pupL/-pupR, s5-dribble-f3p-browL/-browR, s5-dribble-f3p-m-flat (default) / s5-dribble-f3p-m-o / s5-dribble-f3p-m-wavy, s5-dribble-f3p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-f3p-sweat (opacity 0), s5-dribble-f3p-stars (opacity 0; rotate s5-dribble-f3p-rotor to orbit the stars). -->
+<g id="s5-dribble-f3p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-f3p-body">
+    <g id="s5-dribble-f3p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-f3p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-f3p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-f3p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-f3p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-f3p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-f3p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-f3p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-f3p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-f3p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-f3p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-f3p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-f3p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-f3p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-f3p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-f3p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-f3p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(1680,1200)"><g id="s5-dribble-f4"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-f4p (whole), s5-dribble-f4p-body, s5-dribble-f4p-legL/-legR, s5-dribble-f4p-armR (sword arm, origin top), s5-dribble-f4p-sword, s5-dribble-f4p-shield, s5-dribble-f4p-head,
+     s5-dribble-f4p-pupL/-pupR, s5-dribble-f4p-browL/-browR, s5-dribble-f4p-m-flat (default) / s5-dribble-f4p-m-o / s5-dribble-f4p-m-wavy, s5-dribble-f4p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-f4p-sweat (opacity 0), s5-dribble-f4p-stars (opacity 0; rotate s5-dribble-f4p-rotor to orbit the stars). -->
+<g id="s5-dribble-f4p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-f4p-body">
+    <g id="s5-dribble-f4p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-f4p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-f4p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-f4p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-f4p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-f4p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-f4p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-f4p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-f4p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-f4p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-f4p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-f4p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-f4p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-f4p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-f4p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-f4p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-f4p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(1910,1200)"><g id="s5-dribble-f5"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-f5p (whole), s5-dribble-f5p-body, s5-dribble-f5p-legL/-legR, s5-dribble-f5p-armR (sword arm, origin top), s5-dribble-f5p-sword, s5-dribble-f5p-shield, s5-dribble-f5p-head,
+     s5-dribble-f5p-pupL/-pupR, s5-dribble-f5p-browL/-browR, s5-dribble-f5p-m-flat (default) / s5-dribble-f5p-m-o / s5-dribble-f5p-m-wavy, s5-dribble-f5p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-f5p-sweat (opacity 0), s5-dribble-f5p-stars (opacity 0; rotate s5-dribble-f5p-rotor to orbit the stars). -->
+<g id="s5-dribble-f5p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-f5p-body">
+    <g id="s5-dribble-f5p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-f5p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-f5p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-f5p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-f5p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-f5p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-f5p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-f5p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-f5p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-f5p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-f5p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-f5p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-f5p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-f5p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-f5p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-f5p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-f5p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(2140,1200)"><g id="s5-dribble-f6"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-f6p (whole), s5-dribble-f6p-body, s5-dribble-f6p-legL/-legR, s5-dribble-f6p-armR (sword arm, origin top), s5-dribble-f6p-sword, s5-dribble-f6p-shield, s5-dribble-f6p-head,
+     s5-dribble-f6p-pupL/-pupR, s5-dribble-f6p-browL/-browR, s5-dribble-f6p-m-flat (default) / s5-dribble-f6p-m-o / s5-dribble-f6p-m-wavy, s5-dribble-f6p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-f6p-sweat (opacity 0), s5-dribble-f6p-stars (opacity 0; rotate s5-dribble-f6p-rotor to orbit the stars). -->
+<g id="s5-dribble-f6p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-f6p-body">
+    <g id="s5-dribble-f6p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-f6p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-f6p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-f6p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-f6p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-f6p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-f6p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-f6p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-f6p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-f6p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-f6p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-f6p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-f6p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-f6p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-f6p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-f6p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-f6p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(2370,1200)"><g id="s5-dribble-f7"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-f7p (whole), s5-dribble-f7p-body, s5-dribble-f7p-legL/-legR, s5-dribble-f7p-armR (sword arm, origin top), s5-dribble-f7p-sword, s5-dribble-f7p-shield, s5-dribble-f7p-head,
+     s5-dribble-f7p-pupL/-pupR, s5-dribble-f7p-browL/-browR, s5-dribble-f7p-m-flat (default) / s5-dribble-f7p-m-o / s5-dribble-f7p-m-wavy, s5-dribble-f7p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-f7p-sweat (opacity 0), s5-dribble-f7p-stars (opacity 0; rotate s5-dribble-f7p-rotor to orbit the stars). -->
+<g id="s5-dribble-f7p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-f7p-body">
+    <g id="s5-dribble-f7p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-f7p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-f7p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-f7p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-f7p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-f7p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-f7p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-f7p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-f7p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-f7p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-f7p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-f7p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-f7p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-f7p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-f7p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-f7p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-f7p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(2543,1200)"><g id="s5-dribble-g0"><g transform="scale(0.82)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s5-dribble-g0p (whole), s5-dribble-g0p-body, s5-dribble-g0p-legL/-legR, s5-dribble-g0p-armR (sword arm, origin top), s5-dribble-g0p-sword, s5-dribble-g0p-shield, s5-dribble-g0p-head,
+     s5-dribble-g0p-pupL/-pupR, s5-dribble-g0p-browL/-browR, s5-dribble-g0p-m-flat (default) / s5-dribble-g0p-m-o / s5-dribble-g0p-m-wavy, s5-dribble-g0p-swirl (dizzy eyes, opacity 0),
+     s5-dribble-g0p-sweat (opacity 0), s5-dribble-g0p-stars (opacity 0; rotate s5-dribble-g0p-rotor to orbit the stars). -->
+<g id="s5-dribble-g0p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-g0p-body">
+    <g id="s5-dribble-g0p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s5-dribble-g0p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s5-dribble-g0p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s5-dribble-g0p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s5-dribble-g0p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-g0p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s5-dribble-g0p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s5-dribble-g0p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s5-dribble-g0p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-g0p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-g0p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-g0p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-g0p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s5-dribble-g0p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s5-dribble-g0p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s5-dribble-g0p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s5-dribble-g0p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g></g><g transform="translate(330,1200)"><g id="s5-dribble-mw"><g transform="scale(0.72)"><!-- Small playmaker in a plain blue/garnet striped kit, number 10, short beard (Lionel-Messi-style caricature, not a likeness, no badges).
+     Draw at ~0.91 of forward.svg's scale for 1.70 m vs 1.87 m.
+     Origin = between the feet. ~330 tall. Same rig ids as keeper.svg.
+     Animatable: s5-dribble-m (whole), s5-dribble-m-body, s5-dribble-m-armL/-armR (rotate, origin top), s5-dribble-m-legL/-legR, s5-dribble-m-head,
+     s5-dribble-m-pupL/-pupR (x/y look), s5-dribble-m-browL/-browR, s5-dribble-m-m-smile / -m-o / -m-flat (show one), s5-dribble-m-lids (blink). -->
+<g id="s5-dribble-m">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s5-dribble-m-body">
+    <g id="s5-dribble-m-legL"><rect x="-32" y="-96" width="26" height="96" rx="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s5-dribble-m-legR"><rect x="6" y="-96" width="26" height="96" rx="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="5" />
+    <clipPath id="s5-dribble-m-clip"><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" /></clipPath><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#a50044" /><g clip-path="url(#s5-dribble-m-clip)" fill="#1d3f9b"><rect x="-60" y="-220" width="20" height="120" /><rect x="-20" y="-220" width="20" height="120" /><rect x="20" y="-220" width="20" height="120" /></g><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <text id="s5-dribble-m-num" data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#ffd23f" stroke="#1a1a2e" stroke-width="2">10</text>
+    <g transform="translate(-54,-196)"><g id="s5-dribble-m-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s5-dribble-m-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s5-dribble-m-head">
+      <circle cx="-44" cy="4" r="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-46,-12 Q-50,-60 2,-62 Q50,-60 46,-16 Q36,-38 8,-40 Q-28,-42 -46,-12 Z" fill="#3b2416" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s5-dribble-m-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s5-dribble-m-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s5-dribble-m-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#e3b48c" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#e3b48c" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s5-dribble-m-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s5-dribble-m-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-42,8 Q-40,52 0,56 Q40,52 42,8 Q36,26 26,24 Q16,44 0,44 Q-16,44 -26,24 Q-36,26 -42,8 Z" fill="#3b2416" stroke="#1a1a2e" stroke-width="3" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s5-dribble-m-m-smile" d="M-14,30 Q0,40 14,30" fill="none" stroke="#f4efe6" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s5-dribble-m-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s5-dribble-m-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(374,1184)"><g id="s5-dribble-ball"><g id="s5-dribble-ball-spin"><g transform="scale(0.75)"><!-- Football. Origin = centre, r = 22. -->
+<g id="s5-dribble-ballf">
+  <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
+  <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
+</g>
+</g></g></g></g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s5-dribble-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 330px;"><div class="bk">THE BATTLE</div><div class="bt">The dribble</div></div>
+    <div class="card gold" id="s5-dribble-c-dz" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">DIZZY ROMANS</div><div class="cv"><span id="s5-dribble-dn">0</span></div></div>
+    <div class="card " id="s5-dribble-c-gf" data-layout-allow-overflow data-layout-allow-overlap style="left: 420px; top: 560px;"><div class="ck">GETAFE, 2007</div><div class="cv">5 + keeper, ~12 s</div></div>
+    <div class="card red" id="s5-dribble-c-tm" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 560px;"><div class="ck">TIME NEEDED</div><div class="cv"><span id="s5-dribble-day">~9 days</span></div></div>
+    <div class="score" id="s5-dribble-score"><span class="sn">ROME</span><span class="sv" id="s5-dribble-sa">0</span><span class="sc">:</span><span class="sv" id="s5-dribble-sb">0</span><span class="sn">MESSI</span></div>
+    <div class="dip" id="s5-dribble-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s5-dribble-";
+      const D = 19.769;
+      const C = {"get": 1.47, "dizzy": 7.75, "rate": 10.95, "fall": 15.26, "into": 17.94};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s5-dribble-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s5-dribble"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      const N = (s) => S + s;
+      // text that is a pure function of time: steps = [[t, text], ...]
+      const label = (id, steps) => {
+        const el = document.querySelector(S + id);
+        tl.to({}, { duration: D, ease: "none", onUpdate() {
+          const t = this.time(); let txt = steps[0][1];
+          for (const [at, s] of steps) if (t >= at) txt = s;
+          if (el.textContent !== txt) el.textContent = txt;
+        } }, 0);
+      };
+      // number that counts from a to b between t0 and t0+d (eased), formatted with thousands separators
+      const count = (id, a, b, t0, d, ease = "power2.out", suffix = "") => {
+        const el = document.querySelector(S + id), o = { v: a };
+        el.textContent = a.toLocaleString("en-US") + suffix;
+        tl.fromTo(o, { v: a }, { v: b, duration: d, ease, onUpdate() { el.textContent = Math.round(o.v).toLocaleString("en-US") + suffix; } }, t0);
+      };
+      const score = (at, a, b) => {
+        const ea = document.querySelector(S + "sa"), eb = document.querySelector(S + "sb"), a0 = ea.textContent, b0 = eb.textContent;
+        tl.to({}, { duration: D, ease: "none", onUpdate() { const on = this.time() >= at; ea.textContent = on ? a : a0; eb.textContent = on ? b : b0; } }, 0);
+        tl.fromTo(S + "sb", { scale: 1 }, { scale: 1.8, duration: 0.16, yoyo: true, repeat: 1, ease: "power2.out" }, at);
+        tl.fromTo(S + "score", { rotation: 0 }, { rotation: -4, duration: 0.08, yoyo: true, repeat: 3 }, at);
+      };
+      const showScore = (at) => tl.fromTo(S + "score", { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2.4)" }, at);
+      // a Roman (prefix p = "<name>p") stamps his foot
+      const stompR = (name, at) => {
+        tl.to(S + name, { y: -18, duration: 0.12, ease: "power2.out" }, at - 0.12);
+        tl.to(S + name, { y: 0, duration: 0.1, ease: "power3.in" }, at);
+      };
+      const look = (p, x, y, at, d = 0.2) => tl.to([S + p + "-pupL", S + p + "-pupR"], { x, y, duration: d }, at);
+      const face = (p, show, at) => {
+        ["m-flat", "m-o", "m-wavy", "m-smile"].forEach((m) => { if (document.querySelector(S + p + "-" + m)) tl.set(S + p + "-" + m, { opacity: m === show ? 1 : 0 }, at); });
+      };
+      // a Roman spins on the spot and stays dizzy: swirl eyes, wavy mouth, orbiting stars, swaying
+      const dizzy = (name, at, spins = 3) => {
+        const p = name + "p";
+        tl.to(S + name, { scaleX: -1, transformOrigin: "50% 100%", duration: 0.09, ease: "none", yoyo: true, repeat: spins * 2 - 1 }, at);
+        tl.set(S + p + "-swirl", { opacity: 1 }, at + 0.2);
+        face(p, "m-wavy", at + 0.2);
+        tl.set(S + p + "-stars", { opacity: 1 }, at + spins * 0.18);
+        const t1 = at + spins * 0.18, rest = Math.max(0.5, D - t1);
+        tl.fromTo(S + p + "-rotor", { rotation: 0 }, { rotation: 360, transformOrigin: "50% 50%", duration: 0.9, ease: "none", repeat: R(rest, 0.9) }, t1);
+        tl.fromTo(S + p + "-body", { rotation: -7 }, { rotation: 7, transformOrigin: "50% 100%", duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: R(rest, 0.45) }, t1);
+      };
+      // Messi running: legs and arms swing between t0 and t1
+      const run = (t0, t1, cyc = 0.16) => {
+        const n = R(t1 - t0, cyc);
+        tl.fromTo(S + "m-legL", { rotation: -26 }, { rotation: 26, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + "m-legR", { rotation: 26 }, { rotation: -26, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + "m-armL", { rotation: 22 }, { rotation: -22, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + "m-armR", { rotation: -22 }, { rotation: 22, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.to([S + "m-legL", S + "m-legR", S + "m-armL", S + "m-armR"], { rotation: 0, duration: 0.12 }, t1);
+      };
+      const kickR = (at) => {  // right leg swings back and through
+        tl.to(S + "m-legR", { rotation: 35, duration: 0.1, ease: "power2.in" }, at - 0.12);
+        tl.to(S + "m-legR", { rotation: -50, duration: 0.08, ease: "power3.out" }, at - 0.02);
+        tl.to(S + "m-legR", { rotation: 0, duration: 0.1 }, at + 0.06);
+      };
+      // quadratic arc for an element whose parent sits at its start: offsets (dx, dy) to the end, apex height h
+      const arc = (sel, t0, d, dx, dy, h, spinSel) => {
+        const el = document.querySelector(sel), o = { p: 0 };
+        tl.fromTo(o, { p: 0 }, { p: 1, duration: d, ease: "none", onUpdate() {
+          const p = o.p, x = dx * p, y = dy * p - 4 * h * p * (1 - p);
+          gsap.set(el, { x, y });
+        } }, t0);
+        if (spinSel) tl.fromTo(spinSel, { rotation: 0 }, { rotation: 720, duration: d, ease: "none", transformOrigin: "50% 50%" }, t0);
+      };
+      const drawOn = (sel, at, d = 0.6) => tl.fromTo(sel, { strokeDashoffset: 1.1 }, { strokeDashoffset: 0, duration: d, ease: "power1.inOut" }, at);
+      const stampIn = (at) => {
+        tl.fromTo(S + "stamp", { opacity: 0, scale: 2.4, rotation: -4 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.18, ease: "power4.in" }, at);
+        tl.fromTo(S + "svg", { x: 0 }, { x: 10, duration: 0.04, repeat: 5, yoyo: true }, at + 0.18);
+      };
+
+      const P = [1.2, 2.4, 3.5999999999999996, 4.8, 6.0, 7.2, 8.399999999999999, 9.6], MOVES = ["stepover", "feint", "nutmeg", "roulette", "stepover", "nutmeg", "feint", "chop"], MX = 330, X0 = 760, DX = 230, MASS = 2663;
+      const front = ["f0", "f1", "f2", "f3", "f4", "f5", "f6", "f7"];
+
+      fly("b", 0.05, P[0] - 0.2, { from: "top" });
+      // the camera: soldier i reaches Messi's front foot exactly at P[i]
+      const camAt = (t) => -(X0 + DX * (t - P[0]) / (P[1] - P[0]) - (MX + 50));
+      const tEnd = P[P.length - 1] + 0.7;
+      tl.fromTo(S + "cam", { x: camAt(0) }, { x: camAt(tEnd), duration: tEnd, ease: "none" }, 0);
+      run(0.1, tEnd, 0.15);
+      // ball at his left foot: a touch every 0.3 s
+      tl.fromTo(S + "ball", { x: 0 }, { x: 34, duration: 0.15, ease: "power1.out", yoyo: true, repeat: R(tEnd, 0.15) }, 0);
+      tl.fromTo(S + "ball-spin", { rotation: 0 }, { rotation: 360, duration: 0.6, ease: "none", repeat: R(tEnd, 0.6), transformOrigin: "50% 50%" }, 0);
+      fly("dz", P[0] + 0.3, null);
+      const steps = [[0, "0"]];
+      P.forEach((tp, i) => {
+        const f = front[i], p = f + "p", mv = MOVES[i];
+        // the Roman lunges in with his sword
+        tl.to(S + f, { x: -26, duration: 0.25, ease: "power2.out" }, tp - 0.55);
+        tl.to(S + p + "-armR", { rotation: -60, duration: 0.2 }, tp - 0.5);
+        face(p, "m-o", tp - 0.5);
+        // ... Messi's move
+        if (mv === "stepover") {
+          tl.to(S + "m-legR", { rotation: 40, duration: 0.1, yoyo: true, repeat: 3 }, tp - 0.45);
+        } else if (mv === "feint") {
+          tl.to(S + "m-body", { x: -18, rotation: -8, transformOrigin: "50% 100%", duration: 0.12, yoyo: true, repeat: 1 }, tp - 0.45);
+          tl.to(S + p + "-head", { rotation: -18, duration: 0.15 }, tp - 0.35);
+        } else if (mv === "nutmeg") {
+          tl.to(S + "ball", { x: 140, y: 4, duration: 0.3, ease: "power2.out" }, tp - 0.3);
+          tl.to(S + "ball", { x: 0, y: 0, duration: 0.2 }, tp + 0.1);
+          tl.to(S + "mw", { y: -40, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out" }, tp - 0.25);
+        } else if (mv === "roulette") {
+          tl.to(S + "mw", { scaleX: -1, transformOrigin: "50% 100%", duration: 0.12, yoyo: true, repeat: 1, ease: "none" }, tp - 0.35);
+          tl.to(S + "m-num", { scaleX: -1, transformOrigin: "50% 50%", duration: 0.12, yoyo: true, repeat: 1, ease: "none" }, tp - 0.35);
+        } else {
+          tl.to(S + "ball", { y: -60, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out" }, tp - 0.35);
+          tl.to(S + "m-legL", { rotation: -40, duration: 0.1, yoyo: true, repeat: 1 }, tp - 0.4);
+        }
+        tl.to(S + p + "-armR", { rotation: 0, duration: 0.2 }, tp - 0.1);
+        // ... and the Roman spins around and stays dizzy
+        dizzy(f, tp + 0.05);
+        steps.push([tp + 0.35, String(i + 1)]);
+      });
+      label("dn", steps.concat([[C.fall + 0.3, "12,000"], [C.fall + 0.8, "61,000"], [C.fall + 1.4, "140,000"], [C.into, "260,000"], [C.into + 0.6, "380,000"]]));
+      // Getafe 2007
+      fly("gf", C.get, C.rate - 0.1, { from: "right" });
+      // nine days: the sun and the moon race across the sky
+      fly("tm", C.rate, C.fall - 0.1, { from: "right" });
+      label("day", [[0, "~9 days"], [C.rate + 0.8, "Day 1"], [C.rate + 1.6, "Day 4"], [C.rate + 2.4, "Day 7"], [C.rate + 3.2, "Day 9"]]);
+      for (let k = 0; k < 4; k++) {
+        const t0 = C.rate + 0.4 + k * 0.8;
+        tl.to(S + "bf-sky", { fill: "#1d2a5c", duration: 0.3 }, t0);
+        tl.to(S + "bf-haze", { opacity: 0.1, duration: 0.3 }, t0);
+        tl.to(S + "bf-sun", { y: 500, duration: 0.3, ease: "power1.in" }, t0);
+        tl.set(S + "bf-moon", { opacity: 1 }, t0 + 0.2);
+        tl.fromTo(S + "bf-moon", { y: 500 }, { y: 0, duration: 0.2 }, t0 + 0.2);
+        tl.to(S + "bf-moon", { y: 500, duration: 0.2 }, t0 + 0.45);
+        tl.to(S + "bf-sky", { fill: "#f6c58a", duration: 0.25 }, t0 + 0.55);
+        tl.to(S + "bf-haze", { opacity: 0.7, duration: 0.25 }, t0 + 0.55);
+        tl.to(S + "bf-sun", { y: 0, duration: 0.25, ease: "power1.out" }, t0 + 0.55);
+      }
+      // luckily, dizzy Romans fall over: one feint at the first Roman of the mass, he spins, topples right ... domino
+      tl.to(S + "g0p-armR", { rotation: -60, duration: 0.2 }, C.fall - 0.6);
+      tl.to(S + "m-body", { x: -18, rotation: -8, transformOrigin: "50% 100%", duration: 0.12, yoyo: true, repeat: 1 }, C.fall - 0.5);
+      dizzy("g0", C.fall - 0.25, 2);
+      tl.to(S + "g0", { rotation: 78, transformOrigin: "50% 100%", duration: 0.45, ease: "power2.in" }, C.fall + 0.3);
+      for (let c = 0; c < 6; c++) for (let r = 0; r < 5; r++) {
+        tl.to(S + "a" + r + "-" + c, { rotation: 74, transformOrigin: "50% 100%", duration: 0.35, ease: "power2.in" }, C.fall + 0.6 + c * 0.32 + r * 0.12);
+      }
+      // ... into other Romans, all the way to the horizon
+      tl.to(S + "cam", { x: camAt(tEnd) - 260, duration: 2.0, ease: "power1.inOut" }, C.fall + 0.6);
+      look("m", 7, -2, C.fall + 0.5);
+      tl.to(S + "m-armL", { rotation: 30, duration: 0.3 }, C.into + 0.4);
+      tl.to(S + "m-armR", { rotation: -30, duration: 0.3 }, C.into + 0.4);
+      score(C.into + 0.9, 0, 1);
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s5-dribble"] = tl;
+    })();
+  </script>
+</template>

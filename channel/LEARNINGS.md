@@ -5,6 +5,12 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-29 · 007 · **Mehr Soundeffekte**, damit es spannender und ansehnlicher wird: jede Aktion im Cartoon bekommt einen Sound
+  (Schritte, Kicks, Drehen, Schwindel, Pfiff, Netz, Domino, Wind, Herzschlag, Trommelwirbel, Jubel). 007 hat ~120 SFX auf 106 s.
+  Eigene Bibliothek: `channel/kit/sfx/` (gebaut von `tools/make_sfx.py`, synthetisch, lizenzfrei), `build_episode.py` findet sie per Name.
+  Viele SFX aus einem Zeitplan erzeugen statt von Hand (z. B. `episodes/007-rome-messi/src/sfx.py`).
+- 2026-10-29 · 007 · Pointen-Szenen nicht überladen: nach dem Höhepunkt reicht ein kurzer Schlusssatz ("This is when they all realised …"),
+  der Creator strich die lange Urteils-Szene.
 - 2026-10-29 · 007 · **Vor jedem Video zuerst das fertige Skript schicken** (Erzählertext + was die Animation pro Szene zeigt)
   als `episodes/<ep>/SCRIPT.md` und im Chat. Erst nach dem OK des Creators Stimme, Szenen und Render bauen.
 - 2026-10-29 · 007 · **Die Animation soll noch genauer zeigen, was wirklich passiert:** jede Aussage wird wörtlich gespielt
@@ -61,6 +67,12 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- Openverse (SFX-Suche) ist aus der Cloud nicht erreichbar, deshalb eigene synthetische SFX (`tools/make_sfx.py`).
+- Läuft die Session auf einer neuen Maschine, kann `whisper-cli` mit SIGILL abstürzen (für eine andere CPU gebaut). Fix:
+  `cd ~/.cache/hyperframes/whisper/whisper.cpp && rm -rf build && cmake -B build -DGGML_NATIVE=ON && cmake --build build -j4 --target whisper-cli`.
+- Große Menge (Armee): eine Figur in `<defs>`, Rest als `<use>`-Kopien, nur die vorderste Reihe voll geriggt (`army()` in 007 battle.py).
+- `fromTo` mit `opacity: 1` im from-Teil zeigt das Element schon ab Frame 0 (immediateRender). Für "erscheint später" `tl.set(opacity 1)` + `immediateRender: false`.
+- Kamerafahrt: die ganze Welt in eine `cam`-Gruppe, deren x so gerechnet wird, dass Gegner i genau zur Zeit P[i] bei der Figur ist.
 - Maßstabswechsel für Winziges (006 Runde 3): eigene Szene auf Bodenhöhe (12 px/cm), Figur nur ab den Knien (`boots()` in
   `episodes/006-ronaldo-train/src/rail.py`), dasselbe Part verkleinert mit `.mini * { vector-effect: non-scaling-stroke }`,
   sonst werden die Konturen haarfein. Zeitlupe immer mit Label "SLOW MOTION" kennzeichnen.

@@ -1,0 +1,562 @@
+<template>
+  <!-- COULD? scene s6-strike · full-frame cartoon + flying fact cards. Source: src/s6.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+    .score { position: absolute; left: 560px; top: 184px; display: flex; align-items: center; gap: 14px; padding: 10px 22px;
+             background: #1a1a2e; border: 5px solid #f4efe6; border-radius: 18px; }
+    .score .sn { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #f4efe6; }
+    .score .sv { font: 900 56px/1 "Inter"; color: #ffd23f; min-width: 34px; text-align: center; }
+    .score .sc { font: 900 48px/1 "Inter"; color: #f4efe6; }
+    .card .cv svg { display: block; margin-top: 6px; }
+    .stamp { position: absolute; left: 90px; top: 520px; width: 900px; height: 360px; border: 24px solid #ffd23f; border-radius: 34px;
+             display: flex; align-items: center; justify-content: center; font: 900 118px/1 "Inter"; opacity: 0;
+             background: rgba(26, 26, 46, 0.35); letter-spacing: -0.02em; }
+  </style>
+  <div id="root" data-composition-id="s6-strike" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s6-strike-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s6-strike-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s6-strike-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s6-strike-boil)">
+<g id="s6-strike-A"><g id="s6-strike-zoom"><!-- Battlefield at dawn, full frame 1080x1920: sky (s6-strike-bf-sky, recolour for night), sun s6-strike-bf-sun / moon s6-strike-bf-moon, hills, a small
+     Colosseum on the horizon (y=860), striped grass to the bottom. Chalk pitch lines s6-strike-bf-lines (paths with pathLength=1: draw on with
+     strokeDashoffset 1 -> 0). Graphics only (no text). -->
+<g id="s6-strike-bf">
+  <rect id="s6-strike-bf-sky" x="0" y="0" width="1080" height="870" fill="#f6c58a" />
+  <rect id="s6-strike-bf-haze" x="0" y="600" width="1080" height="270" fill="#fbe1b4" opacity="0.7" />
+  <g transform="translate(830,470)"><g id="s6-strike-bf-sun"><circle r="74" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" /></g></g>
+  <g transform="translate(830,470)"><g id="s6-strike-bf-moon" opacity="0"><path d="M0,-60 A60,60 0 1,0 40,46 A48,48 0 1,1 0,-60 Z" fill="#f4efe6" stroke="#1a1a2e" stroke-width="5" /></g></g>
+  <g fill="#fff" stroke="#1a1a2e" stroke-width="4" opacity="0.9"><path d="M560,300 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path d="M120,420 q24,-32 56,-8 q24,-24 48,0 q24,8 8,32 l-120,0 q-16,-8 8,-24 z" /></g>
+  <path d="M0,830 Q180,760 360,820 Q560,770 760,820 Q920,780 1080,810 L1080,870 L0,870 Z" fill="#9bb36b" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M130,860 L130,790 Q140,760 260,758 Q380,760 390,790 L390,860 Z" fill="#c9ae84" stroke="#1a1a2e" stroke-width="4" /><rect x="150" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="150" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="176" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="176" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="202" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="202" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="228" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="228" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="254" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="254" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="280" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="280" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="306" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="306" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="332" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="332" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="358" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="358" y="812" width="14" height="22" rx="7" fill="#8a6f52" />
+  <rect x="0" y="860" width="1080" height="40" fill="#54a141" /><rect x="0" y="900" width="1080" height="50" fill="#5fae4a" /><rect x="0" y="950" width="1080" height="65" fill="#54a141" /><rect x="0" y="1015" width="1080" height="80" fill="#5fae4a" /><rect x="0" y="1095" width="1080" height="100" fill="#54a141" /><rect x="0" y="1195" width="1080" height="120" fill="#5fae4a" /><rect x="0" y="1315" width="1080" height="145" fill="#54a141" /><rect x="0" y="1460" width="1080" height="180" fill="#5fae4a" /><rect x="0" y="1640" width="1080" height="280" fill="#54a141" />
+  <path d="M0,860 L1080,860" stroke="#1a1a2e" stroke-width="4" />
+  <g id="s6-strike-bf-lines" fill="none" stroke="#f4f4f2" stroke-width="9" stroke-linecap="round" opacity="0.9">
+    <path id="s6-strike-bf-line1" pathLength="1" stroke-dasharray="1 1.2" stroke-dashoffset="1.1" d="M455,1920 L520,862" />
+    <path id="s6-strike-bf-line2" pathLength="1" stroke-dasharray="1 1.2" stroke-dashoffset="1.1" d="M480,1290 C130,1300 130,1420 470,1450 C840,1440 860,1300 480,1290" />
+  </g>
+</g>
+<g transform="translate(230,1200)"><g id="s6-strike-mw"><g transform="scale(0.72)"><!-- Small playmaker in a plain blue/garnet striped kit, number 10, short beard (Lionel-Messi-style caricature, not a likeness, no badges).
+     Draw at ~0.91 of forward.svg's scale for 1.70 m vs 1.87 m.
+     Origin = between the feet. ~330 tall. Same rig ids as keeper.svg.
+     Animatable: s6-strike-m (whole), s6-strike-m-body, s6-strike-m-armL/-armR (rotate, origin top), s6-strike-m-legL/-legR, s6-strike-m-head,
+     s6-strike-m-pupL/-pupR (x/y look), s6-strike-m-browL/-browR, s6-strike-m-m-smile / -m-o / -m-flat (show one), s6-strike-m-lids (blink). -->
+<g id="s6-strike-m">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s6-strike-m-body">
+    <g id="s6-strike-m-legL"><rect x="-32" y="-96" width="26" height="96" rx="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s6-strike-m-legR"><rect x="6" y="-96" width="26" height="96" rx="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="5" />
+    <clipPath id="s6-strike-m-clip"><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" /></clipPath><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#a50044" /><g clip-path="url(#s6-strike-m-clip)" fill="#1d3f9b"><rect x="-60" y="-220" width="20" height="120" /><rect x="-20" y="-220" width="20" height="120" /><rect x="20" y="-220" width="20" height="120" /></g><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <text id="s6-strike-m-num" data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#ffd23f" stroke="#1a1a2e" stroke-width="2">10</text>
+    <g transform="translate(-54,-196)"><g id="s6-strike-m-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s6-strike-m-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s6-strike-m-head">
+      <circle cx="-44" cy="4" r="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-46,-12 Q-50,-60 2,-62 Q50,-60 46,-16 Q36,-38 8,-40 Q-28,-42 -46,-12 Z" fill="#3b2416" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s6-strike-m-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s6-strike-m-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s6-strike-m-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#e3b48c" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#e3b48c" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s6-strike-m-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s6-strike-m-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-42,8 Q-40,52 0,56 Q40,52 42,8 Q36,26 26,24 Q16,44 0,44 Q-16,44 -26,24 Q-36,26 -42,8 Z" fill="#3b2416" stroke="#1a1a2e" stroke-width="3" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s6-strike-m-m-smile" d="M-14,30 Q0,40 14,30" fill="none" stroke="#f4efe6" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s6-strike-m-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s6-strike-m-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(274,1184)"><g id="s6-strike-ball"><g id="s6-strike-ball-spin"><g transform="scale(0.75)"><!-- Football. Origin = centre, r = 22. -->
+<g id="s6-strike-ballf">
+  <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
+  <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
+</g>
+</g></g></g></g><g transform="translate(1340,1200)"><g id="s6-strike-tw"><g transform="scale(0.8)"><!-- Testudo (tortoise formation), side view, moving LEFT. Origin = ground centre, ~540 wide, ~340 tall. 20 legs (10 shown pairs:
+     classes tlA / tlB for alternating shuffle), side shields s6-strike-t-s1..s5, roof shields s6-strike-t-r1..r5 (scatter them when it falls apart),
+     eyes peeking through the slot (pupils class tpup). Whole: s6-strike-t, legs: s6-strike-t-legs. -->
+<g id="s6-strike-t">
+  <ellipse cx="0" cy="6" rx="270" ry="16" fill="#000" opacity="0.25" />
+  <g id="s6-strike-t-legs"><g class="tlA"><rect x="-225" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-221" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlB"><rect x="-175" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-171" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlA"><rect x="-125" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-121" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlB"><rect x="-75" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-71" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlA"><rect x="-25" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-21" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlB"><rect x="25" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="29" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlA"><rect x="75" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="79" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlB"><rect x="125" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="129" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlA"><rect x="175" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="179" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g><g class="tlB"><rect x="225" y="-92" width="16" height="88" rx="7" fill="#d9a77a" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="229" cy="-4" rx="16" ry="8" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g></g>
+  <rect x="-262" y="-300" width="526" height="34" fill="#2a1a10" />
+  <g transform="translate(-150,-283)"><ellipse cx="-9" cy="0" rx="8" ry="6" fill="#fff" /><ellipse cx="9" cy="0" rx="8" ry="6" fill="#fff" /><circle class="tpup" cx="-11" cy="1" r="3.5" fill="#1a1a2e" /><circle class="tpup" cx="7" cy="1" r="3.5" fill="#1a1a2e" /></g><g transform="translate(0,-283)"><ellipse cx="-9" cy="0" rx="8" ry="6" fill="#fff" /><ellipse cx="9" cy="0" rx="8" ry="6" fill="#fff" /><circle class="tpup" cx="-11" cy="1" r="3.5" fill="#1a1a2e" /><circle class="tpup" cx="7" cy="1" r="3.5" fill="#1a1a2e" /></g><g transform="translate(150,-283)"><ellipse cx="-9" cy="0" rx="8" ry="6" fill="#fff" /><ellipse cx="9" cy="0" rx="8" ry="6" fill="#fff" /><circle class="tpup" cx="-11" cy="1" r="3.5" fill="#1a1a2e" /><circle class="tpup" cx="7" cy="1" r="3.5" fill="#1a1a2e" /></g>
+  <g id="s6-strike-t-s1"><rect x="-265" y="-270" width="100" height="180" rx="12" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" /><rect x="-256" y="-261" width="82" height="162" rx="8" fill="none" stroke="#ffd23f" stroke-width="4" /><circle cx="-215" cy="-180" r="15" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" /></g><g id="s6-strike-t-s2"><rect x="-159" y="-270" width="100" height="180" rx="12" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" /><rect x="-150" y="-261" width="82" height="162" rx="8" fill="none" stroke="#ffd23f" stroke-width="4" /><circle cx="-109" cy="-180" r="15" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" /></g><g id="s6-strike-t-s3"><rect x="-53" y="-270" width="100" height="180" rx="12" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" /><rect x="-44" y="-261" width="82" height="162" rx="8" fill="none" stroke="#ffd23f" stroke-width="4" /><circle cx="-3" cy="-180" r="15" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" /></g><g id="s6-strike-t-s4"><rect x="53" y="-270" width="100" height="180" rx="12" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" /><rect x="62" y="-261" width="82" height="162" rx="8" fill="none" stroke="#ffd23f" stroke-width="4" /><circle cx="103" cy="-180" r="15" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" /></g><g id="s6-strike-t-s5"><rect x="159" y="-270" width="100" height="180" rx="12" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" /><rect x="168" y="-261" width="82" height="162" rx="8" fill="none" stroke="#ffd23f" stroke-width="4" /><circle cx="209" cy="-180" r="15" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" /></g>
+  <g id="s6-strike-t-r1"><path d="M-262,-298 Q-212,-358 -162,-298 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M-248,-304 Q-212,-344 -176,-304" fill="none" stroke="#ffd23f" stroke-width="4" /></g><g id="s6-strike-t-r2"><path d="M-156,-298 Q-106,-358 -56,-298 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M-142,-304 Q-106,-344 -70,-304" fill="none" stroke="#ffd23f" stroke-width="4" /></g><g id="s6-strike-t-r3"><path d="M-50,-298 Q0,-358 50,-298 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M-36,-304 Q0,-344 36,-304" fill="none" stroke="#ffd23f" stroke-width="4" /></g><g id="s6-strike-t-r4"><path d="M56,-298 Q106,-358 156,-298 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M70,-304 Q106,-344 142,-304" fill="none" stroke="#ffd23f" stroke-width="4" /></g><g id="s6-strike-t-r5"><path d="M162,-298 Q212,-358 262,-298 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" /><path d="M176,-304 Q212,-344 248,-304" fill="none" stroke="#ffd23f" stroke-width="4" /></g>
+</g>
+</g></g></g></g></g><g id="s6-strike-B" opacity="0"><!-- Battlefield at dawn, full frame 1080x1920: sky (s6-strike-bf2-sky, recolour for night), sun s6-strike-bf2-sun / moon s6-strike-bf2-moon, hills, a small
+     Colosseum on the horizon (y=860), striped grass to the bottom. Chalk pitch lines s6-strike-bf2-lines (paths with pathLength=1: draw on with
+     strokeDashoffset 1 -> 0). Graphics only (no text). -->
+<g id="s6-strike-bf2">
+  <rect id="s6-strike-bf2-sky" x="0" y="0" width="1080" height="870" fill="#f6c58a" />
+  <rect id="s6-strike-bf2-haze" x="0" y="600" width="1080" height="270" fill="#fbe1b4" opacity="0.7" />
+  <g transform="translate(830,470)"><g id="s6-strike-bf2-sun"><circle r="74" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" /></g></g>
+  <g transform="translate(830,470)"><g id="s6-strike-bf2-moon" opacity="0"><path d="M0,-60 A60,60 0 1,0 40,46 A48,48 0 1,1 0,-60 Z" fill="#f4efe6" stroke="#1a1a2e" stroke-width="5" /></g></g>
+  <g fill="#fff" stroke="#1a1a2e" stroke-width="4" opacity="0.9"><path d="M560,300 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path d="M120,420 q24,-32 56,-8 q24,-24 48,0 q24,8 8,32 l-120,0 q-16,-8 8,-24 z" /></g>
+  <path d="M0,830 Q180,760 360,820 Q560,770 760,820 Q920,780 1080,810 L1080,870 L0,870 Z" fill="#9bb36b" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M130,860 L130,790 Q140,760 260,758 Q380,760 390,790 L390,860 Z" fill="#c9ae84" stroke="#1a1a2e" stroke-width="4" /><rect x="150" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="150" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="176" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="176" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="202" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="202" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="228" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="228" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="254" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="254" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="280" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="280" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="306" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="306" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="332" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="332" y="812" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="358" y="780" width="14" height="22" rx="7" fill="#8a6f52" /><rect x="358" y="812" width="14" height="22" rx="7" fill="#8a6f52" />
+  <rect x="0" y="860" width="1080" height="40" fill="#54a141" /><rect x="0" y="900" width="1080" height="50" fill="#5fae4a" /><rect x="0" y="950" width="1080" height="65" fill="#54a141" /><rect x="0" y="1015" width="1080" height="80" fill="#5fae4a" /><rect x="0" y="1095" width="1080" height="100" fill="#54a141" /><rect x="0" y="1195" width="1080" height="120" fill="#5fae4a" /><rect x="0" y="1315" width="1080" height="145" fill="#54a141" /><rect x="0" y="1460" width="1080" height="180" fill="#5fae4a" /><rect x="0" y="1640" width="1080" height="280" fill="#54a141" />
+  <path d="M0,860 L1080,860" stroke="#1a1a2e" stroke-width="4" />
+  <g id="s6-strike-bf2-lines" fill="none" stroke="#f4f4f2" stroke-width="9" stroke-linecap="round" opacity="0.9">
+    <path id="s6-strike-bf2-line1" pathLength="1" stroke-dasharray="1 1.2" stroke-dashoffset="1.1" d="M455,1920 L520,862" />
+    <path id="s6-strike-bf2-line2" pathLength="1" stroke-dasharray="1 1.2" stroke-dashoffset="1.1" d="M480,1290 C130,1300 130,1420 470,1450 C840,1440 860,1300 480,1290" />
+  </g>
+</g>
+<g id="s6-strike-dash" opacity="0"><path d="M150,1208 L745,1208" stroke="#f4f4f2" stroke-width="6" stroke-dasharray="16 12" /><text data-layout-ignore x="436" y="1176" font-family="Inter" font-weight="900" font-size="34" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="2">9.15 m</text></g><g transform="translate(990,1200)"><g id="s6-strike-goal"><path d="M0,0 L0,-159 L140,-159" fill="none" stroke="#f4f4f2" stroke-width="9" /><path d="M0,-159 L140,0 M30,-159 L140,-40 M60,-159 L140,-80 M0,-40 L60,0 M0,-80 L110,0 M0,-120 L140,-10" stroke="#f4f4f2" stroke-width="3" opacity="0.8" /></g></g><g transform="translate(842,1200)"><g id="s6-strike-wall"><g transform="scale(0.65)"><!-- Hadrian's Wall, end view (cross-section) so a free kick can fly over it. Origin = ground centre. Drawn at 100 px/m:
+     about 4.5 m tall (estimated, sources say 4-6 m), 3 m wide, with a walkway parapet. Scale in the scene (e.g. 0.65 for 65 px/m).
+     Animatable: s6-strike-hw (rise: scaleY from the ground), s6-strike-hw-crack. -->
+<g id="s6-strike-hw">
+  <path d="M-150,0 L-150,-450 L-170,-450 L-170,-500 L-130,-500 L-130,-470 L130,-470 L130,-500 L170,-500 L170,-450 L150,-450 L150,0 Z" fill="#b9a88a" stroke="#1a1a2e" stroke-width="7" stroke-linejoin="round" />
+  <g stroke="#8a7a60" stroke-width="5" fill="none">
+    <path d="M-150,-60 L150,-60 M-150,-120 L150,-120 M-150,-180 L150,-180 M-150,-240 L150,-240 M-150,-300 L150,-300 M-150,-360 L150,-360 M-150,-420 L150,-420" />
+    <path d="M-60,0 L-60,-60 M50,0 L50,-60 M-110,-60 L-110,-120 M0,-60 L0,-120 M100,-60 L100,-120 M-60,-120 L-60,-180 M50,-120 L50,-180 M-110,-180 L-110,-240 M0,-180 L0,-240 M100,-180 L100,-240 M-60,-240 L-60,-300 M50,-240 L50,-300 M-110,-300 L-110,-360 M0,-300 L0,-360 M100,-300 L100,-360 M-60,-360 L-60,-420 M50,-360 L50,-420" />
+  </g>
+</g>
+</g><g transform="translate(-60,-306)"><g id="s6-strike-w0"><g transform="scale(0.28)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s6-strike-w0p (whole), s6-strike-w0p-body, s6-strike-w0p-legL/-legR, s6-strike-w0p-armR (sword arm, origin top), s6-strike-w0p-sword, s6-strike-w0p-shield, s6-strike-w0p-head,
+     s6-strike-w0p-pupL/-pupR, s6-strike-w0p-browL/-browR, s6-strike-w0p-m-flat (default) / s6-strike-w0p-m-o / s6-strike-w0p-m-wavy, s6-strike-w0p-swirl (dizzy eyes, opacity 0),
+     s6-strike-w0p-sweat (opacity 0), s6-strike-w0p-stars (opacity 0; rotate s6-strike-w0p-rotor to orbit the stars). -->
+<g id="s6-strike-w0p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s6-strike-w0p-body">
+    <g id="s6-strike-w0p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s6-strike-w0p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s6-strike-w0p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s6-strike-w0p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s6-strike-w0p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s6-strike-w0p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s6-strike-w0p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s6-strike-w0p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s6-strike-w0p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s6-strike-w0p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s6-strike-w0p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s6-strike-w0p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s6-strike-w0p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s6-strike-w0p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s6-strike-w0p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s6-strike-w0p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s6-strike-w0p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(0,-306)"><g id="s6-strike-w1"><g transform="scale(0.28)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s6-strike-w1p (whole), s6-strike-w1p-body, s6-strike-w1p-legL/-legR, s6-strike-w1p-armR (sword arm, origin top), s6-strike-w1p-sword, s6-strike-w1p-shield, s6-strike-w1p-head,
+     s6-strike-w1p-pupL/-pupR, s6-strike-w1p-browL/-browR, s6-strike-w1p-m-flat (default) / s6-strike-w1p-m-o / s6-strike-w1p-m-wavy, s6-strike-w1p-swirl (dizzy eyes, opacity 0),
+     s6-strike-w1p-sweat (opacity 0), s6-strike-w1p-stars (opacity 0; rotate s6-strike-w1p-rotor to orbit the stars). -->
+<g id="s6-strike-w1p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s6-strike-w1p-body">
+    <g id="s6-strike-w1p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s6-strike-w1p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s6-strike-w1p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s6-strike-w1p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s6-strike-w1p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s6-strike-w1p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s6-strike-w1p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s6-strike-w1p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s6-strike-w1p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s6-strike-w1p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s6-strike-w1p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s6-strike-w1p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s6-strike-w1p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s6-strike-w1p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s6-strike-w1p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s6-strike-w1p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s6-strike-w1p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g><g transform="translate(60,-306)"><g id="s6-strike-w2"><g transform="scale(0.28)"><!-- Roman legionary, front view: bronze helmet with red transverse crest, cheek guards, segmented armour, red tunic,
+     big red scutum (left side, in front), gladius in the right hand. Origin = between the feet. ~330 tall (like forward.svg).
+     Animatable: s6-strike-w2p (whole), s6-strike-w2p-body, s6-strike-w2p-legL/-legR, s6-strike-w2p-armR (sword arm, origin top), s6-strike-w2p-sword, s6-strike-w2p-shield, s6-strike-w2p-head,
+     s6-strike-w2p-pupL/-pupR, s6-strike-w2p-browL/-browR, s6-strike-w2p-m-flat (default) / s6-strike-w2p-m-o / s6-strike-w2p-m-wavy, s6-strike-w2p-swirl (dizzy eyes, opacity 0),
+     s6-strike-w2p-sweat (opacity 0), s6-strike-w2p-stars (opacity 0; rotate s6-strike-w2p-rotor to orbit the stars). -->
+<g id="s6-strike-w2p">
+  <ellipse cx="0" cy="4" rx="62" ry="10" fill="#000" opacity="0.25" />
+  <g id="s6-strike-w2p-body">
+    <g id="s6-strike-w2p-legL"><rect x="-30" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M-30,-40 L-6,-30 M-30,-24 L-6,-14" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <g id="s6-strike-w2p-legR"><rect x="6" y="-100" width="24" height="96" rx="10" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /><path d="M6,-30 L30,-40 M6,-14 L30,-24" stroke="#6b4a2a" stroke-width="5" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="3" /></g>
+    <path d="M-46,-132 L46,-132 L54,-88 L-54,-88 Z" fill="#b8352a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <g fill="#7a5230" stroke="#1a1a2e" stroke-width="3"><rect x="-42" y="-130" width="11" height="36" rx="3" /><rect x="-27" y="-130" width="11" height="36" rx="3" /><rect x="-12" y="-130" width="11" height="36" rx="3" /><rect x="3" y="-130" width="11" height="36" rx="3" /><rect x="18" y="-130" width="11" height="36" rx="3" /><rect x="33" y="-130" width="11" height="36" rx="3" /></g>
+    <rect x="-50" y="-216" width="100" height="90" rx="18" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-48,-196 L48,-196 M-48,-178 L48,-178 M-48,-160 L48,-160 M-48,-142 L48,-142" stroke="#6d7780" stroke-width="4" />
+    <ellipse cx="-46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="46" cy="-206" rx="18" ry="14" fill="#b9c1c9" stroke="#1a1a2e" stroke-width="4" />
+    <g transform="translate(58,-204)"><g id="s6-strike-w2p-armR">
+      <rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <g id="s6-strike-w2p-sword"><path d="M-7,92 L7,92 L7,186 L0,204 L-7,186 Z" fill="#dfe6ea" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+        <rect x="-18" y="84" width="36" height="10" rx="4" fill="#c9a24a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <circle cx="0" cy="88" r="15" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+    </g></g>
+    <g transform="translate(0,-262)"><g id="s6-strike-w2p-head">
+      <ellipse cx="0" cy="4" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <rect x="-52" y="-96" width="104" height="30" rx="14" fill="#d6332a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-40,-90 L-40,-72 M-24,-92 L-24,-70 M-8,-92 L-8,-70 M8,-92 L8,-70 M24,-92 L24,-70 M40,-90 L40,-72" stroke="#9e2019" stroke-width="4" />
+      <path d="M-48,-8 Q-50,-66 0,-68 Q50,-66 48,-8 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <rect x="-54" y="-16" width="108" height="12" rx="5" fill="#b08a34" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-48,-6 L-30,-6 L-30,30 L-46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <path d="M48,-6 L30,-6 L30,30 L46,24 Z" fill="#c9a24a" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <ellipse cx="-13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="13" cy="8" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s6-strike-w2p-pupL" cx="-13" cy="9" r="5" fill="#1a1a2e" />
+      <circle id="s6-strike-w2p-pupR" cx="13" cy="9" r="5" fill="#1a1a2e" />
+      <g id="s6-strike-w2p-swirl" opacity="0" fill="none" stroke="#1a1a2e" stroke-width="3">
+        <ellipse cx="-13" cy="8" rx="11" ry="12" fill="#fff" /><ellipse cx="13" cy="8" rx="11" ry="12" fill="#fff" />
+        <path d="M-13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /><path d="M13,8 m-1,0 a2,2 0 1,1 3,1 a5,5 0 1,1 -6,-4 a8,8 0 1,1 10,8" /></g>
+      <path id="s6-strike-w2p-browL" d="M-26,-6 L-5,0" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s6-strike-w2p-browR" d="M5,0 L26,-6" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,14 Q2,24 7,21" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s6-strike-w2p-m-flat" d="M-11,34 L11,34" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s6-strike-w2p-m-o" cx="0" cy="35" rx="8" ry="10" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s6-strike-w2p-m-wavy" d="M-14,34 q4,-6 7,0 q4,6 7,0 q4,-6 7,0 q3,5 6,0" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" opacity="0" />
+      <path id="s6-strike-w2p-sweat" d="M30,-4 q8,12 0,18 q-8,-6 0,-18 z" fill="#8fd3ff" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+    </g></g>
+    <g id="s6-strike-w2p-shield">
+      <rect x="-92" y="-238" width="100" height="204" rx="14" fill="#c0262d" stroke="#1a1a2e" stroke-width="6" />
+      <rect x="-82" y="-228" width="80" height="184" rx="9" fill="none" stroke="#ffd23f" stroke-width="5" />
+      <path d="M-42,-210 L-50,-176 L-36,-176 L-44,-150 M-42,-62 L-50,-96 L-36,-96 L-44,-122" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-42" cy="-136" r="18" fill="#c9a24a" stroke="#1a1a2e" stroke-width="5" />
+    </g>
+  </g>
+  <g transform="translate(0,-388)"><g id="s6-strike-w2p-stars" opacity="0"><g transform="scale(1,0.42)"><g id="s6-strike-w2p-rotor">
+    <path d="M40,0 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <path d="M-20,-35 l6,12 13,2 -10,9 3,13 -12,-7 -12,7 3,-13 -10,-9 13,-2 z" transform="translate(-6,-12)" fill="#ffd23f" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="0" cy="0" r="56" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 10" opacity="0.7" />
+  </g></g></g></g>
+</g>
+</g></g></g></g></g><clipPath id="s6-strike-trc"><rect id="s6-strike-trr" x="0" y="0" width="0" height="1920" /></clipPath><path id="s6-strike-trail" clip-path="url(#s6-strike-trc)" d="M150,1190 Q610,260 1070,1130" fill="none" stroke="#ffd23f" stroke-width="6" stroke-dasharray="4 16" stroke-linecap="round" /><g transform="translate(110,1200)"><g id="s6-strike-b-mw"><g transform="scale(0.34968354430379744)"><!-- Small playmaker in a plain blue/garnet striped kit, number 10, short beard (Lionel-Messi-style caricature, not a likeness, no badges).
+     Draw at ~0.91 of forward.svg's scale for 1.70 m vs 1.87 m.
+     Origin = between the feet. ~330 tall. Same rig ids as keeper.svg.
+     Animatable: s6-strike-b-m (whole), s6-strike-b-m-body, s6-strike-b-m-armL/-armR (rotate, origin top), s6-strike-b-m-legL/-legR, s6-strike-b-m-head,
+     s6-strike-b-m-pupL/-pupR (x/y look), s6-strike-b-m-browL/-browR, s6-strike-b-m-m-smile / -m-o / -m-flat (show one), s6-strike-b-m-lids (blink). -->
+<g id="s6-strike-b-m">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s6-strike-b-m-body">
+    <g id="s6-strike-b-m-legL"><rect x="-32" y="-96" width="26" height="96" rx="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s6-strike-b-m-legR"><rect x="6" y="-96" width="26" height="96" rx="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#1d2f6f" stroke="#1a1a2e" stroke-width="5" />
+    <clipPath id="s6-strike-b-m-clip"><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" /></clipPath><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#a50044" /><g clip-path="url(#s6-strike-b-m-clip)" fill="#1d3f9b"><rect x="-60" y="-220" width="20" height="120" /><rect x="-20" y="-220" width="20" height="120" /><rect x="20" y="-220" width="20" height="120" /></g><path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <text id="s6-strike-b-m-num" data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#ffd23f" stroke="#1a1a2e" stroke-width="2">10</text>
+    <g transform="translate(-54,-196)"><g id="s6-strike-b-m-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s6-strike-b-m-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s6-strike-b-m-head">
+      <circle cx="-44" cy="4" r="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#e3b48c" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-46,-12 Q-50,-60 2,-62 Q50,-60 46,-16 Q36,-38 8,-40 Q-28,-42 -46,-12 Z" fill="#3b2416" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s6-strike-b-m-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s6-strike-b-m-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s6-strike-b-m-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#e3b48c" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#e3b48c" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s6-strike-b-m-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s6-strike-b-m-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-42,8 Q-40,52 0,56 Q40,52 42,8 Q36,26 26,24 Q16,44 0,44 Q-16,44 -26,24 Q-36,26 -42,8 Z" fill="#3b2416" stroke="#1a1a2e" stroke-width="3" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s6-strike-b-m-m-smile" d="M-14,30 Q0,40 14,30" fill="none" stroke="#f4efe6" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s6-strike-b-m-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s6-strike-b-m-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(150,1190)"><g id="s6-strike-b-ball"><g id="s6-strike-b-ball-spin"><g transform="scale(0.45)"><!-- Football. Origin = centre, r = 22. -->
+<g id="s6-strike-b-ballf">
+  <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
+  <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
+</g>
+</g></g></g></g></g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s6-strike-c-a" data-layout-allow-overflow data-layout-allow-overlap style="left: 30px; top: 330px;"><div class="bk">ROME STRIKES BACK</div><div class="bt">Plan A: the testudo</div></div>
+    <div class="card gold" id="s6-strike-c-to" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 600px;"><div class="ck">A TORTOISE MADE OF</div><div class="cv">Shields</div></div>
+    <div class="card red" id="s6-strike-c-lg" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">LEGS UNDERNEATH</div><div class="cv">40</div></div>
+    <div class="card gold" id="s6-strike-c-nt" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">PLAN A</div><div class="cv">Nutmegged</div></div>
+    <div class="banner" id="s6-strike-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 330px;"><div class="bk">PLAN B</div><div class="bt">Build a wall</div></div>
+    <div class="card " id="s6-strike-c-hw" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">HADRIAN&#x27;S WALL</div><div class="cv">Built from AD 122</div></div>
+    <div class="card red" id="s6-strike-c-km" data-layout-allow-overflow data-layout-allow-overlap style="left: 600px; top: 300px;"><div class="ck">LENGTH</div><div class="cv"><svg width="300" height="330" viewBox="0 0 300 330" style="border-radius: 12px; border: 4px solid #1a1a2e;"><rect width="300" height="330" fill="#7fb8d8" /><polygon points="41,326 275,282 275,227 227,202 205,165 171,125 155,106 136,95 164,51 101,48 120,15 63,15 44,62 38,99 57,128 66,154 107,150 117,172 126,191 76,209 88,246 54,264 85,279 41,326" fill="#9bb36b" stroke="#1a1a2e" stroke-width="3" /><path id="s6-strike-hwline" d="M118,148 L139,147 L158,147 L175,147" pathLength="1" stroke-dasharray="1 1.2" stroke-dashoffset="1.1" fill="none" stroke="#c0262d" stroke-width="9" stroke-linecap="round" /></svg>117 km</div></div>
+    <div class="card gold" id="s6-strike-c-fk" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">MESSI FREE-KICK GOALS</div><div class="cv">65+</div></div>
+    <div class="card red" id="s6-strike-c-lo" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 560px;"><div class="ck">THIS WALL</div><div class="cv">Just longer</div></div>
+    <div class="score" id="s6-strike-score"><span class="sn">ROME</span><span class="sv" id="s6-strike-sa">0</span><span class="sc">:</span><span class="sv" id="s6-strike-sb">1</span><span class="sn">MESSI</span></div>
+    <div class="dip" id="s6-strike-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s6-strike-";
+      const D = 20.99;
+      const C = {"a": 1.403, "tort": 2.734, "legs": 4.535, "nut": 6.83, "b": 8.46, "wall": 10.46, "hw": 11.928, "km": 13.298, "fk": 15.06, "long": 18.86};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s6-strike-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s6-strike"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      const N = (s) => S + s;
+      // text that is a pure function of time: steps = [[t, text], ...]
+      const label = (id, steps) => {
+        const el = document.querySelector(S + id);
+        tl.to({}, { duration: D, ease: "none", onUpdate() {
+          const t = this.time(); let txt = steps[0][1];
+          for (const [at, s] of steps) if (t >= at) txt = s;
+          if (el.textContent !== txt) el.textContent = txt;
+        } }, 0);
+      };
+      // number that counts from a to b between t0 and t0+d (eased), formatted with thousands separators
+      const count = (id, a, b, t0, d, ease = "power2.out", suffix = "") => {
+        const el = document.querySelector(S + id), o = { v: a };
+        el.textContent = a.toLocaleString("en-US") + suffix;
+        tl.fromTo(o, { v: a }, { v: b, duration: d, ease, onUpdate() { el.textContent = Math.round(o.v).toLocaleString("en-US") + suffix; } }, t0);
+      };
+      const score = (at, a, b) => {
+        const ea = document.querySelector(S + "sa"), eb = document.querySelector(S + "sb"), a0 = ea.textContent, b0 = eb.textContent;
+        tl.to({}, { duration: D, ease: "none", onUpdate() { const on = this.time() >= at; ea.textContent = on ? a : a0; eb.textContent = on ? b : b0; } }, 0);
+        tl.fromTo(S + "sb", { scale: 1 }, { scale: 1.8, duration: 0.16, yoyo: true, repeat: 1, ease: "power2.out" }, at);
+        tl.fromTo(S + "score", { rotation: 0 }, { rotation: -4, duration: 0.08, yoyo: true, repeat: 3 }, at);
+      };
+      const showScore = (at) => tl.fromTo(S + "score", { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2.4)" }, at);
+      // a Roman (prefix p = "<name>p") stamps his foot
+      const stompR = (name, at) => {
+        tl.to(S + name, { y: -18, duration: 0.12, ease: "power2.out" }, at - 0.12);
+        tl.to(S + name, { y: 0, duration: 0.1, ease: "power3.in" }, at);
+      };
+      const look = (p, x, y, at, d = 0.2) => tl.to([S + p + "-pupL", S + p + "-pupR"], { x, y, duration: d }, at);
+      const face = (p, show, at) => {
+        ["m-flat", "m-o", "m-wavy", "m-smile"].forEach((m) => { if (document.querySelector(S + p + "-" + m)) tl.set(S + p + "-" + m, { opacity: m === show ? 1 : 0 }, at); });
+      };
+      // a Roman spins on the spot and stays dizzy: swirl eyes, wavy mouth, orbiting stars, swaying
+      const dizzy = (name, at, spins = 3) => {
+        const p = name + "p";
+        tl.to(S + name, { scaleX: -1, transformOrigin: "50% 100%", duration: 0.09, ease: "none", yoyo: true, repeat: spins * 2 - 1 }, at);
+        tl.set(S + p + "-swirl", { opacity: 1 }, at + 0.2);
+        face(p, "m-wavy", at + 0.2);
+        tl.set(S + p + "-stars", { opacity: 1 }, at + spins * 0.18);
+        const t1 = at + spins * 0.18, rest = Math.max(0.5, D - t1);
+        tl.fromTo(S + p + "-rotor", { rotation: 0 }, { rotation: 360, transformOrigin: "50% 50%", duration: 0.9, ease: "none", repeat: R(rest, 0.9) }, t1);
+        tl.fromTo(S + p + "-body", { rotation: -7 }, { rotation: 7, transformOrigin: "50% 100%", duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: R(rest, 0.45) }, t1);
+      };
+      // Messi running: legs and arms swing between t0 and t1
+      const run = (t0, t1, cyc = 0.16) => {
+        const n = R(t1 - t0, cyc);
+        tl.fromTo(S + "m-legL", { rotation: -26 }, { rotation: 26, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + "m-legR", { rotation: 26 }, { rotation: -26, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + "m-armL", { rotation: 22 }, { rotation: -22, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + "m-armR", { rotation: -22 }, { rotation: 22, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.to([S + "m-legL", S + "m-legR", S + "m-armL", S + "m-armR"], { rotation: 0, duration: 0.12 }, t1);
+      };
+      const kickR = (at) => {  // right leg swings back and through
+        tl.to(S + "m-legR", { rotation: 35, duration: 0.1, ease: "power2.in" }, at - 0.12);
+        tl.to(S + "m-legR", { rotation: -50, duration: 0.08, ease: "power3.out" }, at - 0.02);
+        tl.to(S + "m-legR", { rotation: 0, duration: 0.1 }, at + 0.06);
+      };
+      // quadratic arc for an element whose parent sits at its start: offsets (dx, dy) to the end, apex height h
+      const arc = (sel, t0, d, dx, dy, h, spinSel) => {
+        const el = document.querySelector(sel), o = { p: 0 };
+        tl.fromTo(o, { p: 0 }, { p: 1, duration: d, ease: "none", onUpdate() {
+          const p = o.p, x = dx * p, y = dy * p - 4 * h * p * (1 - p);
+          gsap.set(el, { x, y });
+        } }, t0);
+        if (spinSel) tl.fromTo(spinSel, { rotation: 0 }, { rotation: 720, duration: d, ease: "none", transformOrigin: "50% 50%" }, t0);
+      };
+      const drawOn = (sel, at, d = 0.6) => tl.fromTo(sel, { strokeDashoffset: 1.1 }, { strokeDashoffset: 0, duration: d, ease: "power1.inOut" }, at);
+      const stampIn = (at) => {
+        tl.fromTo(S + "stamp", { opacity: 0, scale: 2.4, rotation: -4 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.18, ease: "power4.in" }, at);
+        tl.fromTo(S + "svg", { x: 0 }, { x: 10, duration: 0.04, repeat: 5, yoyo: true }, at + 0.18);
+      };
+
+      const FK_RUN = 0.9, FK_KICK = 1.55, FL = 1.2, GX = 920;
+      const SB = "#s6-strike-b-";
+
+      // ---- Plan A: the testudo shuffles in
+      fly("a", C.a, C.legs - 0.1, { from: "top" });
+      tl.fromTo(S + "tw", { x: 0 }, { x: -700, duration: 3.4, ease: "power1.out" }, 0.3);
+      tl.fromTo(S + "tw .tlA", { y: 0 }, { y: -12, duration: 0.14, yoyo: true, repeat: R(3.4, 0.14), ease: "sine.inOut" }, 0.3);
+      tl.fromTo(S + "tw .tlB", { y: -12 }, { y: 0, duration: 0.14, yoyo: true, repeat: R(3.4, 0.14), ease: "sine.inOut" }, 0.3);
+      tl.fromTo(S + "tw .tpup", { x: 0 }, { x: -3, duration: 0.3 }, 1.0);
+      fly("to", C.tort, C.legs - 0.1, { from: "right" });
+      look("m", 6, 0, 0.6);
+      // ... unfortunately, it has legs: the camera drops to ground level
+      tl.to(S + "zoom", { scale: 1.8, transformOrigin: "420px 1200px", duration: 0.7, ease: "power2.inOut" }, C.legs);
+      fly("lg", C.legs + 0.5, C.nut - 0.1, { from: "right" });
+      // nutmeg: the ball goes between the legs, Messi runs round the back
+      kickR(C.nut);
+      tl.to(S + "ball", { x: 900, duration: 0.8, ease: "power1.out" }, C.nut);
+      tl.to(S + "ball-spin", { rotation: 900, duration: 0.8, ease: "power1.out" }, C.nut);
+      run(C.nut + 0.1, C.nut + 0.9);
+      tl.to(S + "mw", { x: 900, duration: 0.8, ease: "power1.in" }, C.nut + 0.1);
+      tl.to(S + "tw .tpup", { x: 4, duration: 0.15 }, C.nut + 0.5);
+      tl.to(S + "zoom", { scale: 1, duration: 0.5, ease: "power2.inOut" }, C.nut + 0.6);
+      tl.to(S + "tw", { scaleX: -1, transformOrigin: "50% 100%", duration: 0.2 }, C.nut + 0.9);
+      // the shell falls apart
+      [1, 2, 3, 4, 5].forEach((i) => {
+        tl.to(S + "t-r" + i, { y: -200 - i * 30, x: (i - 3) * 80, rotation: (i - 3) * 50, duration: 0.35, ease: "power2.out" }, C.nut + 1.1);
+        tl.to(S + "t-r" + i, { y: 320, duration: 0.4, ease: "power2.in" }, C.nut + 1.45);
+        tl.to(S + "t-s" + i, { rotation: (i % 2 ? 1 : -1) * 80, y: 60, x: (i - 3) * 40, transformOrigin: "50% 100%", duration: 0.4, ease: "power2.in" }, C.nut + 1.15 + i * 0.04);
+      });
+      fly("nt", C.nut + 0.3, C.b - 0.1);
+      score(C.nut + 0.5, 0, 2);
+      // ---- Plan B: wide shot (65 px/m)
+      tl.set(S + "A", { opacity: 0 }, C.b);
+      tl.set(S + "B", { opacity: 1 }, C.b);
+      fly("b", C.b, C.hw - 0.1, { from: "top" });
+      // they build a wall: it rises out of the ground, the ground shakes
+      tl.fromTo(S + "wall", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.9, ease: "back.out(1.3)" }, C.wall);
+      tl.fromTo(S + "B", { y: 0 }, { y: 6, duration: 0.05, yoyo: true, repeat: 15 }, C.wall);
+      fly("hw", C.hw, C.fk - 0.1);
+      fly("km", C.km, C.fk - 0.1, { from: "right" });
+      drawOn(S + "hwline", C.km + 0.4, 0.9);
+      // free kick: 9.15 m, run-up, curl over the wall into the goal
+      fly("fk", C.fk, null);
+      tl.fromTo(S + "dash", { opacity: 0 }, { opacity: 1, duration: 0.3 }, C.fk + 0.1);
+      tl.to(SB + "mw", { x: -50, duration: 0.4 }, C.fk + 0.3);
+      tl.to(SB + "mw", { x: -8, duration: FK_KICK - FK_RUN, ease: "power1.in" }, C.fk + FK_RUN);
+      tl.fromTo(SB + "m-legR", { rotation: 30 }, { rotation: -30, duration: 0.12, yoyo: true, repeat: 3 }, C.fk + FK_RUN);
+      tl.to(SB + "m-legR", { rotation: -55, duration: 0.1, ease: "power3.out" }, C.fk + FK_KICK - 0.05);
+      tl.to(SB + "m-legR", { rotation: 0, duration: 0.3 }, C.fk + FK_KICK + 0.3);
+      arc(SB + "ball", C.fk + FK_KICK, FL, GX, -63, 470, SB + "ball-spin");
+      tl.fromTo(S + "trr", { attr: { width: 0 } }, { attr: { width: 1080 }, duration: FL, ease: "none" }, C.fk + FK_KICK);
+      [0, 1, 2].forEach((i) => { look("w" + i + "p", -5, -4, C.fk + FK_KICK); look("w" + i + "p", 6, -2, C.fk + FK_KICK + 0.6); face("w" + i + "p", "m-o", C.fk + FK_KICK + 0.4); });
+      const goalT = C.fk + FK_KICK + FL;
+      tl.fromTo(S + "goal", { scaleX: 1 }, { scaleX: 1.25, transformOrigin: "0% 100%", duration: 0.12, yoyo: true, repeat: 1 }, goalT);
+      score(goalT + 0.1, 0, 3);
+      tl.to(SB + "m-armL", { rotation: 150, duration: 0.25 }, goalT + 0.2);
+      tl.to(SB + "m-armR", { rotation: -150, duration: 0.25 }, goalT + 0.2);
+      // this one is just longer
+      fly("lo", C.long, null, { from: "right" });
+      [0, 1, 2].forEach((i) => dizzy("w" + i, C.long + 0.3 + i * 0.15, 2));
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s6-strike"] = tl;
+    })();
+  </script>
+</template>

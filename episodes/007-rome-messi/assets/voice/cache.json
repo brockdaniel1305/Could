@@ -1,0 +1,1277 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "6a6a29dc5aa3a3458a3dfc688840ae55c2db7a61",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.352
+   },
+   {
+    "text": "the",
+    "start": 0.352,
+    "end": 0.563
+   },
+   {
+    "text": "Roman",
+    "start": 0.563,
+    "end": 0.915
+   },
+   {
+    "text": "Empire",
+    "start": 0.915,
+    "end": 1.338
+   },
+   {
+    "text": "stop",
+    "start": 1.338,
+    "end": 1.619
+   },
+   {
+    "text": "Prime",
+    "start": 1.619,
+    "end": 1.971
+   },
+   {
+    "text": "Lionel",
+    "start": 1.971,
+    "end": 2.394
+   },
+   {
+    "text": "Messi,",
+    "start": 2.394,
+    "end": 2.816
+   },
+   {
+    "text": "we",
+    "start": 2.816,
+    "end": 2.957
+   },
+   {
+    "text": "reconstructed",
+    "start": 2.957,
+    "end": 3.872
+   },
+   {
+    "text": "the",
+    "start": 3.872,
+    "end": 4.083
+   },
+   {
+    "text": "battle",
+    "start": 4.083,
+    "end": 4.506
+   },
+   {
+    "text": "accurately.",
+    "start": 4.506,
+    "end": 5.28
+   }
+  ]
+ },
+ "s1-hook.part1.wav": {
+  "key": "f2bcfab9d459e563c5e3379e7d015562a9dfe71c",
+  "words": [
+   {
+    "text": "on",
+    "start": 0,
+    "end": 0.22
+   },
+   {
+    "text": "GRASS.",
+    "start": 0.22,
+    "end": 0.88
+   }
+  ]
+ },
+ "s2-rome.part0.wav": {
+  "key": "f3fde52a61276aa60dc0de878faced6839dbf769",
+  "words": [
+   {
+    "text": "In",
+    "start": 0,
+    "end": 0.151
+   },
+   {
+    "text": "the",
+    "start": 0.151,
+    "end": 0.377
+   },
+   {
+    "text": "red",
+    "start": 0.377,
+    "end": 0.603
+   },
+   {
+    "text": "corner,",
+    "start": 0.603,
+    "end": 1.13
+   },
+   {
+    "text": "the",
+    "start": 1.13,
+    "end": 1.356
+   },
+   {
+    "text": "Roman",
+    "start": 1.356,
+    "end": 1.733
+   },
+   {
+    "text": "Empire.",
+    "start": 1.733,
+    "end": 2.26
+   },
+   {
+    "text": "At",
+    "start": 2.26,
+    "end": 2.411
+   },
+   {
+    "text": "its",
+    "start": 2.411,
+    "end": 2.636
+   },
+   {
+    "text": "peak,",
+    "start": 2.636,
+    "end": 3.013
+   },
+   {
+    "text": "five",
+    "start": 3.013,
+    "end": 3.314
+   },
+   {
+    "text": "million",
+    "start": 3.314,
+    "end": 3.841
+   },
+   {
+    "text": "square",
+    "start": 3.841,
+    "end": 4.292
+   },
+   {
+    "text": "kilometers,",
+    "start": 4.292,
+    "end": 5.12
+   },
+   {
+    "text": "about",
+    "start": 5.12,
+    "end": 5.677
+   },
+   {
+    "text": "380,000",
+    "start": 5.677,
+    "end": 6.457
+   },
+   {
+    "text": "soldiers,",
+    "start": 6.457,
+    "end": 7.46
+   },
+   {
+    "text": "shields,",
+    "start": 7.46,
+    "end": 8.351
+   },
+   {
+    "text": "armor,",
+    "start": 8.351,
+    "end": 9.02
+   },
+   {
+    "text": "swords,",
+    "start": 9.02,
+    "end": 9.8
+   },
+   {
+    "text": "and",
+    "start": 9.8,
+    "end": 9.993
+   },
+   {
+    "text": "centuries",
+    "start": 9.993,
+    "end": 10.572
+   },
+   {
+    "text": "of",
+    "start": 10.572,
+    "end": 10.701
+   },
+   {
+    "text": "practice,",
+    "start": 10.701,
+    "end": 11.28
+   },
+   {
+    "text": "they",
+    "start": 11.28,
+    "end": 11.524
+   },
+   {
+    "text": "conquered",
+    "start": 11.524,
+    "end": 12.072
+   },
+   {
+    "text": "everything",
+    "start": 12.072,
+    "end": 12.682
+   },
+   {
+    "text": "from",
+    "start": 12.682,
+    "end": 12.926
+   },
+   {
+    "text": "Britain",
+    "start": 12.926,
+    "end": 13.352
+   },
+   {
+    "text": "to",
+    "start": 13.352,
+    "end": 13.474
+   },
+   {
+    "text": "Egypt.",
+    "start": 13.474,
+    "end": 13.84
+   }
+  ]
+ },
+ "s2-rome.part1.wav": {
+  "key": "ef8d66bc446dae006ec04d9c4a4b9bcbb38dfb30",
+  "words": [
+   {
+    "text": "nobody",
+    "start": 0,
+    "end": 0.461
+   },
+   {
+    "text": "ever",
+    "start": 0.461,
+    "end": 0.768
+   },
+   {
+    "text": "asked",
+    "start": 0.768,
+    "end": 1.151
+   },
+   {
+    "text": "them",
+    "start": 1.151,
+    "end": 1.458
+   },
+   {
+    "text": "to",
+    "start": 1.458,
+    "end": 1.612
+   },
+   {
+    "text": "defend",
+    "start": 1.612,
+    "end": 2.072
+   },
+   {
+    "text": "a",
+    "start": 2.072,
+    "end": 2.149
+   },
+   {
+    "text": "football.",
+    "start": 2.149,
+    "end": 2.84
+   }
+  ]
+ },
+ "s3-messi.part0.wav": {
+  "key": "61660d8f7df0abd4fb9c0a7c7a7ed7369fb514ab",
+  "words": [
+   {
+    "text": "In",
+    "start": 0,
+    "end": 0.195
+   },
+   {
+    "text": "the",
+    "start": 0.195,
+    "end": 0.488
+   },
+   {
+    "text": "blue",
+    "start": 0.488,
+    "end": 0.878
+   },
+   {
+    "text": "corner,",
+    "start": 0.878,
+    "end": 1.561
+   },
+   {
+    "text": "Lionel",
+    "start": 1.561,
+    "end": 2.146
+   },
+   {
+    "text": "Messi,",
+    "start": 2.146,
+    "end": 2.731
+   },
+   {
+    "text": "1.70",
+    "start": 2.731,
+    "end": 3.121
+   },
+   {
+    "text": "metres,",
+    "start": 3.121,
+    "end": 3.804
+   },
+   {
+    "text": "eight",
+    "start": 3.804,
+    "end": 4.292
+   },
+   {
+    "text": "Ballon",
+    "start": 4.292,
+    "end": 4.877
+   },
+   {
+    "text": "d'Or's.",
+    "start": 4.877,
+    "end": 5.56
+   },
+   {
+    "text": "In",
+    "start": 5.56,
+    "end": 5.74
+   },
+   {
+    "text": "2012,",
+    "start": 5.74,
+    "end": 6.189
+   },
+   {
+    "text": "he",
+    "start": 6.189,
+    "end": 6.368
+   },
+   {
+    "text": "scored",
+    "start": 6.368,
+    "end": 6.907
+   },
+   {
+    "text": "91",
+    "start": 6.907,
+    "end": 7.087
+   },
+   {
+    "text": "goals",
+    "start": 7.087,
+    "end": 7.536
+   },
+   {
+    "text": "in",
+    "start": 7.536,
+    "end": 7.715
+   },
+   {
+    "text": "one",
+    "start": 7.715,
+    "end": 7.985
+   },
+   {
+    "text": "calendar",
+    "start": 7.985,
+    "end": 8.703
+   },
+   {
+    "text": "year,",
+    "start": 8.703,
+    "end": 9.152
+   },
+   {
+    "text": "a",
+    "start": 9.152,
+    "end": 9.242
+   },
+   {
+    "text": "world",
+    "start": 9.242,
+    "end": 9.691
+   },
+   {
+    "text": "record.",
+    "start": 9.691,
+    "end": 10.32
+   }
+  ]
+ },
+ "s3-messi.part1.wav": {
+  "key": "64de394a89928e1ca9d2a947efa0b11d20b72fc0",
+  "words": [
+   {
+    "text": "In",
+    "start": 0,
+    "end": 0.143
+   },
+   {
+    "text": "his",
+    "start": 0.143,
+    "end": 0.357
+   },
+   {
+    "text": "prime,",
+    "start": 0.357,
+    "end": 0.786
+   },
+   {
+    "text": "he",
+    "start": 0.786,
+    "end": 0.929
+   },
+   {
+    "text": "was",
+    "start": 0.929,
+    "end": 1.143
+   },
+   {
+    "text": "unstoppable.",
+    "start": 1.143,
+    "end": 2
+   }
+  ]
+ },
+ "s3-messi.part2.wav": {
+  "key": "ca6263409660e7868c0983970e11b69e36638853",
+  "words": [
+   {
+    "text": "Defenders",
+    "start": 0,
+    "end": 0.663
+   },
+   {
+    "text": "did",
+    "start": 0.663,
+    "end": 0.884
+   },
+   {
+    "text": "not",
+    "start": 0.884,
+    "end": 1.105
+   },
+   {
+    "text": "stop",
+    "start": 1.105,
+    "end": 1.4
+   },
+   {
+    "text": "him,",
+    "start": 1.4,
+    "end": 1.695
+   },
+   {
+    "text": "they",
+    "start": 1.695,
+    "end": 1.989
+   },
+   {
+    "text": "watched",
+    "start": 1.989,
+    "end": 2.505
+   },
+   {
+    "text": "him.",
+    "start": 2.505,
+    "end": 2.8
+   }
+  ]
+ },
+ "s4-standoff.part0.wav": {
+  "key": "06cf56d60f667fdc57809ce7216b32006a50ff6c",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.333
+   },
+   {
+    "text": "battle,",
+    "start": 0.333,
+    "end": 1.109
+   },
+   {
+    "text": "380,000",
+    "start": 1.109,
+    "end": 1.885
+   },
+   {
+    "text": "Romans",
+    "start": 1.885,
+    "end": 2.551
+   },
+   {
+    "text": "form",
+    "start": 2.551,
+    "end": 2.995
+   },
+   {
+    "text": "a",
+    "start": 2.995,
+    "end": 3.105
+   },
+   {
+    "text": "line.",
+    "start": 3.105,
+    "end": 3.66
+   },
+   {
+    "text": "Messy",
+    "start": 3.66,
+    "end": 4.168
+   },
+   {
+    "text": "is",
+    "start": 4.168,
+    "end": 4.371
+   },
+   {
+    "text": "alone.",
+    "start": 4.371,
+    "end": 4.98
+   },
+   {
+    "text": "The",
+    "start": 4.98,
+    "end": 5.406
+   },
+   {
+    "text": "odds,",
+    "start": 5.406,
+    "end": 6.115
+   },
+   {
+    "text": "380,000",
+    "start": 6.115,
+    "end": 7.109
+   },
+   {
+    "text": "to",
+    "start": 7.109,
+    "end": 7.392
+   },
+   {
+    "text": "one.",
+    "start": 7.392,
+    "end": 7.96
+   }
+  ]
+ },
+ "s4-standoff.part1.wav": {
+  "key": "4b1c7131fc00d2b13e961734f3084b1f5971712b",
+  "words": [
+   {
+    "text": "Nobody",
+    "start": 0,
+    "end": 0.6
+   },
+   {
+    "text": "moves.",
+    "start": 0.6,
+    "end": 1.2
+   }
+  ]
+ },
+ "s4-standoff.part2.wav": {
+  "key": "5a7aba8f945c9abbd042926431422e2dcb2d4734",
+  "words": [
+   {
+    "text": "Messi",
+    "start": 0,
+    "end": 0.39
+   },
+   {
+    "text": "checks",
+    "start": 0.39,
+    "end": 0.858
+   },
+   {
+    "text": "his",
+    "start": 0.858,
+    "end": 1.092
+   },
+   {
+    "text": "laces.",
+    "start": 1.092,
+    "end": 1.56
+   }
+  ]
+ },
+ "s5-dribble.part0.wav": {
+  "key": "894be583483ce4934b6ca864983c4968554e9496",
+  "words": [
+   {
+    "text": "Then",
+    "start": 0,
+    "end": 0.24
+   },
+   {
+    "text": "he",
+    "start": 0.24,
+    "end": 0.36
+   },
+   {
+    "text": "starts",
+    "start": 0.36,
+    "end": 0.72
+   },
+   {
+    "text": "dribbling.",
+    "start": 0.72,
+    "end": 1.32
+   },
+   {
+    "text": "In",
+    "start": 1.32,
+    "end": 1.513
+   },
+   {
+    "text": "2007,",
+    "start": 1.513,
+    "end": 1.996
+   },
+   {
+    "text": "against",
+    "start": 1.996,
+    "end": 2.672
+   },
+   {
+    "text": "Getef,",
+    "start": 2.672,
+    "end": 3.252
+   },
+   {
+    "text": "he",
+    "start": 3.252,
+    "end": 3.445
+   },
+   {
+    "text": "went",
+    "start": 3.445,
+    "end": 3.831
+   },
+   {
+    "text": "past",
+    "start": 3.831,
+    "end": 4.218
+   },
+   {
+    "text": "five",
+    "start": 4.218,
+    "end": 4.604
+   },
+   {
+    "text": "players",
+    "start": 4.604,
+    "end": 5.28
+   },
+   {
+    "text": "and",
+    "start": 5.28,
+    "end": 5.491
+   },
+   {
+    "text": "the",
+    "start": 5.491,
+    "end": 5.702
+   },
+   {
+    "text": "goalkeeper",
+    "start": 5.702,
+    "end": 6.405
+   },
+   {
+    "text": "in",
+    "start": 6.405,
+    "end": 6.545
+   },
+   {
+    "text": "about",
+    "start": 6.545,
+    "end": 6.897
+   },
+   {
+    "text": "12",
+    "start": 6.897,
+    "end": 7.038
+   },
+   {
+    "text": "seconds.",
+    "start": 7.038,
+    "end": 7.6
+   },
+   {
+    "text": "Every",
+    "start": 7.6,
+    "end": 7.981
+   },
+   {
+    "text": "Roman",
+    "start": 7.981,
+    "end": 8.362
+   },
+   {
+    "text": "he",
+    "start": 8.362,
+    "end": 8.514
+   },
+   {
+    "text": "passes",
+    "start": 8.514,
+    "end": 8.971
+   },
+   {
+    "text": "spins",
+    "start": 8.971,
+    "end": 9.352
+   },
+   {
+    "text": "around",
+    "start": 9.352,
+    "end": 9.81
+   },
+   {
+    "text": "and",
+    "start": 9.81,
+    "end": 10.038
+   },
+   {
+    "text": "gets",
+    "start": 10.038,
+    "end": 10.343
+   },
+   {
+    "text": "dizzy.",
+    "start": 10.343,
+    "end": 10.8
+   },
+   {
+    "text": "At",
+    "start": 10.8,
+    "end": 10.936
+   },
+   {
+    "text": "that",
+    "start": 10.936,
+    "end": 11.209
+   },
+   {
+    "text": "rate,",
+    "start": 11.209,
+    "end": 11.551
+   },
+   {
+    "text": "getting",
+    "start": 11.551,
+    "end": 12.028
+   },
+   {
+    "text": "past",
+    "start": 12.028,
+    "end": 12.301
+   },
+   {
+    "text": "the",
+    "start": 12.301,
+    "end": 12.506
+   },
+   {
+    "text": "whole",
+    "start": 12.506,
+    "end": 12.847
+   },
+   {
+    "text": "army",
+    "start": 12.847,
+    "end": 13.12
+   },
+   {
+    "text": "takes",
+    "start": 13.12,
+    "end": 13.594
+   },
+   {
+    "text": "about",
+    "start": 13.594,
+    "end": 14.067
+   },
+   {
+    "text": "nine",
+    "start": 14.067,
+    "end": 14.446
+   },
+   {
+    "text": "days.",
+    "start": 14.446,
+    "end": 14.92
+   }
+  ]
+ },
+ "s5-dribble.part1.wav": {
+  "key": "31f1109e3dca9e54765bcacbb4a6794aa79e631f",
+  "words": [
+   {
+    "text": "Luckily,",
+    "start": 0,
+    "end": 0.686
+   },
+   {
+    "text": "dizzy",
+    "start": 0.686,
+    "end": 1.114
+   },
+   {
+    "text": "Romans",
+    "start": 1.114,
+    "end": 1.629
+   },
+   {
+    "text": "fall",
+    "start": 1.629,
+    "end": 1.971
+   },
+   {
+    "text": "over.",
+    "start": 1.971,
+    "end": 2.4
+   }
+  ]
+ },
+ "s5-dribble.part2.wav": {
+  "key": "48f6924d284088891954b006d8338c5b2e4cf3fa",
+  "words": [
+   {
+    "text": "into",
+    "start": 0,
+    "end": 0.35
+   },
+   {
+    "text": "other",
+    "start": 0.35,
+    "end": 0.788
+   },
+   {
+    "text": "Romans.",
+    "start": 0.788,
+    "end": 1.4
+   }
+  ]
+ },
+ "s6-strike.part0.wav": {
+  "key": "d85a5e732d156d3c58e040852d3e746fc66b4bd5",
+  "words": [
+   {
+    "text": "Rome",
+    "start": 0,
+    "end": 0.313
+   },
+   {
+    "text": "Strikes",
+    "start": 0.313,
+    "end": 0.861
+   },
+   {
+    "text": "Back,",
+    "start": 0.861,
+    "end": 1.253
+   },
+   {
+    "text": "Plan",
+    "start": 1.253,
+    "end": 1.566
+   },
+   {
+    "text": "A,",
+    "start": 1.566,
+    "end": 1.723
+   },
+   {
+    "text": "the",
+    "start": 1.723,
+    "end": 1.958
+   },
+   {
+    "text": "Testudo,",
+    "start": 1.958,
+    "end": 2.584
+   },
+   {
+    "text": "a",
+    "start": 2.584,
+    "end": 2.663
+   },
+   {
+    "text": "tortoise",
+    "start": 2.663,
+    "end": 3.289
+   },
+   {
+    "text": "made",
+    "start": 3.289,
+    "end": 3.602
+   },
+   {
+    "text": "of",
+    "start": 3.602,
+    "end": 3.759
+   },
+   {
+    "text": "shields,",
+    "start": 3.759,
+    "end": 4.385
+   },
+   {
+    "text": "unfortunately",
+    "start": 4.385,
+    "end": 5.403
+   },
+   {
+    "text": "it",
+    "start": 5.403,
+    "end": 5.56
+   },
+   {
+    "text": "has",
+    "start": 5.56,
+    "end": 5.86
+   },
+   {
+    "text": "legs.",
+    "start": 5.86,
+    "end": 6.36
+   }
+  ]
+ },
+ "s6-strike.part1.wav": {
+  "key": "3c76fbf1b4f361a5868fadca2b0538d446c5dd05",
+  "words": [
+   {
+    "text": "Not",
+    "start": 0,
+    "end": 0.252
+   },
+   {
+    "text": "Maggie.",
+    "start": 0.252,
+    "end": 0.84
+   }
+  ]
+ },
+ "s6-strike.part2.wav": {
+  "key": "ec401c0f666196a1e0ffb46743c0ac32a5227f01",
+  "words": [
+   {
+    "text": "Plan",
+    "start": 0,
+    "end": 0.348
+   },
+   {
+    "text": "B,",
+    "start": 0.348,
+    "end": 0.522
+   },
+   {
+    "text": "what",
+    "start": 0.522,
+    "end": 0.87
+   },
+   {
+    "text": "Romans",
+    "start": 0.87,
+    "end": 1.391
+   },
+   {
+    "text": "do",
+    "start": 1.391,
+    "end": 1.565
+   },
+   {
+    "text": "best.",
+    "start": 1.565,
+    "end": 2
+   },
+   {
+    "text": "They",
+    "start": 2,
+    "end": 2.391
+   },
+   {
+    "text": "build",
+    "start": 2.391,
+    "end": 2.881
+   },
+   {
+    "text": "a",
+    "start": 2.881,
+    "end": 2.979
+   },
+   {
+    "text": "wall,",
+    "start": 2.979,
+    "end": 3.468
+   },
+   {
+    "text": "Hadrian's",
+    "start": 3.468,
+    "end": 4.349
+   },
+   {
+    "text": "wall,",
+    "start": 4.349,
+    "end": 4.838
+   },
+   {
+    "text": "117",
+    "start": 4.838,
+    "end": 5.132
+   },
+   {
+    "text": "kilometers",
+    "start": 5.132,
+    "end": 6.111
+   },
+   {
+    "text": "long.",
+    "start": 6.111,
+    "end": 6.6
+   },
+   {
+    "text": "Messi",
+    "start": 6.6,
+    "end": 7.019
+   },
+   {
+    "text": "has",
+    "start": 7.019,
+    "end": 7.27
+   },
+   {
+    "text": "scored",
+    "start": 7.27,
+    "end": 7.772
+   },
+   {
+    "text": "more",
+    "start": 7.772,
+    "end": 8.107
+   },
+   {
+    "text": "than",
+    "start": 8.107,
+    "end": 8.442
+   },
+   {
+    "text": "65",
+    "start": 8.442,
+    "end": 8.609
+   },
+   {
+    "text": "free",
+    "start": 8.609,
+    "end": 8.944
+   },
+   {
+    "text": "kicks",
+    "start": 8.944,
+    "end": 9.363
+   },
+   {
+    "text": "over",
+    "start": 9.363,
+    "end": 9.698
+   },
+   {
+    "text": "walls.",
+    "start": 9.698,
+    "end": 10.2
+   }
+  ]
+ },
+ "s7-end.part0.wav": {
+  "key": "e3e79334253fc45db2b1ebe18da2b0885ebd975a",
+  "words": [
+   {
+    "text": "This",
+    "start": 0,
+    "end": 0.278
+   },
+   {
+    "text": "is",
+    "start": 0.278,
+    "end": 0.418
+   },
+   {
+    "text": "when",
+    "start": 0.418,
+    "end": 0.696
+   },
+   {
+    "text": "they",
+    "start": 0.696,
+    "end": 0.974
+   },
+   {
+    "text": "all",
+    "start": 0.974,
+    "end": 1.183
+   },
+   {
+    "text": "realised",
+    "start": 1.183,
+    "end": 1.74
+   },
+   {
+    "text": "that",
+    "start": 1.74,
+    "end": 2.018
+   },
+   {
+    "text": "nobody",
+    "start": 2.018,
+    "end": 2.436
+   },
+   {
+    "text": "could",
+    "start": 2.436,
+    "end": 2.784
+   },
+   {
+    "text": "stop",
+    "start": 2.784,
+    "end": 3.062
+   },
+   {
+    "text": "Messi.",
+    "start": 3.062,
+    "end": 3.48
+   }
+  ]
+ },
+ "s8-outro.part0.wav": {
+  "key": "6c279d40f446e1f68aba6b2496ea3022dba19e68",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.339
+   },
+   {
+    "text": "you",
+    "start": 0.339,
+    "end": 0.542
+   },
+   {
+    "text": "imagine",
+    "start": 0.542,
+    "end": 1.016
+   },
+   {
+    "text": "another",
+    "start": 1.016,
+    "end": 1.491
+   },
+   {
+    "text": "scenario",
+    "start": 1.491,
+    "end": 2.033
+   },
+   {
+    "text": "that",
+    "start": 2.033,
+    "end": 2.304
+   },
+   {
+    "text": "we",
+    "start": 2.304,
+    "end": 2.439
+   },
+   {
+    "text": "should",
+    "start": 2.439,
+    "end": 2.846
+   },
+   {
+    "text": "do",
+    "start": 2.846,
+    "end": 2.981
+   },
+   {
+    "text": "next?",
+    "start": 2.981,
+    "end": 3.32
+   },
+   {
+    "text": "Write",
+    "start": 3.32,
+    "end": 3.715
+   },
+   {
+    "text": "it",
+    "start": 3.715,
+    "end": 3.873
+   },
+   {
+    "text": "in",
+    "start": 3.873,
+    "end": 4.031
+   },
+   {
+    "text": "the",
+    "start": 4.031,
+    "end": 4.269
+   },
+   {
+    "text": "comments.",
+    "start": 4.269,
+    "end": 4.98
+   }
+  ]
+ },
+ "s6-strike.part3.wav": {
+  "key": "0a8761ed125450e8b3699828dba0e68af445b036",
+  "words": [
+   {
+    "text": "This",
+    "start": 0,
+    "end": 0.34
+   },
+   {
+    "text": "one",
+    "start": 0.34,
+    "end": 0.595
+   },
+   {
+    "text": "is",
+    "start": 0.595,
+    "end": 0.765
+   },
+   {
+    "text": "just",
+    "start": 0.765,
+    "end": 1.105
+   },
+   {
+    "text": "longer.",
+    "start": 1.105,
+    "end": 1.7
+   }
+  ]
+ }
+}

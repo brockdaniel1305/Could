@@ -1,0 +1,10 @@
+<!-- Hadrian's Wall, end view (cross-section) so a free kick can fly over it. Origin = ground centre. Drawn at 100 px/m:
+     about 4.5 m tall (estimated, sources say 4-6 m), 3 m wide, with a walkway parapet. Scale in the scene (e.g. 0.65 for 65 px/m).
+     Animatable: PFX (rise: scaleY from the ground), PFX-crack. -->
+<g id="PFX">
+  <path d="M-150,0 L-150,-450 L-170,-450 L-170,-500 L-130,-500 L-130,-470 L130,-470 L130,-500 L170,-500 L170,-450 L150,-450 L150,0 Z" fill="#b9a88a" stroke="#1a1a2e" stroke-width="7" stroke-linejoin="round" />
+  <g stroke="#8a7a60" stroke-width="5" fill="none">
+    <path d="M-150,-60 L150,-60 M-150,-120 L150,-120 M-150,-180 L150,-180 M-150,-240 L150,-240 M-150,-300 L150,-300 M-150,-360 L150,-360 M-150,-420 L150,-420" />
+    <path d="M-60,0 L-60,-60 M50,0 L50,-60 M-110,-60 L-110,-120 M0,-60 L0,-120 M100,-60 L100,-120 M-60,-120 L-60,-180 M50,-120 L50,-180 M-110,-180 L-110,-240 M0,-180 L0,-240 M100,-180 L100,-240 M-60,-240 L-60,-300 M50,-240 L50,-300 M-110,-300 L-110,-360 M0,-300 L0,-360 M100,-300 L100,-360 M-60,-360 L-60,-420 M50,-360 L50,-420" />
+  </g>
+</g>

@@ -40,6 +40,11 @@ SFX_LIB = ROOT / ".claude/skills/media-use/audio/assets/sfx"
 KIT = ROOT / "channel/kit"
 LEXICON = {k: v for k, v in json.loads((ROOT / "channel/pronunciation.json").read_text()).items() if not k.startswith("_")}
 SFX_MANIFEST = json.loads((SFX_LIB / "manifest.json").read_text())
+# channel cartoon library (tools/make_sfx.py) first, then the bundled HyperFrames library
+KIT_SFX = ROOT / "channel/kit/sfx"
+SFX = {k: (KIT_SFX / v["file"], v["duration"]) for k, v in json.loads((KIT_SFX / "manifest.json").read_text()).items()}
+for k, v in SFX_MANIFEST.items():
+    SFX.setdefault(k, (SFX_LIB / v["file"], v["duration"]))
 W, H = 1080, 1920
 LEAD, TAIL, OUTRO_TAIL = 0.15, 0.4, 1.6
 
@@ -327,26 +332,27 @@ def main():
 
     # sfx files
     sdir = ep / "assets/sfx"
-    audio_tags, z = [], 0
+    audio_tags, z, fx_n = [], 0, 0
     for s in scenes:
         z += 1
         audio_tags.append(f'      <audio id="vo-{s["id"]}" class="clip" src="{s["voice"]}" data-start="{s["start"] + LEAD:.3f}" '
                           f'data-duration="{s["speech"]:.3f}" data-track-index="20" data-volume="1"></audio>')
         for k, fx in enumerate(s["sfx"]):
-            src = SFX_LIB / f"{fx['name']}.mp3"
-            if not src.exists():
+            if fx["name"] not in SFX:
                 sys.exit(f"unknown sfx {fx['name']}")
+            src, fx_dur = SFX[fx["name"]]
             sdir.mkdir(parents=True, exist_ok=True)
             shutil.copy(src, sdir / src.name)
             at = s["cues"][fx["cue"]] if "cue" in fx else fx.get("at", 0)
             at = max(0, s["start"] + at + fx.get("offset", 0))
-            fx_dur = SFX_MANIFEST[fx["name"]]["duration"]
+            # every clip gets its own track (no overlap on a track, many sfx per scene are fine)
             audio_tags.append(f'      <audio id="fx-{s["id"]}-{k}" class="clip" src="assets/sfx/{src.name}" '
-                              f'data-start="{at:.3f}" data-duration="{fx_dur}" data-track-index="{22 + k}" data-volume="{fx.get("volume", 0.35)}"></audio>')
+                              f'data-start="{at:.3f}" data-duration="{fx_dur}" data-track-index="{30 + fx_n}" data-volume="{fx.get("volume", 0.35)}"></audio>')
+            fx_n += 1
     music = cfg.get("music")
     if music:
         audio_tags.append(f'      <audio id="music" class="clip" src="{music["src"]}" data-start="0" data-duration="{total}" '
-                          f'data-track-index="24" data-volume="{music.get("volume", 0.14)}" data-fade-out="1.5"></audio>')
+                          f'data-track-index="19" data-volume="{music.get("volume", 0.14)}" data-fade-out="1.5"></audio>')
 
     hosts = []
     for i, s in enumerate(scenes):

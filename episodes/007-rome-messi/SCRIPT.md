@@ -1,6 +1,6 @@
 # 007 · Could the Roman Empire stop prime Lionel Messi?
 
-Status: 📝 script, waiting for the creator's OK (no build before that).
+Status: ✅ approved by the creator on 2026-10-29 with one change: scene 7 now ends right after the Romans fall ("This is when they all realised that nobody could stop Messi.").
 Estimated length: ~110 s (Kokoro preview speed 1.08). Format: present both sides → standoff → the dribble → Rome strikes back → verdict.
 Score bug the whole time: **ROME 0 : 0 MESSI** (one point per "round" won).
 
@@ -74,14 +74,11 @@ Score bug the whole time: **ROME 0 : 0 MESSI** (one point per "round" won).
 
 ---
 
-## 7 · The verdict (~15 s)
+## 7 · The end (~6 s)
 **Narrator:**
-> The verdict.
-> Could the Roman Empire stop prime Lionel Messi? … No.
-> In his prime, only one thing ever stopped him: a final with Argentina. He lost three in a row.
-> So Rome makes it a final. … Unfortunately, it is twenty twenty-two.
+> This is when they all realised that nobody could stop Messi.
 
-**Animation:** A red **NO.** stamp slams onto the picture. Then a card reads **LOST FINALS: 2014 · 2015 · 2016**. The Romans hold up a "FINAL" banner and dress themselves in a hurry with sky-blue-and-white sashes; it doesn't work out. On "twenty twenty-two" a golden trophy falls next to Messi and he holds it up. A final card reads **CHANCE ROME STOPS HIM: 0 %**, with the score bug ending at **ROME 0 : 3 MESSI**.
+**Animation:** Every Roman is lying on the ground with stars circling their heads. Messi stands among them with his foot on the ball and his arms crossed. The last three Romans still standing stare at him with their mouths open and drop their swords, and a white flag goes up. A golden **UNSTOPPABLE.** stamp lands on screen. Score **ROME 0 : 3 MESSI**.
 
 ---
 

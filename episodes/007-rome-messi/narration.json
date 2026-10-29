@@ -1,0 +1,709 @@
+{
+  "id": "007",
+  "title": "Could the Roman Empire stop prime Lionel Messi?",
+  "provider": "voicestudio",
+  "voice": "fable",
+  "model": "tts-1",
+  "preview_voice": "bm_george",
+  "speed": 1.08,
+  "caption": "Could the Roman Empire stop prime Lionel Messi? 380,000 soldiers. One left foot. ⚔️⚽ #could #messi #goat #romanempire #football #history #whatif #fyp",
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "text": "Could the Roman Empire stop prime Lionel Messi? {{ev}}We reconstructed the battle. {{acc}}Accurately. ||0.2|| {{grass}}On grass.",
+      "sfx": [
+        {
+          "name": "wind",
+          "at": 0,
+          "volume": 0.18
+        },
+        {
+          "name": "stomp",
+          "at": 0.6,
+          "volume": 0.3
+        },
+        {
+          "name": "stomp",
+          "at": 1.1,
+          "volume": 0.3
+        },
+        {
+          "name": "swoosh",
+          "cue": "acc",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "name": "swoosh",
+          "cue": "grass",
+          "offset": -0.1,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s2-rome",
+      "text": "In the red corner: {{name}}the Roman Empire. {{area}}At its peak: five million square kilometres. {{army}}About three hundred and eighty thousand soldiers. {{sh}}Shields. {{ar}}Armour. {{sw}}Swords. {{cent}}And centuries of practice. {{conq}}They conquered everything from Britain to Egypt. ||0.3|| {{ball}}Nobody ever asked them to defend a football.",
+      "sfx": [
+        {
+          "name": "roar",
+          "cue": "name",
+          "offset": -0.2,
+          "volume": 0.2
+        },
+        {
+          "name": "swoosh",
+          "cue": "area",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "name": "drumroll",
+          "cue": "army",
+          "offset": -0.3,
+          "volume": 0.22
+        },
+        {
+          "name": "stomp",
+          "cue": "sh",
+          "volume": 0.5
+        },
+        {
+          "name": "clang",
+          "cue": "ar",
+          "volume": 0.25
+        },
+        {
+          "name": "stomp",
+          "cue": "sw",
+          "volume": 0.5
+        },
+        {
+          "name": "swoosh",
+          "cue": "conq",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "ball",
+          "offset": 0.9,
+          "volume": 0.3
+        },
+        {
+          "name": "boing",
+          "cue": "ball",
+          "offset": 2.0,
+          "volume": 0.25
+        }
+      ]
+    },
+    {
+      "id": "s3-messi",
+      "text": "In the blue corner: {{name}}Lionel Messi. {{h}}{1.70|One point seven zero} metres. {{bd}}Eight Ballon d'Ors. {{yr}}In {2012|twenty twelve}, he scored {{g}}ninety one goals in one calendar year. {{wr}}A world record. ||0.3|| {{prime}}In his prime, he was unstoppable. ||0.3|| {{def}}Defenders did not stop him. {{watch}}They watched him.",
+      "sfx": [
+        {
+          "name": "roar",
+          "cue": "name",
+          "offset": -0.2,
+          "volume": 0.25
+        },
+        {
+          "name": "swoosh",
+          "cue": "h",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "name": "ding",
+          "cue": "bd",
+          "offset": 0.3,
+          "volume": 0.18
+        },
+        {
+          "name": "ding",
+          "cue": "bd",
+          "offset": 0.6,
+          "volume": 0.18
+        },
+        {
+          "name": "ding",
+          "cue": "bd",
+          "offset": 0.9,
+          "volume": 0.18
+        },
+        {
+          "name": "ding",
+          "cue": "bd",
+          "offset": 1.2,
+          "volume": 0.2
+        },
+        {
+          "name": "net",
+          "cue": "g",
+          "offset": 0.2,
+          "volume": 0.25
+        },
+        {
+          "name": "net",
+          "cue": "g",
+          "offset": 0.7,
+          "volume": 0.25
+        },
+        {
+          "name": "net",
+          "cue": "g",
+          "offset": 1.1,
+          "volume": 0.25
+        },
+        {
+          "name": "ping",
+          "cue": "wr",
+          "volume": 0.25
+        },
+        {
+          "name": "boing",
+          "cue": "prime",
+          "offset": 0.8,
+          "volume": 0.2
+        },
+        {
+          "name": "swoosh",
+          "cue": "watch",
+          "offset": 0.0,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s4-standoff",
+      "text": "The battle. {{line}}Three hundred and eighty thousand Romans form a line. {{one}}Messi is alone. {{odds}}The odds: three hundred and eighty thousand to one. ||0.5|| {{still}}Nobody moves. ||0.5|| {{laces}}Messi checks his laces.",
+      "sfx": [
+        {
+          "name": "wind",
+          "at": 0,
+          "volume": 0.3
+        },
+        {
+          "name": "clang",
+          "cue": "line",
+          "offset": 0.6,
+          "volume": 0.25
+        },
+        {
+          "name": "clang",
+          "cue": "line",
+          "offset": 0.75,
+          "volume": 0.2
+        },
+        {
+          "name": "stomp",
+          "cue": "line",
+          "offset": 0.9,
+          "volume": 0.45
+        },
+        {
+          "name": "swoosh",
+          "cue": "odds",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "name": "heartbeat",
+          "cue": "still",
+          "offset": -0.3,
+          "volume": 0.5
+        },
+        {
+          "name": "rustle",
+          "cue": "still",
+          "offset": 0.2,
+          "volume": 0.25
+        },
+        {
+          "name": "heartbeat",
+          "cue": "still",
+          "offset": 0.8,
+          "volume": 0.5
+        },
+        {
+          "name": "gulp",
+          "cue": "still",
+          "offset": 1.1,
+          "volume": 0.35
+        },
+        {
+          "name": "wind",
+          "cue": "laces",
+          "offset": -0.6,
+          "volume": 0.22
+        }
+      ]
+    },
+    {
+      "id": "s5-dribble",
+      "text": "Then he starts dribbling. {{get}}In {2007|two thousand seven}, against Getafe, he went past five players and the goalkeeper in about twelve seconds. {{dizzy}}Every Roman he passes spins around and gets dizzy. {{rate}}At that rate, getting past the whole army takes about nine days. ||0.3|| {{fall}}Luckily, dizzy Romans fall over. ||0.4|| {{into}}Into other Romans.",
+      "sfx": [
+        {
+          "name": "kick",
+          "at": 0.85,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 1.25,
+          "volume": 0.28
+        },
+        {
+          "name": "dizzy",
+          "at": 1.65,
+          "volume": 0.22
+        },
+        {
+          "name": "kick",
+          "at": 2.05,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 2.45,
+          "volume": 0.28
+        },
+        {
+          "name": "tweet",
+          "at": 2.85,
+          "volume": 0.22
+        },
+        {
+          "name": "kick",
+          "at": 3.25,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 3.65,
+          "volume": 0.28
+        },
+        {
+          "name": "dizzy",
+          "at": 4.05,
+          "volume": 0.22
+        },
+        {
+          "name": "swoosh",
+          "at": 3.3,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "at": 4.45,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 4.85,
+          "volume": 0.28
+        },
+        {
+          "name": "tweet",
+          "at": 5.25,
+          "volume": 0.22
+        },
+        {
+          "name": "kick",
+          "at": 5.65,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 6.05,
+          "volume": 0.28
+        },
+        {
+          "name": "dizzy",
+          "at": 6.45,
+          "volume": 0.22
+        },
+        {
+          "name": "kick",
+          "at": 6.85,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 7.25,
+          "volume": 0.28
+        },
+        {
+          "name": "tweet",
+          "at": 7.65,
+          "volume": 0.22
+        },
+        {
+          "name": "swoosh",
+          "at": 6.9,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "at": 8.05,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 8.45,
+          "volume": 0.28
+        },
+        {
+          "name": "dizzy",
+          "at": 8.85,
+          "volume": 0.22
+        },
+        {
+          "name": "kick",
+          "at": 9.25,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 9.65,
+          "volume": 0.28
+        },
+        {
+          "name": "tweet",
+          "at": 10.05,
+          "volume": 0.22
+        },
+        {
+          "name": "swoosh",
+          "at": 11.35,
+          "volume": 0.18
+        },
+        {
+          "name": "swoosh",
+          "at": 12.15,
+          "volume": 0.18
+        },
+        {
+          "name": "swoosh",
+          "at": 12.95,
+          "volume": 0.18
+        },
+        {
+          "name": "swoosh",
+          "at": 13.75,
+          "volume": 0.18
+        },
+        {
+          "name": "tick",
+          "at": 11.75,
+          "volume": 0.3
+        },
+        {
+          "name": "tick",
+          "at": 12.55,
+          "volume": 0.3
+        },
+        {
+          "name": "tick",
+          "at": 13.35,
+          "volume": 0.3
+        },
+        {
+          "name": "tick",
+          "at": 14.15,
+          "volume": 0.3
+        },
+        {
+          "name": "spin",
+          "at": 15.01,
+          "volume": 0.3
+        },
+        {
+          "name": "dizzy",
+          "at": 15.36,
+          "volume": 0.25
+        },
+        {
+          "name": "clang",
+          "at": 16.01,
+          "volume": 0.25
+        },
+        {
+          "name": "domino",
+          "at": 15.81,
+          "volume": 0.45
+        },
+        {
+          "name": "domino",
+          "at": 18.16,
+          "volume": 0.4
+        },
+        {
+          "name": "roar",
+          "at": 18.34,
+          "volume": 0.3
+        },
+        {
+          "name": "whistle",
+          "at": 18.84,
+          "volume": 0.3
+        },
+        {
+          "name": "impact-bass-1",
+          "at": 18.77,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s6-strike",
+      "text": "Rome strikes back. {{a}}Plan A: the testudo. {{tort}}A tortoise made of shields. {{legs}}Unfortunately, it has legs. ||0.3|| {{nut}}Nutmeg. ||0.8|| {{b}}Plan B: what Romans do best. {{wall}}They build a wall. {{hw}}Hadrian's Wall. {{km}}One hundred and seventeen kilometres long. {{fk}}Messi has scored more than sixty five free kicks over walls. ||0.3|| {{long}}This one is just longer.",
+      "sfx": [
+        {
+          "name": "stomp",
+          "at": 0.3,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 0.58,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 0.86,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 1.14,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 1.42,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 1.7,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 1.98,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 2.26,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 2.54,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 2.82,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 3.1,
+          "volume": 0.14
+        },
+        {
+          "name": "stomp",
+          "at": 3.38,
+          "volume": 0.14
+        },
+        {
+          "name": "swoosh",
+          "at": 1.253,
+          "volume": 0.3
+        },
+        {
+          "name": "swoosh",
+          "at": 2.634,
+          "volume": 0.25
+        },
+        {
+          "name": "whoosh-short",
+          "at": 4.535,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "at": 6.83,
+          "volume": 0.35
+        },
+        {
+          "name": "swoosh",
+          "at": 7.03,
+          "volume": 0.3
+        },
+        {
+          "name": "impact-bass-1",
+          "at": 7.26,
+          "volume": 0.25
+        },
+        {
+          "name": "boing",
+          "at": 7.73,
+          "volume": 0.3
+        },
+        {
+          "name": "clang",
+          "at": 7.98,
+          "volume": 0.25
+        },
+        {
+          "name": "clang",
+          "at": 8.13,
+          "volume": 0.2
+        },
+        {
+          "name": "clang",
+          "at": 8.28,
+          "volume": 0.2
+        },
+        {
+          "name": "whoosh",
+          "at": 8.46,
+          "volume": 0.3
+        },
+        {
+          "name": "rumble",
+          "at": 10.46,
+          "volume": 0.5
+        },
+        {
+          "name": "stomp",
+          "at": 11.26,
+          "volume": 0.4
+        },
+        {
+          "name": "swoosh",
+          "at": 11.828,
+          "volume": 0.25
+        },
+        {
+          "name": "swoosh",
+          "at": 13.198,
+          "volume": 0.25
+        },
+        {
+          "name": "whistle",
+          "at": 15.16,
+          "volume": 0.28
+        },
+        {
+          "name": "drumroll",
+          "at": 14.11,
+          "volume": 0.22
+        },
+        {
+          "name": "kick",
+          "at": 16.61,
+          "volume": 0.4
+        },
+        {
+          "name": "swoosh",
+          "at": 16.91,
+          "volume": 0.3
+        },
+        {
+          "name": "net",
+          "at": 17.81,
+          "volume": 0.45
+        },
+        {
+          "name": "roar",
+          "at": 17.81,
+          "volume": 0.3
+        },
+        {
+          "name": "impact-bass-1",
+          "at": 17.84,
+          "volume": 0.3
+        },
+        {
+          "name": "dizzy",
+          "at": 19.16,
+          "volume": 0.22
+        },
+        {
+          "name": "tweet",
+          "at": 19.46,
+          "volume": 0.2
+        }
+      ]
+    },
+    {
+      "id": "s7-end",
+      "text": "This is when they all realised {{nobody}}that nobody could stop Messi.",
+      "tail": 2.2,
+      "sfx": [
+        {
+          "name": "tweet",
+          "at": 0.2,
+          "volume": 0.18
+        },
+        {
+          "name": "sting",
+          "at": 1.89,
+          "volume": 0.45
+        },
+        {
+          "name": "clang",
+          "at": 2.54,
+          "volume": 0.2
+        },
+        {
+          "name": "clang",
+          "at": 2.64,
+          "volume": 0.2
+        },
+        {
+          "name": "clang",
+          "at": 2.74,
+          "volume": 0.2
+        },
+        {
+          "name": "swoosh",
+          "at": 2.89,
+          "volume": 0.25
+        },
+        {
+          "name": "impact-bass-1",
+          "at": 3.8,
+          "volume": 0.45
+        },
+        {
+          "name": "roar",
+          "at": 3.89,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s8-outro",
+      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments.",
+      "sfx": [
+        {
+          "name": "swoosh",
+          "at": 0.05,
+          "volume": 0.3
+        },
+        {
+          "name": "pop",
+          "cue": "c",
+          "volume": 0.3
+        }
+      ]
+    }
+  ]
+}

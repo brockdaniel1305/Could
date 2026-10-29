@@ -36,7 +36,8 @@ Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `provi
   (sparsam, sonst klingt der Erzähler abgehackt).
 - Namen und Fremdwörter: neue Namen vorher mit `npx hyperframes tts` + `transcribe` testen; falsch gesprochene in
   `channel/pronunciation.json` eintragen (Lautschrift, z. B. `"Upamecano": "Oopah-mekano"`). Die Untertitel behalten die echte Schreibung.
-- `sfx`: `{"name", "cue", "offset", "volume"}` aus `.claude/skills/media-use/audio/assets/sfx/manifest.json`.
+- `sfx`: `{"name", "cue" oder "at", "offset", "volume"}` aus `channel/kit/sfx/manifest.json` (Cartoon-Bibliothek, zuerst) oder
+  `.claude/skills/media-use/audio/assets/sfx/manifest.json`. **Viele SFX** (Wunsch des Creators): jede sichtbare Aktion bekommt einen Sound.
   `offset` so wählen, dass die Spitze des Sounds 1 Frame nach dem Bild liegt (Spitzen: `npx hyperframes audio <file> --json`).
 
 Dann: `python3 tools/build_episode.py episodes/<ep>` (in der Cloud mit `--preview`, dann spricht die Kokoro-Stimme statt VoiceStudio). Das erzeugt Stimme, Wort-Timings und Cue-Zeiten (`timing.json`),
