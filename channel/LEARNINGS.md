@@ -5,6 +5,10 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-29 · 007 · **Vor jedem Video zuerst das fertige Skript schicken** (Erzählertext + was die Animation pro Szene zeigt)
+  als `episodes/<ep>/SCRIPT.md` und im Chat. Erst nach dem OK des Creators Stimme, Szenen und Render bauen.
+- 2026-10-29 · 007 · **Die Animation soll noch genauer zeigen, was wirklich passiert:** jede Aussage wird wörtlich gespielt
+  (Zähler zählt mit, Tricks wie Übersteiger/Tunnel sind als echte Bewegung zu sehen, Ursache → Wirkung sichtbar).
 - 2026-10-28 · 006 · **Das Ergebnis darf nicht von Anfang an offensichtlich sein** ("a little bit boring … obvious from the beginning").
   → Vor dem Skript prüfen: Weiß der Zuschauer nach dem Vorstellen schon die Antwort? Dann umbauen, z. B. "Best of three" mit
     Score-Bug, bei dem jede Runde anders ausgeht und die letzte bis zum Sprung offen bleibt (006 v2), oder ein überraschendes "Yes".

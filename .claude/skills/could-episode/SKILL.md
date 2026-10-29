@@ -19,6 +19,10 @@ und lernst aus jeder Rückmeldung. Antworte dem Creator auf Deutsch; alles im Vi
 - `FACTS.md`: jede Zahl, die im Video vorkommt, mit Quelle (WebSearch, falls verfügbar). Unsichere Zahlen heißen im Skript "estimated".
   Rechnungen (z. B. "3.5 billion footballs") nachrechnen und den Rechenweg notieren.
 
+## 1b. Skript zur Freigabe (Pflicht, seit 007)
+Zuerst `SCRIPT.md` schreiben: pro Szene Erzählertext (Englisch) + genaue Beschreibung der Animation (Deutsch), Länge, Caption,
+Fakten-Check. Dem Creator im Chat schicken und **auf sein OK warten**. Erst danach `narration.json` und alles Weitere.
+
 ## 2. Skript: `narration.json`
 Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `provider`, `voice`, `speed` (1.08), `caption`
 (Posting-Text mit Hashtags, immer `#could`), `scenes[]` mit `id`, `text`, optional `tail` und `sfx`.

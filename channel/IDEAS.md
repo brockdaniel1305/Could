@@ -10,6 +10,7 @@ Status: ✅ fertig · 📝 Skript · 💡 Idee
 | 004 | Could Dayot Upamecano have stopped Hitler from conquering France? | ✅ |
 | 005 | Could Erling Haaland survive as a gladiator in ancient Rome? | ✅ |
 | 006 | Could Cristiano Ronaldo jump high enough to dodge a moving train? | ✅ |
+| 007 | Could the Roman Empire stop prime Lionel Messi? | 📝 |
 | 021 | Could Usain Bolt outrun a Deutsche Bahn ICE? (Spoiler: on a delayed day, yes) | 💡 |
 | 003 | Could 100 grandmas knit a sweater for the Statue of Liberty? | 💡 |
 | 004 | Could Gordon Ramsay cater for the entire Roman army? | 💡 |
