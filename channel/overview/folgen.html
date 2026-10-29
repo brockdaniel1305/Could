@@ -1,0 +1,220 @@
+<title>COULD? Folgenarchiv</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: a stack of case files (newest first); each file = header strip, latest-version slip, history + chat notes in two columns. */
+  :root {
+    --bg: #eef1f6;
+    --paper: #ffffff;
+    --ink: #14213a;
+    --muted: #5a6680;
+    --line: #d5dbe6;
+    --navy: #16294d;
+    --accent: #e8b500;
+    --accent-ink: #4a3900;
+    --ok: #1f8a4c;
+    --ok-bg: #e2f4ea;
+    --warn: #a86400;
+    --warn-bg: #fdf0d9;
+    --chip: #e7ebf2;
+    --display: "Playfair Display", Georgia, "Times New Roman", serif;
+    --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b1324; --paper: #121d35; --ink: #e8edf7; --muted: #9aa7c2; --line: #263556; --navy: #0f1c38;
+      --accent: #ffd23f; --accent-ink: #1a1400; --ok: #5fd08f; --ok-bg: #12301f; --warn: #ffb648; --warn-bg: #33240c; --chip: #1c2a4a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b1324; --paper: #121d35; --ink: #e8edf7; --muted: #9aa7c2; --line: #263556; --navy: #0f1c38;
+    --accent: #ffd23f; --accent-ink: #1a1400; --ok: #5fd08f; --ok-bg: #12301f; --warn: #ffb648; --warn-bg: #33240c; --chip: #1c2a4a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font: 400 15px/1.55 var(--body); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-block: 28px 64px;
+          padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+          display: grid; gap: 22px; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+  header.top { display: grid; gap: 10px; }
+  .brand { font: 700 13px/1 var(--mono); letter-spacing: 0.16em; color: var(--muted); text-transform: uppercase; }
+  h1 { font: 900 clamp(34px, 6vw, 54px)/1.02 var(--display); margin: 0; text-wrap: balance; }
+  h1 b { color: var(--accent); }
+  .lede { margin: 0; max-width: 62ch; color: var(--muted); }
+  .toplinks { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 10px; border: 1.5px solid var(--line);
+         background: var(--paper); color: var(--ink); font: 600 14px/1 var(--body); text-decoration: none; cursor: pointer; }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn:hover { border-color: var(--accent); }
+
+  .index { display: flex; flex-wrap: wrap; gap: 8px; }
+  .index a { text-decoration: none; padding: 6px 10px; border-radius: 999px; background: var(--chip); font: 600 13px/1 var(--mono); letter-spacing: 0.04em; }
+  .index a:hover { background: var(--accent); color: var(--accent-ink); }
+
+  .file { background: var(--paper); border: 1.5px solid var(--line); border-radius: 16px; overflow: hidden; scroll-margin-top: 16px; }
+  .file:target { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent); }
+  .strip { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; padding: 14px 18px; background: var(--navy); color: #fff; }
+  .num { font: 700 13px/1 var(--mono); letter-spacing: 0.18em; color: #ffd23f; }
+  .strip h2 { flex: 1 1 320px; min-width: 0; margin: 0; font: 700 clamp(19px, 2.6vw, 24px)/1.2 var(--display); text-wrap: balance; }
+  .pill { font: 700 12px/1 var(--mono); letter-spacing: 0.06em; padding: 6px 9px; border-radius: 999px; white-space: nowrap; }
+  .pill.ok { background: var(--ok-bg); color: var(--ok); }
+  .pill.warn { background: var(--warn-bg); color: var(--warn); }
+
+  .latest { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border-bottom: 1.5px solid var(--line); }
+  .latest div { background: var(--paper); padding: 12px 18px; min-width: 0; }
+  .k { display: block; font: 700 11px/1.2 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .v { font-weight: 600; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+  .v.mono { font: 500 13px/1.4 var(--mono); }
+  .ver { display: inline-block; background: var(--accent); color: var(--accent-ink); font: 700 13px/1 var(--mono); padding: 4px 8px; border-radius: 6px; }
+
+  .cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
+  .cols > section { padding: 16px 18px 18px; min-width: 0; }
+  .cols > section + section { border-left: 1.5px solid var(--line); }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } .cols > section + section { border-left: 0; border-top: 1.5px solid var(--line); } }
+  h3 { margin: 0 0 10px; font: 700 12px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  ol.hist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  ol.hist li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 10px; align-items: start; }
+  ol.hist .tag { font: 700 12px/1 var(--mono); padding: 5px 0; text-align: center; border-radius: 6px; background: var(--chip); }
+  ol.hist li.cur .tag { background: var(--accent); color: var(--accent-ink); }
+  ol.hist p { margin: 0; }
+  ul.chat { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  ul.chat li { padding-left: 14px; border-left: 3px solid var(--line); }
+  ul.chat li.you { border-left-color: var(--accent); }
+  ul.chat .who { display: block; font: 700 11px/1.3 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  ul.chat q { font-style: italic; }
+  .foot { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 12px 18px; border-top: 1.5px solid var(--line); background: color-mix(in srgb, var(--chip) 55%, var(--paper)); }
+  .cap { flex: 1 1 100%; font-size: 14px; color: var(--muted); margin: 0 0 4px; overflow-wrap: anywhere; }
+  .note { font-size: 13px; color: var(--muted); max-width: 70ch; margin: 0; }
+  @media (prefers-reduced-motion: no-preference) { .btn { transition: border-color .15s; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">Case Files · Stand 29.10.2026</div>
+    <h1>COULD<b>?</b> Folgenarchiv</h1>
+    <p class="lede">Jede Folge mit ihrer aktuellsten Fassung, der Versionsgeschichte und dem, was wir im Chat dazu entschieden haben. Neueste Folge zuerst.</p>
+    <div class="toplinks">
+      <a class="btn primary" id="chatlink" href="https://claude.ai/code/session_0132AGQTzkhEcLrKynbVZigm" target="_blank" rel="noopener">Zum Chatverlauf öffnen ↗</a>
+      <a class="btn" href="https://github.com/brockdaniel1305/Could/tree/claude/tiktok-video-creation-gbtnbc" target="_blank" rel="noopener">Projekt auf GitHub ↗</a>
+    </div>
+    <p class="note">Alle Folgen entstanden in einem einzigen Chat. Der Button öffnet diesen Chat; zu einer einzelnen Nachricht darin lässt sich nicht direkt springen. Deshalb steht bei jeder Folge eine Zusammenfassung des Gesprächs mit deinen Wünschen im Wortlaut.</p>
+    <nav class="index" id="index" aria-label="Folgen"></nav>
+  </header>
+  <main id="files" style="display:grid; gap:22px"></main>
+</div>
+
+<script>
+const CHAT = "https://claude.ai/code/session_0132AGQTzkhEcLrKynbVZigm";
+const GH = "https://github.com/brockdaniel1305/Could/tree/claude/tiktok-video-creation-gbtnbc/episodes/";
+const EPISODES = [
+  { n: "008", slug: "008-mbappe-revolution", title: "Could Kylian Mbappé dictate the French Revolution?",
+    status: ["ok", "Fertig"], ver: "v2", file: "008-mbappe-revolution-final.mp4", len: "80,5 s", date: "29.10.",
+    caption: "Could Kylian Mbappé dictate the French Revolution? Fast enough to storm the Bastille. Not faster than a horse. 🇫🇷⚽ #could #mbappe #frenchrevolution #napoleon #realmadrid #history #whatif #fyp",
+    hist: [["v1", "Bastille, Macht mit 10-Tage-Woche, Napoleon zu Pferd, Real-Madrid-Ende, Popularity-Meter."],
+           ["v2", "Barometer und seine Sounds entfernt, Soundeffekte auf 20 punktuelle reduziert."]],
+    chat: [["you", "„Als nächstes würde ich gerne etwas mit Mbappe als Diktator machen, z.B. Could Mbappe dictate the french revolution“"],
+           ["me", "Skript mit 8 Szenen vorgelegt (Bastille, Macht, Vertrag, Napoleon)."],
+           ["you", "„ein bisschen kürzer halten und vor allem das Ende ein bisschen kürzen“"],
+           ["you", "„Das mit dem Vertrag finde ich etwas komisch“ → Pferd-Variante gewählt"],
+           ["you", "„…dass Mbappe keine Lust mehr auf die Revolution hat und lieber seinen Diktatoraufgaben bei Real Madrid nachkommt“"],
+           ["you", "„den Barometer und die dazugehörigen Sounds weg lassen“"]] },
+  { n: "007", slug: "007-rome-messi", title: "Could the Roman Empire stop prime Lionel Messi?",
+    status: ["ok", "Fertig"], ver: "v2", file: "007-rome-messi-final.mp4", len: "106,3 s", date: "29.10.",
+    caption: "Could the Roman Empire stop prime Lionel Messi? 380,000 soldiers. One left foot. ⚔️⚽ #could #messi #goat #romanempire #football #history #whatif #fyp",
+    hist: [["v1", "Rom vs. Messi mit Dribbling, Domino, Testudo, Hadrianswall-Freistoß und 124 Soundeffekten."],
+           ["v2", "Neu abgemischt: 27 punktuelle Sounds, kein synthetischer Jubel mehr."]],
+    chat: [["you", "„Could the Roman Empire stop Prime Messi … die Animationen sollen noch präziser zeigen, was wirklich passiert“"],
+           ["you", "„bevor du das Video machst, schick mir zuerst das fertige Skript … mach das ab jetzt immer“"],
+           ["you", "„nach dem Umfallen der Römer … this is when they all realised that nobody could stop messi“"],
+           ["you", "„mehr Soundeffekte …“ (später ersetzt durch: sparsam und punktuell)"],
+           ["you", "„Sehr gelungenes Video“"]] },
+  { n: "006", slug: "006-ronaldo-train", title: "Could Cristiano Ronaldo jump high enough to dodge a moving train?",
+    status: ["ok", "Fertig"], ver: "v2", file: "006-ronaldo-train-final.mp4", len: "114,6 s", date: "28.10.",
+    caption: "Could Cristiano Ronaldo jump high enough to dodge a moving train? Three trains. Best of three. One of them never showed up. 🚄⚽ Don't try this with any train. #could #ronaldo #cr7 #siuuu #physics #deutschebahn #whatif #fyp",
+    hist: [["v1", "Ein ICE, drei Probleme (Höhe, Flugzeit, Fahrplan), Urteil NO."],
+           ["v2", "Best of three: ICE, Intercity (fällt aus), Modellbahn 1:87. Urteil YES, Score-Bug CR7 : TRAINS."]],
+    chat: [["you", "„Could Cristiano Ronaldo Jump High Enough to Dodge a Moving Train?“"],
+           ["you", "„ein bisschen langweilig … von Anfang an klar, dass er es nicht schafft … gib mir zuerst deine Idee“"],
+           ["me", "Zwei Ideen vorgeschlagen: A = drei Runden mit kippender Antwort, B = Ronaldo überlistet den Zug."],
+           ["you", "„Ja, baue das Video nach A um“"]] },
+  { n: "005", slug: "005-haaland-gladiator", title: "Could Erling Haaland survive as a gladiator in ancient Rome?",
+    status: ["ok", "Fertig"], ver: "v1", file: "005-haaland-gladiator-final.mp4", len: "98,1 s", date: "28.10.",
+    caption: "Could Erling Haaland survive as a gladiator in ancient Rome? We asked the Colosseum. And a lion. ⚔️🦁 #could #haaland #gladiator #ancientrome #football #history #whatif #fyp",
+    hist: [["v1", "Kolosseum: Murmillo, Retiarius („in the back of the net“), Löwe, Meditations-Jubel."]],
+    chat: [["you", "„als nächstes erstelle ein Video: Could Erling Haaland survive as a Gladiator in ancient Rome.“"],
+           ["me", "Offen: die Meditations-Pose von Haaland könnte noch verbessert werden."]] },
+  { n: "004", slug: "004-upamecano-1940", title: "Could Dayot Upamecano have stopped Hitler from conquering France?",
+    status: ["warn", "Re-Upload bereit"], ver: "v3", file: "004-upamecano-1940-v3-final.mp4", len: "99,0 s", date: "29.10.",
+    caption: "Could Dayot Upamecano have stopped the 1940 invasion of France? Elite defending. What could possibly go wrong. 🛡️🇫🇷 #could #upamecano #football #defender #history #whatif #fyp",
+    hist: [["v1", "Sarkastisches Lob, Raumverteidigung, Tackling, Abseitsfalle."],
+           ["v2", "Aussprache „Upamecano“ korrigiert, unnötige Pausen entfernt."],
+           ["v3", "Neue Fassung für den Re-Upload: neue Erzählerspur, Zoom-Einstieg, sparsame Sounds."]],
+    chat: [["you", "„Hier ist Sarkasmus extrem wichtig … einer der besten Innenverteidiger … aber eine kleine Chance, dass er einen seiner berühmten einfachen Fehler macht“"],
+           ["you", "„der Erzähler hat oft eine komische Aussprache, z.B. Dayot Upamecano … kurze Stopps … klingt KI-generiert“"],
+           ["you", "Erste 4 Videos hatten 0 Aufrufe (Konto als Bot eingestuft) → minimal verändern für den Re-Upload"],
+           ["me", "Hinweis: „Hitler“ im Titel kann Reichweite kosten; Variante ohne den Namen möglich."]] },
+  { n: "003", slug: "003-curry-wall", title: "Could Steph Curry make a three over the Great Wall of China?",
+    status: ["warn", "Re-Upload bereit"], ver: "v3", file: "003-curry-wall-v3-final.mp4", len: "100,2 s", date: "29.10.",
+    caption: "Could Steph Curry hit a three over the Great Wall of China? We did the physics. The wall did not care. 🏀🧱 #could #stephcurry #greatwall #nba #basketball #physics #whatif #fyp",
+    hist: [["v1", "Normaler Wurf, Moonball, Blindwurf mit echter Wurfphysik. Urteil TECHNICALLY."],
+           ["v3", "Neue Fassung für den Re-Upload: neue Erzählerspur mit echten Wort-Timings, Zoom-Einstieg, sparsame Sounds."]],
+    chat: [["you", "„Could Steph Curry make a 3 over the Chinese Wall. Examine the thinking experiment in the same funny style“"],
+           ["you", "„beende ab jetzt jedes Video mit: Could you imagine another scenario that we should do next, write it in the comments.“"],
+           ["you", "„gib mir für Folge drei noch eine Caption“"]] },
+  { n: "002", slug: "002-bolt-trex", title: "Could Usain Bolt beat a T-Rex in a 100 m race?",
+    status: ["warn", "Re-Upload bereit"], ver: "v3", file: "002-bolt-trex-v3-final.mp4", len: "109,6 s", date: "29.10.",
+    caption: "Could Usain Bolt beat a T-Rex over 100 m? We timed it. The T-Rex disagreed. ⚡🦖 #could #usainbolt #trex #dinosaur #100m #athletics #whatif #fyp",
+    hist: [["v1", "Rennen nach echtem Modell in drei Abschnitten (0–30, 30–80, 80–100 m). Urteil YES."],
+           ["v3", "Neue Fassung für den Re-Upload: Pflicht-Outro ergänzt, neue Erzählerspur, Zoom-Einstieg, sparsame Sounds."]],
+    chat: [["you", "„Can Usain Bolt beat a T-Rex in a 100m race. Headline, beide vorstellen, das Rennen mit Stats, wer gewinnt“"],
+           ["you", "„perfekt, genauso müssen die Videos aussehen“ (Referenzfolge)"]] },
+  { n: "001", slug: "001-neuer-titanic", title: "Could Manuel Neuer save the Titanic?",
+    status: ["warn", "Re-Upload bereit"], ver: "v3", file: "001-neuer-titanic-v3-final.mp4", len: "108,6 s", date: "29.10.",
+    caption: "Could Manuel Neuer save the Titanic? We did the maths. Nobody asked. 🧊⚽ #could #manuelneuer #titanic #documentary #football #whatif #fyp",
+    hist: [["v1", "Piper-Stimme, Standbilder mit Info-Feld (133 s)."],
+           ["v2", "Vollbild-Cartoon, fliegende Fakten-Karten, Stempel. Seitdem Referenzstil."],
+           ["v3", "Neue Fassung für den Re-Upload: Pflicht-Outro ergänzt, neue Erzählerspur, Zoom-Einstieg, sparsame Sounds."]],
+    chat: [["you", "Kanal-Idee: englischer Doku-Stil, „Could …“, z.B. „Could Manuel Neuer save the Titanic from sinking“"],
+           ["you", "„das Feld außen herum mit den Informationen ist nicht nötig … nur die Animation als Vollbild“"],
+           ["you", "„Das Video ist perfekt, merke dir diesen Stil“"]] },
+];
+
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+document.getElementById("index").innerHTML = EPISODES.map((e) => `<a href="#e${e.n}">${e.n}</a>`).join("");
+document.getElementById("files").innerHTML = EPISODES.map((e) => `
+  <article class="file" id="e${e.n}">
+    <div class="strip"><span class="num">CASE ${e.n}</span><h2>${esc(e.title)}</h2><span class="pill ${e.status[0]}">${e.status[1]}</span></div>
+    <div class="latest">
+      <div><span class="k">Aktuelle Fassung</span><span class="ver">${e.ver}</span></div>
+      <div><span class="k">Länge</span><span class="v">${e.len}</span></div>
+      <div><span class="k">Im Chat geschickt</span><span class="v">${e.date}</span></div>
+      <div style="grid-column: span 2"><span class="k">Datei</span><span class="v mono">${esc(e.file)}</span></div>
+    </div>
+    <div class="cols">
+      <section><h3>Versionen</h3><ol class="hist">${e.hist.map(([t, d], i) => `<li class="${i === e.hist.length - 1 ? "cur" : ""}"><span class="tag">${t}</span><p>${esc(d)}</p></li>`).join("")}</ol></section>
+      <section><h3>Im Chat besprochen</h3><ul class="chat">${e.chat.map(([w, t]) => `<li class="${w}"><span class="who">${w === "you" ? "Du" : "Claude"}</span>${esc(t)}</li>`).join("")}</ul></section>
+    </div>
+    <div class="foot">
+      <p class="cap"><span class="k">Caption</span>${esc(e.caption)}</p>
+      <button class="btn" type="button" data-cap="${e.n}">Caption kopieren</button>
+      <a class="btn" href="${CHAT}" target="_blank" rel="noopener">Chatverlauf ↗</a>
+      <a class="btn" href="${GH + e.slug}" target="_blank" rel="noopener">Skript &amp; Fakten ↗</a>
+    </div>
+  </article>`).join("");
+
+document.addEventListener("click", async (ev) => {
+  const b = ev.target.closest("button[data-cap]");
+  if (!b) return;
+  const e = EPISODES.find((x) => x.n === b.dataset.cap);
+  try { await navigator.clipboard.writeText(e.caption); b.textContent = "Kopiert"; }
+  catch { const p = b.parentElement.querySelector(".cap"); const r = document.createRange(); r.selectNodeContents(p); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Markiert, jetzt kopieren"; }
+  setTimeout(() => { b.textContent = "Caption kopieren"; }, 2000);
+});
+</script>

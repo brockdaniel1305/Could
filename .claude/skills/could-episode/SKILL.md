@@ -71,6 +71,8 @@ Lokal beim Creator erledigt `sh tools/make_episode.sh episodes/<ep>` alles in ei
   und mit `npx hyperframes audio … --json` nachmessen (Ziel −16 bis −14 LUFS).
 - Dem Creator schicken: Video, Caption mit Hashtags und eine Kurzfassung von `REVIEW.md` (was gemessen wurde und was nicht, die schwächste Stelle).
 - `channel/IDEAS.md`: Status der Folge auf ✅ setzen, neue Ideen aus dem Gespräch ergänzen.
+- **Folgenarchiv aktualisieren**: `channel/overview/folgen.html` (EPISODES-Liste: Fassung, Länge, Datei, Versionen, Chat-Entscheidungen,
+  Caption) und mit dem Artifact-Tool erneut veröffentlichen (gleiche Datei, gleiche URL: https://claude.ai/artifact/USAvCprTbBxbHt4EhtK62A).
 - Committen und auf den Arbeitsbranch pushen. Videos, Stimmen und Builds sind per `.gitignore` ausgeschlossen.
 
 ## 6. Dazulernen (wichtig)
