@@ -2,7 +2,7 @@
 
 **Render:** 1080×1920, 30 fps, 80.6 s. Ton −14.6 LUFS (true peak −1.5 dB), gemessen, nicht gehört.
 **Stimme:** Kokoro-Vorschau (bm_george); `narration.json` steht auf VoiceStudio `fable`.
-**Sound:** 96 Soundeffekte (neu: Galopp, Fanfare, Glocke, Türknarren, Kalenderblatt).
+**Sound:** 92 Soundeffekte (Popularity-Meter + 4 Sounds auf Wunsch entfernt) (neu: Galopp, Fanfare, Glocke, Türknarren, Kalenderblatt).
 
 ## Aufbau (freigegebenes Skript, kurze Fassung)
 Hook (Zeittunnel) → Paris 1789 (28 Mio., Brot 88 % mit Balken, König schleicht mit Kuchen davon, "WANTED: LEADER")
