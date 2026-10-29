@@ -1,0 +1,39 @@
+<!-- Napoleon on a galloping white horse, side view facing RIGHT. Origin = ground under the horse's belly, ~560 tall, ~520 long.
+     Rig: PFX (whole), PFX-horse, PFX-hFL/-hFR/-hBL/-hBR (legs, rotate, origin top), PFX-hhead (neck+head, origin at the chest), PFX-tail,
+     PFX-rider, PFX-narm (right arm, origin shoulder: raise to point/grab), PFX-cloak (flutter), PFX-crown (opacity 0, on the bicorne). -->
+<g id="PFX">
+  <ellipse cx="0" cy="6" rx="210" ry="14" fill="#000" opacity="0.22" />
+  <g id="PFX-horse">
+    <g transform="translate(-170,-250)"><g id="PFX-tail"><path d="M0,0 Q-70,10 -80,90 Q-50,60 -30,70 Q-40,30 6,20 Z" fill="#b9b9b4" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g></g>
+    <g transform="translate(-120,-180)"><g id="PFX-hBL"><path d="M-16,0 L16,0 L12,170 L-12,170 Z" fill="#e6e6e2" stroke="#1a1a2e" stroke-width="5" /><rect x="-16" y="166" width="32" height="14" rx="4" fill="#3a3f48" /></g></g>
+    <g transform="translate(110,-180)"><g id="PFX-hFL"><path d="M-16,0 L16,0 L12,170 L-12,170 Z" fill="#e6e6e2" stroke="#1a1a2e" stroke-width="5" /><rect x="-16" y="166" width="32" height="14" rx="4" fill="#3a3f48" /></g></g>
+    <ellipse cx="0" cy="-240" rx="200" ry="82" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" />
+    <g transform="translate(-90,-190)"><g id="PFX-hBR"><path d="M-18,0 L18,0 L14,180 L-14,180 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" /><rect x="-18" y="176" width="36" height="14" rx="4" fill="#3a3f48" /></g></g>
+    <g transform="translate(140,-190)"><g id="PFX-hFR"><path d="M-18,0 L18,0 L14,180 L-14,180 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" /><rect x="-18" y="176" width="36" height="14" rx="4" fill="#3a3f48" /></g></g>
+    <g transform="translate(160,-270)"><g id="PFX-hhead">
+      <path d="M-30,30 L40,-140 Q60,-170 100,-160 L160,-110 Q170,-90 150,-80 L90,-90 L50,40 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <path d="M40,-140 Q20,-120 0,-60 Q-10,-20 -24,10" fill="none" stroke="#b9b9b4" stroke-width="16" stroke-linecap="round" />
+      <path d="M70,-158 L62,-196 L88,-166 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="104" cy="-132" r="7" fill="#1a1a2e" /><circle cx="150" cy="-96" r="4" fill="#1a1a2e" />
+      <path d="M90,-90 L60,-150" stroke="#7a5230" stroke-width="5" />
+    </g></g>
+    <path d="M-60,-300 Q0,-330 60,-300 L60,-270 L-60,-270 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="5" />
+  </g>
+  <g id="PFX-rider" transform="translate(0,-300)">
+    <g id="PFX-cloak"><path d="M-30,-160 Q-140,-120 -170,-20 Q-120,-40 -90,-10 Q-80,-80 -20,-100 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g>
+    <path d="M-20,0 L40,0 L50,60 L20,64 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" /><path d="M30,50 L50,60 L60,120 L36,124 Z" fill="#1a1a2e" />
+    <path d="M-40,-150 Q-48,-60 -30,0 L40,0 Q52,-60 40,-150 Q0,-166 -40,-150 Z" fill="#6b7177" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-10,-150 L-4,0 M10,-150 L4,0" stroke="#f4f4f2" stroke-width="5" />
+    <g transform="translate(36,-140)"><g id="PFX-narm"><rect x="-11" y="0" width="22" height="78" rx="11" fill="#6b7177" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="84" r="13" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-192)">
+      <ellipse cx="0" cy="0" rx="34" ry="40" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-34,-10 Q-30,-36 0,-38 Q30,-36 34,-10 Q20,-24 0,-24 Q-20,-24 -34,-10 Z" fill="#3b2416" />
+      <ellipse cx="12" cy="-2" rx="8" ry="9" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="15" cy="-1" r="4" fill="#1a1a2e" />
+      <path d="M2,-14 L22,-12" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" /><path d="M20,8 L32,12 L22,16" fill="none" stroke="#1a1a2e" stroke-width="3" />
+      <path d="M8,24 L26,22" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" />
+      <path d="M-90,-26 Q0,-104 90,-26 Q0,-46 -90,-26 Z" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <circle cx="0" cy="-52" r="9" fill="#1d3f9b" stroke="#c0262d" stroke-width="4" />
+      <g id="PFX-crown" opacity="0" transform="translate(0,-74)"><path d="M-40,10 L-44,-30 L-22,-10 L0,-36 L22,-10 L44,-30 L40,10 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g>
+    </g>
+  </g>
+</g>

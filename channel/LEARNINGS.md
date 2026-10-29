@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-29 · 008 · Lieber **kürzer** (008: ~80 s statt 105 s) und vor allem ein **kurzes Ende**. Pointen über bekannte Eigenschaften
+  der Person (Tempo, Jubel, Rolle im Verein) kommen besser an als Vertrags-/Verwaltungs-Gags ("das mit dem Vertrag finde ich komisch").
+  Ein Schluss, der die Person in ihre Gegenwart zurückholt (Mbappé → Elfmeter bei Real Madrid), ist gewünscht.
 - 2026-10-29 · 007 · **Mehr Soundeffekte**, damit es spannender und ansehnlicher wird: jede Aktion im Cartoon bekommt einen Sound
   (Schritte, Kicks, Drehen, Schwindel, Pfiff, Netz, Domino, Wind, Herzschlag, Trommelwirbel, Jubel). 007 hat ~120 SFX auf 106 s.
   Eigene Bibliothek: `channel/kit/sfx/` (gebaut von `tools/make_sfx.py`, synthetisch, lizenzfrei), `build_episode.py` findet sie per Name.
@@ -67,6 +70,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- Ein Gegenstand in der Hand (Heugabel) gehört NICHT in die Arm-Gruppe: `scene.py` dreht Arme um die Mitte oben ihrer Bounding-Box,
+  ein langer Gegenstand verschiebt diesen Punkt und der Arm "fliegt" weg. Gegenstand als eigene Gruppe an der Hand zeichnen.
+- `pitch-day` mit `GY=1010`, wenn die Figuren bei y 1200 stehen sollen (sonst stehen sie auf der Tribünenkante).
 - Openverse (SFX-Suche) ist aus der Cloud nicht erreichbar, deshalb eigene synthetische SFX (`tools/make_sfx.py`).
 - Läuft die Session auf einer neuen Maschine, kann `whisper-cli` mit SIGILL abstürzen (für eine andere CPU gebaut). Fix:
   `cd ~/.cache/hyperframes/whisper/whisper.cpp && rm -rf build && cmake -B build -DGGML_NATIVE=ON && cmake --build build -j4 --target whisper-cli`.

@@ -1,0 +1,265 @@
+<template>
+  <!-- COULD? scene s8-outro · full-frame cartoon + flying fact cards. Source: src/s8.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  
+    .cal { position: absolute; left: 820px; top: 184px; width: 200px; background: #f4efe6; border: 5px solid #1a1a2e; border-radius: 14px;
+           overflow: hidden; text-align: center; box-shadow: 0 6px 0 #1a1a2e; }
+    .cal .ch { background: #c0262d; color: #fff; font: 700 28px/1 "CouldMono"; letter-spacing: 0.12em; padding: 8px 0; }
+    .cal .cb { font: 900 64px/1 "Inter"; color: #1a1a2e; padding: 6px 0 0; }
+    .cal .cyy { font: 700 30px/1 "CouldMono"; color: #1a1a2e; padding: 2px 0 10px; }
+    .bar { width: 380px; height: 30px; margin-top: 10px; border: 4px solid #1a1a2e; border-radius: 10px; background: #f4efe6; overflow: hidden; }
+    .bar i { display: block; width: 0; height: 100%; background: #e0412f; }
+    .week { position: absolute; left: 40px; top: 360px; padding: 18px 20px 22px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px; }
+    .week .wk { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; margin-bottom: 14px; }
+    .week .row { display: flex; gap: 8px; }
+    .week .d { width: 72px; height: 96px; border: 4px solid #1a1a2e; border-radius: 10px; background: #fff; display: flex; align-items: center;
+               justify-content: center; font: 900 40px/1 "Inter"; color: #1a1a2e; }
+    .week .d.r { width: 120px; background: #e0412f; color: #fff; font: 900 28px/1 "Inter"; }
+    .stamp { position: absolute; left: 140px; top: 520px; width: 800px; height: 340px; border: 24px solid #1f9d55; border-radius: 34px;
+             display: flex; align-items: center; justify-content: center; font: 900 160px/1 "Inter"; opacity: 0; background: rgba(244, 239, 230, 0.25); }
+  </style>
+  <div id="root" data-composition-id="s8-outro" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s8-outro-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s8-outro-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s8-outro-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s8-outro-boil)">
+<!-- Full-frame daytime stadium 1080x1920: sky, crowd in the stands (y 600..1010), striped grass from y=1010 (~900). -->
+<g id="s8-outro-pd">
+  <rect x="0" y="0" width="1080" height="1920" fill="#8fd3ff" />
+  <g fill="#fff" stroke="#1a1a2e" stroke-width="4" opacity="0.95"><path d="M120,330 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path d="M700,250 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <path d="M0,600 L1080,600 L1080,1010 L0,1010 Z" fill="#3a3f58" stroke="#1a1a2e" stroke-width="5" />
+  <circle cx="10" cy="640" r="11" fill="#ffcf4a" /><circle cx="70" cy="640" r="11" fill="#e0412f" /><circle cx="130" cy="640" r="11" fill="#f4efe6" /><circle cx="190" cy="640" r="11" fill="#ffcf4a" /><circle cx="250" cy="640" r="11" fill="#e0412f" /><circle cx="310" cy="640" r="11" fill="#f4efe6" /><circle cx="370" cy="640" r="11" fill="#ffcf4a" /><circle cx="430" cy="640" r="11" fill="#e0412f" /><circle cx="490" cy="640" r="11" fill="#f4efe6" /><circle cx="550" cy="640" r="11" fill="#ffcf4a" /><circle cx="610" cy="640" r="11" fill="#e0412f" /><circle cx="670" cy="640" r="11" fill="#f4efe6" /><circle cx="730" cy="640" r="11" fill="#ffcf4a" /><circle cx="790" cy="640" r="11" fill="#e0412f" /><circle cx="850" cy="640" r="11" fill="#f4efe6" /><circle cx="910" cy="640" r="11" fill="#ffcf4a" /><circle cx="970" cy="640" r="11" fill="#e0412f" /><circle cx="1030" cy="640" r="11" fill="#f4efe6" /><circle cx="40" cy="688" r="11" fill="#e0412f" /><circle cx="100" cy="688" r="11" fill="#f4efe6" /><circle cx="160" cy="688" r="11" fill="#ffcf4a" /><circle cx="220" cy="688" r="11" fill="#e0412f" /><circle cx="280" cy="688" r="11" fill="#f4efe6" /><circle cx="340" cy="688" r="11" fill="#ffcf4a" /><circle cx="400" cy="688" r="11" fill="#e0412f" /><circle cx="460" cy="688" r="11" fill="#f4efe6" /><circle cx="520" cy="688" r="11" fill="#ffcf4a" /><circle cx="580" cy="688" r="11" fill="#e0412f" /><circle cx="640" cy="688" r="11" fill="#f4efe6" /><circle cx="700" cy="688" r="11" fill="#ffcf4a" /><circle cx="760" cy="688" r="11" fill="#e0412f" /><circle cx="820" cy="688" r="11" fill="#f4efe6" /><circle cx="880" cy="688" r="11" fill="#ffcf4a" /><circle cx="940" cy="688" r="11" fill="#e0412f" /><circle cx="1000" cy="688" r="11" fill="#f4efe6" /><circle cx="1060" cy="688" r="11" fill="#ffcf4a" /><circle cx="10" cy="736" r="11" fill="#f4efe6" /><circle cx="70" cy="736" r="11" fill="#ffcf4a" /><circle cx="130" cy="736" r="11" fill="#e0412f" /><circle cx="190" cy="736" r="11" fill="#f4efe6" /><circle cx="250" cy="736" r="11" fill="#ffcf4a" /><circle cx="310" cy="736" r="11" fill="#e0412f" /><circle cx="370" cy="736" r="11" fill="#f4efe6" /><circle cx="430" cy="736" r="11" fill="#ffcf4a" /><circle cx="490" cy="736" r="11" fill="#e0412f" /><circle cx="550" cy="736" r="11" fill="#f4efe6" /><circle cx="610" cy="736" r="11" fill="#ffcf4a" /><circle cx="670" cy="736" r="11" fill="#e0412f" /><circle cx="730" cy="736" r="11" fill="#f4efe6" /><circle cx="790" cy="736" r="11" fill="#ffcf4a" /><circle cx="850" cy="736" r="11" fill="#e0412f" /><circle cx="910" cy="736" r="11" fill="#f4efe6" /><circle cx="970" cy="736" r="11" fill="#ffcf4a" /><circle cx="1030" cy="736" r="11" fill="#e0412f" /><circle cx="40" cy="784" r="11" fill="#ffcf4a" /><circle cx="100" cy="784" r="11" fill="#e0412f" /><circle cx="160" cy="784" r="11" fill="#f4efe6" /><circle cx="220" cy="784" r="11" fill="#ffcf4a" /><circle cx="280" cy="784" r="11" fill="#e0412f" /><circle cx="340" cy="784" r="11" fill="#f4efe6" /><circle cx="400" cy="784" r="11" fill="#ffcf4a" /><circle cx="460" cy="784" r="11" fill="#e0412f" /><circle cx="520" cy="784" r="11" fill="#f4efe6" /><circle cx="580" cy="784" r="11" fill="#ffcf4a" /><circle cx="640" cy="784" r="11" fill="#e0412f" /><circle cx="700" cy="784" r="11" fill="#f4efe6" /><circle cx="760" cy="784" r="11" fill="#ffcf4a" /><circle cx="820" cy="784" r="11" fill="#e0412f" /><circle cx="880" cy="784" r="11" fill="#f4efe6" /><circle cx="940" cy="784" r="11" fill="#ffcf4a" /><circle cx="1000" cy="784" r="11" fill="#e0412f" /><circle cx="1060" cy="784" r="11" fill="#f4efe6" /><circle cx="10" cy="832" r="11" fill="#e0412f" /><circle cx="70" cy="832" r="11" fill="#f4efe6" /><circle cx="130" cy="832" r="11" fill="#ffcf4a" /><circle cx="190" cy="832" r="11" fill="#e0412f" /><circle cx="250" cy="832" r="11" fill="#f4efe6" /><circle cx="310" cy="832" r="11" fill="#ffcf4a" /><circle cx="370" cy="832" r="11" fill="#e0412f" /><circle cx="430" cy="832" r="11" fill="#f4efe6" /><circle cx="490" cy="832" r="11" fill="#ffcf4a" /><circle cx="550" cy="832" r="11" fill="#e0412f" /><circle cx="610" cy="832" r="11" fill="#f4efe6" /><circle cx="670" cy="832" r="11" fill="#ffcf4a" /><circle cx="730" cy="832" r="11" fill="#e0412f" /><circle cx="790" cy="832" r="11" fill="#f4efe6" /><circle cx="850" cy="832" r="11" fill="#ffcf4a" /><circle cx="910" cy="832" r="11" fill="#e0412f" /><circle cx="970" cy="832" r="11" fill="#f4efe6" /><circle cx="1030" cy="832" r="11" fill="#ffcf4a" />
+  <rect x="0" y="1010" width="1080" height="1100" fill="#4caf50" />
+  <g fill="#43a047"><rect x="0" y="1010" width="135" height="1100" /><rect x="270" y="1010" width="135" height="1100" /><rect x="540" y="1010" width="135" height="1100" /><rect x="810" y="1010" width="135" height="1100" /></g>
+  <path d="M0,1010 L1080,1010" stroke="#1a1a2e" stroke-width="5" />
+</g>
+<g transform="translate(300,1200)"><g id="s8-outro-mw"><g transform="scale(0.85)"><!-- Fast forward in a plain kit, very short dark hair (Kylian-Mbappe-style caricature, not a likeness, no badges). Kit colours:
+     #f4f4f2 (shirt), #f4f4f2, #f4f4f2, #1a1a2e (defaults navy/navy/navy/white via part(..., #f4f4f2=...)). Extra: s8-outro-m-sash and s8-outro-m-crown (opacity 0).
+     Origin = between the feet. ~330 tall. Same rig ids as keeper.svg.
+     Animatable: s8-outro-m (whole), s8-outro-m-body, s8-outro-m-armL/-armR (rotate, origin top), s8-outro-m-legL/-legR, s8-outro-m-head,
+     s8-outro-m-pupL/-pupR (x/y look), s8-outro-m-browL/-browR, s8-outro-m-m-smile / -m-o / -m-flat (show one), s8-outro-m-lids (blink). -->
+<g id="s8-outro-m">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s8-outro-m-body">
+    <g id="s8-outro-m-legL"><rect x="-32" y="-96" width="26" height="96" rx="10" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s8-outro-m-legR"><rect x="6" y="-96" width="26" height="96" rx="10" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <g id="s8-outro-m-sash" opacity="0"><path d="M-46,-204 L-30,-210 L48,-122 L34,-114 Z" fill="#1d3f9b" stroke="#1a1a2e" stroke-width="3" /><path d="M-30,-210 L-16,-212 L50,-134 L48,-122 Z" fill="#f4f4f2" /><path d="M-16,-212 L-4,-212 L50,-146 L50,-134 Z" fill="#c0262d" /></g>
+    <text id="s8-outro-m-num" data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="2">10</text>
+    <g transform="translate(-54,-196)"><g id="s8-outro-m-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s8-outro-m-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s8-outro-m-head">
+      <circle cx="-44" cy="4" r="10" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-44,-18 Q-46,-56 0,-56 Q46,-56 44,-18 Q34,-38 0,-40 Q-34,-38 -44,-18 Z" fill="#1a1410" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s8-outro-m-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s8-outro-m-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s8-outro-m-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s8-outro-m-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s8-outro-m-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s8-outro-m-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s8-outro-m-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s8-outro-m-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+      <g id="s8-outro-m-crown" opacity="0"><path d="M-50,-44 L-54,-96 L-28,-70 L0,-104 L28,-70 L54,-96 L50,-44 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /><circle cx="0" cy="-62" r="7" fill="#c0262d" stroke="#1a1a2e" stroke-width="3" /><circle cx="-30" cy="-56" r="5" fill="#1d3f9b" /><circle cx="30" cy="-56" r="5" fill="#1d3f9b" /></g>
+    </g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(820,1200)"><g id="s8-outro-nw"><g transform="scale(0.62)"><!-- Napoleon on a galloping white horse, side view facing RIGHT. Origin = ground under the horse's belly, ~560 tall, ~520 long.
+     Rig: s8-outro-n (whole), s8-outro-n-horse, s8-outro-n-hFL/-hFR/-hBL/-hBR (legs, rotate, origin top), s8-outro-n-hhead (neck+head, origin at the chest), s8-outro-n-tail,
+     s8-outro-n-rider, s8-outro-n-narm (right arm, origin shoulder: raise to point/grab), s8-outro-n-cloak (flutter), s8-outro-n-crown (opacity 0, on the bicorne). -->
+<g id="s8-outro-n">
+  <ellipse cx="0" cy="6" rx="210" ry="14" fill="#000" opacity="0.22" />
+  <g id="s8-outro-n-horse">
+    <g transform="translate(-170,-250)"><g id="s8-outro-n-tail"><path d="M0,0 Q-70,10 -80,90 Q-50,60 -30,70 Q-40,30 6,20 Z" fill="#b9b9b4" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g></g>
+    <g transform="translate(-120,-180)"><g id="s8-outro-n-hBL"><path d="M-16,0 L16,0 L12,170 L-12,170 Z" fill="#e6e6e2" stroke="#1a1a2e" stroke-width="5" /><rect x="-16" y="166" width="32" height="14" rx="4" fill="#3a3f48" /></g></g>
+    <g transform="translate(110,-180)"><g id="s8-outro-n-hFL"><path d="M-16,0 L16,0 L12,170 L-12,170 Z" fill="#e6e6e2" stroke="#1a1a2e" stroke-width="5" /><rect x="-16" y="166" width="32" height="14" rx="4" fill="#3a3f48" /></g></g>
+    <ellipse cx="0" cy="-240" rx="200" ry="82" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" />
+    <g transform="translate(-90,-190)"><g id="s8-outro-n-hBR"><path d="M-18,0 L18,0 L14,180 L-14,180 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" /><rect x="-18" y="176" width="36" height="14" rx="4" fill="#3a3f48" /></g></g>
+    <g transform="translate(140,-190)"><g id="s8-outro-n-hFR"><path d="M-18,0 L18,0 L14,180 L-14,180 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" /><rect x="-18" y="176" width="36" height="14" rx="4" fill="#3a3f48" /></g></g>
+    <g transform="translate(160,-270)"><g id="s8-outro-n-hhead">
+      <path d="M-30,30 L40,-140 Q60,-170 100,-160 L160,-110 Q170,-90 150,-80 L90,-90 L50,40 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="6" stroke-linejoin="round" />
+      <path d="M40,-140 Q20,-120 0,-60 Q-10,-20 -24,10" fill="none" stroke="#b9b9b4" stroke-width="16" stroke-linecap="round" />
+      <path d="M70,-158 L62,-196 L88,-166 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="104" cy="-132" r="7" fill="#1a1a2e" /><circle cx="150" cy="-96" r="4" fill="#1a1a2e" />
+      <path d="M90,-90 L60,-150" stroke="#7a5230" stroke-width="5" />
+    </g></g>
+    <path d="M-60,-300 Q0,-330 60,-300 L60,-270 L-60,-270 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="5" />
+  </g>
+  <g id="s8-outro-n-rider" transform="translate(0,-300)">
+    <g id="s8-outro-n-cloak"><path d="M-30,-160 Q-140,-120 -170,-20 Q-120,-40 -90,-10 Q-80,-80 -20,-100 Z" fill="#c0262d" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g>
+    <path d="M-20,0 L40,0 L50,60 L20,64 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" /><path d="M30,50 L50,60 L60,120 L36,124 Z" fill="#1a1a2e" />
+    <path d="M-40,-150 Q-48,-60 -30,0 L40,0 Q52,-60 40,-150 Q0,-166 -40,-150 Z" fill="#6b7177" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-10,-150 L-4,0 M10,-150 L4,0" stroke="#f4f4f2" stroke-width="5" />
+    <g transform="translate(36,-140)"><g id="s8-outro-n-narm"><rect x="-11" y="0" width="22" height="78" rx="11" fill="#6b7177" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="84" r="13" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-192)">
+      <ellipse cx="0" cy="0" rx="34" ry="40" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-34,-10 Q-30,-36 0,-38 Q30,-36 34,-10 Q20,-24 0,-24 Q-20,-24 -34,-10 Z" fill="#3b2416" />
+      <ellipse cx="12" cy="-2" rx="8" ry="9" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><circle cx="15" cy="-1" r="4" fill="#1a1a2e" />
+      <path d="M2,-14 L22,-12" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" /><path d="M20,8 L32,12 L22,16" fill="none" stroke="#1a1a2e" stroke-width="3" />
+      <path d="M8,24 L26,22" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" />
+      <path d="M-90,-26 Q0,-104 90,-26 Q0,-46 -90,-26 Z" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+      <circle cx="0" cy="-52" r="9" fill="#1d3f9b" stroke="#c0262d" stroke-width="4" />
+      <g id="s8-outro-n-crown" opacity="0" transform="translate(0,-74)"><path d="M-40,10 L-44,-30 L-22,-10 L0,-36 L22,-10 L44,-30 L40,10 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /></g>
+    </g>
+  </g>
+</g>
+</g></g></g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s8-outro-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 50px; top: 330px;"><div class="bk">NEXT CASE</div><div class="bt">Could you imagine<br>another scenario?</div></div>
+    <div class="card gold" id="s8-outro-c-c" data-layout-allow-overflow data-layout-allow-overlap style="left: 330px; top: 640px;"><div class="ck">WRITE IT IN THE COMMENTS</div><div class="cv">↓ ↓ ↓</div></div>
+    <div class="dip" id="s8-outro-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s8-outro-";
+      const D = 6.59;
+      const C = {"c": 3.47};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s8-outro-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s8-outro"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      const label = (id, steps) => {
+        const el = document.querySelector(S + id);
+        tl.to({}, { duration: D, ease: "none", onUpdate() {
+          const t = this.time(); let txt = steps[0][1];
+          for (const [at, s] of steps) if (t >= at) txt = s;
+          if (el.textContent !== txt) el.textContent = txt;
+        } }, 0);
+      };
+      const count = (id, a, b, t0, d, ease = "power2.out", suffix = "") => {
+        const el = document.querySelector(S + id), o = { v: a };
+        el.textContent = a.toLocaleString("en-US") + suffix;
+        tl.fromTo(o, { v: a }, { v: b, duration: d, ease, onUpdate() { el.textContent = Math.round(o.v).toLocaleString("en-US") + suffix; } }, t0);
+      };
+      const look = (p, x, y, at, d = 0.2) => tl.to([S + p + "-pupL", S + p + "-pupR"], { x, y, duration: d }, at);
+      const needle = (deg, at, d = 0.6) => tl.to(S + "needle", { rotation: deg, transformOrigin: "50% 100%", duration: d, ease: "back.out(1.6)" }, at);
+      // Mbappé (rig prefix p, default "m") crosses his arms / lets them go
+      const cross = (at, p = "m") => { tl.to(S + p + "-armL", { rotation: -62, duration: 0.25, ease: "back.out(2)" }, at); tl.to(S + p + "-armR", { rotation: 62, duration: 0.25, ease: "back.out(2)" }, at); };
+      const uncross = (at, p = "m") => tl.to([S + p + "-armL", S + p + "-armR"], { rotation: 0, duration: 0.25 }, at);
+      const run = (t0, t1, p = "m", cyc = 0.14) => {
+        const n = R(t1 - t0, cyc);
+        tl.fromTo(S + p + "-legL", { rotation: -30 }, { rotation: 30, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + p + "-legR", { rotation: 30 }, { rotation: -30, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + p + "-armL", { rotation: 30 }, { rotation: -30, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + p + "-armR", { rotation: -30 }, { rotation: 30, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.to([S + p + "-legL", S + p + "-legR", S + p + "-armL", S + p + "-armR"], { rotation: 0, duration: 0.12 }, t1);
+      };
+      // horse gallop (prefix p = Napoleon part prefix)
+      const gallop = (t0, t1, p = "n", cyc = 0.2) => {
+        const n = R(t1 - t0, cyc);
+        [["-hFL", -30, 30], ["-hFR", 30, -30], ["-hBL", 25, -25], ["-hBR", -25, 25]].forEach(([l, a, b]) =>
+          tl.fromTo(S + p + l, { rotation: a }, { rotation: b, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0));
+        tl.fromTo(S + p + "-horse", { y: 0 }, { y: -18, duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.fromTo(S + p + "-cloak", { rotation: 0 }, { rotation: 10, transformOrigin: "100% 0%", duration: cyc, ease: "sine.inOut", yoyo: true, repeat: n }, t0);
+        tl.to([S + p + "-hFL", S + p + "-hFR", S + p + "-hBL", S + p + "-hBR"], { rotation: 0, duration: 0.15 }, t1);
+      };
+      const kickR = (at, p = "m") => {
+        tl.to(S + p + "-legR", { rotation: 35, duration: 0.12, ease: "power2.in" }, at - 0.14);
+        tl.to(S + p + "-legR", { rotation: -55, duration: 0.08, ease: "power3.out" }, at - 0.02);
+        tl.to(S + p + "-legR", { rotation: 0, duration: 0.2 }, at + 0.1);
+      };
+      // parabolic flight of an element (offsets dx, dy, apex h)
+      const arc = (sel, t0, d, dx, dy, h) => {
+        const el = document.querySelector(sel), o = { p: 0 };
+        tl.fromTo(o, { p: 0 }, { p: 1, duration: d, ease: "none", onUpdate() { const p = o.p; gsap.set(el, { x: dx * p, y: dy * p - 4 * h * p * (1 - p) }); } }, t0);
+      };
+      const stampIn = (at) => {
+        tl.fromTo(S + "stamp", { opacity: 0, scale: 2.4, rotation: -4 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.18, ease: "power4.in" }, at);
+        tl.fromTo(S + "svg", { x: 0 }, { x: 10, duration: 0.04, repeat: 5, yoyo: true }, at + 0.18);
+      };
+      // crowd wave: row by row, the copies swap to the arms-crossed pose
+      const crossWave = (name, rows, cols, t0, step = 0.25) => {
+        for (let r = rows - 1; r >= 0; r--) for (let c = 0; c < cols; c++) {
+          const at = t0 + (rows - 1 - r) * step + c * 0.03;
+          if (!document.querySelector(S + name + r + "-" + c)) continue;
+          tl.set(S + name + r + "-" + c, { opacity: 0 }, at); tl.set(S + name + "X" + r + "-" + c, { opacity: 1 }, at);
+        }
+      };
+      const shakeCrowd = (sel, t0, d, amp = 4) => tl.fromTo(sel, { rotation: -amp }, { rotation: amp, transformOrigin: "50% 100%", duration: 0.2, yoyo: true, repeat: R(d, 0.2), ease: "sine.inOut" }, t0);
+
+      fly("b", 0.05, null, { from: "top" });
+      fly("c", C.c, null, { from: "right" });
+      tl.set(S + "m-crown", { opacity: 1 }, 0); tl.set(S + "n-crown", { opacity: 1 }, 0);
+      cross(0.2);
+      // Napoleon trots on the spot and waves
+      gallop(0, D, "n", 0.35);
+      tl.fromTo(S + "n-narm", { rotation: -150 }, { rotation: -120, duration: 0.3, yoyo: true, repeat: R(D, 0.3) }, 0);
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s8-outro"] = tl;
+    })();
+  </script>
+</template>

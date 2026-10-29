@@ -1,0 +1,1542 @@
+{
+ "duration": 80.522,
+ "voice": "kokoro:bm_george",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 7.37,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 6.82,
+   "cues": {
+    "back": 3.49,
+    "sci": 5.77
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.53
+    },
+    {
+     "text": "Kylian",
+     "start": 0.53,
+     "end": 0.985
+    },
+    {
+     "text": "Mbapp\u00e9",
+     "start": 0.985,
+     "end": 1.44
+    },
+    {
+     "text": "dictate",
+     "start": 1.44,
+     "end": 1.972
+    },
+    {
+     "text": "the",
+     "start": 1.972,
+     "end": 2.2
+    },
+    {
+     "text": "French",
+     "start": 2.2,
+     "end": 2.655
+    },
+    {
+     "text": "Revolution?",
+     "start": 2.655,
+     "end": 3.49
+    },
+    {
+     "text": "We",
+     "start": 3.49,
+     "end": 3.749
+    },
+    {
+     "text": "went",
+     "start": 3.749,
+     "end": 4.266
+    },
+    {
+     "text": "back",
+     "start": 4.266,
+     "end": 4.784
+    },
+    {
+     "text": "to",
+     "start": 4.784,
+     "end": 5.043
+    },
+    {
+     "text": "1789.",
+     "start": 5.043,
+     "end": 5.57
+    },
+    {
+     "text": "Scientifically.",
+     "start": 5.77,
+     "end": 7.77
+    }
+   ],
+   "sfx": [
+    {
+     "name": "roar",
+     "at": 0,
+     "volume": 0.16
+    },
+    {
+     "name": "whoosh-cinematic",
+     "cue": "back",
+     "offset": -0.6,
+     "volume": 0.3
+    },
+    {
+     "name": "stomp",
+     "cue": "back",
+     "offset": 1.2,
+     "volume": 0.45
+    },
+    {
+     "name": "swoosh",
+     "cue": "sci",
+     "offset": -0.1,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s2-france",
+   "start": 7.37,
+   "duration": 10.085,
+   "voice": "assets/voice/s2-france.wav",
+   "voiceStart": 0.15,
+   "speech": 9.535,
+   "cues": {
+    "pop": 1.077,
+    "bread": 3.87,
+    "job": 7.595
+   },
+   "words": [
+    {
+     "text": "Paris,",
+     "start": 0.15,
+     "end": 0.826
+    },
+    {
+     "text": "1789.",
+     "start": 0.826,
+     "end": 1.077
+    },
+    {
+     "text": "Twenty",
+     "start": 1.077,
+     "end": 1.364
+    },
+    {
+     "text": "eight",
+     "start": 1.364,
+     "end": 1.615
+    },
+    {
+     "text": "million",
+     "start": 1.615,
+     "end": 2.405
+    },
+    {
+     "text": "French",
+     "start": 2.405,
+     "end": 3.081
+    },
+    {
+     "text": "people.",
+     "start": 3.081,
+     "end": 3.87
+    },
+    {
+     "text": "Bread",
+     "start": 3.87,
+     "end": 4.48
+    },
+    {
+     "text": "costs",
+     "start": 4.48,
+     "end": 5.091
+    },
+    {
+     "text": "eighty",
+     "start": 5.091,
+     "end": 5.213
+    },
+    {
+     "text": "eight",
+     "start": 5.213,
+     "end": 5.32
+    },
+    {
+     "text": "percent",
+     "start": 5.32,
+     "end": 5.457
+    },
+    {
+     "text": "of",
+     "start": 5.457,
+     "end": 5.701
+    },
+    {
+     "text": "a",
+     "start": 5.701,
+     "end": 5.823
+    },
+    {
+     "text": "worker's",
+     "start": 5.823,
+     "end": 6.8
+    },
+    {
+     "text": "wage.",
+     "start": 6.8,
+     "end": 7.41
+    },
+    {
+     "text": "The",
+     "start": 7.595,
+     "end": 7.868
+    },
+    {
+     "text": "job",
+     "start": 7.868,
+     "end": 8.14
+    },
+    {
+     "text": "of",
+     "start": 8.14,
+     "end": 8.322
+    },
+    {
+     "text": "leader:",
+     "start": 8.322,
+     "end": 8.959
+    },
+    {
+     "text": "vacant.",
+     "start": 8.959,
+     "end": 9.595
+    }
+   ],
+   "sfx": [
+    {
+     "name": "roar",
+     "at": 0.2,
+     "volume": 0.2
+    },
+    {
+     "name": "drumroll",
+     "cue": "pop",
+     "offset": -0.6,
+     "volume": 0.18
+    },
+    {
+     "name": "clang",
+     "cue": "bread",
+     "offset": 0.6,
+     "volume": 0.18
+    },
+    {
+     "name": "tick",
+     "cue": "bread",
+     "offset": 1.0,
+     "volume": 0.3
+    },
+    {
+     "name": "tick",
+     "cue": "bread",
+     "offset": 1.3,
+     "volume": 0.3
+    },
+    {
+     "name": "ping",
+     "cue": "bread",
+     "offset": 2.0,
+     "volume": 0.22
+    },
+    {
+     "name": "swoosh",
+     "cue": "job",
+     "offset": 0.2,
+     "volume": 0.3
+    },
+    {
+     "name": "stomp",
+     "cue": "job",
+     "offset": 0.55,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s3-mbappe",
+   "start": 17.455,
+   "duration": 12.705,
+   "voice": "assets/voice/s3-mbappe.wav",
+   "voiceStart": 0.15,
+   "speech": 12.155,
+   "cues": {
+    "name": 1.501,
+    "wc": 2.851,
+    "spd": 4.721,
+    "cel": 7.318,
+    "dec": 9.885
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.462
+    },
+    {
+     "text": "candidate:",
+     "start": 0.462,
+     "end": 1.501
+    },
+    {
+     "text": "Kylian",
+     "start": 1.501,
+     "end": 2.124
+    },
+    {
+     "text": "Mbapp\u00e9.",
+     "start": 2.124,
+     "end": 2.851
+    },
+    {
+     "text": "World",
+     "start": 2.851,
+     "end": 3.371
+    },
+    {
+     "text": "champion",
+     "start": 3.371,
+     "end": 4.202
+    },
+    {
+     "text": "at",
+     "start": 4.202,
+     "end": 4.409
+    },
+    {
+     "text": "nineteen.",
+     "start": 4.409,
+     "end": 4.721
+    },
+    {
+     "text": "Top",
+     "start": 4.721,
+     "end": 5.033
+    },
+    {
+     "text": "speed:",
+     "start": 5.033,
+     "end": 5.552
+    },
+    {
+     "text": "about",
+     "start": 5.552,
+     "end": 6.072
+    },
+    {
+     "text": "thirty",
+     "start": 6.072,
+     "end": 6.195
+    },
+    {
+     "text": "eight",
+     "start": 6.195,
+     "end": 6.303
+    },
+    {
+     "text": "kilometres",
+     "start": 6.303,
+     "end": 6.487
+    },
+    {
+     "text": "per",
+     "start": 6.487,
+     "end": 6.799
+    },
+    {
+     "text": "hour.",
+     "start": 6.799,
+     "end": 7.318
+    },
+    {
+     "text": "His",
+     "start": 7.318,
+     "end": 7.63
+    },
+    {
+     "text": "celebration:",
+     "start": 7.63,
+     "end": 8.548
+    },
+    {
+     "text": "arms",
+     "start": 8.548,
+     "end": 8.882
+    },
+    {
+     "text": "crossed.",
+     "start": 8.882,
+     "end": 9.55
+    },
+    {
+     "text": "Like",
+     "start": 9.885,
+     "end": 10.205
+    },
+    {
+     "text": "a",
+     "start": 10.205,
+     "end": 10.285
+    },
+    {
+     "text": "man",
+     "start": 10.285,
+     "end": 10.525
+    },
+    {
+     "text": "who",
+     "start": 10.525,
+     "end": 10.765
+    },
+    {
+     "text": "has",
+     "start": 10.765,
+     "end": 11.005
+    },
+    {
+     "text": "already",
+     "start": 11.005,
+     "end": 11.565
+    },
+    {
+     "text": "decided.",
+     "start": 11.565,
+     "end": 12.205
+    }
+   ],
+   "sfx": [
+    {
+     "name": "roar",
+     "cue": "name",
+     "offset": -0.2,
+     "volume": 0.25
+    },
+    {
+     "name": "sparkle",
+     "cue": "wc",
+     "volume": 0.25
+    },
+    {
+     "name": "whoosh",
+     "cue": "spd",
+     "offset": 0.5,
+     "volume": 0.4
+    },
+    {
+     "name": "whoosh",
+     "cue": "spd",
+     "offset": 1.3,
+     "volume": 0.4
+    },
+    {
+     "name": "swoosh",
+     "cue": "cel",
+     "offset": 0.3,
+     "volume": 0.3
+    },
+    {
+     "name": "ding",
+     "cue": "dec",
+     "offset": 0.8,
+     "volume": 0.18
+    }
+   ]
+  },
+  {
+   "id": "s4-bastille",
+   "start": 30.16,
+   "duration": 9.893,
+   "voice": "assets/voice/s4-bastille.wav",
+   "voiceStart": 0.15,
+   "speech": 9.343,
+   "cues": {
+    "t": 0.511,
+    "crowd": 1.882,
+    "mb": 3.83,
+    "pris": 5.843,
+    "fans": 8.043
+   },
+   "words": [
+    {
+     "text": "Plan",
+     "start": 0.15,
+     "end": 0.439
+    },
+    {
+     "text": "A:",
+     "start": 0.439,
+     "end": 0.511
+    },
+    {
+     "text": "storm",
+     "start": 0.511,
+     "end": 1.016
+    },
+    {
+     "text": "the",
+     "start": 1.016,
+     "end": 1.232
+    },
+    {
+     "text": "Bastille.",
+     "start": 1.232,
+     "end": 1.882
+    },
+    {
+     "text": "The",
+     "start": 1.882,
+     "end": 2.098
+    },
+    {
+     "text": "crowd",
+     "start": 2.098,
+     "end": 2.459
+    },
+    {
+     "text": "needed",
+     "start": 2.459,
+     "end": 2.892
+    },
+    {
+     "text": "most",
+     "start": 2.892,
+     "end": 3.181
+    },
+    {
+     "text": "of",
+     "start": 3.181,
+     "end": 3.325
+    },
+    {
+     "text": "the",
+     "start": 3.325,
+     "end": 3.541
+    },
+    {
+     "text": "day.",
+     "start": 3.541,
+     "end": 3.83
+    },
+    {
+     "text": "Mbapp\u00e9",
+     "start": 3.83,
+     "end": 4.347
+    },
+    {
+     "text": "needs",
+     "start": 4.347,
+     "end": 4.67
+    },
+    {
+     "text": "about",
+     "start": 4.67,
+     "end": 4.993
+    },
+    {
+     "text": "a",
+     "start": 4.993,
+     "end": 5.058
+    },
+    {
+     "text": "minute.",
+     "start": 5.058,
+     "end": 5.51
+    },
+    {
+     "text": "He",
+     "start": 5.843,
+     "end": 6.025
+    },
+    {
+     "text": "finds",
+     "start": 6.025,
+     "end": 6.479
+    },
+    {
+     "text": "seven",
+     "start": 6.479,
+     "end": 6.934
+    },
+    {
+     "text": "prisoners.",
+     "start": 6.934,
+     "end": 7.843
+    },
+    {
+     "text": "Seven",
+     "start": 8.043,
+     "end": 8.581
+    },
+    {
+     "text": "new",
+     "start": 8.581,
+     "end": 8.905
+    },
+    {
+     "text": "fans.",
+     "start": 8.905,
+     "end": 9.443
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh-short",
+     "at": 0.411,
+     "volume": 0.3
+    },
+    {
+     "name": "roar",
+     "at": 1.682,
+     "volume": 0.18
+    },
+    {
+     "name": "stomp",
+     "at": 1.882,
+     "volume": 0.12
+    },
+    {
+     "name": "stomp",
+     "at": 2.282,
+     "volume": 0.12
+    },
+    {
+     "name": "stomp",
+     "at": 2.682,
+     "volume": 0.12
+    },
+    {
+     "name": "stomp",
+     "at": 3.082,
+     "volume": 0.12
+    },
+    {
+     "name": "stomp",
+     "at": 3.482,
+     "volume": 0.12
+    },
+    {
+     "name": "whoosh",
+     "at": 3.93,
+     "volume": 0.45
+    },
+    {
+     "name": "swoosh",
+     "at": 4.33,
+     "volume": 0.3
+    },
+    {
+     "name": "clang",
+     "at": 4.18,
+     "volume": 0.3
+    },
+    {
+     "name": "stomp",
+     "at": 4.28,
+     "volume": 0.5
+    },
+    {
+     "name": "ping",
+     "at": 4.73,
+     "volume": 0.2
+    },
+    {
+     "name": "creak",
+     "at": 5.843,
+     "volume": 0.4
+    },
+    {
+     "name": "sparkle",
+     "at": 6.143,
+     "volume": 0.2
+    },
+    {
+     "name": "gulp",
+     "at": 6.643,
+     "volume": 0.25
+    },
+    {
+     "name": "roar",
+     "at": 7.993,
+     "volume": 0.35
+    },
+    {
+     "name": "boing",
+     "at": 8.143,
+     "volume": 0.25
+    },
+    {
+     "name": "boing",
+     "at": 8.543,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s5-power",
+   "start": 40.053,
+   "duration": 11.62,
+   "voice": "assets/voice/s5-power.wav",
+   "voiceStart": 0.15,
+   "speech": 11.07,
+   "cues": {
+    "t": 0.708,
+    "law": 1.639,
+    "cal": 4.95,
+    "add": 8.0,
+    "rest": 10.23
+   },
+   "words": [
+    {
+     "text": "Plan",
+     "start": 0.15,
+     "end": 0.522
+    },
+    {
+     "text": "B:",
+     "start": 0.522,
+     "end": 0.708
+    },
+    {
+     "text": "take",
+     "start": 0.708,
+     "end": 1.08
+    },
+    {
+     "text": "power.",
+     "start": 1.08,
+     "end": 1.639
+    },
+    {
+     "text": "New",
+     "start": 1.639,
+     "end": 1.918
+    },
+    {
+     "text": "law:",
+     "start": 1.918,
+     "end": 2.29
+    },
+    {
+     "text": "every",
+     "start": 2.29,
+     "end": 2.64
+    },
+    {
+     "text": "citizen",
+     "start": 2.64,
+     "end": 3.13
+    },
+    {
+     "text": "celebrates",
+     "start": 3.13,
+     "end": 3.83
+    },
+    {
+     "text": "with",
+     "start": 3.83,
+     "end": 4.11
+    },
+    {
+     "text": "arms",
+     "start": 4.11,
+     "end": 4.39
+    },
+    {
+     "text": "crossed.",
+     "start": 4.39,
+     "end": 4.95
+    },
+    {
+     "text": "The",
+     "start": 4.95,
+     "end": 5.166
+    },
+    {
+     "text": "Revolution",
+     "start": 5.166,
+     "end": 5.886
+    },
+    {
+     "text": "really",
+     "start": 5.886,
+     "end": 6.318
+    },
+    {
+     "text": "did",
+     "start": 6.318,
+     "end": 6.534
+    },
+    {
+     "text": "invent",
+     "start": 6.534,
+     "end": 6.966
+    },
+    {
+     "text": "a",
+     "start": 6.966,
+     "end": 7.038
+    },
+    {
+     "text": "ten",
+     "start": 7.038,
+     "end": 7.254
+    },
+    {
+     "text": "day",
+     "start": 7.254,
+     "end": 7.47
+    },
+    {
+     "text": "week.",
+     "start": 7.47,
+     "end": 7.83
+    },
+    {
+     "text": "Mbapp\u00e9",
+     "start": 8.0,
+     "end": 8.692
+    },
+    {
+     "text": "adds",
+     "start": 8.692,
+     "end": 9.153
+    },
+    {
+     "text": "an",
+     "start": 9.153,
+     "end": 9.384
+    },
+    {
+     "text": "eleventh.",
+     "start": 9.384,
+     "end": 10.03
+    },
+    {
+     "text": "Rest",
+     "start": 10.23,
+     "end": 11.23
+    },
+    {
+     "text": "day.",
+     "start": 11.23,
+     "end": 12.23
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh-short",
+     "at": 0.608,
+     "volume": 0.3
+    },
+    {
+     "name": "ding",
+     "at": 1.108,
+     "volume": 0.25
+    },
+    {
+     "name": "swoosh",
+     "at": 1.008,
+     "volume": 0.25
+    },
+    {
+     "name": "fanfare",
+     "at": 1.308,
+     "volume": 0.3
+    },
+    {
+     "name": "swoosh",
+     "at": 1.539,
+     "volume": 0.25
+    },
+    {
+     "name": "swoosh",
+     "at": 2.239,
+     "volume": 0.2
+    },
+    {
+     "name": "roar",
+     "at": 2.639,
+     "volume": 0.3
+    },
+    {
+     "name": "tick",
+     "at": 2.639,
+     "volume": 0.25
+    },
+    {
+     "name": "tick",
+     "at": 3.089,
+     "volume": 0.25
+    },
+    {
+     "name": "tick",
+     "at": 3.539,
+     "volume": 0.25
+    },
+    {
+     "name": "swoosh",
+     "at": 4.95,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 5.51,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 5.67,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 5.83,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 5.99,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 6.15,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 6.31,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 6.47,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 6.63,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 6.79,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 6.95,
+     "volume": 0.3
+    },
+    {
+     "name": "whoosh",
+     "at": 8.2,
+     "volume": 0.35
+    },
+    {
+     "name": "boing",
+     "at": 8.5,
+     "volume": 0.25
+    },
+    {
+     "name": "fanfare",
+     "at": 10.53,
+     "volume": 0.3
+    },
+    {
+     "name": "roar",
+     "at": 10.63,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s6-horse",
+   "start": 51.673,
+   "duration": 11.989,
+   "voice": "assets/voice/s6-horse.wav",
+   "voiceStart": 0.15,
+   "speech": 11.439,
+   "cues": {
+    "nap": 1.11,
+    "horse": 2.38,
+    "spd": 3.476,
+    "second": 6.879
+   },
+   "words": [
+    {
+     "text": "One",
+     "start": 0.15,
+     "end": 0.412
+    },
+    {
+     "text": "problem:",
+     "start": 0.412,
+     "end": 1.11
+    },
+    {
+     "text": "Napoleon.",
+     "start": 1.11,
+     "end": 2.08
+    },
+    {
+     "text": "He",
+     "start": 2.38,
+     "end": 2.563
+    },
+    {
+     "text": "has",
+     "start": 2.563,
+     "end": 2.837
+    },
+    {
+     "text": "a",
+     "start": 2.837,
+     "end": 2.928
+    },
+    {
+     "text": "horse.",
+     "start": 2.928,
+     "end": 3.476
+    },
+    {
+     "text": "Top",
+     "start": 3.476,
+     "end": 3.75
+    },
+    {
+     "text": "speed:",
+     "start": 3.75,
+     "end": 4.297
+    },
+    {
+     "text": "about",
+     "start": 4.297,
+     "end": 4.754
+    },
+    {
+     "text": "forty",
+     "start": 4.754,
+     "end": 5.061
+    },
+    {
+     "text": "five",
+     "start": 5.061,
+     "end": 5.324
+    },
+    {
+     "text": "kilometres",
+     "start": 5.324,
+     "end": 5.85
+    },
+    {
+     "text": "per",
+     "start": 5.85,
+     "end": 6.123
+    },
+    {
+     "text": "hour.",
+     "start": 6.123,
+     "end": 6.58
+    },
+    {
+     "text": "For",
+     "start": 6.879,
+     "end": 7.076
+    },
+    {
+     "text": "the",
+     "start": 7.076,
+     "end": 7.273
+    },
+    {
+     "text": "first",
+     "start": 7.273,
+     "end": 7.601
+    },
+    {
+     "text": "time",
+     "start": 7.601,
+     "end": 7.863
+    },
+    {
+     "text": "in",
+     "start": 7.863,
+     "end": 7.994
+    },
+    {
+     "text": "his",
+     "start": 7.994,
+     "end": 8.191
+    },
+    {
+     "text": "life,",
+     "start": 8.191,
+     "end": 8.519
+    },
+    {
+     "text": "Mbapp\u00e9",
+     "start": 8.519,
+     "end": 9.049
+    },
+    {
+     "text": "is",
+     "start": 9.049,
+     "end": 9.226
+    },
+    {
+     "text": "the",
+     "start": 9.226,
+     "end": 9.491
+    },
+    {
+     "text": "second",
+     "start": 9.491,
+     "end": 10.021
+    },
+    {
+     "text": "fastest",
+     "start": 10.021,
+     "end": 10.639
+    },
+    {
+     "text": "man",
+     "start": 10.639,
+     "end": 10.904
+    },
+    {
+     "text": "in",
+     "start": 10.904,
+     "end": 11.081
+    },
+    {
+     "text": "France.",
+     "start": 11.081,
+     "end": 11.699
+    }
+   ],
+   "sfx": [
+    {
+     "name": "gallop",
+     "at": 0.61,
+     "volume": 0.45
+    },
+    {
+     "name": "boing",
+     "at": 1.66,
+     "volume": 0.2
+    },
+    {
+     "name": "fanfare",
+     "at": 1.71,
+     "volume": 0.22
+    },
+    {
+     "name": "swoosh",
+     "at": 1.01,
+     "volume": 0.25
+    },
+    {
+     "name": "swoosh",
+     "at": 2.28,
+     "volume": 0.25
+    },
+    {
+     "name": "gallop",
+     "at": 3.576,
+     "volume": 0.45
+    },
+    {
+     "name": "gallop",
+     "at": 5.876,
+     "volume": 0.35
+    },
+    {
+     "name": "whoosh",
+     "at": 3.626,
+     "volume": 0.3
+    },
+    {
+     "name": "swoosh",
+     "at": 3.676,
+     "volume": 0.2
+    },
+    {
+     "name": "swoosh",
+     "at": 4.076,
+     "volume": 0.2
+    },
+    {
+     "name": "whoosh",
+     "at": 5.118,
+     "volume": 0.4
+    },
+    {
+     "name": "ding",
+     "at": 5.368,
+     "volume": 0.3
+    },
+    {
+     "name": "rumble",
+     "at": 6.476,
+     "volume": 0.3
+    },
+    {
+     "name": "error",
+     "at": 6.879,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s7-madrid",
+   "start": 63.662,
+   "duration": 10.27,
+   "voice": "assets/voice/s7-madrid.wav",
+   "voiceStart": 0.15,
+   "speech": 8.72,
+   "cues": {
+    "go": 2.79,
+    "rm": 5.242,
+    "q": 6.27,
+    "him": 8.05
+   },
+   "words": [
+    {
+     "text": "So",
+     "start": 0.15,
+     "end": 0.305
+    },
+    {
+     "text": "Mbapp\u00e9",
+     "start": 0.305,
+     "end": 0.771
+    },
+    {
+     "text": "has",
+     "start": 0.771,
+     "end": 1.004
+    },
+    {
+     "text": "had",
+     "start": 1.004,
+     "end": 1.237
+    },
+    {
+     "text": "enough",
+     "start": 1.237,
+     "end": 1.703
+    },
+    {
+     "text": "of",
+     "start": 1.703,
+     "end": 1.858
+    },
+    {
+     "text": "revolutions.",
+     "start": 1.858,
+     "end": 2.79
+    },
+    {
+     "text": "He",
+     "start": 2.79,
+     "end": 2.948
+    },
+    {
+     "text": "goes",
+     "start": 2.948,
+     "end": 3.265
+    },
+    {
+     "text": "back",
+     "start": 3.265,
+     "end": 3.581
+    },
+    {
+     "text": "to",
+     "start": 3.581,
+     "end": 3.739
+    },
+    {
+     "text": "his",
+     "start": 3.739,
+     "end": 3.976
+    },
+    {
+     "text": "real",
+     "start": 3.976,
+     "end": 4.293
+    },
+    {
+     "text": "dictatorship.",
+     "start": 4.293,
+     "end": 5.242
+    },
+    {
+     "text": "At",
+     "start": 5.242,
+     "end": 5.4
+    },
+    {
+     "text": "Real",
+     "start": 5.4,
+     "end": 5.716
+    },
+    {
+     "text": "Madrid.",
+     "start": 5.716,
+     "end": 6.27
+    },
+    {
+     "text": "Who",
+     "start": 6.27,
+     "end": 6.481
+    },
+    {
+     "text": "takes",
+     "start": 6.481,
+     "end": 6.834
+    },
+    {
+     "text": "the",
+     "start": 6.834,
+     "end": 7.045
+    },
+    {
+     "text": "penalties?",
+     "start": 7.045,
+     "end": 7.75
+    },
+    {
+     "text": "He",
+     "start": 8.05,
+     "end": 8.29
+    },
+    {
+     "text": "does.",
+     "start": 8.29,
+     "end": 8.89
+    }
+   ],
+   "sfx": [
+    {
+     "name": "swoosh",
+     "at": 0.3,
+     "volume": 0.25
+    },
+    {
+     "name": "swoosh",
+     "at": 0.7,
+     "volume": 0.3
+    },
+    {
+     "name": "whoosh",
+     "at": 3.09,
+     "volume": 0.3
+    },
+    {
+     "name": "page",
+     "at": 3.59,
+     "volume": 0.35
+    },
+    {
+     "name": "page",
+     "at": 3.99,
+     "volume": 0.35
+    },
+    {
+     "name": "page",
+     "at": 4.39,
+     "volume": 0.35
+    },
+    {
+     "name": "page",
+     "at": 4.79,
+     "volume": 0.35
+    },
+    {
+     "name": "page",
+     "at": 5.19,
+     "volume": 0.35
+    },
+    {
+     "name": "page",
+     "at": 5.59,
+     "volume": 0.35
+    },
+    {
+     "name": "whoosh-cinematic",
+     "at": 4.242,
+     "volume": 0.25
+    },
+    {
+     "name": "roar",
+     "at": 5.142,
+     "volume": 0.35
+    },
+    {
+     "name": "whistle",
+     "at": 5.97,
+     "volume": 0.25
+    },
+    {
+     "name": "boing",
+     "at": 6.62,
+     "volume": 0.2
+    },
+    {
+     "name": "kick",
+     "at": 8.25,
+     "volume": 0.45
+    },
+    {
+     "name": "net",
+     "at": 8.8,
+     "volume": 0.45
+    },
+    {
+     "name": "roar",
+     "at": 8.85,
+     "volume": 0.4
+    },
+    {
+     "name": "impact-bass-1",
+     "at": 8.75,
+     "volume": 0.3
+    },
+    {
+     "name": "swoosh",
+     "at": 9.05,
+     "volume": 0.25
+    },
+    {
+     "name": "ding",
+     "at": 9.75,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s8-outro",
+   "start": 73.932,
+   "duration": 6.59,
+   "voice": "assets/voice/s8-outro.wav",
+   "voiceStart": 0.15,
+   "speech": 4.84,
+   "cues": {
+    "c": 3.47
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.489
+    },
+    {
+     "text": "you",
+     "start": 0.489,
+     "end": 0.692
+    },
+    {
+     "text": "imagine",
+     "start": 0.692,
+     "end": 1.166
+    },
+    {
+     "text": "another",
+     "start": 1.166,
+     "end": 1.641
+    },
+    {
+     "text": "scenario",
+     "start": 1.641,
+     "end": 2.183
+    },
+    {
+     "text": "that",
+     "start": 2.183,
+     "end": 2.454
+    },
+    {
+     "text": "we",
+     "start": 2.454,
+     "end": 2.589
+    },
+    {
+     "text": "should",
+     "start": 2.589,
+     "end": 2.996
+    },
+    {
+     "text": "do",
+     "start": 2.996,
+     "end": 3.131
+    },
+    {
+     "text": "next?",
+     "start": 3.131,
+     "end": 3.47
+    },
+    {
+     "text": "Write",
+     "start": 3.47,
+     "end": 3.865
+    },
+    {
+     "text": "it",
+     "start": 3.865,
+     "end": 4.023
+    },
+    {
+     "text": "in",
+     "start": 4.023,
+     "end": 4.181
+    },
+    {
+     "text": "the",
+     "start": 4.181,
+     "end": 4.419
+    },
+    {
+     "text": "comments.",
+     "start": 4.419,
+     "end": 5.13
+    }
+   ],
+   "sfx": [
+    {
+     "name": "swoosh",
+     "at": 0.05,
+     "volume": 0.3
+    },
+    {
+     "name": "pop",
+     "cue": "c",
+     "volume": 0.3
+    }
+   ]
+  }
+ ]
+}

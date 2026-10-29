@@ -1,0 +1,37 @@
+<!-- Fast forward in a plain kit, very short dark hair (Kylian-Mbappe-style caricature, not a likeness, no badges). Kit colours:
+     KITC (shirt), SHORTC, SOCKC, NUMC (defaults navy/navy/navy/white via part(..., KITC=...)). Extra: PFX-sash and PFX-crown (opacity 0).
+     Origin = between the feet. ~330 tall. Same rig ids as keeper.svg.
+     Animatable: PFX (whole), PFX-body, PFX-armL/-armR (rotate, origin top), PFX-legL/-legR, PFX-head,
+     PFX-pupL/-pupR (x/y look), PFX-browL/-browR, PFX-m-smile / -m-o / -m-flat (show one), PFX-lids (blink). -->
+<g id="PFX">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="PFX-body">
+    <g id="PFX-legL"><rect x="-32" y="-96" width="26" height="96" rx="10" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="SOCKC" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="PFX-legR"><rect x="6" y="-96" width="26" height="96" rx="10" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="SOCKC" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="SHORTC" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="KITC" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <g id="PFX-sash" opacity="0"><path d="M-46,-204 L-30,-210 L48,-122 L34,-114 Z" fill="#1d3f9b" stroke="#1a1a2e" stroke-width="3" /><path d="M-30,-210 L-16,-212 L50,-134 L48,-122 Z" fill="#f4f4f2" /><path d="M-16,-212 L-4,-212 L50,-146 L50,-134 Z" fill="#c0262d" /></g>
+    <text id="PFX-num" data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="NUMC" stroke="#1a1a2e" stroke-width="2">10</text>
+    <g transform="translate(-54,-196)"><g id="PFX-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="PFX-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="PFX-head">
+      <circle cx="-44" cy="4" r="10" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-44,-18 Q-46,-56 0,-56 Q46,-56 44,-18 Q34,-38 0,-40 Q-34,-38 -44,-18 Z" fill="#1a1410" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="PFX-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="PFX-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="PFX-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#8a5a3c" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="PFX-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="PFX-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="PFX-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="PFX-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="PFX-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+      <g id="PFX-crown" opacity="0"><path d="M-50,-44 L-54,-96 L-28,-70 L0,-104 L28,-70 L54,-96 L50,-44 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /><circle cx="0" cy="-62" r="7" fill="#c0262d" stroke="#1a1a2e" stroke-width="3" /><circle cx="-30" cy="-56" r="5" fill="#1d3f9b" /><circle cx="30" cy="-56" r="5" fill="#1d3f9b" /></g>
+    </g></g>
+  </g>
+</g>

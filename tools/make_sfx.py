@@ -214,6 +214,46 @@ def rustle():
     return band(noise(d), 1500, 7000) * (0.4 + 0.6 * np.abs(np.sin(2 * np.pi * 3 * tt))) * np.sin(np.pi * tt / d)
 
 
+def gallop():
+    """Hooves at full gallop (three-beat clops), 2.4 s, loopable."""
+    d = 2.4
+    parts, at = [], 0.0
+    while at < d - 0.2:
+        for k, dt in enumerate((0.0, 0.09, 0.18)):
+            c = band(noise(0.06), 300, 3000) * env(int(SR * 0.06), 0.001, 0.03, 6) + sweep(220, 120, 0.06, 0.5) * env(int(SR * 0.06), 0.001, 0.04, 6)
+            parts.append((at + dt, c * (1.0 if k == 0 else 0.75)))
+        at += 0.4
+    return mix(d, *parts)
+
+
+def fanfare():
+    """Short brass fanfare: G-C-E-G with a held top note, 1.6 s."""
+    def brass(f, d):
+        tt = t(d)
+        saw = sum(np.sin(2 * np.pi * f * k * tt) / k for k in range(1, 10))
+        return saw * np.minimum(1, tt / 0.02) * np.exp(-tt * 1.2)
+    return mix(1.8, (0.0, brass(392, 0.16)), (0.16, brass(523, 0.16)), (0.32, brass(659, 0.16)), (0.48, brass(784, 1.2)))
+
+
+def bell():
+    d = 2.5
+    tt = t(d)
+    return sum(a * np.sin(2 * np.pi * f * tt) * np.exp(-tt * r) for f, a, r in [(220, 1, 1.2), (440, 0.5, 1.6), (587, 0.35, 2.2), (880, 0.2, 3)])
+
+
+def creak():
+    d = 0.9
+    tt = t(d)
+    f = 300 + 160 * np.sin(2 * np.pi * 1.3 * tt)
+    s = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * (0.5 + 0.5 * np.sin(2 * np.pi * 31 * tt))
+    return band(s, 200, 2500) * np.sin(np.pi * tt / d)
+
+
+def page():
+    d = 0.18
+    return band(noise(d), 1200, 7000) * env(int(SR * d), 0.005, 0.08, 4)
+
+
 SOUNDS = {
     "stomp": (stomp, "Army foot stamp: low thud + grit. Peak at 0 s."),
     "boing": (boing, "Cartoon spring boing (bounce, comic surprise)."),
@@ -236,6 +276,11 @@ SOUNDS = {
     "swoosh": (swoosh, "Soft air swoosh for flying cards (peak 0.18 s)."),
     "spin": (spin, "Whirl of someone spinning on the spot, 0.8 s."),
     "rustle": (rustle, "Tumbleweed rustle, 1.6 s."),
+    "gallop": (gallop, "Horse at full gallop, 2.4 s (loop it)."),
+    "fanfare": (fanfare, "Short brass fanfare (proclamation), 1.8 s."),
+    "bell": (bell, "Church bell, 2.5 s."),
+    "creak": (creak, "Door creak, 0.9 s."),
+    "page": (page, "Calendar page flip."),
 }
 
 

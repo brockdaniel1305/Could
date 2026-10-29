@@ -1,0 +1,29 @@
+<!-- Revolutionary citizen (sans-culotte): red Phrygian cap (CAPC), blue jacket, striped trousers, pitchfork in the right hand.
+     Origin = between the feet, ~320 tall. Rig: PFX-body, PFX-legL/-legR, PFX-armL/-armR (origin top), PFX-fork (held at the right hand, separate so the arm pivots cleanly; shake it with transformOrigin 50% 60%), PFX-head,
+     PFX-pupL/-pupR, PFX-m-o (angry open mouth, default) / PFX-m-smile, PFX-lids. Cross arms: armL -55, armR 55, hide PFX-fork. -->
+<g id="PFX">
+  <ellipse cx="0" cy="4" rx="54" ry="9" fill="#000" opacity="0.22" />
+  <g id="PFX-body">
+    <g id="PFX-legL"><rect x="-30" y="-110" width="26" height="104" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="5" /><path d="M-24,-106 L-24,-12 M-14,-106 L-14,-12" stroke="#c0262d" stroke-width="4" /><ellipse cx="-20" cy="-6" rx="20" ry="10" fill="#3a2a1a" /></g>
+    <g id="PFX-legR"><rect x="4" y="-110" width="26" height="104" rx="8" fill="#f4efe6" stroke="#1a1a2e" stroke-width="5" /><path d="M10,-106 L10,-12 M20,-106 L20,-12" stroke="#c0262d" stroke-width="4" /><ellipse cx="20" cy="-6" rx="20" ry="10" fill="#3a2a1a" /></g>
+    <path d="M-46,-206 Q-52,-120 -40,-104 L40,-104 Q52,-120 46,-206 Q0,-222 -46,-206 Z" fill="#2d4a8a" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-14,-212 L0,-150 L14,-212 Z" fill="#f4efe6" stroke="#1a1a2e" stroke-width="3" />
+    <circle cx="-30" cy="-180" r="9" fill="#f4f4f2" stroke="#c0262d" stroke-width="5" />
+    <g transform="translate(-50,-200)"><g id="PFX-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#2d4a8a" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="14" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(50,-200)"><g id="PFX-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#2d4a8a" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="0" cy="88" r="14" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(50,-200)"><g id="PFX-fork"><rect x="-4" y="-140" width="8" height="300" rx="3" fill="#8a6f52" stroke="#1a1a2e" stroke-width="3" /><path d="M-22,-140 L-22,-190 M0,-140 L0,-196 M22,-140 L22,-190 M-24,-140 L24,-140" fill="none" stroke="#9aa0a6" stroke-width="7" stroke-linecap="round" /></g></g>
+    <g transform="translate(0,-254)"><g id="PFX-head">
+      <ellipse cx="0" cy="2" rx="40" ry="46" fill="#d9a77a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-44,-10 Q-46,-60 4,-62 Q40,-62 52,-30 Q64,-6 46,-4 Q40,-30 6,-34 Q-30,-34 -44,-10 Z" fill="CAPC" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <circle cx="-20" cy="-26" r="7" fill="#1d3f9b" stroke="#f4f4f2" stroke-width="3" />
+      <ellipse cx="-14" cy="4" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="14" cy="4" rx="10" ry="11" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="PFX-pupL" cx="-13" cy="5" r="5" fill="#1a1a2e" /><circle id="PFX-pupR" cx="15" cy="5" r="5" fill="#1a1a2e" />
+      <g id="PFX-lids" opacity="0"><ellipse cx="-14" cy="4" rx="11" ry="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="14" cy="4" rx="11" ry="12" fill="#d9a77a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path d="M-26,-12 L-6,-6 M6,-6 L26,-12" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-2,12 Q2,22 7,19" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <ellipse id="PFX-m-o" cx="0" cy="30" rx="10" ry="9" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" />
+      <path id="PFX-m-smile" d="M-14,26 Q0,38 14,26" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+    </g></g>
+  </g>
+</g>

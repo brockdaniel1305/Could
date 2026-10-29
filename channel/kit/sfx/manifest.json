@@ -103,5 +103,30 @@
     "file": "rustle.wav",
     "duration": 1.6,
     "description": "Tumbleweed rustle, 1.6 s."
+  },
+  "gallop": {
+    "file": "gallop.wav",
+    "duration": 2.4,
+    "description": "Horse at full gallop, 2.4 s (loop it)."
+  },
+  "fanfare": {
+    "file": "fanfare.wav",
+    "duration": 1.8,
+    "description": "Short brass fanfare (proclamation), 1.8 s."
+  },
+  "bell": {
+    "file": "bell.wav",
+    "duration": 2.5,
+    "description": "Church bell, 2.5 s."
+  },
+  "creak": {
+    "file": "creak.wav",
+    "duration": 0.9,
+    "description": "Door creak, 0.9 s."
+  },
+  "page": {
+    "file": "page.wav",
+    "duration": 0.18,
+    "description": "Calendar page flip."
   }
 }

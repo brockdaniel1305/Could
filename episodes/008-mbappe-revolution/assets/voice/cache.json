@@ -1,0 +1,972 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "ebdabe8418494171dd612ac79bb212ea420d26f5",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.38
+   },
+   {
+    "text": "Kylian",
+    "start": 0.38,
+    "end": 0.835
+   },
+   {
+    "text": "Mbappe",
+    "start": 0.835,
+    "end": 1.29
+   },
+   {
+    "text": "dictate",
+    "start": 1.29,
+    "end": 1.822
+   },
+   {
+    "text": "the",
+    "start": 1.822,
+    "end": 2.05
+   },
+   {
+    "text": "French",
+    "start": 2.05,
+    "end": 2.505
+   },
+   {
+    "text": "Revolution?",
+    "start": 2.505,
+    "end": 3.34
+   },
+   {
+    "text": "We",
+    "start": 3.34,
+    "end": 3.599
+   },
+   {
+    "text": "went",
+    "start": 3.599,
+    "end": 4.116
+   },
+   {
+    "text": "back",
+    "start": 4.116,
+    "end": 4.634
+   },
+   {
+    "text": "to",
+    "start": 4.634,
+    "end": 4.893
+   },
+   {
+    "text": "1789.",
+    "start": 4.893,
+    "end": 5.54
+   }
+  ]
+ },
+ "s1-hook.part1.wav": {
+  "key": "97d159e4197e9441eb6154977a77612b80bb8ebb",
+  "words": [
+   {
+    "text": "Scientifically.",
+    "start": 0,
+    "end": 2
+   }
+  ]
+ },
+ "s2-france.part0.wav": {
+  "key": "4f2b86fbb89387271dcc3d8f4012c1a016f176b9",
+  "words": [
+   {
+    "text": "Paris,",
+    "start": 0,
+    "end": 0.676
+   },
+   {
+    "text": "1789,",
+    "start": 0.676,
+    "end": 1.24
+   },
+   {
+    "text": "28",
+    "start": 1.24,
+    "end": 1.465
+   },
+   {
+    "text": "million",
+    "start": 1.465,
+    "end": 2.255
+   },
+   {
+    "text": "French",
+    "start": 2.255,
+    "end": 2.931
+   },
+   {
+    "text": "people.",
+    "start": 2.931,
+    "end": 3.72
+   },
+   {
+    "text": "Bread",
+    "start": 3.72,
+    "end": 4.33
+   },
+   {
+    "text": "costs",
+    "start": 4.33,
+    "end": 4.941
+   },
+   {
+    "text": "88%",
+    "start": 4.941,
+    "end": 5.307
+   },
+   {
+    "text": "of",
+    "start": 5.307,
+    "end": 5.551
+   },
+   {
+    "text": "a",
+    "start": 5.551,
+    "end": 5.673
+   },
+   {
+    "text": "worker's",
+    "start": 5.673,
+    "end": 6.65
+   },
+   {
+    "text": "wage.",
+    "start": 6.65,
+    "end": 7.26
+   }
+  ]
+ },
+ "s2-france.part1.wav": {
+  "key": "415ed999e5f66c93dc9a1563ec54c81e18876e6d",
+  "words": [
+   {
+    "text": "the",
+    "start": 0,
+    "end": 0.273
+   },
+   {
+    "text": "job",
+    "start": 0.273,
+    "end": 0.545
+   },
+   {
+    "text": "of",
+    "start": 0.545,
+    "end": 0.727
+   },
+   {
+    "text": "leader,",
+    "start": 0.727,
+    "end": 1.364
+   },
+   {
+    "text": "vacant.",
+    "start": 1.364,
+    "end": 2
+   }
+  ]
+ },
+ "s3-mbappe.part0.wav": {
+  "key": "08df701e8d1c457ef9d0b8d487bb10e9195b3260",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.312
+   },
+   {
+    "text": "candidate,",
+    "start": 0.312,
+    "end": 1.351
+   },
+   {
+    "text": "Kylian",
+    "start": 1.351,
+    "end": 1.974
+   },
+   {
+    "text": "Mbappe,",
+    "start": 1.974,
+    "end": 2.701
+   },
+   {
+    "text": "World",
+    "start": 2.701,
+    "end": 3.221
+   },
+   {
+    "text": "Champion",
+    "start": 3.221,
+    "end": 4.052
+   },
+   {
+    "text": "at",
+    "start": 4.052,
+    "end": 4.259
+   },
+   {
+    "text": "19,",
+    "start": 4.259,
+    "end": 4.571
+   },
+   {
+    "text": "top",
+    "start": 4.571,
+    "end": 4.883
+   },
+   {
+    "text": "speed",
+    "start": 4.883,
+    "end": 5.402
+   },
+   {
+    "text": "about",
+    "start": 5.402,
+    "end": 5.922
+   },
+   {
+    "text": "38",
+    "start": 5.922,
+    "end": 6.129
+   },
+   {
+    "text": "km",
+    "start": 6.129,
+    "end": 6.337
+   },
+   {
+    "text": "per",
+    "start": 6.337,
+    "end": 6.649
+   },
+   {
+    "text": "hour,",
+    "start": 6.649,
+    "end": 7.168
+   },
+   {
+    "text": "his",
+    "start": 7.168,
+    "end": 7.48
+   },
+   {
+    "text": "celebration",
+    "start": 7.48,
+    "end": 8.398
+   },
+   {
+    "text": "arms",
+    "start": 8.398,
+    "end": 8.732
+   },
+   {
+    "text": "crossed.",
+    "start": 8.732,
+    "end": 9.4
+   }
+  ]
+ },
+ "s3-mbappe.part1.wav": {
+  "key": "93c2f0c321aee441624f95a9aa5562324379124f",
+  "words": [
+   {
+    "text": "like",
+    "start": 0,
+    "end": 0.32
+   },
+   {
+    "text": "a",
+    "start": 0.32,
+    "end": 0.4
+   },
+   {
+    "text": "man",
+    "start": 0.4,
+    "end": 0.64
+   },
+   {
+    "text": "who",
+    "start": 0.64,
+    "end": 0.88
+   },
+   {
+    "text": "has",
+    "start": 0.88,
+    "end": 1.12
+   },
+   {
+    "text": "already",
+    "start": 1.12,
+    "end": 1.68
+   },
+   {
+    "text": "decided.",
+    "start": 1.68,
+    "end": 2.32
+   }
+  ]
+ },
+ "s4-bastille.part0.wav": {
+  "key": "085d732106c64455b6bd8e1d69dadc4a759735fd",
+  "words": [
+   {
+    "text": "Plan",
+    "start": 0,
+    "end": 0.289
+   },
+   {
+    "text": "A",
+    "start": 0.289,
+    "end": 0.361
+   },
+   {
+    "text": "stormed",
+    "start": 0.361,
+    "end": 0.866
+   },
+   {
+    "text": "the",
+    "start": 0.866,
+    "end": 1.082
+   },
+   {
+    "text": "bus",
+    "start": 1.082,
+    "end": 1.299
+   },
+   {
+    "text": "still,",
+    "start": 1.299,
+    "end": 1.732
+   },
+   {
+    "text": "the",
+    "start": 1.732,
+    "end": 1.948
+   },
+   {
+    "text": "crowd",
+    "start": 1.948,
+    "end": 2.309
+   },
+   {
+    "text": "needed",
+    "start": 2.309,
+    "end": 2.742
+   },
+   {
+    "text": "most",
+    "start": 2.742,
+    "end": 3.031
+   },
+   {
+    "text": "of",
+    "start": 3.031,
+    "end": 3.175
+   },
+   {
+    "text": "the",
+    "start": 3.175,
+    "end": 3.391
+   },
+   {
+    "text": "day.",
+    "start": 3.391,
+    "end": 3.68
+   },
+   {
+    "text": "Ember",
+    "start": 3.68,
+    "end": 4.003
+   },
+   {
+    "text": "Pay",
+    "start": 4.003,
+    "end": 4.197
+   },
+   {
+    "text": "needs",
+    "start": 4.197,
+    "end": 4.52
+   },
+   {
+    "text": "about",
+    "start": 4.52,
+    "end": 4.843
+   },
+   {
+    "text": "a",
+    "start": 4.843,
+    "end": 4.908
+   },
+   {
+    "text": "minute.",
+    "start": 4.908,
+    "end": 5.36
+   }
+  ]
+ },
+ "s4-bastille.part1.wav": {
+  "key": "2d39de91c3b3b397e547375d3904a6db8060b4f5",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.182
+   },
+   {
+    "text": "finds",
+    "start": 0.182,
+    "end": 0.636
+   },
+   {
+    "text": "seven",
+    "start": 0.636,
+    "end": 1.091
+   },
+   {
+    "text": "prisoners.",
+    "start": 1.091,
+    "end": 2
+   }
+  ]
+ },
+ "s4-bastille.part2.wav": {
+  "key": "60ea27787bf70b479df36b86910d375c95bffa3d",
+  "words": [
+   {
+    "text": "Seven",
+    "start": 0,
+    "end": 0.538
+   },
+   {
+    "text": "new",
+    "start": 0.538,
+    "end": 0.862
+   },
+   {
+    "text": "fans.",
+    "start": 0.862,
+    "end": 1.4
+   }
+  ]
+ },
+ "s5-power.part0.wav": {
+  "key": "fd447898f0223549bc97f8f6ddd9a124a3b990e5",
+  "words": [
+   {
+    "text": "Plan",
+    "start": 0,
+    "end": 0.372
+   },
+   {
+    "text": "B,",
+    "start": 0.372,
+    "end": 0.558
+   },
+   {
+    "text": "take",
+    "start": 0.558,
+    "end": 0.93
+   },
+   {
+    "text": "power,",
+    "start": 0.93,
+    "end": 1.489
+   },
+   {
+    "text": "new",
+    "start": 1.489,
+    "end": 1.768
+   },
+   {
+    "text": "law.",
+    "start": 1.768,
+    "end": 2.14
+   },
+   {
+    "text": "Every",
+    "start": 2.14,
+    "end": 2.49
+   },
+   {
+    "text": "citizen",
+    "start": 2.49,
+    "end": 2.98
+   },
+   {
+    "text": "celebrates",
+    "start": 2.98,
+    "end": 3.68
+   },
+   {
+    "text": "with",
+    "start": 3.68,
+    "end": 3.96
+   },
+   {
+    "text": "arms",
+    "start": 3.96,
+    "end": 4.24
+   },
+   {
+    "text": "crossed.",
+    "start": 4.24,
+    "end": 4.8
+   },
+   {
+    "text": "The",
+    "start": 4.8,
+    "end": 5.016
+   },
+   {
+    "text": "revolution",
+    "start": 5.016,
+    "end": 5.736
+   },
+   {
+    "text": "really",
+    "start": 5.736,
+    "end": 6.168
+   },
+   {
+    "text": "did",
+    "start": 6.168,
+    "end": 6.384
+   },
+   {
+    "text": "invent",
+    "start": 6.384,
+    "end": 6.816
+   },
+   {
+    "text": "a",
+    "start": 6.816,
+    "end": 6.888
+   },
+   {
+    "text": "10-day",
+    "start": 6.888,
+    "end": 7.32
+   },
+   {
+    "text": "week.",
+    "start": 7.32,
+    "end": 7.68
+   }
+  ]
+ },
+ "s5-power.part1.wav": {
+  "key": "e97de3c5bd140f772068fc02996c97aca66f53d1",
+  "words": [
+   {
+    "text": "Mbappe",
+    "start": 0,
+    "end": 0.692
+   },
+   {
+    "text": "adds",
+    "start": 0.692,
+    "end": 1.153
+   },
+   {
+    "text": "an",
+    "start": 1.153,
+    "end": 1.384
+   },
+   {
+    "text": "11th.",
+    "start": 1.384,
+    "end": 1.96
+   }
+  ]
+ },
+ "s5-power.part2.wav": {
+  "key": "d19098f804e445c1cf69edffec24ec21cdf15389",
+  "words": [
+   {
+    "text": "Rest",
+    "start": 0,
+    "end": 1
+   },
+   {
+    "text": "day!",
+    "start": 1,
+    "end": 2
+   }
+  ]
+ },
+ "s6-horse.part0.wav": {
+  "key": "0fd6c9e082fcc7528e33c26487803b0eb5403ada",
+  "words": [
+   {
+    "text": "One",
+    "start": 0,
+    "end": 0.262
+   },
+   {
+    "text": "problem,",
+    "start": 0.262,
+    "end": 0.96
+   },
+   {
+    "text": "Napoleon's.",
+    "start": 0.96,
+    "end": 1.92
+   }
+  ]
+ },
+ "s6-horse.part1.wav": {
+  "key": "4fc0305aa569c9039377a72f7b26f918353fb876",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.183
+   },
+   {
+    "text": "has",
+    "start": 0.183,
+    "end": 0.457
+   },
+   {
+    "text": "a",
+    "start": 0.457,
+    "end": 0.548
+   },
+   {
+    "text": "horse,",
+    "start": 0.548,
+    "end": 1.096
+   },
+   {
+    "text": "top",
+    "start": 1.096,
+    "end": 1.37
+   },
+   {
+    "text": "speed,",
+    "start": 1.37,
+    "end": 1.917
+   },
+   {
+    "text": "about",
+    "start": 1.917,
+    "end": 2.374
+   },
+   {
+    "text": "45",
+    "start": 2.374,
+    "end": 2.557
+   },
+   {
+    "text": "kilometers",
+    "start": 2.557,
+    "end": 3.47
+   },
+   {
+    "text": "per",
+    "start": 3.47,
+    "end": 3.743
+   },
+   {
+    "text": "hour.",
+    "start": 3.743,
+    "end": 4.2
+   }
+  ]
+ },
+ "s6-horse.part2.wav": {
+  "key": "61abebf6997a6b17414eba7af471d04964192075",
+  "words": [
+   {
+    "text": "For",
+    "start": 0,
+    "end": 0.197
+   },
+   {
+    "text": "the",
+    "start": 0.197,
+    "end": 0.394
+   },
+   {
+    "text": "first",
+    "start": 0.394,
+    "end": 0.722
+   },
+   {
+    "text": "time",
+    "start": 0.722,
+    "end": 0.984
+   },
+   {
+    "text": "in",
+    "start": 0.984,
+    "end": 1.115
+   },
+   {
+    "text": "his",
+    "start": 1.115,
+    "end": 1.312
+   },
+   {
+    "text": "life,",
+    "start": 1.312,
+    "end": 1.64
+   },
+   {
+    "text": "Embape",
+    "start": 1.64,
+    "end": 2.17
+   },
+   {
+    "text": "is",
+    "start": 2.17,
+    "end": 2.347
+   },
+   {
+    "text": "the",
+    "start": 2.347,
+    "end": 2.612
+   },
+   {
+    "text": "second",
+    "start": 2.612,
+    "end": 3.142
+   },
+   {
+    "text": "fastest",
+    "start": 3.142,
+    "end": 3.76
+   },
+   {
+    "text": "man",
+    "start": 3.76,
+    "end": 4.025
+   },
+   {
+    "text": "in",
+    "start": 4.025,
+    "end": 4.202
+   },
+   {
+    "text": "France.",
+    "start": 4.202,
+    "end": 4.82
+   }
+  ]
+ },
+ "s7-madrid.part0.wav": {
+  "key": "038052775d5bc56aca4e57873b66010e1afcd916",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.155
+   },
+   {
+    "text": "Mbappe",
+    "start": 0.155,
+    "end": 0.621
+   },
+   {
+    "text": "has",
+    "start": 0.621,
+    "end": 0.854
+   },
+   {
+    "text": "had",
+    "start": 0.854,
+    "end": 1.087
+   },
+   {
+    "text": "enough",
+    "start": 1.087,
+    "end": 1.553
+   },
+   {
+    "text": "of",
+    "start": 1.553,
+    "end": 1.708
+   },
+   {
+    "text": "revolutions.",
+    "start": 1.708,
+    "end": 2.64
+   },
+   {
+    "text": "He",
+    "start": 2.64,
+    "end": 2.798
+   },
+   {
+    "text": "goes",
+    "start": 2.798,
+    "end": 3.115
+   },
+   {
+    "text": "back",
+    "start": 3.115,
+    "end": 3.431
+   },
+   {
+    "text": "to",
+    "start": 3.431,
+    "end": 3.589
+   },
+   {
+    "text": "his",
+    "start": 3.589,
+    "end": 3.826
+   },
+   {
+    "text": "real",
+    "start": 3.826,
+    "end": 4.143
+   },
+   {
+    "text": "dictatorship",
+    "start": 4.143,
+    "end": 5.092
+   },
+   {
+    "text": "at",
+    "start": 5.092,
+    "end": 5.25
+   },
+   {
+    "text": "Real",
+    "start": 5.25,
+    "end": 5.566
+   },
+   {
+    "text": "Madrid,",
+    "start": 5.566,
+    "end": 6.12
+   },
+   {
+    "text": "who",
+    "start": 6.12,
+    "end": 6.331
+   },
+   {
+    "text": "takes",
+    "start": 6.331,
+    "end": 6.684
+   },
+   {
+    "text": "the",
+    "start": 6.684,
+    "end": 6.895
+   },
+   {
+    "text": "penalties.",
+    "start": 6.895,
+    "end": 7.6
+   }
+  ]
+ },
+ "s7-madrid.part1.wav": {
+  "key": "b1e6f969b00006c4e0d699aa932ce1b65d7ee9a7",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.24
+   },
+   {
+    "text": "does.",
+    "start": 0.24,
+    "end": 0.84
+   }
+  ]
+ },
+ "s8-outro.part0.wav": {
+  "key": "6c279d40f446e1f68aba6b2496ea3022dba19e68",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.339
+   },
+   {
+    "text": "you",
+    "start": 0.339,
+    "end": 0.542
+   },
+   {
+    "text": "imagine",
+    "start": 0.542,
+    "end": 1.016
+   },
+   {
+    "text": "another",
+    "start": 1.016,
+    "end": 1.491
+   },
+   {
+    "text": "scenario",
+    "start": 1.491,
+    "end": 2.033
+   },
+   {
+    "text": "that",
+    "start": 2.033,
+    "end": 2.304
+   },
+   {
+    "text": "we",
+    "start": 2.304,
+    "end": 2.439
+   },
+   {
+    "text": "should",
+    "start": 2.439,
+    "end": 2.846
+   },
+   {
+    "text": "do",
+    "start": 2.846,
+    "end": 2.981
+   },
+   {
+    "text": "next?",
+    "start": 2.981,
+    "end": 3.32
+   },
+   {
+    "text": "Write",
+    "start": 3.32,
+    "end": 3.715
+   },
+   {
+    "text": "it",
+    "start": 3.715,
+    "end": 3.873
+   },
+   {
+    "text": "in",
+    "start": 3.873,
+    "end": 4.031
+   },
+   {
+    "text": "the",
+    "start": 4.031,
+    "end": 4.269
+   },
+   {
+    "text": "comments.",
+    "start": 4.269,
+    "end": 4.98
+   }
+  ]
+ }
+}
