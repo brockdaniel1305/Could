@@ -148,8 +148,8 @@
   <script>
     (function () {
       const S = "#s5-moon-";
-      const D = 17.369;
-      const C = {"t": 0.955, "ang": 1.815, "apex": 6.54, "v": 8.473, "bolt": 11.565, "air": 13.11};
+      const D = 16.57;
+      const C = {"t": 0.891, "ang": 1.878, "apex": 5.91, "v": 8.035, "bolt": 11.03, "air": 12.926};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s5-moon-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
@@ -211,12 +211,12 @@
       tl.to(S + "prot", { opacity: 0, duration: 0.3 }, C.apex);
       fly("an", C.ang + 0.6, C.apex - 0.1, { from: "right" });
       // the launch: knees, jump, slow motion
-      tl.to(S + "kwrap", { y: 16, duration: 0.2, ease: "power2.in" }, 2.065);
-      tl.to(S + "kwrap", { y: -40, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, 2.265);
-      play("ball", MOON, 2.315, 7.400, 2.5);
-      trail("g", 25, [0.0167,0.1167,0.2167,0.3167,0.4167,0.5167,0.6167,0.7167,0.8167,0.9167,1.0167,1.1167,1.2167,1.3167,1.4167,1.5167,1.6167,1.7167,1.8167,1.9167,2.0167,2.1167,2.2167,2.3167,2.4167], 2.315, 7.400);
-      tl.to([S + "p-pupL", S + "p-pupR"], { y: -8, duration: 0.3 }, 2.615);
-      swap(S + "p-m-smile", S + "p-m-o", 2.715);
+      tl.to(S + "kwrap", { y: 16, duration: 0.2, ease: "power2.in" }, 2.128);
+      tl.to(S + "kwrap", { y: -40, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, 2.328);
+      play("ball", MOON, 2.378, 6.922, 2.5);
+      trail("g", 25, [0.0167,0.1167,0.2167,0.3167,0.4167,0.5167,0.6167,0.7167,0.8167,0.9167,1.0167,1.1167,1.2167,1.3167,1.4167,1.5167,1.6167,1.7167,1.8167,1.9167,2.0167,2.1167,2.2167,2.3167,2.4167], 2.378, 6.922);
+      tl.to([S + "p-pupL", S + "p-pupR"], { y: -8, duration: 0.3 }, 2.678);
+      swap(S + "p-m-smile", S + "p-m-o", 2.778);
       tl.fromTo(S + "ap", { opacity: 0 }, { opacity: 1, duration: 0.3 }, C.apex);
       fly("ap", C.apex, C.v - 0.1, { from: "right" });
       fly("v", C.v, C.air - 0.1);
@@ -225,7 +225,7 @@
       tl.to([S + "w-browL", S + "w-browR"], { y: 10, duration: 0.3 }, C.bolt);
       // hang time clock (real flight time)
       const hang = document.getElementById("s5-moon-hang"), h = { v: 0 };
-      tl.fromTo(h, { v: 0 }, { v: (D - 2.315) / 7.400, duration: D - 2.315, ease: "none", onUpdate() { hang.textContent = h.v.toFixed(2) + " s"; } }, 2.315);
+      tl.fromTo(h, { v: 0 }, { v: (D - 2.378) / 6.922, duration: D - 2.378, ease: "none", onUpdate() { hang.textContent = h.v.toFixed(2) + " s"; } }, 2.378);
       fly("air", C.air, null, { from: "right" });
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);

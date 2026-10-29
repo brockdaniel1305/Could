@@ -10,7 +10,39 @@
   "scenes": [
     {
       "id": "s1-hook",
-      "text": "Could Usain Bolt beat a T-Rex in a {100|one hundred} metre race? {{ev}}We looked at the evidence. ||0.25|| {{sci}}Scientifically. ||0.3|| {{long}}With a stopwatch."
+      "text": "Could Usain Bolt beat a T-Rex in a {100|one hundred} metre race? {{ev}}We looked at the evidence. ||0.25|| {{sci}}Scientifically. ||0.3|| {{long}}With a stopwatch.",
+      "sfx": [
+        {
+          "name": "swoosh",
+          "at": 3.95,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 5.475,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 6.975,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "wind",
+          "at": 0,
+          "volume": 0.14,
+          "auto": true
+        },
+        {
+          "name": "whoosh",
+          "at": 0.0,
+          "volume": 0.3,
+          "auto": true
+        }
+      ]
     },
     {
       "id": "s2-bolt",
@@ -21,6 +53,30 @@
           "cue": "gold",
           "offset": 0.6,
           "volume": 0.4
+        },
+        {
+          "name": "swoosh",
+          "at": 0.923,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 2.04,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 5.277,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 10.23,
+          "volume": 0.2,
+          "auto": true
         }
       ]
     },
@@ -33,6 +89,36 @@
           "cue": "bite",
           "offset": 0.5,
           "volume": 0.3
+        },
+        {
+          "name": "swoosh",
+          "at": 1.021,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 2.329,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 3.524,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 9.057,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 12.007,
+          "volume": 0.2,
+          "auto": true
         }
       ]
     },
@@ -51,6 +137,36 @@
           "cue": "react",
           "offset": -0.1,
           "volume": 0.3
+        },
+        {
+          "name": "swoosh",
+          "at": 1.447,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 6.359,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 10.21,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 11.785,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 15.37,
+          "volume": 0.2,
+          "auto": true
         }
       ]
     },
@@ -63,6 +179,36 @@
           "cue": "pass",
           "offset": 0.3,
           "volume": 0.35
+        },
+        {
+          "name": "swoosh",
+          "at": 1.455,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 2.442,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 5.73,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 13.199,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 14.869,
+          "volume": 0.2,
+          "auto": true
         }
       ]
     },
@@ -75,6 +221,30 @@
           "cue": "win",
           "offset": 0.2,
           "volume": 0.5
+        },
+        {
+          "name": "swoosh",
+          "at": 1.85,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 6.283,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 9.063,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 12.13,
+          "volume": 0.2,
+          "auto": true
         }
       ]
     },
@@ -88,12 +258,62 @@
           "cue": "yes",
           "offset": 0.14,
           "volume": 0.4
+        },
+        {
+          "name": "swoosh",
+          "at": 0.887,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 5.38,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 6.678,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 9.18,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "swoosh",
+          "at": 11.85,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "drumroll",
+          "at": 1.4,
+          "volume": 0.2,
+          "auto": true
         }
       ]
     },
     {
       "id": "s8-outro",
-      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments."
+      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments.",
+      "sfx": [
+        {
+          "name": "swoosh",
+          "at": 3.35,
+          "volume": 0.2,
+          "auto": true
+        },
+        {
+          "name": "pop",
+          "cue": "c",
+          "volume": 0.3,
+          "auto": true
+        }
+      ]
     }
   ]
 }

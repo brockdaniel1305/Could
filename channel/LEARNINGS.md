@@ -51,6 +51,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-10-29 · TikTok: Die ersten 4 Uploads direkt nach Kontoerstellung bekamen 0 Aufrufe (Konto galt als Bot). Erstes Video danach:
+  800 Aufrufe / 15 Likes nach 3 h. Neue Konten erst "aufwärmen", Uploads verteilen. Re-Uploads alter Folgen als echte neue Fassung (v3):
+  neue Erzählerspur, Pflicht-Outro, SFX-Layer (`tools/auto_sfx.py`), neuer Einstieg (Punch-in) → `renders/<ep>-v3-final.mp4`.
 - 006 · Gefährliche Szenarien (Züge, Höhe, Feuer …): nie den Unfall zeigen (vorher schneiden), die Lösung ungefährlich machen
   ("he takes the train") und am Ende ein klarer Satz "Please do not try this." (TikTok-Richtlinien zu gefährlichen Handlungen).
 - 006 · Querverweise zahlen sich aus: die benötigten 7 m Sprunghöhe = Höhe der Chinesischen Mauer aus 003 (gleiches Part wiederverwendet).

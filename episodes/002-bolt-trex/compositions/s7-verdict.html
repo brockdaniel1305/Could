@@ -143,8 +143,8 @@
   <script>
     (function () {
       const S = "#s7-verdict-";
-      const D = 14.722;
-      const C = {"q": 1.012, "yes": 3.937, "by": 5.562, "but": 7.099, "line": 9.461, "rex": 12.143};
+      const D = 14.52;
+      const C = {"q": 1.007, "yes": 3.9, "by": 5.5, "but": 6.798, "line": 9.3, "rex": 11.97};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s7-verdict-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

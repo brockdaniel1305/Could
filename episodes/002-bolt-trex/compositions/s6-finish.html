@@ -150,8 +150,8 @@
   <script>
     (function () {
       const S = "#s6-finish-";
-      const D = 16.071;
-      const C = {"t": 2.469, "win": 3.396, "where": 6.743, "lean": 9.546, "photo": 12.613};
+      const D = 15.58;
+      const C = {"t": 1.97, "win": 2.901, "where": 6.403, "lean": 9.183, "photo": 12.25};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s6-finish-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
@@ -204,7 +204,7 @@
         for (let i = 1; i < k.length; i++) if (x <= k[i][0]) return k[i - 1][1] + (k[i][1] - k[i - 1][1]) * (x - k[i - 1][0]) / (k[i][0] - k[i - 1][0]);
         return k[k.length - 1][1];
       };
-      const KEYS = [[0, 7.9], [3.396, 9.58], [6.743, 9.58], [6.753, 9.58]], CAMS = [[0, 'bolt'], [3.796, 101], [6.743, 'rex']];
+      const KEYS = [[0, 7.9], [2.901, 9.58], [6.403, 9.58], [6.412999999999999, 9.58]], CAMS = [[0, 'bolt'], [3.3009999999999997, 101], [6.403, 'rex']];
       const target = (mode, b, r) => typeof mode === "number" ? mode : mode === "bolt" ? b + 1.5 : mode === "rex" ? r - 5 : (b + r - 5) / 2;
       const ss = (x) => x * x * (3 - 2 * x);
       const camAt = (lt, b, r) => {

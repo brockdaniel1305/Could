@@ -144,8 +144,8 @@
   <script>
     (function () {
       const S = "#s6-blind-";
-      const D = 16.701;
-      const C = {"t": 1.153, "see": 2.275, "err": 4.636, "tol": 8.413, "miss": 11.174, "walk": 12.832};
+      const D = 15.961;
+      const C = {"t": 1.21, "see": 2.27, "err": 4.208, "tol": 7.31, "miss": 10.654, "walk": 12.505};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s6-blind-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

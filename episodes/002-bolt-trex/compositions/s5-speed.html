@@ -150,8 +150,8 @@
   <script>
     (function () {
       const S = "#s5-speed-";
-      const D = 18.068;
-      const C = {"t": 1.943, "bolt": 2.747, "rex": 5.344, "pass": 9.858, "look": 13.969, "wise": 15.655};
+      const D = 17.339;
+      const C = {"t": 1.575, "bolt": 2.562, "rex": 5.85, "pass": 9.97, "look": 13.319, "wise": 14.989};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s5-speed-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
@@ -204,7 +204,7 @@
         for (let i = 1; i < k.length; i++) if (x <= k[i][0]) return k[i - 1][1] + (k[i][1] - k[i - 1][1]) * (x - k[i - 1][0]) / (k[i][0] - k[i - 1][0]);
         return k[k.length - 1][1];
       };
-      const KEYS = [[0, 3.0], [9.858, 4.17], [13.969, 5.4], [18.068, 7.9]], CAMS = [[0, 'mid'], [10.358, 'bolt']];
+      const KEYS = [[0, 3.0], [9.97, 4.17], [13.319, 5.4], [17.339, 7.9]], CAMS = [[0, 'mid'], [10.47, 'bolt']];
       const target = (mode, b, r) => typeof mode === "number" ? mode : mode === "bolt" ? b + 1.5 : mode === "rex" ? r - 5 : (b + r - 5) / 2;
       const ss = (x) => x * x * (3 - 2 * x);
       const camAt = (lt, b, r) => {

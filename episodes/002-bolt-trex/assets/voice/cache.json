@@ -1025,27 +1025,253 @@
   ]
  },
  "s7-verdict.part0.wav": {
-  "key": "2800db34bc03fd2c5c3aacb3c317d29fba7e3722",
-  "words": []
+  "key": "b68bfa2f46253843a97d1ac42e3453fefde9f9bf",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.257
+   },
+   {
+    "text": "verdict",
+    "start": 0.257,
+    "end": 0.857
+   },
+   {
+    "text": "could",
+    "start": 0.857,
+    "end": 1.286
+   },
+   {
+    "text": "use",
+    "start": 1.286,
+    "end": 1.543
+   },
+   {
+    "text": "Ain",
+    "start": 1.543,
+    "end": 1.8
+   },
+   {
+    "text": "Bolt",
+    "start": 1.8,
+    "end": 2.143
+   },
+   {
+    "text": "Beta",
+    "start": 2.143,
+    "end": 2.486
+   },
+   {
+    "text": "T-Rex.",
+    "start": 2.486,
+    "end": 3
+   }
+  ]
  },
  "s7-verdict.part1.wav": {
-  "key": "7ca001655eafa4b7280ed8cdbe5c631ee260b7bf",
-  "words": []
+  "key": "a1e8387a1cf1a11a5e469d22a255bcf5841411fb",
+  "words": [
+   {
+    "text": "Yes!",
+    "start": 0,
+    "end": 0.5
+   }
+  ]
  },
  "s7-verdict.part2.wav": {
-  "key": "f00de77324ac9f8c0da7232012ec4f09ccb613fb",
-  "words": []
+  "key": "f1e4be39df04825c138aa7fc2dae8c9ae694de4d",
+  "words": [
+   {
+    "text": "By",
+    "start": 0,
+    "end": 0.153
+   },
+   {
+    "text": "almost",
+    "start": 0.153,
+    "end": 0.611
+   },
+   {
+    "text": "7",
+    "start": 0.611,
+    "end": 0.687
+   },
+   {
+    "text": "seconds,",
+    "start": 0.687,
+    "end": 1.298
+   },
+   {
+    "text": "there",
+    "start": 1.298,
+    "end": 1.68
+   },
+   {
+    "text": "is,",
+    "start": 1.68,
+    "end": 1.909
+   },
+   {
+    "text": "however,",
+    "start": 1.909,
+    "end": 2.52
+   },
+   {
+    "text": "one",
+    "start": 2.52,
+    "end": 2.749
+   },
+   {
+    "text": "problem.",
+    "start": 2.749,
+    "end": 3.36
+   }
+  ]
  },
  "s7-verdict.part3.wav": {
-  "key": "c58b9886bdfb5feda00fc2bdd014735749478adf",
-  "words": []
+  "key": "9a5f854722247b0677608edb5a92515d6bff4806",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.262
+   },
+   {
+    "text": "race",
+    "start": 0.262,
+    "end": 0.612
+   },
+   {
+    "text": "ends",
+    "start": 0.612,
+    "end": 0.961
+   },
+   {
+    "text": "at",
+    "start": 0.961,
+    "end": 1.136
+   },
+   {
+    "text": "the",
+    "start": 1.136,
+    "end": 1.399
+   },
+   {
+    "text": "finish",
+    "start": 1.399,
+    "end": 1.923
+   },
+   {
+    "text": "line.",
+    "start": 1.923,
+    "end": 2.36
+   }
+  ]
  },
  "s7-verdict.part4.wav": {
-  "key": "3840ba7c5e6d7f8baa56dc88896d040884572a45",
-  "words": []
+  "key": "835d9453f82628cc90bef39940dce5670f70d7dc",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.244
+   },
+   {
+    "text": "T-Rex",
+    "start": 0.244,
+    "end": 0.65
+   },
+   {
+    "text": "does",
+    "start": 0.65,
+    "end": 0.975
+   },
+   {
+    "text": "not.",
+    "start": 0.975,
+    "end": 1.3
+   }
+  ]
  },
  "s8-outro.part0.wav": {
-  "key": "10f62c36bbd209a7b56af8f802d9eba99eaa1a20",
-  "words": []
+  "key": "6c279d40f446e1f68aba6b2496ea3022dba19e68",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.339
+   },
+   {
+    "text": "you",
+    "start": 0.339,
+    "end": 0.542
+   },
+   {
+    "text": "imagine",
+    "start": 0.542,
+    "end": 1.016
+   },
+   {
+    "text": "another",
+    "start": 1.016,
+    "end": 1.491
+   },
+   {
+    "text": "scenario",
+    "start": 1.491,
+    "end": 2.033
+   },
+   {
+    "text": "that",
+    "start": 2.033,
+    "end": 2.304
+   },
+   {
+    "text": "we",
+    "start": 2.304,
+    "end": 2.439
+   },
+   {
+    "text": "should",
+    "start": 2.439,
+    "end": 2.846
+   },
+   {
+    "text": "do",
+    "start": 2.846,
+    "end": 2.981
+   },
+   {
+    "text": "next?",
+    "start": 2.981,
+    "end": 3.32
+   },
+   {
+    "text": "Write",
+    "start": 3.32,
+    "end": 3.715
+   },
+   {
+    "text": "it",
+    "start": 3.715,
+    "end": 3.873
+   },
+   {
+    "text": "in",
+    "start": 3.873,
+    "end": 4.031
+   },
+   {
+    "text": "the",
+    "start": 4.031,
+    "end": 4.269
+   },
+   {
+    "text": "comments.",
+    "start": 4.269,
+    "end": 4.98
+   }
+  ]
  }
 }

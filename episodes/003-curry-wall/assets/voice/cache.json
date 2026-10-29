@@ -1,82 +1,1282 @@
 {
  "s1-hook.part0.wav": {
-  "key": "f28a8583acf2d4581ae9fd07e346ff81461d2d79",
-  "words": []
+  "key": "e92ee7cae8949a0d31dfa5ab9ebdafd1d946b855",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.335
+   },
+   {
+    "text": "Steph",
+    "start": 0.335,
+    "end": 0.67
+   },
+   {
+    "text": "Curry",
+    "start": 0.67,
+    "end": 1.005
+   },
+   {
+    "text": "make",
+    "start": 1.005,
+    "end": 1.273
+   },
+   {
+    "text": "a",
+    "start": 1.273,
+    "end": 1.34
+   },
+   {
+    "text": "three-pointer",
+    "start": 1.34,
+    "end": 2.212
+   },
+   {
+    "text": "over",
+    "start": 2.212,
+    "end": 2.48
+   },
+   {
+    "text": "the",
+    "start": 2.48,
+    "end": 2.681
+   },
+   {
+    "text": "Great",
+    "start": 2.681,
+    "end": 3.016
+   },
+   {
+    "text": "Wall",
+    "start": 3.016,
+    "end": 3.284
+   },
+   {
+    "text": "of",
+    "start": 3.284,
+    "end": 3.418
+   },
+   {
+    "text": "China?",
+    "start": 3.418,
+    "end": 3.82
+   },
+   {
+    "text": "We",
+    "start": 3.82,
+    "end": 3.925
+   },
+   {
+    "text": "looked",
+    "start": 3.925,
+    "end": 4.242
+   },
+   {
+    "text": "at",
+    "start": 4.242,
+    "end": 4.347
+   },
+   {
+    "text": "the",
+    "start": 4.347,
+    "end": 4.505
+   },
+   {
+    "text": "evidence.",
+    "start": 4.505,
+    "end": 4.98
+   }
+  ]
  },
  "s1-hook.part1.wav": {
-  "key": "f04df5f92042030cf18d0e93b3595b055e09d157",
-  "words": []
+  "key": "97d159e4197e9441eb6154977a77612b80bb8ebb",
+  "words": [
+   {
+    "text": "Scientifically.",
+    "start": 0,
+    "end": 2
+   }
+  ]
  },
  "s1-hook.part2.wav": {
-  "key": "228d86ca14ecccd848f23fe9836f5cc7fd4f507f",
-  "words": []
+  "key": "3b839c2940268f112cf948191dc3d5effdaea58e",
+  "words": [
+   {
+    "text": "with",
+    "start": 0,
+    "end": 0.27
+   },
+   {
+    "text": "a",
+    "start": 0.27,
+    "end": 0.338
+   },
+   {
+    "text": "protractor.",
+    "start": 0.338,
+    "end": 1.08
+   }
+  ]
  },
  "s2-curry.part0.wav": {
-  "key": "f6bf572b5a5c0b52295e30cfb3cc62b68f2d2166",
-  "words": []
+  "key": "e07721d19a3bb49e1a8830a0979aed147b5a889d",
+  "words": [
+   {
+    "text": "On",
+    "start": 0,
+    "end": 0.178
+   },
+   {
+    "text": "a",
+    "start": 0.178,
+    "end": 0.267
+   },
+   {
+    "text": "fence,",
+    "start": 0.267,
+    "end": 0.8
+   },
+   {
+    "text": "Stephen",
+    "start": 0.8,
+    "end": 1.422
+   },
+   {
+    "text": "Curry,",
+    "start": 1.422,
+    "end": 1.955
+   },
+   {
+    "text": "1.88",
+    "start": 1.955,
+    "end": 2.31
+   },
+   {
+    "text": "meters",
+    "start": 2.31,
+    "end": 2.843
+   },
+   {
+    "text": "of",
+    "start": 2.843,
+    "end": 3.021
+   },
+   {
+    "text": "point",
+    "start": 3.021,
+    "end": 3.465
+   },
+   {
+    "text": "guard,",
+    "start": 3.465,
+    "end": 3.999
+   },
+   {
+    "text": "the",
+    "start": 3.999,
+    "end": 4.265
+   },
+   {
+    "text": "first",
+    "start": 4.265,
+    "end": 4.709
+   },
+   {
+    "text": "player",
+    "start": 4.709,
+    "end": 5.243
+   },
+   {
+    "text": "in",
+    "start": 5.243,
+    "end": 5.42
+   },
+   {
+    "text": "history",
+    "start": 5.42,
+    "end": 6.042
+   },
+   {
+    "text": "to",
+    "start": 6.042,
+    "end": 6.22
+   },
+   {
+    "text": "make",
+    "start": 6.22,
+    "end": 6.575
+   },
+   {
+    "text": "4,003",
+    "start": 6.575,
+    "end": 7.019
+   },
+   {
+    "text": "pointers,",
+    "start": 7.019,
+    "end": 7.817
+   },
+   {
+    "text": "his",
+    "start": 7.817,
+    "end": 8.083
+   },
+   {
+    "text": "shot",
+    "start": 8.083,
+    "end": 8.438
+   },
+   {
+    "text": "leaves",
+    "start": 8.438,
+    "end": 8.971
+   },
+   {
+    "text": "the",
+    "start": 8.971,
+    "end": 9.237
+   },
+   {
+    "text": "hand",
+    "start": 9.237,
+    "end": 9.592
+   },
+   {
+    "text": "at",
+    "start": 9.592,
+    "end": 9.769
+   },
+   {
+    "text": "about",
+    "start": 9.769,
+    "end": 10.213
+   },
+   {
+    "text": "52",
+    "start": 10.213,
+    "end": 10.39
+   },
+   {
+    "text": "degrees.",
+    "start": 10.39,
+    "end": 11.1
+   }
+  ]
  },
  "s2-curry.part1.wav": {
-  "key": "4053ad3951a73df947c1abb2a968d62c395d8244",
-  "words": []
+  "key": "a3e33c594428e908de61123fcbaa53d41c18a580",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.165
+   },
+   {
+    "text": "often",
+    "start": 0.165,
+    "end": 0.577
+   },
+   {
+    "text": "turns",
+    "start": 0.577,
+    "end": 0.989
+   },
+   {
+    "text": "around",
+    "start": 0.989,
+    "end": 1.484
+   },
+   {
+    "text": "before",
+    "start": 1.484,
+    "end": 1.978
+   },
+   {
+    "text": "it",
+    "start": 1.978,
+    "end": 2.143
+   },
+   {
+    "text": "goes",
+    "start": 2.143,
+    "end": 2.473
+   },
+   {
+    "text": "in.",
+    "start": 2.473,
+    "end": 2.72
+   }
+  ]
  },
  "s3-wall.part0.wav": {
-  "key": "4d4f58d1dea9a4726e83ebe6cf7e8ac882abfdce",
-  "words": []
+  "key": "3b39c2aa1cd299e3a42d281bfe7d00285b02dbc6",
+  "words": [
+   {
+    "text": "On",
+    "start": 0,
+    "end": 0.167
+   },
+   {
+    "text": "defence,",
+    "start": 0.167,
+    "end": 0.833
+   },
+   {
+    "text": "the",
+    "start": 0.833,
+    "end": 1.083
+   },
+   {
+    "text": "Great",
+    "start": 1.083,
+    "end": 1.5
+   },
+   {
+    "text": "Wall",
+    "start": 1.5,
+    "end": 1.833
+   },
+   {
+    "text": "of",
+    "start": 1.833,
+    "end": 2
+   },
+   {
+    "text": "China,",
+    "start": 2,
+    "end": 2.5
+   },
+   {
+    "text": "up",
+    "start": 2.5,
+    "end": 2.667
+   },
+   {
+    "text": "to",
+    "start": 2.667,
+    "end": 2.833
+   },
+   {
+    "text": "seven",
+    "start": 2.833,
+    "end": 3.25
+   },
+   {
+    "text": "metres",
+    "start": 3.25,
+    "end": 3.75
+   },
+   {
+    "text": "tall,",
+    "start": 3.75,
+    "end": 4.167
+   },
+   {
+    "text": "four",
+    "start": 4.167,
+    "end": 4.5
+   },
+   {
+    "text": "to",
+    "start": 4.5,
+    "end": 4.667
+   },
+   {
+    "text": "five",
+    "start": 4.667,
+    "end": 5
+   },
+   {
+    "text": "metres",
+    "start": 5,
+    "end": 5.5
+   },
+   {
+    "text": "thick,",
+    "start": 5.5,
+    "end": 6
+   },
+   {
+    "text": "21,196",
+    "start": 6,
+    "end": 7.006
+   },
+   {
+    "text": "kilometres",
+    "start": 7.006,
+    "end": 8.682
+   },
+   {
+    "text": "long.",
+    "start": 8.682,
+    "end": 9.52
+   }
+  ]
  },
  "s3-wall.part1.wav": {
-  "key": "9d158dfce079ff2300b93ab77c48027c44d185ad",
-  "words": []
+  "key": "bbea440fb295d1bd5598014f92416e17ed23a661",
+  "words": [
+   {
+    "text": "It",
+    "start": 0,
+    "end": 0.186
+   },
+   {
+    "text": "has",
+    "start": 0.186,
+    "end": 0.465
+   },
+   {
+    "text": "never",
+    "start": 0.465,
+    "end": 0.931
+   },
+   {
+    "text": "conceded",
+    "start": 0.931,
+    "end": 1.675
+   },
+   {
+    "text": "a",
+    "start": 1.675,
+    "end": 1.768
+   },
+   {
+    "text": "basket.",
+    "start": 1.768,
+    "end": 2.42
+   }
+  ]
  },
  "s4-normal.part0.wav": {
-  "key": "970fb2b54d00dd09bf208f9ef683cf5ba58f4b3c",
-  "words": []
+  "key": "12fd702f855b47cd87adcf37758a86e1508efd33",
+  "words": [
+   {
+    "text": "Attempt",
+    "start": 0,
+    "end": 0.519
+   },
+   {
+    "text": "one,",
+    "start": 0.519,
+    "end": 0.815
+   },
+   {
+    "text": "the",
+    "start": 0.815,
+    "end": 1.037
+   },
+   {
+    "text": "normal",
+    "start": 1.037,
+    "end": 1.481
+   },
+   {
+    "text": "shot.",
+    "start": 1.481,
+    "end": 1.852
+   },
+   {
+    "text": "A",
+    "start": 1.852,
+    "end": 1.926
+   },
+   {
+    "text": "regular",
+    "start": 1.926,
+    "end": 2.444
+   },
+   {
+    "text": "curry",
+    "start": 2.444,
+    "end": 2.815
+   },
+   {
+    "text": "three",
+    "start": 2.815,
+    "end": 3.185
+   },
+   {
+    "text": "peaks",
+    "start": 3.185,
+    "end": 3.556
+   },
+   {
+    "text": "at",
+    "start": 3.556,
+    "end": 3.704
+   },
+   {
+    "text": "about",
+    "start": 3.704,
+    "end": 4.074
+   },
+   {
+    "text": "five",
+    "start": 4.074,
+    "end": 4.37
+   },
+   {
+    "text": "meters.",
+    "start": 4.37,
+    "end": 4.889
+   },
+   {
+    "text": "The",
+    "start": 4.889,
+    "end": 5.111
+   },
+   {
+    "text": "wall",
+    "start": 5.111,
+    "end": 5.407
+   },
+   {
+    "text": "is",
+    "start": 5.407,
+    "end": 5.556
+   },
+   {
+    "text": "seven.",
+    "start": 5.556,
+    "end": 6
+   }
+  ]
  },
  "s4-normal.part1.wav": {
-  "key": "dcdecedb7b63d53b9cfb25da7c26c50d7f69deac",
-  "words": []
+  "key": "0f359cadf915981404762f70baff6046297ea781",
+  "words": [
+   {
+    "text": "the",
+    "start": 0,
+    "end": 0.272
+   },
+   {
+    "text": "ball",
+    "start": 0.272,
+    "end": 0.635
+   },
+   {
+    "text": "is",
+    "start": 0.635,
+    "end": 0.817
+   },
+   {
+    "text": "returned",
+    "start": 0.817,
+    "end": 1.543
+   },
+   {
+    "text": "to",
+    "start": 1.543,
+    "end": 1.725
+   },
+   {
+    "text": "sender.",
+    "start": 1.725,
+    "end": 2.36
+   }
+  ]
  },
  "s4-normal.part2.wav": {
-  "key": "2bfc4c752b662011f3701a813da3df624a500328",
-  "words": []
+  "key": "d93e0150495786b3ec17e846e98ed95a275a2b8d",
+  "words": [
+   {
+    "text": "with",
+    "start": 0,
+    "end": 0.351
+   },
+   {
+    "text": "interest.",
+    "start": 0.351,
+    "end": 1.14
+   }
+  ]
  },
  "s5-moon.part0.wav": {
-  "key": "ba9cbfcc60c2aa7db3c4399ae600830ada058e85",
-  "words": []
+  "key": "bc014768c725e05018d257e7e0f4854f79a1a78f",
+  "words": [
+   {
+    "text": "Attempt",
+    "start": 0,
+    "end": 0.576
+   },
+   {
+    "text": "2,",
+    "start": 0.576,
+    "end": 0.741
+   },
+   {
+    "text": "the",
+    "start": 0.741,
+    "end": 0.987
+   },
+   {
+    "text": "Moon",
+    "start": 0.987,
+    "end": 1.317
+   },
+   {
+    "text": "Ball.",
+    "start": 1.317,
+    "end": 1.728
+   },
+   {
+    "text": "To",
+    "start": 1.728,
+    "end": 1.893
+   },
+   {
+    "text": "clear",
+    "start": 1.893,
+    "end": 2.304
+   },
+   {
+    "text": "the",
+    "start": 2.304,
+    "end": 2.551
+   },
+   {
+    "text": "wall,",
+    "start": 2.551,
+    "end": 2.962
+   },
+   {
+    "text": "the",
+    "start": 2.962,
+    "end": 3.209
+   },
+   {
+    "text": "ball",
+    "start": 3.209,
+    "end": 3.538
+   },
+   {
+    "text": "must",
+    "start": 3.538,
+    "end": 3.867
+   },
+   {
+    "text": "leave",
+    "start": 3.867,
+    "end": 4.279
+   },
+   {
+    "text": "his",
+    "start": 4.279,
+    "end": 4.526
+   },
+   {
+    "text": "hand",
+    "start": 4.526,
+    "end": 4.855
+   },
+   {
+    "text": "at",
+    "start": 4.855,
+    "end": 5.019
+   },
+   {
+    "text": "77",
+    "start": 5.019,
+    "end": 5.184
+   },
+   {
+    "text": "degrees",
+    "start": 5.184,
+    "end": 5.76
+   },
+   {
+    "text": "climbing",
+    "start": 5.76,
+    "end": 6.44
+   },
+   {
+    "text": "over",
+    "start": 6.44,
+    "end": 6.78
+   },
+   {
+    "text": "10",
+    "start": 6.78,
+    "end": 6.95
+   },
+   {
+    "text": "meters",
+    "start": 6.95,
+    "end": 7.46
+   },
+   {
+    "text": "high.",
+    "start": 7.46,
+    "end": 7.885
+   },
+   {
+    "text": "Launch",
+    "start": 7.885,
+    "end": 8.395
+   },
+   {
+    "text": "speed",
+    "start": 8.395,
+    "end": 8.82
+   },
+   {
+    "text": "46",
+    "start": 8.82,
+    "end": 8.99
+   },
+   {
+    "text": "kilometers",
+    "start": 8.99,
+    "end": 9.84
+   },
+   {
+    "text": "per",
+    "start": 9.84,
+    "end": 10.095
+   },
+   {
+    "text": "hour.",
+    "start": 10.095,
+    "end": 10.52
+   }
+  ]
  },
  "s5-moon.part1.wav": {
-  "key": "33485a4f0b1212ad5094b6afd675a27b382f7a33",
-  "words": []
+  "key": "51b862ad3c3b6800a4aeead72fb5af78c0582010",
+  "words": [
+   {
+    "text": "Faster",
+    "start": 0,
+    "end": 0.569
+   },
+   {
+    "text": "than",
+    "start": 0.569,
+    "end": 0.948
+   },
+   {
+    "text": "Usain",
+    "start": 0.948,
+    "end": 1.422
+   },
+   {
+    "text": "Bolt.",
+    "start": 1.422,
+    "end": 1.896
+   },
+   {
+    "text": "Hang",
+    "start": 1.896,
+    "end": 2.276
+   },
+   {
+    "text": "time",
+    "start": 2.276,
+    "end": 2.655
+   },
+   {
+    "text": "2.5",
+    "start": 2.655,
+    "end": 2.939
+   },
+   {
+    "text": "seconds.",
+    "start": 2.939,
+    "end": 3.698
+   },
+   {
+    "text": "Double",
+    "start": 3.698,
+    "end": 4.267
+   },
+   {
+    "text": "a",
+    "start": 4.267,
+    "end": 4.361
+   },
+   {
+    "text": "normal",
+    "start": 4.361,
+    "end": 4.93
+   },
+   {
+    "text": "3.",
+    "start": 4.93,
+    "end": 5.12
+   }
+  ]
  },
  "s6-blind.part0.wav": {
-  "key": "e8bea67ce185c9ec50550ec0e55334bd5694e6d3",
-  "words": []
+  "key": "376d7d56ac876997330266b49f7e0bbe7f9d5fc7",
+  "words": [
+   {
+    "text": "Attempt",
+    "start": 0,
+    "end": 0.571
+   },
+   {
+    "text": "three,",
+    "start": 0.571,
+    "end": 1.06
+   },
+   {
+    "text": "the",
+    "start": 1.06,
+    "end": 1.305
+   },
+   {
+    "text": "blind",
+    "start": 1.305,
+    "end": 1.712
+   },
+   {
+    "text": "shot.",
+    "start": 1.712,
+    "end": 2.12
+   },
+   {
+    "text": "Curry",
+    "start": 2.12,
+    "end": 2.493
+   },
+   {
+    "text": "can",
+    "start": 2.493,
+    "end": 2.716
+   },
+   {
+    "text": "no",
+    "start": 2.716,
+    "end": 2.865
+   },
+   {
+    "text": "longer",
+    "start": 2.865,
+    "end": 3.313
+   },
+   {
+    "text": "see",
+    "start": 3.313,
+    "end": 3.536
+   },
+   {
+    "text": "the",
+    "start": 3.536,
+    "end": 3.76
+   },
+   {
+    "text": "rim,",
+    "start": 3.76,
+    "end": 4.058
+   },
+   {
+    "text": "one",
+    "start": 4.058,
+    "end": 4.282
+   },
+   {
+    "text": "degree",
+    "start": 4.282,
+    "end": 4.729
+   },
+   {
+    "text": "too",
+    "start": 4.729,
+    "end": 4.953
+   },
+   {
+    "text": "steep,",
+    "start": 4.953,
+    "end": 5.4
+   },
+   {
+    "text": "and",
+    "start": 5.4,
+    "end": 5.62
+   },
+   {
+    "text": "he",
+    "start": 5.62,
+    "end": 5.767
+   },
+   {
+    "text": "misses",
+    "start": 5.767,
+    "end": 6.207
+   },
+   {
+    "text": "by",
+    "start": 6.207,
+    "end": 6.353
+   },
+   {
+    "text": "half",
+    "start": 6.353,
+    "end": 6.647
+   },
+   {
+    "text": "a",
+    "start": 6.647,
+    "end": 6.72
+   },
+   {
+    "text": "meter.",
+    "start": 6.72,
+    "end": 7.16
+   },
+   {
+    "text": "His",
+    "start": 7.16,
+    "end": 7.486
+   },
+   {
+    "text": "margin",
+    "start": 7.486,
+    "end": 8.137
+   },
+   {
+    "text": "of",
+    "start": 8.137,
+    "end": 8.354
+   },
+   {
+    "text": "error,",
+    "start": 8.354,
+    "end": 9.006
+   },
+   {
+    "text": "0.2",
+    "start": 9.006,
+    "end": 9.331
+   },
+   {
+    "text": "degrees.",
+    "start": 9.331,
+    "end": 10.2
+   }
+  ]
  },
  "s6-blind.part1.wav": {
-  "key": "49e5b5ff0f6c5d5f54493a3c2c38c569539ad013",
-  "words": []
+  "key": "6a0e50c428c6df3c92765145475854ee9a9a19e8",
+  "words": [
+   {
+    "text": "Every",
+    "start": 0,
+    "end": 0.421
+   },
+   {
+    "text": "mist",
+    "start": 0.421,
+    "end": 0.757
+   },
+   {
+    "text": "lands",
+    "start": 0.757,
+    "end": 1.178
+   },
+   {
+    "text": "in",
+    "start": 1.178,
+    "end": 1.346
+   },
+   {
+    "text": "China,",
+    "start": 1.346,
+    "end": 1.851
+   },
+   {
+    "text": "walking",
+    "start": 1.851,
+    "end": 2.44
+   },
+   {
+    "text": "around",
+    "start": 2.44,
+    "end": 2.945
+   },
+   {
+    "text": "the",
+    "start": 2.945,
+    "end": 3.197
+   },
+   {
+    "text": "wall",
+    "start": 3.197,
+    "end": 3.534
+   },
+   {
+    "text": "to",
+    "start": 3.534,
+    "end": 3.702
+   },
+   {
+    "text": "fetch",
+    "start": 3.702,
+    "end": 4.123
+   },
+   {
+    "text": "it",
+    "start": 4.123,
+    "end": 4.291
+   },
+   {
+    "text": "88",
+    "start": 4.291,
+    "end": 4.459
+   },
+   {
+    "text": "days.",
+    "start": 4.459,
+    "end": 4.88
+   }
+  ]
  },
  "s7-verdict.part0.wav": {
-  "key": "7e2d762350fabc57610643c5214d78110119c25b",
-  "words": []
+  "key": "03b957e02a9ecf66b16a507082ee49282354f765",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.195
+   },
+   {
+    "text": "verdict,",
+    "start": 0.195,
+    "end": 0.714
+   },
+   {
+    "text": "could",
+    "start": 0.714,
+    "end": 1.038
+   },
+   {
+    "text": "Steph",
+    "start": 1.038,
+    "end": 1.363
+   },
+   {
+    "text": "Curry",
+    "start": 1.363,
+    "end": 1.688
+   },
+   {
+    "text": "make",
+    "start": 1.688,
+    "end": 1.947
+   },
+   {
+    "text": "a",
+    "start": 1.947,
+    "end": 2.012
+   },
+   {
+    "text": "three",
+    "start": 2.012,
+    "end": 2.337
+   },
+   {
+    "text": "over",
+    "start": 2.337,
+    "end": 2.596
+   },
+   {
+    "text": "the",
+    "start": 2.596,
+    "end": 2.791
+   },
+   {
+    "text": "Great",
+    "start": 2.791,
+    "end": 3.115
+   },
+   {
+    "text": "Wall?",
+    "start": 3.115,
+    "end": 3.44
+   }
+  ]
  },
  "s7-verdict.part1.wav": {
-  "key": "19e969bfc796d21463b410eab7466019d459de6a",
-  "words": []
+  "key": "6555d94d659a8d2f9c7d3de6625032d1f3a7f74c",
+  "words": [
+   {
+    "text": "Technically",
+    "start": 0,
+    "end": 2
+   }
+  ]
  },
  "s7-verdict.part2.wav": {
-  "key": "76a06c2a8217924d468373b3aa85405497fa1b76",
-  "words": []
+  "key": "cc272d2785015a0b3bb54c33a4a0d336d6cd0339",
+  "words": [
+   {
+    "text": "Yes,",
+    "start": 0,
+    "end": 0.316
+   },
+   {
+    "text": "estimated",
+    "start": 0.316,
+    "end": 1.026
+   },
+   {
+    "text": "chance",
+    "start": 1.026,
+    "end": 1.5
+   },
+   {
+    "text": "per",
+    "start": 1.5,
+    "end": 1.737
+   },
+   {
+    "text": "shot,",
+    "start": 1.737,
+    "end": 2.132
+   },
+   {
+    "text": "two",
+    "start": 2.132,
+    "end": 2.368
+   },
+   {
+    "text": "percent.",
+    "start": 2.368,
+    "end": 3
+   }
+  ]
  },
  "s7-verdict.part3.wav": {
-  "key": "6916386d10e762680f3f97ccb1ea09ec105782ab",
-  "words": []
+  "key": "2e037c7e813d8c5ab23d771dc85f34dbd12bad4a",
+  "words": [
+   {
+    "text": "chance",
+    "start": 0,
+    "end": 0.455
+   },
+   {
+    "text": "he",
+    "start": 0.455,
+    "end": 0.606
+   },
+   {
+    "text": "turns",
+    "start": 0.606,
+    "end": 0.985
+   },
+   {
+    "text": "around",
+    "start": 0.985,
+    "end": 1.439
+   },
+   {
+    "text": "before",
+    "start": 1.439,
+    "end": 1.894
+   },
+   {
+    "text": "it",
+    "start": 1.894,
+    "end": 2.045
+   },
+   {
+    "text": "lands.",
+    "start": 2.045,
+    "end": 2.5
+   }
+  ]
  },
  "s7-verdict.part4.wav": {
-  "key": "c040590bd1535f7302bdf43b86b1b89b423e2edd",
-  "words": []
+  "key": "08ad2ffbf41e5341f9262659e6b9208acb086690",
+  "words": [
+   {
+    "text": "100.",
+    "start": 0,
+    "end": 1
+   }
+  ]
  },
  "s8-outro.part0.wav": {
-  "key": "25fdcd8041bd3b08c99ff0d3477f5b70d01dba85",
-  "words": []
+  "key": "6c279d40f446e1f68aba6b2496ea3022dba19e68",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.339
+   },
+   {
+    "text": "you",
+    "start": 0.339,
+    "end": 0.542
+   },
+   {
+    "text": "imagine",
+    "start": 0.542,
+    "end": 1.016
+   },
+   {
+    "text": "another",
+    "start": 1.016,
+    "end": 1.491
+   },
+   {
+    "text": "scenario",
+    "start": 1.491,
+    "end": 2.033
+   },
+   {
+    "text": "that",
+    "start": 2.033,
+    "end": 2.304
+   },
+   {
+    "text": "we",
+    "start": 2.304,
+    "end": 2.439
+   },
+   {
+    "text": "should",
+    "start": 2.439,
+    "end": 2.846
+   },
+   {
+    "text": "do",
+    "start": 2.846,
+    "end": 2.981
+   },
+   {
+    "text": "next?",
+    "start": 2.981,
+    "end": 3.32
+   },
+   {
+    "text": "Write",
+    "start": 3.32,
+    "end": 3.715
+   },
+   {
+    "text": "it",
+    "start": 3.715,
+    "end": 3.873
+   },
+   {
+    "text": "in",
+    "start": 3.873,
+    "end": 4.031
+   },
+   {
+    "text": "the",
+    "start": 4.031,
+    "end": 4.269
+   },
+   {
+    "text": "comments.",
+    "start": 4.269,
+    "end": 4.98
+   }
+  ]
  }
 }

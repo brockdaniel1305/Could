@@ -146,8 +146,8 @@
   <script>
     (function () {
       const S = "#s2-curry-";
-      const D = 15.357;
-      const C = {"name": 0.951, "h": 1.923, "rec": 3.811, "arc": 8.216, "walk": 12.219};
+      const D = 14.729;
+      const C = {"name": 0.95, "h": 2.105, "rec": 4.149, "arc": 7.967, "walk": 11.699};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s2-curry-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

@@ -143,8 +143,8 @@
   <script>
     (function () {
       const S = "#s2-bolt-";
-      const D = 13.331;
-      const C = {"name": 1.462, "h": 2.542, "wr": 5.551, "gold": 8.02, "pose": 10.811};
+      const D = 12.8;
+      const C = {"name": 1.043, "h": 2.16, "wr": 5.397, "gold": 8.077, "pose": 10.35};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s2-bolt-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
@@ -197,7 +197,7 @@
         for (let i = 1; i < k.length; i++) if (x <= k[i][0]) return k[i - 1][1] + (k[i][1] - k[i - 1][1]) * (x - k[i - 1][0]) / (k[i][0] - k[i - 1][0]);
         return k[k.length - 1][1];
       };
-      const KEYS = [[0, 0], [13.331, 0]], CAMS = [[0, 5.5]];
+      const KEYS = [[0, 0], [12.8, 0]], CAMS = [[0, 5.5]];
       const target = (mode, b, r) => typeof mode === "number" ? mode : mode === "bolt" ? b + 1.5 : mode === "rex" ? r - 5 : (b + r - 5) / 2;
       const ss = (x) => x * x * (3 - 2 * x);
       const camAt = (lt, b, r) => {
