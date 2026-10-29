@@ -13,27 +13,10 @@
       "text": "Could Kylian Mbappé dictate the French Revolution? {{back}}We went back to {1789|seventeen eighty nine}. ||0.2|| {{sci}}Scientifically.",
       "sfx": [
         {
-          "name": "roar",
-          "at": 0,
-          "volume": 0.16
-        },
-        {
-          "name": "whoosh-cinematic",
-          "cue": "back",
-          "offset": -0.6,
-          "volume": 0.3
-        },
-        {
           "name": "stomp",
           "cue": "back",
           "offset": 1.2,
           "volume": 0.45
-        },
-        {
-          "name": "swoosh",
-          "cue": "sci",
-          "offset": -0.1,
-          "volume": 0.3
         }
       ]
     },
@@ -42,45 +25,10 @@
       "text": "Paris, {1789|seventeen eighty nine}. {{pop}}Twenty eight million French people. {{bread}}Bread costs eighty eight percent of a worker's wage. ||0.3|| {{job}}The job of leader: vacant.",
       "sfx": [
         {
-          "name": "roar",
-          "at": 0.2,
-          "volume": 0.2
-        },
-        {
-          "name": "drumroll",
-          "cue": "pop",
-          "offset": -0.6,
-          "volume": 0.18
-        },
-        {
           "name": "clang",
           "cue": "bread",
           "offset": 0.6,
           "volume": 0.18
-        },
-        {
-          "name": "tick",
-          "cue": "bread",
-          "offset": 1.0,
-          "volume": 0.3
-        },
-        {
-          "name": "tick",
-          "cue": "bread",
-          "offset": 1.3,
-          "volume": 0.3
-        },
-        {
-          "name": "ping",
-          "cue": "bread",
-          "offset": 2.0,
-          "volume": 0.22
-        },
-        {
-          "name": "swoosh",
-          "cue": "job",
-          "offset": 0.2,
-          "volume": 0.3
         },
         {
           "name": "stomp",
@@ -95,33 +43,10 @@
       "text": "The candidate: {{name}}Kylian Mbappé. {{wc}}World champion at nineteen. {{spd}}Top speed: about thirty eight kilometres per hour. {{cel}}His celebration: arms crossed. ||0.3|| {{dec}}Like a man who has already decided.",
       "sfx": [
         {
-          "name": "roar",
-          "cue": "name",
-          "offset": -0.2,
-          "volume": 0.25
-        },
-        {
-          "name": "sparkle",
-          "cue": "wc",
-          "volume": 0.25
-        },
-        {
           "name": "whoosh",
           "cue": "spd",
           "offset": 0.5,
           "volume": 0.4
-        },
-        {
-          "name": "whoosh",
-          "cue": "spd",
-          "offset": 1.3,
-          "volume": 0.4
-        },
-        {
-          "name": "swoosh",
-          "cue": "cel",
-          "offset": 0.3,
-          "volume": 0.3
         }
       ]
     },
@@ -130,49 +55,9 @@
       "text": "Plan A: {{t}}storm the Bastille. {{crowd}}The crowd needed most of the day. {{mb}}Mbappé needs about a minute. ||0.3|| {{pris}}He finds seven prisoners. ||0.3|| {{fans}}Seven new fans.",
       "sfx": [
         {
-          "name": "whoosh-short",
-          "at": 0.411,
-          "volume": 0.3
-        },
-        {
-          "name": "roar",
-          "at": 1.682,
-          "volume": 0.18
-        },
-        {
-          "name": "stomp",
-          "at": 1.882,
-          "volume": 0.12
-        },
-        {
-          "name": "stomp",
-          "at": 2.282,
-          "volume": 0.12
-        },
-        {
-          "name": "stomp",
-          "at": 2.682,
-          "volume": 0.12
-        },
-        {
-          "name": "stomp",
-          "at": 3.082,
-          "volume": 0.12
-        },
-        {
-          "name": "stomp",
-          "at": 3.482,
-          "volume": 0.12
-        },
-        {
           "name": "whoosh",
           "at": 3.93,
           "volume": 0.45
-        },
-        {
-          "name": "swoosh",
-          "at": 4.33,
-          "volume": 0.3
         },
         {
           "name": "clang",
@@ -180,39 +65,14 @@
           "volume": 0.3
         },
         {
-          "name": "stomp",
-          "at": 4.28,
-          "volume": 0.5
-        },
-        {
           "name": "creak",
           "at": 5.843,
           "volume": 0.4
         },
         {
-          "name": "sparkle",
-          "at": 6.143,
-          "volume": 0.2
-        },
-        {
-          "name": "gulp",
-          "at": 6.643,
-          "volume": 0.25
-        },
-        {
-          "name": "roar",
-          "at": 7.993,
-          "volume": 0.35
-        },
-        {
-          "name": "boing",
-          "at": 8.143,
-          "volume": 0.25
-        },
-        {
-          "name": "boing",
-          "at": 8.543,
-          "volume": 0.2
+          "name": "stomp",
+          "at": 4.28,
+          "volume": 0.5
         }
       ]
     },
@@ -221,124 +81,14 @@
       "text": "Plan B: {{t}}take power. {{law}}New law: every citizen celebrates with arms crossed. {{cal}}The Revolution really did invent a ten day week. ||0.3|| {{add}}Mbappé adds an eleventh. ||0.2|| {{rest}}Rest day.",
       "sfx": [
         {
-          "name": "whoosh-short",
-          "at": 0.608,
-          "volume": 0.3
-        },
-        {
-          "name": "ding",
-          "at": 1.108,
-          "volume": 0.25
-        },
-        {
-          "name": "swoosh",
-          "at": 1.008,
-          "volume": 0.25
-        },
-        {
           "name": "fanfare",
           "at": 1.308,
-          "volume": 0.3
-        },
-        {
-          "name": "swoosh",
-          "at": 1.539,
-          "volume": 0.25
-        },
-        {
-          "name": "swoosh",
-          "at": 2.239,
-          "volume": 0.2
-        },
-        {
-          "name": "roar",
-          "at": 2.639,
-          "volume": 0.3
-        },
-        {
-          "name": "tick",
-          "at": 2.639,
-          "volume": 0.25
-        },
-        {
-          "name": "tick",
-          "at": 3.089,
-          "volume": 0.25
-        },
-        {
-          "name": "tick",
-          "at": 3.539,
-          "volume": 0.25
-        },
-        {
-          "name": "swoosh",
-          "at": 4.95,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 5.51,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 5.67,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 5.83,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 5.99,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 6.15,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 6.31,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 6.47,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 6.63,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 6.79,
-          "volume": 0.3
-        },
-        {
-          "name": "page",
-          "at": 6.95,
           "volume": 0.3
         },
         {
           "name": "whoosh",
           "at": 8.2,
           "volume": 0.35
-        },
-        {
-          "name": "boing",
-          "at": 8.5,
-          "volume": 0.25
-        },
-        {
-          "name": "roar",
-          "at": 10.63,
-          "volume": 0.25
         }
       ]
     },
@@ -352,34 +102,9 @@
           "volume": 0.45
         },
         {
-          "name": "boing",
-          "at": 1.66,
-          "volume": 0.2
-        },
-        {
           "name": "fanfare",
           "at": 1.71,
           "volume": 0.22
-        },
-        {
-          "name": "swoosh",
-          "at": 1.01,
-          "volume": 0.25
-        },
-        {
-          "name": "swoosh",
-          "at": 2.28,
-          "volume": 0.25
-        },
-        {
-          "name": "gallop",
-          "at": 3.576,
-          "volume": 0.45
-        },
-        {
-          "name": "gallop",
-          "at": 5.876,
-          "volume": 0.35
         },
         {
           "name": "whoosh",
@@ -387,29 +112,14 @@
           "volume": 0.3
         },
         {
-          "name": "swoosh",
-          "at": 3.676,
-          "volume": 0.2
-        },
-        {
-          "name": "swoosh",
-          "at": 4.076,
-          "volume": 0.2
-        },
-        {
-          "name": "whoosh",
-          "at": 5.118,
-          "volume": 0.4
-        },
-        {
-          "name": "ding",
-          "at": 5.368,
-          "volume": 0.3
-        },
-        {
           "name": "rumble",
           "at": 6.476,
           "volume": 0.3
+        },
+        {
+          "name": "gallop",
+          "at": 3.576,
+          "volume": 0.45
         }
       ]
     },
@@ -419,69 +129,14 @@
       "tail": 1.4,
       "sfx": [
         {
-          "name": "swoosh",
-          "at": 0.3,
-          "volume": 0.25
-        },
-        {
-          "name": "swoosh",
-          "at": 0.7,
-          "volume": 0.3
-        },
-        {
           "name": "whoosh",
           "at": 3.09,
           "volume": 0.3
         },
         {
-          "name": "page",
-          "at": 3.59,
-          "volume": 0.35
-        },
-        {
-          "name": "page",
-          "at": 3.99,
-          "volume": 0.35
-        },
-        {
-          "name": "page",
-          "at": 4.39,
-          "volume": 0.35
-        },
-        {
-          "name": "page",
-          "at": 4.79,
-          "volume": 0.35
-        },
-        {
-          "name": "page",
-          "at": 5.19,
-          "volume": 0.35
-        },
-        {
-          "name": "page",
-          "at": 5.59,
-          "volume": 0.35
-        },
-        {
-          "name": "whoosh-cinematic",
-          "at": 4.242,
-          "volume": 0.25
-        },
-        {
-          "name": "roar",
-          "at": 5.142,
-          "volume": 0.35
-        },
-        {
           "name": "whistle",
           "at": 5.97,
           "volume": 0.25
-        },
-        {
-          "name": "boing",
-          "at": 6.62,
-          "volume": 0.2
         },
         {
           "name": "kick",
@@ -494,23 +149,8 @@
           "volume": 0.45
         },
         {
-          "name": "roar",
-          "at": 8.85,
-          "volume": 0.4
-        },
-        {
           "name": "impact-bass-1",
           "at": 8.75,
-          "volume": 0.3
-        },
-        {
-          "name": "swoosh",
-          "at": 9.05,
-          "volume": 0.25
-        },
-        {
-          "name": "ding",
-          "at": 9.75,
           "volume": 0.3
         }
       ]
@@ -518,18 +158,7 @@
     {
       "id": "s8-outro",
       "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 0.05,
-          "volume": 0.3
-        },
-        {
-          "name": "pop",
-          "cue": "c",
-          "volume": 0.3
-        }
-      ]
+      "sfx": []
     }
   ]
 }

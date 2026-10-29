@@ -11,110 +11,17 @@
     {
       "id": "s1-hook",
       "text": "Could Steph Curry make a three pointer over the Great Wall of China? {{ev}}We looked at the evidence. ||0.25|| {{sci}}Scientifically. ||0.3|| {{long}}With a protractor.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 3.85,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 5.294,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 6.794,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "wind",
-          "at": 0,
-          "volume": 0.14,
-          "auto": true
-        },
-        {
-          "name": "whoosh",
-          "at": 0.0,
-          "volume": 0.3,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s2-curry",
       "text": "On offence: {{name}}Stephen Curry. {{h}}{1.88|One point eight eight} metres of point guard. {{rec}}The first player in history to make four thousand three pointers. {{arc}}His shot leaves the hand at about fifty two degrees. ||0.4|| {{walk}}He often turns around before it goes in.",
-      "sfx": [
-        {
-          "name": "pop",
-          "cue": "rec",
-          "offset": 0.6,
-          "volume": 0.4
-        },
-        {
-          "name": "swoosh",
-          "at": 0.83,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 1.985,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 7.847,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 11.579,
-          "volume": 0.2,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s3-wall",
       "text": "On defence: {{name}}The Great Wall of China. {{h}}Up to seven metres tall. {{w}}Four to five metres thick. {{len}}{21,196|twenty one thousand, one hundred and ninety six} kilometres long. ||0.4|| {{def}}It has never conceded a basket.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 0.863,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 2.53,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 4.197,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 6.03,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 10.03,
-          "volume": 0.2,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s4-normal",
@@ -125,30 +32,6 @@
           "cue": "bonk",
           "offset": -0.09,
           "volume": 0.25
-        },
-        {
-          "name": "pop",
-          "cue": "int",
-          "offset": -0.45,
-          "volume": 0.45
-        },
-        {
-          "name": "swoosh",
-          "at": 0.845,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 1.882,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 4.919,
-          "volume": 0.2,
-          "auto": true
         }
       ]
     },
@@ -161,80 +44,13 @@
           "cue": "ang",
           "offset": 0.4,
           "volume": 0.35
-        },
-        {
-          "name": "swoosh",
-          "at": 0.771,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 5.79,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 7.915,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 10.91,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 12.806,
-          "volume": 0.2,
-          "auto": true
         }
       ]
     },
     {
       "id": "s6-blind",
       "text": "Attempt three. {{t}}The blind shot. {{see}}Curry can no longer see the rim. {{err}}One degree too steep, and he misses by half a metre. {{tol}}His margin of error: {0.2|zero point two} degrees. ||0.4|| {{miss}}Every miss lands in China. {{walk}}Walking around the wall to fetch it: eighty eight days.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 1.09,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 2.15,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 4.088,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 7.19,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 10.534,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 12.385,
-          "volume": 0.2,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s7-verdict",
@@ -246,62 +62,13 @@
           "cue": "yes",
           "offset": 0.14,
           "volume": 0.4
-        },
-        {
-          "name": "ping",
-          "cue": "p3",
-          "offset": -0.2,
-          "volume": 0.45
-        },
-        {
-          "name": "swoosh",
-          "at": 0.744,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 5.847,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 6.163,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 9.057,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "drumroll",
-          "at": 1.95,
-          "volume": 0.2,
-          "auto": true
         }
       ]
     },
     {
       "id": "s8-outro",
       "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 3.35,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "pop",
-          "cue": "c",
-          "volume": 0.3,
-          "auto": true
-        }
-      ]
+      "sfx": []
     }
   ]
 }

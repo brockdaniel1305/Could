@@ -126,38 +126,7 @@
      "end": 7.994
     }
    ],
-   "sfx": [
-    {
-     "name": "swoosh",
-     "at": 3.85,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 5.294,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 6.794,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "wind",
-     "at": 0,
-     "volume": 0.14,
-     "auto": true
-    },
-    {
-     "name": "whoosh",
-     "at": 0.0,
-     "volume": 0.3,
-     "auto": true
-    }
-   ]
+   "sfx": []
   },
   {
    "id": "s2-curry",
@@ -365,38 +334,7 @@
      "end": 14.419
     }
    ],
-   "sfx": [
-    {
-     "name": "pop",
-     "cue": "rec",
-     "offset": 0.6,
-     "volume": 0.4
-    },
-    {
-     "name": "swoosh",
-     "at": 0.83,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 1.985,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 7.847,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 11.579,
-     "volume": 0.2,
-     "auto": true
-    }
-   ]
+   "sfx": []
   },
   {
    "id": "s3-wall",
@@ -544,38 +482,7 @@
      "end": 12.57
     }
    ],
-   "sfx": [
-    {
-     "name": "swoosh",
-     "at": 0.863,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 2.53,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 4.197,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 6.03,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 10.03,
-     "volume": 0.2,
-     "auto": true
-    }
-   ]
+   "sfx": []
   },
   {
    "id": "s4-normal",
@@ -729,30 +636,6 @@
      "cue": "bonk",
      "offset": -0.09,
      "volume": 0.25
-    },
-    {
-     "name": "pop",
-     "cue": "int",
-     "offset": -0.45,
-     "volume": 0.45
-    },
-    {
-     "name": "swoosh",
-     "at": 0.845,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 1.882,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 4.919,
-     "volume": 0.2,
-     "auto": true
     }
    ]
   },
@@ -1004,36 +887,6 @@
      "cue": "ang",
      "offset": 0.4,
      "volume": 0.35
-    },
-    {
-     "name": "swoosh",
-     "at": 0.771,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 5.79,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 7.915,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 10.91,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 12.806,
-     "volume": 0.2,
-     "auto": true
     }
    ]
   },
@@ -1274,44 +1127,7 @@
      "end": 15.534
     }
    ],
-   "sfx": [
-    {
-     "name": "swoosh",
-     "at": 1.09,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 2.15,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 4.088,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 7.19,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 10.534,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 12.385,
-     "volume": 0.2,
-     "auto": true
-    }
-   ]
+   "sfx": []
   },
   {
    "id": "s7-verdict",
@@ -1481,42 +1297,6 @@
      "cue": "yes",
      "offset": 0.14,
      "volume": 0.4
-    },
-    {
-     "name": "ping",
-     "cue": "p3",
-     "offset": -0.2,
-     "volume": 0.45
-    },
-    {
-     "name": "swoosh",
-     "at": 0.744,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 5.847,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 6.163,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "swoosh",
-     "at": 9.057,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "drumroll",
-     "at": 1.95,
-     "volume": 0.2,
-     "auto": true
     }
    ]
   },
@@ -1607,20 +1387,7 @@
      "end": 5.13
     }
    ],
-   "sfx": [
-    {
-     "name": "swoosh",
-     "at": 3.35,
-     "volume": 0.2,
-     "auto": true
-    },
-    {
-     "name": "pop",
-     "cue": "c",
-     "volume": 0.3,
-     "auto": true
-    }
-   ]
+   "sfx": []
   }
  ]
 }

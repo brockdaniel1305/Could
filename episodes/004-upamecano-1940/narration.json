@@ -11,164 +11,22 @@
     {
       "id": "s1-hook",
       "text": "Could Dayot Upamecano have stopped Hitler from conquering France? {{ev}}We looked at the evidence. {{sci}}Scientifically. ||0.2|| {{long}}Mostly the highlights.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 3.83,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 5.233,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 6.44,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "wind",
-          "at": 0,
-          "volume": 0.14,
-          "auto": true
-        },
-        {
-          "name": "whoosh",
-          "at": 0.0,
-          "volume": 0.3,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s2-upa",
       "text": "In defence: {{name}}Dayot Upamecano. {{best}}One of the best centre backs in the world right now. {{really}}Genuinely. {{h}}{1.86|One point eight six} metres of French international. {{calm}}Famous for his calm, completely error free defending. ||0.4|| {{wink}}Mostly.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 0.742,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 1.809,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 4.869,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 5.51,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 8.135,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 12.46,
-          "volume": 0.2,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s3-army",
       "text": "In attack: {{name}}the German army, May {1940|nineteen forty}. {{men}}Around three million soldiers. {{tanks}}Roughly two and a half thousand tanks. {{mag}}France had built the Maginot Line. {{around}}So the Germans simply went around it. {{ard}}Through the Ardennes.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 0.91,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 3.061,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 5.31,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 7.07,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 8.974,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 10.943,
-          "volume": 0.2,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s4-space",
       "text": "Phase one. {{t}}Space defending. {{space}}The Ardennes is a lot of space. {{loves}}Upamecano loves space. {{line}}He holds a perfect high line {{shift}}and shifts across the entire forest. {{none}}Not one tank gets through the half space.",
-      "sfx": [
-        {
-          "name": "whoosh-short",
-          "cue": "shift",
-          "offset": 0.2,
-          "volume": 0.35
-        },
-        {
-          "name": "swoosh",
-          "at": 0.721,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 1.872,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 3.79,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 5.336,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 9.51,
-          "volume": 0.2,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s5-tackle",
@@ -179,68 +37,13 @@
           "cue": "clean",
           "offset": -0.35,
           "volume": 0.3
-        },
-        {
-          "name": "pop",
-          "cue": "card",
-          "offset": 0.35,
-          "volume": 0.45
-        },
-        {
-          "name": "swoosh",
-          "at": 0.8,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 1.656,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 4.015,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 6.35,
-          "volume": 0.2,
-          "auto": true
         }
       ]
     },
     {
       "id": "s6-offside",
       "text": "Phase three. {{t}}The offside trap. {{step}}On his signal, the French defence steps up as one. {{off}}Three million soldiers. All offside. {{var}}The video review takes six weeks.",
-      "sfx": [
-        {
-          "name": "ping",
-          "cue": "off",
-          "offset": 0.3,
-          "volume": 0.45
-        },
-        {
-          "name": "swoosh",
-          "at": 0.842,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 1.95,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 7.41,
-          "volume": 0.2,
-          "auto": true
-        }
-      ]
+      "sfx": []
     },
     {
       "id": "s7-verdict",
@@ -258,68 +61,13 @@
           "cue": "oops",
           "offset": 0.2,
           "volume": 0.3
-        },
-        {
-          "name": "swoosh",
-          "at": 0.767,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 5.43,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 6.756,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 13.86,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 15.96,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "swoosh",
-          "at": 19.147,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "drumroll",
-          "at": 1.95,
-          "volume": 0.2,
-          "auto": true
         }
       ]
     },
     {
       "id": "s8-outro",
       "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments.",
-      "sfx": [
-        {
-          "name": "swoosh",
-          "at": 3.35,
-          "volume": 0.2,
-          "auto": true
-        },
-        {
-          "name": "pop",
-          "cue": "c",
-          "volume": 0.3,
-          "auto": true
-        }
-      ]
+      "sfx": []
     }
   ]
 }

@@ -93,30 +93,8 @@
    ],
    "sfx": [
     {
-     "name": "wind",
-     "at": 0,
-     "volume": 0.18
-    },
-    {
      "name": "stomp",
      "at": 0.6,
-     "volume": 0.3
-    },
-    {
-     "name": "stomp",
-     "at": 1.1,
-     "volume": 0.3
-    },
-    {
-     "name": "swoosh",
-     "cue": "acc",
-     "offset": -0.1,
-     "volume": 0.3
-    },
-    {
-     "name": "swoosh",
-     "cue": "grass",
-     "offset": -0.1,
      "volume": 0.3
     }
    ]
@@ -358,24 +336,6 @@
    ],
    "sfx": [
     {
-     "name": "roar",
-     "cue": "name",
-     "offset": -0.2,
-     "volume": 0.2
-    },
-    {
-     "name": "swoosh",
-     "cue": "area",
-     "offset": -0.1,
-     "volume": 0.3
-    },
-    {
-     "name": "drumroll",
-     "cue": "army",
-     "offset": -0.3,
-     "volume": 0.22
-    },
-    {
      "name": "stomp",
      "cue": "sh",
      "volume": 0.5
@@ -386,27 +346,10 @@
      "volume": 0.25
     },
     {
-     "name": "stomp",
-     "cue": "sw",
-     "volume": 0.5
-    },
-    {
-     "name": "swoosh",
-     "cue": "conq",
-     "offset": -0.1,
-     "volume": 0.3
-    },
-    {
      "name": "kick",
      "cue": "ball",
      "offset": 0.9,
      "volume": 0.3
-    },
-    {
-     "name": "boing",
-     "cue": "ball",
-     "offset": 2.0,
-     "volume": 0.25
     }
    ]
   },
@@ -627,75 +570,10 @@
    ],
    "sfx": [
     {
-     "name": "roar",
-     "cue": "name",
-     "offset": -0.2,
-     "volume": 0.25
-    },
-    {
-     "name": "swoosh",
-     "cue": "h",
-     "offset": -0.1,
-     "volume": 0.3
-    },
-    {
-     "name": "ding",
-     "cue": "bd",
-     "offset": 0.3,
-     "volume": 0.18
-    },
-    {
-     "name": "ding",
-     "cue": "bd",
-     "offset": 0.6,
-     "volume": 0.18
-    },
-    {
-     "name": "ding",
-     "cue": "bd",
-     "offset": 0.9,
-     "volume": 0.18
-    },
-    {
-     "name": "ding",
-     "cue": "bd",
-     "offset": 1.2,
-     "volume": 0.2
-    },
-    {
      "name": "net",
      "cue": "g",
      "offset": 0.2,
      "volume": 0.25
-    },
-    {
-     "name": "net",
-     "cue": "g",
-     "offset": 0.7,
-     "volume": 0.25
-    },
-    {
-     "name": "net",
-     "cue": "g",
-     "offset": 1.1,
-     "volume": 0.25
-    },
-    {
-     "name": "ping",
-     "cue": "wr",
-     "volume": 0.25
-    },
-    {
-     "name": "boing",
-     "cue": "prime",
-     "offset": 0.8,
-     "volume": 0.2
-    },
-    {
-     "name": "swoosh",
-     "cue": "watch",
-     "offset": 0.0,
-     "volume": 0.35
     }
    ]
   },
@@ -862,63 +740,16 @@
    ],
    "sfx": [
     {
-     "name": "wind",
-     "at": 0,
-     "volume": 0.3
-    },
-    {
      "name": "clang",
      "cue": "line",
      "offset": 0.6,
      "volume": 0.25
     },
     {
-     "name": "clang",
-     "cue": "line",
-     "offset": 0.75,
-     "volume": 0.2
-    },
-    {
      "name": "stomp",
      "cue": "line",
      "offset": 0.9,
      "volume": 0.45
-    },
-    {
-     "name": "swoosh",
-     "cue": "odds",
-     "offset": -0.1,
-     "volume": 0.3
-    },
-    {
-     "name": "heartbeat",
-     "cue": "still",
-     "offset": -0.3,
-     "volume": 0.5
-    },
-    {
-     "name": "rustle",
-     "cue": "still",
-     "offset": 0.2,
-     "volume": 0.25
-    },
-    {
-     "name": "heartbeat",
-     "cue": "still",
-     "offset": 0.8,
-     "volume": 0.5
-    },
-    {
-     "name": "gulp",
-     "cue": "still",
-     "offset": 1.1,
-     "volume": 0.35
-    },
-    {
-     "name": "wind",
-     "cue": "laces",
-     "offset": -0.6,
-     "volume": 0.22
     }
    ]
   },
@@ -1190,179 +1021,9 @@
      "volume": 0.3
     },
     {
-     "name": "spin",
-     "at": 1.25,
-     "volume": 0.28
-    },
-    {
      "name": "dizzy",
      "at": 1.65,
      "volume": 0.22
-    },
-    {
-     "name": "kick",
-     "at": 2.05,
-     "volume": 0.3
-    },
-    {
-     "name": "spin",
-     "at": 2.45,
-     "volume": 0.28
-    },
-    {
-     "name": "tweet",
-     "at": 2.85,
-     "volume": 0.22
-    },
-    {
-     "name": "kick",
-     "at": 3.25,
-     "volume": 0.3
-    },
-    {
-     "name": "spin",
-     "at": 3.65,
-     "volume": 0.28
-    },
-    {
-     "name": "dizzy",
-     "at": 4.05,
-     "volume": 0.22
-    },
-    {
-     "name": "swoosh",
-     "at": 3.3,
-     "volume": 0.3
-    },
-    {
-     "name": "kick",
-     "at": 4.45,
-     "volume": 0.3
-    },
-    {
-     "name": "spin",
-     "at": 4.85,
-     "volume": 0.28
-    },
-    {
-     "name": "tweet",
-     "at": 5.25,
-     "volume": 0.22
-    },
-    {
-     "name": "kick",
-     "at": 5.65,
-     "volume": 0.3
-    },
-    {
-     "name": "spin",
-     "at": 6.05,
-     "volume": 0.28
-    },
-    {
-     "name": "dizzy",
-     "at": 6.45,
-     "volume": 0.22
-    },
-    {
-     "name": "kick",
-     "at": 6.85,
-     "volume": 0.3
-    },
-    {
-     "name": "spin",
-     "at": 7.25,
-     "volume": 0.28
-    },
-    {
-     "name": "tweet",
-     "at": 7.65,
-     "volume": 0.22
-    },
-    {
-     "name": "swoosh",
-     "at": 6.9,
-     "volume": 0.3
-    },
-    {
-     "name": "kick",
-     "at": 8.05,
-     "volume": 0.3
-    },
-    {
-     "name": "spin",
-     "at": 8.45,
-     "volume": 0.28
-    },
-    {
-     "name": "dizzy",
-     "at": 8.85,
-     "volume": 0.22
-    },
-    {
-     "name": "kick",
-     "at": 9.25,
-     "volume": 0.3
-    },
-    {
-     "name": "spin",
-     "at": 9.65,
-     "volume": 0.28
-    },
-    {
-     "name": "tweet",
-     "at": 10.05,
-     "volume": 0.22
-    },
-    {
-     "name": "swoosh",
-     "at": 11.35,
-     "volume": 0.18
-    },
-    {
-     "name": "swoosh",
-     "at": 12.15,
-     "volume": 0.18
-    },
-    {
-     "name": "swoosh",
-     "at": 12.95,
-     "volume": 0.18
-    },
-    {
-     "name": "swoosh",
-     "at": 13.75,
-     "volume": 0.18
-    },
-    {
-     "name": "tick",
-     "at": 11.75,
-     "volume": 0.3
-    },
-    {
-     "name": "tick",
-     "at": 12.55,
-     "volume": 0.3
-    },
-    {
-     "name": "tick",
-     "at": 13.35,
-     "volume": 0.3
-    },
-    {
-     "name": "tick",
-     "at": 14.15,
-     "volume": 0.3
-    },
-    {
-     "name": "spin",
-     "at": 15.01,
-     "volume": 0.3
-    },
-    {
-     "name": "dizzy",
-     "at": 15.36,
-     "volume": 0.25
     },
     {
      "name": "clang",
@@ -1373,16 +1034,6 @@
      "name": "domino",
      "at": 15.81,
      "volume": 0.45
-    },
-    {
-     "name": "domino",
-     "at": 18.16,
-     "volume": 0.4
-    },
-    {
-     "name": "roar",
-     "at": 18.34,
-     "volume": 0.3
     },
     {
      "name": "whistle",
@@ -1679,84 +1330,9 @@
      "volume": 0.14
     },
     {
-     "name": "stomp",
-     "at": 0.58,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 0.86,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 1.14,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 1.42,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 1.7,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 1.98,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 2.26,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 2.54,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 2.82,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 3.1,
-     "volume": 0.14
-    },
-    {
-     "name": "stomp",
-     "at": 3.38,
-     "volume": 0.14
-    },
-    {
-     "name": "swoosh",
-     "at": 1.253,
-     "volume": 0.3
-    },
-    {
-     "name": "swoosh",
-     "at": 2.634,
-     "volume": 0.25
-    },
-    {
-     "name": "whoosh-short",
-     "at": 4.535,
-     "volume": 0.3
-    },
-    {
      "name": "kick",
      "at": 6.83,
      "volume": 0.35
-    },
-    {
-     "name": "swoosh",
-     "at": 7.03,
-     "volume": 0.3
     },
     {
      "name": "impact-bass-1",
@@ -1764,24 +1340,9 @@
      "volume": 0.25
     },
     {
-     "name": "boing",
-     "at": 7.73,
-     "volume": 0.3
-    },
-    {
      "name": "clang",
      "at": 7.98,
      "volume": 0.25
-    },
-    {
-     "name": "clang",
-     "at": 8.13,
-     "volume": 0.2
-    },
-    {
-     "name": "clang",
-     "at": 8.28,
-     "volume": 0.2
     },
     {
      "name": "whoosh",
@@ -1794,28 +1355,18 @@
      "volume": 0.5
     },
     {
-     "name": "stomp",
-     "at": 11.26,
-     "volume": 0.4
-    },
-    {
-     "name": "swoosh",
-     "at": 11.828,
-     "volume": 0.25
-    },
-    {
-     "name": "swoosh",
-     "at": 13.198,
-     "volume": 0.25
-    },
-    {
      "name": "whistle",
      "at": 15.16,
      "volume": 0.28
     },
     {
-     "name": "drumroll",
-     "at": 14.11,
+     "name": "net",
+     "at": 17.81,
+     "volume": 0.45
+    },
+    {
+     "name": "dizzy",
+     "at": 19.16,
      "volume": 0.22
     },
     {
@@ -1824,34 +1375,9 @@
      "volume": 0.4
     },
     {
-     "name": "swoosh",
-     "at": 16.91,
-     "volume": 0.3
-    },
-    {
-     "name": "net",
-     "at": 17.81,
-     "volume": 0.45
-    },
-    {
-     "name": "roar",
-     "at": 17.81,
-     "volume": 0.3
-    },
-    {
      "name": "impact-bass-1",
      "at": 17.84,
      "volume": 0.3
-    },
-    {
-     "name": "dizzy",
-     "at": 19.16,
-     "volume": 0.22
-    },
-    {
-     "name": "tweet",
-     "at": 19.46,
-     "volume": 0.2
     }
    ]
   },
@@ -1924,11 +1450,6 @@
    ],
    "sfx": [
     {
-     "name": "tweet",
-     "at": 0.2,
-     "volume": 0.18
-    },
-    {
      "name": "sting",
      "at": 1.89,
      "volume": 0.45
@@ -1939,29 +1460,9 @@
      "volume": 0.2
     },
     {
-     "name": "clang",
-     "at": 2.64,
-     "volume": 0.2
-    },
-    {
-     "name": "clang",
-     "at": 2.74,
-     "volume": 0.2
-    },
-    {
-     "name": "swoosh",
-     "at": 2.89,
-     "volume": 0.25
-    },
-    {
      "name": "impact-bass-1",
      "at": 3.8,
      "volume": 0.45
-    },
-    {
-     "name": "roar",
-     "at": 3.89,
-     "volume": 0.3
     }
    ]
   },
@@ -2052,18 +1553,7 @@
      "end": 5.13
     }
    ],
-   "sfx": [
-    {
-     "name": "swoosh",
-     "at": 0.05,
-     "volume": 0.3
-    },
-    {
-     "name": "pop",
-     "cue": "c",
-     "volume": 0.3
-    }
-   ]
+   "sfx": []
   }
  ]
 }

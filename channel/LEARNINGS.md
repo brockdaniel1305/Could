@@ -10,10 +10,10 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-29 · 008 · Lieber **kürzer** (008: ~80 s statt 105 s) und vor allem ein **kurzes Ende**. Pointen über bekannte Eigenschaften
   der Person (Tempo, Jubel, Rolle im Verein) kommen besser an als Vertrags-/Verwaltungs-Gags ("das mit dem Vertrag finde ich komisch").
   Ein Schluss, der die Person in ihre Gegenwart zurückholt (Mbappé → Elfmeter bei Real Madrid), ist gewünscht.
-- 2026-10-29 · 007 · **Mehr Soundeffekte**, damit es spannender und ansehnlicher wird: jede Aktion im Cartoon bekommt einen Sound
-  (Schritte, Kicks, Drehen, Schwindel, Pfiff, Netz, Domino, Wind, Herzschlag, Trommelwirbel, Jubel). 007 hat ~120 SFX auf 106 s.
-  Eigene Bibliothek: `channel/kit/sfx/` (gebaut von `tools/make_sfx.py`, synthetisch, lizenzfrei), `build_episode.py` findet sie per Name.
-  Viele SFX aus einem Zeitplan erzeugen statt von Hand (z. B. `episodes/007-rome-messi/src/sfx.py`).
+- 2026-10-29 · v3/007/008 · **Soundeffekte sparsam und punktuell** (ersetzt "mehr Soundeffekte" vom selben Tag): nur auf echten Ereignissen,
+  die dadurch besser werden (Schuss, Netz, Stempel, Aufprall, Pfiff, Galopp, Domino). **Keine Sounds für einfliegende Karten**
+  ("durch die Häufigkeit störend"), **keine synthetischen Fan-/Jubel- oder Windgeräusche** ("klingt schlecht, wenig wahrheitsgetreu").
+  Richtwert: 1-4 pro Szene, gleiche Sounds höchstens 1-2x pro Szene. Werkzeug: `tools/thin_sfx.py` (`--strict` für dichte Folgen).
 - 2026-10-29 · 007 · Pointen-Szenen nicht überladen: nach dem Höhepunkt reicht ein kurzer Schlusssatz ("This is when they all realised …"),
   der Creator strich die lange Urteils-Szene.
 - 2026-10-29 · 007 · **Vor jedem Video zuerst das fertige Skript schicken** (Erzählertext + was die Animation pro Szene zeigt)
@@ -55,7 +55,7 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 ## Erfahrungen aus den Folgen
 - 2026-10-29 · TikTok: Die ersten 4 Uploads direkt nach Kontoerstellung bekamen 0 Aufrufe (Konto galt als Bot). Erstes Video danach:
   800 Aufrufe / 15 Likes nach 3 h. Neue Konten erst "aufwärmen", Uploads verteilen. Re-Uploads alter Folgen als echte neue Fassung (v3):
-  neue Erzählerspur, Pflicht-Outro, SFX-Layer (`tools/auto_sfx.py`), neuer Einstieg (Punch-in) → `renders/<ep>-v3-final.mp4`.
+  neue Erzählerspur, Pflicht-Outro, neuer Einstieg (Punch-in) → `renders/<ep>-v3-final.mp4`.
 - 006 · Gefährliche Szenarien (Züge, Höhe, Feuer …): nie den Unfall zeigen (vorher schneiden), die Lösung ungefährlich machen
   ("he takes the train") und am Ende ein klarer Satz "Please do not try this." (TikTok-Richtlinien zu gefährlichen Handlungen).
 - 006 · Querverweise zahlen sich aus: die benötigten 7 m Sprunghöhe = Höhe der Chinesischen Mauer aus 003 (gleiches Part wiederverwendet).
@@ -75,6 +75,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- Nur der Ton geändert? Nicht neu rendern: `tools/remix_audio.py episodes/<ep> <render.mp4> <final.mp4>` mischt Stimme+SFX aus
+  index.html neu (inkl. loudnorm, apad auf volle Länge) und kopiert das Bild. Dauert Sekunden statt Minuten.
 - Ein Gegenstand in der Hand (Heugabel) gehört NICHT in die Arm-Gruppe: `scene.py` dreht Arme um die Mitte oben ihrer Bounding-Box,
   ein langer Gegenstand verschiebt diesen Punkt und der Arm "fliegt" weg. Gegenstand als eigene Gruppe an der Hand zeichnen.
 - `pitch-day` mit `GY=1010`, wenn die Figuren bei y 1200 stehen sollen (sonst stehen sie auf der Tribünenkante).
