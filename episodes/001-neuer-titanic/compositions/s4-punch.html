@@ -164,8 +164,8 @@
   <script>
     (function () {
       const S = "#s4-punch-";
-      const D = 15.002;
-      const C = {"t": 0.842, "ball": 1.742, "berg": 4.441, "ratio": 8.662, "busy": 12.227};
+      const D = 14.397;
+      const C = {"t": 0.658, "ball": 1.421, "berg": 3.878, "ratio": 7.661, "busy": 11.707};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s4-punch-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

@@ -9,6 +9,8 @@ cards = (banner(sid, "q", "CASE FILE 003", "Could Steph Curry<br>make a three ov
          + card(sid, "m", "METHOD", "Scientific", 560, 420)
          + card(sid, "pr", "EQUIPMENT", "1 protractor", 520, 600, "gold"))
 js = """
+      // v3: opening punch-in (new first frame)
+      tl.fromTo(S + "svg", { scale: 1.14 }, { scale: 1, transformOrigin: "50% 60%", duration: 0.8, ease: "power2.out" }, 0);
       // frame 0 is the thumbnail: the question is already on screen
       tl.fromTo(S + "c-q", { opacity: 1, x: 0, y: 0, rotation: -2 }, { y: -1100, rotation: 8, duration: 0.4, ease: "power3.in" }, C.sci - 0.45);
       fly("m", C.sci, null, { from: "right" });

@@ -94,8 +94,8 @@
   <script>
     (function () {
       const S = "#s6-bucket-";
-      const D = 15.479;
-      const C = {"t": 0.762, "in": 1.62, "scoop": 6.091, "rate": 8.786, "pump": 10.562, "is": 13.941};
+      const D = 14.668;
+      const C = {"t": 0.743, "in": 1.73, "scoop": 5.47, "rate": 8.062, "pump": 10.47, "is": 13.19};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s6-bucket-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

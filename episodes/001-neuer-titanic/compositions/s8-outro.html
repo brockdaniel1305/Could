@@ -118,15 +118,15 @@
     </svg>
     <div class="logo" data-layout-ignore>COULD<b>?</b></div>
     <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
-    <div class="banner" id="s8-outro-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 330px;"><div class="bk">NEXT CASE</div><div class="bt">Who should we<br>send next?</div></div>
-    <div class="card gold" id="s8-outro-c-c" data-layout-allow-overflow data-layout-allow-overlap style="left: 50px; top: 620px;"><div class="ck">COMMENT YOUR MATCHUP</div><div class="cv">↓ ↓ ↓</div></div>
+    <div class="banner" id="s8-outro-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 50px; top: 330px;"><div class="bk">NEXT CASE</div><div class="bt">Could you imagine<br>another scenario?</div></div>
+    <div class="card gold" id="s8-outro-c-c" data-layout-allow-overflow data-layout-allow-overlap style="left: 50px; top: 620px;"><div class="ck">WRITE IT IN THE COMMENTS</div><div class="cv">↓ ↓ ↓</div></div>
     <div class="dip" id="s8-outro-dip" data-layout-ignore></div>
   </div>
   <script>
     (function () {
       const S = "#s8-outro-";
-      const D = 4.459;
-      const C = {"c": 1.505};
+      const D = 6.59;
+      const C = {"c": 3.47};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s8-outro-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

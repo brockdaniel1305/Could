@@ -139,8 +139,8 @@
   <script>
     (function () {
       const S = "#s5-sprint-";
-      const D = 17.633;
-      const C = {"t": 0.76, "look": 2.163, "run": 6.677, "spare": 9.605, "shout": 13.265, "he": 16.266};
+      const D = 16.829;
+      const C = {"t": 0.621, "look": 1.954, "run": 6.19, "spare": 9.276, "shout": 13.11, "he": 15.539};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s5-sprint-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

@@ -8,29 +8,92 @@
   "speed": 1.08,
   "caption": "Could Usain Bolt beat a T-Rex over 100 m? We timed it. The T-Rex disagreed. ⚡🦖 #could #usainbolt #trex #dinosaur #100m #athletics #whatif #fyp",
   "scenes": [
-    {"id": "s1-hook",
-     "text": "Could Usain Bolt beat a T-Rex in a {100|one hundred} metre race? {{ev}}We looked at the evidence. ||0.25|| {{sci}}Scientifically. ||0.3|| {{long}}With a stopwatch."},
-    {"id": "s2-bolt",
-     "text": "In lane four: {{name}}Usain Bolt. {{h}}{1.95|One point nine five} metres of Jamaican sprinter. {{wr}}World record: {9.58|nine point five eight} seconds. {{gold}}Eight Olympic gold medals. ||0.4|| {{pose}}And one very famous pose.",
-     "sfx": [{"name": "pop", "cue": "gold", "offset": 0.6, "volume": 0.4}]},
-    {"id": "s3-trex",
-     "text": "In lane five: {{name}}Tyrannosaurus rex. {{len}}Twelve metres long. {{kg}}Around eight tonnes. {{bite}}An estimated bite force of {35,000|thirty five thousand} newtons. ||0.4|| {{arms}}And arms that are, mostly, decorative. ||0.3|| {{ext}}Last race: {66|sixty six} million years ago.",
-     "sfx": [{"name": "impact-bass-1", "cue": "bite", "offset": 0.5, "volume": 0.3}]},
-    {"id": "s4-start",
-     "text": "Zero to thirty metres. {{t}}The start. ||0.3|| {{gun}}Bang. ||0.4|| {{react}}Bolt reacts in {0.146|zero point one four six} seconds. {{rex}}The T-Rex has never heard a starting pistol, ||0.2|| {{roar}}and takes it personally. {{lead}}But measured nose first, it starts twelve metres ahead. ||0.3|| {{ahead}}After three seconds, the dinosaur is winning.",
-     "sfx": [{"name": "impact-bass-1", "cue": "gun", "offset": -0.04, "volume": 0.3},
-             {"name": "whoosh", "cue": "react", "offset": -0.1, "volume": 0.3}]},
-    {"id": "s5-speed",
-     "text": "Thirty to eighty metres. {{t}}Top speed. {{bolt}}Bolt hits {44.7|forty four point seven} kilometres per hour. {{rex}}The T-Rex, according to its own bones, manages about nineteen. {{pass}}At around thirty five metres, Bolt takes the lead. ||0.4|| {{look}}He does not look back. ||0.3|| {{wise}}This is the correct decision.",
-     "sfx": [{"name": "whoosh-short", "cue": "pass", "offset": 0.3, "volume": 0.35}]},
-    {"id": "s6-finish",
-     "text": "Eighty to one hundred metres. {{t}}The finish. {{win}}Bolt crosses the line in {9.58|nine point five eight} seconds. ||0.3|| {{where}}The T-Rex is at sixty four metres, ||0.2|| {{lean}}attempting a dip finish with no arms. ||0.4|| {{photo}}The photo finish requires two photos.",
-     "sfx": [{"name": "ping", "cue": "win", "offset": 0.2, "volume": 0.5}]},
-    {"id": "s7-verdict",
-     "text": "The verdict. {{q}}Could Usain Bolt beat a T-Rex? ||0.8|| {{yes}}Yes. ||0.9|| {{by}}By almost seven seconds. {{but}}There is, however, one problem. ||0.4|| {{line}}The race ends at the finish line. ||0.4|| {{rex}}The T-Rex does not.",
-     "tail": 1.0,
-     "sfx": [{"name": "impact-bass-1", "cue": "yes", "offset": 0.14, "volume": 0.4}]},
-    {"id": "s8-outro",
-     "text": "Who should we race next? {{c}}Tell us in the comments."}
+    {
+      "id": "s1-hook",
+      "text": "Could Usain Bolt beat a T-Rex in a {100|one hundred} metre race? {{ev}}We looked at the evidence. ||0.25|| {{sci}}Scientifically. ||0.3|| {{long}}With a stopwatch."
+    },
+    {
+      "id": "s2-bolt",
+      "text": "In lane four: {{name}}Usain Bolt. {{h}}{1.95|One point nine five} metres of Jamaican sprinter. {{wr}}World record: {9.58|nine point five eight} seconds. {{gold}}Eight Olympic gold medals. ||0.4|| {{pose}}And one very famous pose.",
+      "sfx": [
+        {
+          "name": "pop",
+          "cue": "gold",
+          "offset": 0.6,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s3-trex",
+      "text": "In lane five: {{name}}Tyrannosaurus rex. {{len}}Twelve metres long. {{kg}}Around eight tonnes. {{bite}}An estimated bite force of {35,000|thirty five thousand} newtons. ||0.4|| {{arms}}And arms that are, mostly, decorative. ||0.3|| {{ext}}Last race: {66|sixty six} million years ago.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "bite",
+          "offset": 0.5,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s4-start",
+      "text": "Zero to thirty metres. {{t}}The start. ||0.3|| {{gun}}Bang. ||0.4|| {{react}}Bolt reacts in {0.146|zero point one four six} seconds. {{rex}}The T-Rex has never heard a starting pistol, ||0.2|| {{roar}}and takes it personally. {{lead}}But measured nose first, it starts twelve metres ahead. ||0.3|| {{ahead}}After three seconds, the dinosaur is winning.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "gun",
+          "offset": -0.04,
+          "volume": 0.3
+        },
+        {
+          "name": "whoosh",
+          "cue": "react",
+          "offset": -0.1,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s5-speed",
+      "text": "Thirty to eighty metres. {{t}}Top speed. {{bolt}}Bolt hits {44.7|forty four point seven} kilometres per hour. {{rex}}The T-Rex, according to its own bones, manages about nineteen. {{pass}}At around thirty five metres, Bolt takes the lead. ||0.4|| {{look}}He does not look back. ||0.3|| {{wise}}This is the correct decision.",
+      "sfx": [
+        {
+          "name": "whoosh-short",
+          "cue": "pass",
+          "offset": 0.3,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s6-finish",
+      "text": "Eighty to one hundred metres. {{t}}The finish. {{win}}Bolt crosses the line in {9.58|nine point five eight} seconds. ||0.3|| {{where}}The T-Rex is at sixty four metres, ||0.2|| {{lean}}attempting a dip finish with no arms. ||0.4|| {{photo}}The photo finish requires two photos.",
+      "sfx": [
+        {
+          "name": "ping",
+          "cue": "win",
+          "offset": 0.2,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "id": "s7-verdict",
+      "text": "The verdict. {{q}}Could Usain Bolt beat a T-Rex? ||0.8|| {{yes}}Yes. ||0.9|| {{by}}By almost seven seconds. {{but}}There is, however, one problem. ||0.4|| {{line}}The race ends at the finish line. ||0.4|| {{rex}}The T-Rex does not.",
+      "tail": 1.0,
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "yes",
+          "offset": 0.14,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s8-outro",
+      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments."
+    }
   ]
 }

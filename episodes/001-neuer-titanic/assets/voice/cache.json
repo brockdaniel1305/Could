@@ -32,75 +32,1268 @@
   "words": []
  },
  "s1-hook.part0.wav": {
-  "key": "e9a658fdd296cd952cc2f1d1c097d4ed98080965",
-  "words": []
+  "key": "1d4f7566cb3ed36f52654c632e9938042a6c5130",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.39
+   },
+   {
+    "text": "Manuel",
+    "start": 0.39,
+    "end": 0.859
+   },
+   {
+    "text": "Noya",
+    "start": 0.859,
+    "end": 1.171
+   },
+   {
+    "text": "save",
+    "start": 1.171,
+    "end": 1.483
+   },
+   {
+    "text": "the",
+    "start": 1.483,
+    "end": 1.717
+   },
+   {
+    "text": "Titanic",
+    "start": 1.717,
+    "end": 2.263
+   },
+   {
+    "text": "from",
+    "start": 2.263,
+    "end": 2.576
+   },
+   {
+    "text": "sinking?",
+    "start": 2.576,
+    "end": 3.2
+   },
+   {
+    "text": "We",
+    "start": 3.2,
+    "end": 3.329
+   },
+   {
+    "text": "looked",
+    "start": 3.329,
+    "end": 3.716
+   },
+   {
+    "text": "at",
+    "start": 3.716,
+    "end": 3.845
+   },
+   {
+    "text": "the",
+    "start": 3.845,
+    "end": 4.039
+   },
+   {
+    "text": "evidence.",
+    "start": 4.039,
+    "end": 4.62
+   }
+  ]
  },
  "s1-hook.part1.wav": {
-  "key": "f04df5f92042030cf18d0e93b3595b055e09d157",
-  "words": []
+  "key": "97d159e4197e9441eb6154977a77612b80bb8ebb",
+  "words": [
+   {
+    "text": "Scientifically.",
+    "start": 0,
+    "end": 2
+   }
+  ]
  },
  "s1-hook.part2.wav": {
-  "key": "683e66b4575714f64768fac5b9d3f48ac6a5b3a4",
-  "words": []
+  "key": "d7ebc8fbb1b918bd6fa82d202b9879b1b54348e8",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.261
+   },
+   {
+    "text": "for",
+    "start": 0.261,
+    "end": 0.522
+   },
+   {
+    "text": "far",
+    "start": 0.522,
+    "end": 0.784
+   },
+   {
+    "text": "too",
+    "start": 0.784,
+    "end": 1.045
+   },
+   {
+    "text": "long.",
+    "start": 1.045,
+    "end": 1.48
+   }
+  ]
  },
  "s2-titanic.part0.wav": {
-  "key": "82a52511a22f23624253a6e18049501397b6cc97",
-  "words": []
+  "key": "277bc98eeb557dfd9dc74b509799f10ed2aafbb4",
+  "words": [
+   {
+    "text": "Subject",
+    "start": 0,
+    "end": 0.663
+   },
+   {
+    "text": "A,",
+    "start": 0.663,
+    "end": 0.853
+   },
+   {
+    "text": "the",
+    "start": 0.853,
+    "end": 1.137
+   },
+   {
+    "text": "RMS",
+    "start": 1.137,
+    "end": 1.421
+   },
+   {
+    "text": "Titanic,",
+    "start": 1.421,
+    "end": 2.179
+   },
+   {
+    "text": "52,000",
+    "start": 2.179,
+    "end": 2.747
+   },
+   {
+    "text": "tons",
+    "start": 2.747,
+    "end": 3.126
+   },
+   {
+    "text": "of",
+    "start": 3.126,
+    "end": 3.316
+   },
+   {
+    "text": "Edwardian",
+    "start": 3.316,
+    "end": 4.168
+   },
+   {
+    "text": "confidence,",
+    "start": 4.168,
+    "end": 5.211
+   },
+   {
+    "text": "officially",
+    "start": 5.211,
+    "end": 6.158
+   },
+   {
+    "text": "practically",
+    "start": 6.158,
+    "end": 7.2
+   },
+   {
+    "text": "unsinkable.",
+    "start": 7.2,
+    "end": 8.2
+   },
+   {
+    "text": "In",
+    "start": 8.2,
+    "end": 8.393
+   },
+   {
+    "text": "April",
+    "start": 8.393,
+    "end": 8.874
+   },
+   {
+    "text": "1912,",
+    "start": 8.874,
+    "end": 9.356
+   },
+   {
+    "text": "it",
+    "start": 9.356,
+    "end": 9.548
+   },
+   {
+    "text": "met",
+    "start": 9.548,
+    "end": 9.837
+   },
+   {
+    "text": "an",
+    "start": 9.837,
+    "end": 10.03
+   },
+   {
+    "text": "iceberg.",
+    "start": 10.03,
+    "end": 10.8
+   }
+  ]
  },
  "s2-titanic.part1.wav": {
-  "key": "ae1550be90671986df6c12741a4442ef2440e495",
-  "words": []
+  "key": "6fd3a5880b7a81302a6e757373b74fd40c1462f0",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.268
+   },
+   {
+    "text": "Iceberg",
+    "start": 0.268,
+    "end": 0.892
+   },
+   {
+    "text": "One",
+    "start": 0.892,
+    "end": 1.16
+   }
+  ]
  },
  "s3-neuer.part0.wav": {
-  "key": "5690bd475a6e68a1b68aef13e76d25843308d308",
-  "words": []
+  "key": "99ab27b8ccd9ca3d8f673a0ae003842219bb7211",
+  "words": [
+   {
+    "text": "Subject",
+    "start": 0,
+    "end": 0.727
+   },
+   {
+    "text": "B.",
+    "start": 0.727,
+    "end": 0.935
+   },
+   {
+    "text": "Manuel",
+    "start": 0.935,
+    "end": 1.559
+   },
+   {
+    "text": "Neuer,",
+    "start": 1.559,
+    "end": 2.182
+   },
+   {
+    "text": "1.93",
+    "start": 2.182,
+    "end": 2.598
+   },
+   {
+    "text": "meters",
+    "start": 2.598,
+    "end": 3.221
+   },
+   {
+    "text": "of",
+    "start": 3.221,
+    "end": 3.429
+   },
+   {
+    "text": "German",
+    "start": 3.429,
+    "end": 4.052
+   },
+   {
+    "text": "goalkeeper,",
+    "start": 4.052,
+    "end": 5.195
+   },
+   {
+    "text": "World",
+    "start": 5.195,
+    "end": 5.715
+   },
+   {
+    "text": "Champion",
+    "start": 5.715,
+    "end": 6.546
+   },
+   {
+    "text": "2014,",
+    "start": 6.546,
+    "end": 7.065
+   },
+   {
+    "text": "widely",
+    "start": 7.065,
+    "end": 7.689
+   },
+   {
+    "text": "credited",
+    "start": 7.689,
+    "end": 8.52
+   },
+   {
+    "text": "with",
+    "start": 8.52,
+    "end": 8.758
+   },
+   {
+    "text": "inventing",
+    "start": 8.758,
+    "end": 9.293
+   },
+   {
+    "text": "the",
+    "start": 9.293,
+    "end": 9.471
+   },
+   {
+    "text": "act",
+    "start": 9.471,
+    "end": 9.649
+   },
+   {
+    "text": "of",
+    "start": 9.649,
+    "end": 9.768
+   },
+   {
+    "text": "leaving",
+    "start": 9.768,
+    "end": 10.184
+   },
+   {
+    "text": "his",
+    "start": 10.184,
+    "end": 10.362
+   },
+   {
+    "text": "own",
+    "start": 10.362,
+    "end": 10.541
+   },
+   {
+    "text": "goal",
+    "start": 10.541,
+    "end": 10.778
+   },
+   {
+    "text": "for",
+    "start": 10.778,
+    "end": 10.957
+   },
+   {
+    "text": "no",
+    "start": 10.957,
+    "end": 11.075
+   },
+   {
+    "text": "apparent",
+    "start": 11.075,
+    "end": 11.551
+   },
+   {
+    "text": "reason.",
+    "start": 11.551,
+    "end": 11.967
+   },
+   {
+    "text": "He",
+    "start": 11.967,
+    "end": 12.086
+   },
+   {
+    "text": "has",
+    "start": 12.086,
+    "end": 12.264
+   },
+   {
+    "text": "stopped",
+    "start": 12.264,
+    "end": 12.68
+   },
+   {
+    "text": "thousands",
+    "start": 12.68,
+    "end": 13.34
+   },
+   {
+    "text": "of",
+    "start": 13.34,
+    "end": 13.487
+   },
+   {
+    "text": "fast-moving",
+    "start": 13.487,
+    "end": 14.293
+   },
+   {
+    "text": "objects.",
+    "start": 14.293,
+    "end": 14.88
+   }
+  ]
  },
  "s3-neuer.part1.wav": {
-  "key": "4c8b05f3b6a94c23136d63f5873be417464efc5e",
-  "words": []
+  "key": "4ab105cd7b92bcba967e31f9d0b24f1ecc8c17f1",
+  "words": [
+   {
+    "text": "None",
+    "start": 0,
+    "end": 0.313
+   },
+   {
+    "text": "of",
+    "start": 0.313,
+    "end": 0.47
+   },
+   {
+    "text": "them",
+    "start": 0.47,
+    "end": 0.783
+   },
+   {
+    "text": "were",
+    "start": 0.783,
+    "end": 1.096
+   },
+   {
+    "text": "icebergs.",
+    "start": 1.096,
+    "end": 1.8
+   }
+  ]
  },
  "s4-punch.part0.wav": {
-  "key": "844fda6d2293eff1bbaf28568bbca2f637e24ab8",
-  "words": []
+  "key": "842978f56b5157304047ee081ac60160bc9e1929",
+  "words": [
+   {
+    "text": "Plan",
+    "start": 0,
+    "end": 0.339
+   },
+   {
+    "text": "A,",
+    "start": 0.339,
+    "end": 0.508
+   },
+   {
+    "text": "the",
+    "start": 0.508,
+    "end": 0.763
+   },
+   {
+    "text": "punch.",
+    "start": 0.763,
+    "end": 1.271
+   },
+   {
+    "text": "A",
+    "start": 1.271,
+    "end": 1.356
+   },
+   {
+    "text": "football",
+    "start": 1.356,
+    "end": 2.033
+   },
+   {
+    "text": "weighs",
+    "start": 2.033,
+    "end": 2.542
+   },
+   {
+    "text": "0.43",
+    "start": 2.542,
+    "end": 2.881
+   },
+   {
+    "text": "kilograms.",
+    "start": 2.881,
+    "end": 3.728
+   },
+   {
+    "text": "The",
+    "start": 3.728,
+    "end": 3.982
+   },
+   {
+    "text": "iceberg",
+    "start": 3.982,
+    "end": 4.575
+   },
+   {
+    "text": "weighed",
+    "start": 4.575,
+    "end": 5.168
+   },
+   {
+    "text": "an",
+    "start": 5.168,
+    "end": 5.337
+   },
+   {
+    "text": "estimated",
+    "start": 5.337,
+    "end": 6.1
+   },
+   {
+    "text": "1.5",
+    "start": 6.1,
+    "end": 6.349
+   },
+   {
+    "text": "million",
+    "start": 6.349,
+    "end": 6.93
+   },
+   {
+    "text": "tonnes.",
+    "start": 6.93,
+    "end": 7.511
+   },
+   {
+    "text": "That",
+    "start": 7.511,
+    "end": 7.843
+   },
+   {
+    "text": "is",
+    "start": 7.843,
+    "end": 8.009
+   },
+   {
+    "text": "roughly",
+    "start": 8.009,
+    "end": 8.59
+   },
+   {
+    "text": "three",
+    "start": 8.59,
+    "end": 9.005
+   },
+   {
+    "text": "and",
+    "start": 9.005,
+    "end": 9.254
+   },
+   {
+    "text": "a",
+    "start": 9.254,
+    "end": 9.337
+   },
+   {
+    "text": "half",
+    "start": 9.337,
+    "end": 9.669
+   },
+   {
+    "text": "billion",
+    "start": 9.669,
+    "end": 10.25
+   },
+   {
+    "text": "footballs.",
+    "start": 10.25,
+    "end": 11.08
+   }
+  ]
  },
  "s4-punch.part1.wav": {
-  "key": "dab67663da64152269ab93329d3ac83800dc28bc",
-  "words": []
+  "key": "175da72be9c10670957fec53e6daca2448c965cb",
+  "words": [
+   {
+    "text": "A",
+    "start": 0,
+    "end": 0.09
+   },
+   {
+    "text": "busy",
+    "start": 0.09,
+    "end": 0.448
+   },
+   {
+    "text": "evening,",
+    "start": 0.448,
+    "end": 1.165
+   },
+   {
+    "text": "even",
+    "start": 1.165,
+    "end": 1.523
+   },
+   {
+    "text": "for",
+    "start": 1.523,
+    "end": 1.792
+   },
+   {
+    "text": "Noya.",
+    "start": 1.792,
+    "end": 2.24
+   }
+  ]
  },
  "s5-sprint.part0.wav": {
-  "key": "4fc7f6dda3ea483830345f3185fb7cad50adc34d",
-  "words": []
+  "key": "9693f98b7c046fc7e49142b0adf313d0796be0e3",
+  "words": [
+   {
+    "text": "Plan",
+    "start": 0,
+    "end": 0.314
+   },
+   {
+    "text": "B,",
+    "start": 0.314,
+    "end": 0.471
+   },
+   {
+    "text": "the",
+    "start": 0.471,
+    "end": 0.706
+   },
+   {
+    "text": "sweeper",
+    "start": 0.706,
+    "end": 1.255
+   },
+   {
+    "text": "keeper.",
+    "start": 1.255,
+    "end": 1.804
+   },
+   {
+    "text": "The",
+    "start": 1.804,
+    "end": 2.039
+   },
+   {
+    "text": "lookout",
+    "start": 2.039,
+    "end": 2.589
+   },
+   {
+    "text": "spotted",
+    "start": 2.589,
+    "end": 3.138
+   },
+   {
+    "text": "the",
+    "start": 3.138,
+    "end": 3.373
+   },
+   {
+    "text": "iceberg",
+    "start": 3.373,
+    "end": 3.922
+   },
+   {
+    "text": "about",
+    "start": 3.922,
+    "end": 4.314
+   },
+   {
+    "text": "37",
+    "start": 4.314,
+    "end": 4.471
+   },
+   {
+    "text": "seconds",
+    "start": 4.471,
+    "end": 5.02
+   },
+   {
+    "text": "before",
+    "start": 5.02,
+    "end": 5.491
+   },
+   {
+    "text": "impact.",
+    "start": 5.491,
+    "end": 6.04
+   },
+   {
+    "text": "Noyes",
+    "start": 6.04,
+    "end": 6.508
+   },
+   {
+    "text": "sprints",
+    "start": 6.508,
+    "end": 7.162
+   },
+   {
+    "text": "the",
+    "start": 7.162,
+    "end": 7.443
+   },
+   {
+    "text": "269-metre",
+    "start": 7.443,
+    "end": 8.284
+   },
+   {
+    "text": "deck",
+    "start": 8.284,
+    "end": 8.658
+   },
+   {
+    "text": "in",
+    "start": 8.658,
+    "end": 8.845
+   },
+   {
+    "text": "34.",
+    "start": 8.845,
+    "end": 9.126
+   },
+   {
+    "text": "He",
+    "start": 9.126,
+    "end": 9.313
+   },
+   {
+    "text": "reaches",
+    "start": 9.313,
+    "end": 9.968
+   },
+   {
+    "text": "the",
+    "start": 9.968,
+    "end": 10.248
+   },
+   {
+    "text": "bridge",
+    "start": 10.248,
+    "end": 10.809
+   },
+   {
+    "text": "with",
+    "start": 10.809,
+    "end": 11.183
+   },
+   {
+    "text": "three",
+    "start": 11.183,
+    "end": 11.651
+   },
+   {
+    "text": "seconds",
+    "start": 11.651,
+    "end": 12.305
+   },
+   {
+    "text": "to",
+    "start": 12.305,
+    "end": 12.492
+   },
+   {
+    "text": "spare",
+    "start": 12.492,
+    "end": 12.96
+   },
+   {
+    "text": "and",
+    "start": 12.96,
+    "end": 13.154
+   },
+   {
+    "text": "does",
+    "start": 13.154,
+    "end": 13.414
+   },
+   {
+    "text": "what",
+    "start": 13.414,
+    "end": 13.673
+   },
+   {
+    "text": "goalkeepers",
+    "start": 13.673,
+    "end": 14.386
+   },
+   {
+    "text": "do",
+    "start": 14.386,
+    "end": 14.516
+   },
+   {
+    "text": "best.",
+    "start": 14.516,
+    "end": 14.84
+   }
+  ]
  },
  "s5-sprint.part1.wav": {
-  "key": "17783255c334554e3d6fe4a7f393f7763aa2198f",
-  "words": []
+  "key": "9417c24954d1b6e1bac9f9d00cf83c94ad724966",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.222
+   },
+   {
+    "text": "shouts.",
+    "start": 0.222,
+    "end": 1
+   }
+  ]
  },
  "s6-bucket.part0.wav": {
-  "key": "898bcb2fceee78c3938824434cd3974b72be2580",
-  "words": []
+  "key": "b79c6e784e2e3d043b5f16fae126258bbe58b253",
+  "words": [
+   {
+    "text": "Plan",
+    "start": 0,
+    "end": 0.395
+   },
+   {
+    "text": "C,",
+    "start": 0.395,
+    "end": 0.593
+   },
+   {
+    "text": "the",
+    "start": 0.593,
+    "end": 0.889
+   },
+   {
+    "text": "bucket.",
+    "start": 0.889,
+    "end": 1.58
+   },
+   {
+    "text": "Water",
+    "start": 1.58,
+    "end": 1.962
+   },
+   {
+    "text": "entered",
+    "start": 1.962,
+    "end": 2.496
+   },
+   {
+    "text": "the",
+    "start": 2.496,
+    "end": 2.725
+   },
+   {
+    "text": "ship",
+    "start": 2.725,
+    "end": 3.03
+   },
+   {
+    "text": "at",
+    "start": 3.03,
+    "end": 3.183
+   },
+   {
+    "text": "an",
+    "start": 3.183,
+    "end": 3.336
+   },
+   {
+    "text": "estimated",
+    "start": 3.336,
+    "end": 4.022
+   },
+   {
+    "text": "400",
+    "start": 4.022,
+    "end": 4.251
+   },
+   {
+    "text": "tons",
+    "start": 4.251,
+    "end": 4.557
+   },
+   {
+    "text": "per",
+    "start": 4.557,
+    "end": 4.786
+   },
+   {
+    "text": "minute.",
+    "start": 4.786,
+    "end": 5.32
+   },
+   {
+    "text": "At",
+    "start": 5.32,
+    "end": 5.476
+   },
+   {
+    "text": "two",
+    "start": 5.476,
+    "end": 5.71
+   },
+   {
+    "text": "liters",
+    "start": 5.71,
+    "end": 6.178
+   },
+   {
+    "text": "per",
+    "start": 6.178,
+    "end": 6.412
+   },
+   {
+    "text": "scoop,",
+    "start": 6.412,
+    "end": 6.88
+   },
+   {
+    "text": "Noya",
+    "start": 6.88,
+    "end": 7.339
+   },
+   {
+    "text": "needs",
+    "start": 7.339,
+    "end": 7.912
+   },
+   {
+    "text": "3,300",
+    "start": 7.912,
+    "end": 8.485
+   },
+   {
+    "text": "scoops",
+    "start": 8.485,
+    "end": 9.173
+   },
+   {
+    "text": "per",
+    "start": 9.173,
+    "end": 9.517
+   },
+   {
+    "text": "second.",
+    "start": 9.517,
+    "end": 10.32
+   },
+   {
+    "text": "At",
+    "start": 10.32,
+    "end": 10.47
+   },
+   {
+    "text": "that",
+    "start": 10.47,
+    "end": 10.769
+   },
+   {
+    "text": "point,",
+    "start": 10.769,
+    "end": 11.218
+   },
+   {
+    "text": "he",
+    "start": 11.218,
+    "end": 11.368
+   },
+   {
+    "text": "is",
+    "start": 11.368,
+    "end": 11.517
+   },
+   {
+    "text": "not",
+    "start": 11.517,
+    "end": 11.742
+   },
+   {
+    "text": "a",
+    "start": 11.742,
+    "end": 11.817
+   },
+   {
+    "text": "goalkeeper.",
+    "start": 11.817,
+    "end": 12.64
+   }
+  ]
  },
  "s6-bucket.part1.wav": {
-  "key": "df3c97118f4167f639739133793a924659c99282",
-  "words": []
+  "key": "c9019697c82c753ebe6979cc40ac18b04642ca0f",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.2
+   },
+   {
+    "text": "is",
+    "start": 0.2,
+    "end": 0.4
+   },
+   {
+    "text": "a",
+    "start": 0.4,
+    "end": 0.5
+   },
+   {
+    "text": "pump.",
+    "start": 0.5,
+    "end": 1
+   }
+  ]
  },
  "s7-verdict.part0.wav": {
-  "key": "cc7a0bcb8c039b1cfe0078f48d7e5202379a1899",
-  "words": []
+  "key": "aba3a158d7a9a01daf4dcfc0810ee62f001fc1ff",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.225
+   },
+   {
+    "text": "verdict",
+    "start": 0.225,
+    "end": 0.751
+   },
+   {
+    "text": "could",
+    "start": 0.751,
+    "end": 1.127
+   },
+   {
+    "text": "Manuel",
+    "start": 1.127,
+    "end": 1.578
+   },
+   {
+    "text": "Noyes",
+    "start": 1.578,
+    "end": 1.953
+   },
+   {
+    "text": "save",
+    "start": 1.953,
+    "end": 2.254
+   },
+   {
+    "text": "the",
+    "start": 2.254,
+    "end": 2.479
+   },
+   {
+    "text": "Titanic.",
+    "start": 2.479,
+    "end": 3.08
+   }
+  ]
  },
  "s7-verdict.part1.wav": {
-  "key": "e132653ec5ea8823125b0515d00daf7e2492524e",
-  "words": []
+  "key": "cc977be75cb9853a41d668142c5f19a6845ac66e",
+  "words": [
+   {
+    "text": "No!",
+    "start": 0,
+    "end": 0.5
+   }
+  ]
  },
  "s7-verdict.part2.wav": {
-  "key": "f14085a901333f31529d6371feeb9793986a16a2",
-  "words": []
+  "key": "f7af633845dc92fbf0de37ff440b5e47a2acc108",
+  "words": [
+   {
+    "text": "but",
+    "start": 0,
+    "end": 0.218
+   },
+   {
+    "text": "no",
+    "start": 0.218,
+    "end": 0.363
+   },
+   {
+    "text": "goalkeeper",
+    "start": 0.363,
+    "end": 1.088
+   },
+   {
+    "text": "in",
+    "start": 1.088,
+    "end": 1.233
+   },
+   {
+    "text": "history",
+    "start": 1.233,
+    "end": 1.74
+   },
+   {
+    "text": "would",
+    "start": 1.74,
+    "end": 2.037
+   },
+   {
+    "text": "have",
+    "start": 2.037,
+    "end": 2.274
+   },
+   {
+    "text": "come",
+    "start": 2.274,
+    "end": 2.512
+   },
+   {
+    "text": "further",
+    "start": 2.512,
+    "end": 2.927
+   },
+   {
+    "text": "off",
+    "start": 2.927,
+    "end": 3.105
+   },
+   {
+    "text": "his",
+    "start": 3.105,
+    "end": 3.283
+   },
+   {
+    "text": "line.",
+    "start": 3.283,
+    "end": 3.58
+   },
+   {
+    "text": "Chance",
+    "start": 3.58,
+    "end": 4.312
+   },
+   {
+    "text": "of",
+    "start": 4.312,
+    "end": 4.556
+   },
+   {
+    "text": "success,",
+    "start": 4.556,
+    "end": 5.531
+   },
+   {
+    "text": "0.03%",
+    "start": 5.531,
+    "end": 6.141
+   },
+   {
+    "text": "chance",
+    "start": 6.141,
+    "end": 6.873
+   },
+   {
+    "text": "he",
+    "start": 6.873,
+    "end": 7.117
+   },
+   {
+    "text": "tries",
+    "start": 7.117,
+    "end": 7.726
+   },
+   {
+    "text": "anyway.",
+    "start": 7.726,
+    "end": 8.58
+   }
+  ]
  },
  "s7-verdict.part3.wav": {
-  "key": "c040590bd1535f7302bdf43b86b1b89b423e2edd",
-  "words": []
+  "key": "08ad2ffbf41e5341f9262659e6b9208acb086690",
+  "words": [
+   {
+    "text": "100.",
+    "start": 0,
+    "end": 1
+   }
+  ]
  },
  "s8-outro.part0.wav": {
-  "key": "f965a3ad1f4b2f9e4dd8a4ae92cf2d603d4c57e3",
-  "words": []
+  "key": "6c279d40f446e1f68aba6b2496ea3022dba19e68",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.339
+   },
+   {
+    "text": "you",
+    "start": 0.339,
+    "end": 0.542
+   },
+   {
+    "text": "imagine",
+    "start": 0.542,
+    "end": 1.016
+   },
+   {
+    "text": "another",
+    "start": 1.016,
+    "end": 1.491
+   },
+   {
+    "text": "scenario",
+    "start": 1.491,
+    "end": 2.033
+   },
+   {
+    "text": "that",
+    "start": 2.033,
+    "end": 2.304
+   },
+   {
+    "text": "we",
+    "start": 2.304,
+    "end": 2.439
+   },
+   {
+    "text": "should",
+    "start": 2.439,
+    "end": 2.846
+   },
+   {
+    "text": "do",
+    "start": 2.846,
+    "end": 2.981
+   },
+   {
+    "text": "next?",
+    "start": 2.981,
+    "end": 3.32
+   },
+   {
+    "text": "Write",
+    "start": 3.32,
+    "end": 3.715
+   },
+   {
+    "text": "it",
+    "start": 3.715,
+    "end": 3.873
+   },
+   {
+    "text": "in",
+    "start": 3.873,
+    "end": 4.031
+   },
+   {
+    "text": "the",
+    "start": 4.031,
+    "end": 4.269
+   },
+   {
+    "text": "comments.",
+    "start": 4.269,
+    "end": 4.98
+   }
+  ]
  }
 }

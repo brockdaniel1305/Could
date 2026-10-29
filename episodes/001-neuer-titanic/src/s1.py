@@ -15,6 +15,8 @@ cards = (banner(sid, "q", "CASE FILE 001", "Could Manuel Neuer<br>save the Titan
          + card(sid, "m", "METHOD", "Scientific", 120, 400, w=None)
          + card(sid, "t", "TIME SPENT", "Far too long", 230, 590, "gold"))
 js = """
+      // v3: opening punch-in (new first frame)
+      tl.fromTo(S + "svg", { scale: 1.14 }, { scale: 1, transformOrigin: "50% 60%", duration: 0.8, ease: "power2.out" }, 0);
       waves(S + "sea-waves1", S + "front-waves2");
       puffs(S + "tit");
       tl.fromTo(S + "ship", { x: 0, rotation: -0.8, svgOrigin: "325 0" }, { x: 30, rotation: 0.8, duration: D, ease: "sine.inOut" }, 0);

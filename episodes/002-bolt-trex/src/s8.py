@@ -6,8 +6,8 @@ world = f"""
 {part("track-day", sid + "-track")}
 {course(sid, start_blocks=False)}
 """
-cards = (banner(sid, "b", "NEXT RACE", "Who should we<br>race next?", 60, 330)
-         + card(sid, "c", "COMMENT YOUR MATCHUP", "↓ ↓ ↓", 60, 640, "gold"))
+cards = (banner(sid, "b", "NEXT CASE", "Could you imagine<br>another scenario?", 50, 330)
+         + card(sid, "c", "WRITE IT IN THE COMMENTS", "↓ ↓ ↓", 60, 640, "gold"))
 js = f"""
       const PX = {PX}, NOSE = {NOSE};
       gsap.set(S + "tape", {{ opacity: 0 }});

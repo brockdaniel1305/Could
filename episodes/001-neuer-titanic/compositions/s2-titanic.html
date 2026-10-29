@@ -131,8 +131,8 @@
   <script>
     (function () {
       const S = "#s2-titanic-";
-      const D = 14.273;
-      const C = {"name": 0.987, "tons": 2.532, "uns": 6.265, "date": 8.775, "won": 12.014};
+      const D = 13.82;
+      const C = {"name": 1.003, "tons": 2.329, "uns": 5.361, "date": 8.35, "won": 11.57};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s2-titanic-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

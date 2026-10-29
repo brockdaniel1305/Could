@@ -9,8 +9,8 @@ world = f"""
 <g fill="#9cc9ea" stroke="#1a1a2e" stroke-width="4"><circle id="{sid}-bub1" cx="200" cy="1240" r="14" /><circle id="{sid}-bub2" cx="240" cy="1270" r="10" /><circle id="{sid}-bub3" cx="175" cy="1285" r="8" /></g>
 {part("sea-front", sid + "-front", WL=WL + 22)}
 """
-cards = (banner(sid, "b", "NEXT CASE", "Who should we<br>send next?", 60, 330)
-         + card(sid, "c", "COMMENT YOUR MATCHUP", "↓ ↓ ↓", 50, 620, "gold"))
+cards = (banner(sid, "b", "NEXT CASE", "Could you imagine<br>another scenario?", 50, 330)
+         + card(sid, "c", "WRITE IT IN THE COMMENTS", "↓ ↓ ↓", 50, 620, "gold"))
 js = """
       waves(S + "sea-waves1", S + "front-waves2");
       fly("b", 0.05, null, { from: "top" });

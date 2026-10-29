@@ -163,8 +163,8 @@
   <script>
     (function () {
       const S = "#s3-neuer-";
-      const D = 18.415;
-      const C = {"name": 0.959, "h": 1.954, "wc": 4.381, "out": 5.936, "ice": 12.282, "zero": 16.216};
+      const D = 17.637;
+      const C = {"name": 1.085, "h": 2.313, "wc": 5.345, "out": 7.215, "ice": 12.117, "zero": 15.507};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s3-neuer-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
