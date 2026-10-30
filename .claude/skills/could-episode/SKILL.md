@@ -73,6 +73,9 @@ Lokal beim Creator erledigt `sh tools/make_episode.sh episodes/<ep>` alles in ei
 - `channel/IDEAS.md`: Status der Folge auf ✅ setzen, neue Ideen aus dem Gespräch ergänzen.
 - **Folgenarchiv aktualisieren**: `channel/overview/folgen.html` (EPISODES-Liste: Fassung, Länge, Datei, Versionen, Chat-Entscheidungen,
   Caption) und mit dem Artifact-Tool erneut veröffentlichen (gleiche Datei, gleiche URL: https://claude.ai/artifact/USAvCprTbBxbHt4EhtK62A).
+  Video dazu: Web-Fassung unter 15 MB (`ffmpeg -i <final.mp4> -vf scale=720:1280 -c:v libx264 -preset slow -crf 26 -maxrate 800k -bufsize 1600k
+  -c:a aac -b:a 96k -movflags +faststart channel/overview/videos/<nnn>.mp4`, Poster `<nnn>.jpg` bei 3 s) und als `files` mit `root` /home/user/Could
+  mitveröffentlichen (`videos/<nnn>.mp4`, `videos/<nnn>.jpg`; höchstens 64 MB pro Publish). Download-Knopf läuft über die Fähigkeit `downloads`.
 - Committen und auf den Arbeitsbranch pushen. Videos, Stimmen und Builds sind per `.gitignore` ausgeschlossen.
 
 ## 6. Dazulernen (wichtig)

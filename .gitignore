@@ -3,3 +3,4 @@ renders/
 .hyperframes/
 __pycache__/
 episodes/*/assets/voice/*.part*.wav
+channel/overview/videos/

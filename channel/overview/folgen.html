@@ -74,6 +74,15 @@
   .v.mono { font: 500 13px/1.4 var(--mono); }
   .ver { display: inline-block; background: var(--accent); color: var(--accent-ink); font: 700 13px/1 var(--mono); padding: 4px 8px; border-radius: 6px; }
 
+  .body { display: grid; grid-template-columns: 300px minmax(0, 1fr); }
+  .player { padding: 16px; border-right: 1.5px solid var(--line); display: grid; gap: 10px; align-content: start; justify-items: center;
+            background: color-mix(in srgb, var(--chip) 40%, var(--paper)); }
+  .player video { width: 100%; max-width: 268px; aspect-ratio: 9 / 16; border-radius: 12px; background: #000; display: block; }
+  .player .btn { width: 100%; max-width: 268px; justify-content: center; }
+  .player .hint { font-size: 12px; color: var(--muted); text-align: center; margin: 0; max-width: 268px; }
+  .main { min-width: 0; }
+  @media (max-width: 760px) { .body { grid-template-columns: 1fr; } .player { border-right: 0; border-bottom: 1.5px solid var(--line); } }
+  .btn[disabled] { opacity: .55; cursor: default; }
   .cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
   .cols > section { padding: 16px 18px 18px; min-width: 0; }
   .cols > section + section { border-left: 1.5px solid var(--line); }
@@ -99,7 +108,7 @@
   <header class="top">
     <div class="brand">Case Files · Stand 29.10.2026</div>
     <h1>COULD<b>?</b> Folgenarchiv</h1>
-    <p class="lede">Jede Folge mit ihrer aktuellsten Fassung, der Versionsgeschichte und dem, was wir im Chat dazu entschieden haben. Neueste Folge zuerst.</p>
+    <p class="lede">Jede Folge zum Anschauen und Herunterladen, mit ihrer aktuellsten Fassung, der Versionsgeschichte und dem, was wir im Chat dazu entschieden haben. Neueste Folge zuerst.</p>
     <div class="toplinks">
       <a class="btn primary" id="chatlink" href="https://claude.ai/code/session_0132AGQTzkhEcLrKynbVZigm" target="_blank" rel="noopener">Zum Chatverlauf öffnen ↗</a>
       <a class="btn" href="https://github.com/brockdaniel1305/Could/tree/claude/tiktok-video-creation-gbtnbc" target="_blank" rel="noopener">Projekt auf GitHub ↗</a>
@@ -191,6 +200,13 @@ document.getElementById("index").innerHTML = EPISODES.map((e) => `<a href="#e${e
 document.getElementById("files").innerHTML = EPISODES.map((e) => `
   <article class="file" id="e${e.n}">
     <div class="strip"><span class="num">CASE ${e.n}</span><h2>${esc(e.title)}</h2><span class="pill ${e.status[0]}">${e.status[1]}</span></div>
+    <div class="body">
+    <div class="player">
+      <video controls playsinline preload="none" poster="videos/${e.n}.jpg" src="videos/${e.n}.mp4" aria-label="Video ${e.n} abspielen"></video>
+      <button class="btn primary dl" type="button" data-dl="${e.n}" hidden>Video herunterladen</button>
+      <p class="hint">Web-Fassung 720p. Die Full-HD-Datei hast du im Chat bekommen.</p>
+    </div>
+    <div class="main">
     <div class="latest">
       <div><span class="k">Aktuelle Fassung</span><span class="ver">${e.ver}</span></div>
       <div><span class="k">Länge</span><span class="v">${e.len}</span></div>
@@ -201,6 +217,8 @@ document.getElementById("files").innerHTML = EPISODES.map((e) => `
       <section><h3>Versionen</h3><ol class="hist">${e.hist.map(([t, d], i) => `<li class="${i === e.hist.length - 1 ? "cur" : ""}"><span class="tag">${t}</span><p>${esc(d)}</p></li>`).join("")}</ol></section>
       <section><h3>Im Chat besprochen</h3><ul class="chat">${e.chat.map(([w, t]) => `<li class="${w}"><span class="who">${w === "you" ? "Du" : "Claude"}</span>${esc(t)}</li>`).join("")}</ul></section>
     </div>
+    </div>
+    </div>
     <div class="foot">
       <p class="cap"><span class="k">Caption</span>${esc(e.caption)}</p>
       <button class="btn" type="button" data-cap="${e.n}">Caption kopieren</button>
@@ -209,7 +227,27 @@ document.getElementById("files").innerHTML = EPISODES.map((e) => `
     </div>
   </article>`).join("");
 
+// downloads: only where the viewer can save files; otherwise the button stays hidden
+let downloads = null;
+(async () => {
+  try { downloads = await window.claude?.use?.("downloads"); } catch { downloads = null; }
+  if (downloads) document.querySelectorAll("button[data-dl]").forEach((b) => { b.hidden = false; });
+})();
 document.addEventListener("click", async (ev) => {
+  const d = ev.target.closest("button[data-dl]");
+  if (d && downloads) {
+    const e = EPISODES.find((x) => x.n === d.dataset.dl);
+    d.disabled = true; d.textContent = "Lädt …";
+    try {
+      const blob = await (await fetch(`videos/${e.n}.mp4`)).blob();
+      await downloads.save({ filename: `COULD-${e.n}-${e.ver}.mp4`, data: blob });
+      d.textContent = "Gespeichert";
+    } catch (err) {
+      d.textContent = err && err.code === "declined" ? "Abgebrochen" : "Download nicht möglich";
+    }
+    setTimeout(() => { d.disabled = false; d.textContent = "Video herunterladen"; }, 2500);
+    return;
+  }
   const b = ev.target.closest("button[data-cap]");
   if (!b) return;
   const e = EPISODES.find((x) => x.n === b.dataset.cap);
