@@ -13,6 +13,10 @@ Headline → Haaland (1.94 m, ~36 km/h, 36 PL-Tore, Herz & Leber, Meditation) �
 ## Geprüft
 - `lint` 0/0, `check` 0 Fehler, 0 Warnungen (außer Dateigröße). Snapshots an 16 Zeitpunkten, 8 Frames aus dem MP4.
 
+## v2 (30.10.)
+- Stimmungs-Barometer entfernt (Wunsch des Creators), stattdessen springt die Menge auf den Rängen bei den Höhepunkten.
+- Meditationspose korrigiert: Hüfte auf dem Boden, Beine vorne gekreuzt, Hände auf den Knien.
+- SFX waren schon sparsam (2), unverändert.
+
 ## Schwächste Stellen
-- Die Meditationspose (Beine seitlich) liest sich eher wie "Hampelmann" als wie ein Schneidersitz.
 - Die Figuren sind im Verhältnis zur Arena eher klein.

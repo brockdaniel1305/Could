@@ -1,10 +1,10 @@
 import sys; sys.path.insert(0, __file__.rsplit('/episodes/', 1)[0] + '/tools')  # noqa: E702
 from scene import *  # noqa: F403
-from arena import arena, gauge, haaland, fighter, MEDITATE_JS, GY  # noqa: E402
+from arena import arena, haaland, fighter, MEDITATE_JS, GY  # noqa: E402
 sid = "s5-retiarius"
 D = TIMING[sid]["duration"]
 mesh = "".join(f'<path d="M{-150 + i * 30},-150 L{-150 + i * 30},150" />' for i in range(11)) + "".join(f'<path d="M-150,{-150 + i * 30} L150,{-150 + i * 30}" />' for i in range(11))
-w = (arena(sid) + fighter(sid, "retiarius", "ret", 760, 1.1) + haaland(sid, 280) + gauge(sid)
+w = (arena(sid) + fighter(sid, "retiarius", "ret", 760, 1.1) + haaland(sid, 280)
      + f'<g transform="translate(280,{GY - 200})"><g id="{sid}-net"><g stroke="#d8c59a" stroke-width="7" fill="none">{mesh}</g><g stroke="#1a1a2e" stroke-width="2" fill="none" opacity="0.6">{mesh}</g></g></g>'
      + f'<g transform="translate(400,{GY - 440})"><g id="{sid}-hearts" fill="#e0412f" stroke="#1a1a2e" stroke-width="4"><path d="M0,20 C-36,-6 -24,-36 0,-18 C24,-36 36,-6 0,20 Z" /><path transform="translate(70,-40) scale(0.7)" d="M0,20 C-36,-6 -24,-36 0,-18 C24,-36 36,-6 0,20 Z" /></g></g>')
 cards = (banner(sid, "b", "ROUND 2", "The Retiarius", 60, 330)
@@ -25,7 +25,7 @@ js = MEDITATE_JS + f"""
       swap(S + "h-m-o", S + "h-m-smile", C.home + 0.6);
       tl.to(S + "h-armL", {{ rotation: 160, duration: 0.3, ease: "back.out(2)" }}, C.home + 0.7);
       tl.to(S + "h-armR", {{ rotation: -160, duration: 0.3, ease: "back.out(2)" }}, C.home + 0.75);
-      needle(85, C.home + 0.8);
+      cheer(C.home + 0.8);
       fly("fl", C.feel, null, {{ from: "right" }});
       pop(S + "hearts", C.feel + 0.3);
       tl.to([S + "retp-pupL", S + "retp-pupR"], {{ x: -6, duration: 0.2 }}, C.feel);

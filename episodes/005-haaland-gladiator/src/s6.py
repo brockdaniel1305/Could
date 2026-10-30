@@ -1,10 +1,10 @@
 import sys; sys.path.insert(0, __file__.rsplit('/episodes/', 1)[0] + '/tools')  # noqa: E702
 from scene import *  # noqa: F403
-from arena import arena, gauge, haaland, fighter, MEDITATE_JS, GY  # noqa: E402
+from arena import arena, haaland, fighter, MEDITATE_JS, GY  # noqa: E402
 sid = "s6-lion"
 D = TIMING[sid]["duration"]
 w = (arena(sid) + haaland(sid, 300)
-     + f'<g transform="translate(0,{GY})"><g id="{sid}-lwrap"><g transform="translate(700,0) scale(1.0)">{part("lion", sid + "-l")}</g></g></g>' + gauge(sid))
+     + f'<g transform="translate(0,{GY})"><g id="{sid}-lwrap"><g transform="translate(700,0) scale(1.0)">{part("lion", sid + "-l")}</g></g></g>')
 cards = (banner(sid, "b", "ROUND 3", "The Lion", 60, 330)
          + card(sid, "lv", "LION SPRINT", "up to 80 km/h", 520, 380, "red")
          + card(sid, "hv", "HAALAND", "~36 km/h", 520, 560)
@@ -21,7 +21,6 @@ js = MEDITATE_JS + """
       fly("lv", C.v, C.run - 0.1, { from: "right" });
       fly("hv", C.h, C.run - 0.1, { from: "right" });
       tl.fromTo(S + "l-jaw", { y: 0 }, { y: 10, duration: 0.2, yoyo: true, repeat: 5 }, C.v + 0.4);
-      needle(-80, C.v + 0.4);
       swap(S + "h-m-smile", S + "h-m-o", C.v + 0.5);
       fly("rn", C.run, C.zen - 0.1);
       // so he sits down and meditates
@@ -34,6 +33,6 @@ js = MEDITATE_JS + """
       tl.to(S + "l-q", { opacity: 0, duration: 0.2 }, C.lion + 0.2);
       tl.set(S + "l-stand", { opacity: 0 }, C.lion + 0.4); tl.set(S + "l-sit", { opacity: 1 }, C.lion + 0.4);
       fly("ls", C.lion + 0.5, null, { from: "right" });
-      needle(70, C.lion + 0.6);
+      cheer(C.lion + 0.6);
 """
 scene(sid, w, js, cards)

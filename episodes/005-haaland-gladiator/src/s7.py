@@ -1,9 +1,9 @@
 import sys; sys.path.insert(0, __file__.rsplit('/episodes/', 1)[0] + '/tools')  # noqa: E702
 from scene import *  # noqa: F403
-from arena import arena, gauge, haaland, fighter, MEDITATE_JS, GY  # noqa: E402
+from arena import arena, haaland, fighter, MEDITATE_JS, GY  # noqa: E402
 sid = "s7-verdict"
 D = TIMING[sid]["duration"]
-w = (arena(sid) + haaland(sid, 420) + f'<g transform="translate(0,{GY})"><g id="{sid}-lwrap"><g transform="translate(760,0) scale(0.9)">{part("lion", sid + "-l")}</g></g></g>' + gauge(sid))
+w = (arena(sid) + haaland(sid, 420) + f'<g transform="translate(0,{GY})"><g id="{sid}-lwrap"><g transform="translate(760,0) scale(0.9)">{part("lion", sid + "-l")}</g></g></g>')
 cards = (banner(sid, "b", "THE VERDICT", "Could he survive?", 60, 330)
          + card(sid, "hs", "1ST-CENTURY FIGHTS WITHOUT A DEATH", "~9 in 10", 40, 380, "gold")
          + card(sid, "cw", "CROWD", "50,000 × HAALAND", 300, 560)
@@ -23,7 +23,7 @@ js = MEDITATE_JS + """
       fly("hs", C.hist, C.p1 - 0.1);
       fly("cw", C.crowd, C.p1 - 0.1, { from: "right" });
       tl.fromTo(S + "col-crowd", { y: 0 }, { y: -14, duration: 0.22, ease: "sine.inOut", repeat: R(D - C.crowd, 0.22), yoyo: true }, C.crowd);
-      needle(90, C.crowd + 0.2, 0.8);
+      cheer(C.crowd + 0.2);
       tl.to(S + "h-armL", { rotation: 160, duration: 0.3, ease: "back.out(2)" }, C.crowd + 0.3);
       tl.to(S + "h-armR", { rotation: -160, duration: 0.3, ease: "back.out(2)" }, C.crowd + 0.35);
       tl.to([S + "h-armL", S + "h-armR"], { rotation: 0, duration: 0.3 }, C.p2 - 0.3);

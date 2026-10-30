@@ -1,9 +1,9 @@
 import sys; sys.path.insert(0, __file__.rsplit('/episodes/', 1)[0] + '/tools')  # noqa: E702
 from scene import *  # noqa: F403
-from arena import arena, gauge, haaland, fighter, MEDITATE_JS, GY  # noqa: E402
+from arena import arena, haaland, fighter, MEDITATE_JS, GY  # noqa: E402
 sid = "s4-murmillo"
 D = TIMING[sid]["duration"]
-w = (arena(sid) + fighter(sid, "murmillo", "mur", 720, 1.15) + haaland(sid, 250) + gauge(sid)
+w = (arena(sid) + fighter(sid, "murmillo", "mur", 720, 1.15) + haaland(sid, 250)
      + f'<g transform="translate(330,{GY - 18})"><g id="{sid}-ball"><g transform="scale(1.2)">{part("football", sid + "-fb")}</g></g></g>'
      + f'<g transform="translate(640,{GY - 300}) scale(1.3)">{part("burst", sid + "-boom", WORD="BOOM")}</g>')
 cards = (banner(sid, "b", "ROUND 1", "The Murmillo", 60, 330)
@@ -29,7 +29,7 @@ js = MEDITATE_JS + """
       tl.to(S + "ball", { x: 200, y: 40, duration: 0.5, ease: "power2.in" }, hit);
       tl.to(S + "mur", { x: 40, duration: 0.2, yoyo: true, repeat: 1 }, hit);
       fly("sh", C.hit + 0.2, C.goal - 0.1, { from: "right" });
-      needle(80, C.hit + 0.2);
+      cheer(C.hit + 0.2);
       // neither does his confidence: sword drops, eyes wide
       tl.to(S + "murp-sword", { y: 120, rotation: 80, duration: 0.5, ease: "power2.in" }, C.goal);
       tl.to([S + "murp-pupL", S + "murp-pupR"], { scale: 1.6, transformOrigin: "50% 50%", duration: 0.2 }, C.goal + 0.2);
