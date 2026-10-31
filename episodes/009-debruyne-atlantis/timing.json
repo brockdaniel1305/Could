@@ -1,0 +1,358 @@
+{
+ "duration": 26.0,
+ "voice": "kokoro:bm_george",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 4.02,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 3.47,
+   "cues": {},
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.523
+    },
+    {
+     "text": "prime",
+     "start": 0.523,
+     "end": 0.897
+    },
+    {
+     "text": "Kevin",
+     "start": 0.897,
+     "end": 1.27
+    },
+    {
+     "text": "De",
+     "start": 1.27,
+     "end": 1.419
+    },
+    {
+     "text": "Bruyne",
+     "start": 1.419,
+     "end": 1.867
+    },
+    {
+     "text": "find",
+     "start": 1.867,
+     "end": 2.166
+    },
+    {
+     "text": "Atlantis",
+     "start": 2.166,
+     "end": 2.763
+    },
+    {
+     "text": "with",
+     "start": 2.763,
+     "end": 3.062
+    },
+    {
+     "text": "a",
+     "start": 3.062,
+     "end": 3.137
+    },
+    {
+     "text": "pass?",
+     "start": 3.137,
+     "end": 3.51
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s2-kdb",
+   "start": 4.02,
+   "duration": 6.13,
+   "voice": "assets/voice/s2-kdb.wav",
+   "voiceStart": 0.15,
+   "speech": 5.58,
+   "cues": {
+    "n": 1.286,
+    "fog": 2.991
+   },
+   "words": [
+    {
+     "text": "Kevin",
+     "start": 0.15,
+     "end": 0.556
+    },
+    {
+     "text": "De",
+     "start": 0.556,
+     "end": 0.718
+    },
+    {
+     "text": "Bruyne.",
+     "start": 0.718,
+     "end": 1.286
+    },
+    {
+     "text": "Twenty",
+     "start": 1.286,
+     "end": 1.449
+    },
+    {
+     "text": "assists",
+     "start": 1.449,
+     "end": 2.017
+    },
+    {
+     "text": "in",
+     "start": 2.017,
+     "end": 2.179
+    },
+    {
+     "text": "one",
+     "start": 2.179,
+     "end": 2.423
+    },
+    {
+     "text": "season.",
+     "start": 2.423,
+     "end": 2.991
+    },
+    {
+     "text": "He",
+     "start": 2.991,
+     "end": 3.154
+    },
+    {
+     "text": "finds",
+     "start": 3.154,
+     "end": 3.559
+    },
+    {
+     "text": "team-mates",
+     "start": 3.559,
+     "end": 4.29
+    },
+    {
+     "text": "nobody",
+     "start": 4.29,
+     "end": 4.777
+    },
+    {
+     "text": "else",
+     "start": 4.777,
+     "end": 5.102
+    },
+    {
+     "text": "can",
+     "start": 5.102,
+     "end": 5.345
+    },
+    {
+     "text": "see.",
+     "start": 5.345,
+     "end": 5.67
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "at": 3.291,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s3-atlantis",
+   "start": 10.15,
+   "duration": 4.72,
+   "voice": "assets/voice/s3-atlantis.wav",
+   "voiceStart": 0.15,
+   "speech": 4.17,
+   "cues": {
+    "lost": 0.948,
+    "see": 2.9
+   },
+   "words": [
+    {
+     "text": "Atlantis.",
+     "start": 0.15,
+     "end": 0.948
+    },
+    {
+     "text": "Lost",
+     "start": 0.948,
+     "end": 1.303
+    },
+    {
+     "text": "for",
+     "start": 1.303,
+     "end": 1.569
+    },
+    {
+     "text": "over",
+     "start": 1.569,
+     "end": 1.924
+    },
+    {
+     "text": "two",
+     "start": 1.924,
+     "end": 2.072
+    },
+    {
+     "text": "thousand",
+     "start": 2.072,
+     "end": 2.367
+    },
+    {
+     "text": "years.",
+     "start": 2.367,
+     "end": 2.9
+    },
+    {
+     "text": "Nobody",
+     "start": 2.9,
+     "end": 3.432
+    },
+    {
+     "text": "can",
+     "start": 3.432,
+     "end": 3.698
+    },
+    {
+     "text": "see",
+     "start": 3.698,
+     "end": 3.964
+    },
+    {
+     "text": "it.",
+     "start": 3.964,
+     "end": 4.23
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-pass",
+   "start": 14.87,
+   "duration": 11.13,
+   "voice": "assets/voice/s4-pass.wav",
+   "voiceStart": 0.15,
+   "speech": 9.38,
+   "cues": {
+    "look": 1.3,
+    "pass": 2.028,
+    "found": 4.18,
+    "a21": 5.536,
+    "like": 7.42
+   },
+   "words": [
+    {
+     "text": "Perfect.",
+     "start": 0.15,
+     "end": 2.15
+    },
+    {
+     "text": "No",
+     "start": 1.3,
+     "end": 1.508
+    },
+    {
+     "text": "look.",
+     "start": 1.508,
+     "end": 2.028
+    },
+    {
+     "text": "One",
+     "start": 2.028,
+     "end": 2.34
+    },
+    {
+     "text": "pass.",
+     "start": 2.34,
+     "end": 2.86
+    },
+    {
+     "text": "Atlantis:",
+     "start": 4.18,
+     "end": 5.014
+    },
+    {
+     "text": "found.",
+     "start": 5.014,
+     "end": 5.536
+    },
+    {
+     "text": "Assist",
+     "start": 5.536,
+     "end": 6.161
+    },
+    {
+     "text": "number",
+     "start": 6.161,
+     "end": 6.787
+    },
+    {
+     "text": "twenty",
+     "start": 6.787,
+     "end": 6.977
+    },
+    {
+     "text": "one.",
+     "start": 6.977,
+     "end": 7.12
+    },
+    {
+     "text": "Even",
+     "start": 7.42,
+     "end": 7.787
+    },
+    {
+     "text": "Atlantis",
+     "start": 7.787,
+     "end": 8.522
+    },
+    {
+     "text": "left",
+     "start": 8.522,
+     "end": 8.889
+    },
+    {
+     "text": "a",
+     "start": 8.889,
+     "end": 9.081
+    },
+    {
+     "text": "like.",
+     "start": 9.081,
+     "end": 9.53
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "at": 2.128,
+     "volume": 0.4
+    },
+    {
+     "name": "splash",
+     "at": 3.028,
+     "volume": 0.45
+    },
+    {
+     "name": "bubbles",
+     "at": 3.278,
+     "volume": 0.3
+    },
+    {
+     "name": "impact-bass-1",
+     "at": 4.39,
+     "volume": 0.4
+    },
+    {
+     "name": "ding",
+     "at": 7.62,
+     "volume": 0.3
+    }
+   ]
+  }
+ ]
+}

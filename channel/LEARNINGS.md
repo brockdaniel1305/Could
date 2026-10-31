@@ -5,6 +5,12 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-31 · 009 · **In jeder Folge ein Aufruf zu Liken und Folgen/Abonnieren, gut in die Geschichte eingebaut** (z. B. eine Figur gibt
+  Daumen hoch / ein Like-Herz, und der Erzähler sagt trocken etwas wie "Even Atlantis left a like."). Dazu am Ende Karten LIKE · FOLLOW.
+- 2026-10-31 · 009 · **Neues Kurzformat (< 30 s) fürs Repertoire**: Hook → Person (1 Satz Stat) → Ziel (1 Satz) → Pointe, in der es klappt
+  oder lustig scheitert. Kein gesprochenes Outro; stattdessen Karten "WRITE YOUR SCENARIO IN THE COMMENTS ↓" + Like/Follow.
+  Die Pointe greift die Stat aus der Vorstellung logisch wieder auf (De Bruyne findet, was niemand sieht → Atlantis).
+- 2026-10-31 · 009 · Keine Witze über Opfer von Verbrechen/Völkermord (Anne-Frank-Idee abgelehnt, Alternative Atlantis gewählt).
 - 2026-10-29 · 008 · **Kein Barometer/Stimmungs-Meter** unter den Untertiteln mehr (und keine Sounds dazu), "stört das Video".
   Die untere Hälfte stattdessen mit der Szene selbst füllen (Boden, Menge, Wasser …). Ersetzt die Erfahrung aus 005 (Stimmungs-Barometer).
 - 2026-10-29 · 008 · Lieber **kürzer** (008: ~80 s statt 105 s) und vor allem ein **kurzes Ende**. Pointen über bekannte Eigenschaften
@@ -31,7 +37,7 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
     tts + transcribe geprüft (die Transkription muss den echten Namen zurückliefern).
 - 2026-10-28 · 004 · Bei Fußballer-Folgen darf (und soll, wenn gewünscht) der Erzähler **stark sarkastisch** loben
   ("one of the best centre backs in the world right now. Genuinely."). Die Karten spielen mit ("SARCASM LEVEL: Genuinely zero", "*mostly").
-- 2026-10-28 · ab 003 · **Jedes Video endet mit dem Satz: "Could you imagine another scenario that we should do next? Write it in the comments."**
+- 2026-10-28 · ab 003 · **Jede normale Folge (nicht das Kurzformat) endet mit dem Satz: "Could you imagine another scenario that we should do next? Write it in the comments."**
   Outro-Banner: NEXT CASE / "Could you imagine another scenario?", Karte: WRITE IT IN THE COMMENTS ↓ ↓ ↓.
 - 2026-10-28 · 002 · "perfekt, genau so müssen die Videos aussehen": 002 (Bolt vs T-Rex) ist zusammen mit 001 v2 die Referenz.
   Gedankenexperimente "im gleichen lustigen Stil" erzählen: Headline → beide vorstellen → drei Anläufe/Abschnitte mit Stats → Urteil.

@@ -1,0 +1,282 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "5488d357e5ebb216720ed26d9ecd99ce35700ace",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.373
+   },
+   {
+    "text": "prime",
+    "start": 0.373,
+    "end": 0.747
+   },
+   {
+    "text": "Kevin",
+    "start": 0.747,
+    "end": 1.12
+   },
+   {
+    "text": "De",
+    "start": 1.12,
+    "end": 1.269
+   },
+   {
+    "text": "Bruyne",
+    "start": 1.269,
+    "end": 1.717
+   },
+   {
+    "text": "find",
+    "start": 1.717,
+    "end": 2.016
+   },
+   {
+    "text": "Atlantis",
+    "start": 2.016,
+    "end": 2.613
+   },
+   {
+    "text": "with",
+    "start": 2.613,
+    "end": 2.912
+   },
+   {
+    "text": "a",
+    "start": 2.912,
+    "end": 2.987
+   },
+   {
+    "text": "pass?",
+    "start": 2.987,
+    "end": 3.36
+   }
+  ]
+ },
+ "s2-kdb.part0.wav": {
+  "key": "9d5b5b4aed152e537700e1107205f29fd258cefa",
+  "words": [
+   {
+    "text": "Kevin",
+    "start": 0,
+    "end": 0.406
+   },
+   {
+    "text": "De",
+    "start": 0.406,
+    "end": 0.568
+   },
+   {
+    "text": "Bruyne,",
+    "start": 0.568,
+    "end": 1.136
+   },
+   {
+    "text": "20",
+    "start": 1.136,
+    "end": 1.299
+   },
+   {
+    "text": "assists",
+    "start": 1.299,
+    "end": 1.867
+   },
+   {
+    "text": "in",
+    "start": 1.867,
+    "end": 2.029
+   },
+   {
+    "text": "one",
+    "start": 2.029,
+    "end": 2.273
+   },
+   {
+    "text": "season,",
+    "start": 2.273,
+    "end": 2.841
+   },
+   {
+    "text": "he",
+    "start": 2.841,
+    "end": 3.004
+   },
+   {
+    "text": "finds",
+    "start": 3.004,
+    "end": 3.409
+   },
+   {
+    "text": "teammates",
+    "start": 3.409,
+    "end": 4.14
+   },
+   {
+    "text": "nobody",
+    "start": 4.14,
+    "end": 4.627
+   },
+   {
+    "text": "else",
+    "start": 4.627,
+    "end": 4.952
+   },
+   {
+    "text": "can",
+    "start": 4.952,
+    "end": 5.195
+   },
+   {
+    "text": "see.",
+    "start": 5.195,
+    "end": 5.52
+   }
+  ]
+ },
+ "s3-atlantis.part0.wav": {
+  "key": "dcf4deb3fec88b0c28a07e154fe740b4290b538f",
+  "words": [
+   {
+    "text": "Atlantis,",
+    "start": 0,
+    "end": 0.798
+   },
+   {
+    "text": "lost",
+    "start": 0.798,
+    "end": 1.153
+   },
+   {
+    "text": "for",
+    "start": 1.153,
+    "end": 1.419
+   },
+   {
+    "text": "over",
+    "start": 1.419,
+    "end": 1.774
+   },
+   {
+    "text": "2,000",
+    "start": 1.774,
+    "end": 2.217
+   },
+   {
+    "text": "years,",
+    "start": 2.217,
+    "end": 2.75
+   },
+   {
+    "text": "nobody",
+    "start": 2.75,
+    "end": 3.282
+   },
+   {
+    "text": "can",
+    "start": 3.282,
+    "end": 3.548
+   },
+   {
+    "text": "see",
+    "start": 3.548,
+    "end": 3.814
+   },
+   {
+    "text": "it.",
+    "start": 3.814,
+    "end": 4.08
+   }
+  ]
+ },
+ "s4-pass.part0.wav": {
+  "key": "0d2213f31124e0951999c22f573ec7eb71933c92",
+  "words": [
+   {
+    "text": "Perfect!",
+    "start": 0,
+    "end": 2
+   }
+  ]
+ },
+ "s4-pass.part1.wav": {
+  "key": "23c93e163eb6421d456beac4b519b47ef12ee64c",
+  "words": [
+   {
+    "text": "No",
+    "start": 0,
+    "end": 0.208
+   },
+   {
+    "text": "look,",
+    "start": 0.208,
+    "end": 0.728
+   },
+   {
+    "text": "one",
+    "start": 0.728,
+    "end": 1.04
+   },
+   {
+    "text": "pass.",
+    "start": 1.04,
+    "end": 1.56
+   }
+  ]
+ },
+ "s4-pass.part2.wav": {
+  "key": "50c60ebaaecb567bcc25ee537169472dfb0dbb86",
+  "words": [
+   {
+    "text": "Atlantis",
+    "start": 0,
+    "end": 0.834
+   },
+   {
+    "text": "found",
+    "start": 0.834,
+    "end": 1.356
+   },
+   {
+    "text": "assist",
+    "start": 1.356,
+    "end": 1.981
+   },
+   {
+    "text": "number",
+    "start": 1.981,
+    "end": 2.607
+   },
+   {
+    "text": "21.",
+    "start": 2.607,
+    "end": 2.92
+   }
+  ]
+ },
+ "s4-pass.part3.wav": {
+  "key": "7418aeb4175273c86225a396460f107d4dfbbae0",
+  "words": [
+   {
+    "text": "even",
+    "start": 0,
+    "end": 0.367
+   },
+   {
+    "text": "Atlantis",
+    "start": 0.367,
+    "end": 1.102
+   },
+   {
+    "text": "left",
+    "start": 1.102,
+    "end": 1.469
+   },
+   {
+    "text": "alike.",
+    "start": 1.469,
+    "end": 2.02
+   }
+  ]
+ }
+}

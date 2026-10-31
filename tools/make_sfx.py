@@ -254,6 +254,23 @@ def page():
     return band(noise(d), 1200, 7000) * env(int(SR * d), 0.005, 0.08, 4)
 
 
+
+def splash():
+    """Ball hits the water: a short wet burst with a low plop, 0.9 s."""
+    d = 0.9
+    tt = t(d)
+    plop = sweep(260, 90, 0.18, 0.5) * env(int(SR * 0.18), 0.002, 0.1, 5)
+    wash = band(noise(d), 400, 5000) * env(len(tt), 0.01, 0.5, 3)
+    return mix(d, (0.0, plop), (0.0, wash * 0.7))
+
+
+def bubbles():
+    """Bubbles rising (short pitched blips), 1.6 s."""
+    d = 1.6
+    parts = [(rng.uniform(0, 1.45), sweep(rng.uniform(500, 900), rng.uniform(1200, 2000), 0.05, 1) * env(int(SR * 0.05), 0.002, 0.03, 5) * rng.uniform(0.4, 1)) for _ in range(22)]
+    return mix(d, *parts)
+
+
 SOUNDS = {
     "stomp": (stomp, "Army foot stamp: low thud + grit. Peak at 0 s."),
     "boing": (boing, "Cartoon spring boing (bounce, comic surprise)."),
@@ -281,6 +298,8 @@ SOUNDS = {
     "bell": (bell, "Church bell, 2.5 s."),
     "creak": (creak, "Door creak, 0.9 s."),
     "page": (page, "Calendar page flip."),
+    "splash": (splash, "Ball hits the water."),
+    "bubbles": (bubbles, "Bubbles while sinking, 1.6 s."),
 }
 
 

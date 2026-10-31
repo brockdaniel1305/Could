@@ -1,0 +1,64 @@
+{
+  "id": "009",
+  "title": "Could prime Kevin De Bruyne find Atlantis with a pass?",
+  "format": "short",
+  "provider": "voicestudio",
+  "voice": "fable",
+  "model": "tts-1",
+  "preview_voice": "bm_george",
+  "speed": 1.08,
+  "caption": "Could prime Kevin De Bruyne find Atlantis with a pass? No look. One pass. 🌊⚽ #could #debruyne #atlantis #football #shorts #whatif #fyp",
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "text": "Could prime Kevin De Bruyne find Atlantis with a pass?"
+    },
+    {
+      "id": "s2-kdb",
+      "text": "Kevin De Bruyne. {{n}}Twenty assists in one season. {{fog}}He finds team-mates nobody else can see.",
+      "sfx": [
+        {
+          "name": "kick",
+          "at": 3.291,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s3-atlantis",
+      "text": "Atlantis. {{lost}}Lost for over two thousand years. {{see}}Nobody can see it."
+    },
+    {
+      "id": "s4-pass",
+      "text": "Perfect. ||0.3|| {{look}}No look. {{pass}}One pass. ||1.3|| {{found}}Atlantis: found. {{a21}}Assist number twenty one. ||0.3|| {{like}}Even Atlantis left a like.",
+      "tail": 2.6,
+      "sfx": [
+        {
+          "name": "kick",
+          "at": 2.128,
+          "volume": 0.4
+        },
+        {
+          "name": "splash",
+          "at": 3.028,
+          "volume": 0.45
+        },
+        {
+          "name": "bubbles",
+          "at": 3.278,
+          "volume": 0.3
+        },
+        {
+          "name": "impact-bass-1",
+          "at": 4.39,
+          "volume": 0.4
+        },
+        {
+          "name": "ding",
+          "at": 7.62,
+          "volume": 0.3
+        }
+      ]
+    }
+  ]
+}

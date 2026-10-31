@@ -128,5 +128,15 @@
     "file": "page.wav",
     "duration": 0.18,
     "description": "Calendar page flip."
+  },
+  "splash": {
+    "file": "splash.wav",
+    "duration": 0.9,
+    "description": "Ball hits the water."
+  },
+  "bubbles": {
+    "file": "bubbles.wav",
+    "duration": 1.6,
+    "description": "Bubbles while sinking, 1.6 s."
   }
 }
