@@ -33,3 +33,16 @@ Status: ✅ fertig · 📝 Skript · 💡 Idee
 | 020 | Could Thomas Müller find space in a Tokyo subway at rush hour? | 💡 |
 
 Tipp: Die besten neuen Ideen kommen aus den Kommentaren unter "Who should we send next?".
+
+## Neue Ideen (31.10.2026)
+| Frage | Hook / Twist | Status |
+|-------|--------------|--------|
+| Could Erling Haaland beat a Viking army? | Norweger, 1,94 m gegen Wikinger (~1,72 m); Langschiff vs. Sprint; Meditations-Gag kehrt zurück | 💡 |
+| Could Manuel Neuer have stopped the Wembley goal of 1966? | Echte Streitfrage (drin oder nicht?), Reichweite, Flugbahn; England + Deutschland | 💡 |
+| Could Virgil van Dijk hold back the North Sea? | Ein Viertel der Niederlande liegt unter dem Meeresspiegel; Pointe: die Deiche können es schon | 💡 |
+| Could Kevin De Bruyne pass a ball across the English Channel? | 34 km, längster Pass ~90 m → Passstaffel, Fähre, Wind | 💡 |
+| Could Usain Bolt outrun a Deutsche Bahn ICE? | DB-Verspätung als Running Gag (kam in 006 gut an) | 💡 |
+| Could Manuel Neuer have saved Pompeii? | Fortsetzung zu 001: Vulkanbomben halten, Sweeper Keeper gegen Asche | 💡 |
+| Could Neymar survive a medieval joust? | Sarkasmus wie bei 004: er fällt, bevor die Lanze ihn trifft | 💡 |
+| Could Steph Curry hit a three from the International Space Station? | Fortsetzung zu 003: 400 km Höhe, Wiedereintritt | 💡 |
+| Could Mbappé win a rematch against Napoleon's horse? | Fortsetzung zu 008 (Rematch-Reihe) | 💡 |
