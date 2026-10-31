@@ -40,6 +40,7 @@
              background: rgba(26, 26, 46, 0.35); letter-spacing: -0.02em; }
   </style>
   <div id="root" data-composition-id="s4-standoff" data-width="1080" data-height="1920">
+    <div class="cam" id="s4-standoff-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s4-standoff-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s4-standoff-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s4-standoff-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -405,6 +406,7 @@
     <div class="card gold" id="s4-standoff-c-me" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 560px;"><div class="ck">MESSI</div><div class="cv">1</div></div>
     <div class="card red" id="s4-standoff-c-od" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">THE ODDS</div><div class="cv">380,000 : 1</div></div>
     <div class="score" id="s4-standoff-score"><span class="sn">ROME</span><span class="sv" id="s4-standoff-sa">0</span><span class="sc">:</span><span class="sv" id="s4-standoff-sb">0</span><span class="sn">MESSI</span></div>
+    </div>
     <div class="dip" id="s4-standoff-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -557,6 +559,7 @@
       front.forEach((r) => look(r + "p", -6, 6, C.laces + 0.4));
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s4-standoff"] = tl;

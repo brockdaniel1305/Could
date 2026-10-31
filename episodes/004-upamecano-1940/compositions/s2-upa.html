@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s2-upa" data-width="1080" data-height="1920">
+    <div class="cam" id="s2-upa-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s2-upa-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s2-upa-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s2-upa-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -179,6 +180,7 @@
     <div class="card " id="s2-upa-c-h" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">HEIGHT</div><div class="cv">1.86 m</div></div>
     <div class="card " id="s2-upa-c-em" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">EASY MISTAKES</div><div class="cv">0</div></div>
     <div class="card red" id="s2-upa-c-mo" data-layout-allow-overflow data-layout-allow-overlap style="left: 650px; top: 560px;"><div class="ck">FOOTNOTE</div><div class="cv">*mostly</div></div>
+    </div>
     <div class="dip" id="s2-upa-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -243,6 +245,7 @@
       swap(S + "k1t-smirk", S + "k1t-grin", C.wink + 0.6);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s2-upa"] = tl;

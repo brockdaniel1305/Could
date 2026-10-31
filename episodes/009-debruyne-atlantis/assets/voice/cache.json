@@ -278,5 +278,40 @@
     "end": 1.56
    }
   ]
+ },
+ "s4-pass.part4.wav": {
+  "key": "3ab3c43088cbe9c772f7753f5c0225308d99adba",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.12
+   },
+   {
+    "text": "next",
+    "start": 0.12,
+    "end": 0.36
+   },
+   {
+    "text": "time,",
+    "start": 0.36,
+    "end": 0.66
+   },
+   {
+    "text": "someone",
+    "start": 0.66,
+    "end": 1.08
+   },
+   {
+    "text": "asks",
+    "start": 1.08,
+    "end": 1.32
+   },
+   {
+    "text": "you.",
+    "start": 1.32,
+    "end": 1.56
+   }
+  ]
  }
 }

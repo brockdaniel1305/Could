@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s6-offside" data-width="1080" data-height="1920">
+    <div class="cam" id="s6-offside-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s6-offside-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s6-offside-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s6-offside-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -284,6 +285,7 @@
     <div class="banner" id="s6-offside-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 330px;"><div class="bk">PHASE 3</div><div class="bt">The Offside Trap</div></div>
     <div class="card gold" id="s6-offside-c-off" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 540px;"><div class="ck">OFFSIDE</div><div class="cv">~3,000,000 soldiers</div></div>
     <div class="card red" id="s6-offside-c-var" data-layout-allow-overflow data-layout-allow-overlap style="left: 380px; top: 380px;"><div class="ck">VIDEO REVIEW</div><div class="cv"><span id="s6-offside-var">checking…</span></div></div>
+    </div>
     <div class="dip" id="s6-offside-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -346,6 +348,7 @@
       tl.fromTo(w, { v: 0 }, { v: 6, duration: D - C.var - 0.6, ease: "power1.in", onUpdate() { vt.textContent = w.v < 0.2 ? "checking…" : "week " + Math.min(6, Math.ceil(w.v)) + " of 6"; } }, C.var + 0.4);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s6-offside"] = tl;

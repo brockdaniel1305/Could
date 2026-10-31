@@ -46,6 +46,7 @@
              display: flex; align-items: center; justify-content: center; font: 900 160px/1 "Inter"; opacity: 0; background: rgba(244, 239, 230, 0.25); }
   </style>
   <div id="root" data-composition-id="s6-horse" data-width="1080" data-height="1920">
+    <div class="cam" id="s6-horse-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s6-horse-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s6-horse-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s6-horse-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -150,6 +151,7 @@
     <div class="card red" id="s6-horse-c-s2" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">HORSE</div><div class="cv">45 km/h</div></div>
     <div class="card red" id="s6-horse-c-fm" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 560px;"><div class="ck">FASTEST MAN IN FRANCE</div><div class="cv">No. 2</div></div>
     <div class="cal" id="s6-horse-cal"><div class="ch"><span id="s6-horse-cm">BRUMAIRE</span></div><div class="cb"><span id="s6-horse-cd"></span></div><div class="cyy" id="s6-horse-cy">1799</div></div>
+    </div>
     <div class="dip" id="s6-horse-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -288,6 +290,7 @@
       fly("fm", C.second, null);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s6-horse"] = tl;

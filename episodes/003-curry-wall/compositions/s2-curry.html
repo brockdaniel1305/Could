@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s2-curry" data-width="1080" data-height="1920">
+    <div class="cam" id="s2-curry-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s2-curry-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s2-curry-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s2-curry-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -141,6 +142,7 @@
     <div class="card " id="s2-curry-c-h" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 520px;"><div class="ck">HEIGHT</div><div class="cv">1.88 m</div></div>
     <div class="card gold" id="s2-curry-c-tp" data-layout-allow-overflow data-layout-allow-overlap style="left: 360px; top: 380px;"><div class="ck">THREE-POINTERS MADE</div><div class="cv"><span id="s2-curry-cnt">0</span></div></div>
     <div class="card " id="s2-curry-c-ar" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">RELEASE ANGLE</div><div class="cv">~52°</div></div>
+    </div>
     <div class="dip" id="s2-curry-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -225,6 +227,7 @@
       tl.to(S + "p-lids", { opacity: 1, duration: 0.01 }, C.walk + 1.2);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s2-curry"] = tl;

@@ -40,6 +40,7 @@
              background: rgba(26, 26, 46, 0.35); letter-spacing: -0.02em; }
   </style>
   <div id="root" data-composition-id="s5-dribble" data-width="1080" data-height="1920">
+    <div class="cam" id="s5-dribble-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s5-dribble-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s5-dribble-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s5-dribble-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -695,6 +696,7 @@
     <div class="card " id="s5-dribble-c-gf" data-layout-allow-overflow data-layout-allow-overlap style="left: 420px; top: 560px;"><div class="ck">GETAFE, 2007</div><div class="cv">5 + keeper, ~12 s</div></div>
     <div class="card red" id="s5-dribble-c-tm" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 560px;"><div class="ck">TIME NEEDED</div><div class="cv"><span id="s5-dribble-day">~9 days</span></div></div>
     <div class="score" id="s5-dribble-score"><span class="sn">ROME</span><span class="sv" id="s5-dribble-sa">0</span><span class="sc">:</span><span class="sv" id="s5-dribble-sb">0</span><span class="sn">MESSI</span></div>
+    </div>
     <div class="dip" id="s5-dribble-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -888,6 +890,7 @@
       score(C.into + 0.9, 0, 1);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s5-dribble"] = tl;

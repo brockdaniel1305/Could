@@ -35,6 +35,7 @@
     .heart { position: absolute; left: 400px; top: 300px; width: 280px; height: 260px; opacity: 0; }
   </style>
   <div id="root" data-composition-id="s2-kdb" data-width="1080" data-height="1920">
+    <div class="cam" id="s2-kdb-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s2-kdb-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s2-kdb-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s2-kdb-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -102,6 +103,7 @@
     <div class="banner" id="s2-kdb-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 330px;"><div class="bk">THE PASSER</div><div class="bt">Kevin De Bruyne</div></div>
     <div class="card gold" id="s2-kdb-c-as" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">ASSISTS IN ONE SEASON</div><div class="cv"><span id="s2-kdb-an">0</span></div></div>
     <div class="card " id="s2-kdb-c-un" data-layout-allow-overflow data-layout-allow-overlap style="left: 600px; top: 560px;"><div class="ck">FINDS</div><div class="cv">The unseen</div></div>
+    </div>
     <div class="dip" id="s2-kdb-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -176,6 +178,7 @@
       fly("un", C.fog + 1.2, null, { from: "right" });
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s2-kdb"] = tl;

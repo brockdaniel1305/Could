@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s1-hook" data-width="1080" data-height="1920">
+    <div class="cam" id="s1-hook-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s1-hook-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s1-hook-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s1-hook-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -137,6 +138,7 @@
     <div class="banner" id="s1-hook-c-q" data-layout-allow-overflow data-layout-allow-overlap style="left: 50px; top: 330px;"><div class="bk">CASE FILE 003</div><div class="bt">Could Steph Curry<br>make a three over<br>the Great Wall?</div></div>
     <div class="card " id="s1-hook-c-m" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 420px;"><div class="ck">METHOD</div><div class="cv">Scientific</div></div>
     <div class="card gold" id="s1-hook-c-pr" data-layout-allow-overflow data-layout-allow-overlap style="left: 520px; top: 600px;"><div class="ck">EQUIPMENT</div><div class="cv">1 protractor</div></div>
+    </div>
     <div class="dip" id="s1-hook-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -182,8 +184,6 @@
           { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
       };
 
-      // v3: opening punch-in (new first frame)
-      tl.fromTo(S + "svg", { scale: 1.14 }, { scale: 1, transformOrigin: "50% 60%", duration: 0.8, ease: "power2.out" }, 0);
       // frame 0 is the thumbnail: the question is already on screen
       tl.fromTo(S + "c-q", { opacity: 1, x: 0, y: 0, rotation: -2 }, { y: -1100, rotation: 8, duration: 0.4, ease: "power3.in" }, C.sci - 0.45);
       fly("m", C.sci, null, { from: "right" });
@@ -197,7 +197,9 @@
       tl.to([S + "w-browL", S + "w-browR"], { y: -16, duration: 0.25, ease: "back.out(3)" }, C.sci);
       swap(S + "w-smirk", S + "w-grin", C.sci + 0.2);
 
+      tl.fromTo(S + "cam", { x: 1080 }, { x: 0, duration: 0.3, ease: "power3.out" }, 0);
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s1-hook"] = tl;

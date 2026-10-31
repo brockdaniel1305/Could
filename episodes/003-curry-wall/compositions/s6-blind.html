@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s6-blind" data-width="1080" data-height="1920">
+    <div class="cam" id="s6-blind-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s6-blind-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s6-blind-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s6-blind-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -139,6 +140,7 @@
     <div class="card gold" id="s6-blind-c-t" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 360px;"><div class="ck">MARGIN OF ERROR</div><div class="cv">± 0.2°</div></div>
     <div class="card " id="s6-blind-c-m" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 330px;"><div class="ck">EVERY MISS LANDS IN</div><div class="cv">China</div></div>
     <div class="card red" id="s6-blind-c-wk" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">FETCHING THE BALL</div><div class="cv">88 days on foot</div></div>
+    </div>
     <div class="dip" id="s6-blind-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -224,6 +226,7 @@
       tl.to([S + "p-pupL", S + "p-pupR"], { x: 7, duration: 0.3 }, C.miss + 0.6);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s6-blind"] = tl;

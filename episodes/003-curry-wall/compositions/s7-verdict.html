@@ -34,6 +34,7 @@
              background: rgba(26, 26, 46, 0.35); }
   </style>
   <div id="root" data-composition-id="s7-verdict" data-width="1080" data-height="1920">
+    <div class="cam" id="s7-verdict-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s7-verdict-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s7-verdict-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s7-verdict-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -146,6 +147,7 @@
     <div class="card " id="s7-verdict-c-p" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 400px;"><div class="ck">CHANCE PER SHOT (EST.)</div><div class="cv">2 %</div></div>
     <div class="card gold" id="s7-verdict-c-tr" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 580px;"><div class="ck">CHANCE HE TURNS AROUND</div><div class="cv"><span id="s7-verdict-p3v">100 %</span></div></div>
     <div class="stamp" id="s7-verdict-stamp">TECHNICALLY.</div>
+    </div>
     <div class="dip" id="s7-verdict-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -233,6 +235,7 @@
       tl.fromTo(S + "p3v", { opacity: 0 }, { opacity: 1, duration: 0.15 }, C.p3);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s7-verdict"] = tl;

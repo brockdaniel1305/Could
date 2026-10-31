@@ -46,6 +46,7 @@
              display: flex; align-items: center; justify-content: center; font: 900 160px/1 "Inter"; opacity: 0; background: rgba(244, 239, 230, 0.25); }
   </style>
   <div id="root" data-composition-id="s2-france" data-width="1080" data-height="1920">
+    <div class="cam" id="s2-france-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s2-france-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s2-france-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s2-france-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -162,6 +163,7 @@
     <div class="card gold" id="s2-france-c-br" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">BREAD COSTS</div><div class="cv"><span id="s2-france-bp">0 %</span> of a wage<div class="bar"><i id="s2-france-bar"></i></div></div></div>
     <div class="card red" id="s2-france-c-jb" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">JOB OF LEADER</div><div class="cv">Vacant</div></div>
     <div class="cal" id="s2-france-cal"><div class="ch"><span id="s2-france-cm">JULY</span></div><div class="cb"><span id="s2-france-cd">14</span></div><div class="cyy" id="s2-france-cy">1789</div></div>
+    </div>
     <div class="dip" id="s2-france-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -283,6 +285,7 @@
       fly("jb", C.job + 0.2, null, { from: "right" });
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s2-france"] = tl;

@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s5-tackle" data-width="1080" data-height="1920">
+    <div class="cam" id="s5-tackle-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s5-tackle-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s5-tackle-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s5-tackle-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -183,6 +184,7 @@
     <div class="card gold" id="s5-tackle-c-up" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 540px;"><div class="ck">UPAMECANO</div><div class="cv">~90 kg</div></div>
     <div class="card gold" id="s5-tackle-c-cl" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">TACKLE</div><div class="cv">Clean. All ball.</div></div>
     <div class="card red" id="s5-tackle-c-bk" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 560px;"><div class="ck">BOOKED</div><div class="cv">The tank (simulation)</div></div>
+    </div>
     <div class="dip" id="s5-tackle-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -254,6 +256,7 @@
       fly("bk", C.card + 0.3, null, { from: "right" });
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s5-tackle"] = tl;

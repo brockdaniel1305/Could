@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s6-lion" data-width="1080" data-height="1920">
+    <div class="cam" id="s6-lion-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s6-lion-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s6-lion-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s6-lion-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -125,6 +126,7 @@
     <div class="card " id="s6-lion-c-rn" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">RUNNING AWAY</div><div class="cv">Not an option</div></div>
     <div class="card gold" id="s6-lion-c-md" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">PLAN</div><div class="cv">Meditation</div></div>
     <div class="card gold" id="s6-lion-c-ls" data-layout-allow-overflow data-layout-allow-overlap style="left: 480px; top: 560px;"><div class="ck">LION</div><div class="cv">Also meditating</div></div>
+    </div>
     <div class="dip" id="s6-lion-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -210,6 +212,7 @@
       cheer(C.lion + 0.6);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s6-lion"] = tl;

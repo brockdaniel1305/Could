@@ -36,6 +36,7 @@
     .heart { position: absolute; left: 290px; top: 780px; width: 180px; height: 166px; opacity: 0; }
   </style>
   <div id="root" data-composition-id="s4-end" data-width="1080" data-height="1920">
+    <div class="cam" id="s4-end-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s4-end-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s4-end-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s4-end-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -128,13 +129,14 @@
     <div class="card gold" id="s4-end-c-cm" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">WRITE YOUR SCENARIO IN THE COMMENTS</div><div class="cv">↓ ↓ ↓</div></div>
     <div class="card red" id="s4-end-c-fl" data-layout-allow-overflow data-layout-allow-overlap style="left: 470px; top: 560px;"><div class="ck">FOR THE NEXT CASE</div><div class="cv">Like · Follow</div></div>
     <div class="stamp" id="s4-end-stamp">UPGRADE.</div><svg class="heart" id="s4-end-heart" viewBox="0 0 100 92"><path d="M50,88 C10,60 0,40 0,25 C0,10 12,0 26,0 C38,0 46,8 50,16 C54,8 62,0 74,0 C88,0 100,10 100,25 C100,40 90,60 50,88 Z" fill="#ff3b5c" stroke="#1a1a2e" stroke-width="5" /></svg>
+    </div>
     <div class="dip" id="s4-end-dip" data-layout-ignore></div>
   </div>
   <script>
     (function () {
       const S = "#s4-end-";
-      const D = 12.089;
-      const C = {"nof": 1.864, "nop": 2.344, "still": 3.313, "m": 4.971, "b": 6.344, "up": 7.971, "like": 9.404};
+      const D = 12.646;
+      const C = {"nof": 1.864, "nop": 2.344, "still": 3.313, "m": 4.971, "b": 6.344, "up": 7.971, "like": 9.404, "loop": 10.789};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s4-end-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
@@ -198,7 +200,8 @@
       fly("cm", C.like + 1.4, null);
       fly("fl", C.like + 1.6, null, { from: "right" });
 
-      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      tl.fromTo(S + "cam", { x: 0 }, { x: -1080, duration: 0.3, ease: "power3.in", immediateRender: false }, D - 0.3);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s4-end"] = tl;

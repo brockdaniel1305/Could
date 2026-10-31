@@ -36,6 +36,7 @@
     .heart { position: absolute; left: 290px; top: 780px; width: 180px; height: 166px; opacity: 0; }
   </style>
   <div id="root" data-composition-id="s2-lisandro" data-width="1080" data-height="1920">
+    <div class="cam" id="s2-lisandro-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s2-lisandro-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s2-lisandro-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s2-lisandro-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -171,6 +172,7 @@
     <div class="card red" id="s2-lisandro-c-nk" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">NICKNAME</div><div class="cv">The Butcher</div></div>
     <div class="card " id="s2-lisandro-c-td" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">TODAY</div><div class="cv">At Chelsea</div></div>
     <div class="card red" id="s2-lisandro-c-pn" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">RESULT</div><div class="cv">Penalty</div></div>
+    </div>
     <div class="dip" id="s2-lisandro-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -241,6 +243,7 @@
       tl.to(S + "liw", { x: -700, duration: 0.9, ease: "power1.in" }, C.pen + 0.3);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s2-lisandro"] = tl;

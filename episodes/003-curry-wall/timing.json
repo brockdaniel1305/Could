@@ -1,5 +1,5 @@
 {
- "duration": 100.191,
+ "duration": 100.776,
  "voice": "kokoro:bm_george",
  "scenes": [
   {
@@ -1303,12 +1303,13 @@
   {
    "id": "s8-outro",
    "start": 93.601,
-   "duration": 6.59,
+   "duration": 7.175,
    "voice": "assets/voice/s8-outro.wav",
    "voiceStart": 0.15,
-   "speech": 4.84,
+   "speech": 6.725,
    "cues": {
-    "c": 3.47
+    "c": 3.47,
+    "loop": 5.19
    },
    "words": [
     {
@@ -1385,6 +1386,31 @@
      "text": "comments.",
      "start": 4.419,
      "end": 5.13
+    },
+    {
+     "text": "And",
+     "start": 5.19,
+     "end": 5.474
+    },
+    {
+     "text": "if",
+     "start": 5.474,
+     "end": 5.664
+    },
+    {
+     "text": "anyone",
+     "start": 5.664,
+     "end": 6.232
+    },
+    {
+     "text": "asks",
+     "start": 6.232,
+     "end": 6.611
+    },
+    {
+     "text": "you:",
+     "start": 6.611,
+     "end": 6.99
     }
    ],
    "sfx": []

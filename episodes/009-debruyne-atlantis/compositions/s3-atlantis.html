@@ -35,6 +35,7 @@
     .heart { position: absolute; left: 400px; top: 300px; width: 280px; height: 260px; opacity: 0; }
   </style>
   <div id="root" data-composition-id="s3-atlantis" data-width="1080" data-height="1920">
+    <div class="cam" id="s3-atlantis-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s3-atlantis-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s3-atlantis-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s3-atlantis-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -110,6 +111,7 @@
     <div class="banner" id="s3-atlantis-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 330px;"><div class="bk">THE TARGET</div><div class="bt">Atlantis</div></div>
     <div class="card " id="s3-atlantis-c-ls" data-layout-allow-overflow data-layout-allow-overlap style="left: 520px; top: 560px;"><div class="ck">LAST SEEN</div><div class="cv">~360 BC (Plato)</div></div>
     <div class="card red" id="s3-atlantis-c-vs" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">VISIBLE</div><div class="cv">Not at all</div></div>
+    </div>
     <div class="dip" id="s3-atlantis-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -182,6 +184,7 @@
       look("m", 8, 2, C.see);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s3-atlantis"] = tl;

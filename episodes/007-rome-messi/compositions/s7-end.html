@@ -40,6 +40,7 @@
              background: rgba(26, 26, 46, 0.35); letter-spacing: -0.02em; }
   </style>
   <div id="root" data-composition-id="s7-end" data-width="1080" data-height="1920">
+    <div class="cam" id="s7-end-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s7-end-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s7-end-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s7-end-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -576,6 +577,7 @@
     <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
     <div class="stamp" id="s7-end-stamp" style="border-color: #ffd23f; color: #ffd23f; text-shadow: 0 6px 0 #1a1a2e;">UNSTOPPABLE.</div>
     <div class="score" id="s7-end-score"><span class="sn">ROME</span><span class="sv" id="s7-end-sa">0</span><span class="sc">:</span><span class="sv" id="s7-end-sb">3</span><span class="sn">MESSI</span></div>
+    </div>
     <div class="dip" id="s7-end-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -711,6 +713,7 @@
       stampIn(C.nobody + 1.8);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s7-end"] = tl;

@@ -35,6 +35,7 @@
     .heart { position: absolute; left: 400px; top: 300px; width: 280px; height: 260px; opacity: 0; }
   </style>
   <div id="root" data-composition-id="s1-hook" data-width="1080" data-height="1920">
+    <div class="cam" id="s1-hook-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s1-hook-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s1-hook-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s1-hook-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -100,6 +101,7 @@
     <div class="logo" data-layout-ignore>COULD<b>?</b></div>
     <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
     <div class="banner" id="s1-hook-c-q" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 300px;"><div class="bk">CASE FILE 009</div><div class="bt">Could prime De Bruyne<br>find Atlantis<br>with a pass?</div></div>
+    </div>
     <div class="dip" id="s1-hook-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -162,13 +164,14 @@
       const look = (p, x, y, at, d = 0.2) => tl.to([S + p + "-pupL", S + p + "-pupR"], { x, y, duration: d }, at);
 
       tl.fromTo(S + "c-q", { opacity: 1, x: 0, y: 0, rotation: -2 }, { opacity: 1, duration: 0.01 }, 0);
-      tl.fromTo(S + "svg", { scale: 1.12 }, { scale: 1, transformOrigin: "30% 55%", duration: 0.8, ease: "power2.out" }, 0);
       tl.fromTo(S + "waves", { x: 0 }, { x: -120, duration: D, ease: "none" }, 0);
       tl.fromTo(S + "q", { y: 0 }, { y: -24, duration: 0.6, yoyo: true, repeat: R(D, 0.6), ease: "sine.inOut" }, 0);
       look("m", 7, 0, 0.8);
       tl.fromTo(S + "m-legR", { rotation: 0 }, { rotation: -12, duration: 0.5, yoyo: true, repeat: R(D, 0.5), ease: "sine.inOut" }, 0);
 
+      tl.fromTo(S + "cam", { x: 1080 }, { x: 0, duration: 0.3, ease: "power3.out" }, 0);
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s1-hook"] = tl;

@@ -1,5 +1,5 @@
 {
- "duration": 26.858,
+ "duration": 27.415,
  "voice": "kokoro:am_adam",
  "scenes": [
   {
@@ -241,10 +241,10 @@
   {
    "id": "s4-end",
    "start": 14.769,
-   "duration": 12.089,
+   "duration": 12.646,
    "voice": "assets/voice/s4-end.wav",
    "voiceStart": 0.15,
-   "speech": 10.339,
+   "speech": 12.196,
    "cues": {
     "nof": 1.864,
     "nop": 2.344,
@@ -252,7 +252,8 @@
     "m": 4.971,
     "b": 6.344,
     "up": 7.971,
-    "like": 9.404
+    "like": 9.404,
+    "loop": 10.789
    },
    "words": [
     {
@@ -424,6 +425,36 @@
      "text": "like.",
      "start": 10.234,
      "end": 10.611
+    },
+    {
+     "text": "So",
+     "start": 10.789,
+     "end": 10.909
+    },
+    {
+     "text": "next",
+     "start": 10.909,
+     "end": 11.149
+    },
+    {
+     "text": "time",
+     "start": 11.149,
+     "end": 11.449
+    },
+    {
+     "text": "someone",
+     "start": 11.449,
+     "end": 11.869
+    },
+    {
+     "text": "asks",
+     "start": 11.869,
+     "end": 12.109
+    },
+    {
+     "text": "you:",
+     "start": 12.109,
+     "end": 12.349
     }
    ],
    "sfx": [

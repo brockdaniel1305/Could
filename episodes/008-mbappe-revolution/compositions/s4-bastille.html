@@ -46,6 +46,7 @@
              display: flex; align-items: center; justify-content: center; font: 900 160px/1 "Inter"; opacity: 0; background: rgba(244, 239, 230, 0.25); }
   </style>
   <div id="root" data-composition-id="s4-bastille" data-width="1080" data-height="1920">
+    <div class="cam" id="s4-bastille-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s4-bastille-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s4-bastille-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s4-bastille-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -433,6 +434,7 @@
     <div class="card " id="s4-bastille-c-pr" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 380px;"><div class="ck">PRISONERS</div><div class="cv">7</div></div>
     <div class="card gold" id="s4-bastille-c-fa" data-layout-allow-overflow data-layout-allow-overlap style="left: 560px; top: 380px;"><div class="ck">NEW FANS</div><div class="cv">7</div></div>
     <div class="cal" id="s4-bastille-cal"><div class="ch"><span id="s4-bastille-cm">JULY</span></div><div class="cb"><span id="s4-bastille-cd">14</span></div><div class="cyy" id="s4-bastille-cy">1789</div></div>
+    </div>
     <div class="dip" id="s4-bastille-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -575,6 +577,7 @@
       fly("fa", C.fans, null, { from: "right" });
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s4-bastille"] = tl;

@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s5-retiarius" data-width="1080" data-height="1920">
+    <div class="cam" id="s5-retiarius-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s5-retiarius-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s5-retiarius-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s5-retiarius-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -118,6 +119,7 @@
     <div class="card " id="s5-retiarius-c-wp" data-layout-allow-overflow data-layout-allow-overlap style="left: 520px; top: 520px;"><div class="ck">WEAPONS</div><div class="cv">Trident & net</div></div>
     <div class="card gold" id="s5-retiarius-c-cr" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 380px;"><div class="ck">HAALAND&#x27;S CAREER</div><div class="cv">In the back of the net</div></div>
     <div class="card " id="s5-retiarius-c-fl" data-layout-allow-overflow data-layout-allow-overlap style="left: 420px; top: 560px;"><div class="ck">FEELING</div><div class="cv">Right at home</div></div>
+    </div>
     <div class="dip" id="s5-retiarius-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -199,6 +201,7 @@
       swap(S + "retp-m-smile", S + "retp-m-o", C.feel + 0.2);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s5-retiarius"] = tl;
