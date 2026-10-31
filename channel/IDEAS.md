@@ -12,6 +12,7 @@ Status: ✅ fertig · 📝 Skript · 💡 Idee
 | 006 | Could Cristiano Ronaldo jump high enough to dodge a moving train? | ✅ |
 | 007 | Could the Roman Empire stop prime Lionel Messi? | ✅ |
 | 008 | Could Kylian Mbappé dictate the French Revolution? | ✅ |
+| 009 | Could prime Kevin De Bruyne find Atlantis with a pass? | 📝 |
 | 021 | Could Usain Bolt outrun a Deutsche Bahn ICE? (Spoiler: on a delayed day, yes) | 💡 |
 | 003 | Could 100 grandmas knit a sweater for the Statue of Liberty? | 💡 |
 | 004 | Could Gordon Ramsay cater for the entire Roman army? | 💡 |
@@ -40,7 +41,7 @@ Tipp: Die besten neuen Ideen kommen aus den Kommentaren unter "Who should we sen
 | Could Erling Haaland beat a Viking army? | Norweger, 1,94 m gegen Wikinger (~1,72 m); Langschiff vs. Sprint; Meditations-Gag kehrt zurück | 💡 |
 | Could Manuel Neuer have stopped the Wembley goal of 1966? | Echte Streitfrage (drin oder nicht?), Reichweite, Flugbahn; England + Deutschland | 💡 |
 | Could Virgil van Dijk hold back the North Sea? | Ein Viertel der Niederlande liegt unter dem Meeresspiegel; Pointe: die Deiche können es schon | 💡 |
-| Could Kevin De Bruyne pass a ball across the English Channel? | 34 km, längster Pass ~90 m → Passstaffel, Fähre, Wind | 💡 |
+| ~~Could Kevin De Bruyne pass a ball across the English Channel?~~ → wird 009 (Atlantis) | 34 km, längster Pass ~90 m → Passstaffel, Fähre, Wind | 💡 |
 | Could Usain Bolt outrun a Deutsche Bahn ICE? | DB-Verspätung als Running Gag (kam in 006 gut an) | 💡 |
 | Could Manuel Neuer have saved Pompeii? | Fortsetzung zu 001: Vulkanbomben halten, Sweeper Keeper gegen Asche | 💡 |
 | Could Neymar survive a medieval joust? | Sarkasmus wie bei 004: er fällt, bevor die Lanze ihn trifft | 💡 |
