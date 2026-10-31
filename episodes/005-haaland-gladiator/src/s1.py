@@ -19,4 +19,4 @@ js = MEDITATE_JS + """
       tl.fromTo(S + "murp-sword", { rotation: 0 }, { rotation: -25, svgOrigin: "0 86", duration: 0.3, yoyo: true, repeat: 3 }, C.sci);
       tl.fromTo(S + "retp-trident", { y: 0 }, { y: -10, duration: 0.3, yoyo: true, repeat: 3 }, C.sci + 0.2);
 """
-scene(sid, w, js, cards, extra_css=".banner .bt { font-size: 74px; }")
+scene(sid, w, js, cards, extra_css=".banner .bt { font-size: 74px; }", loop_in=True)

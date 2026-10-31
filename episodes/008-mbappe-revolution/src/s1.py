@@ -30,4 +30,4 @@ js = JS + """
       fly("dst", C.back + 0.1, null);
       fly("me", C.sci, null, { from: "right" });
 """
-scene(sid, w, js, cards, extra_css=".banner .bt { font-size: 74px; }" + CSS)
+scene(sid, w, js, cards, extra_css=".banner .bt { font-size: 74px; }" + CSS, loop_in=True)

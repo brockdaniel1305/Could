@@ -46,7 +46,7 @@ SFX = {k: (KIT_SFX / v["file"], v["duration"]) for k, v in json.loads((KIT_SFX /
 for k, v in SFX_MANIFEST.items():
     SFX.setdefault(k, (SFX_LIB / v["file"], v["duration"]))
 W, H = 1080, 1920
-LEAD, TAIL, OUTRO_TAIL = 0.15, 0.4, 1.6
+LEAD, TAIL, OUTRO_TAIL, LOOP_TAIL = 0.15, 0.4, 1.6, 0.3
 
 UNIT = re.compile(r"\{\{(\w+)\}\}|\{([^|{}]*)\|([^{}]*)\}|(\S+)")
 
@@ -300,7 +300,9 @@ def main():
         cache_p.write_text(json.dumps(cache, indent=1))
         wav = vdir / f"{sc['id']}.wav"
         last = n == len(cfg["scenes"]) - 1
-        dur = round(LEAD + speech + (OUTRO_TAIL if last else sc.get("tail", TAIL)), 3)
+        # loop episodes (cfg "loop": true) end right after the last word, so the end runs straight into the hook
+        end_tail = LOOP_TAIL if cfg.get("loop") else sc.get("tail", OUTRO_TAIL)
+        dur = round(LEAD + speech + (end_tail if last else sc.get("tail", TAIL)), 3)
         local_words = [{"text": u["shown"], "start": round(LEAD + s, 3), "end": round(LEAD + e, 3)}
                        for u, (s, e) in zip(units, spans)]
         cues = {k: round(LEAD + spans[i][0], 3) if i < len(spans) else round(LEAD + speech, 3)

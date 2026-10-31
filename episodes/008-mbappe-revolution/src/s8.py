@@ -16,4 +16,4 @@ js = JS + """
       gallop(0, D, "n", 0.35);
       tl.fromTo(S + "n-narm", { rotation: -150 }, { rotation: -120, duration: 0.3, yoyo: true, repeat: R(D, 0.3) }, 0);
 """
-scene(sid, w, js, cards, extra_css=CSS)
+scene(sid, w, js, cards, extra_css=CSS, loop_out=True)

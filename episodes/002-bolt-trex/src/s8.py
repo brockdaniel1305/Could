@@ -25,4 +25,4 @@ js = f"""
       fly("b", 0.05, null, {{ from: "top" }});
       fly("c", C.c, null, {{ from: "right" }});
 """
-scene(sid, world, js, cards)
+scene(sid, world, js, cards, loop_out=True)

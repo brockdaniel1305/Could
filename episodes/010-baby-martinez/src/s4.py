@@ -35,4 +35,4 @@ js = JS + """
       fly("cm", C.like + 1.4, null);
       fly("fl", C.like + 1.6, null, { from: "right" });
 """
-scene(sid, w, js, cards, extra_css=CSS)
+scene(sid, w, js, cards, extra_css=CSS, loop_out=True)

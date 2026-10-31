@@ -17,4 +17,4 @@ js = """
       tl.to(S + "w-browR", { y: 10, duration: 0.12, yoyo: true, repeat: 1 }, C.c + 0.6);
       swap(S + "w-smirk", S + "w-grin", C.c + 0.6);
 """
-scene(sid, w, js, cards)
+scene(sid, w, js, cards, loop_out=True)

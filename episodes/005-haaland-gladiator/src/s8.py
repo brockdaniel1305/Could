@@ -15,4 +15,4 @@ js = MEDITATE_JS + """
       tl.fromTo(S + "col-crowd", { y: 0 }, { y: -10, duration: 0.25, ease: "sine.inOut", repeat: R(D, 0.25), yoyo: true }, 0);
       cheer(0.2);
 """
-scene(sid, w, js, cards)
+scene(sid, w, js, cards, loop_out=True)

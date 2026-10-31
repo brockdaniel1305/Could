@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s4-start" data-width="1080" data-height="1920">
+    <div class="cam" id="s4-start-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s4-start-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s4-start-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s4-start-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -155,6 +156,7 @@
     <div class="card gold" id="s4-start-c-re" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">REACTION, BOLT</div><div class="cv">0.146 s</div></div>
     <div class="card " id="s4-start-c-hs" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">HEAD START, T-REX</div><div class="cv">+12 m (nose first)</div></div>
     <div class="card red" id="s4-start-c-ld" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">LEADER</div><div class="cv">T-REX</div></div>
+    </div>
     <div class="dip" id="s4-start-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -275,6 +277,7 @@
       swap(S + "b-m-flat", S + "b-m-o", C.ahead + 0.1);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s4-start"] = tl;

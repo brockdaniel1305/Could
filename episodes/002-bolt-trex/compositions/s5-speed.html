@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s5-speed" data-width="1080" data-height="1920">
+    <div class="cam" id="s5-speed-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s5-speed-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s5-speed-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s5-speed-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -145,6 +146,7 @@
     <div class="card " id="s5-speed-c-vr" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">TOP SPEED, T-REX (EST.)</div><div class="cv">~19 km/h</div></div>
     <div class="card red" id="s5-speed-c-ps" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">LEAD CHANGE</div><div class="cv">~35 m</div></div>
     <div class="card gold" id="s5-speed-c-dc" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 520px;"><div class="ck">DECISION</div><div class="cv">Correct ✓</div></div>
+    </div>
     <div class="dip" id="s5-speed-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -260,6 +262,7 @@
       tl.to(S + "b-browL", { y: -5, duration: 0.2 }, C.look + 0.2);
 
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s5-speed"] = tl;

@@ -1273,5 +1273,35 @@
     "end": 4.98
    }
   ]
+ },
+ "s8-outro.part1.wav": {
+  "key": "77cfcc90ccc846039016b39e912750d7f87921a9",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.284
+   },
+   {
+    "text": "if",
+    "start": 0.284,
+    "end": 0.474
+   },
+   {
+    "text": "anyone",
+    "start": 0.474,
+    "end": 1.042
+   },
+   {
+    "text": "asks",
+    "start": 1.042,
+    "end": 1.421
+   },
+   {
+    "text": "you.",
+    "start": 1.421,
+    "end": 1.8
+   }
+  ]
  }
 }

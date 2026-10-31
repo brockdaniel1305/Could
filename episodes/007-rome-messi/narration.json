@@ -192,8 +192,9 @@
     },
     {
       "id": "s8-outro",
-      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments.",
+      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments. ||0.2|| {{loop}}And if anyone asks you:",
       "sfx": []
     }
-  ]
+  ],
+  "loop": true
 }

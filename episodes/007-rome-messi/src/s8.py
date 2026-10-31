@@ -18,4 +18,4 @@ js = JS + """
       tl.fromTo(S + "m-legR", { rotation: 0 }, { rotation: -30, duration: 0.3, ease: "power2.in", yoyo: true, repeat: R(D, 0.3) }, 0);
       tl.fromTo(S + "ball-spin", { rotation: 0 }, { rotation: 360, duration: 0.6, ease: "none", repeat: R(D, 0.6), transformOrigin: "50% 50%" }, 0);
 """
-scene(sid, w, js, cards, extra_css=CSS)
+scene(sid, w, js, cards, extra_css=CSS, loop_out=True)

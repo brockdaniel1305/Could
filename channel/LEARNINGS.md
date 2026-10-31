@@ -5,6 +5,11 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-31 · alle · **Jede Folge ist ein Loop**: Der letzte Satz bleibt offen und läuft in die Frage am Anfang ("… And if anyone asks you:" /
+  "So next time someone asks you:" → "Could …?"), damit Zuschauer das Ende nicht merken. Umsetzung: `"loop": true` in narration.json
+  (letzte Szene endet 0,3 s nach dem letzten Wort, keine Abblende), `scene(..., loop_in=True)` in s1 (Wisch von rechts herein, kein Punch-in)
+  und `scene(..., loop_out=True)` in der letzten Szene (Wisch nach links hinaus). Der Kommentar-Satz/Like-Aufruf kommt VOR den Loop-Satz.
+  Ausgenommen (Wunsch): 001 Neuer, 006 Ronaldo.
 - 2026-10-31 · 009/010 · **Vorschau-Stimme jetzt Adam** (Kokoro `am_adam`, `"preview_voice": "am_adam"`) statt George. Spricht schneller (~10 %).
 - 2026-10-31 · 010 · Aktuelle Spieltags-Kurzfolgen (z. B. nach einer Niederlage) sind gewünscht: echte Szene des Tages als Fakt (Quelle prüfen),
   Pointe als Rechnung ("mit Martínez 2–0, mit dem Baby 1–0"). Der Witz zielt auf die Szene/das Team, nicht auf die Person.

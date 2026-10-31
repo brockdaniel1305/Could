@@ -8,25 +8,63 @@
   "speed": 1.08,
   "caption": "Could Erling Haaland survive as a gladiator in ancient Rome? We asked the Colosseum. And a lion. ⚔️🦁 #could #haaland #gladiator #ancientrome #football #history #whatif #fyp",
   "scenes": [
-    {"id": "s1-hook",
-     "text": "Could Erling Haaland survive as a gladiator in ancient Rome? {{ev}}We looked at the evidence. {{sci}}Scientifically. ||0.2|| {{long}}From a safe distance."},
-    {"id": "s2-haaland",
-     "text": "In the red corner: {{name}}Erling Haaland. {{h}}{1.94|One point nine four} metres of Norwegian striker. {{sp}}Top speed: around thirty six kilometres per hour. {{goals}}Thirty six Premier League goals in one season. {{diet}}He famously eats cow heart and liver. ||0.3|| {{zen}}Then he meditates."},
-    {"id": "s3-arena",
-     "text": "In the blue corner: {{name}}the Colosseum. {{cap}}Around fifty thousand spectators. {{opp}}Opponents with swords, nets and tridents. {{barley}}Gladiators were nicknamed barley men. ||0.3|| {{veg}}They were mostly vegetarian."},
-    {"id": "s4-murmillo",
-     "text": "Round one. {{t}}The murmillo. {{arm}}Sword, big helmet, and a shield the size of a door. {{shot}}Haaland does what he does best. {{kick}}He shoots. ||0.3|| {{hit}}The shield does not survive. {{goal}}Neither does the murmillo's confidence.",
-     "sfx": [{"name": "impact-bass-1", "cue": "hit", "offset": -0.1, "volume": 0.3}]},
-    {"id": "s5-retiarius",
-     "text": "Round two. {{t}}The retiarius. {{net}}He fights with a trident and a net. {{throw}}He throws the net. ||0.3|| {{home}}Haaland has spent his entire career in the back of the net. {{feel}}He feels right at home.",
-     "sfx": [{"name": "whoosh", "cue": "throw", "offset": 0.0, "volume": 0.35}]},
-    {"id": "s6-lion",
-     "text": "Round three. {{t}}The lion. {{v}}A lion sprints at up to eighty kilometres per hour. {{h}}Haaland: thirty six. {{run}}Running away is not an option. ||0.4|| {{zen}}So he sits down and meditates. {{lion}}The lion, confused, sits down next to him."},
-    {"id": "s7-verdict",
-     "text": "The verdict. {{q}}Could Erling Haaland survive as a gladiator? ||0.5|| {{yes}}Yes. ||0.4|| {{hist}}Historically, around nine in ten gladiator fights ended without a death. {{crowd}}And fifty thousand Romans would chant his name. {{p1}}Chance of survival: high. {{p2}}Chance he meditates in the middle of the Colosseum: ||0.25|| {{p3}}one hundred percent.",
-     "tail": 1.0,
-     "sfx": [{"name": "impact-bass-1", "cue": "yes", "offset": 0.14, "volume": 0.4}]},
-    {"id": "s8-outro",
-     "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments."}
-  ]
+    {
+      "id": "s1-hook",
+      "text": "Could Erling Haaland survive as a gladiator in ancient Rome? {{ev}}We looked at the evidence. {{sci}}Scientifically. ||0.2|| {{long}}From a safe distance."
+    },
+    {
+      "id": "s2-haaland",
+      "text": "In the red corner: {{name}}Erling Haaland. {{h}}{1.94|One point nine four} metres of Norwegian striker. {{sp}}Top speed: around thirty six kilometres per hour. {{goals}}Thirty six Premier League goals in one season. {{diet}}He famously eats cow heart and liver. ||0.3|| {{zen}}Then he meditates."
+    },
+    {
+      "id": "s3-arena",
+      "text": "In the blue corner: {{name}}the Colosseum. {{cap}}Around fifty thousand spectators. {{opp}}Opponents with swords, nets and tridents. {{barley}}Gladiators were nicknamed barley men. ||0.3|| {{veg}}They were mostly vegetarian."
+    },
+    {
+      "id": "s4-murmillo",
+      "text": "Round one. {{t}}The murmillo. {{arm}}Sword, big helmet, and a shield the size of a door. {{shot}}Haaland does what he does best. {{kick}}He shoots. ||0.3|| {{hit}}The shield does not survive. {{goal}}Neither does the murmillo's confidence.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "hit",
+          "offset": -0.1,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s5-retiarius",
+      "text": "Round two. {{t}}The retiarius. {{net}}He fights with a trident and a net. {{throw}}He throws the net. ||0.3|| {{home}}Haaland has spent his entire career in the back of the net. {{feel}}He feels right at home.",
+      "sfx": [
+        {
+          "name": "whoosh",
+          "cue": "throw",
+          "offset": 0.0,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s6-lion",
+      "text": "Round three. {{t}}The lion. {{v}}A lion sprints at up to eighty kilometres per hour. {{h}}Haaland: thirty six. {{run}}Running away is not an option. ||0.4|| {{zen}}So he sits down and meditates. {{lion}}The lion, confused, sits down next to him."
+    },
+    {
+      "id": "s7-verdict",
+      "text": "The verdict. {{q}}Could Erling Haaland survive as a gladiator? ||0.5|| {{yes}}Yes. ||0.4|| {{hist}}Historically, around nine in ten gladiator fights ended without a death. {{crowd}}And fifty thousand Romans would chant his name. {{p1}}Chance of survival: high. {{p2}}Chance he meditates in the middle of the Colosseum: ||0.25|| {{p3}}one hundred percent.",
+      "tail": 1.0,
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "yes",
+          "offset": 0.14,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s8-outro",
+      "text": "Could you imagine another scenario that we should do next? {{c}}Write it in the comments. ||0.2|| {{loop}}And if anyone asks you:"
+    }
+  ],
+  "loop": true
 }

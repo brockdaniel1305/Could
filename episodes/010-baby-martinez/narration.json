@@ -35,8 +35,7 @@
     },
     {
       "id": "s4-end",
-      "text": "It can't reach anyone's face. {{nof}}No foul. {{nop}}No penalty. ||0.3|| {{still}}And it's still on the pitch. ||0.4|| {{m}}With Martínez: two nil. {{b}}With the baby: one nil. ||0.3|| {{up}}The baby is an upgrade. {{like}}It even left a like.",
-      "tail": 2.4,
+      "text": "It can't reach anyone's face. {{nof}}No foul. {{nop}}No penalty. ||0.3|| {{still}}And it's still on the pitch. ||0.4|| {{m}}With Martínez: two nil. {{b}}With the baby: one nil. ||0.3|| {{up}}The baby is an upgrade. {{like}}It even left a like. ||0.3|| {{loop}}So next time someone asks you:",
       "sfx": [
         {
           "name": "impact-bass-1",
@@ -50,5 +49,6 @@
         }
       ]
     }
-  ]
+  ],
+  "loop": true
 }

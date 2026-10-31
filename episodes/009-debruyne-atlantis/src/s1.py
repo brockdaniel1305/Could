@@ -9,10 +9,9 @@ w = surface(sid) + q + kdb(sid) + ball
 cards = banner(sid, "q", "CASE FILE 009", "Could prime De Bruyne<br>find Atlantis<br>with a pass?", 40, 300)
 js = JS + """
       tl.fromTo(S + "c-q", { opacity: 1, x: 0, y: 0, rotation: -2 }, { opacity: 1, duration: 0.01 }, 0);
-      tl.fromTo(S + "svg", { scale: 1.12 }, { scale: 1, transformOrigin: "30% 55%", duration: 0.8, ease: "power2.out" }, 0);
       tl.fromTo(S + "waves", { x: 0 }, { x: -120, duration: D, ease: "none" }, 0);
       tl.fromTo(S + "q", { y: 0 }, { y: -24, duration: 0.6, yoyo: true, repeat: R(D, 0.6), ease: "sine.inOut" }, 0);
       look("m", 7, 0, 0.8);
       tl.fromTo(S + "m-legR", { rotation: 0 }, { rotation: -12, duration: 0.5, yoyo: true, repeat: R(D, 0.5), ease: "sine.inOut" }, 0);
 """
-scene(sid, w, js, cards, extra_css=".banner .bt { font-size: 72px; }" + CSS)
+scene(sid, w, js, cards, extra_css=".banner .bt { font-size: 72px; }" + CSS, loop_in=True)

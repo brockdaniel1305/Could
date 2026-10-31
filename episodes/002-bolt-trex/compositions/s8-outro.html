@@ -31,6 +31,7 @@
   
   </style>
   <div id="root" data-composition-id="s8-outro" data-width="1080" data-height="1920">
+    <div class="cam" id="s8-outro-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s8-outro-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s8-outro-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s8-outro-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -132,13 +133,14 @@
     <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
     <div class="banner" id="s8-outro-c-b" data-layout-allow-overflow data-layout-allow-overlap style="left: 50px; top: 330px;"><div class="bk">NEXT CASE</div><div class="bt">Could you imagine<br>another scenario?</div></div>
     <div class="card gold" id="s8-outro-c-c" data-layout-allow-overflow data-layout-allow-overlap style="left: 60px; top: 640px;"><div class="ck">WRITE IT IN THE COMMENTS</div><div class="cv">↓ ↓ ↓</div></div>
+    </div>
     <div class="dip" id="s8-outro-dip" data-layout-ignore></div>
   </div>
   <script>
     (function () {
       const S = "#s8-outro-";
-      const D = 6.59;
-      const C = {"c": 3.47};
+      const D = 7.175;
+      const C = {"c": 3.47, "loop": 5.19};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s8-outro-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
@@ -193,7 +195,8 @@
       fly("b", 0.05, null, { from: "top" });
       fly("c", C.c, null, { from: "right" });
 
-      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      tl.fromTo(S + "cam", { x: 0 }, { x: -1080, duration: 0.3, ease: "power3.in", immediateRender: false }, D - 0.3);
+
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["s8-outro"] = tl;

@@ -39,14 +39,23 @@ def banner(sid, name, kicker, title, x, y):
             f'<div class="bk">{_html.escape(kicker)}</div><div class="bt">{title}</div></div>')
 
 
-def scene(sid, world, js, cards="", extra_css=""):
+def scene(sid, world, js, cards="", extra_css="", loop_in=False, loop_out=False):
+    """loop_in / loop_out: whip-pan transitions so the last frame of the episode runs seamlessly into the first (loop episodes)."""
     t = TIMING[sid]
+    loop_js = ""
+    if loop_in:  # whip in from the right (continues the whip-out of the episode's last frame)
+        loop_js += '      tl.fromTo(S + "cam", { x: 1080 }, { x: 0, duration: 0.3, ease: "power3.out" }, 0);\n'
+    if loop_out:  # whip out to the left, no dip: the video loops into the hook
+        loop_js += '      tl.fromTo(S + "cam", { x: 0 }, { x: -1080, duration: 0.3, ease: "power3.in", immediateRender: false }, D - 0.3);\n'
+    else:
+        loop_js += '      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);\n'
     D = t["duration"]
     cues = json.dumps(t["cues"])
     out = f"""<template>
   <!-- COULD? scene {sid} · full-frame cartoon + flying fact cards. Source: src/{sid.split('-')[0]}.py, cues: timing.json -->
   {STYLE.replace("</style>", extra_css + "\n  </style>")}
   <div id="root" data-composition-id="{sid}" data-width="1080" data-height="1920">
+    <div class="cam" id="{sid}-cam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="{sid}-svg" data-layout-allow-overflow>
       <defs>
         <filter id="{sid}-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="{sid}-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -57,6 +66,7 @@ def scene(sid, world, js, cards="", extra_css=""):
     </svg>
     <div class="logo" data-layout-ignore>COULD<b>?</b></div>
     <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>{cards}
+    </div>
     <div class="dip" id="{sid}-dip" data-layout-ignore></div>
   </div>
   <script>
@@ -102,7 +112,7 @@ def scene(sid, world, js, cards="", extra_css=""):
           {{ y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }}, i * 0.35));
       }};
 {js}
-      tl.fromTo(S + "dip", {{ opacity: 0 }}, {{ opacity: 0.45, duration: 0.1, ease: "none" }}, D - 0.1);
+{loop_js}
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);
       window.__timelines["{sid}"] = tl;

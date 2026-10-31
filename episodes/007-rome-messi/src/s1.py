@@ -27,4 +27,4 @@ js = JS + """
       drawOn(S + "bf-line1", C.grass + 0.1, 0.5);
       drawOn(S + "bf-line2", C.grass + 0.4, 0.7);
 """
-scene(sid, w, js, cards, extra_css=".banner .bt { font-size: 76px; }" + CSS)
+scene(sid, w, js, cards, extra_css=".banner .bt { font-size: 76px; }" + CSS, loop_in=True)

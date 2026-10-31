@@ -14,4 +14,4 @@ js = """
       tl.fromTo(S + "k1t-body", { y: 0 }, { y: -3, duration: 0.12, repeat: R(D, 0.12), yoyo: true }, 0);
       swap(S + "k1t-smirk", S + "k1t-grin", C.c + 0.6);
 """
-scene(sid, w, js, cards)
+scene(sid, w, js, cards, loop_out=True)

@@ -31,7 +31,9 @@ Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `provi
   `build_episode.py` ab: dann nicht still auf Kokoro wechseln, sondern dem Creator sagen, dass er den Build lokal startet,
   oder mit `"provider": "kokoro"`, `"voice": "bm_george"` eine Vorschau bauen und das klar sagen.
 - Szenenfolge und Längen laut FORMAT.md (8 Szenen, 90–115 s).
-- Letzte Szene `s8-outro` immer mit genau diesem Text: `Could you imagine another scenario that we should do next? {{c}}Write it in the comments.`
+- Letzte Szene `s8-outro` immer mit genau diesem Text: `Could you imagine another scenario that we should do next? {{c}}Write it in the comments. ||0.2|| {{loop}}And if anyone asks you:`
+  plus `"loop": true` (Loop-Folge, siehe LEARNINGS). Kurzfolgen: Like-Gag, dann `{{loop}}So next time someone asks you:`.
+- Jede Folge enthält einen eingebauten Like/Follow-Aufruf (siehe LEARNINGS).
 - Markup: `{shown|spoken}`, `{{cue}}` vor jedem Wort, auf dem etwas passieren soll, `||0.4||` nur für echte Pointen-Pausen
   (sparsam, sonst klingt der Erzähler abgehackt).
 - Namen und Fremdwörter: neue Namen vorher mit `npx hyperframes tts` + `transcribe` testen; falsch gesprochene in
@@ -55,6 +57,7 @@ Jede Szene ist ein kleines Python-Skript mit `from scene import *` (`tools/scene
   wieder hinaus (`null` = bleibt bis zum Schnitt). Höchstens zwei Karten gleichzeitig. Weitere Helfer: `pop`, `swap`, `blink`, `waves`, `puffs`, `R`.
 - Jede Aussage des Erzählers hat eine Aktion im Cartoon auf ihrem Cue. Die Pointe bekommt eine Reaktion, die gehalten wird.
 - Frame 0 (Thumbnail) zeigt schon die Frage als Banner, die Hauptfigur und den Gegner.
+- Loop: `scene(..., loop_in=True)` in s1 und `scene(..., loop_out=True)` in der letzten Szene.
 
 `sh episodes/<ep>/src/build_all.sh` schreibt `compositions/*.html`.
 
