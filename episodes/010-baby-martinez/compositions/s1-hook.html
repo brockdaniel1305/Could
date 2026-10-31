@@ -1,0 +1,183 @@
+<template>
+  <!-- COULD? scene s1-hook · full-frame cartoon + flying fact cards. Source: src/s1.py, cues: timing.json -->
+  <style>
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; font-style: italic; src: url("assets/fonts/PlayfairDisplay-700i.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0a1428; }
+    .world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    /* fact card: cartoon sticker, flies in and out */
+    .card { position: absolute; padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px;
+            box-shadow: 10px 10px 0 #1a1a2e; opacity: 0; white-space: nowrap; }
+    .card .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .card .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .card.gold { background: #ffd23f; }
+    .card.gold .ck { color: #5a4300; }
+    .card.red { background: #e0412f; }
+    .card.red .ck, .card.red .cv { color: #fff; }
+    /* chapter banner: kicker + serif title */
+    .banner { position: absolute; padding: 18px 34px 24px; background: #1a1a2e; border: 6px solid #f4efe6; border-radius: 24px;
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.45); opacity: 0; white-space: nowrap; }
+    .banner .bk { font: 700 30px/1 "CouldMono"; letter-spacing: 0.22em; color: #ffd23f; }
+    .banner .bt { margin-top: 10px; font: 700 84px/1.02 "CouldSerif"; color: #f4efe6; }
+    .dip { position: absolute; inset: 0; background: #000; opacity: 0; }
+  .banner .bt { font-size: 76px; }
+    .card s { text-decoration-thickness: 8px; text-decoration-color: #e0412f; }
+    .stamp { position: absolute; left: 150px; top: 470px; width: 780px; height: 300px; border: 24px solid #1f9d55; border-radius: 34px;
+             display: flex; align-items: center; justify-content: center; font: 900 150px/1 "Inter"; color: #1f9d55; opacity: 0;
+             background: rgba(244, 239, 230, 0.25); }
+    .heart { position: absolute; left: 290px; top: 780px; width: 180px; height: 166px; opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="s1-hook" data-width="1080" data-height="1920">
+    <svg class="world" viewBox="0 0 1080 1920" id="s1-hook-svg" data-layout-allow-overflow>
+      <defs>
+        <filter id="s1-hook-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s1-hook-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
+      </defs>
+      <g filter="url(#s1-hook-boil)">
+<!-- Full-frame daytime stadium 1080x1920: sky, crowd in the stands (y 600..1010), striped grass from y=1010 (~900). -->
+<g id="s1-hook-pd">
+  <rect x="0" y="0" width="1080" height="1920" fill="#8fd3ff" />
+  <g fill="#fff" stroke="#1a1a2e" stroke-width="4" opacity="0.95"><path d="M120,330 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /><path d="M700,250 q30,-40 70,-10 q30,-30 60,0 q30,10 10,40 l-150,0 q-20,-10 10,-30 z" /></g>
+  <path d="M0,600 L1080,600 L1080,1010 L0,1010 Z" fill="#3a3f58" stroke="#1a1a2e" stroke-width="5" />
+  <circle cx="10" cy="640" r="11" fill="#ffcf4a" /><circle cx="70" cy="640" r="11" fill="#e0412f" /><circle cx="130" cy="640" r="11" fill="#f4efe6" /><circle cx="190" cy="640" r="11" fill="#ffcf4a" /><circle cx="250" cy="640" r="11" fill="#e0412f" /><circle cx="310" cy="640" r="11" fill="#f4efe6" /><circle cx="370" cy="640" r="11" fill="#ffcf4a" /><circle cx="430" cy="640" r="11" fill="#e0412f" /><circle cx="490" cy="640" r="11" fill="#f4efe6" /><circle cx="550" cy="640" r="11" fill="#ffcf4a" /><circle cx="610" cy="640" r="11" fill="#e0412f" /><circle cx="670" cy="640" r="11" fill="#f4efe6" /><circle cx="730" cy="640" r="11" fill="#ffcf4a" /><circle cx="790" cy="640" r="11" fill="#e0412f" /><circle cx="850" cy="640" r="11" fill="#f4efe6" /><circle cx="910" cy="640" r="11" fill="#ffcf4a" /><circle cx="970" cy="640" r="11" fill="#e0412f" /><circle cx="1030" cy="640" r="11" fill="#f4efe6" /><circle cx="40" cy="688" r="11" fill="#e0412f" /><circle cx="100" cy="688" r="11" fill="#f4efe6" /><circle cx="160" cy="688" r="11" fill="#ffcf4a" /><circle cx="220" cy="688" r="11" fill="#e0412f" /><circle cx="280" cy="688" r="11" fill="#f4efe6" /><circle cx="340" cy="688" r="11" fill="#ffcf4a" /><circle cx="400" cy="688" r="11" fill="#e0412f" /><circle cx="460" cy="688" r="11" fill="#f4efe6" /><circle cx="520" cy="688" r="11" fill="#ffcf4a" /><circle cx="580" cy="688" r="11" fill="#e0412f" /><circle cx="640" cy="688" r="11" fill="#f4efe6" /><circle cx="700" cy="688" r="11" fill="#ffcf4a" /><circle cx="760" cy="688" r="11" fill="#e0412f" /><circle cx="820" cy="688" r="11" fill="#f4efe6" /><circle cx="880" cy="688" r="11" fill="#ffcf4a" /><circle cx="940" cy="688" r="11" fill="#e0412f" /><circle cx="1000" cy="688" r="11" fill="#f4efe6" /><circle cx="1060" cy="688" r="11" fill="#ffcf4a" /><circle cx="10" cy="736" r="11" fill="#f4efe6" /><circle cx="70" cy="736" r="11" fill="#ffcf4a" /><circle cx="130" cy="736" r="11" fill="#e0412f" /><circle cx="190" cy="736" r="11" fill="#f4efe6" /><circle cx="250" cy="736" r="11" fill="#ffcf4a" /><circle cx="310" cy="736" r="11" fill="#e0412f" /><circle cx="370" cy="736" r="11" fill="#f4efe6" /><circle cx="430" cy="736" r="11" fill="#ffcf4a" /><circle cx="490" cy="736" r="11" fill="#e0412f" /><circle cx="550" cy="736" r="11" fill="#f4efe6" /><circle cx="610" cy="736" r="11" fill="#ffcf4a" /><circle cx="670" cy="736" r="11" fill="#e0412f" /><circle cx="730" cy="736" r="11" fill="#f4efe6" /><circle cx="790" cy="736" r="11" fill="#ffcf4a" /><circle cx="850" cy="736" r="11" fill="#e0412f" /><circle cx="910" cy="736" r="11" fill="#f4efe6" /><circle cx="970" cy="736" r="11" fill="#ffcf4a" /><circle cx="1030" cy="736" r="11" fill="#e0412f" /><circle cx="40" cy="784" r="11" fill="#ffcf4a" /><circle cx="100" cy="784" r="11" fill="#e0412f" /><circle cx="160" cy="784" r="11" fill="#f4efe6" /><circle cx="220" cy="784" r="11" fill="#ffcf4a" /><circle cx="280" cy="784" r="11" fill="#e0412f" /><circle cx="340" cy="784" r="11" fill="#f4efe6" /><circle cx="400" cy="784" r="11" fill="#ffcf4a" /><circle cx="460" cy="784" r="11" fill="#e0412f" /><circle cx="520" cy="784" r="11" fill="#f4efe6" /><circle cx="580" cy="784" r="11" fill="#ffcf4a" /><circle cx="640" cy="784" r="11" fill="#e0412f" /><circle cx="700" cy="784" r="11" fill="#f4efe6" /><circle cx="760" cy="784" r="11" fill="#ffcf4a" /><circle cx="820" cy="784" r="11" fill="#e0412f" /><circle cx="880" cy="784" r="11" fill="#f4efe6" /><circle cx="940" cy="784" r="11" fill="#ffcf4a" /><circle cx="1000" cy="784" r="11" fill="#e0412f" /><circle cx="1060" cy="784" r="11" fill="#f4efe6" /><circle cx="10" cy="832" r="11" fill="#e0412f" /><circle cx="70" cy="832" r="11" fill="#f4efe6" /><circle cx="130" cy="832" r="11" fill="#ffcf4a" /><circle cx="190" cy="832" r="11" fill="#e0412f" /><circle cx="250" cy="832" r="11" fill="#f4efe6" /><circle cx="310" cy="832" r="11" fill="#ffcf4a" /><circle cx="370" cy="832" r="11" fill="#e0412f" /><circle cx="430" cy="832" r="11" fill="#f4efe6" /><circle cx="490" cy="832" r="11" fill="#ffcf4a" /><circle cx="550" cy="832" r="11" fill="#e0412f" /><circle cx="610" cy="832" r="11" fill="#f4efe6" /><circle cx="670" cy="832" r="11" fill="#ffcf4a" /><circle cx="730" cy="832" r="11" fill="#e0412f" /><circle cx="790" cy="832" r="11" fill="#f4efe6" /><circle cx="850" cy="832" r="11" fill="#ffcf4a" /><circle cx="910" cy="832" r="11" fill="#e0412f" /><circle cx="970" cy="832" r="11" fill="#f4efe6" /><circle cx="1030" cy="832" r="11" fill="#ffcf4a" />
+  <rect x="0" y="1010" width="1080" height="1100" fill="#4caf50" />
+  <g fill="#43a047"><rect x="0" y="1010" width="135" height="1100" /><rect x="270" y="1010" width="135" height="1100" /><rect x="540" y="1010" width="135" height="1100" /><rect x="810" y="1010" width="135" height="1100" /></g>
+  <path d="M0,1010 L1080,1010" stroke="#1a1a2e" stroke-width="5" />
+</g>
+<g transform="translate(360,1200)"><g id="s1-hook-liw"><g transform="scale(0.85)"><!-- Fast forward in a plain kit, very short dark hair (Kylian-Mbappe-style caricature, not a likeness, no badges). Kit colours:
+     #d0202e (shirt), #f4f4f2, #1a1a2e, #f4f4f2 (defaults navy/navy/navy/white via part(..., #d0202e=...)). Extra: s1-hook-li-sash and s1-hook-li-crown (opacity 0).
+     Origin = between the feet. ~330 tall. Same rig ids as keeper.svg.
+     Animatable: s1-hook-li (whole), s1-hook-li-body, s1-hook-li-armL/-armR (rotate, origin top), s1-hook-li-legL/-legR, s1-hook-li-head,
+     s1-hook-li-pupL/-pupR (x/y look), s1-hook-li-browL/-browR, s1-hook-li-m-smile / -m-o / -m-flat (show one), s1-hook-li-lids (blink). -->
+<g id="s1-hook-li">
+  <ellipse cx="0" cy="4" rx="58" ry="10" fill="#000" opacity="0.25" />
+  <g id="s1-hook-li-body">
+    <g id="s1-hook-li-legL"><rect x="-32" y="-96" width="26" height="96" rx="10" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" /><rect x="-34" y="-44" width="28" height="34" rx="6" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <g id="s1-hook-li-legR"><rect x="6" y="-96" width="26" height="96" rx="10" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" /><rect x="6" y="-44" width="28" height="34" rx="6" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="22" cy="-6" rx="22" ry="11" fill="#1a1a2e" /></g>
+    <rect x="-40" y="-118" width="80" height="40" rx="10" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="5" />
+    <path d="M-50,-200 Q-56,-128 -42,-112 L42,-112 Q56,-128 50,-200 Q0,-216 -50,-200 Z" fill="#d0202e" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-20,-205 L0,-186 L20,-205" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+    <g id="s1-hook-li-sash" opacity="0"><path d="M-46,-204 L-30,-210 L48,-122 L34,-114 Z" fill="#1d3f9b" stroke="#1a1a2e" stroke-width="3" /><path d="M-30,-210 L-16,-212 L50,-134 L48,-122 Z" fill="#f4f4f2" /><path d="M-16,-212 L-4,-212 L50,-146 L50,-134 Z" fill="#c0262d" /></g>
+    <text id="s1-hook-li-num" data-layout-ignore x="0" y="-136" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="2">6</text>
+    <g transform="translate(-54,-196)"><g id="s1-hook-li-armL"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(54,-196)"><g id="s1-hook-li-armR"><rect x="-12" y="0" width="24" height="80" rx="12" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" /><circle cx="0" cy="88" r="15" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" /></g></g>
+    <g transform="translate(0,-250)"><g id="s1-hook-li-head">
+      <circle cx="-44" cy="4" r="10" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" />
+      <circle cx="44" cy="4" r="10" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" />
+      <ellipse cx="0" cy="0" rx="44" ry="50" fill="#d9a07a" stroke="#1a1a2e" stroke-width="5" />
+      <path d="M-44,-18 Q-46,-56 0,-56 Q46,-56 44,-18 Q34,-38 0,-40 Q-34,-38 -44,-18 Z" fill="#1a1410" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" />
+      <ellipse cx="-16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <ellipse cx="16" cy="0" rx="11" ry="13" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s1-hook-li-pupL" cx="-15" cy="2" r="5.5" fill="#1a1a2e" />
+      <circle id="s1-hook-li-pupR" cx="17" cy="2" r="5.5" fill="#1a1a2e" />
+      <g id="s1-hook-li-lids" opacity="0"><ellipse cx="-16" cy="0" rx="12" ry="14" fill="#d9a07a" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="16" cy="0" rx="12" ry="14" fill="#d9a07a" stroke="#1a1a2e" stroke-width="3" /></g>
+      <path id="s1-hook-li-browL" d="M-28,-20 L-6,-18" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path id="s1-hook-li-browR" d="M6,-18 L28,-20" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <path d="M-3,6 Q0,18 6,16" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" />
+      <path id="s1-hook-li-m-smile" d="M-16,28 Q0,40 16,28" fill="none" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" />
+      <ellipse id="s1-hook-li-m-o" cx="0" cy="32" rx="9" ry="11" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="4" opacity="0" />
+      <path id="s1-hook-li-m-flat" d="M-12,32 L12,32" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round" opacity="0" />
+      <g id="s1-hook-li-crown" opacity="0"><path d="M-50,-44 L-54,-96 L-28,-70 L0,-104 L28,-70 L54,-96 L50,-44 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round" /><circle cx="0" cy="-62" r="7" fill="#c0262d" stroke="#1a1a2e" stroke-width="3" /><circle cx="-30" cy="-56" r="5" fill="#1d3f9b" /><circle cx="30" cy="-56" r="5" fill="#1d3f9b" /></g>
+    </g></g>
+  </g>
+</g>
+</g></g></g><g transform="translate(640,1200)"><g id="s1-hook-bw"><g transform="scale(0.4)"><!-- Baby in a nappy and a plain red romper (no badge), front view. Origin = between the feet, ~190 tall at scale 1 (draw at the
+     scene's px-per-metre: 0.5 m). Rig: s1-hook-b-body, s1-hook-b-armL/-armR (origin shoulder: raise/thumb up), s1-hook-b-legL/-legR, s1-hook-b-head,
+     s1-hook-b-pupL/-pupR, s1-hook-b-m-smile (default) / s1-hook-b-m-o, s1-hook-b-dummy (pacifier, opacity 1), s1-hook-b-thumb (inside armR, opacity 0). -->
+<g id="s1-hook-b">
+  <ellipse cx="0" cy="4" rx="46" ry="8" fill="#000" opacity="0.22" />
+  <g id="s1-hook-b-body">
+    <g id="s1-hook-b-legL"><rect x="-26" y="-40" width="22" height="38" rx="11" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="-16" cy="-4" rx="15" ry="8" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" /></g>
+    <g id="s1-hook-b-legR"><rect x="4" y="-40" width="22" height="38" rx="11" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" /><ellipse cx="16" cy="-4" rx="15" ry="8" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" /></g>
+    <path d="M-40,-60 Q-44,-30 -26,-30 L26,-30 Q44,-30 40,-60 Z" fill="#f4f4f2" stroke="#1a1a2e" stroke-width="4" />
+    <path d="M-38,-110 Q-46,-64 -38,-56 L38,-56 Q46,-64 38,-110 Q0,-122 -38,-110 Z" fill="#d0202e" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round" />
+    <circle cx="0" cy="-92" r="5" fill="#f4f4f2" /><circle cx="0" cy="-76" r="5" fill="#f4f4f2" />
+    <g transform="translate(-40,-104)"><g id="s1-hook-b-armL"><rect x="-10" y="0" width="20" height="40" rx="10" fill="#d0202e" stroke="#1a1a2e" stroke-width="4" /><circle cx="0" cy="46" r="11" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" /></g></g>
+    <g transform="translate(40,-104)"><g id="s1-hook-b-armR"><rect x="-10" y="0" width="20" height="40" rx="10" fill="#d0202e" stroke="#1a1a2e" stroke-width="4" /><circle cx="0" cy="46" r="11" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" />
+      <rect id="s1-hook-b-thumb" x="-4" y="52" width="9" height="18" rx="4" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="3" opacity="0" /></g></g>
+    <g transform="translate(0,-152)"><g id="s1-hook-b-head">
+      <circle cx="-48" cy="2" r="10" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" /><circle cx="48" cy="2" r="10" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" />
+      <ellipse cx="0" cy="0" rx="48" ry="46" fill="#f2c9a0" stroke="#1a1a2e" stroke-width="4" />
+      <path d="M-6,-46 Q0,-62 10,-50 Q4,-54 2,-44" fill="none" stroke="#7a5230" stroke-width="5" stroke-linecap="round" />
+      <ellipse cx="-17" cy="-2" rx="10" ry="12" fill="#fff" stroke="#1a1a2e" stroke-width="3" /><ellipse cx="17" cy="-2" rx="10" ry="12" fill="#fff" stroke="#1a1a2e" stroke-width="3" />
+      <circle id="s1-hook-b-pupL" cx="-16" cy="0" r="6" fill="#1a1a2e" /><circle id="s1-hook-b-pupR" cx="18" cy="0" r="6" fill="#1a1a2e" />
+      <circle cx="-30" cy="18" r="8" fill="#f29a9a" opacity="0.6" /><circle cx="30" cy="18" r="8" fill="#f29a9a" opacity="0.6" />
+      <path id="s1-hook-b-m-smile" d="M-12,22 Q0,32 12,22" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" />
+      <ellipse id="s1-hook-b-m-o" cx="0" cy="26" rx="7" ry="8" fill="#5a1a1a" stroke="#1a1a2e" stroke-width="3" opacity="0" />
+      <g id="s1-hook-b-dummy"><ellipse cx="0" cy="28" rx="18" ry="10" fill="#4f7cff" stroke="#1a1a2e" stroke-width="3" /><circle cx="0" cy="36" r="7" fill="none" stroke="#4f7cff" stroke-width="4" /></g>
+    </g></g>
+  </g>
+</g>
+</g></g></g>
+      </g>
+    </svg>
+    <div class="logo" data-layout-ignore>COULD<b>?</b></div>
+    <div class="live" data-layout-ignore><i></i>LIVE RECONSTRUCTION</div>
+    <div class="banner" id="s1-hook-c-q" data-layout-allow-overflow data-layout-allow-overlap style="left: 40px; top: 300px;"><div class="bk">CASE FILE 010</div><div class="bt">Could a baby<br>replace Lisandro<br>Martínez?</div></div>
+    <div class="dip" id="s1-hook-dip" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = "#s1-hook-";
+      const D = 3.025;
+      const C = {};
+      const tl = gsap.timeline({ paused: true });
+      const turb = document.getElementById("s1-hook-turb");
+      tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);
+      // rig pivots: limbs swing from their top, heads nod from the neck
+      const root = document.querySelector('[data-composition-id="s1-hook"]');
+      root.querySelectorAll('[id$="-armL"],[id$="-armR"],[id$="-legL"],[id$="-legR"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 0%" }));
+      root.querySelectorAll('g[id$="-head"]').forEach((el) => gsap.set(el, { transformOrigin: "50% 100%" }));
+      const R = (len, cycle) => Math.max(0, Math.floor(len / cycle) - 1);
+      // fact cards: fly in on a cue, land with a small overshoot, hold still, fly out
+      const fly = (name, tin, tout, o = {}) => {
+        const el = S + "c-" + name, dir = o.from === "right" ? 1 : -1, rot = o.rot ?? (dir < 0 ? -3 : 3);
+        const inFrom = o.from === "top" ? { y: -900, x: 0 } : { x: dir * 1300, y: 0 };
+        tl.fromTo(el, { ...inFrom, rotation: dir * 18, opacity: 1 }, { x: 0, y: 0, rotation: rot, duration: 0.55, ease: "back.out(1.5)" }, tin);
+        if (tout != null && tout < D - 0.05) {
+          // leave the way it came, so cards never cross each other
+          const outTo = o.from === "top" || o.out === "up" ? { y: -1100 } : { x: dir * 1400 };
+          tl.to(el, { ...outTo, rotation: dir * 14, duration: 0.38, ease: "power3.in" }, tout);
+        }
+      };
+      const pop = (sel, at) => tl.fromTo(sel, { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, at);
+      const swap = (hide, showSel, at) => { tl.set(hide, { opacity: 0 }, at); tl.set(showSel, { opacity: 1 }, at); };
+      const blink = (lids, at) => { tl.set(lids, { opacity: 1 }, at); tl.set(lids, { opacity: 0 }, at + 0.12); };
+      const waves = (a, b) => {
+        tl.fromTo(a, { x: 0 }, { x: -160, duration: 2, ease: "none", repeat: R(D, 2) }, 0);
+        if (b) tl.fromTo(b, { x: 0 }, { x: -160, duration: 1.4, ease: "none", repeat: R(D, 1.4) }, 0);
+        // fish under the surface swim slowly left and bob
+        [1, 2, 3].forEach((i) => {
+          const f = a.replace("-waves1", "-fish" + i);
+          if (!document.querySelector(f)) return;
+          tl.fromTo(f, { x: 0 }, { x: -(60 + i * 25) * D / 4, duration: D, ease: "none" }, 0);
+          tl.fromTo(f, { y: -6 }, { y: 6, duration: 0.9 + i * 0.2, ease: "sine.inOut", repeat: R(D, 0.9 + i * 0.2), yoyo: true }, 0);
+        });
+      };
+      const puffs = (pfx) => {
+        [1, 2, 3, 4].forEach((i) => tl.fromTo(`${pfx}-smoke${i}`, { y: 0, x: 0, scale: 0.6, opacity: 0.9, transformOrigin: "50% 50%" },
+          { y: -70, x: -30, scale: 1.8, opacity: 0, duration: 1.6, ease: "power1.out", repeat: R(D - i * 0.35, 1.6) }, i * 0.35));
+      };
+
+      const look = (p, x, y, at, d = 0.2) => tl.to([S + p + "-pupL", S + p + "-pupR"], { x, y, duration: d }, at);
+      const face = (p, show, at) => ["m-smile", "m-o", "m-flat"].forEach((m) => { const el = document.querySelector(S + p + "-" + m); if (el) tl.set(el, { opacity: m === show ? 1 : 0 }, at); });
+
+      tl.fromTo(S + "c-q", { opacity: 1, x: 0, y: 0, rotation: -2 }, { opacity: 1, duration: 0.01 }, 0);
+      tl.fromTo(S + "svg", { scale: 1.12 }, { scale: 1, transformOrigin: "50% 62%", duration: 0.8, ease: "power2.out" }, 0);
+      look("li", 7, 0, 0.6); look("b", -6, 0, 0.9);
+      tl.fromTo(S + "bw", { y: 0 }, { y: -10, duration: 0.25, yoyo: true, repeat: R(D, 0.25), ease: "sine.inOut" }, 0);
+
+      tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
+      // render end -> start once so every element starts in its earliest state
+      tl.progress(1).progress(0);
+      window.__timelines["s1-hook"] = tl;
+    })();
+  </script>
+</template>

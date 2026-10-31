@@ -143,8 +143,8 @@
   <script>
     (function () {
       const S = "#s4-pass-";
-      const D = 11.13;
-      const C = {"look": 1.3, "pass": 2.028, "found": 4.18, "a21": 5.536, "like": 7.42};
+      const D = 9.655;
+      const C = {"look": 1.17, "pass": 1.749, "found": 3.729, "a21": 4.888, "like": 6.455};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s4-pass-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

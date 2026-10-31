@@ -1,0 +1,443 @@
+{
+ "duration": 26.858,
+ "voice": "kokoro:am_adam",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 3.025,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 2.475,
+   "cues": {},
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.496
+    },
+    {
+     "text": "a",
+     "start": 0.496,
+     "end": 0.565
+    },
+    {
+     "text": "baby",
+     "start": 0.565,
+     "end": 0.841
+    },
+    {
+     "text": "replace",
+     "start": 0.841,
+     "end": 1.325
+    },
+    {
+     "text": "Lisandro",
+     "start": 1.325,
+     "end": 1.944
+    },
+    {
+     "text": "Mart\u00ednez?",
+     "start": 1.944,
+     "end": 2.625
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s2-lisandro",
+   "start": 3.025,
+   "duration": 7.133,
+   "voice": "assets/voice/s2-lisandro.wav",
+   "voiceStart": 0.15,
+   "speech": 6.583,
+   "cues": {
+    "nick": 1.321,
+    "today": 2.662,
+    "arm": 3.588,
+    "card": 5.27,
+    "pen": 6.134
+   },
+   "words": [
+    {
+     "text": "Lisandro",
+     "start": 0.15,
+     "end": 0.708
+    },
+    {
+     "text": "Mart\u00ednez.",
+     "start": 0.708,
+     "end": 1.321
+    },
+    {
+     "text": "Nickname:",
+     "start": 1.321,
+     "end": 1.935
+    },
+    {
+     "text": "the",
+     "start": 1.935,
+     "end": 2.133
+    },
+    {
+     "text": "Butcher.",
+     "start": 2.133,
+     "end": 2.662
+    },
+    {
+     "text": "Today",
+     "start": 2.662,
+     "end": 2.993
+    },
+    {
+     "text": "at",
+     "start": 2.993,
+     "end": 3.125
+    },
+    {
+     "text": "Chelsea:",
+     "start": 3.125,
+     "end": 3.588
+    },
+    {
+     "text": "an",
+     "start": 3.588,
+     "end": 3.72
+    },
+    {
+     "text": "arm",
+     "start": 3.72,
+     "end": 3.918
+    },
+    {
+     "text": "in",
+     "start": 3.918,
+     "end": 4.117
+    },
+    {
+     "text": "an",
+     "start": 4.117,
+     "end": 4.249
+    },
+    {
+     "text": "opponent's",
+     "start": 4.249,
+     "end": 4.91
+    },
+    {
+     "text": "face.",
+     "start": 4.91,
+     "end": 5.27
+    },
+    {
+     "text": "Second",
+     "start": 5.27,
+     "end": 5.702
+    },
+    {
+     "text": "yellow.",
+     "start": 5.702,
+     "end": 6.134
+    },
+    {
+     "text": "Penalty.",
+     "start": 6.134,
+     "end": 6.71
+    }
+   ],
+   "sfx": [
+    {
+     "name": "stomp",
+     "at": 3.838,
+     "volume": 0.35
+    },
+    {
+     "name": "whistle",
+     "at": 5.02,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s3-baby",
+   "start": 10.158,
+   "duration": 4.611,
+   "voice": "assets/voice/s3-baby.wav",
+   "voiceStart": 0.15,
+   "speech": 4.061,
+   "cues": {
+    "h": 0.681,
+    "face": 2.046
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.378
+    },
+    {
+     "text": "baby.",
+     "start": 0.378,
+     "end": 0.681
+    },
+    {
+     "text": "Fifty",
+     "start": 0.681,
+     "end": 1.026
+    },
+    {
+     "text": "centimetres",
+     "start": 1.026,
+     "end": 1.667
+    },
+    {
+     "text": "tall.",
+     "start": 1.667,
+     "end": 2.046
+    },
+    {
+     "text": "An",
+     "start": 2.046,
+     "end": 2.274
+    },
+    {
+     "text": "opponent's",
+     "start": 2.274,
+     "end": 2.956
+    },
+    {
+     "text": "face:",
+     "start": 2.956,
+     "end": 3.26
+    },
+    {
+     "text": "one",
+     "start": 3.26,
+     "end": 3.386
+    },
+    {
+     "text": "point",
+     "start": 3.386,
+     "end": 3.563
+    },
+    {
+     "text": "eight",
+     "start": 3.563,
+     "end": 3.74
+    },
+    {
+     "text": "metres",
+     "start": 3.74,
+     "end": 3.942
+    },
+    {
+     "text": "up.",
+     "start": 3.942,
+     "end": 4.17
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-end",
+   "start": 14.769,
+   "duration": 12.089,
+   "voice": "assets/voice/s4-end.wav",
+   "voiceStart": 0.15,
+   "speech": 10.339,
+   "cues": {
+    "nof": 1.864,
+    "nop": 2.344,
+    "still": 3.313,
+    "m": 4.971,
+    "b": 6.344,
+    "up": 7.971,
+    "like": 9.404
+   },
+   "words": [
+    {
+     "text": "It",
+     "start": 0.15,
+     "end": 0.287
+    },
+    {
+     "text": "can't",
+     "start": 0.287,
+     "end": 0.63
+    },
+    {
+     "text": "reach",
+     "start": 0.63,
+     "end": 0.973
+    },
+    {
+     "text": "anyone's",
+     "start": 0.973,
+     "end": 1.521
+    },
+    {
+     "text": "face.",
+     "start": 1.521,
+     "end": 1.864
+    },
+    {
+     "text": "No",
+     "start": 1.864,
+     "end": 2.001
+    },
+    {
+     "text": "foul.",
+     "start": 2.001,
+     "end": 2.344
+    },
+    {
+     "text": "No",
+     "start": 2.344,
+     "end": 2.481
+    },
+    {
+     "text": "penalty.",
+     "start": 2.481,
+     "end": 3.03
+    },
+    {
+     "text": "And",
+     "start": 3.313,
+     "end": 3.49
+    },
+    {
+     "text": "it's",
+     "start": 3.49,
+     "end": 3.727
+    },
+    {
+     "text": "still",
+     "start": 3.727,
+     "end": 4.023
+    },
+    {
+     "text": "on",
+     "start": 4.023,
+     "end": 4.141
+    },
+    {
+     "text": "the",
+     "start": 4.141,
+     "end": 4.318
+    },
+    {
+     "text": "pitch.",
+     "start": 4.318,
+     "end": 4.673
+    },
+    {
+     "text": "With",
+     "start": 4.971,
+     "end": 5.314
+    },
+    {
+     "text": "Mart\u00ednez:",
+     "start": 5.314,
+     "end": 5.829
+    },
+    {
+     "text": "two",
+     "start": 5.829,
+     "end": 6.063
+    },
+    {
+     "text": "nil.",
+     "start": 6.063,
+     "end": 6.344
+    },
+    {
+     "text": "With",
+     "start": 6.344,
+     "end": 6.687
+    },
+    {
+     "text": "the",
+     "start": 6.687,
+     "end": 6.945
+    },
+    {
+     "text": "baby:",
+     "start": 6.945,
+     "end": 7.288
+    },
+    {
+     "text": "one",
+     "start": 7.288,
+     "end": 7.462
+    },
+    {
+     "text": "nil.",
+     "start": 7.462,
+     "end": 7.671
+    },
+    {
+     "text": "The",
+     "start": 7.971,
+     "end": 8.197
+    },
+    {
+     "text": "baby",
+     "start": 8.197,
+     "end": 8.499
+    },
+    {
+     "text": "is",
+     "start": 8.499,
+     "end": 8.65
+    },
+    {
+     "text": "an",
+     "start": 8.65,
+     "end": 8.801
+    },
+    {
+     "text": "upgrade.",
+     "start": 8.801,
+     "end": 9.404
+    },
+    {
+     "text": "It",
+     "start": 9.404,
+     "end": 9.555
+    },
+    {
+     "text": "even",
+     "start": 9.555,
+     "end": 9.857
+    },
+    {
+     "text": "left",
+     "start": 9.857,
+     "end": 10.158
+    },
+    {
+     "text": "a",
+     "start": 10.158,
+     "end": 10.234
+    },
+    {
+     "text": "like.",
+     "start": 10.234,
+     "end": 10.611
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 8.081,
+     "volume": 0.4
+    },
+    {
+     "name": "ding",
+     "at": 9.604,
+     "volume": 0.3
+    }
+   ]
+  }
+ ]
+}

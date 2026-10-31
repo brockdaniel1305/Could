@@ -1,0 +1,367 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "53ff9690524bd0e29abde86ac60325fc13ec8e0e",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.346
+   },
+   {
+    "text": "a",
+    "start": 0.346,
+    "end": 0.415
+   },
+   {
+    "text": "baby",
+    "start": 0.415,
+    "end": 0.691
+   },
+   {
+    "text": "replace",
+    "start": 0.691,
+    "end": 1.175
+   },
+   {
+    "text": "Lissandro",
+    "start": 1.175,
+    "end": 1.798
+   },
+   {
+    "text": "Martinez?",
+    "start": 1.798,
+    "end": 2.42
+   }
+  ]
+ },
+ "s2-lisandro.part0.wav": {
+  "key": "b7a0a05b3452af2867f544d512775c305ce349a6",
+  "words": [
+   {
+    "text": "Lissandro",
+    "start": 0,
+    "end": 0.595
+   },
+   {
+    "text": "Martinez,",
+    "start": 0.595,
+    "end": 1.19
+   },
+   {
+    "text": "nicknamed",
+    "start": 1.19,
+    "end": 1.785
+   },
+   {
+    "text": "The",
+    "start": 1.785,
+    "end": 1.983
+   },
+   {
+    "text": "Butcher,",
+    "start": 1.983,
+    "end": 2.512
+   },
+   {
+    "text": "today",
+    "start": 2.512,
+    "end": 2.843
+   },
+   {
+    "text": "at",
+    "start": 2.843,
+    "end": 2.975
+   },
+   {
+    "text": "Chelsea",
+    "start": 2.975,
+    "end": 3.438
+   },
+   {
+    "text": "an",
+    "start": 3.438,
+    "end": 3.57
+   },
+   {
+    "text": "arm",
+    "start": 3.57,
+    "end": 3.768
+   },
+   {
+    "text": "and",
+    "start": 3.768,
+    "end": 3.967
+   },
+   {
+    "text": "an",
+    "start": 3.967,
+    "end": 4.099
+   },
+   {
+    "text": "opponent's",
+    "start": 4.099,
+    "end": 4.76
+   },
+   {
+    "text": "face,",
+    "start": 4.76,
+    "end": 5.12
+   },
+   {
+    "text": "second",
+    "start": 5.12,
+    "end": 5.552
+   },
+   {
+    "text": "yellow",
+    "start": 5.552,
+    "end": 5.984
+   },
+   {
+    "text": "penalty.",
+    "start": 5.984,
+    "end": 6.56
+   }
+  ]
+ },
+ "s3-baby.part0.wav": {
+  "key": "69546a450ea1824ca1b74b214b628008f2983346",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.228
+   },
+   {
+    "text": "baby",
+    "start": 0.228,
+    "end": 0.531
+   },
+   {
+    "text": "50",
+    "start": 0.531,
+    "end": 0.683
+   },
+   {
+    "text": "centimeters",
+    "start": 0.683,
+    "end": 1.517
+   },
+   {
+    "text": "tall,",
+    "start": 1.517,
+    "end": 1.896
+   },
+   {
+    "text": "and",
+    "start": 1.896,
+    "end": 2.124
+   },
+   {
+    "text": "opponents",
+    "start": 2.124,
+    "end": 2.806
+   },
+   {
+    "text": "face",
+    "start": 2.806,
+    "end": 3.11
+   },
+   {
+    "text": "1.8",
+    "start": 3.11,
+    "end": 3.337
+   },
+   {
+    "text": "meters",
+    "start": 3.337,
+    "end": 3.792
+   },
+   {
+    "text": "up.",
+    "start": 3.792,
+    "end": 4.02
+   }
+  ]
+ },
+ "s4-end.part0.wav": {
+  "key": "ffae0f7a8ae89b3289e207a1485b5d429140a32c",
+  "words": [
+   {
+    "text": "It",
+    "start": 0,
+    "end": 0.137
+   },
+   {
+    "text": "can't",
+    "start": 0.137,
+    "end": 0.48
+   },
+   {
+    "text": "reach",
+    "start": 0.48,
+    "end": 0.823
+   },
+   {
+    "text": "anyone's",
+    "start": 0.823,
+    "end": 1.371
+   },
+   {
+    "text": "face.",
+    "start": 1.371,
+    "end": 1.714
+   },
+   {
+    "text": "No",
+    "start": 1.714,
+    "end": 1.851
+   },
+   {
+    "text": "foul,",
+    "start": 1.851,
+    "end": 2.194
+   },
+   {
+    "text": "no",
+    "start": 2.194,
+    "end": 2.331
+   },
+   {
+    "text": "penalty.",
+    "start": 2.331,
+    "end": 2.88
+   }
+  ]
+ },
+ "s4-end.part1.wav": {
+  "key": "2c5efdc444136e74c3e8639fc4dcbf6715d48c33",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.177
+   },
+   {
+    "text": "it's",
+    "start": 0.177,
+    "end": 0.414
+   },
+   {
+    "text": "still",
+    "start": 0.414,
+    "end": 0.71
+   },
+   {
+    "text": "on",
+    "start": 0.71,
+    "end": 0.828
+   },
+   {
+    "text": "the",
+    "start": 0.828,
+    "end": 1.005
+   },
+   {
+    "text": "pitch.",
+    "start": 1.005,
+    "end": 1.36
+   }
+  ]
+ },
+ "s4-end.part2.wav": {
+  "key": "af9846e4c877ab628e53b65ec7a23c2f620b45f6",
+  "words": [
+   {
+    "text": "with",
+    "start": 0,
+    "end": 0.343
+   },
+   {
+    "text": "Martinez",
+    "start": 0.343,
+    "end": 1.03
+   },
+   {
+    "text": "2-0,",
+    "start": 1.03,
+    "end": 1.373
+   },
+   {
+    "text": "with",
+    "start": 1.373,
+    "end": 1.716
+   },
+   {
+    "text": "the",
+    "start": 1.716,
+    "end": 1.974
+   },
+   {
+    "text": "baby",
+    "start": 1.974,
+    "end": 2.317
+   },
+   {
+    "text": "1-0.",
+    "start": 2.317,
+    "end": 2.66
+   }
+  ]
+ },
+ "s4-end.part3.wav": {
+  "key": "45a355a1daf4c75fdc27335bcda5e0404f2cbd97",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.226
+   },
+   {
+    "text": "baby",
+    "start": 0.226,
+    "end": 0.528
+   },
+   {
+    "text": "is",
+    "start": 0.528,
+    "end": 0.679
+   },
+   {
+    "text": "an",
+    "start": 0.679,
+    "end": 0.83
+   },
+   {
+    "text": "upgrade,",
+    "start": 0.83,
+    "end": 1.433
+   },
+   {
+    "text": "it",
+    "start": 1.433,
+    "end": 1.584
+   },
+   {
+    "text": "even",
+    "start": 1.584,
+    "end": 1.886
+   },
+   {
+    "text": "left",
+    "start": 1.886,
+    "end": 2.187
+   },
+   {
+    "text": "a",
+    "start": 2.187,
+    "end": 2.263
+   },
+   {
+    "text": "like.",
+    "start": 2.263,
+    "end": 2.64
+   }
+  ]
+ }
+}

@@ -107,8 +107,8 @@
   <script>
     (function () {
       const S = "#s2-kdb-";
-      const D = 6.13;
-      const C = {"n": 1.286, "fog": 2.991};
+      const D = 5.54;
+      const C = {"n": 1.171, "fog": 2.703};
       const tl = gsap.timeline({ paused: true });
       const turb = document.getElementById("s2-kdb-turb");
       tl.to({}, { duration: D, ease: "none", onUpdate() { turb.setAttribute("seed", 1 + (Math.floor(this.time() * 12) % 9)); } }, 0);

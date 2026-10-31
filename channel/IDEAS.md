@@ -13,6 +13,7 @@ Status: ✅ fertig · 📝 Skript · 💡 Idee
 | 007 | Could the Roman Empire stop prime Lionel Messi? | ✅ |
 | 008 | Could Kylian Mbappé dictate the French Revolution? | ✅ |
 | 009 | Could prime Kevin De Bruyne find Atlantis with a pass? (Kurzfolge) | ✅ |
+| 010 | Could a baby replace Lisandro Martínez? (Kurzfolge, Spieltag) | ✅ |
 | 021 | Could Usain Bolt outrun a Deutsche Bahn ICE? (Spoiler: on a delayed day, yes) | 💡 |
 | 003 | Could 100 grandmas knit a sweater for the Statue of Liberty? | 💡 |
 | 004 | Could Gordon Ramsay cater for the entire Roman army? | 💡 |

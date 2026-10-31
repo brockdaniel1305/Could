@@ -1,248 +1,248 @@
 {
- "duration": 26.0,
- "voice": "kokoro:bm_george",
+ "duration": 22.636,
+ "voice": "kokoro:am_adam",
  "scenes": [
   {
    "id": "s1-hook",
    "start": 0.0,
-   "duration": 4.02,
+   "duration": 3.451,
    "voice": "assets/voice/s1-hook.wav",
    "voiceStart": 0.15,
-   "speech": 3.47,
+   "speech": 2.901,
    "cues": {},
    "words": [
     {
      "text": "Could",
      "start": 0.15,
-     "end": 0.523
+     "end": 0.468
     },
     {
      "text": "prime",
-     "start": 0.523,
-     "end": 0.897
+     "start": 0.468,
+     "end": 0.786
     },
     {
      "text": "Kevin",
-     "start": 0.897,
-     "end": 1.27
+     "start": 0.786,
+     "end": 1.103
     },
     {
      "text": "De",
-     "start": 1.27,
-     "end": 1.419
+     "start": 1.103,
+     "end": 1.23
     },
     {
      "text": "Bruyne",
-     "start": 1.419,
-     "end": 1.867
+     "start": 1.23,
+     "end": 1.612
     },
     {
      "text": "find",
-     "start": 1.867,
-     "end": 2.166
+     "start": 1.612,
+     "end": 1.866
     },
     {
      "text": "Atlantis",
-     "start": 2.166,
-     "end": 2.763
+     "start": 1.866,
+     "end": 2.374
     },
     {
      "text": "with",
-     "start": 2.763,
-     "end": 3.062
+     "start": 2.374,
+     "end": 2.629
     },
     {
      "text": "a",
-     "start": 3.062,
-     "end": 3.137
+     "start": 2.629,
+     "end": 2.692
     },
     {
      "text": "pass?",
-     "start": 3.137,
-     "end": 3.51
+     "start": 2.692,
+     "end": 3.01
     }
    ],
    "sfx": []
   },
   {
    "id": "s2-kdb",
-   "start": 4.02,
-   "duration": 6.13,
+   "start": 3.451,
+   "duration": 5.54,
    "voice": "assets/voice/s2-kdb.wav",
    "voiceStart": 0.15,
-   "speech": 5.58,
+   "speech": 4.99,
    "cues": {
-    "n": 1.286,
-    "fog": 2.991
+    "n": 1.171,
+    "fog": 2.703
    },
    "words": [
     {
      "text": "Kevin",
      "start": 0.15,
-     "end": 0.556
+     "end": 0.515
     },
     {
      "text": "De",
-     "start": 0.556,
-     "end": 0.718
+     "start": 0.515,
+     "end": 0.661
     },
     {
      "text": "Bruyne.",
-     "start": 0.718,
-     "end": 1.286
+     "start": 0.661,
+     "end": 1.171
     },
     {
      "text": "Twenty",
-     "start": 1.286,
-     "end": 1.449
+     "start": 1.171,
+     "end": 1.317
     },
     {
      "text": "assists",
-     "start": 1.449,
-     "end": 2.017
+     "start": 1.317,
+     "end": 1.828
     },
     {
      "text": "in",
-     "start": 2.017,
-     "end": 2.179
+     "start": 1.828,
+     "end": 1.974
     },
     {
      "text": "one",
-     "start": 2.179,
-     "end": 2.423
+     "start": 1.974,
+     "end": 2.192
     },
     {
      "text": "season.",
-     "start": 2.423,
-     "end": 2.991
+     "start": 2.192,
+     "end": 2.703
     },
     {
      "text": "He",
-     "start": 2.991,
-     "end": 3.154
+     "start": 2.703,
+     "end": 2.849
     },
     {
      "text": "finds",
-     "start": 3.154,
-     "end": 3.559
+     "start": 2.849,
+     "end": 3.214
     },
     {
      "text": "team-mates",
-     "start": 3.559,
-     "end": 4.29
+     "start": 3.214,
+     "end": 3.87
     },
     {
      "text": "nobody",
-     "start": 4.29,
-     "end": 4.777
+     "start": 3.87,
+     "end": 4.308
     },
     {
      "text": "else",
-     "start": 4.777,
-     "end": 5.102
+     "start": 4.308,
+     "end": 4.599
     },
     {
      "text": "can",
-     "start": 5.102,
-     "end": 5.345
+     "start": 4.599,
+     "end": 4.818
     },
     {
      "text": "see.",
-     "start": 5.345,
-     "end": 5.67
+     "start": 4.818,
+     "end": 5.11
     }
    ],
    "sfx": [
     {
      "name": "kick",
-     "at": 3.291,
+     "at": 3.003,
      "volume": 0.35
     }
    ]
   },
   {
    "id": "s3-atlantis",
-   "start": 10.15,
-   "duration": 4.72,
+   "start": 8.991,
+   "duration": 3.99,
    "voice": "assets/voice/s3-atlantis.wav",
    "voiceStart": 0.15,
-   "speech": 4.17,
+   "speech": 3.44,
    "cues": {
-    "lost": 0.948,
-    "see": 2.9
+    "lost": 0.747,
+    "see": 2.39
    },
    "words": [
     {
      "text": "Atlantis.",
      "start": 0.15,
-     "end": 0.948
+     "end": 0.747
     },
     {
      "text": "Lost",
-     "start": 0.948,
-     "end": 1.303
+     "start": 0.747,
+     "end": 1.046
     },
     {
      "text": "for",
-     "start": 1.303,
-     "end": 1.569
+     "start": 1.046,
+     "end": 1.27
     },
     {
      "text": "over",
-     "start": 1.569,
-     "end": 1.924
+     "start": 1.27,
+     "end": 1.569
     },
     {
      "text": "two",
-     "start": 1.924,
-     "end": 2.072
+     "start": 1.569,
+     "end": 1.693
     },
     {
      "text": "thousand",
-     "start": 2.072,
-     "end": 2.367
+     "start": 1.693,
+     "end": 1.942
     },
     {
      "text": "years.",
-     "start": 2.367,
-     "end": 2.9
+     "start": 1.942,
+     "end": 2.39
     },
     {
      "text": "Nobody",
-     "start": 2.9,
-     "end": 3.432
+     "start": 2.39,
+     "end": 2.838
     },
     {
      "text": "can",
-     "start": 3.432,
-     "end": 3.698
+     "start": 2.838,
+     "end": 3.062
     },
     {
      "text": "see",
-     "start": 3.698,
-     "end": 3.964
+     "start": 3.062,
+     "end": 3.286
     },
     {
      "text": "it.",
-     "start": 3.964,
-     "end": 4.23
+     "start": 3.286,
+     "end": 3.51
     }
    ],
    "sfx": []
   },
   {
    "id": "s4-pass",
-   "start": 14.87,
-   "duration": 11.13,
+   "start": 12.981,
+   "duration": 9.655,
    "voice": "assets/voice/s4-pass.wav",
    "voiceStart": 0.15,
-   "speech": 9.38,
+   "speech": 7.905,
    "cues": {
-    "look": 1.3,
-    "pass": 2.028,
-    "found": 4.18,
-    "a21": 5.536,
-    "like": 7.42
+    "look": 1.17,
+    "pass": 1.749,
+    "found": 3.729,
+    "a21": 4.888,
+    "like": 6.455
    },
    "words": [
     {
@@ -252,104 +252,104 @@
     },
     {
      "text": "No",
-     "start": 1.3,
-     "end": 1.508
+     "start": 1.17,
+     "end": 1.335
     },
     {
      "text": "look.",
-     "start": 1.508,
-     "end": 2.028
+     "start": 1.335,
+     "end": 1.749
     },
     {
      "text": "One",
-     "start": 2.028,
-     "end": 2.34
+     "start": 1.749,
+     "end": 1.997
     },
     {
      "text": "pass.",
-     "start": 2.34,
-     "end": 2.86
+     "start": 1.997,
+     "end": 2.41
     },
     {
      "text": "Atlantis:",
-     "start": 4.18,
-     "end": 5.014
+     "start": 3.729,
+     "end": 4.391
     },
     {
      "text": "found.",
-     "start": 5.014,
-     "end": 5.536
+     "start": 4.391,
+     "end": 4.888
     },
     {
      "text": "Assist",
-     "start": 5.536,
-     "end": 6.161
+     "start": 4.888,
+     "end": 5.384
     },
     {
      "text": "number",
-     "start": 6.161,
-     "end": 6.787
+     "start": 5.384,
+     "end": 5.881
     },
     {
      "text": "twenty",
-     "start": 6.787,
-     "end": 6.977
+     "start": 5.881,
+     "end": 6.037
     },
     {
      "text": "one.",
-     "start": 6.977,
-     "end": 7.12
+     "start": 6.037,
+     "end": 6.155
     },
     {
      "text": "Even",
-     "start": 7.42,
-     "end": 7.787
+     "start": 6.455,
+     "end": 6.739
     },
     {
      "text": "Atlantis",
-     "start": 7.787,
-     "end": 8.522
+     "start": 6.739,
+     "end": 7.306
     },
     {
      "text": "left",
-     "start": 8.522,
-     "end": 8.889
+     "start": 7.306,
+     "end": 7.59
     },
     {
      "text": "a",
-     "start": 8.889,
-     "end": 9.081
+     "start": 7.59,
+     "end": 7.729
     },
     {
      "text": "like.",
-     "start": 9.081,
-     "end": 9.53
+     "start": 7.729,
+     "end": 8.055
     }
    ],
    "sfx": [
     {
      "name": "kick",
-     "at": 2.128,
+     "at": 1.849,
      "volume": 0.4
     },
     {
      "name": "splash",
-     "at": 3.028,
+     "at": 2.749,
      "volume": 0.45
     },
     {
      "name": "bubbles",
-     "at": 3.278,
+     "at": 2.999,
      "volume": 0.3
     },
     {
      "name": "impact-bass-1",
-     "at": 4.39,
+     "at": 3.939,
      "volume": 0.4
     },
     {
      "name": "ding",
-     "at": 7.62,
+     "at": 6.655,
      "volume": 0.3
     }
    ]

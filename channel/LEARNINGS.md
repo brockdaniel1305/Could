@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-10-31 · 009/010 · **Vorschau-Stimme jetzt Adam** (Kokoro `am_adam`, `"preview_voice": "am_adam"`) statt George. Spricht schneller (~10 %).
+- 2026-10-31 · 010 · Aktuelle Spieltags-Kurzfolgen (z. B. nach einer Niederlage) sind gewünscht: echte Szene des Tages als Fakt (Quelle prüfen),
+  Pointe als Rechnung ("mit Martínez 2–0, mit dem Baby 1–0"). Der Witz zielt auf die Szene/das Team, nicht auf die Person.
 - 2026-10-31 · 009 · **In jeder Folge ein Aufruf zu Liken und Folgen/Abonnieren, gut in die Geschichte eingebaut** (z. B. eine Figur gibt
   Daumen hoch / ein Like-Herz, und der Erzähler sagt trocken etwas wie "Even Atlantis left a like."). Dazu am Ende Karten LIKE · FOLLOW.
 - 2026-10-31 · 009 · **Neues Kurzformat (< 30 s) fürs Repertoire**: Hook → Person (1 Satz Stat) → Ziel (1 Satz) → Pointe, in der es klappt

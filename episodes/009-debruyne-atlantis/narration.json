@@ -5,7 +5,7 @@
   "provider": "voicestudio",
   "voice": "fable",
   "model": "tts-1",
-  "preview_voice": "bm_george",
+  "preview_voice": "am_adam",
   "speed": 1.08,
   "caption": "Could prime Kevin De Bruyne find Atlantis with a pass? No look. One pass. 🌊⚽ #could #debruyne #atlantis #football #shorts #whatif #fyp",
   "scenes": [
@@ -19,7 +19,7 @@
       "sfx": [
         {
           "name": "kick",
-          "at": 3.291,
+          "at": 3.003,
           "volume": 0.35
         }
       ]
@@ -35,27 +35,27 @@
       "sfx": [
         {
           "name": "kick",
-          "at": 2.128,
+          "at": 1.849,
           "volume": 0.4
         },
         {
           "name": "splash",
-          "at": 3.028,
+          "at": 2.749,
           "volume": 0.45
         },
         {
           "name": "bubbles",
-          "at": 3.278,
+          "at": 2.999,
           "volume": 0.3
         },
         {
           "name": "impact-bass-1",
-          "at": 4.39,
+          "at": 3.939,
           "volume": 0.4
         },
         {
           "name": "ding",
-          "at": 7.62,
+          "at": 6.655,
           "volume": 0.3
         }
       ]
