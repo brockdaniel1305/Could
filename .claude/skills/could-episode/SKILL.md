@@ -57,7 +57,8 @@ Jede Szene ist ein kleines Python-Skript mit `from scene import *` (`tools/scene
   wieder hinaus (`null` = bleibt bis zum Schnitt). Höchstens zwei Karten gleichzeitig. Weitere Helfer: `pop`, `swap`, `blink`, `waves`, `puffs`, `R`.
 - Jede Aussage des Erzählers hat eine Aktion im Cartoon auf ihrem Cue. Die Pointe bekommt eine Reaktion, die gehalten wird.
 - Frame 0 (Thumbnail) zeigt schon die Frage als Banner, die Hauptfigur und den Gegner.
-- Loop: `scene(..., loop_in=True)` in s1 und `scene(..., loop_out=True)` in der letzten Szene.
+- Einstieg = Cold Open (siehe LEARNINGS 012): Frame 0 zeigt den Höhepunkt in Bewegung + großen Kurztitel, dann "Let's go back.".
+  Loop per `scene(..., loop_out="cut")`: die letzten 0,4 s zeigen wieder das Motiv von Frame 0 (kein Wisch-Übergang mehr).
 
 `sh episodes/<ep>/src/build_all.sh` schreibt `compositions/*.html`.
 

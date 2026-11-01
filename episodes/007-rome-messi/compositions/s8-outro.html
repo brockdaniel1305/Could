@@ -40,7 +40,7 @@
              background: rgba(26, 26, 46, 0.35); letter-spacing: -0.02em; }
   </style>
   <div id="root" data-composition-id="s8-outro" data-width="1080" data-height="1920">
-    <div class="cam" id="s8-outro-cam" style="position: absolute; inset: 0;">
+    <div class="cam" id="s8-outro-loopcam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s8-outro-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s8-outro-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s8-outro-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -472,7 +472,7 @@
       tl.fromTo(S + "m-legR", { rotation: 0 }, { rotation: -30, duration: 0.3, ease: "power2.in", yoyo: true, repeat: R(D, 0.3) }, 0);
       tl.fromTo(S + "ball-spin", { rotation: 0 }, { rotation: 360, duration: 0.6, ease: "none", repeat: R(D, 0.6), transformOrigin: "50% 50%" }, 0);
 
-      tl.fromTo(S + "cam", { x: 0 }, { x: -1080, duration: 0.3, ease: "power3.in", immediateRender: false }, D - 0.3);
+      tl.fromTo(S + "loopcam", { x: 0 }, { x: -1080, duration: 0.3, ease: "power3.in", immediateRender: false }, D - 0.3);
 
       // render end -> start once so every element starts in its earliest state
       tl.progress(1).progress(0);

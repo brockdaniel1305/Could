@@ -5,6 +5,13 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-01 · 012 · **Cold Open statt Banner-Einstieg** (Grund: 010/011 verlieren die meisten Zuschauer bei 0:01, Ø Watchtime ~10 s):
+  Frame 0 zeigt den Höhepunkt MITTEN in der Bewegung (Domino fällt, Grätsche, Karte fliegt), großer Titel mit 3–5 Wörtern
+  ("MESSI vs. 380,000 ROMANS") statt dreizeiligem Banner, Impact-Sound in Frame 0, Zähler läuft schon. Dann "Let's go back." (Rückspul-Effekt)
+  und die Geschichte im Schnelldurchlauf. In den ersten 5 s alle 1–1,5 s eine Änderung. Kurzfolgen 25–35 s.
+  Loop: KEIN Wisch-Übergang mehr (erstes Bild war halb schwarz → sah aus wie Laden). Stattdessen zeigt das letzte Bild (0,4 s)
+  dasselbe Motiv wie Frame 0 (`scene(..., loop_out="cut")`, Vorlage `episodes/012-messi-cold/src/cold.py`).
+  Kommentar-Karte als konkrete Frage ("Who should Messi dribble past next?"), Follow-Karte mit Serienhinweis ("COULD? case files").
 - 2026-10-31 · alle · **Jede Folge ist ein Loop**: Der letzte Satz bleibt offen und läuft in die Frage am Anfang ("… And if anyone asks you:" /
   "So next time someone asks you:" → "Could …?"), damit Zuschauer das Ende nicht merken. Umsetzung: `"loop": true` in narration.json
   (letzte Szene endet 0,3 s nach dem letzten Wort, keine Abblende), `scene(..., loop_in=True)` in s1 (Wisch von rechts herein, kein Punch-in)
@@ -95,6 +102,7 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- Die Loop-Hülle in `scene.py` heißt `<sid>-loopcam`; eigene Gruppen nie `<sid>-cam` nennen (Kollision: ganzes Bild verschob sich, 007 musste neu gerendert werden).
 - Nur der Ton geändert? Nicht neu rendern: `tools/remix_audio.py episodes/<ep> <render.mp4> <final.mp4>` mischt Stimme+SFX aus
   index.html neu (inkl. loudnorm, apad auf volle Länge) und kopiert das Bild. Dauert Sekunden statt Minuten.
 - Ein Gegenstand in der Hand (Heugabel) gehört NICHT in die Arm-Gruppe: `scene.py` dreht Arme um die Mitte oben ihrer Bounding-Box,

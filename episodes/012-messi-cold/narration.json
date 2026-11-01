@@ -1,0 +1,150 @@
+{
+  "id": "012",
+  "title": "Could the Roman Empire stop prime Lionel Messi? (cold-open cut)",
+  "format": "short",
+  "loop": true,
+  "provider": "voicestudio",
+  "voice": "fable",
+  "model": "tts-1",
+  "preview_voice": "am_adam",
+  "speed": 1.1,
+  "caption": "Could the Roman Empire stop prime Lionel Messi? 380,000 soldiers. One left foot. ⚔️⚽ #could #messi #goat #romanempire #football #history #shorts #fyp",
+  "scenes": [
+    {
+      "id": "s1-cold",
+      "text": "Could the Roman Empire stop prime Lionel Messi? ||0.2|| {{back}}Let's go back.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "at": 0.0,
+          "volume": 0.35
+        },
+        {
+          "name": "domino",
+          "at": 0.0,
+          "volume": 0.4
+        },
+        {
+          "name": "whoosh",
+          "at": 2.846,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s2-rome",
+      "text": "The Roman Empire. {{army}}Three hundred and eighty thousand soldiers. {{sh}}Shields. {{ar}}Armour. {{sw}}Swords.",
+      "sfx": [
+        {
+          "name": "stomp",
+          "at": 2.918,
+          "volume": 0.45
+        },
+        {
+          "name": "clang",
+          "at": 3.57,
+          "volume": 0.25
+        },
+        {
+          "name": "stomp",
+          "at": 4.146,
+          "volume": 0.45
+        }
+      ]
+    },
+    {
+      "id": "s3-messi",
+      "text": "Prime Messi. {{g}}Ninety one goals in one calendar year. {{wr}}A world record.",
+      "sfx": [
+        {
+          "name": "net",
+          "at": 1.358,
+          "volume": 0.3
+        },
+        {
+          "name": "net",
+          "at": 2.058,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s4-dribble",
+      "text": "He dribbles. {{dz}}Every Roman he passes spins around and gets dizzy. {{fall}}Dizzy Romans fall over. {{into}}Into other Romans.",
+      "sfx": [
+        {
+          "name": "spin",
+          "at": 0.5,
+          "volume": 0.25
+        },
+        {
+          "name": "dizzy",
+          "at": 1.2,
+          "volume": 0.22
+        },
+        {
+          "name": "domino",
+          "at": 4.15,
+          "volume": 0.45
+        },
+        {
+          "name": "whistle",
+          "at": 5.909,
+          "volume": 0.25
+        }
+      ]
+    },
+    {
+      "id": "s5-strike",
+      "text": "Rome builds a tortoise of shields. {{legs}}It has legs. {{nut}}Nutmeg. ||0.2|| {{wall}}Then Hadrian's Wall. {{fk}}Free kick. ||0.5|| {{top}}Top corner.",
+      "sfx": [
+        {
+          "name": "kick",
+          "at": 2.863,
+          "volume": 0.35
+        },
+        {
+          "name": "clang",
+          "at": 3.263,
+          "volume": 0.25
+        },
+        {
+          "name": "rumble",
+          "at": 3.541,
+          "volume": 0.4
+        },
+        {
+          "name": "kick",
+          "at": 4.964,
+          "volume": 0.4
+        },
+        {
+          "name": "net",
+          "at": 5.883,
+          "volume": 0.45
+        },
+        {
+          "name": "impact-bass-1",
+          "at": 5.833,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s6-end",
+      "text": "That is when they all realised: {{nobody}}nobody could stop Messi. ||0.2|| {{like}}Even the Romans left a like. {{loop}}So if anyone asks you:",
+      "sfx": [
+        {
+          "name": "sting",
+          "at": 1.802,
+          "volume": 0.4
+        },
+        {
+          "name": "ding",
+          "at": 3.551,
+          "volume": 0.3
+        }
+      ]
+    }
+  ]
+}

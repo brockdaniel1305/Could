@@ -1,0 +1,663 @@
+{
+ "duration": 33.455,
+ "voice": "kokoro:am_adam",
+ "scenes": [
+  {
+   "id": "s1-cold",
+   "start": 0.0,
+   "duration": 4.163,
+   "voice": "assets/voice/s1-cold.wav",
+   "voiceStart": 0.15,
+   "speech": 3.613,
+   "cues": {
+    "back": 2.846
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.458
+    },
+    {
+     "text": "the",
+     "start": 0.458,
+     "end": 0.642
+    },
+    {
+     "text": "Roman",
+     "start": 0.642,
+     "end": 0.95
+    },
+    {
+     "text": "Empire",
+     "start": 0.95,
+     "end": 1.318
+    },
+    {
+     "text": "stop",
+     "start": 1.318,
+     "end": 1.564
+    },
+    {
+     "text": "prime",
+     "start": 1.564,
+     "end": 1.872
+    },
+    {
+     "text": "Lionel",
+     "start": 1.872,
+     "end": 2.241
+    },
+    {
+     "text": "Messi?",
+     "start": 2.241,
+     "end": 2.61
+    },
+    {
+     "text": "Let's",
+     "start": 2.846,
+     "end": 3.196
+    },
+    {
+     "text": "go",
+     "start": 3.196,
+     "end": 3.336
+    },
+    {
+     "text": "back.",
+     "start": 3.336,
+     "end": 3.686
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 0.0,
+     "volume": 0.35
+    },
+    {
+     "name": "domino",
+     "at": 0.0,
+     "volume": 0.4
+    },
+    {
+     "name": "whoosh",
+     "at": 2.846,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s2-rome",
+   "start": 4.163,
+   "duration": 5.107,
+   "voice": "assets/voice/s2-rome.wav",
+   "voiceStart": 0.15,
+   "speech": 4.557,
+   "cues": {
+    "army": 1.465,
+    "sh": 2.868,
+    "ar": 3.57,
+    "sw": 4.096
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.413
+    },
+    {
+     "text": "Roman",
+     "start": 0.413,
+     "end": 0.852
+    },
+    {
+     "text": "Empire.",
+     "start": 0.852,
+     "end": 1.465
+    },
+    {
+     "text": "Three",
+     "start": 1.465,
+     "end": 1.575
+    },
+    {
+     "text": "hundred",
+     "start": 1.575,
+     "end": 1.717
+    },
+    {
+     "text": "and",
+     "start": 1.717,
+     "end": 1.796
+    },
+    {
+     "text": "eighty",
+     "start": 1.796,
+     "end": 1.922
+    },
+    {
+     "text": "thousand",
+     "start": 1.922,
+     "end": 2.079
+    },
+    {
+     "text": "soldiers.",
+     "start": 2.079,
+     "end": 2.868
+    },
+    {
+     "text": "Shields.",
+     "start": 2.868,
+     "end": 3.57
+    },
+    {
+     "text": "Armour.",
+     "start": 3.57,
+     "end": 4.096
+    },
+    {
+     "text": "Swords.",
+     "start": 4.096,
+     "end": 4.71
+    }
+   ],
+   "sfx": [
+    {
+     "name": "stomp",
+     "at": 2.918,
+     "volume": 0.45
+    },
+    {
+     "name": "clang",
+     "at": 3.57,
+     "volume": 0.25
+    },
+    {
+     "name": "stomp",
+     "at": 4.146,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "id": "s3-messi",
+   "start": 9.27,
+   "duration": 4.179,
+   "voice": "assets/voice/s3-messi.wav",
+   "voiceStart": 0.15,
+   "speech": 3.629,
+   "cues": {
+    "g": 0.958,
+    "wr": 2.795
+   },
+   "words": [
+    {
+     "text": "Prime",
+     "start": 0.15,
+     "end": 0.517
+    },
+    {
+     "text": "Messi.",
+     "start": 0.517,
+     "end": 0.958
+    },
+    {
+     "text": "Ninety",
+     "start": 0.958,
+     "end": 1.048
+    },
+    {
+     "text": "one",
+     "start": 1.048,
+     "end": 1.105
+    },
+    {
+     "text": "goals",
+     "start": 1.105,
+     "end": 1.472
+    },
+    {
+     "text": "in",
+     "start": 1.472,
+     "end": 1.619
+    },
+    {
+     "text": "one",
+     "start": 1.619,
+     "end": 1.84
+    },
+    {
+     "text": "calendar",
+     "start": 1.84,
+     "end": 2.428
+    },
+    {
+     "text": "year.",
+     "start": 2.428,
+     "end": 2.795
+    },
+    {
+     "text": "A",
+     "start": 2.795,
+     "end": 2.868
+    },
+    {
+     "text": "world",
+     "start": 2.868,
+     "end": 3.236
+    },
+    {
+     "text": "record.",
+     "start": 3.236,
+     "end": 3.75
+    }
+   ],
+   "sfx": [
+    {
+     "name": "net",
+     "at": 1.358,
+     "volume": 0.3
+    },
+    {
+     "name": "net",
+     "at": 2.058,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s4-dribble",
+   "start": 13.449,
+   "duration": 6.509,
+   "voice": "assets/voice/s4-dribble.wav",
+   "voiceStart": 0.15,
+   "speech": 5.959,
+   "cues": {
+    "dz": 0.897,
+    "fall": 3.75,
+    "into": 5.009
+   },
+   "words": [
+    {
+     "text": "He",
+     "start": 0.15,
+     "end": 0.286
+    },
+    {
+     "text": "dribbles.",
+     "start": 0.286,
+     "end": 0.897
+    },
+    {
+     "text": "Every",
+     "start": 0.897,
+     "end": 1.237
+    },
+    {
+     "text": "Roman",
+     "start": 1.237,
+     "end": 1.576
+    },
+    {
+     "text": "he",
+     "start": 1.576,
+     "end": 1.712
+    },
+    {
+     "text": "passes",
+     "start": 1.712,
+     "end": 2.12
+    },
+    {
+     "text": "spins",
+     "start": 2.12,
+     "end": 2.459
+    },
+    {
+     "text": "around",
+     "start": 2.459,
+     "end": 2.867
+    },
+    {
+     "text": "and",
+     "start": 2.867,
+     "end": 3.071
+    },
+    {
+     "text": "gets",
+     "start": 3.071,
+     "end": 3.342
+    },
+    {
+     "text": "dizzy.",
+     "start": 3.342,
+     "end": 3.75
+    },
+    {
+     "text": "Dizzy",
+     "start": 3.75,
+     "end": 4.081
+    },
+    {
+     "text": "Romans",
+     "start": 4.081,
+     "end": 4.479
+    },
+    {
+     "text": "fall",
+     "start": 4.479,
+     "end": 4.744
+    },
+    {
+     "text": "over.",
+     "start": 4.744,
+     "end": 5.009
+    },
+    {
+     "text": "Into",
+     "start": 5.009,
+     "end": 5.275
+    },
+    {
+     "text": "other",
+     "start": 5.275,
+     "end": 5.606
+    },
+    {
+     "text": "Romans.",
+     "start": 5.606,
+     "end": 6.07
+    }
+   ],
+   "sfx": [
+    {
+     "name": "spin",
+     "at": 0.5,
+     "volume": 0.25
+    },
+    {
+     "name": "dizzy",
+     "at": 1.2,
+     "volume": 0.22
+    },
+    {
+     "name": "domino",
+     "at": 4.15,
+     "volume": 0.45
+    },
+    {
+     "name": "whistle",
+     "at": 5.909,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s5-strike",
+   "start": 19.958,
+   "duration": 7.087,
+   "voice": "assets/voice/s5-strike.wav",
+   "voiceStart": 0.15,
+   "speech": 6.537,
+   "cues": {
+    "legs": 2.167,
+    "nut": 2.863,
+    "wall": 3.541,
+    "fk": 4.714,
+    "top": 5.833
+   },
+   "words": [
+    {
+     "text": "Rome",
+     "start": 0.15,
+     "end": 0.428
+    },
+    {
+     "text": "builds",
+     "start": 0.428,
+     "end": 0.846
+    },
+    {
+     "text": "a",
+     "start": 0.846,
+     "end": 0.915
+    },
+    {
+     "text": "tortoise",
+     "start": 0.915,
+     "end": 1.472
+    },
+    {
+     "text": "of",
+     "start": 1.472,
+     "end": 1.611
+    },
+    {
+     "text": "shields.",
+     "start": 1.611,
+     "end": 2.167
+    },
+    {
+     "text": "It",
+     "start": 2.167,
+     "end": 2.307
+    },
+    {
+     "text": "has",
+     "start": 2.307,
+     "end": 2.515
+    },
+    {
+     "text": "legs.",
+     "start": 2.515,
+     "end": 2.863
+    },
+    {
+     "text": "Nutmeg.",
+     "start": 2.863,
+     "end": 3.35
+    },
+    {
+     "text": "Then",
+     "start": 3.541,
+     "end": 3.802
+    },
+    {
+     "text": "Hadrian's",
+     "start": 3.802,
+     "end": 4.388
+    },
+    {
+     "text": "Wall.",
+     "start": 4.388,
+     "end": 4.714
+    },
+    {
+     "text": "Free",
+     "start": 4.714,
+     "end": 4.975
+    },
+    {
+     "text": "kick.",
+     "start": 4.975,
+     "end": 5.301
+    },
+    {
+     "text": "Top",
+     "start": 5.833,
+     "end": 6.085
+    },
+    {
+     "text": "corner.",
+     "start": 6.085,
+     "end": 6.673
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "at": 2.863,
+     "volume": 0.35
+    },
+    {
+     "name": "clang",
+     "at": 3.263,
+     "volume": 0.25
+    },
+    {
+     "name": "rumble",
+     "at": 3.541,
+     "volume": 0.4
+    },
+    {
+     "name": "kick",
+     "at": 4.964,
+     "volume": 0.4
+    },
+    {
+     "name": "net",
+     "at": 5.883,
+     "volume": 0.45
+    },
+    {
+     "name": "impact-bass-1",
+     "at": 5.833,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s6-end",
+   "start": 27.045,
+   "duration": 6.41,
+   "voice": "assets/voice/s6-end.wav",
+   "voiceStart": 0.15,
+   "speech": 5.96,
+   "cues": {
+    "nobody": 1.802,
+    "like": 3.401,
+    "loop": 4.824
+   },
+   "words": [
+    {
+     "text": "That",
+     "start": 0.15,
+     "end": 0.414
+    },
+    {
+     "text": "is",
+     "start": 0.414,
+     "end": 0.547
+    },
+    {
+     "text": "when",
+     "start": 0.547,
+     "end": 0.811
+    },
+    {
+     "text": "they",
+     "start": 0.811,
+     "end": 1.075
+    },
+    {
+     "text": "all",
+     "start": 1.075,
+     "end": 1.273
+    },
+    {
+     "text": "realised:",
+     "start": 1.273,
+     "end": 1.802
+    },
+    {
+     "text": "nobody",
+     "start": 1.802,
+     "end": 2.199
+    },
+    {
+     "text": "could",
+     "start": 2.199,
+     "end": 2.529
+    },
+    {
+     "text": "stop",
+     "start": 2.529,
+     "end": 2.793
+    },
+    {
+     "text": "Messi.",
+     "start": 2.793,
+     "end": 3.19
+    },
+    {
+     "text": "Even",
+     "start": 3.401,
+     "end": 3.648
+    },
+    {
+     "text": "the",
+     "start": 3.648,
+     "end": 3.834
+    },
+    {
+     "text": "Romans",
+     "start": 3.834,
+     "end": 4.205
+    },
+    {
+     "text": "left",
+     "start": 4.205,
+     "end": 4.453
+    },
+    {
+     "text": "a",
+     "start": 4.453,
+     "end": 4.564
+    },
+    {
+     "text": "like.",
+     "start": 4.564,
+     "end": 4.824
+    },
+    {
+     "text": "So",
+     "start": 4.824,
+     "end": 4.948
+    },
+    {
+     "text": "if",
+     "start": 4.948,
+     "end": 5.071
+    },
+    {
+     "text": "anyone",
+     "start": 5.071,
+     "end": 5.442
+    },
+    {
+     "text": "asks",
+     "start": 5.442,
+     "end": 5.69
+    },
+    {
+     "text": "you:",
+     "start": 5.69,
+     "end": 6.061
+    }
+   ],
+   "sfx": [
+    {
+     "name": "sting",
+     "at": 1.802,
+     "volume": 0.4
+    },
+    {
+     "name": "ding",
+     "at": 3.551,
+     "volume": 0.3
+    }
+   ]
+  }
+ ]
+}

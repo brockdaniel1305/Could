@@ -40,7 +40,7 @@
              background: rgba(26, 26, 46, 0.35); letter-spacing: -0.02em; }
   </style>
   <div id="root" data-composition-id="s1-hook" data-width="1080" data-height="1920">
-    <div class="cam" id="s1-hook-cam" style="position: absolute; inset: 0;">
+    <div class="cam" id="s1-hook-loopcam" style="position: absolute; inset: 0;">
     <svg class="world" viewBox="0 0 1080 1920" id="s1-hook-svg" data-layout-allow-overflow>
       <defs>
         <filter id="s1-hook-boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="s1-hook-turb" type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="1" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter>
@@ -481,7 +481,7 @@
       drawOn(S + "bf-line1", C.grass + 0.1, 0.5);
       drawOn(S + "bf-line2", C.grass + 0.4, 0.7);
 
-      tl.fromTo(S + "cam", { x: 1080 }, { x: 0, duration: 0.3, ease: "power3.out" }, 0);
+      tl.fromTo(S + "loopcam", { x: 1080 }, { x: 0, duration: 0.3, ease: "power3.out" }, 0);
       tl.fromTo(S + "dip", { opacity: 0 }, { opacity: 0.45, duration: 0.1, ease: "none" }, D - 0.1);
 
       // render end -> start once so every element starts in its earliest state
