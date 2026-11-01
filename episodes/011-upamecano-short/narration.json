@@ -1,0 +1,63 @@
+{
+  "id": "011",
+  "title": "Could Dayot Upamecano have stopped Hitler from conquering France? (short)",
+  "format": "short",
+  "loop": true,
+  "provider": "voicestudio",
+  "voice": "fable",
+  "model": "tts-1",
+  "preview_voice": "am_adam",
+  "speed": 1.08,
+  "caption": "Could Dayot Upamecano have stopped the 1940 invasion of France? Elite defending. One simple pass. 🛡️🇫🇷 #could #upamecano #football #history #shorts #whatif #fyp",
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "text": "Could Dayot Upamecano have stopped Hitler from conquering France?"
+    },
+    {
+      "id": "s2-upa",
+      "text": "Dayot Upamecano. {{best}}One of the best centre backs in the world. {{really}}Genuinely. {{calm}}Famous for his calm, error free defending. ||0.4|| {{wink}}Mostly."
+    },
+    {
+      "id": "s3-army",
+      "text": "May {1940|nineteen forty}: {{men}}three million soldiers {{tanks}}and two and a half thousand tanks, {{ard}}coming through the Ardennes."
+    },
+    {
+      "id": "s4-defend",
+      "text": "He holds a perfect high line {{line}}across the whole forest. {{tank}}A twenty tonne tank? {{slide}}Sliding tackle. {{clean}}All ball. ||0.3|| {{off}}Three million soldiers: offside.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "at": 4.605,
+          "volume": 0.35
+        },
+        {
+          "name": "whistle",
+          "at": 5.879,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s5-end",
+      "text": "So yes, {{yes}}he stops them. ||0.3|| {{risk}}Then, under no pressure at all, he tries one simple pass. ||0.3|| {{walk}}The whole army walks past him. ||0.3|| {{like}}Even the tanks left a like. {{loop}}So next time someone asks you:",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "at": 0.707,
+          "volume": 0.4
+        },
+        {
+          "name": "kick",
+          "at": 4.367,
+          "volume": 0.35
+        },
+        {
+          "name": "ding",
+          "at": 7.445,
+          "volume": 0.3
+        }
+      ]
+    }
+  ]
+}

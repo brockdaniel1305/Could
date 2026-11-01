@@ -1,0 +1,619 @@
+{
+ "duration": 36.423,
+ "voice": "kokoro:am_adam",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 4.006,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 3.456,
+   "cues": {},
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.45
+    },
+    {
+     "text": "Dayot",
+     "start": 0.45,
+     "end": 0.777
+    },
+    {
+     "text": "Upamecano",
+     "start": 0.777,
+     "end": 1.29
+    },
+    {
+     "text": "have",
+     "start": 1.29,
+     "end": 1.53
+    },
+    {
+     "text": "stopped",
+     "start": 1.53,
+     "end": 1.95
+    },
+    {
+     "text": "Hitler",
+     "start": 1.95,
+     "end": 2.31
+    },
+    {
+     "text": "from",
+     "start": 2.31,
+     "end": 2.55
+    },
+    {
+     "text": "conquering",
+     "start": 2.55,
+     "end": 3.15
+    },
+    {
+     "text": "France?",
+     "start": 3.15,
+     "end": 3.57
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s2-upa",
+   "start": 4.006,
+   "duration": 8.14,
+   "voice": "assets/voice/s2-upa.wav",
+   "voiceStart": 0.15,
+   "speech": 7.59,
+   "cues": {
+    "best": 1.208,
+    "really": 3.606,
+    "calm": 4.311,
+    "wink": 7.0
+   },
+   "words": [
+    {
+     "text": "Dayot",
+     "start": 0.15,
+     "end": 0.54
+    },
+    {
+     "text": "Upamecano.",
+     "start": 0.54,
+     "end": 1.208
+    },
+    {
+     "text": "One",
+     "start": 1.208,
+     "end": 1.419
+    },
+    {
+     "text": "of",
+     "start": 1.419,
+     "end": 1.561
+    },
+    {
+     "text": "the",
+     "start": 1.561,
+     "end": 1.772
+    },
+    {
+     "text": "best",
+     "start": 1.772,
+     "end": 2.054
+    },
+    {
+     "text": "centre",
+     "start": 2.054,
+     "end": 2.477
+    },
+    {
+     "text": "backs",
+     "start": 2.477,
+     "end": 2.83
+    },
+    {
+     "text": "in",
+     "start": 2.83,
+     "end": 2.971
+    },
+    {
+     "text": "the",
+     "start": 2.971,
+     "end": 3.183
+    },
+    {
+     "text": "world.",
+     "start": 3.183,
+     "end": 3.606
+    },
+    {
+     "text": "Genuinely.",
+     "start": 3.606,
+     "end": 4.311
+    },
+    {
+     "text": "Famous",
+     "start": 4.311,
+     "end": 4.734
+    },
+    {
+     "text": "for",
+     "start": 4.734,
+     "end": 4.946
+    },
+    {
+     "text": "his",
+     "start": 4.946,
+     "end": 5.157
+    },
+    {
+     "text": "calm,",
+     "start": 5.157,
+     "end": 5.51
+    },
+    {
+     "text": "error",
+     "start": 5.51,
+     "end": 5.754
+    },
+    {
+     "text": "free",
+     "start": 5.754,
+     "end": 5.963
+    },
+    {
+     "text": "defending.",
+     "start": 5.963,
+     "end": 6.53
+    },
+    {
+     "text": "Mostly.",
+     "start": 7.0,
+     "end": 9.0
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s3-army",
+   "start": 12.146,
+   "duration": 5.547,
+   "voice": "assets/voice/s3-army.wav",
+   "voiceStart": 0.15,
+   "speech": 4.997,
+   "cues": {
+    "men": 0.481,
+    "tanks": 1.605,
+    "ard": 3.457
+   },
+   "words": [
+    {
+     "text": "May",
+     "start": 0.15,
+     "end": 0.348
+    },
+    {
+     "text": "1940:",
+     "start": 0.348,
+     "end": 0.481
+    },
+    {
+     "text": "three",
+     "start": 0.481,
+     "end": 0.613
+    },
+    {
+     "text": "million",
+     "start": 0.613,
+     "end": 1.076
+    },
+    {
+     "text": "soldiers",
+     "start": 1.076,
+     "end": 1.605
+    },
+    {
+     "text": "and",
+     "start": 1.605,
+     "end": 1.803
+    },
+    {
+     "text": "two",
+     "start": 1.803,
+     "end": 2.002
+    },
+    {
+     "text": "and",
+     "start": 2.002,
+     "end": 2.2
+    },
+    {
+     "text": "a",
+     "start": 2.2,
+     "end": 2.266
+    },
+    {
+     "text": "half",
+     "start": 2.266,
+     "end": 2.531
+    },
+    {
+     "text": "thousand",
+     "start": 2.531,
+     "end": 3.06
+    },
+    {
+     "text": "tanks,",
+     "start": 3.06,
+     "end": 3.457
+    },
+    {
+     "text": "coming",
+     "start": 3.457,
+     "end": 3.853
+    },
+    {
+     "text": "through",
+     "start": 3.853,
+     "end": 4.316
+    },
+    {
+     "text": "the",
+     "start": 4.316,
+     "end": 4.515
+    },
+    {
+     "text": "Ardennes.",
+     "start": 4.515,
+     "end": 5.147
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-defend",
+   "start": 17.693,
+   "duration": 8.285,
+   "voice": "assets/voice/s4-defend.wav",
+   "voiceStart": 0.15,
+   "speech": 7.735,
+   "cues": {
+    "line": 1.593,
+    "tank": 2.91,
+    "slide": 3.879,
+    "clean": 5.025,
+    "off": 5.879
+   },
+   "words": [
+    {
+     "text": "He",
+     "start": 0.15,
+     "end": 0.275
+    },
+    {
+     "text": "holds",
+     "start": 0.275,
+     "end": 0.589
+    },
+    {
+     "text": "a",
+     "start": 0.589,
+     "end": 0.652
+    },
+    {
+     "text": "perfect",
+     "start": 0.652,
+     "end": 1.091
+    },
+    {
+     "text": "high",
+     "start": 1.091,
+     "end": 1.342
+    },
+    {
+     "text": "line",
+     "start": 1.342,
+     "end": 1.593
+    },
+    {
+     "text": "across",
+     "start": 1.593,
+     "end": 1.969
+    },
+    {
+     "text": "the",
+     "start": 1.969,
+     "end": 2.157
+    },
+    {
+     "text": "whole",
+     "start": 2.157,
+     "end": 2.471
+    },
+    {
+     "text": "forest.",
+     "start": 2.471,
+     "end": 2.91
+    },
+    {
+     "text": "A",
+     "start": 2.91,
+     "end": 2.998
+    },
+    {
+     "text": "twenty",
+     "start": 2.998,
+     "end": 3.233
+    },
+    {
+     "text": "tonne",
+     "start": 3.233,
+     "end": 3.439
+    },
+    {
+     "text": "tank?",
+     "start": 3.439,
+     "end": 3.879
+    },
+    {
+     "text": "Sliding",
+     "start": 3.879,
+     "end": 4.496
+    },
+    {
+     "text": "tackle.",
+     "start": 4.496,
+     "end": 5.025
+    },
+    {
+     "text": "All",
+     "start": 5.025,
+     "end": 5.289
+    },
+    {
+     "text": "ball.",
+     "start": 5.289,
+     "end": 5.73
+    },
+    {
+     "text": "Three",
+     "start": 5.879,
+     "end": 5.959
+    },
+    {
+     "text": "million",
+     "start": 5.959,
+     "end": 6.519
+    },
+    {
+     "text": "soldiers:",
+     "start": 6.519,
+     "end": 7.239
+    },
+    {
+     "text": "offside.",
+     "start": 7.239,
+     "end": 7.879
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 4.605,
+     "volume": 0.35
+    },
+    {
+     "name": "whistle",
+     "at": 5.879,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s5-end",
+   "start": 25.978,
+   "duration": 10.445,
+   "voice": "assets/voice/s5-end.wav",
+   "voiceStart": 0.15,
+   "speech": 9.995,
+   "cues": {
+    "yes": 0.597,
+    "risk": 1.794,
+    "walk": 5.267,
+    "like": 7.145,
+    "loop": 8.549
+   },
+   "words": [
+    {
+     "text": "So",
+     "start": 0.15,
+     "end": 0.299
+    },
+    {
+     "text": "yes,",
+     "start": 0.299,
+     "end": 0.597
+    },
+    {
+     "text": "he",
+     "start": 0.597,
+     "end": 0.746
+    },
+    {
+     "text": "stops",
+     "start": 0.746,
+     "end": 1.118
+    },
+    {
+     "text": "them.",
+     "start": 1.118,
+     "end": 1.49
+    },
+    {
+     "text": "Then,",
+     "start": 1.794,
+     "end": 2.069
+    },
+    {
+     "text": "under",
+     "start": 2.069,
+     "end": 2.412
+    },
+    {
+     "text": "no",
+     "start": 2.412,
+     "end": 2.55
+    },
+    {
+     "text": "pressure",
+     "start": 2.55,
+     "end": 3.099
+    },
+    {
+     "text": "at",
+     "start": 3.099,
+     "end": 3.237
+    },
+    {
+     "text": "all,",
+     "start": 3.237,
+     "end": 3.511
+    },
+    {
+     "text": "he",
+     "start": 3.511,
+     "end": 3.649
+    },
+    {
+     "text": "tries",
+     "start": 3.649,
+     "end": 3.992
+    },
+    {
+     "text": "one",
+     "start": 3.992,
+     "end": 4.198
+    },
+    {
+     "text": "simple",
+     "start": 4.198,
+     "end": 4.611
+    },
+    {
+     "text": "pass.",
+     "start": 4.611,
+     "end": 4.954
+    },
+    {
+     "text": "The",
+     "start": 5.267,
+     "end": 5.454
+    },
+    {
+     "text": "whole",
+     "start": 5.454,
+     "end": 5.766
+    },
+    {
+     "text": "army",
+     "start": 5.766,
+     "end": 6.016
+    },
+    {
+     "text": "walks",
+     "start": 6.016,
+     "end": 6.328
+    },
+    {
+     "text": "past",
+     "start": 6.328,
+     "end": 6.577
+    },
+    {
+     "text": "him.",
+     "start": 6.577,
+     "end": 6.827
+    },
+    {
+     "text": "Even",
+     "start": 7.145,
+     "end": 7.4
+    },
+    {
+     "text": "the",
+     "start": 7.4,
+     "end": 7.592
+    },
+    {
+     "text": "tanks",
+     "start": 7.592,
+     "end": 7.911
+    },
+    {
+     "text": "left",
+     "start": 7.911,
+     "end": 8.166
+    },
+    {
+     "text": "a",
+     "start": 8.166,
+     "end": 8.281
+    },
+    {
+     "text": "like.",
+     "start": 8.281,
+     "end": 8.549
+    },
+    {
+     "text": "So",
+     "start": 8.549,
+     "end": 8.677
+    },
+    {
+     "text": "next",
+     "start": 8.677,
+     "end": 8.932
+    },
+    {
+     "text": "time",
+     "start": 8.932,
+     "end": 9.188
+    },
+    {
+     "text": "someone",
+     "start": 9.188,
+     "end": 9.634
+    },
+    {
+     "text": "asks",
+     "start": 9.634,
+     "end": 9.89
+    },
+    {
+     "text": "you:",
+     "start": 9.89,
+     "end": 10.145
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 0.707,
+     "volume": 0.4
+    },
+    {
+     "name": "kick",
+     "at": 4.367,
+     "volume": 0.35
+    },
+    {
+     "name": "ding",
+     "at": 7.445,
+     "volume": 0.3
+    }
+   ]
+  }
+ ]
+}

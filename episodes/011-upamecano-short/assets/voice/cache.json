@@ -1,0 +1,542 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "7f1546f8f62033f598c23347987302c23972d795",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.3
+   },
+   {
+    "text": "Diyat",
+    "start": 0.3,
+    "end": 0.6
+   },
+   {
+    "text": "Upamekano",
+    "start": 0.6,
+    "end": 1.14
+   },
+   {
+    "text": "have",
+    "start": 1.14,
+    "end": 1.38
+   },
+   {
+    "text": "stopped",
+    "start": 1.38,
+    "end": 1.8
+   },
+   {
+    "text": "Hitler",
+    "start": 1.8,
+    "end": 2.16
+   },
+   {
+    "text": "from",
+    "start": 2.16,
+    "end": 2.4
+   },
+   {
+    "text": "conquering",
+    "start": 2.4,
+    "end": 3
+   },
+   {
+    "text": "France?",
+    "start": 3,
+    "end": 3.42
+   }
+  ]
+ },
+ "s2-upa.part0.wav": {
+  "key": "176c1615584f12f582ccc20707bad324783efbf3",
+  "words": [
+   {
+    "text": "Dayat",
+    "start": 0,
+    "end": 0.353
+   },
+   {
+    "text": "Upamekano,",
+    "start": 0.353,
+    "end": 1.058
+   },
+   {
+    "text": "one",
+    "start": 1.058,
+    "end": 1.269
+   },
+   {
+    "text": "of",
+    "start": 1.269,
+    "end": 1.411
+   },
+   {
+    "text": "the",
+    "start": 1.411,
+    "end": 1.622
+   },
+   {
+    "text": "best",
+    "start": 1.622,
+    "end": 1.904
+   },
+   {
+    "text": "center",
+    "start": 1.904,
+    "end": 2.327
+   },
+   {
+    "text": "backs",
+    "start": 2.327,
+    "end": 2.68
+   },
+   {
+    "text": "in",
+    "start": 2.68,
+    "end": 2.821
+   },
+   {
+    "text": "the",
+    "start": 2.821,
+    "end": 3.033
+   },
+   {
+    "text": "world,",
+    "start": 3.033,
+    "end": 3.456
+   },
+   {
+    "text": "genuinely,",
+    "start": 3.456,
+    "end": 4.161
+   },
+   {
+    "text": "famous",
+    "start": 4.161,
+    "end": 4.584
+   },
+   {
+    "text": "for",
+    "start": 4.584,
+    "end": 4.796
+   },
+   {
+    "text": "his",
+    "start": 4.796,
+    "end": 5.007
+   },
+   {
+    "text": "calm,",
+    "start": 5.007,
+    "end": 5.36
+   },
+   {
+    "text": "era-free",
+    "start": 5.36,
+    "end": 5.813
+   },
+   {
+    "text": "defending.",
+    "start": 5.813,
+    "end": 6.38
+   }
+  ]
+ },
+ "s2-upa.part1.wav": {
+  "key": "51ba515e45d0aca64123977f52e94da0834e6457",
+  "words": [
+   {
+    "text": "Mostly",
+    "start": 0,
+    "end": 2
+   }
+  ]
+ },
+ "s3-army.part0.wav": {
+  "key": "e83d2f843e450f16e8b8b3021227d44140dd21b5",
+  "words": [
+   {
+    "text": "May",
+    "start": 0,
+    "end": 0.198
+   },
+   {
+    "text": "1943",
+    "start": 0.198,
+    "end": 0.463
+   },
+   {
+    "text": "Million",
+    "start": 0.463,
+    "end": 0.926
+   },
+   {
+    "text": "soldiers",
+    "start": 0.926,
+    "end": 1.455
+   },
+   {
+    "text": "and",
+    "start": 1.455,
+    "end": 1.653
+   },
+   {
+    "text": "two",
+    "start": 1.653,
+    "end": 1.852
+   },
+   {
+    "text": "and",
+    "start": 1.852,
+    "end": 2.05
+   },
+   {
+    "text": "a",
+    "start": 2.05,
+    "end": 2.116
+   },
+   {
+    "text": "half",
+    "start": 2.116,
+    "end": 2.381
+   },
+   {
+    "text": "thousand",
+    "start": 2.381,
+    "end": 2.91
+   },
+   {
+    "text": "tanks,",
+    "start": 2.91,
+    "end": 3.307
+   },
+   {
+    "text": "coming",
+    "start": 3.307,
+    "end": 3.703
+   },
+   {
+    "text": "through",
+    "start": 3.703,
+    "end": 4.166
+   },
+   {
+    "text": "the",
+    "start": 4.166,
+    "end": 4.365
+   },
+   {
+    "text": "Ardennes.",
+    "start": 4.365,
+    "end": 4.96
+   }
+  ]
+ },
+ "s4-defend.part0.wav": {
+  "key": "5acc88e6738c957718db428774bc3b2d51ff3347",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.125
+   },
+   {
+    "text": "holds",
+    "start": 0.125,
+    "end": 0.439
+   },
+   {
+    "text": "a",
+    "start": 0.439,
+    "end": 0.502
+   },
+   {
+    "text": "perfect",
+    "start": 0.502,
+    "end": 0.941
+   },
+   {
+    "text": "high",
+    "start": 0.941,
+    "end": 1.192
+   },
+   {
+    "text": "line",
+    "start": 1.192,
+    "end": 1.443
+   },
+   {
+    "text": "across",
+    "start": 1.443,
+    "end": 1.819
+   },
+   {
+    "text": "the",
+    "start": 1.819,
+    "end": 2.007
+   },
+   {
+    "text": "whole",
+    "start": 2.007,
+    "end": 2.321
+   },
+   {
+    "text": "forest.",
+    "start": 2.321,
+    "end": 2.76
+   },
+   {
+    "text": "A",
+    "start": 2.76,
+    "end": 2.848
+   },
+   {
+    "text": "20",
+    "start": 2.848,
+    "end": 3.024
+   },
+   {
+    "text": "ton",
+    "start": 3.024,
+    "end": 3.289
+   },
+   {
+    "text": "tank,",
+    "start": 3.289,
+    "end": 3.729
+   },
+   {
+    "text": "sliding",
+    "start": 3.729,
+    "end": 4.346
+   },
+   {
+    "text": "tackle",
+    "start": 4.346,
+    "end": 4.875
+   },
+   {
+    "text": "all",
+    "start": 4.875,
+    "end": 5.139
+   },
+   {
+    "text": "ball.",
+    "start": 5.139,
+    "end": 5.58
+   }
+  ]
+ },
+ "s4-defend.part1.wav": {
+  "key": "4460e352cae3e990495c2fdbaca456cba4b05a66",
+  "words": [
+   {
+    "text": "3",
+    "start": 0,
+    "end": 0.08
+   },
+   {
+    "text": "million",
+    "start": 0.08,
+    "end": 0.64
+   },
+   {
+    "text": "soldiers,",
+    "start": 0.64,
+    "end": 1.36
+   },
+   {
+    "text": "offside.",
+    "start": 1.36,
+    "end": 2
+   }
+  ]
+ },
+ "s5-end.part0.wav": {
+  "key": "bf3869f53a7bf4731100671dfe787a22e33e9993",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.149
+   },
+   {
+    "text": "yes,",
+    "start": 0.149,
+    "end": 0.447
+   },
+   {
+    "text": "he",
+    "start": 0.447,
+    "end": 0.596
+   },
+   {
+    "text": "stops",
+    "start": 0.596,
+    "end": 0.968
+   },
+   {
+    "text": "them.",
+    "start": 0.968,
+    "end": 1.34
+   }
+  ]
+ },
+ "s5-end.part1.wav": {
+  "key": "f9b1794c1ee12d191b68eefa09fdfa41d72260ba",
+  "words": [
+   {
+    "text": "Then",
+    "start": 0,
+    "end": 0.275
+   },
+   {
+    "text": "under",
+    "start": 0.275,
+    "end": 0.618
+   },
+   {
+    "text": "no",
+    "start": 0.618,
+    "end": 0.756
+   },
+   {
+    "text": "pressure",
+    "start": 0.756,
+    "end": 1.305
+   },
+   {
+    "text": "at",
+    "start": 1.305,
+    "end": 1.443
+   },
+   {
+    "text": "all,",
+    "start": 1.443,
+    "end": 1.717
+   },
+   {
+    "text": "he",
+    "start": 1.717,
+    "end": 1.855
+   },
+   {
+    "text": "tries",
+    "start": 1.855,
+    "end": 2.198
+   },
+   {
+    "text": "one",
+    "start": 2.198,
+    "end": 2.404
+   },
+   {
+    "text": "simple",
+    "start": 2.404,
+    "end": 2.817
+   },
+   {
+    "text": "pass.",
+    "start": 2.817,
+    "end": 3.16
+   }
+  ]
+ },
+ "s5-end.part2.wav": {
+  "key": "00c108c6d30b46af3e716e44372525b10303adae",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.187
+   },
+   {
+    "text": "whole",
+    "start": 0.187,
+    "end": 0.499
+   },
+   {
+    "text": "army",
+    "start": 0.499,
+    "end": 0.749
+   },
+   {
+    "text": "walks",
+    "start": 0.749,
+    "end": 1.061
+   },
+   {
+    "text": "past",
+    "start": 1.061,
+    "end": 1.31
+   },
+   {
+    "text": "him.",
+    "start": 1.31,
+    "end": 1.56
+   }
+  ]
+ },
+ "s5-end.part3.wav": {
+  "key": "3a00a53c51f140b4dbcc02a9359693fbb0a8fa66",
+  "words": [
+   {
+    "text": "Even",
+    "start": 0,
+    "end": 0.255
+   },
+   {
+    "text": "the",
+    "start": 0.255,
+    "end": 0.447
+   },
+   {
+    "text": "tanks",
+    "start": 0.447,
+    "end": 0.766
+   },
+   {
+    "text": "left",
+    "start": 0.766,
+    "end": 1.021
+   },
+   {
+    "text": "alike,",
+    "start": 1.021,
+    "end": 1.404
+   },
+   {
+    "text": "so",
+    "start": 1.404,
+    "end": 1.532
+   },
+   {
+    "text": "next",
+    "start": 1.532,
+    "end": 1.787
+   },
+   {
+    "text": "time",
+    "start": 1.787,
+    "end": 2.043
+   },
+   {
+    "text": "someone",
+    "start": 2.043,
+    "end": 2.489
+   },
+   {
+    "text": "asks",
+    "start": 2.489,
+    "end": 2.745
+   },
+   {
+    "text": "you.",
+    "start": 2.745,
+    "end": 3
+   }
+  ]
+ }
+}

@@ -67,6 +67,12 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-11-01 · 010 (TikTok, ~25 h nach Upload): 1.014 Aufrufe, 60 Likes (5,9 %), 9 Shares, 5 Saves, **0 Kommentare, 0 neue Follower**,
+  Ø Wiedergabe 10,1 s von 27,5 s (37 %), ganz angeschaut 15,5 %. Folgerungen:
+  → Die ersten 2–3 s entscheiden: sofort Action/Bildwitz zeigen (nicht nur Banner + stehende Figuren), Frage in < 2 s gesprochen.
+  → Kommentare kommen nicht von "Write your scenario": eine konkrete, leicht zu beantwortende Frage stellen ("Who should the baby replace next?").
+  → Follower: Serien-Gedanke nennen ("Part of the COULD? case files – follow for case 011").
+  → Like-Rate ist gut: der eingebaute Like-Gag funktioniert.
 - 2026-10-29 · TikTok: Die ersten 4 Uploads direkt nach Kontoerstellung bekamen 0 Aufrufe (Konto galt als Bot). Erstes Video danach:
   800 Aufrufe / 15 Likes nach 3 h. Neue Konten erst "aufwärmen", Uploads verteilen. Re-Uploads alter Folgen als echte neue Fassung (v3):
   neue Erzählerspur, Pflicht-Outro, neuer Einstieg (Punch-in) → `renders/<ep>-v3-final.mp4`.
