@@ -15,6 +15,7 @@ Status: ✅ fertig · 📝 Skript · 💡 Idee
 | 009 | Could prime Kevin De Bruyne find Atlantis with a pass? (Kurzfolge) | ✅ |
 | 010 | Could a baby replace Lisandro Martínez? (Kurzfolge, Spieltag) | ✅ |
 | 011 | Could Dayot Upamecano have stopped Hitler from conquering France? (Kurzfassung von 004) | ✅ |
+| 012 | Could the Roman Empire stop prime Lionel Messi? (Cold-Open-Kurzfassung von 007) | ✅ |
 | 021 | Could Usain Bolt outrun a Deutsche Bahn ICE? (Spoiler: on a delayed day, yes) | 💡 |
 | 003 | Could 100 grandmas knit a sweater for the Statue of Liberty? | 💡 |
 | 004 | Could Gordon Ramsay cater for the entire Roman army? | 💡 |

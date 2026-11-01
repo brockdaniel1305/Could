@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-01 · Zielgruppe: **englischsprachig (UK/US), nicht Deutschland** (Zuschauer waren fast nur deutsch). Inhaltlich: internationale
+  Themen (Premier League, CL, Weltstars, Weltgeschichte), keine deutschen Insider (DB, deutsche Spieler) als Hauptgag, US/UK-Stimme,
+  englische Captions/Hashtags (#premierleague #football #soccer). Posting-Empfehlung an den Creator: 18–21 Uhr deutscher Zeit.
 - 2026-11-01 · 012 · **Cold Open statt Banner-Einstieg** (Grund: 010/011 verlieren die meisten Zuschauer bei 0:01, Ø Watchtime ~10 s):
   Frame 0 zeigt den Höhepunkt MITTEN in der Bewegung (Domino fällt, Grätsche, Karte fliegt), großer Titel mit 3–5 Wörtern
   ("MESSI vs. 380,000 ROMANS") statt dreizeiligem Banner, Impact-Sound in Frame 0, Zähler läuft schon. Dann "Let's go back." (Rückspul-Effekt)
