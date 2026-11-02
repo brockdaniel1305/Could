@@ -106,7 +106,7 @@
 
 <div class="wrap">
   <header class="top">
-    <div class="brand">Case Files · Stand 01.11.2026</div>
+    <div class="brand">Case Files · Stand 02.11.2026</div>
     <h1>COULD<b>?</b> Folgenarchiv</h1>
     <p class="lede">Jede Folge zum Anschauen und Herunterladen, mit ihrer aktuellsten Fassung, der Versionsgeschichte und dem, was wir im Chat dazu entschieden haben. Neueste Folge zuerst.</p>
     <div class="toplinks">
@@ -123,6 +123,13 @@
 const CHAT = "https://claude.ai/code/session_0132AGQTzkhEcLrKynbVZigm";
 const GH = "https://github.com/brockdaniel1305/Could/tree/claude/tiktok-video-creation-gbtnbc/episodes/";
 const EPISODES = [
+  { n: "S2E01", slug: "s02e01-messi-vs-real", title: "Could prime Messi beat Real Madrid on his own?",
+    status: ["ok", "Fertig · Staffel 2"], ver: "v1", file: "s02e01-messi-vs-real-final.mp4", len: "46,6 s", date: "02.11.",
+    caption: "Could prime Messi beat Real Madrid on his own? 11 v 1 at the Bernabéu. ⚽🐐 #could #messi #realmadrid #elclasico #barcelona #football #shorts #fyp",
+    hist: [["v1", "Erste Folge im vollen Stil: Textschläge, volles Stadion, Sende-Anzeige mit Minute und Ausdauerbalken, Live-Spielbericht mit wechselnden Einstellungen, Abpfiff-Tafel, „Most liked comment decides the next case“, Loop."]],
+    chat: [["you", "Referenz-Video (400k Likes): Einstieg mit bewegten Animationen, Storytelling, deutlich vollere Bilder"],
+           ["me", "Analyse + Vorschlag: Live-Spielbericht, Stadion-Baukasten, Kamera-Wechsel, Abpfiff-Tafel"],
+           ["you", "„Mache 2.“ (Messi allein gegen Real) · „fange die Nummerierung neu an … Staffel 2 Folge 1“"]] },
   { n: "012", slug: "012-messi-cold", title: "Could the Roman Empire stop prime Lionel Messi? (Cold-Open-Kurzfassung)",
     status: ["ok", "Fertig · Kurzfolge"], ver: "v1", file: "012-messi-cold-final.mp4", len: "33,5 s", date: "01.11.",
     caption: "Could the Roman Empire stop prime Lionel Messi? 380,000 soldiers. One left foot. ⚔️⚽ #could #messi #goat #romanempire #football #history #shorts #fyp",
@@ -250,7 +257,7 @@ document.getElementById("files").innerHTML = EPISODES.map((e) => `
     <div class="strip"><span class="num">CASE ${e.n}</span><h2>${esc(e.title)}</h2><span class="pill ${e.status[0]}">${e.status[1]}</span></div>
     <div class="body">
     <div class="player">
-      <video controls playsinline preload="none" poster="videos/${e.n}.jpg" src="videos/${e.n}.mp4" aria-label="Video ${e.n} abspielen"></video>
+      <video controls playsinline preload="none" poster="videos/${e.n.toLowerCase()}.jpg" src="videos/${e.n.toLowerCase()}.mp4" aria-label="Video ${e.n} abspielen"></video>
       <button class="btn primary dl" type="button" data-dl="${e.n}" hidden>Video herunterladen</button>
       <p class="hint">Web-Fassung 720p. Die Full-HD-Datei hast du im Chat bekommen.</p>
     </div>
@@ -287,7 +294,7 @@ document.addEventListener("click", async (ev) => {
     const e = EPISODES.find((x) => x.n === d.dataset.dl);
     d.disabled = true; d.textContent = "Lädt …";
     try {
-      const blob = await (await fetch(`videos/${e.n}.mp4`)).blob();
+      const blob = await (await fetch(`videos/${e.n.toLowerCase()}.mp4`)).blob();
       await downloads.save({ filename: `COULD-${e.n}-${e.ver}.mp4`, data: blob });
       d.textContent = "Gespeichert";
     } catch (err) {
