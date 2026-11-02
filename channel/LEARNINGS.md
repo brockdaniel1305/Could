@@ -83,6 +83,10 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-11-02 · 012 Messi Cold Open (TikTok, ~4 h, gepostet 11:06): 803 Aufrufe, 44 Likes, 0 Kommentare, Ø 9,0 s von 33,5 s, ganz 7,7 %.
+  YouTube Shorts: 26 % weiter angesehen / 74 % weggewischt, Ø 15 s. → Cold Open allein hat die Absprungrate NICHT verbessert.
+  Verdacht: synthetische Vorschau-Stimme (wird als KI erkannt), zu viel Text im ersten Bild, Posting-Uhrzeit (11 Uhr statt 18–21 Uhr),
+  Kommentarfrage erst am Ende (nur ~8 % sehen sie) → als angepinnten eigenen Kommentar posten. Nächster Test: S2E01 (voller Stil) abends.
 - 2026-11-01 · 010 (TikTok, ~25 h nach Upload): 1.014 Aufrufe, 60 Likes (5,9 %), 9 Shares, 5 Saves, **0 Kommentare, 0 neue Follower**,
   Ø Wiedergabe 10,1 s von 27,5 s (37 %), ganz angeschaut 15,5 %. Folgerungen:
   → Die ersten 2–3 s entscheiden: sofort Action/Bildwitz zeigen (nicht nur Banner + stehende Figuren), Frage in < 2 s gesprochen.
