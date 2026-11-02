@@ -5,6 +5,12 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-02 · S2E01 · **Staffel 2 = "volle" Folgen nach Vorbild eines 400k-Like-Videos**: Textschläge "A" / "VS B" in den ersten 2 s,
+  Live-Spielbericht (jeder Satz ein Ereignis, alle 1,5–2 s etwas Neues, mehrere Wendungen), volle Bilder (Tribünen mit tausenden Fans,
+  Welle, Fahnen, Blitzlichter, ganze Teams mit Nummernschildern, Banden, Konfetti), 2–4 Einstellungen pro Szene (Totale, Nah, Draufsicht,
+  Zoom), Sende-Anzeige (Spielstand + Minute + Ausdauerbalken), Abpfiff-Tafel mit absurden Statistiken, "Most liked comment decides
+  the next case". Stil (flacher Cartoon, Zittern, Karten, LIVE RECONSTRUCTION, "Could …?") bleibt. Baukasten: `tools/stadium.py`.
+  Nummerierung neu: Ordner `episodes/s02eNN-<slug>/`, id "S2E01".
 - 2026-11-01 · Zielgruppe: **englischsprachig (UK/US), nicht Deutschland** (Zuschauer waren fast nur deutsch). Inhaltlich: internationale
   Themen (Premier League, CL, Weltstars, Weltgeschichte), keine deutschen Insider (DB, deutsche Spieler) als Hauptgag, US/UK-Stimme,
   englische Captions/Hashtags (#premierleague #football #soccer). Posting-Empfehlung an den Creator: 18–21 Uhr deutscher Zeit.
@@ -105,6 +111,7 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- Zoom auf eine SVG-Gruppe um einen absoluten Punkt: `svgOrigin: "x y"` (transformOrigin in px ist relativ zur Bounding-Box, der Zoom wanderte aus dem Bild).
 - Die Loop-Hülle in `scene.py` heißt `<sid>-loopcam`; eigene Gruppen nie `<sid>-cam` nennen (Kollision: ganzes Bild verschob sich, 007 musste neu gerendert werden).
 - Nur der Ton geändert? Nicht neu rendern: `tools/remix_audio.py episodes/<ep> <render.mp4> <final.mp4>` mischt Stimme+SFX aus
   index.html neu (inkl. loudnorm, apad auf volle Länge) und kopiert das Bild. Dauert Sekunden statt Minuten.

@@ -50,3 +50,8 @@ Tipp: Die besten neuen Ideen kommen aus den Kommentaren unter "Who should we sen
 | Could Neymar survive a medieval joust? | Sarkasmus wie bei 004: er fällt, bevor die Lanze ihn trifft | 💡 |
 | Could Steph Curry hit a three from the International Space Station? | Fortsetzung zu 003: 400 km Höhe, Wiedereintritt | 💡 |
 | Could Mbappé win a rematch against Napoleon's horse? | Fortsetzung zu 008 (Rematch-Reihe) | 💡 |
+
+## Staffel 2
+| # | Frage | Status |
+|---|-------|--------|
+| S2E01 | Could prime Messi beat Real Madrid on his own? | ✅ |

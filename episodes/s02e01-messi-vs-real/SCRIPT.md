@@ -1,6 +1,6 @@
-# 013 · Could prime Messi beat Real Madrid on his own?  — pilot for the "full" style
+# S2E01 · Could prime Messi beat Real Madrid on his own?  — pilot for the "full" style
 
-Status: 📝 script + shot list, waiting for the creator's OK.
+Status: ✅ approved 02.11.2026 (Season 2, Episode 1).
 Length ~45 s · voice Adam · loop. New: live match report (one event per sentence), full stadium (crowd, both teams, referee,
 ad boards), 2–4 camera shots per scene, broadcast graphic **RMA 0–0 MES · 1'** + Messi's **stamina bar**, full-time stats board,
 "Most liked comment decides the next case". Same cartoon style as before (flat, boil, cards, LIVE RECONSTRUCTION).

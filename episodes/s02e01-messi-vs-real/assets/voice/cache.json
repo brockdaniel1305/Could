@@ -1,0 +1,702 @@
+{
+ "s1-slam.part0.wav": {
+  "key": "8c9ff601d87689e40921098736390686f3cdff78",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.321
+   },
+   {
+    "text": "Prime",
+    "start": 0.321,
+    "end": 0.642
+   },
+   {
+    "text": "Messi",
+    "start": 0.642,
+    "end": 0.963
+   },
+   {
+    "text": "beat",
+    "start": 0.963,
+    "end": 1.22
+   },
+   {
+    "text": "Real",
+    "start": 1.22,
+    "end": 1.477
+   },
+   {
+    "text": "Madrid",
+    "start": 1.477,
+    "end": 1.862
+   },
+   {
+    "text": "on",
+    "start": 1.862,
+    "end": 1.991
+   },
+   {
+    "text": "his",
+    "start": 1.991,
+    "end": 2.183
+   },
+   {
+    "text": "own?",
+    "start": 2.183,
+    "end": 2.44
+   }
+  ]
+ },
+ "s2-bernabeu.part0.wav": {
+  "key": "05581394f8f6c0f959883e6f621a75fe88019fa8",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.231
+   },
+   {
+    "text": "Bernabeu,",
+    "start": 0.231,
+    "end": 0.925
+   },
+   {
+    "text": "around",
+    "start": 0.925,
+    "end": 1.388
+   },
+   {
+    "text": "80,000",
+    "start": 1.388,
+    "end": 1.85
+   },
+   {
+    "text": "Madrid",
+    "start": 1.85,
+    "end": 2.313
+   },
+   {
+    "text": "fans,",
+    "start": 2.313,
+    "end": 2.699
+   },
+   {
+    "text": "11",
+    "start": 2.699,
+    "end": 2.853
+   },
+   {
+    "text": "real",
+    "start": 2.853,
+    "end": 3.161
+   },
+   {
+    "text": "Madrid",
+    "start": 3.161,
+    "end": 3.624
+   },
+   {
+    "text": "players",
+    "start": 3.624,
+    "end": 4.163
+   },
+   {
+    "text": "and",
+    "start": 4.163,
+    "end": 4.395
+   },
+   {
+    "text": "Messi,",
+    "start": 4.395,
+    "end": 4.857
+   },
+   {
+    "text": "alone.",
+    "start": 4.857,
+    "end": 5.32
+   }
+  ]
+ },
+ "s3-kickoff.part0.wav": {
+  "key": "83797f42b208e37e774990ddb9697fc8d65cd197",
+  "words": [
+   {
+    "text": "kick",
+    "start": 0,
+    "end": 0.29
+   },
+   {
+    "text": "off",
+    "start": 0.29,
+    "end": 0.508
+   },
+   {
+    "text": "real",
+    "start": 0.508,
+    "end": 0.799
+   },
+   {
+    "text": "press",
+    "start": 0.799,
+    "end": 1.162
+   },
+   {
+    "text": "with",
+    "start": 1.162,
+    "end": 1.452
+   },
+   {
+    "text": "all",
+    "start": 1.452,
+    "end": 1.67
+   },
+   {
+    "text": "11,",
+    "start": 1.67,
+    "end": 1.888
+   },
+   {
+    "text": "he",
+    "start": 1.888,
+    "end": 2.033
+   },
+   {
+    "text": "has",
+    "start": 2.033,
+    "end": 2.251
+   },
+   {
+    "text": "no",
+    "start": 2.251,
+    "end": 2.396
+   },
+   {
+    "text": "one",
+    "start": 2.396,
+    "end": 2.614
+   },
+   {
+    "text": "to",
+    "start": 2.614,
+    "end": 2.759
+   },
+   {
+    "text": "pass",
+    "start": 2.759,
+    "end": 3.05
+   },
+   {
+    "text": "to,",
+    "start": 3.05,
+    "end": 3.268
+   },
+   {
+    "text": "so",
+    "start": 3.268,
+    "end": 3.413
+   },
+   {
+    "text": "he",
+    "start": 3.413,
+    "end": 3.558
+   },
+   {
+    "text": "plays",
+    "start": 3.558,
+    "end": 3.921
+   },
+   {
+    "text": "a",
+    "start": 3.921,
+    "end": 3.994
+   },
+   {
+    "text": "1-2",
+    "start": 3.994,
+    "end": 4.212
+   },
+   {
+    "text": "with",
+    "start": 4.212,
+    "end": 4.502
+   },
+   {
+    "text": "the",
+    "start": 4.502,
+    "end": 4.72
+   },
+   {
+    "text": "advertising",
+    "start": 4.72,
+    "end": 5.522
+   },
+   {
+    "text": "board.",
+    "start": 5.522,
+    "end": 5.96
+   }
+  ]
+ },
+ "s4-counter.part0.wav": {
+  "key": "b208df35fa5fc3a7eb40b6562d292cef9f701817",
+  "words": [
+   {
+    "text": "Real",
+    "start": 0,
+    "end": 0.285
+   },
+   {
+    "text": "counter,",
+    "start": 0.285,
+    "end": 0.855
+   },
+   {
+    "text": "nobody",
+    "start": 0.855,
+    "end": 1.283
+   },
+   {
+    "text": "in",
+    "start": 1.283,
+    "end": 1.425
+   },
+   {
+    "text": "Messi's",
+    "start": 1.425,
+    "end": 1.924
+   },
+   {
+    "text": "goal.",
+    "start": 1.924,
+    "end": 2.28
+   }
+  ]
+ },
+ "s5-dribble.part0.wav": {
+  "key": "4ec0cf1ddf2f0cbb4352ea7a105ce499849f50c7",
+  "words": [
+   {
+    "text": "Messi",
+    "start": 0,
+    "end": 0.319
+   },
+   {
+    "text": "takes",
+    "start": 0.319,
+    "end": 0.638
+   },
+   {
+    "text": "the",
+    "start": 0.638,
+    "end": 0.83
+   },
+   {
+    "text": "ball",
+    "start": 0.83,
+    "end": 1.085
+   },
+   {
+    "text": "on",
+    "start": 1.085,
+    "end": 1.212
+   },
+   {
+    "text": "halfway,",
+    "start": 1.212,
+    "end": 1.723
+   },
+   {
+    "text": "past",
+    "start": 1.723,
+    "end": 1.978
+   },
+   {
+    "text": "10",
+    "start": 1.978,
+    "end": 2.106
+   },
+   {
+    "text": "outfield",
+    "start": 2.106,
+    "end": 2.616
+   },
+   {
+    "text": "players,",
+    "start": 2.616,
+    "end": 3.127
+   },
+   {
+    "text": "past",
+    "start": 3.127,
+    "end": 3.382
+   },
+   {
+    "text": "the",
+    "start": 3.382,
+    "end": 3.573
+   },
+   {
+    "text": "keeper.",
+    "start": 3.573,
+    "end": 4.02
+   }
+  ]
+ },
+ "s5-dribble.part1.wav": {
+  "key": "691d5801201ae4c8a912cf971ee74868769fe0c9",
+  "words": [
+   {
+    "text": "1-1'd.",
+    "start": 0,
+    "end": 0.64
+   }
+  ]
+ },
+ "s6-freekick.part0.wav": {
+  "key": "34aaa9cd72e33004850bb36254f77f66821a872c",
+  "words": [
+   {
+    "text": "A",
+    "start": 0,
+    "end": 0.071
+   },
+   {
+    "text": "fowl",
+    "start": 0.071,
+    "end": 0.356
+   },
+   {
+    "text": "on",
+    "start": 0.356,
+    "end": 0.499
+   },
+   {
+    "text": "the",
+    "start": 0.499,
+    "end": 0.712
+   },
+   {
+    "text": "edge",
+    "start": 0.712,
+    "end": 0.997
+   },
+   {
+    "text": "of",
+    "start": 0.997,
+    "end": 1.14
+   },
+   {
+    "text": "the",
+    "start": 1.14,
+    "end": 1.354
+   },
+   {
+    "text": "box,",
+    "start": 1.354,
+    "end": 1.639
+   },
+   {
+    "text": "free",
+    "start": 1.639,
+    "end": 1.924
+   },
+   {
+    "text": "kick.",
+    "start": 1.924,
+    "end": 2.28
+   }
+  ]
+ },
+ "s6-freekick.part1.wav": {
+  "key": "f371afdb70582243dc1e4b9a06f7f0af90156f34",
+  "words": [
+   {
+    "text": "Top",
+    "start": 0,
+    "end": 0.252
+   },
+   {
+    "text": "corner.",
+    "start": 0.252,
+    "end": 0.84
+   }
+  ]
+ },
+ "s7-laces.part0.wav": {
+  "key": "f235ca47e61114d525b0f4d6453ae79af4e466ee",
+  "words": [
+   {
+    "text": "Minute",
+    "start": 0,
+    "end": 0.484
+   },
+   {
+    "text": "89,",
+    "start": 0.484,
+    "end": 0.725
+   },
+   {
+    "text": "Messi",
+    "start": 0.725,
+    "end": 1.128
+   },
+   {
+    "text": "stops",
+    "start": 1.128,
+    "end": 1.532
+   },
+   {
+    "text": "to",
+    "start": 1.532,
+    "end": 1.693
+   },
+   {
+    "text": "tie",
+    "start": 1.693,
+    "end": 1.935
+   },
+   {
+    "text": "his",
+    "start": 1.935,
+    "end": 2.176
+   },
+   {
+    "text": "laces.",
+    "start": 2.176,
+    "end": 2.66
+   }
+  ]
+ },
+ "s7-laces.part1.wav": {
+  "key": "33fdbd68fc17834fb321055216e7b781960d57f2",
+  "words": [
+   {
+    "text": "2-2",
+    "start": 0,
+    "end": 0.72
+   }
+  ]
+ },
+ "s8-last.part0.wav": {
+  "key": "e16da0bd3e31ec12267a4f4f9d65ea3cea0947b7",
+  "words": [
+   {
+    "text": "Minute",
+    "start": 0,
+    "end": 0.534
+   },
+   {
+    "text": "92,",
+    "start": 0.534,
+    "end": 0.801
+   },
+   {
+    "text": "last",
+    "start": 0.801,
+    "end": 1.157
+   },
+   {
+    "text": "attack.",
+    "start": 1.157,
+    "end": 1.78
+   }
+  ]
+ },
+ "s8-last.part1.wav": {
+  "key": "b6d5eb25b2da73fb8a030d7d16817eb69fa24141",
+  "words": [
+   {
+    "text": "to",
+    "start": 0,
+    "end": 0.101
+   },
+   {
+    "text": "the",
+    "start": 0.101,
+    "end": 0.253
+   },
+   {
+    "text": "next",
+    "start": 0.253,
+    "end": 0.456
+   },
+   {
+    "text": "class.",
+    "start": 0.456,
+    "end": 0.76
+   }
+  ]
+ },
+ "s9-shirt.part0.wav": {
+  "key": "f6b38ee5fa0922027aae4b438be6ff3c6e6e68b7",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.165
+   },
+   {
+    "text": "he",
+    "start": 0.165,
+    "end": 0.275
+   },
+   {
+    "text": "shows",
+    "start": 0.275,
+    "end": 0.55
+   },
+   {
+    "text": "his",
+    "start": 0.55,
+    "end": 0.715
+   },
+   {
+    "text": "shirt",
+    "start": 0.715,
+    "end": 0.99
+   },
+   {
+    "text": "to",
+    "start": 0.99,
+    "end": 1.1
+   },
+   {
+    "text": "the",
+    "start": 1.1,
+    "end": 1.265
+   },
+   {
+    "text": "Bernabeu.",
+    "start": 1.265,
+    "end": 1.76
+   }
+  ]
+ },
+ "s9-shirt.part1.wav": {
+  "key": "c3ef8ea16902644e7f22196906ffd13b92598169",
+  "words": [
+   {
+    "text": "he",
+    "start": 0,
+    "end": 0.165
+   },
+   {
+    "text": "did",
+    "start": 0.165,
+    "end": 0.413
+   },
+   {
+    "text": "exactly",
+    "start": 0.413,
+    "end": 0.99
+   },
+   {
+    "text": "that",
+    "start": 0.99,
+    "end": 1.32
+   },
+   {
+    "text": "in",
+    "start": 1.32,
+    "end": 1.485
+   },
+   {
+    "text": "2017",
+    "start": 1.485,
+    "end": 1.815
+   },
+   {
+    "text": "same",
+    "start": 1.815,
+    "end": 2.145
+   },
+   {
+    "text": "score.",
+    "start": 2.145,
+    "end": 2.64
+   }
+  ]
+ },
+ "s10-ft.part0.wav": {
+  "key": "bce04ffb14f16a7bc4ed5939fd1b0b16824de43d",
+  "words": [
+   {
+    "text": "Full",
+    "start": 0,
+    "end": 0.4
+   },
+   {
+    "text": "time",
+    "start": 0.4,
+    "end": 0.8
+   }
+  ]
+ },
+ "s10-ft.part1.wav": {
+  "key": "22295bf1af5e1ce5e749269347a8d7126ee728e8",
+  "words": [
+   {
+    "text": "Most",
+    "start": 0,
+    "end": 0.252
+   },
+   {
+    "text": "like",
+    "start": 0.252,
+    "end": 0.505
+   },
+   {
+    "text": "comment",
+    "start": 0.505,
+    "end": 0.946
+   },
+   {
+    "text": "decides",
+    "start": 0.946,
+    "end": 1.388
+   },
+   {
+    "text": "the",
+    "start": 1.388,
+    "end": 1.577
+   },
+   {
+    "text": "next",
+    "start": 1.577,
+    "end": 1.829
+   },
+   {
+    "text": "case,",
+    "start": 1.829,
+    "end": 2.145
+   },
+   {
+    "text": "so",
+    "start": 2.145,
+    "end": 2.271
+   },
+   {
+    "text": "if",
+    "start": 2.271,
+    "end": 2.397
+   },
+   {
+    "text": "anyone",
+    "start": 2.397,
+    "end": 2.775
+   },
+   {
+    "text": "asks",
+    "start": 2.775,
+    "end": 3.028
+   },
+   {
+    "text": "you.",
+    "start": 3.028,
+    "end": 3.28
+   }
+  ]
+ }
+}
