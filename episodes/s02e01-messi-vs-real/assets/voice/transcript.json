@@ -1,0 +1,56 @@
+[
+  {
+    "text": "could",
+    "start": 0.05,
+    "end": 0.32,
+    "id": "w0"
+  },
+  {
+    "text": "Prime",
+    "start": 0.32,
+    "end": 0.63,
+    "id": "w1"
+  },
+  {
+    "text": "Messi",
+    "start": 0.63,
+    "end": 0.87,
+    "id": "w2"
+  },
+  {
+    "text": "beat",
+    "start": 0.99,
+    "end": 1.22,
+    "id": "w3"
+  },
+  {
+    "text": "Real",
+    "start": 1.22,
+    "end": 1.48,
+    "id": "w4"
+  },
+  {
+    "text": "Madrid",
+    "start": 1.48,
+    "end": 1.85,
+    "id": "w5"
+  },
+  {
+    "text": "on",
+    "start": 1.86,
+    "end": 1.97,
+    "id": "w6"
+  },
+  {
+    "text": "his",
+    "start": 2,
+    "end": 2.18,
+    "id": "w7"
+  },
+  {
+    "text": "own?",
+    "start": 2.18,
+    "end": 2.48,
+    "id": "w8"
+  }
+]

@@ -380,42 +380,42 @@
   ]
  },
  "s9-shirt.part0.wav": {
-  "key": "80470f94c303a8f44bfc4223756ed570305eac85",
+  "key": "91a8da2a0deaeb54fbc84aa675f9d2347b94c49a",
   "words": [
    {
     "text": "He",
     "start": 0,
-    "end": 0.121
+    "end": 0.119
    },
    {
     "text": "shows",
-    "start": 0.121,
-    "end": 0.425
+    "start": 0.119,
+    "end": 0.415
    },
    {
     "text": "his",
-    "start": 0.425,
-    "end": 0.607
+    "start": 0.415,
+    "end": 0.593
    },
    {
     "text": "shirt",
-    "start": 0.607,
-    "end": 0.91
+    "start": 0.593,
+    "end": 0.89
    },
    {
     "text": "to",
-    "start": 0.91,
-    "end": 1.032
+    "start": 0.89,
+    "end": 1.008
    },
    {
     "text": "the",
-    "start": 1.032,
-    "end": 1.214
+    "start": 1.008,
+    "end": 1.186
    },
    {
     "text": "Bernabeu.",
-    "start": 1.214,
-    "end": 1.76
+    "start": 1.186,
+    "end": 1.72
    }
   ]
  },
@@ -500,82 +500,82 @@
   ]
  },
  "s1-hook.part0.wav": {
-  "key": "a24012716fcbf3e0774a003a3905765fa8608ab3",
+  "key": "21c2ab514e88fe0ac2e698556dfe83d830b4fbcd",
   "words": [
    {
-    "text": "Could",
+    "text": "could",
     "start": 0,
-    "end": 0.326
+    "end": 0.342
    },
    {
     "text": "Prime",
-    "start": 0.326,
-    "end": 0.653
+    "start": 0.342,
+    "end": 0.684
    },
    {
     "text": "Messi",
-    "start": 0.653,
-    "end": 0.979
+    "start": 0.684,
+    "end": 1.026
    },
    {
     "text": "beat",
-    "start": 0.979,
-    "end": 1.24
+    "start": 1.026,
+    "end": 1.3
    },
    {
     "text": "Real",
-    "start": 1.24,
-    "end": 1.501
+    "start": 1.3,
+    "end": 1.574
    },
    {
     "text": "Madrid",
-    "start": 1.501,
-    "end": 1.893
+    "start": 1.574,
+    "end": 1.984
    },
    {
     "text": "on",
-    "start": 1.893,
-    "end": 2.023
+    "start": 1.984,
+    "end": 2.121
    },
    {
     "text": "his",
-    "start": 2.023,
-    "end": 2.219
+    "start": 2.121,
+    "end": 2.326
    },
    {
     "text": "own?",
-    "start": 2.219,
-    "end": 2.48
+    "start": 2.326,
+    "end": 2.6
    }
   ]
  },
  "s2-setup.part0.wav": {
-  "key": "3ed0119620e2c4f6c5c3ed022614ef3548049f73",
+  "key": "f7757cf7443938b766b0eb45d7cdf3e131e73cce",
   "words": [
    {
     "text": "The",
     "start": 0,
-    "end": 0.23
+    "end": 0.22
    },
    {
     "text": "Bernabeu.",
-    "start": 0.23,
-    "end": 0.92
+    "start": 0.22,
+    "end": 0.88
    }
   ]
  },
  "s4-counter.part1.wav": {
-  "key": "3f32bade6764144ae912212199e61aefe0427a93",
+  "key": "e33e896dbe3a60400a531b0305307dabe53487a5",
   "words": [
    {
-    "text": "Real",
+    "text": "Rayall",
     "start": 0,
-    "end": 0.349
+    "end": 0.462
    },
    {
     "text": "Counter",
-    "start": 0.349,
-    "end": 0.96
+    "start": 0.462,
+    "end": 1
    }
   ]
  },
@@ -700,37 +700,37 @@
   ]
  },
  "s7-corner.part1.wav": {
-  "key": "8f8bda299c37dfa4e8860139c4dee9e08f093ec0",
+  "key": "7a1a98914e2bb10e670c9fd6d1264eb33cb780ff",
   "words": [
    {
-    "text": "Reel",
+    "text": "Rayall",
     "start": 0,
-    "end": 0.234
+    "end": 0.364
    },
    {
     "text": "bring",
-    "start": 0.234,
-    "end": 0.528
+    "start": 0.364,
+    "end": 0.667
    },
    {
     "text": "on",
-    "start": 0.528,
-    "end": 0.645
+    "start": 0.667,
+    "end": 0.788
    },
    {
     "text": "three",
-    "start": 0.645,
-    "end": 0.938
+    "start": 0.788,
+    "end": 1.092
    },
    {
     "text": "fresh",
-    "start": 0.938,
-    "end": 1.231
+    "start": 1.092,
+    "end": 1.395
    },
    {
     "text": "players.",
-    "start": 1.231,
-    "end": 1.7
+    "start": 1.395,
+    "end": 1.88
    }
   ]
  },
@@ -755,27 +755,27 @@
   ]
  },
  "s2-setup.part2.wav": {
-  "key": "f73763707b9e7b218972045f777c9b41f41188f1",
+  "key": "a54536e9cbb4320926ab47880597fb659628450e",
   "words": [
    {
     "text": "Real",
     "start": 0,
-    "end": 0.354
+    "end": 0.381
    },
    {
     "text": "Madrid,",
-    "start": 0.354,
-    "end": 0.974
+    "start": 0.381,
+    "end": 1.048
    },
    {
     "text": "11",
-    "start": 0.974,
-    "end": 1.151
+    "start": 1.048,
+    "end": 1.238
    },
    {
     "text": "players.",
-    "start": 1.151,
-    "end": 1.86
+    "start": 1.238,
+    "end": 2
    }
   ]
  },
@@ -975,32 +975,27 @@
   ]
  },
  "s4-counter.part3.wav": {
-  "key": "bd3fb65b93f19fc10618e5b151466af60aa25b27",
+  "key": "7e0826e700ad68f7b4ddd5b2b2a7e1e4093a576e",
   "words": [
    {
-    "text": "Real",
+    "text": "Rayal",
     "start": 0,
-    "end": 0.313
+    "end": 0.506
    },
    {
     "text": "score",
-    "start": 0.313,
-    "end": 0.704
+    "start": 0.506,
+    "end": 1.011
    },
    {
     "text": "from",
-    "start": 0.704,
-    "end": 1.016
+    "start": 1.011,
+    "end": 1.416
    },
    {
-    "text": "50",
-    "start": 1.016,
-    "end": 1.173
-   },
-   {
-    "text": "meters.",
-    "start": 1.173,
-    "end": 1.72
+    "text": "50m.",
+    "start": 1.416,
+    "end": 1.82
    }
   ]
  },
@@ -1130,27 +1125,32 @@
   ]
  },
  "s6-walk.part4.wav": {
-  "key": "975f14ae38561c2324183c5619e39d9e6a8501e2",
+  "key": "fc89e9295ac42aa49e442b126e2dea752719a0c6",
   "words": [
    {
-    "text": "Real",
+    "text": "Ray",
     "start": 0,
-    "end": 0.295
+    "end": 0.199
+   },
+   {
+    "text": "I'll",
+    "start": 0.199,
+    "end": 0.465
    },
    {
     "text": "stop",
-    "start": 0.295,
-    "end": 0.589
+    "start": 0.465,
+    "end": 0.73
    },
    {
     "text": "marking",
-    "start": 0.589,
-    "end": 1.105
+    "start": 0.73,
+    "end": 1.195
    },
    {
     "text": "him.",
-    "start": 1.105,
-    "end": 1.4
+    "start": 1.195,
+    "end": 1.46
    }
   ]
  },

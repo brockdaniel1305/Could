@@ -14,7 +14,7 @@
   "scenes": [
     {
       "id": "s1-hook",
-      "text": "Could prime Messi beat Real Madrid on his own?",
+      "text": "Could prime Messi beat {Real|Ray-ahl} Madrid on his own?",
       "sfx": [
         {
           "name": "impact-bass-1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "s2-setup",
-      "text": "The Bernabéu. ||0.14|| {{fans}}Eighty thousand Madrid fans. ||0.17|| {{eleven}}Real Madrid: eleven players. ||0.17|| {{messi}}Messi: one. ||0.19|| {{nomates}}No team-mates. ||0.14|| {{nokeeper}}No goalkeeper.",
+      "text": "The {Bernabéu|Bernabay-oo}. ||0.14|| {{fans}}Eighty thousand Madrid fans. ||0.17|| {{eleven}}{Real|Ray-ahl} Madrid: eleven players. ||0.17|| {{messi}}Messi: one. ||0.19|| {{nomates}}No team-mates. ||0.14|| {{nokeeper}}No goalkeeper.",
       "sfx": []
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "id": "s4-counter",
-      "text": "Saved. ||0.17|| {{counter}}Real counter. ||0.14|| {{empty}}Messi's goal is empty. ||0.17|| {{fifty}}Real score from fifty metres. ||0.19|| {{nil}}Nil, one.",
+      "text": "Saved. ||0.17|| {{counter}}{Real|Ray-ahl} counter. ||0.14|| {{empty}}Messi's goal is empty. ||0.17|| {{fifty}}{Real|Ray-ahl} score from fifty metres. ||0.19|| {{nil}}Nil, one.",
       "sfx": [
         {
           "name": "kick",
@@ -101,7 +101,7 @@
     },
     {
       "id": "s6-walk",
-      "text": "But he's alone on a huge pitch. ||0.14|| {{stam}}His stamina drops. ||0.19|| {{walk}}So he does what prime Messi always did. ||0.19|| {{walks}}He walks. ||0.19|| {{bored}}Real stop marking him. ||0.19|| {{sprint}}One sprint. ||0.14|| {{foul}}Foul. ||0.14|| {{fk}}Free kick. ||0.25|| {{top}}Top corner. ||0.19|| {{onetwo}}One, two.",
+      "text": "But he's alone on a huge pitch. ||0.14|| {{stam}}His stamina drops. ||0.19|| {{walk}}So he does what prime Messi always did. ||0.19|| {{walks}}He walks. ||0.19|| {{bored}}{Real|Ray-ahl} stop marking him. ||0.19|| {{sprint}}One sprint. ||0.14|| {{foul}}Foul. ||0.14|| {{fk}}Free kick. ||0.25|| {{top}}Top corner. ||0.19|| {{onetwo}}One, two.",
       "sfx": [
         {
           "name": "whistle",
@@ -131,7 +131,7 @@
     },
     {
       "id": "s7-corner",
-      "text": "Minute eighty nine. ||0.17|| {{subs}}Real bring on three fresh players. ||0.19|| {{bench}}Messi has no bench. ||0.19|| {{corner}}Corner. ||0.14|| {{box}}Everyone goes forward. ||0.19|| {{mark}}Messi can mark one of them. ||0.25|| {{two}}Two, two.",
+      "text": "Minute eighty nine. ||0.17|| {{subs}}{Real|Ray-ahl} bring on three fresh players. ||0.19|| {{bench}}Messi has no bench. ||0.19|| {{corner}}Corner. ||0.14|| {{box}}Everyone goes forward. ||0.19|| {{mark}}Messi can mark one of them. ||0.25|| {{two}}Two, two.",
       "sfx": [
         {
           "name": "kick",
@@ -197,7 +197,7 @@
     },
     {
       "id": "s9-shirt",
-      "text": "He shows his shirt to the Bernabéu. ||0.19|| {{y17}}Just like in {2017|twenty seventeen}. ||0.19|| {{same}}Same score.",
+      "text": "He shows his shirt to the {Bernabéu|Bernabay-oo}. ||0.19|| {{y17}}Just like in {2017|twenty seventeen}. ||0.19|| {{same}}Same score.",
       "sfx": []
     },
     {
