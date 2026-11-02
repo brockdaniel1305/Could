@@ -97,6 +97,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-11-02 · S2E01 v3 (3D-Stil, 78 s, gepostet 20:13): nach ~2 h 599 Aufrufe, Ø Wiedergabe **21,4 s** (vorher ~9–10 s),
+  6,87 % ganz gesehen, 15 Likes, 3 Kommentare, 6 Shares, 3 Saves, 0 Follower. Absolute Watchtime verdoppelt, relativ (27 %) aber
+  unter 010 (37 %). Offen: Wo genau springen die Leute ab (Zuschauerbindungs-Kurve)? Abendliche Postzeit scheint besser zu laufen.
 - 2026-11-02 · 012 Messi Cold Open (TikTok, ~4 h, gepostet 11:06): 803 Aufrufe, 44 Likes, 0 Kommentare, Ø 9,0 s von 33,5 s, ganz 7,7 %.
   YouTube Shorts: 26 % weiter angesehen / 74 % weggewischt, Ø 15 s. → Cold Open allein hat die Absprungrate NICHT verbessert.
   Verdacht: synthetische Vorschau-Stimme (wird als KI erkannt), zu viel Text im ersten Bild, Posting-Uhrzeit (11 Uhr statt 18–21 Uhr),
