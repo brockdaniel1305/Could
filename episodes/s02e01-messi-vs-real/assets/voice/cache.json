@@ -120,157 +120,237 @@
   ]
  },
  "s3-kickoff.part0.wav": {
-  "key": "83797f42b208e37e774990ddb9697fc8d65cd197",
+  "key": "a6bd5b1be2ecbf8dfb50045d08e49ba53d951ac3",
   "words": [
    {
-    "text": "kick",
+    "text": "Kick",
     "start": 0,
-    "end": 0.29
+    "end": 0.283
    },
    {
     "text": "off",
-    "start": 0.29,
-    "end": 0.508
+    "start": 0.283,
+    "end": 0.495
    },
    {
     "text": "real",
-    "start": 0.508,
-    "end": 0.799
+    "start": 0.495,
+    "end": 0.778
    },
    {
     "text": "press",
-    "start": 0.799,
-    "end": 1.162
+    "start": 0.778,
+    "end": 1.132
    },
    {
     "text": "with",
-    "start": 1.162,
-    "end": 1.452
+    "start": 1.132,
+    "end": 1.415
    },
    {
     "text": "all",
-    "start": 1.452,
-    "end": 1.67
+    "start": 1.415,
+    "end": 1.627
    },
    {
     "text": "11,",
-    "start": 1.67,
-    "end": 1.888
+    "start": 1.627,
+    "end": 1.839
    },
    {
-    "text": "he",
-    "start": 1.888,
-    "end": 2.033
+    "text": "Messy",
+    "start": 1.839,
+    "end": 2.193
    },
    {
     "text": "has",
-    "start": 2.033,
-    "end": 2.251
+    "start": 2.193,
+    "end": 2.405
    },
    {
     "text": "no",
-    "start": 2.251,
-    "end": 2.396
+    "start": 2.405,
+    "end": 2.547
    },
    {
     "text": "one",
-    "start": 2.396,
-    "end": 2.614
-   },
-   {
-    "text": "to",
-    "start": 2.614,
+    "start": 2.547,
     "end": 2.759
    },
    {
-    "text": "pass",
+    "text": "to",
     "start": 2.759,
-    "end": 3.05
+    "end": 2.901
+   },
+   {
+    "text": "pass",
+    "start": 2.901,
+    "end": 3.184
    },
    {
     "text": "to,",
-    "start": 3.05,
-    "end": 3.268
+    "start": 3.184,
+    "end": 3.396
    },
    {
     "text": "so",
-    "start": 3.268,
-    "end": 3.413
+    "start": 3.396,
+    "end": 3.537
    },
    {
     "text": "he",
-    "start": 3.413,
-    "end": 3.558
+    "start": 3.537,
+    "end": 3.679
    },
    {
-    "text": "plays",
-    "start": 3.558,
-    "end": 3.921
+    "text": "passes",
+    "start": 3.679,
+    "end": 4.103
    },
    {
-    "text": "a",
-    "start": 3.921,
-    "end": 3.994
-   },
-   {
-    "text": "1-2",
-    "start": 3.994,
-    "end": 4.212
-   },
-   {
-    "text": "with",
-    "start": 4.212,
-    "end": 4.502
+    "text": "to",
+    "start": 4.103,
+    "end": 4.245
    },
    {
     "text": "the",
-    "start": 4.502,
-    "end": 4.72
+    "start": 4.245,
+    "end": 4.457
    },
    {
-    "text": "advertising",
-    "start": 4.72,
-    "end": 5.522
+    "text": "only",
+    "start": 4.457,
+    "end": 4.74
    },
    {
-    "text": "board.",
-    "start": 5.522,
-    "end": 5.96
+    "text": "player",
+    "start": 4.74,
+    "end": 5.132
+   },
+   {
+    "text": "who",
+    "start": 5.132,
+    "end": 5.328
+   },
+   {
+    "text": "is",
+    "start": 5.328,
+    "end": 5.459
+   },
+   {
+    "text": "always",
+    "start": 5.459,
+    "end": 5.851
+   },
+   {
+    "text": "free",
+    "start": 5.851,
+    "end": 6.113
+   },
+   {
+    "text": "himself,",
+    "start": 6.113,
+    "end": 6.636
+   },
+   {
+    "text": "he's",
+    "start": 6.636,
+    "end": 6.897
+   },
+   {
+    "text": "through.",
+    "start": 6.897,
+    "end": 7.42
    }
   ]
  },
  "s4-counter.part0.wav": {
-  "key": "b208df35fa5fc3a7eb40b6562d292cef9f701817",
+  "key": "72a809e72bc548cc60ce4ccd37220f3c1fa851e2",
   "words": [
    {
-    "text": "Real",
+    "text": "Saved",
     "start": 0,
-    "end": 0.285
+    "end": 0.338
    },
    {
-    "text": "counter,",
-    "start": 0.285,
-    "end": 0.855
+    "text": "and",
+    "start": 0.338,
+    "end": 0.542
+   },
+   {
+    "text": "while",
+    "start": 0.542,
+    "end": 0.88
+   },
+   {
+    "text": "he",
+    "start": 0.88,
+    "end": 1.015
+   },
+   {
+    "text": "is",
+    "start": 1.015,
+    "end": 1.151
+   },
+   {
+    "text": "up",
+    "start": 1.151,
+    "end": 1.286
+   },
+   {
+    "text": "front,",
+    "start": 1.286,
+    "end": 1.692
    },
    {
     "text": "nobody",
-    "start": 0.855,
-    "end": 1.283
+    "start": 1.692,
+    "end": 2.098
+   },
+   {
+    "text": "is",
+    "start": 2.098,
+    "end": 2.234
    },
    {
     "text": "in",
-    "start": 1.283,
-    "end": 1.425
+    "start": 2.234,
+    "end": 2.369
    },
    {
-    "text": "Messi's",
-    "start": 1.425,
-    "end": 1.924
+    "text": "his",
+    "start": 2.369,
+    "end": 2.572
    },
    {
-    "text": "goal.",
-    "start": 1.924,
-    "end": 2.28
+    "text": "goal,",
+    "start": 2.572,
+    "end": 2.911
+   },
+   {
+    "text": "real",
+    "start": 2.911,
+    "end": 3.182
+   },
+   {
+    "text": "score",
+    "start": 3.182,
+    "end": 3.52
+   },
+   {
+    "text": "from",
+    "start": 3.52,
+    "end": 3.791
+   },
+   {
+    "text": "50",
+    "start": 3.791,
+    "end": 3.926
+   },
+   {
+    "text": "meters.",
+    "start": 3.926,
+    "end": 4.4
    }
   ]
  },
@@ -480,32 +560,112 @@
   ]
  },
  "s8-last.part0.wav": {
-  "key": "e16da0bd3e31ec12267a4f4f9d65ea3cea0947b7",
+  "key": "b831ab154e76b7183fe7da146e03ca1ee2cdb202",
   "words": [
    {
     "text": "Minute",
     "start": 0,
-    "end": 0.534
+    "end": 0.48
    },
    {
     "text": "92,",
-    "start": 0.534,
-    "end": 0.801
+    "start": 0.48,
+    "end": 0.72
    },
    {
-    "text": "last",
-    "start": 0.801,
-    "end": 1.157
+    "text": "Stamina",
+    "start": 0.72,
+    "end": 1.28
    },
    {
-    "text": "attack.",
-    "start": 1.157,
-    "end": 1.78
+    "text": "3%,",
+    "start": 1.28,
+    "end": 1.52
+   },
+   {
+    "text": "but",
+    "start": 1.52,
+    "end": 1.76
+   },
+   {
+    "text": "he",
+    "start": 1.76,
+    "end": 1.92
+   },
+   {
+    "text": "walked",
+    "start": 1.92,
+    "end": 2.4
+   },
+   {
+    "text": "all",
+    "start": 2.4,
+    "end": 2.64
+   },
+   {
+    "text": "game",
+    "start": 2.64,
+    "end": 2.96
+   },
+   {
+    "text": "he",
+    "start": 2.96,
+    "end": 3.12
+   },
+   {
+    "text": "saved",
+    "start": 3.12,
+    "end": 3.52
+   },
+   {
+    "text": "exactly",
+    "start": 3.52,
+    "end": 4.08
+   },
+   {
+    "text": "one",
+    "start": 4.08,
+    "end": 4.32
+   },
+   {
+    "text": "sprint,",
+    "start": 4.32,
+    "end": 4.88
+   },
+   {
+    "text": "one",
+    "start": 4.88,
+    "end": 5.12
+   },
+   {
+    "text": "defender",
+    "start": 5.12,
+    "end": 5.76
+   },
+   {
+    "text": "left",
+    "start": 5.76,
+    "end": 6.024
+   },
+   {
+    "text": "passed",
+    "start": 6.024,
+    "end": 6.42
+   },
+   {
+    "text": "to",
+    "start": 6.42,
+    "end": 6.552
+   },
+   {
+    "text": "himself.",
+    "start": 6.552,
+    "end": 7.08
    }
   ]
  },
  "s8-last.part1.wav": {
-  "key": "b6d5eb25b2da73fb8a030d7d16817eb69fa24141",
+  "key": "39dc6875e70bae993933bdf590675d282b98f2c5",
   "words": [
    {
     "text": "to",
@@ -530,47 +690,42 @@
   ]
  },
  "s9-shirt.part0.wav": {
-  "key": "f6b38ee5fa0922027aae4b438be6ff3c6e6e68b7",
+  "key": "d0f2df1d386bed11e9e16bfa674f3c08fe1c3a2a",
   "words": [
    {
-    "text": "and",
+    "text": "He",
     "start": 0,
-    "end": 0.165
-   },
-   {
-    "text": "he",
-    "start": 0.165,
-    "end": 0.275
+    "end": 0.117
    },
    {
     "text": "shows",
-    "start": 0.275,
-    "end": 0.55
+    "start": 0.117,
+    "end": 0.41
    },
    {
     "text": "his",
-    "start": 0.55,
-    "end": 0.715
+    "start": 0.41,
+    "end": 0.586
    },
    {
     "text": "shirt",
-    "start": 0.715,
-    "end": 0.99
+    "start": 0.586,
+    "end": 0.879
    },
    {
     "text": "to",
-    "start": 0.99,
-    "end": 1.1
+    "start": 0.879,
+    "end": 0.997
    },
    {
     "text": "the",
-    "start": 1.1,
-    "end": 1.265
+    "start": 0.997,
+    "end": 1.172
    },
    {
     "text": "Bernabeu.",
-    "start": 1.265,
-    "end": 1.76
+    "start": 1.172,
+    "end": 1.7
    }
   ]
  },
@@ -696,6 +851,586 @@
     "text": "you.",
     "start": 3.028,
     "end": 3.28
+   }
+  ]
+ },
+ "s1-hook.part0.wav": {
+  "key": "8c9ff601d87689e40921098736390686f3cdff78",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.321
+   },
+   {
+    "text": "Prime",
+    "start": 0.321,
+    "end": 0.642
+   },
+   {
+    "text": "Messi",
+    "start": 0.642,
+    "end": 0.963
+   },
+   {
+    "text": "beat",
+    "start": 0.963,
+    "end": 1.22
+   },
+   {
+    "text": "Real",
+    "start": 1.22,
+    "end": 1.477
+   },
+   {
+    "text": "Madrid",
+    "start": 1.477,
+    "end": 1.862
+   },
+   {
+    "text": "on",
+    "start": 1.862,
+    "end": 1.991
+   },
+   {
+    "text": "his",
+    "start": 1.991,
+    "end": 2.183
+   },
+   {
+    "text": "own?",
+    "start": 2.183,
+    "end": 2.44
+   }
+  ]
+ },
+ "s2-setup.part0.wav": {
+  "key": "a00452c54b9ed9c549013ef9dc3f033b2e5c41a8",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.234
+   },
+   {
+    "text": "Bernabeu,",
+    "start": 0.234,
+    "end": 0.937
+   },
+   {
+    "text": "80,000",
+    "start": 0.937,
+    "end": 1.406
+   },
+   {
+    "text": "Madrid",
+    "start": 1.406,
+    "end": 1.874
+   },
+   {
+    "text": "fans,",
+    "start": 1.874,
+    "end": 2.265
+   },
+   {
+    "text": "real",
+    "start": 2.265,
+    "end": 2.577
+   },
+   {
+    "text": "Madrid",
+    "start": 2.577,
+    "end": 3.046
+   },
+   {
+    "text": "11",
+    "start": 3.046,
+    "end": 3.202
+   },
+   {
+    "text": "players,",
+    "start": 3.202,
+    "end": 3.827
+   },
+   {
+    "text": "messy,",
+    "start": 3.827,
+    "end": 4.295
+   },
+   {
+    "text": "one,",
+    "start": 4.295,
+    "end": 4.608
+   },
+   {
+    "text": "no",
+    "start": 4.608,
+    "end": 4.764
+   },
+   {
+    "text": "teammates,",
+    "start": 4.764,
+    "end": 5.545
+   },
+   {
+    "text": "no",
+    "start": 5.545,
+    "end": 5.701
+   },
+   {
+    "text": "goalkeeper.",
+    "start": 5.701,
+    "end": 6.56
+   }
+  ]
+ },
+ "s4-counter.part1.wav": {
+  "key": "fcf71bc000cda4cb0b607aa068f11bd8447e8cdc",
+  "words": [
+   {
+    "text": "nil",
+    "start": 0,
+    "end": 0.262
+   },
+   {
+    "text": "won't",
+    "start": 0.262,
+    "end": 0.7
+   }
+  ]
+ },
+ "s5-solo.part0.wav": {
+  "key": "f60520e5469b6a3e3e1de7e32b5a69c415e5d58b",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.136
+   },
+   {
+    "text": "Messi",
+    "start": 0.136,
+    "end": 0.475
+   },
+   {
+    "text": "stops",
+    "start": 0.475,
+    "end": 0.814
+   },
+   {
+    "text": "passing,",
+    "start": 0.814,
+    "end": 1.357
+   },
+   {
+    "text": "he",
+    "start": 1.357,
+    "end": 1.492
+   },
+   {
+    "text": "takes",
+    "start": 1.492,
+    "end": 1.831
+   },
+   {
+    "text": "the",
+    "start": 1.831,
+    "end": 2.035
+   },
+   {
+    "text": "ball",
+    "start": 2.035,
+    "end": 2.306
+   },
+   {
+    "text": "on",
+    "start": 2.306,
+    "end": 2.442
+   },
+   {
+    "text": "halfway,",
+    "start": 2.442,
+    "end": 2.984
+   },
+   {
+    "text": "pass",
+    "start": 2.984,
+    "end": 3.256
+   },
+   {
+    "text": "10",
+    "start": 3.256,
+    "end": 3.391
+   },
+   {
+    "text": "outfield",
+    "start": 3.391,
+    "end": 3.934
+   },
+   {
+    "text": "players",
+    "start": 3.934,
+    "end": 4.409
+   },
+   {
+    "text": "past",
+    "start": 4.409,
+    "end": 4.68
+   },
+   {
+    "text": "the",
+    "start": 4.68,
+    "end": 4.83
+   },
+   {
+    "text": "keeper.",
+    "start": 4.83,
+    "end": 5.18
+   }
+  ]
+ },
+ "s5-solo.part1.wav": {
+  "key": "447d1f876385c8e932e556d3a4ecc4ed0c149dc3",
+  "words": [
+   {
+    "text": "1-1.",
+    "start": 0,
+    "end": 0.64
+   }
+  ]
+ },
+ "s6-walk.part0.wav": {
+  "key": "103cb1de163beccd2d762e291dc2ec4e9baab8e2",
+  "words": [
+   {
+    "text": "But",
+    "start": 0,
+    "end": 0.18
+   },
+   {
+    "text": "one",
+    "start": 0.18,
+    "end": 0.36
+   },
+   {
+    "text": "man",
+    "start": 0.36,
+    "end": 0.54
+   },
+   {
+    "text": "has",
+    "start": 0.54,
+    "end": 0.72
+   },
+   {
+    "text": "to",
+    "start": 0.72,
+    "end": 0.84
+   },
+   {
+    "text": "cover",
+    "start": 0.84,
+    "end": 1.14
+   },
+   {
+    "text": "the",
+    "start": 1.14,
+    "end": 1.32
+   },
+   {
+    "text": "whole",
+    "start": 1.32,
+    "end": 1.62
+   },
+   {
+    "text": "pitch,",
+    "start": 1.62,
+    "end": 1.98
+   },
+   {
+    "text": "his",
+    "start": 1.98,
+    "end": 2.16
+   },
+   {
+    "text": "stamina",
+    "start": 2.16,
+    "end": 2.58
+   },
+   {
+    "text": "drops",
+    "start": 2.58,
+    "end": 2.88
+   },
+   {
+    "text": "so",
+    "start": 2.88,
+    "end": 3
+   },
+   {
+    "text": "he",
+    "start": 3,
+    "end": 3.12
+   },
+   {
+    "text": "does",
+    "start": 3.12,
+    "end": 3.36
+   },
+   {
+    "text": "what",
+    "start": 3.36,
+    "end": 3.6
+   },
+   {
+    "text": "Prime",
+    "start": 3.6,
+    "end": 3.9
+   },
+   {
+    "text": "Messi",
+    "start": 3.9,
+    "end": 4.2
+   },
+   {
+    "text": "always",
+    "start": 4.2,
+    "end": 4.652
+   },
+   {
+    "text": "did,",
+    "start": 4.652,
+    "end": 4.954
+   },
+   {
+    "text": "he",
+    "start": 4.954,
+    "end": 5.104
+   },
+   {
+    "text": "walks,",
+    "start": 5.104,
+    "end": 5.557
+   },
+   {
+    "text": "real",
+    "start": 5.557,
+    "end": 5.858
+   },
+   {
+    "text": "stop",
+    "start": 5.858,
+    "end": 6.159
+   },
+   {
+    "text": "marking",
+    "start": 6.159,
+    "end": 6.687
+   },
+   {
+    "text": "a",
+    "start": 6.687,
+    "end": 6.762
+   },
+   {
+    "text": "walking",
+    "start": 6.762,
+    "end": 7.29
+   },
+   {
+    "text": "man,",
+    "start": 7.29,
+    "end": 7.591
+   },
+   {
+    "text": "one",
+    "start": 7.591,
+    "end": 7.817
+   },
+   {
+    "text": "sprint,",
+    "start": 7.817,
+    "end": 8.345
+   },
+   {
+    "text": "foul,",
+    "start": 8.345,
+    "end": 8.722
+   },
+   {
+    "text": "free",
+    "start": 8.722,
+    "end": 9.023
+   },
+   {
+    "text": "kick.",
+    "start": 9.023,
+    "end": 9.4
+   }
+  ]
+ },
+ "s6-walk.part1.wav": {
+  "key": "747f3f0b7247c78fa7c897ca036599b350a557bb",
+  "words": [
+   {
+    "text": "Top",
+    "start": 0,
+    "end": 0.305
+   },
+   {
+    "text": "corner",
+    "start": 0.305,
+    "end": 0.914
+   },
+   {
+    "text": "1-2.",
+    "start": 0.914,
+    "end": 1.32
+   }
+  ]
+ },
+ "s7-corner.part0.wav": {
+  "key": "1ec840aeab240eb1406ca79e08f224565c222862",
+  "words": [
+   {
+    "text": "Minute",
+    "start": 0,
+    "end": 0.449
+   },
+   {
+    "text": "89,",
+    "start": 0.449,
+    "end": 0.673
+   },
+   {
+    "text": "real",
+    "start": 0.673,
+    "end": 0.973
+   },
+   {
+    "text": "bring",
+    "start": 0.973,
+    "end": 1.347
+   },
+   {
+    "text": "on",
+    "start": 1.347,
+    "end": 1.496
+   },
+   {
+    "text": "three",
+    "start": 1.496,
+    "end": 1.87
+   },
+   {
+    "text": "fresh",
+    "start": 1.87,
+    "end": 2.244
+   },
+   {
+    "text": "substitutes,",
+    "start": 2.244,
+    "end": 3.142
+   },
+   {
+    "text": "messy",
+    "start": 3.142,
+    "end": 3.516
+   },
+   {
+    "text": "has",
+    "start": 3.516,
+    "end": 3.741
+   },
+   {
+    "text": "no",
+    "start": 3.741,
+    "end": 3.89
+   },
+   {
+    "text": "bench,",
+    "start": 3.89,
+    "end": 4.339
+   },
+   {
+    "text": "corner,",
+    "start": 4.339,
+    "end": 4.863
+   },
+   {
+    "text": "real",
+    "start": 4.863,
+    "end": 5.162
+   },
+   {
+    "text": "send",
+    "start": 5.162,
+    "end": 5.461
+   },
+   {
+    "text": "everyone",
+    "start": 5.461,
+    "end": 6.06
+   },
+   {
+    "text": "into",
+    "start": 6.06,
+    "end": 6.312
+   },
+   {
+    "text": "the",
+    "start": 6.312,
+    "end": 6.501
+   },
+   {
+    "text": "box,",
+    "start": 6.501,
+    "end": 6.753
+   },
+   {
+    "text": "messy",
+    "start": 6.753,
+    "end": 7.068
+   },
+   {
+    "text": "can",
+    "start": 7.068,
+    "end": 7.257
+   },
+   {
+    "text": "mark",
+    "start": 7.257,
+    "end": 7.509
+   },
+   {
+    "text": "exactly",
+    "start": 7.509,
+    "end": 7.95
+   },
+   {
+    "text": "one",
+    "start": 7.95,
+    "end": 8.139
+   },
+   {
+    "text": "of",
+    "start": 8.139,
+    "end": 8.265
+   },
+   {
+    "text": "them.",
+    "start": 8.265,
+    "end": 8.58
+   }
+  ]
+ },
+ "s7-corner.part1.wav": {
+  "key": "8a1552a57c6fa60bc440db236918cf67d5594292",
+  "words": [
+   {
+    "text": "Tutu.",
+    "start": 0,
+    "end": 0.7
    }
   ]
  }

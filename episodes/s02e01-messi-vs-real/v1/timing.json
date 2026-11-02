@@ -1,0 +1,905 @@
+{
+ "duration": 46.488,
+ "voice": "kokoro:am_adam",
+ "scenes": [
+  {
+   "id": "s1-slam",
+   "start": 0.0,
+   "duration": 3.025,
+   "voice": "assets/voice/s1-slam.wav",
+   "voiceStart": 0.15,
+   "speech": 2.475,
+   "cues": {},
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.471
+    },
+    {
+     "text": "prime",
+     "start": 0.471,
+     "end": 0.792
+    },
+    {
+     "text": "Messi",
+     "start": 0.792,
+     "end": 1.113
+    },
+    {
+     "text": "beat",
+     "start": 1.113,
+     "end": 1.37
+    },
+    {
+     "text": "Real",
+     "start": 1.37,
+     "end": 1.627
+    },
+    {
+     "text": "Madrid",
+     "start": 1.627,
+     "end": 2.012
+    },
+    {
+     "text": "on",
+     "start": 2.012,
+     "end": 2.141
+    },
+    {
+     "text": "his",
+     "start": 2.141,
+     "end": 2.333
+    },
+    {
+     "text": "own?",
+     "start": 2.333,
+     "end": 2.59
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 0.0,
+     "volume": 0.35
+    },
+    {
+     "name": "impact-bass-1",
+     "at": 0.85,
+     "volume": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s2-bernabeu",
+   "start": 3.025,
+   "duration": 5.91,
+   "voice": "assets/voice/s2-bernabeu.wav",
+   "voiceStart": 0.15,
+   "speech": 5.36,
+   "cues": {
+    "fans": 1.075,
+    "eleven": 2.849,
+    "messi": 4.313,
+    "alone": 5.007
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.381
+    },
+    {
+     "text": "Bernab\u00e9u.",
+     "start": 0.381,
+     "end": 1.075
+    },
+    {
+     "text": "Around",
+     "start": 1.075,
+     "end": 1.538
+    },
+    {
+     "text": "eighty",
+     "start": 1.538,
+     "end": 1.743
+    },
+    {
+     "text": "thousand",
+     "start": 1.743,
+     "end": 2.0
+    },
+    {
+     "text": "Madrid",
+     "start": 2.0,
+     "end": 2.463
+    },
+    {
+     "text": "fans.",
+     "start": 2.463,
+     "end": 2.849
+    },
+    {
+     "text": "Eleven",
+     "start": 2.849,
+     "end": 3.003
+    },
+    {
+     "text": "Real",
+     "start": 3.003,
+     "end": 3.311
+    },
+    {
+     "text": "Madrid",
+     "start": 3.311,
+     "end": 3.774
+    },
+    {
+     "text": "players.",
+     "start": 3.774,
+     "end": 4.313
+    },
+    {
+     "text": "And",
+     "start": 4.313,
+     "end": 4.545
+    },
+    {
+     "text": "Messi.",
+     "start": 4.545,
+     "end": 5.007
+    },
+    {
+     "text": "Alone.",
+     "start": 5.007,
+     "end": 5.47
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh",
+     "at": 2.649,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s3-kickoff",
+   "start": 8.935,
+   "duration": 6.518,
+   "voice": "assets/voice/s3-kickoff.wav",
+   "voiceStart": 0.15,
+   "speech": 5.968,
+   "cues": {
+    "press": 0.658,
+    "none": 2.038,
+    "board": 3.418
+   },
+   "words": [
+    {
+     "text": "Kick",
+     "start": 0.15,
+     "end": 0.44
+    },
+    {
+     "text": "off.",
+     "start": 0.44,
+     "end": 0.658
+    },
+    {
+     "text": "Real",
+     "start": 0.658,
+     "end": 0.949
+    },
+    {
+     "text": "press",
+     "start": 0.949,
+     "end": 1.312
+    },
+    {
+     "text": "with",
+     "start": 1.312,
+     "end": 1.602
+    },
+    {
+     "text": "all",
+     "start": 1.602,
+     "end": 1.82
+    },
+    {
+     "text": "eleven.",
+     "start": 1.82,
+     "end": 2.038
+    },
+    {
+     "text": "He",
+     "start": 2.038,
+     "end": 2.183
+    },
+    {
+     "text": "has",
+     "start": 2.183,
+     "end": 2.401
+    },
+    {
+     "text": "no",
+     "start": 2.401,
+     "end": 2.546
+    },
+    {
+     "text": "one",
+     "start": 2.546,
+     "end": 2.764
+    },
+    {
+     "text": "to",
+     "start": 2.764,
+     "end": 2.909
+    },
+    {
+     "text": "pass",
+     "start": 2.909,
+     "end": 3.2
+    },
+    {
+     "text": "to.",
+     "start": 3.2,
+     "end": 3.418
+    },
+    {
+     "text": "So",
+     "start": 3.418,
+     "end": 3.563
+    },
+    {
+     "text": "he",
+     "start": 3.563,
+     "end": 3.708
+    },
+    {
+     "text": "plays",
+     "start": 3.708,
+     "end": 4.071
+    },
+    {
+     "text": "a",
+     "start": 4.071,
+     "end": 4.144
+    },
+    {
+     "text": "one",
+     "start": 4.144,
+     "end": 4.253
+    },
+    {
+     "text": "two",
+     "start": 4.253,
+     "end": 4.362
+    },
+    {
+     "text": "with",
+     "start": 4.362,
+     "end": 4.652
+    },
+    {
+     "text": "the",
+     "start": 4.652,
+     "end": 4.87
+    },
+    {
+     "text": "advertising",
+     "start": 4.87,
+     "end": 5.672
+    },
+    {
+     "text": "board.",
+     "start": 5.672,
+     "end": 6.11
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whistle",
+     "at": 0.05,
+     "volume": 0.3
+    },
+    {
+     "name": "kick",
+     "at": 3.818,
+     "volume": 0.35
+    },
+    {
+     "name": "clang",
+     "at": 4.268,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s4-counter",
+   "start": 15.453,
+   "duration": 2.85,
+   "voice": "assets/voice/s4-counter.wav",
+   "voiceStart": 0.15,
+   "speech": 2.3,
+   "cues": {
+    "empty": 1.005
+   },
+   "words": [
+    {
+     "text": "Real",
+     "start": 0.15,
+     "end": 0.435
+    },
+    {
+     "text": "counter.",
+     "start": 0.435,
+     "end": 1.005
+    },
+    {
+     "text": "Nobody",
+     "start": 1.005,
+     "end": 1.433
+    },
+    {
+     "text": "in",
+     "start": 1.433,
+     "end": 1.575
+    },
+    {
+     "text": "Messi's",
+     "start": 1.575,
+     "end": 2.074
+    },
+    {
+     "text": "goal.",
+     "start": 2.074,
+     "end": 2.43
+    }
+   ],
+   "sfx": [
+    {
+     "name": "net",
+     "at": 2.1,
+     "volume": 0.4
+    },
+    {
+     "name": "impact-bass-1",
+     "at": 2.05,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s5-dribble",
+   "start": 18.303,
+   "duration": 5.645,
+   "voice": "assets/voice/s5-dribble.wav",
+   "voiceStart": 0.15,
+   "speech": 5.095,
+   "cues": {
+    "past": 1.873,
+    "keeper": 3.277,
+    "one": 4.52
+   },
+   "words": [
+    {
+     "text": "Messi",
+     "start": 0.15,
+     "end": 0.469
+    },
+    {
+     "text": "takes",
+     "start": 0.469,
+     "end": 0.788
+    },
+    {
+     "text": "the",
+     "start": 0.788,
+     "end": 0.98
+    },
+    {
+     "text": "ball",
+     "start": 0.98,
+     "end": 1.235
+    },
+    {
+     "text": "on",
+     "start": 1.235,
+     "end": 1.362
+    },
+    {
+     "text": "halfway.",
+     "start": 1.362,
+     "end": 1.873
+    },
+    {
+     "text": "Past",
+     "start": 1.873,
+     "end": 2.128
+    },
+    {
+     "text": "ten",
+     "start": 2.128,
+     "end": 2.256
+    },
+    {
+     "text": "outfield",
+     "start": 2.256,
+     "end": 2.766
+    },
+    {
+     "text": "players.",
+     "start": 2.766,
+     "end": 3.277
+    },
+    {
+     "text": "Past",
+     "start": 3.277,
+     "end": 3.532
+    },
+    {
+     "text": "the",
+     "start": 3.532,
+     "end": 3.723
+    },
+    {
+     "text": "keeper.",
+     "start": 3.723,
+     "end": 4.17
+    },
+    {
+     "text": "One",
+     "start": 4.52,
+     "end": 4.85
+    },
+    {
+     "text": "one.",
+     "start": 4.85,
+     "end": 5.245
+    }
+   ],
+   "sfx": [
+    {
+     "name": "spin",
+     "at": 0.9,
+     "volume": 0.2
+    },
+    {
+     "name": "spin",
+     "at": 1.8,
+     "volume": 0.2
+    },
+    {
+     "name": "net",
+     "at": 4.52,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s6-freekick",
+   "start": 23.948,
+   "duration": 4.129,
+   "voice": "assets/voice/s6-freekick.wav",
+   "voiceStart": 0.15,
+   "speech": 3.579,
+   "cues": {
+    "fk": 1.789,
+    "top": 2.875
+   },
+   "words": [
+    {
+     "text": "A",
+     "start": 0.15,
+     "end": 0.221
+    },
+    {
+     "text": "foul",
+     "start": 0.221,
+     "end": 0.506
+    },
+    {
+     "text": "on",
+     "start": 0.506,
+     "end": 0.649
+    },
+    {
+     "text": "the",
+     "start": 0.649,
+     "end": 0.862
+    },
+    {
+     "text": "edge",
+     "start": 0.862,
+     "end": 1.147
+    },
+    {
+     "text": "of",
+     "start": 1.147,
+     "end": 1.29
+    },
+    {
+     "text": "the",
+     "start": 1.29,
+     "end": 1.504
+    },
+    {
+     "text": "box.",
+     "start": 1.504,
+     "end": 1.789
+    },
+    {
+     "text": "Free",
+     "start": 1.789,
+     "end": 2.074
+    },
+    {
+     "text": "kick.",
+     "start": 2.074,
+     "end": 2.43
+    },
+    {
+     "text": "Top",
+     "start": 2.875,
+     "end": 3.127
+    },
+    {
+     "text": "corner.",
+     "start": 3.127,
+     "end": 3.715
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "at": 1.989,
+     "volume": 0.4
+    },
+    {
+     "name": "net",
+     "at": 2.925,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "id": "s7-laces",
+   "start": 28.077,
+   "duration": 4.351,
+   "voice": "assets/voice/s7-laces.wav",
+   "voiceStart": 0.15,
+   "speech": 3.801,
+   "cues": {
+    "laces": 0.875,
+    "two": 3.183
+   },
+   "words": [
+    {
+     "text": "Minute",
+     "start": 0.15,
+     "end": 0.634
+    },
+    {
+     "text": "eighty",
+     "start": 0.634,
+     "end": 0.763
+    },
+    {
+     "text": "nine.",
+     "start": 0.763,
+     "end": 0.875
+    },
+    {
+     "text": "Messi",
+     "start": 0.875,
+     "end": 1.278
+    },
+    {
+     "text": "stops",
+     "start": 1.278,
+     "end": 1.682
+    },
+    {
+     "text": "to",
+     "start": 1.682,
+     "end": 1.843
+    },
+    {
+     "text": "tie",
+     "start": 1.843,
+     "end": 2.085
+    },
+    {
+     "text": "his",
+     "start": 2.085,
+     "end": 2.326
+    },
+    {
+     "text": "laces.",
+     "start": 2.326,
+     "end": 2.81
+    },
+    {
+     "text": "Two",
+     "start": 3.183,
+     "end": 3.532
+    },
+    {
+     "text": "two.",
+     "start": 3.532,
+     "end": 3.951
+    }
+   ],
+   "sfx": [
+    {
+     "name": "net",
+     "at": 3.183,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s8-last",
+   "start": 32.428,
+   "duration": 3.749,
+   "voice": "assets/voice/s8-last.wav",
+   "voiceStart": 0.15,
+   "speech": 3.199,
+   "cues": {
+    "last": 0.951,
+    "goal": 2.56
+   },
+   "words": [
+    {
+     "text": "Minute",
+     "start": 0.15,
+     "end": 0.684
+    },
+    {
+     "text": "ninety",
+     "start": 0.684,
+     "end": 0.837
+    },
+    {
+     "text": "two.",
+     "start": 0.837,
+     "end": 0.951
+    },
+    {
+     "text": "Last",
+     "start": 0.951,
+     "end": 1.307
+    },
+    {
+     "text": "attack.",
+     "start": 1.307,
+     "end": 1.93
+    },
+    {
+     "text": "Two",
+     "start": 2.56,
+     "end": 2.864
+    },
+    {
+     "text": "three.",
+     "start": 2.864,
+     "end": 3.349
+    }
+   ],
+   "sfx": [
+    {
+     "name": "heartbeat",
+     "at": 0.951,
+     "volume": 0.5
+    },
+    {
+     "name": "kick",
+     "at": 1.701,
+     "volume": 0.4
+    },
+    {
+     "name": "net",
+     "at": 2.56,
+     "volume": 0.45
+    },
+    {
+     "name": "impact-bass-1",
+     "at": 2.51,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s9-shirt",
+   "start": 36.177,
+   "duration": 5.43,
+   "voice": "assets/voice/s9-shirt.wav",
+   "voiceStart": 0.15,
+   "speech": 4.88,
+   "cues": {
+    "y17": 2.342,
+    "same": 4.157
+   },
+   "words": [
+    {
+     "text": "And",
+     "start": 0.15,
+     "end": 0.315
+    },
+    {
+     "text": "he",
+     "start": 0.315,
+     "end": 0.425
+    },
+    {
+     "text": "shows",
+     "start": 0.425,
+     "end": 0.7
+    },
+    {
+     "text": "his",
+     "start": 0.7,
+     "end": 0.865
+    },
+    {
+     "text": "shirt",
+     "start": 0.865,
+     "end": 1.14
+    },
+    {
+     "text": "to",
+     "start": 1.14,
+     "end": 1.25
+    },
+    {
+     "text": "the",
+     "start": 1.25,
+     "end": 1.415
+    },
+    {
+     "text": "Bernab\u00e9u.",
+     "start": 1.415,
+     "end": 1.942
+    },
+    {
+     "text": "He",
+     "start": 2.342,
+     "end": 2.507
+    },
+    {
+     "text": "did",
+     "start": 2.507,
+     "end": 2.755
+    },
+    {
+     "text": "exactly",
+     "start": 2.755,
+     "end": 3.332
+    },
+    {
+     "text": "that",
+     "start": 3.332,
+     "end": 3.662
+    },
+    {
+     "text": "in",
+     "start": 3.662,
+     "end": 3.827
+    },
+    {
+     "text": "2017.",
+     "start": 3.827,
+     "end": 4.157
+    },
+    {
+     "text": "Same",
+     "start": 4.157,
+     "end": 4.487
+    },
+    {
+     "text": "score.",
+     "start": 4.487,
+     "end": 4.982
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s10-ft",
+   "start": 41.607,
+   "duration": 4.881,
+   "voice": "assets/voice/s10-ft.wav",
+   "voiceStart": 0.15,
+   "speech": 4.431,
+   "cues": {
+    "mlc": 1.282,
+    "loop": 3.427
+   },
+   "words": [
+    {
+     "text": "Full",
+     "start": 0.15,
+     "end": 0.55
+    },
+    {
+     "text": "time.",
+     "start": 0.55,
+     "end": 0.95
+    },
+    {
+     "text": "Most",
+     "start": 1.282,
+     "end": 1.534
+    },
+    {
+     "text": "liked",
+     "start": 1.534,
+     "end": 1.787
+    },
+    {
+     "text": "comment",
+     "start": 1.787,
+     "end": 2.228
+    },
+    {
+     "text": "decides",
+     "start": 2.228,
+     "end": 2.67
+    },
+    {
+     "text": "the",
+     "start": 2.67,
+     "end": 2.859
+    },
+    {
+     "text": "next",
+     "start": 2.859,
+     "end": 3.111
+    },
+    {
+     "text": "case.",
+     "start": 3.111,
+     "end": 3.427
+    },
+    {
+     "text": "So",
+     "start": 3.427,
+     "end": 3.553
+    },
+    {
+     "text": "if",
+     "start": 3.553,
+     "end": 3.679
+    },
+    {
+     "text": "anyone",
+     "start": 3.679,
+     "end": 4.057
+    },
+    {
+     "text": "asks",
+     "start": 4.057,
+     "end": 4.31
+    },
+    {
+     "text": "you:",
+     "start": 4.31,
+     "end": 4.562
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whistle",
+     "at": 0.1,
+     "volume": 0.35
+    },
+    {
+     "name": "ding",
+     "at": 1.282,
+     "volume": 0.25
+    }
+   ]
+  }
+ ]
+}

@@ -319,8 +319,8 @@ def main():
     # captions
     (ep / "compositions/captions.html").write_text(captions_html(caption_groups(all_words), total))
 
-    # scene stubs
-    for s in scenes:
+    # scene stubs (a "world" episode draws everything in one continuous layer: <ep>/world/world.html, see tools/world3d)
+    for s in ([] if cfg.get("world") else scenes):
         p = ep / f"compositions/{s['id']}.html"
         if not p.exists():
             p.write_text((KIT / "scene-template.html").read_text().replace("__ID__", s["id"])
@@ -357,7 +357,9 @@ def main():
                           f'data-track-index="19" data-volume="{music.get("volume", 0.14)}" data-fade-out="1.5"></audio>')
 
     hosts = []
-    for i, s in enumerate(scenes):
+    if cfg.get("world"):
+        hosts.append((ep / "world/world.html").read_text())
+    for i, s in enumerate([] if cfg.get("world") else scenes):
         hosts.append(f'      <div id="{s["id"]}" data-composition-id="{s["id"]}" data-composition-src="compositions/{s["id"]}.html" '
                      f'data-start="{s["start"]}" data-duration="{s["duration"]}" data-track-index="{1 + i % 2}" '
                      f'data-track-kind="graphics" data-width="{W}" data-height="{H}" style="z-index:2"></div>')

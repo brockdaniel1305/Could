@@ -13,35 +13,24 @@
   "caption": "Could prime Messi beat Real Madrid on his own? 11 v 1 at the Bernabéu. ⚽🐐 #could #messi #realmadrid #elclasico #barcelona #football #shorts #fyp",
   "scenes": [
     {
-      "id": "s1-slam",
+      "id": "s1-hook",
       "text": "Could prime Messi beat Real Madrid on his own?",
       "sfx": [
         {
           "name": "impact-bass-1",
           "at": 0.0,
-          "volume": 0.35
-        },
-        {
-          "name": "impact-bass-1",
-          "at": 0.85,
-          "volume": 0.35
-        }
-      ]
-    },
-    {
-      "id": "s2-bernabeu",
-      "text": "The Bernabéu. {{fans}}Around eighty thousand Madrid fans. {{eleven}}Eleven Real Madrid players. {{messi}}And Messi. {{alone}}Alone.",
-      "sfx": [
-        {
-          "name": "whoosh",
-          "at": 2.649,
           "volume": 0.3
         }
       ]
     },
     {
+      "id": "s2-setup",
+      "text": "The Bernabéu. {{fans}}Eighty thousand Madrid fans. {{eleven}}Real Madrid: eleven players. {{messi}}Messi: one. {{nomates}}No team-mates. {{nokeeper}}No goalkeeper.",
+      "sfx": []
+    },
+    {
       "id": "s3-kickoff",
-      "text": "Kick off. {{press}}Real press with all eleven. {{none}}He has no one to pass to. {{board}}So he plays a one two with the advertising board.",
+      "text": "Kick-off. {{press}}Real press with all eleven. {{none}}Messi has no one to pass to. {{self}}So he passes to the only player who is always free: {{himself}}himself. {{through}}He's through.",
       "sfx": [
         {
           "name": "whistle",
@@ -50,109 +39,165 @@
         },
         {
           "name": "kick",
-          "at": 3.818,
-          "volume": 0.35
+          "cue": "himself",
+          "offset": -0.1,
+          "volume": 0.3
         },
         {
-          "name": "clang",
-          "at": 4.268,
-          "volume": 0.3
+          "name": "kick",
+          "cue": "through",
+          "offset": 0.95,
+          "volume": 0.35
         }
       ]
     },
     {
       "id": "s4-counter",
-      "text": "Real counter. {{empty}}Nobody in Messi's goal.",
+      "text": "Saved. {{counter}}And while he is up front, {{empty}}nobody is in his goal. {{fifty}}Real score from fifty metres. ||0.2|| {{nil}}Nil, one.",
       "sfx": [
         {
+          "name": "kick",
+          "cue": "counter",
+          "offset": 0.3,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "fifty",
+          "offset": 0.15,
+          "volume": 0.35
+        },
+        {
           "name": "net",
-          "at": 2.1,
+          "cue": "fifty",
+          "offset": 1.55,
           "volume": 0.4
         },
         {
           "name": "impact-bass-1",
-          "at": 2.05,
+          "cue": "fifty",
+          "offset": 1.55,
           "volume": 0.3
         }
       ]
     },
     {
-      "id": "s5-dribble",
-      "text": "Messi takes the ball on halfway. {{past}}Past ten outfield players. {{keeper}}Past the keeper. ||0.3|| {{one}}One one.",
+      "id": "s5-solo",
+      "text": "So Messi stops passing. {{half}}He takes the ball on halfway. {{past}}Past ten outfield players. {{keeper}}Past the keeper. ||0.3|| {{one}}One, one.",
       "sfx": [
         {
-          "name": "spin",
-          "at": 0.9,
-          "volume": 0.2
-        },
-        {
-          "name": "spin",
-          "at": 1.8,
-          "volume": 0.2
-        },
-        {
           "name": "net",
-          "at": 4.52,
+          "cue": "one",
+          "offset": -0.05,
           "volume": 0.4
+        },
+        {
+          "name": "impact-bass-1",
+          "cue": "one",
+          "offset": -0.05,
+          "volume": 0.3
         }
       ]
     },
     {
-      "id": "s6-freekick",
-      "text": "A foul on the edge of the box. {{fk}}Free kick. ||0.4|| {{top}}Top corner.",
+      "id": "s6-walk",
+      "text": "But one man has to cover the whole pitch. {{stam}}His stamina drops. {{walk}}So he does what prime Messi always did. {{walks}}He walks. {{bored}}Real stop marking a walking man. {{sprint}}One sprint. {{foul}}Foul. {{fk}}Free kick. ||0.3|| {{top}}Top corner. {{onetwo}}One, two.",
+      "sfx": [
+        {
+          "name": "whistle",
+          "cue": "foul",
+          "offset": 0,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "top",
+          "offset": -0.45,
+          "volume": 0.4
+        },
+        {
+          "name": "net",
+          "cue": "top",
+          "offset": 0.3,
+          "volume": 0.45
+        },
+        {
+          "name": "impact-bass-1",
+          "cue": "top",
+          "offset": 0.3,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s7-corner",
+      "text": "Minute eighty nine. {{subs}}Real bring on three fresh substitutes. {{bench}}Messi has no bench. {{corner}}Corner. {{box}}Real send everyone into the box. {{mark}}Messi can mark exactly one of them. ||0.3|| {{two}}Two, two.",
       "sfx": [
         {
           "name": "kick",
-          "at": 1.989,
-          "volume": 0.4
+          "cue": "two",
+          "offset": -1.0,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "two",
+          "offset": -0.4,
+          "volume": 0.25
         },
         {
           "name": "net",
-          "at": 2.925,
-          "volume": 0.45
-        }
-      ]
-    },
-    {
-      "id": "s7-laces",
-      "text": "Minute eighty nine. {{laces}}Messi stops to tie his laces. ||0.3|| {{two}}Two two.",
-      "sfx": [
+          "cue": "two",
+          "offset": -0.1,
+          "volume": 0.4
+        },
         {
-          "name": "net",
-          "at": 3.183,
+          "name": "impact-bass-1",
+          "cue": "two",
+          "offset": -0.1,
           "volume": 0.3
         }
       ]
     },
     {
       "id": "s8-last",
-      "text": "Minute ninety two. {{last}}Last attack. ||0.6|| {{goal}}Two three.",
+      "text": "Minute ninety two. {{three}}Stamina: three percent. {{walked}}But he walked all game. {{saved}}He saved exactly one sprint. {{last}}One defender left. {{self}}Pass to himself. ||0.5|| {{goal}}Two, three.",
       "sfx": [
         {
           "name": "heartbeat",
-          "at": 0.951,
+          "cue": "last",
+          "offset": 0,
           "volume": 0.5
         },
         {
           "name": "kick",
-          "at": 1.701,
+          "cue": "self",
+          "offset": -0.05,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "goal",
+          "offset": -0.5,
           "volume": 0.4
         },
         {
           "name": "net",
-          "at": 2.56,
+          "cue": "goal",
+          "offset": -0.02,
           "volume": 0.45
         },
         {
           "name": "impact-bass-1",
-          "at": 2.51,
+          "cue": "goal",
+          "offset": -0.02,
           "volume": 0.4
         }
       ]
     },
     {
       "id": "s9-shirt",
-      "text": "And he shows his shirt to the Bernabéu. ||0.4|| {{y17}}He did exactly that in {2017|twenty seventeen}. {{same}}Same score.",
+      "text": "He shows his shirt to the Bernabéu. ||0.3|| {{y17}}He did exactly that in {2017|twenty seventeen}. {{same}}Same score.",
       "sfx": []
     },
     {
@@ -163,13 +208,9 @@
           "name": "whistle",
           "at": 0.1,
           "volume": 0.35
-        },
-        {
-          "name": "ding",
-          "at": 1.282,
-          "volume": 0.25
         }
       ]
     }
-  ]
+  ],
+  "world": true
 }

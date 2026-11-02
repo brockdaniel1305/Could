@@ -5,6 +5,15 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-02 · S2E01 · **Neuer Animationsstil ab Staffel 2: 2D-Figuren vor einem echten 3D-Hintergrund** (Referenz: Cartoon mit
+  gemalten 3D-Kulissen). Der Creator: "sieht deutlich besser aus". Unsere SVG-Figuren bleiben unverändert, die Welt dahinter ist Three.js
+  (Stadion mit Tribünen, Fans, Flutlicht), die Kamera fährt durch den Raum, Hintergrund mit Tiefenunschärfe. Technik: `tools/world3d/`.
+- 2026-11-02 · S2E01 · **Roter Faden + flüssige Kamera statt Schnittfolge.** Der Creator vermisste in v1 den roten Faden und Abwechslung
+  in der Kameraführung, v1 wirkte "abgeschnitten". Deshalb: eine durchgehende Welt, Szenen als Problem → Lösung → neues Problem,
+  ein Callback im Finale (Pass zu sich selbst), Kamerafahrten (Kran, Tracking, Ball-Verfolgung, Orbit, Push-in) mit weichen Übergängen,
+  harte Wischer nur bei Szenenwechseln. Ruhig länger (~70 s), wenn es dafür logisch und flüssig ist.
+- 2026-11-02 · S2E01 · Gags müssen im Spiel logisch sein: "Doppelpass mit der Bande" und "Schuhe binden, während Real trifft" fand
+  der Creator unlogisch. Besser: echte Fußball-Mechanik überspitzen (Pass zu sich selbst, Ecke 10 gegen 1, keine Ersatzbank).
 - 2026-11-02 · S2E01 · **Staffel 2 = "volle" Folgen nach Vorbild eines 400k-Like-Videos**: Textschläge "A" / "VS B" in den ersten 2 s,
   Live-Spielbericht (jeder Satz ein Ereignis, alle 1,5–2 s etwas Neues, mehrere Wendungen), volle Bilder (Tribünen mit tausenden Fans,
   Welle, Fahnen, Blitzlichter, ganze Teams mit Nummernschildern, Banden, Konfetti), 2–4 Einstellungen pro Szene (Totale, Nah, Draufsicht,
@@ -155,3 +164,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   Für Wiederholungen immer `Math.max(0, Math.floor(D / cycle) - 1)` verwenden (sonst Lint-Warnung oder Endlosschleife).
 - Text im Cartoon mindestens 28 px, Deko-Text bekommt `data-layout-ignore`.
 - Lange Untertitel-Gruppen brechen auf zwei Zeilen um und überdecken die Bühne: maximal 4 Wörter oder 22 Zeichen.
+- **3D-Welt (`tools/world3d/`, ab S2E01):** `narration.json` `"world": true` → `build_episode.py` lädt `world/world.html` statt der
+  Szenen-Kompositionen. Die Folge hat `world/build.py` (Sprites aus dem Kit) und `world/director.js` (die komplette Handlung als reine
+  Funktion der Zeit: Pfade `[t, x, z, ease]` – `"j"` = Sprung ohne Gleiten –, Ball-Segmente, Kamera-Shots mit `blend`/`whip`, Overlays,
+  Sprechblasen). Zeiten immer aus den Cues (`c("s3.press")`). Positionen prüfen ohne Render: `node dbg.mjs <ep> <t>`.
+  Render dauert ca. 35–40 s pro Videosekunde (Software-GPU), also erst Snapshots, dann einmal komplett rendern.

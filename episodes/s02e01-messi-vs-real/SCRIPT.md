@@ -1,33 +1,17 @@
-# S2E01 · Could prime Messi beat Real Madrid on his own?  — pilot for the "full" style
+# S2E01 v2 · Could prime Messi beat Real Madrid on his own?
 
-Status: ✅ approved 02.11.2026 (Season 2, Episode 1).
-Length ~45 s · voice Adam · loop. New: live match report (one event per sentence), full stadium (crowd, both teams, referee,
-ad boards), 2–4 camera shots per scene, broadcast graphic **RMA 0–0 MES · 1'** + Messi's **stamina bar**, full-time stats board,
-"Most liked comment decides the next case". Same cartoon style as before (flat, boil, cards, LIVE RECONSTRUCTION).
+Stil: 2D-Figuren in einem 3D-Bernabéu (tools/world3d), eine durchgehende Kamera. Roter Faden: Allein spielen hat drei Probleme
+(keine Mitspieler, kein Torwart, Ausdauer), Messi löst eins nach dem anderen, das Finale zahlt alle drei aus. ~72 s, Loop.
 
-| Time | Narrator | Shot / picture |
+| # | Erzähler | Bild / Kamera |
 |---|---|---|
-| 0.0 | — | **Text slam 1:** "PRIME MESSI" over a moving close-up: Messi juggles, flashbulbs, the crowd waves |
-| 0.8 | — | **Text slam 2:** "VS 11 REAL MADRID". Hard cut to a wide shot: 11 white shirts in a line, Messi alone in front |
-| 0.0–2.6 | *Could prime Messi beat Real Madrid on his own?* | (under both slams) |
-| ~3 | *The Bernabéu. Around eighty thousand Madrid fans.* | Wide shot of the packed stands (thousands of fans, flags, a Mexican wave), floodlights. Graphic RMA 0–0 MES · 1' |
-| ~5 | *Eleven Real Madrid players. And Messi. Alone.* | Pan along the 11 with name tags over their heads → zoom onto Messi; card **CLÁSICO GOALS: 26 (most ever)** |
-| ~8 | *Kick-off. Real press with all eleven.* | Whistle; top-down shot: 11 white dots close in around Messi |
-| ~10 | *He has no one to pass to. So he plays a one-two with the advertising board.* | Close-up of the ad board → the ball bounces back, Messi is through. "???" over the defenders' heads |
-| ~14 | *Real counter. Nobody in Messi's goal.* | Wide shot: empty Barça goal, the ball rolls in slowly. **RMA 1–0** · 12', the crowd jumps |
-| ~17 | *Messi takes the ball on halfway. Past ten outfield players. Past the keeper.* | Camera follows the dribble from the side; 10 defenders spin round dizzy one after another (stars), the keeper slides past |
-| ~21 | *One–one.* | Net bulges, the crowd goes silent (frozen), **1–1** · 34' |
-| ~22 | *A foul on the edge of the box. Free kick. Top corner.* | Low angle behind the wall, dotted trajectory into the top corner. **1–2** · 61' |
-| ~26 | *Minute eighty-nine. Messi stops to tie his laces.* | Close-up of the boot; the stamina bar is almost empty; in the background Real score: **2–2** · 89' |
-| ~30 | *Minute ninety-two. Last attack.* | Clock running, a heartbeat, a slow-motion shot on goal |
-| ~32 | *Two–three.* | Goal! Confetti, **2–3** · 92' |
-| ~33 | *And he shows his shirt to the Bernabéu. … He did exactly that in twenty seventeen. Same score.* | Messi holds up his shirt ("MESSI 10", no badge) to the silent stands; card **23 APR 2017 · 2–3 · 92'** |
-| ~38 | *Full time. … Most liked comment decides the next case. So if anyone asks you:* | **Full-time board:** PLAYERS 11 v 1 · GOALS 2–3 · ONE-TWOS WITH AN AD BOARD 1 · LACES TIED 1 · SHIRTS SHOWN 1. Card **MOST LIKED COMMENT DECIDES THE NEXT CASE ↓**. Last frame = first frame (Messi juggling) → loop |
-
-**Caption (draft):** Could prime Messi beat Real Madrid on his own? 11 v 1 at the Bernabéu. ⚽🐐 #could #messi #realmadrid #elclasico #barcelona #football #shorts #fyp
-
-## Facts
-- Messi: 26 Clásico goals, the record (Di Stéfano and Ronaldo 18 each): fcbarcelona.com/en/news/1527056
-- 23 Apr 2017: Real 2–3 Barça at the Bernabéu, Messi winner in the 92nd minute (his 500th Barça goal), shirt celebration: cbssports.com (El Clasico 2017)
-- Bernabéu: "around eighty thousand" (capacity after renovation ~80,000, estimated)
-- The match itself is fiction (marked as a reconstruction); only the 2017 parallel is real.
+| 1 Hook | Could prime Messi beat Real Madrid on his own? | „PRIME MESSI“, Messi jongliert, Kamera zieht zurück: „vs. REAL MADRID“, 11 in einer Reihe |
+| 2 Lage | The Bernabéu. 80,000 fans. Real: eleven. Messi: one. No team-mates. No goalkeeper. | Kran über die Tribüne, Fahrt an den 11 entlang bis Messi, Wischer zum leeren Tor (Steppenläufer) |
+| 3 Problem 1 | Kick-off. Real press with all eleven … passes to himself. He's through. | Draufsicht: Ring um Messi, Kamera im Ring, ✕ über allen, „FREE ✓“ über Messi, Ball links vorbei, Messi rechts herum |
+| 4 Problem 2 | Saved. Nobody is in his goal. Real score from fifty metres. Nil, one. | Torwart-Sicht, Abschlag mit dem Ball, über die Schulter von #7 aufs leere Tor, Verfolgerkamera hinter dem Ball |
+| 5 Lösung | So Messi stops passing … past ten … past the keeper. One, one. | Tracking neben dem Solo, zehn Verteidiger drehen sich und fallen, Stadion verstummt |
+| 6 Problem 3 | One man covers the pitch. Stamina drops. He walks. Real stop marking … sprint, foul, free kick, top corner. One, two. | Hohe Totale, Ausdauerbalken, „Walks. A lot.“, zzz, Sprint, Foul, Freistoß hinter dem Ball mit Push-in |
+| 7 Krise | 89'. Three fresh subs. Messi has no bench. Corner … mark exactly one. Two, two. | Seitenlinie mit Tafel, leere Bank + Steppenläufer, hohe Eckball-Sicht, „MARKED“/„FREE“, Kopfball |
+| 8 Finale | 92'. Stamina 3 %. He walked all game, saved one sprint. One defender left. Pass to himself. Two, three. | Push-in aufs Gesicht, großer Ausdauerbalken + „1 SPRINT“, Zeitlupen-Tracking, Callback, GOAL!!! |
+| 9 Auflösung | He shows his shirt … 2017 … Same score. | Orbit um Messi mit Trikot vor der Tribüne, Karte 23 April 2017, Fan mit Herz-Schild (Like) |
+| 10 Ende | Full time. Most liked comment decides the next case. So if anyone asks you: | Abpfiff-Tafel, Kran hoch, Sturzflug zurück aufs Eröffnungsbild (Loop) |
