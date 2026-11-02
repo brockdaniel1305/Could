@@ -98,7 +98,7 @@ export default function plot(T) {
       const kb = [[9, -3.4], [17, -4.5], [13, -6.5], [22, -2.5], [8, -6], [24, -6], [16, -9], [12, -10], [27, -4], [20, -11]][i - 1];
       p.push([S6SET, kb[0] + 8, kb[1], "j"], [c("s6.walk"), kb[0], kb[1], "s"]);
       if (c("s6.bored") && [3, 4, 6, 7].includes(i)) p.push([c("s6.bored") + 0.1, kb[0], kb[1]], [SPRINT, kb[0] + (kb[0] > 15 ? 3 : -3), kb[1] * 1.6, "s"]);
-      if (i === 2) p.push([SPRINT + 0.2, 31.5, 3.6], [FOUL - 0.1, 28.6, 1.0, "o"]);   // the slide tackle
+      if (i === 2) p.push([SPRINT + 0.2, 31.5, 3.6], [FOUL - 0.1, 28.6, 1.0, "o"], [FKSET, 34, 7.5, "j"]);   // the slide tackle
       if (i >= 3 && i <= 6) p.push([FKSET, WALL[i - 3][0], WALL[i - 3][1], "j"]);
       if (i === 2) ev.push(["fall", FOUL - 0.2, 0.3, -1], ["up", FKSET]);
       if (i >= 3 && i <= 6) ev.push(["jump", FK + 0.05, 0.5]);

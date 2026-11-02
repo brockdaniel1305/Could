@@ -358,6 +358,8 @@ def main():
 
     hosts = []
     if cfg.get("world"):
+        # always rebuild the world layer from the timing.json written above (stale timings = picture out of sync with the voice)
+        subprocess.run([sys.executable, str(ep / "world/build.py")], check=True)
         hosts.append((ep / "world/world.html").read_text())
     for i, s in enumerate([] if cfg.get("world") else scenes):
         hosts.append(f'      <div id="{s["id"]}" data-composition-id="{s["id"]}" data-composition-src="compositions/{s["id"]}.html" '
