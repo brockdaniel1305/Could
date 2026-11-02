@@ -9,7 +9,7 @@
   "voice": "fable",
   "model": "tts-1",
   "preview_voice": "am_adam",
-  "speed": 1.1,
+  "speed": 1.05,
   "caption": "Could prime Messi beat Real Madrid on his own? 11 v 1 at the Bernabéu. ⚽🐐 #could #messi #realmadrid #elclasico #barcelona #football #shorts #fyp",
   "scenes": [
     {
@@ -25,12 +25,12 @@
     },
     {
       "id": "s2-setup",
-      "text": "The Bernabéu. {{fans}}Eighty thousand Madrid fans. {{eleven}}Real Madrid: eleven players. {{messi}}Messi: one. {{nomates}}No team-mates. {{nokeeper}}No goalkeeper.",
+      "text": "The Bernabéu. ||0.14|| {{fans}}Eighty thousand Madrid fans. ||0.17|| {{eleven}}Real Madrid: eleven players. ||0.17|| {{messi}}Messi: one. ||0.19|| {{nomates}}No team-mates. ||0.14|| {{nokeeper}}No goalkeeper.",
       "sfx": []
     },
     {
       "id": "s3-kickoff",
-      "text": "Kick-off. {{press}}Real press with all eleven. {{none}}Messi has no one to pass to. {{self}}So he passes to the only player who is always free: {{himself}}himself. {{through}}He's through.",
+      "text": "Kick-off. ||0.14|| {{press}}All eleven press. ||0.17|| {{none}}Nobody to pass to. ||0.19|| {{self}}So he passes to the one player who's always free. ||0.25|| {{himself}}Himself. ||0.17|| {{through}}He's through.",
       "sfx": [
         {
           "name": "whistle",
@@ -53,7 +53,7 @@
     },
     {
       "id": "s4-counter",
-      "text": "Saved. {{counter}}And while he is up front, {{empty}}nobody is in his goal. {{fifty}}Real score from fifty metres. ||0.2|| {{nil}}Nil, one.",
+      "text": "Saved. ||0.17|| {{counter}}Real counter. ||0.14|| {{empty}}Messi's goal is empty. ||0.17|| {{fifty}}Real score from fifty metres. ||0.19|| {{nil}}Nil, one.",
       "sfx": [
         {
           "name": "kick",
@@ -83,7 +83,7 @@
     },
     {
       "id": "s5-solo",
-      "text": "So Messi stops passing. {{half}}He takes the ball on halfway. {{past}}Past ten outfield players. {{keeper}}Past the keeper. ||0.3|| {{one}}One, one.",
+      "text": "So Messi stops passing. ||0.19|| {{half}}Ball on halfway. ||0.14|| {{past}}Past ten players. ||0.14|| {{keeper}}Past the keeper. ||0.22|| {{one}}One, one.",
       "sfx": [
         {
           "name": "net",
@@ -101,7 +101,7 @@
     },
     {
       "id": "s6-walk",
-      "text": "But one man has to cover the whole pitch. {{stam}}His stamina drops. {{walk}}So he does what prime Messi always did. {{walks}}He walks. {{bored}}Real stop marking a walking man. {{sprint}}One sprint. {{foul}}Foul. {{fk}}Free kick. ||0.3|| {{top}}Top corner. {{onetwo}}One, two.",
+      "text": "But he's alone on a huge pitch. ||0.14|| {{stam}}His stamina drops. ||0.19|| {{walk}}So he does what prime Messi always did. ||0.19|| {{walks}}He walks. ||0.19|| {{bored}}Real stop marking him. ||0.19|| {{sprint}}One sprint. ||0.14|| {{foul}}Foul. ||0.14|| {{fk}}Free kick. ||0.25|| {{top}}Top corner. ||0.19|| {{onetwo}}One, two.",
       "sfx": [
         {
           "name": "whistle",
@@ -131,7 +131,7 @@
     },
     {
       "id": "s7-corner",
-      "text": "Minute eighty nine. {{subs}}Real bring on three fresh substitutes. {{bench}}Messi has no bench. {{corner}}Corner. {{box}}Real send everyone into the box. {{mark}}Messi can mark exactly one of them. ||0.3|| {{two}}Two, two.",
+      "text": "Minute eighty nine. ||0.17|| {{subs}}Real bring on three fresh players. ||0.19|| {{bench}}Messi has no bench. ||0.19|| {{corner}}Corner. ||0.14|| {{box}}Everyone goes forward. ||0.19|| {{mark}}Messi can mark one of them. ||0.25|| {{two}}Two, two.",
       "sfx": [
         {
           "name": "kick",
@@ -161,7 +161,7 @@
     },
     {
       "id": "s8-last",
-      "text": "Minute ninety two. {{three}}Stamina: three percent. {{walked}}But he walked all game. {{saved}}He saved exactly one sprint. {{last}}One defender left. {{self}}Pass to himself. ||0.5|| {{goal}}Two, three.",
+      "text": "Minute ninety two. ||0.17|| {{three}}Stamina: three percent. ||0.19|| {{walked}}But he walked all game. ||0.17|| {{saved}}He saved one sprint. ||0.25|| {{last}}One defender left. ||0.19|| {{self}}Pass to himself. ||0.28|| {{goal}}Two, three.",
       "sfx": [
         {
           "name": "heartbeat",
@@ -197,12 +197,12 @@
     },
     {
       "id": "s9-shirt",
-      "text": "He shows his shirt to the Bernabéu. ||0.3|| {{y17}}He did exactly that in {2017|twenty seventeen}. {{same}}Same score.",
+      "text": "He shows his shirt to the Bernabéu. ||0.19|| {{y17}}Just like in {2017|twenty seventeen}. ||0.19|| {{same}}Same score.",
       "sfx": []
     },
     {
       "id": "s10-ft",
-      "text": "Full time. ||0.3|| {{mlc}}Most liked comment decides the next case. {{loop}}So if anyone asks you:",
+      "text": "Full time. ||0.19|| {{mlc}}Most liked comment decides the next case. ||0.19|| {{loop}}So if anyone asks you:",
       "sfx": [
         {
           "name": "whistle",

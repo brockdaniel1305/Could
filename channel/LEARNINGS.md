@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-02 · S2E01 · **Sprecher nicht zu schnell, nie ohne Pause.** v2 (Tempo 1.1, ~3,4 Wörter/s, lange Sätze am Stück) klang stellenweise
+  undeutlich. Vorbild ist die United-Folge (010): kurze Satzstücke, zwischen den Sätzen `||0.15–0.25||`, Tempo ~1.05, Ziel ~2,5 Wörter/s.
+  Lieber Füllwörter streichen als schneller sprechen.
 - 2026-11-02 · S2E01 · **Neuer Animationsstil ab Staffel 2: 2D-Figuren vor einem echten 3D-Hintergrund** (Referenz: Cartoon mit
   gemalten 3D-Kulissen). Der Creator: "sieht deutlich besser aus". Unsere SVG-Figuren bleiben unverändert, die Welt dahinter ist Three.js
   (Stadion mit Tribünen, Fans, Flutlicht), die Kamera fährt durch den Raum, Hintergrund mit Tiefenunschärfe. Technik: `tools/world3d/`.
