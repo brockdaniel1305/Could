@@ -5,6 +5,10 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-02 · S2E01 · **3D-Folgen künftig 40–50 s**, eine Wendung weniger als S2E01 (78 s hielt absolut länger, aber nur 27 % des Videos).
+  Lieber ein Gag weniger als schneller sprechen.
+- 2026-11-02 · S2E01 · **Follow-Aufruf gehört in die Handlung**, nicht nur Likes/Kommentare (S2E01: 0 neue Follower). Als Gag zum Thema,
+  z. B. "Follow, or Messi just walks." kurz vor dem Loop-Satz, mit sichtbarem Follow-Element im Bild.
 - 2026-11-02 · S2E01 · **Aussprache von Namen prüfen.** Kokoro sagt "Real" englisch ("riel"). Lösung über `{shown|spoken}`:
   `{Real|Ray-ahl} Madrid`, `{Bernabéu|Bernabay-oo}`. Bei spanischen/französischen Namen immer eine Lautschrift-Schreibweise setzen.
 - 2026-11-02 · S2E01 · **Sprecher nicht zu schnell, nie ohne Pause.** v2 (Tempo 1.1, ~3,4 Wörter/s, lange Sätze am Stück) klang stellenweise
