@@ -1,0 +1,211 @@
+{
+  "id": "S2E01S",
+  "title": "Could prime Messi beat Real Madrid on his own? (Short)",
+  "season": 2,
+  "episode": 1,
+  "format": "short",
+  "loop": true,
+  "provider": "voicestudio",
+  "voice": "fable",
+  "model": "tts-1",
+  "preview_voice": "am_adam",
+  "speed": 1.05,
+  "caption": "Could prime Messi beat Real Madrid on his own? 11 v 1 at the Bernabéu. ⚽🐐 #could #messi #realmadrid #elclasico #football #shorts #fyp",
+  "world": true,
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "text": "Could prime Messi beat {Real|Ray-ahl} Madrid on his own?",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "at": 0.0,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s2-setup",
+      "text": "{{eleven}}Eleven against {{messi}}one. ||0.17|| {{nomates}}No team-mates. ||0.14|| {{nokeeper}}No goalkeeper.",
+      "sfx": []
+    },
+    {
+      "id": "s3-kickoff",
+      "text": "Kick-off. ||0.14|| {{press}}All eleven press. ||0.17|| {{none}}So he passes {{self}}to the one player who's always free. ||0.3|| {{himself}}Himself. {{through}}",
+      "tail": 1.4,
+      "sfx": [
+        {
+          "name": "whistle",
+          "at": 0.05,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "himself",
+          "offset": -0.1,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "through",
+          "offset": 0.95,
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s4-counter",
+      "text": "{{counter}}But his goal {{empty}}is empty. ||0.17|| {{fifty}}{Real|Ray-ahl} score from fifty metres. ||0.19|| {{nil}}Nil, one.",
+      "sfx": [
+        {
+          "name": "kick",
+          "cue": "counter",
+          "offset": 0.3,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "fifty",
+          "offset": 0.15,
+          "volume": 0.35
+        },
+        {
+          "name": "net",
+          "cue": "fifty",
+          "offset": 1.55,
+          "volume": 0.4
+        },
+        {
+          "name": "impact-bass-1",
+          "cue": "fifty",
+          "offset": 1.55,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s5-solo",
+      "text": "{{half}}So Messi stops passing. ||0.19|| Past ten players. ||0.14|| {{keeper}}Past the keeper. ||0.5|| {{one}}One, one.",
+      "sfx": [
+        {
+          "name": "net",
+          "cue": "one",
+          "offset": -0.05,
+          "volume": 0.4
+        },
+        {
+          "name": "impact-bass-1",
+          "cue": "one",
+          "offset": -0.05,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s6-walk",
+      "text": "{{stam}}His stamina drops. ||0.19|| {{walk}}So he {{walks}}walks. ||0.19|| {{bored}}{Real|Ray-ahl} stop marking him. ||0.19|| {{sprint}}One sprint. ||0.5|| {{fk}}Free kick. ||0.25|| {{top}}Top corner. ||0.19|| {{onetwo}}One, two.",
+      "sfx": [
+        {
+          "name": "whistle",
+          "cue": "fk",
+          "offset": -0.35,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "top",
+          "offset": -0.45,
+          "volume": 0.4
+        },
+        {
+          "name": "net",
+          "cue": "top",
+          "offset": 0.3,
+          "volume": 0.45
+        },
+        {
+          "name": "impact-bass-1",
+          "cue": "top",
+          "offset": 0.3,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s7-corner",
+      "text": "Minute eighty nine. ||0.17|| {{corner}}Corner. ||0.3|| {{mark}}Messi can mark one of them. ||0.25|| {{two}}Two, two.",
+      "sfx": [
+        {
+          "name": "kick",
+          "cue": "two",
+          "offset": -1.0,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "two",
+          "offset": -0.4,
+          "volume": 0.25
+        },
+        {
+          "name": "net",
+          "cue": "two",
+          "offset": -0.1,
+          "volume": 0.4
+        },
+        {
+          "name": "impact-bass-1",
+          "cue": "two",
+          "offset": -0.1,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s8-last",
+      "text": "Minute ninety two. ||0.17|| {{three}}He saved one sprint. ||0.25|| {{self}}Pass to himself. ||0.5|| {{goal}}Two, three.",
+      "sfx": [
+        {
+          "name": "heartbeat",
+          "cue": "three",
+          "offset": 0.3,
+          "volume": 0.5
+        },
+        {
+          "name": "kick",
+          "cue": "self",
+          "offset": -0.05,
+          "volume": 0.3
+        },
+        {
+          "name": "kick",
+          "cue": "goal",
+          "offset": -0.5,
+          "volume": 0.4
+        },
+        {
+          "name": "net",
+          "cue": "goal",
+          "offset": -0.02,
+          "volume": 0.45
+        },
+        {
+          "name": "impact-bass-1",
+          "cue": "goal",
+          "offset": -0.02,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s9-shirt",
+      "text": "{{y17}}Just like {2017|twenty seventeen}. ||0.19|| {{same}}Same score.",
+      "sfx": []
+    },
+    {
+      "id": "s10-ft",
+      "text": "{{follow}}Follow, or Messi just walks. ||0.3|| {{loop}}So if anyone asks you:",
+      "sfx": []
+    }
+  ]
+}

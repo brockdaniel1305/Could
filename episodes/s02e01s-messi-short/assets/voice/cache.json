@@ -1,0 +1,727 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "21c2ab514e88fe0ac2e698556dfe83d830b4fbcd",
+  "words": [
+   {
+    "text": "could",
+    "start": 0,
+    "end": 0.342
+   },
+   {
+    "text": "Prime",
+    "start": 0.342,
+    "end": 0.684
+   },
+   {
+    "text": "Messi",
+    "start": 0.684,
+    "end": 1.026
+   },
+   {
+    "text": "beat",
+    "start": 1.026,
+    "end": 1.3
+   },
+   {
+    "text": "Real",
+    "start": 1.3,
+    "end": 1.574
+   },
+   {
+    "text": "Madrid",
+    "start": 1.574,
+    "end": 1.984
+   },
+   {
+    "text": "on",
+    "start": 1.984,
+    "end": 2.121
+   },
+   {
+    "text": "his",
+    "start": 2.121,
+    "end": 2.326
+   },
+   {
+    "text": "own?",
+    "start": 2.326,
+    "end": 2.6
+   }
+  ]
+ },
+ "s2-setup.part0.wav": {
+  "key": "b380443de0db157259f86bc2171db9ecf301a93e",
+  "words": [
+   {
+    "text": "11",
+    "start": 0,
+    "end": 0.225
+   },
+   {
+    "text": "against",
+    "start": 0.225,
+    "end": 1.015
+   },
+   {
+    "text": "1.",
+    "start": 1.015,
+    "end": 1.24
+   }
+  ]
+ },
+ "s2-setup.part1.wav": {
+  "key": "0ed735f0bdda0ee5281d0aa50e7b6cdfa2d5d67b",
+  "words": [
+   {
+    "text": "No",
+    "start": 0,
+    "end": 0.16
+   },
+   {
+    "text": "teammates.",
+    "start": 0.16,
+    "end": 0.96
+   }
+  ]
+ },
+ "s2-setup.part2.wav": {
+  "key": "2e43741cc5a6e3c8a539693d3f7564a259be5a2f",
+  "words": [
+   {
+    "text": "No",
+    "start": 0,
+    "end": 0.167
+   },
+   {
+    "text": "Goalkeeper",
+    "start": 0.167,
+    "end": 1
+   }
+  ]
+ },
+ "s3-kickoff.part0.wav": {
+  "key": "0ea34dfb82e79566fc3038b8fc68e2c1f192be9a",
+  "words": [
+   {
+    "text": "kick",
+    "start": 0,
+    "end": 0.32
+   },
+   {
+    "text": "off.",
+    "start": 0.32,
+    "end": 0.64
+   }
+  ]
+ },
+ "s3-kickoff.part1.wav": {
+  "key": "c7ae87ca84bc577bed317c169ad5ebe996fee93f",
+  "words": [
+   {
+    "text": "All",
+    "start": 0,
+    "end": 0.305
+   },
+   {
+    "text": "11",
+    "start": 0.305,
+    "end": 0.509
+   },
+   {
+    "text": "press.",
+    "start": 0.509,
+    "end": 1.12
+   }
+  ]
+ },
+ "s3-kickoff.part2.wav": {
+  "key": "6ee13a812b9d92a5b52ce3b16e68d0f5294c871f",
+  "words": [
+   {
+    "text": "so",
+    "start": 0,
+    "end": 0.124
+   },
+   {
+    "text": "he",
+    "start": 0.124,
+    "end": 0.248
+   },
+   {
+    "text": "passes",
+    "start": 0.248,
+    "end": 0.62
+   },
+   {
+    "text": "to",
+    "start": 0.62,
+    "end": 0.744
+   },
+   {
+    "text": "the",
+    "start": 0.744,
+    "end": 0.93
+   },
+   {
+    "text": "one",
+    "start": 0.93,
+    "end": 1.116
+   },
+   {
+    "text": "player",
+    "start": 1.116,
+    "end": 1.488
+   },
+   {
+    "text": "who's",
+    "start": 1.488,
+    "end": 1.798
+   },
+   {
+    "text": "always",
+    "start": 1.798,
+    "end": 2.17
+   },
+   {
+    "text": "free.",
+    "start": 2.17,
+    "end": 2.48
+   }
+  ]
+ },
+ "s3-kickoff.part3.wav": {
+  "key": "f478f2dc95e831d3d5e3f52dabafff89afccbcf1",
+  "words": [
+   {
+    "text": "himself.",
+    "start": 0,
+    "end": 0.64
+   }
+  ]
+ },
+ "s4-counter.part0.wav": {
+  "key": "13700447518898c1164b62d69346dd45ba91f287",
+  "words": [
+   {
+    "text": "but",
+    "start": 0,
+    "end": 0.21
+   },
+   {
+    "text": "his",
+    "start": 0.21,
+    "end": 0.42
+   },
+   {
+    "text": "goal",
+    "start": 0.42,
+    "end": 0.7
+   },
+   {
+    "text": "is",
+    "start": 0.7,
+    "end": 0.84
+   },
+   {
+    "text": "empty.",
+    "start": 0.84,
+    "end": 1.26
+   }
+  ]
+ },
+ "s4-counter.part1.wav": {
+  "key": "7e0826e700ad68f7b4ddd5b2b2a7e1e4093a576e",
+  "words": [
+   {
+    "text": "Rayal",
+    "start": 0,
+    "end": 0.506
+   },
+   {
+    "text": "score",
+    "start": 0.506,
+    "end": 1.011
+   },
+   {
+    "text": "from",
+    "start": 1.011,
+    "end": 1.416
+   },
+   {
+    "text": "50m.",
+    "start": 1.416,
+    "end": 1.82
+   }
+  ]
+ },
+ "s4-counter.part2.wav": {
+  "key": "0e3855194f60d38920308926a24181d8bbafb4e1",
+  "words": [
+   {
+    "text": "nil",
+    "start": 0,
+    "end": 0.3
+   },
+   {
+    "text": "want",
+    "start": 0.3,
+    "end": 0.7
+   }
+  ]
+ },
+ "s5-solo.part0.wav": {
+  "key": "2b0c87569d9056b76e833c5f905d5c450697bc1e",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.144
+   },
+   {
+    "text": "Messi",
+    "start": 0.144,
+    "end": 0.504
+   },
+   {
+    "text": "stops",
+    "start": 0.504,
+    "end": 0.864
+   },
+   {
+    "text": "passing.",
+    "start": 0.864,
+    "end": 1.44
+   }
+  ]
+ },
+ "s5-solo.part1.wav": {
+  "key": "119f893312eb87a8ac21b58080bc10e556054eb6",
+  "words": [
+   {
+    "text": "Past",
+    "start": 0,
+    "end": 0.314
+   },
+   {
+    "text": "10",
+    "start": 0.314,
+    "end": 0.471
+   },
+   {
+    "text": "players.",
+    "start": 0.471,
+    "end": 1.1
+   }
+  ]
+ },
+ "s5-solo.part2.wav": {
+  "key": "ed0d0c8dba8432ad399d97a4235713352926129b",
+  "words": [
+   {
+    "text": "Pass",
+    "start": 0,
+    "end": 0.263
+   },
+   {
+    "text": "the",
+    "start": 0.263,
+    "end": 0.46
+   },
+   {
+    "text": "keeper.",
+    "start": 0.46,
+    "end": 0.92
+   }
+  ]
+ },
+ "s5-solo.part3.wav": {
+  "key": "b0ab3beb0a2ce6c3d56a2c28021c0b9e0fce5fc4",
+  "words": [
+   {
+    "text": "1-1",
+    "start": 0,
+    "end": 0.7
+   }
+  ]
+ },
+ "s6-walk.part0.wav": {
+  "key": "8bc83593f3b74c4cd0d1828e1d4dfa2d5bdbe1f6",
+  "words": [
+   {
+    "text": "His",
+    "start": 0,
+    "end": 0.217
+   },
+   {
+    "text": "stamina",
+    "start": 0.217,
+    "end": 0.725
+   },
+   {
+    "text": "drops.",
+    "start": 0.725,
+    "end": 1.16
+   }
+  ]
+ },
+ "s6-walk.part1.wav": {
+  "key": "bb6698036a935e324d740c55a225fd81a260df52",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.2
+   },
+   {
+    "text": "he",
+    "start": 0.2,
+    "end": 0.4
+   },
+   {
+    "text": "walks.",
+    "start": 0.4,
+    "end": 1
+   }
+  ]
+ },
+ "s6-walk.part2.wav": {
+  "key": "fc89e9295ac42aa49e442b126e2dea752719a0c6",
+  "words": [
+   {
+    "text": "Ray",
+    "start": 0,
+    "end": 0.199
+   },
+   {
+    "text": "I'll",
+    "start": 0.199,
+    "end": 0.465
+   },
+   {
+    "text": "stop",
+    "start": 0.465,
+    "end": 0.73
+   },
+   {
+    "text": "marking",
+    "start": 0.73,
+    "end": 1.195
+   },
+   {
+    "text": "him.",
+    "start": 1.195,
+    "end": 1.46
+   }
+  ]
+ },
+ "s6-walk.part3.wav": {
+  "key": "cfbe8e7ef3bf3135c1161a37cf3c35ceb51a4fe8",
+  "words": [
+   {
+    "text": "One",
+    "start": 0,
+    "end": 0.6
+   },
+   {
+    "text": "Sprint.",
+    "start": 0.6,
+    "end": 2
+   }
+  ]
+ },
+ "s6-walk.part4.wav": {
+  "key": "59762479fd24e36a15b170b647890b10eb3aa470",
+  "words": [
+   {
+    "text": "Free",
+    "start": 0,
+    "end": 0.32
+   },
+   {
+    "text": "kick.",
+    "start": 0.32,
+    "end": 0.72
+   }
+  ]
+ },
+ "s6-walk.part5.wav": {
+  "key": "a28eb0615e5de602729c81009ec35c170889112a",
+  "words": [
+   {
+    "text": "Top",
+    "start": 0,
+    "end": 0.252
+   },
+   {
+    "text": "corner.",
+    "start": 0.252,
+    "end": 0.84
+   }
+  ]
+ },
+ "s6-walk.part6.wav": {
+  "key": "3d9dc17c1835b0e57b0f1448c37f9b3169b9c935",
+  "words": [
+   {
+    "text": "1",
+    "start": 0,
+    "end": 0.24
+   },
+   {
+    "text": "2.",
+    "start": 0.24,
+    "end": 0.72
+   }
+  ]
+ },
+ "s7-corner.part0.wav": {
+  "key": "fe260a715058b03c3341717ee753ec630638ac42",
+  "words": [
+   {
+    "text": "Minute",
+    "start": 0,
+    "end": 0.667
+   },
+   {
+    "text": "89.",
+    "start": 0.667,
+    "end": 1
+   }
+  ]
+ },
+ "s7-corner.part1.wav": {
+  "key": "58c868999478fb631c0730ddb8bf535bb93d03b0",
+  "words": [
+   {
+    "text": "corner.",
+    "start": 0,
+    "end": 0.5
+   }
+  ]
+ },
+ "s7-corner.part2.wav": {
+  "key": "e991e31c2e484802220428faa189c043189d23c6",
+  "words": [
+   {
+    "text": "Messy",
+    "start": 0,
+    "end": 0.3
+   },
+   {
+    "text": "can",
+    "start": 0.3,
+    "end": 0.48
+   },
+   {
+    "text": "mark",
+    "start": 0.48,
+    "end": 0.72
+   },
+   {
+    "text": "one",
+    "start": 0.72,
+    "end": 0.9
+   },
+   {
+    "text": "of",
+    "start": 0.9,
+    "end": 1.02
+   },
+   {
+    "text": "them.",
+    "start": 1.02,
+    "end": 1.32
+   }
+  ]
+ },
+ "s7-corner.part3.wav": {
+  "key": "9b52955c2ff0bfabb07c54d1f515f7c26aa9001d",
+  "words": [
+   {
+    "text": "2-2",
+    "start": 0,
+    "end": 0.76
+   }
+  ]
+ },
+ "s8-last.part0.wav": {
+  "key": "4f32922389edfa66140a6773a63272a8cb71da56",
+  "words": [
+   {
+    "text": "minute",
+    "start": 0,
+    "end": 0.78
+   },
+   {
+    "text": "92",
+    "start": 0.78,
+    "end": 1.04
+   }
+  ]
+ },
+ "s8-last.part1.wav": {
+  "key": "0208522c44ea9e382036458a1bb5fd908d73a2eb",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.146
+   },
+   {
+    "text": "saved",
+    "start": 0.146,
+    "end": 0.511
+   },
+   {
+    "text": "one",
+    "start": 0.511,
+    "end": 0.729
+   },
+   {
+    "text": "sprint.",
+    "start": 0.729,
+    "end": 1.24
+   }
+  ]
+ },
+ "s8-last.part2.wav": {
+  "key": "b64667d64b26b3161bd8df1ef7bde983a571ad8c",
+  "words": [
+   {
+    "text": "pass",
+    "start": 0,
+    "end": 0.286
+   },
+   {
+    "text": "to",
+    "start": 0.286,
+    "end": 0.429
+   },
+   {
+    "text": "himself.",
+    "start": 0.429,
+    "end": 1
+   }
+  ]
+ },
+ "s8-last.part3.wav": {
+  "key": "495336122a716b96c19a5057abf04583eede68cf",
+  "words": [
+   {
+    "text": "to",
+    "start": 0,
+    "end": 0.104
+   },
+   {
+    "text": "the",
+    "start": 0.104,
+    "end": 0.26
+   },
+   {
+    "text": "next",
+    "start": 0.26,
+    "end": 0.468
+   },
+   {
+    "text": "class.",
+    "start": 0.468,
+    "end": 0.78
+   }
+  ]
+ },
+ "s9-shirt.part0.wav": {
+  "key": "5cae989a2390654d6512935bd7cd7b4eb2421ed2",
+  "words": [
+   {
+    "text": "Just",
+    "start": 0,
+    "end": 0.431
+   },
+   {
+    "text": "like",
+    "start": 0.431,
+    "end": 0.862
+   },
+   {
+    "text": "2017.",
+    "start": 0.862,
+    "end": 1.4
+   }
+  ]
+ },
+ "s9-shirt.part1.wav": {
+  "key": "4aeb1cf1f148aee7cebe25940979447de311566f",
+  "words": [
+   {
+    "text": "Same",
+    "start": 0,
+    "end": 0.8
+   },
+   {
+    "text": "score.",
+    "start": 0.8,
+    "end": 2
+   }
+  ]
+ },
+ "s10-ft.part0.wav": {
+  "key": "606e7fe8be4a834d0ed55b8ecdd3d991fd8a8f9e",
+  "words": [
+   {
+    "text": "Follow",
+    "start": 0,
+    "end": 0.417
+   },
+   {
+    "text": "or",
+    "start": 0.417,
+    "end": 0.557
+   },
+   {
+    "text": "messy",
+    "start": 0.557,
+    "end": 0.904
+   },
+   {
+    "text": "just",
+    "start": 0.904,
+    "end": 1.183
+   },
+   {
+    "text": "walks.",
+    "start": 1.183,
+    "end": 1.6
+   }
+  ]
+ },
+ "s10-ft.part1.wav": {
+  "key": "49d63c2fb80269e77f2005f4212ef6ee199a7c05",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.142
+   },
+   {
+    "text": "if",
+    "start": 0.142,
+    "end": 0.284
+   },
+   {
+    "text": "anyone",
+    "start": 0.284,
+    "end": 0.711
+   },
+   {
+    "text": "asks",
+    "start": 0.711,
+    "end": 0.996
+   },
+   {
+    "text": "you.",
+    "start": 0.996,
+    "end": 1.28
+   }
+  ]
+ }
+}
