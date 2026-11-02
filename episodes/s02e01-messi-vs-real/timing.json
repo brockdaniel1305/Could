@@ -1,60 +1,60 @@
 {
- "duration": 71.977,
+ "duration": 77.475,
  "voice": "kokoro:am_adam",
  "scenes": [
   {
    "id": "s1-hook",
    "start": 0.0,
-   "duration": 3.025,
+   "duration": 3.089,
    "voice": "assets/voice/s1-hook.wav",
    "voiceStart": 0.15,
-   "speech": 2.475,
+   "speech": 2.539,
    "cues": {},
    "words": [
     {
      "text": "Could",
      "start": 0.15,
-     "end": 0.471
+     "end": 0.476
     },
     {
      "text": "prime",
-     "start": 0.471,
-     "end": 0.792
+     "start": 0.476,
+     "end": 0.803
     },
     {
      "text": "Messi",
-     "start": 0.792,
-     "end": 1.113
+     "start": 0.803,
+     "end": 1.129
     },
     {
      "text": "beat",
-     "start": 1.113,
-     "end": 1.37
+     "start": 1.129,
+     "end": 1.39
     },
     {
      "text": "Real",
-     "start": 1.37,
-     "end": 1.627
+     "start": 1.39,
+     "end": 1.651
     },
     {
      "text": "Madrid",
-     "start": 1.627,
-     "end": 2.012
+     "start": 1.651,
+     "end": 2.043
     },
     {
      "text": "on",
-     "start": 2.012,
-     "end": 2.141
+     "start": 2.043,
+     "end": 2.173
     },
     {
      "text": "his",
-     "start": 2.141,
-     "end": 2.333
+     "start": 2.173,
+     "end": 2.369
     },
     {
      "text": "own?",
-     "start": 2.333,
-     "end": 2.59
+     "start": 2.369,
+     "end": 2.63
     }
    ],
    "sfx": [
@@ -67,251 +67,221 @@
   },
   {
    "id": "s2-setup",
-   "start": 3.025,
-   "duration": 7.149,
+   "start": 3.089,
+   "duration": 8.845,
    "voice": "assets/voice/s2-setup.wav",
    "voiceStart": 0.15,
-   "speech": 6.599,
+   "speech": 8.295,
    "cues": {
-    "fans": 0.829,
-    "eleven": 2.415,
-    "messi": 3.977,
-    "nomates": 4.758,
-    "nokeeper": 5.695
+    "fans": 1.29,
+    "eleven": 3.081,
+    "messi": 5.171,
+    "nomates": 6.236,
+    "nokeeper": 7.379
    },
    "words": [
     {
      "text": "The",
      "start": 0.15,
-     "end": 0.384
+     "end": 0.38
     },
     {
      "text": "Bernab\u00e9u.",
-     "start": 0.384,
-     "end": 0.829
+     "start": 0.38,
+     "end": 1.15
     },
     {
      "text": "Eighty",
-     "start": 0.829,
-     "end": 1.152
+     "start": 1.29,
+     "end": 1.538
     },
     {
      "text": "thousand",
-     "start": 1.152,
-     "end": 1.556
+     "start": 1.538,
+     "end": 1.848
     },
     {
      "text": "Madrid",
-     "start": 1.556,
-     "end": 2.024
+     "start": 1.848,
+     "end": 2.405
     },
     {
      "text": "fans.",
-     "start": 2.024,
-     "end": 2.415
+     "start": 2.405,
+     "end": 2.87
     },
     {
      "text": "Real",
-     "start": 2.415,
-     "end": 2.727
+     "start": 3.081,
+     "end": 3.435
     },
     {
      "text": "Madrid:",
-     "start": 2.727,
-     "end": 3.196
+     "start": 3.435,
+     "end": 4.055
     },
     {
      "text": "eleven",
-     "start": 3.196,
-     "end": 3.352
+     "start": 4.055,
+     "end": 4.232
     },
     {
      "text": "players.",
-     "start": 3.352,
-     "end": 3.977
+     "start": 4.232,
+     "end": 4.941
     },
     {
      "text": "Messi:",
-     "start": 3.977,
-     "end": 4.445
+     "start": 5.171,
+     "end": 5.671
     },
     {
      "text": "one.",
-     "start": 4.445,
-     "end": 4.758
+     "start": 5.671,
+     "end": 6.046
     },
     {
      "text": "No",
-     "start": 4.758,
-     "end": 4.914
+     "start": 6.236,
+     "end": 6.396
     },
     {
      "text": "team-mates.",
-     "start": 4.914,
-     "end": 5.695
+     "start": 6.396,
+     "end": 7.196
     },
     {
      "text": "No",
-     "start": 5.695,
-     "end": 5.851
+     "start": 7.379,
+     "end": 7.546
     },
     {
      "text": "goalkeeper.",
-     "start": 5.851,
-     "end": 6.71
+     "start": 7.546,
+     "end": 8.379
     }
    ],
    "sfx": []
   },
   {
    "id": "s3-kickoff",
-   "start": 10.174,
-   "duration": 7.988,
+   "start": 11.934,
+   "duration": 8.699,
    "voice": "assets/voice/s3-kickoff.wav",
    "voiceStart": 0.15,
-   "speech": 7.438,
+   "speech": 8.149,
    "cues": {
-    "press": 0.645,
-    "none": 2.095,
-    "self": 3.546,
-    "himself": 6.263,
-    "through": 6.786
+    "press": 0.994,
+    "none": 2.316,
+    "self": 3.743,
+    "himself": 6.593,
+    "through": 7.467
    },
    "words": [
     {
      "text": "Kick-off.",
      "start": 0.15,
-     "end": 0.645
+     "end": 0.854
     },
     {
-     "text": "Real",
-     "start": 0.645,
-     "end": 0.928
+     "text": "All",
+     "start": 0.994,
+     "end": 1.299
     },
     {
-     "text": "press",
-     "start": 0.928,
-     "end": 1.282
+     "text": "eleven",
+     "start": 1.299,
+     "end": 1.503
     },
     {
-     "text": "with",
-     "start": 1.282,
-     "end": 1.565
+     "text": "press.",
+     "start": 1.503,
+     "end": 2.114
     },
     {
-     "text": "all",
-     "start": 1.565,
-     "end": 1.777
-    },
-    {
-     "text": "eleven.",
-     "start": 1.777,
-     "end": 2.095
-    },
-    {
-     "text": "Messi",
-     "start": 2.095,
-     "end": 2.343
-    },
-    {
-     "text": "has",
-     "start": 2.343,
-     "end": 2.555
-    },
-    {
-     "text": "no",
-     "start": 2.555,
-     "end": 2.697
-    },
-    {
-     "text": "one",
-     "start": 2.697,
-     "end": 2.909
+     "text": "Nobody",
+     "start": 2.316,
+     "end": 2.796
     },
     {
      "text": "to",
-     "start": 2.909,
-     "end": 3.051
+     "start": 2.796,
+     "end": 2.956
     },
     {
      "text": "pass",
-     "start": 3.051,
-     "end": 3.334
+     "start": 2.956,
+     "end": 3.276
     },
     {
      "text": "to.",
-     "start": 3.334,
-     "end": 3.546
+     "start": 3.276,
+     "end": 3.516
     },
     {
      "text": "So",
-     "start": 3.546,
-     "end": 3.687
+     "start": 3.743,
+     "end": 3.867
     },
     {
      "text": "he",
-     "start": 3.687,
-     "end": 3.829
+     "start": 3.867,
+     "end": 3.991
     },
     {
      "text": "passes",
-     "start": 3.829,
-     "end": 4.253
+     "start": 3.991,
+     "end": 4.363
     },
     {
      "text": "to",
-     "start": 4.253,
-     "end": 4.395
+     "start": 4.363,
+     "end": 4.487
     },
     {
      "text": "the",
-     "start": 4.395,
-     "end": 4.607
+     "start": 4.487,
+     "end": 4.673
     },
     {
-     "text": "only",
-     "start": 4.607,
-     "end": 4.89
+     "text": "one",
+     "start": 4.673,
+     "end": 4.859
     },
     {
      "text": "player",
-     "start": 4.89,
-     "end": 5.282
+     "start": 4.859,
+     "end": 5.231
     },
     {
-     "text": "who",
-     "start": 5.282,
-     "end": 5.478
-    },
-    {
-     "text": "is",
-     "start": 5.478,
-     "end": 5.609
+     "text": "who's",
+     "start": 5.231,
+     "end": 5.541
     },
     {
      "text": "always",
-     "start": 5.609,
-     "end": 6.001
+     "start": 5.541,
+     "end": 5.913
     },
     {
-     "text": "free:",
-     "start": 6.001,
-     "end": 6.263
+     "text": "free.",
+     "start": 5.913,
+     "end": 6.223
     },
     {
-     "text": "himself.",
-     "start": 6.263,
-     "end": 6.786
+     "text": "Himself.",
+     "start": 6.593,
+     "end": 7.233
     },
     {
      "text": "He's",
-     "start": 6.786,
-     "end": 7.047
+     "start": 7.467,
+     "end": 7.734
     },
     {
      "text": "through.",
-     "start": 7.047,
-     "end": 7.57
+     "start": 7.734,
+     "end": 8.267
     }
    ],
    "sfx": [
@@ -336,112 +306,87 @@
   },
   {
    "id": "s4-counter",
-   "start": 18.162,
-   "duration": 6.051,
+   "start": 20.633,
+   "duration": 6.889,
    "voice": "assets/voice/s4-counter.wav",
    "voiceStart": 0.15,
-   "speech": 5.501,
+   "speech": 6.339,
    "cues": {
-    "counter": 0.488,
-    "empty": 1.842,
-    "fifty": 3.061,
-    "nil": 4.883
+    "counter": 1.0,
+    "empty": 2.14,
+    "fifty": 3.718,
+    "nil": 5.679
    },
    "words": [
     {
      "text": "Saved.",
      "start": 0.15,
-     "end": 0.488
-    },
-    {
-     "text": "And",
-     "start": 0.488,
-     "end": 0.692
-    },
-    {
-     "text": "while",
-     "start": 0.692,
-     "end": 1.03
-    },
-    {
-     "text": "he",
-     "start": 1.03,
-     "end": 1.165
-    },
-    {
-     "text": "is",
-     "start": 1.165,
-     "end": 1.301
-    },
-    {
-     "text": "up",
-     "start": 1.301,
-     "end": 1.436
-    },
-    {
-     "text": "front,",
-     "start": 1.436,
-     "end": 1.842
-    },
-    {
-     "text": "nobody",
-     "start": 1.842,
-     "end": 2.248
-    },
-    {
-     "text": "is",
-     "start": 2.248,
-     "end": 2.384
-    },
-    {
-     "text": "in",
-     "start": 2.384,
-     "end": 2.519
-    },
-    {
-     "text": "his",
-     "start": 2.519,
-     "end": 2.722
-    },
-    {
-     "text": "goal.",
-     "start": 2.722,
-     "end": 3.061
+     "end": 0.79
     },
     {
      "text": "Real",
-     "start": 3.061,
-     "end": 3.332
+     "start": 1.0,
+     "end": 1.349
+    },
+    {
+     "text": "counter.",
+     "start": 1.349,
+     "end": 1.96
+    },
+    {
+     "text": "Messi's",
+     "start": 2.14,
+     "end": 2.641
+    },
+    {
+     "text": "goal",
+     "start": 2.641,
+     "end": 2.927
+    },
+    {
+     "text": "is",
+     "start": 2.927,
+     "end": 3.071
+    },
+    {
+     "text": "empty.",
+     "start": 3.071,
+     "end": 3.5
+    },
+    {
+     "text": "Real",
+     "start": 3.718,
+     "end": 4.031
     },
     {
      "text": "score",
-     "start": 3.332,
-     "end": 3.67
+     "start": 4.031,
+     "end": 4.422
     },
     {
      "text": "from",
-     "start": 3.67,
-     "end": 3.941
+     "start": 4.422,
+     "end": 4.734
     },
     {
      "text": "fifty",
-     "start": 3.941,
-     "end": 4.266
+     "start": 4.734,
+     "end": 5.064
     },
     {
      "text": "metres.",
-     "start": 4.266,
-     "end": 4.683
+     "start": 5.064,
+     "end": 5.489
     },
     {
      "text": "Nil,",
-     "start": 4.883,
-     "end": 5.145
+     "start": 5.679,
+     "end": 5.979
     },
     {
      "text": "one.",
-     "start": 5.145,
-     "end": 5.651
+     "start": 5.979,
+     "end": 6.489
     }
    ],
    "sfx": [
@@ -473,112 +418,92 @@
   },
   {
    "id": "s5-solo",
-   "start": 24.213,
-   "duration": 6.823,
+   "start": 27.522,
+   "duration": 6.672,
    "voice": "assets/voice/s5-solo.wav",
    "voiceStart": 0.15,
-   "speech": 6.273,
+   "speech": 6.122,
    "cues": {
-    "half": 1.507,
-    "past": 3.134,
-    "keeper": 4.559,
-    "one": 5.655
+    "half": 1.812,
+    "past": 3.032,
+    "keeper": 4.303,
+    "one": 5.483
    },
    "words": [
     {
      "text": "So",
      "start": 0.15,
-     "end": 0.286
+     "end": 0.294
     },
     {
      "text": "Messi",
-     "start": 0.286,
-     "end": 0.625
+     "start": 0.294,
+     "end": 0.654
     },
     {
      "text": "stops",
-     "start": 0.625,
-     "end": 0.964
+     "start": 0.654,
+     "end": 1.014
     },
     {
      "text": "passing.",
-     "start": 0.964,
-     "end": 1.507
+     "start": 1.014,
+     "end": 1.59
     },
     {
-     "text": "He",
-     "start": 1.507,
-     "end": 1.642
-    },
-    {
-     "text": "takes",
-     "start": 1.642,
-     "end": 1.981
-    },
-    {
-     "text": "the",
-     "start": 1.981,
-     "end": 2.185
-    },
-    {
-     "text": "ball",
-     "start": 2.185,
-     "end": 2.456
+     "text": "Ball",
+     "start": 1.812,
+     "end": 2.079
     },
     {
      "text": "on",
-     "start": 2.456,
-     "end": 2.592
+     "start": 2.079,
+     "end": 2.212
     },
     {
      "text": "halfway.",
-     "start": 2.592,
-     "end": 3.134
+     "start": 2.212,
+     "end": 2.812
     },
     {
      "text": "Past",
-     "start": 3.134,
-     "end": 3.356
+     "start": 3.032,
+     "end": 3.346
     },
     {
      "text": "ten",
-     "start": 3.356,
-     "end": 3.541
-    },
-    {
-     "text": "outfield",
-     "start": 3.541,
-     "end": 4.084
+     "start": 3.346,
+     "end": 3.503
     },
     {
      "text": "players.",
-     "start": 4.084,
-     "end": 4.559
+     "start": 3.503,
+     "end": 4.132
     },
     {
      "text": "Past",
-     "start": 4.559,
-     "end": 4.83
+     "start": 4.303,
+     "end": 4.566
     },
     {
      "text": "the",
-     "start": 4.83,
-     "end": 4.98
+     "start": 4.566,
+     "end": 4.763
     },
     {
      "text": "keeper.",
-     "start": 4.98,
-     "end": 5.33
+     "start": 4.763,
+     "end": 5.223
     },
     {
      "text": "One,",
-     "start": 5.655,
-     "end": 6.039
+     "start": 5.483,
+     "end": 5.877
     },
     {
      "text": "one.",
-     "start": 6.039,
-     "end": 6.423
+     "start": 5.877,
+     "end": 6.272
     }
    ],
    "sfx": [
@@ -598,207 +523,187 @@
   },
   {
    "id": "s6-walk",
-   "start": 31.036,
-   "duration": 11.617,
+   "start": 34.194,
+   "duration": 13.285,
    "voice": "assets/voice/s6-walk.wav",
    "voiceStart": 0.15,
-   "speech": 11.067,
+   "speech": 12.735,
    "cues": {
-    "stam": 2.13,
-    "walk": 3.03,
-    "walks": 5.104,
-    "bored": 5.707,
-    "sprint": 7.741,
-    "foul": 8.495,
-    "fk": 8.872,
-    "top": 9.852,
-    "onetwo": 10.766
+    "stam": 1.954,
+    "walk": 3.339,
+    "walks": 5.726,
+    "bored": 6.663,
+    "sprint": 8.261,
+    "foul": 9.275,
+    "fk": 9.991,
+    "top": 11.031,
+    "onetwo": 12.074
    },
    "words": [
     {
      "text": "But",
      "start": 0.15,
-     "end": 0.33
+     "end": 0.337
     },
     {
-     "text": "one",
-     "start": 0.33,
-     "end": 0.51
+     "text": "he's",
+     "start": 0.337,
+     "end": 0.587
     },
     {
-     "text": "man",
-     "start": 0.51,
-     "end": 0.69
+     "text": "alone",
+     "start": 0.587,
+     "end": 0.899
     },
     {
-     "text": "has",
-     "start": 0.69,
-     "end": 0.87
-    },
-    {
-     "text": "to",
-     "start": 0.87,
-     "end": 0.99
-    },
-    {
-     "text": "cover",
-     "start": 0.99,
-     "end": 1.29
-    },
-    {
-     "text": "the",
-     "start": 1.29,
-     "end": 1.47
-    },
-    {
-     "text": "whole",
-     "start": 1.47,
-     "end": 1.77
-    },
-    {
-     "text": "pitch.",
-     "start": 1.77,
-     "end": 2.13
-    },
-    {
-     "text": "His",
-     "start": 2.13,
-     "end": 2.31
-    },
-    {
-     "text": "stamina",
-     "start": 2.31,
-     "end": 2.73
-    },
-    {
-     "text": "drops.",
-     "start": 2.73,
-     "end": 3.03
-    },
-    {
-     "text": "So",
-     "start": 3.03,
-     "end": 3.15
-    },
-    {
-     "text": "he",
-     "start": 3.15,
-     "end": 3.27
-    },
-    {
-     "text": "does",
-     "start": 3.27,
-     "end": 3.51
-    },
-    {
-     "text": "what",
-     "start": 3.51,
-     "end": 3.75
-    },
-    {
-     "text": "prime",
-     "start": 3.75,
-     "end": 4.05
-    },
-    {
-     "text": "Messi",
-     "start": 4.05,
-     "end": 4.35
-    },
-    {
-     "text": "always",
-     "start": 4.35,
-     "end": 4.802
-    },
-    {
-     "text": "did.",
-     "start": 4.802,
-     "end": 5.104
-    },
-    {
-     "text": "He",
-     "start": 5.104,
-     "end": 5.254
-    },
-    {
-     "text": "walks.",
-     "start": 5.254,
-     "end": 5.707
-    },
-    {
-     "text": "Real",
-     "start": 5.707,
-     "end": 6.008
-    },
-    {
-     "text": "stop",
-     "start": 6.008,
-     "end": 6.309
-    },
-    {
-     "text": "marking",
-     "start": 6.309,
-     "end": 6.837
+     "text": "on",
+     "start": 0.899,
+     "end": 1.024
     },
     {
      "text": "a",
-     "start": 6.837,
-     "end": 6.912
+     "start": 1.024,
+     "end": 1.086
     },
     {
-     "text": "walking",
-     "start": 6.912,
-     "end": 7.44
+     "text": "huge",
+     "start": 1.086,
+     "end": 1.336
     },
     {
-     "text": "man.",
-     "start": 7.44,
-     "end": 7.741
+     "text": "pitch.",
+     "start": 1.336,
+     "end": 1.71
+    },
+    {
+     "text": "His",
+     "start": 1.954,
+     "end": 2.171
+    },
+    {
+     "text": "stamina",
+     "start": 2.171,
+     "end": 2.679
+    },
+    {
+     "text": "drops.",
+     "start": 2.679,
+     "end": 3.114
+    },
+    {
+     "text": "So",
+     "start": 3.339,
+     "end": 3.477
+    },
+    {
+     "text": "he",
+     "start": 3.477,
+     "end": 3.614
+    },
+    {
+     "text": "does",
+     "start": 3.614,
+     "end": 3.889
+    },
+    {
+     "text": "what",
+     "start": 3.889,
+     "end": 4.164
+    },
+    {
+     "text": "prime",
+     "start": 4.164,
+     "end": 4.508
+    },
+    {
+     "text": "Messi",
+     "start": 4.508,
+     "end": 4.852
+    },
+    {
+     "text": "always",
+     "start": 4.852,
+     "end": 5.264
+    },
+    {
+     "text": "did.",
+     "start": 5.264,
+     "end": 5.539
+    },
+    {
+     "text": "He",
+     "start": 5.726,
+     "end": 5.911
+    },
+    {
+     "text": "walks.",
+     "start": 5.911,
+     "end": 6.466
+    },
+    {
+     "text": "Real",
+     "start": 6.663,
+     "end": 6.958
+    },
+    {
+     "text": "stop",
+     "start": 6.958,
+     "end": 7.252
+    },
+    {
+     "text": "marking",
+     "start": 7.252,
+     "end": 7.768
+    },
+    {
+     "text": "him.",
+     "start": 7.768,
+     "end": 8.063
     },
     {
      "text": "One",
-     "start": 7.741,
-     "end": 7.967
+     "start": 8.261,
+     "end": 8.861
     },
     {
      "text": "sprint.",
-     "start": 7.967,
-     "end": 8.495
+     "start": 8.861,
+     "end": 10.261
     },
     {
      "text": "Foul.",
-     "start": 8.495,
-     "end": 8.872
+     "start": 9.275,
+     "end": 11.275
     },
     {
      "text": "Free",
-     "start": 8.872,
-     "end": 9.173
+     "start": 9.991,
+     "end": 10.311
     },
     {
      "text": "kick.",
-     "start": 9.173,
-     "end": 9.55
+     "start": 10.311,
+     "end": 10.711
     },
     {
      "text": "Top",
-     "start": 9.852,
-     "end": 10.157
+     "start": 11.031,
+     "end": 11.283
     },
     {
      "text": "corner.",
-     "start": 10.157,
-     "end": 10.766
+     "start": 11.283,
+     "end": 11.871
     },
     {
      "text": "One,",
-     "start": 10.766,
-     "end": 10.992
+     "start": 12.074,
+     "end": 12.479
     },
     {
      "text": "two.",
-     "start": 10.992,
-     "end": 11.217
+     "start": 12.479,
+     "end": 12.885
     }
    ],
    "sfx": [
@@ -830,164 +735,144 @@
   },
   {
    "id": "s7-corner",
-   "start": 42.653,
-   "duration": 10.23,
+   "start": 47.479,
+   "duration": 9.787,
    "voice": "assets/voice/s7-corner.wav",
    "voiceStart": 0.15,
-   "speech": 9.68,
+   "speech": 9.237,
    "cues": {
-    "subs": 0.823,
-    "bench": 3.292,
-    "corner": 4.489,
-    "box": 5.013,
-    "mark": 6.903,
-    "two": 9.062
+    "subs": 1.365,
+    "bench": 3.305,
+    "corner": 4.732,
+    "box": 5.491,
+    "mark": 6.961,
+    "two": 8.576
    },
    "words": [
     {
      "text": "Minute",
      "start": 0.15,
-     "end": 0.599
+     "end": 0.817
     },
     {
      "text": "eighty",
-     "start": 0.599,
-     "end": 0.718
+     "start": 0.817,
+     "end": 1.019
     },
     {
      "text": "nine.",
-     "start": 0.718,
-     "end": 0.823
+     "start": 1.019,
+     "end": 1.195
     },
     {
      "text": "Real",
-     "start": 0.823,
-     "end": 1.123
+     "start": 1.365,
+     "end": 1.599
     },
     {
      "text": "bring",
-     "start": 1.123,
-     "end": 1.497
+     "start": 1.599,
+     "end": 1.893
     },
     {
      "text": "on",
-     "start": 1.497,
-     "end": 1.646
+     "start": 1.893,
+     "end": 2.01
     },
     {
      "text": "three",
-     "start": 1.646,
-     "end": 2.02
+     "start": 2.01,
+     "end": 2.303
     },
     {
      "text": "fresh",
-     "start": 2.02,
-     "end": 2.394
+     "start": 2.303,
+     "end": 2.596
     },
     {
-     "text": "substitutes.",
-     "start": 2.394,
-     "end": 3.292
+     "text": "players.",
+     "start": 2.596,
+     "end": 3.065
     },
     {
      "text": "Messi",
-     "start": 3.292,
-     "end": 3.666
+     "start": 3.305,
+     "end": 3.68
     },
     {
      "text": "has",
-     "start": 3.666,
-     "end": 3.891
+     "start": 3.68,
+     "end": 3.905
     },
     {
      "text": "no",
-     "start": 3.891,
-     "end": 4.04
+     "start": 3.905,
+     "end": 4.055
     },
     {
      "text": "bench.",
-     "start": 4.04,
-     "end": 4.489
+     "start": 4.055,
+     "end": 4.505
     },
     {
      "text": "Corner.",
-     "start": 4.489,
-     "end": 5.013
+     "start": 4.732,
+     "end": 5.232
     },
     {
-     "text": "Real",
-     "start": 5.013,
-     "end": 5.312
+     "text": "Everyone",
+     "start": 5.491,
+     "end": 5.971
     },
     {
-     "text": "send",
-     "start": 5.312,
-     "end": 5.611
+     "text": "goes",
+     "start": 5.971,
+     "end": 6.211
     },
     {
-     "text": "everyone",
-     "start": 5.611,
-     "end": 6.21
-    },
-    {
-     "text": "into",
-     "start": 6.21,
-     "end": 6.462
-    },
-    {
-     "text": "the",
-     "start": 6.462,
-     "end": 6.651
-    },
-    {
-     "text": "box.",
-     "start": 6.651,
-     "end": 6.903
+     "text": "forward.",
+     "start": 6.211,
+     "end": 6.691
     },
     {
      "text": "Messi",
-     "start": 6.903,
-     "end": 7.218
+     "start": 6.961,
+     "end": 7.261
     },
     {
      "text": "can",
-     "start": 7.218,
-     "end": 7.407
+     "start": 7.261,
+     "end": 7.441
     },
     {
      "text": "mark",
-     "start": 7.407,
-     "end": 7.659
-    },
-    {
-     "text": "exactly",
-     "start": 7.659,
-     "end": 8.1
+     "start": 7.441,
+     "end": 7.681
     },
     {
      "text": "one",
-     "start": 8.1,
-     "end": 8.289
+     "start": 7.681,
+     "end": 7.861
     },
     {
      "text": "of",
-     "start": 8.289,
-     "end": 8.415
+     "start": 7.861,
+     "end": 7.981
     },
     {
      "text": "them.",
-     "start": 8.415,
-     "end": 8.73
+     "start": 7.981,
+     "end": 8.281
     },
     {
      "text": "Two,",
-     "start": 9.062,
-     "end": 9.446
+     "start": 8.576,
+     "end": 8.981
     },
     {
      "text": "two.",
-     "start": 9.446,
-     "end": 9.83
+     "start": 8.981,
+     "end": 9.387
     }
    ],
    "sfx": [
@@ -1019,139 +904,134 @@
   },
   {
    "id": "s8-last",
-   "start": 52.883,
-   "duration": 8.978,
+   "start": 57.266,
+   "duration": 9.937,
    "voice": "assets/voice/s8-last.wav",
    "voiceStart": 0.15,
-   "speech": 8.428,
+   "speech": 9.387,
    "cues": {
-    "three": 0.87,
-    "walked": 1.67,
-    "saved": 3.11,
-    "last": 5.03,
-    "self": 6.174,
-    "goal": 7.789
+    "three": 1.408,
+    "walked": 2.921,
+    "saved": 4.392,
+    "last": 5.955,
+    "self": 7.382,
+    "goal": 8.707
    },
    "words": [
     {
      "text": "Minute",
      "start": 0.15,
-     "end": 0.63
+     "end": 0.93
     },
     {
      "text": "ninety",
-     "start": 0.63,
-     "end": 0.767
+     "start": 0.93,
+     "end": 1.106
     },
     {
      "text": "two.",
-     "start": 0.767,
-     "end": 0.87
+     "start": 1.106,
+     "end": 1.238
     },
     {
      "text": "Stamina:",
-     "start": 0.87,
-     "end": 1.43
+     "start": 1.408,
+     "end": 2.404
     },
     {
      "text": "three",
-     "start": 1.43,
-     "end": 1.529
+     "start": 2.404,
+     "end": 2.539
     },
     {
      "text": "percent.",
-     "start": 1.529,
-     "end": 1.67
+     "start": 2.539,
+     "end": 2.731
     },
     {
      "text": "But",
-     "start": 1.67,
-     "end": 1.91
+     "start": 2.921,
+     "end": 3.117
     },
     {
      "text": "he",
-     "start": 1.91,
-     "end": 2.07
+     "start": 3.117,
+     "end": 3.247
     },
     {
      "text": "walked",
-     "start": 2.07,
-     "end": 2.55
+     "start": 3.247,
+     "end": 3.639
     },
     {
      "text": "all",
-     "start": 2.55,
-     "end": 2.79
+     "start": 3.639,
+     "end": 3.835
     },
     {
      "text": "game.",
-     "start": 2.79,
-     "end": 3.11
+     "start": 3.835,
+     "end": 4.161
     },
     {
      "text": "He",
-     "start": 3.11,
-     "end": 3.27
+     "start": 4.392,
+     "end": 4.538
     },
     {
      "text": "saved",
-     "start": 3.27,
-     "end": 3.67
-    },
-    {
-     "text": "exactly",
-     "start": 3.67,
-     "end": 4.23
+     "start": 4.538,
+     "end": 4.903
     },
     {
      "text": "one",
-     "start": 4.23,
-     "end": 4.47
+     "start": 4.903,
+     "end": 5.121
     },
     {
      "text": "sprint.",
-     "start": 4.47,
-     "end": 5.03
+     "start": 5.121,
+     "end": 5.632
     },
     {
      "text": "One",
-     "start": 5.03,
-     "end": 5.27
+     "start": 5.955,
+     "end": 6.18
     },
     {
      "text": "defender",
-     "start": 5.27,
-     "end": 5.91
+     "start": 6.18,
+     "end": 6.78
     },
     {
      "text": "left.",
-     "start": 5.91,
-     "end": 6.174
+     "start": 6.78,
+     "end": 7.155
     },
     {
      "text": "Pass",
-     "start": 6.174,
-     "end": 6.57
+     "start": 7.382,
+     "end": 7.668
     },
     {
      "text": "to",
-     "start": 6.57,
-     "end": 6.702
+     "start": 7.668,
+     "end": 7.811
     },
     {
      "text": "himself.",
-     "start": 6.702,
-     "end": 7.23
+     "start": 7.811,
+     "end": 8.382
     },
     {
      "text": "Two,",
-     "start": 7.789,
-     "end": 8.127
+     "start": 8.707,
+     "end": 9.063
     },
     {
      "text": "three.",
-     "start": 8.127,
-     "end": 8.578
+     "start": 9.063,
+     "end": 9.537
     }
    ],
    "sfx": [
@@ -1189,175 +1069,165 @@
   },
   {
    "id": "s9-shirt",
-   "start": 61.861,
-   "duration": 5.235,
+   "start": 67.203,
+   "duration": 5.239,
    "voice": "assets/voice/s9-shirt.wav",
    "voiceStart": 0.15,
-   "speech": 4.685,
+   "speech": 4.689,
    "cues": {
-    "y17": 2.147,
-    "same": 3.962
+    "y17": 2.111,
+    "same": 3.943
    },
    "words": [
     {
      "text": "He",
      "start": 0.15,
-     "end": 0.267
+     "end": 0.271
     },
     {
      "text": "shows",
-     "start": 0.267,
-     "end": 0.56
+     "start": 0.271,
+     "end": 0.575
     },
     {
      "text": "his",
-     "start": 0.56,
-     "end": 0.736
+     "start": 0.575,
+     "end": 0.757
     },
     {
      "text": "shirt",
-     "start": 0.736,
-     "end": 1.029
+     "start": 0.757,
+     "end": 1.06
     },
     {
      "text": "to",
-     "start": 1.029,
-     "end": 1.147
+     "start": 1.06,
+     "end": 1.182
     },
     {
      "text": "the",
-     "start": 1.147,
-     "end": 1.322
+     "start": 1.182,
+     "end": 1.364
     },
     {
      "text": "Bernab\u00e9u.",
-     "start": 1.322,
-     "end": 1.847
+     "start": 1.364,
+     "end": 1.921
     },
     {
-     "text": "He",
-     "start": 2.147,
-     "end": 2.312
+     "text": "Just",
+     "start": 2.111,
+     "end": 2.538
     },
     {
-     "text": "did",
-     "start": 2.312,
-     "end": 2.56
-    },
-    {
-     "text": "exactly",
-     "start": 2.56,
-     "end": 3.137
-    },
-    {
-     "text": "that",
-     "start": 3.137,
-     "end": 3.467
+     "text": "like",
+     "start": 2.538,
+     "end": 2.964
     },
     {
      "text": "in",
-     "start": 3.467,
-     "end": 3.632
+     "start": 2.964,
+     "end": 3.178
     },
     {
      "text": "2017.",
-     "start": 3.632,
-     "end": 3.962
+     "start": 3.178,
+     "end": 3.753
     },
     {
      "text": "Same",
-     "start": 3.962,
-     "end": 4.292
+     "start": 3.943,
+     "end": 4.743
     },
     {
      "text": "score.",
-     "start": 4.292,
-     "end": 4.787
+     "start": 4.743,
+     "end": 5.943
     }
    ],
    "sfx": []
   },
   {
    "id": "s10-ft",
-   "start": 67.096,
-   "duration": 4.881,
+   "start": 72.442,
+   "duration": 5.033,
    "voice": "assets/voice/s10-ft.wav",
    "voiceStart": 0.15,
-   "speech": 4.431,
+   "speech": 4.583,
    "cues": {
-    "mlc": 1.282,
-    "loop": 3.427
+    "mlc": 1.193,
+    "loop": 3.41
    },
    "words": [
     {
      "text": "Full",
      "start": 0.15,
-     "end": 0.55
+     "end": 0.506
     },
     {
      "text": "time.",
-     "start": 0.55,
+     "start": 0.506,
      "end": 0.95
     },
     {
      "text": "Most",
-     "start": 1.282,
-     "end": 1.534
+     "start": 1.193,
+     "end": 1.424
     },
     {
      "text": "liked",
-     "start": 1.534,
-     "end": 1.787
+     "start": 1.424,
+     "end": 1.654
     },
     {
      "text": "comment",
-     "start": 1.787,
-     "end": 2.228
+     "start": 1.654,
+     "end": 2.058
     },
     {
      "text": "decides",
-     "start": 2.228,
-     "end": 2.67
+     "start": 2.058,
+     "end": 2.461
     },
     {
      "text": "the",
-     "start": 2.67,
-     "end": 2.859
+     "start": 2.461,
+     "end": 2.634
     },
     {
      "text": "next",
-     "start": 2.859,
-     "end": 3.111
+     "start": 2.634,
+     "end": 2.865
     },
     {
      "text": "case.",
-     "start": 3.111,
-     "end": 3.427
+     "start": 2.865,
+     "end": 3.153
     },
     {
      "text": "So",
-     "start": 3.427,
-     "end": 3.553
+     "start": 3.41,
+     "end": 3.552
     },
     {
      "text": "if",
-     "start": 3.553,
-     "end": 3.679
+     "start": 3.552,
+     "end": 3.694
     },
     {
      "text": "anyone",
-     "start": 3.679,
-     "end": 4.057
+     "start": 3.694,
+     "end": 4.121
     },
     {
      "text": "asks",
-     "start": 4.057,
-     "end": 4.31
+     "start": 4.121,
+     "end": 4.406
     },
     {
      "text": "you:",
-     "start": 4.31,
-     "end": 4.562
+     "start": 4.406,
+     "end": 4.69
     }
    ],
    "sfx": [
