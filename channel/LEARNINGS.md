@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-03 · S2E01 · **Untertitel bei 3D-Folgen tiefer setzen**: Bei Close-ups verdeckten sie meist den Ball (Band lag bei y 1196).
+  `build_episode.py` setzt sie für `"world": true` jetzt automatisch auf y 1460 (über TikToks unterer Leiste, ~1600);
+  per `"caption_top"` in narration.json änderbar. Beim Snapshot prüfen, dass Ball und Füße frei bleiben.
 - 2026-11-02 · S2E01 · **3D-Folgen künftig 40–50 s**, eine Wendung weniger als S2E01 (78 s hielt absolut länger, aber nur 27 % des Videos).
   Lieber ein Gag weniger als schneller sprechen.
 - 2026-11-02 · S2E01 · **Follow-Aufruf gehört in die Handlung**, nicht nur Likes/Kommentare (S2E01: 0 neue Follower). Als Gag zum Thema,

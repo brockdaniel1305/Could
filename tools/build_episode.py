@@ -317,7 +317,11 @@ def main():
                                                 "scenes": scenes}, indent=1))
 
     # captions
-    (ep / "compositions/captions.html").write_text(captions_html(caption_groups(all_words), total))
+    cap = captions_html(caption_groups(all_words), total)
+    if cfg.get("world"):
+        # 3D episodes: captions lower (close-ups put the ball and feet around y 1200), still above TikTok's bottom UI (~1600)
+        cap = cap.replace("top: 1196px", f"top: {cfg.get('caption_top', 1460)}px")
+    (ep / "compositions/captions.html").write_text(cap)
 
     # scene stubs (a "world" episode draws everything in one continuous layer: <ep>/world/world.html, see tools/world3d)
     for s in ([] if cfg.get("world") else scenes):
