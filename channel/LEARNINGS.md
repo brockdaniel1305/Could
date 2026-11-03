@@ -5,6 +5,11 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-03 · S2E02 · **Jedes Bild ein volles Werk** (Referenzvideo): keine leeren Flächen (Himmel, Wände, Boden), Ebenen mit
+  unscharfem Vordergrund, Figuren davor, detailreicher Hintergrund. Viele Nahaufnahmen, Zooms (fov-Fahrten), Untersichten,
+  gekippte Winkel (`roll`), Draufsichten. **Kamera fährt nie durch Wände** (`camBounds` je Welt). Technik: Vordergrund-Pass in
+  `engine.js` (alles näher als die nächste Figur wird über den Figuren unscharf gezeichnet), Dichte-Pass in der Welt
+  (Wimpelketten, Hinterhäuser, Kirche, Berge, Wolken, Blumen, Lichtstrahlen, Staub).
 - 2026-11-03 · S2E01 · **Untertitel bei 3D-Folgen tiefer setzen**: Bei Close-ups verdeckten sie meist den Ball (Band lag bei y 1196).
   `build_episode.py` setzt sie für `"world": true` jetzt automatisch auf y 1460 (über TikToks unterer Leiste, ~1600);
   per `"caption_top"` in narration.json änderbar. Beim Snapshot prüfen, dass Ball und Füße frei bleiben.
