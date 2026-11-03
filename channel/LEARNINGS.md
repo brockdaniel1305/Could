@@ -121,6 +121,11 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   → Das Problem ist der Einstieg, nicht die Mitte. Erstes Bild wirkt wie eine Titelkarte (3 Zeilen Text, Figur steht still, Stiere
   klein im Hintergrund). Regel ab jetzt: Bild 1 = Action in Bewegung (Bedrohung groß im Bild), max. 3–4 Wörter Text, erster
   Kamerawechsel nach ≤ 1,5 s, Geräusch ab Frame 0.
+  **Publikum:** ~60 % der Aufrufe kamen von Frauen. TikTok hat das Video vermutlich als Reise/Festival/Cartoon statt Fußball
+  eingeordnet (Pamplona, Wimpel, Stiere, kein Ball im ersten Bild) – plausibler Teil der Erklärung für den Absturz bei 0:01.
+  → Fußball-Signale gezielt setzen: Fußball im ersten Bild (Trikot/Ball/Stadion), Fußballbegriff in Bild 1 + erstem Satz,
+  Caption beginnt mit Fußballkontext, Hashtags nischig (#premierleague #liverpoolfc #footballtiktok #epl) statt generisch (#fyp),
+  Account-Signale (Fußball-Videos anschauen/kommentieren, Fußball-Accounts folgen).
 - 2026-11-03 · S2E01 Short (52 s, 3D, Follow-Gag) auf **YouTube Shorts**: nach 2 h 1.260 Aufrufe, Ø Wiedergabe **0:30 (≈ 58 %)**,
   **44,8 % angesehen / 55,2 % weggewischt** (frühere Folgen ~26 % / 74 %). Bester Wert bisher: 3D-Stil + roter Faden + ~50 s funktioniert.
 - 2026-11-02 · S2E01 v3 (3D-Stil, 78 s, gepostet 20:13): nach ~2 h 599 Aufrufe, Ø Wiedergabe **21,4 s** (vorher ~9–10 s),
