@@ -1,0 +1,537 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "fca436b80449228bfd2541d18076e4ec6a3e49f8",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.293
+   },
+   {
+    "text": "Virgil",
+    "start": 0.293,
+    "end": 0.645
+   },
+   {
+    "text": "van",
+    "start": 0.645,
+    "end": 0.82
+   },
+   {
+    "text": "Dyck",
+    "start": 0.82,
+    "end": 1.055
+   },
+   {
+    "text": "stop",
+    "start": 1.055,
+    "end": 1.289
+   },
+   {
+    "text": "the",
+    "start": 1.289,
+    "end": 1.465
+   },
+   {
+    "text": "running",
+    "start": 1.465,
+    "end": 1.875
+   },
+   {
+    "text": "of",
+    "start": 1.875,
+    "end": 1.993
+   },
+   {
+    "text": "the",
+    "start": 1.993,
+    "end": 2.168
+   },
+   {
+    "text": "Bulls?",
+    "start": 2.168,
+    "end": 2.52
+   }
+  ]
+ },
+ "s2-pamplona.part0.wav": {
+  "key": "dff798b4f4161dbd0364ebc37fa1b02fe2944978",
+  "words": [
+   {
+    "text": "PEMPLONA",
+    "start": 0,
+    "end": 0.7
+   }
+  ]
+ },
+ "s2-pamplona.part1.wav": {
+  "key": "0b3342000255e913e017f96828d8e99ee7788a03",
+  "words": [
+   {
+    "text": "SIX",
+    "start": 0,
+    "end": 0.3
+   },
+   {
+    "text": "BULLS",
+    "start": 0.3,
+    "end": 0.8
+   }
+  ]
+ },
+ "s2-pamplona.part2.wav": {
+  "key": "2f8021c6a612a5912d978864dc5104d1646751cf",
+  "words": [
+   {
+    "text": "Over",
+    "start": 0,
+    "end": 0.301
+   },
+   {
+    "text": "half",
+    "start": 0.301,
+    "end": 0.602
+   },
+   {
+    "text": "a",
+    "start": 0.602,
+    "end": 0.678
+   },
+   {
+    "text": "ton",
+    "start": 0.678,
+    "end": 0.904
+   },
+   {
+    "text": "each.",
+    "start": 0.904,
+    "end": 1.28
+   }
+  ]
+ },
+ "s2-pamplona.part3.wav": {
+  "key": "b3004a027fd66154f07ff0314ea0c4341309bfc0",
+  "words": [
+   {
+    "text": "Everyone",
+    "start": 0,
+    "end": 0.652
+   },
+   {
+    "text": "runs.",
+    "start": 0.652,
+    "end": 1.06
+   }
+  ]
+ },
+ "s3-calm.part0.wav": {
+  "key": "c318e85e370624097c2709d514deb7c6ef1500a9",
+  "words": [
+   {
+    "text": "Van",
+    "start": 0,
+    "end": 0.213
+   },
+   {
+    "text": "Dyke",
+    "start": 0.213,
+    "end": 0.498
+   },
+   {
+    "text": "doesn't",
+    "start": 0.498,
+    "end": 0.996
+   },
+   {
+    "text": "run.",
+    "start": 0.996,
+    "end": 1.28
+   }
+  ]
+ },
+ "s3-calm.part1.wav": {
+  "key": "0f87d568512c26c79e9ecc60fbdbd9cf47b39d6f",
+  "words": [
+   {
+    "text": "50",
+    "start": 0,
+    "end": 0.145
+   },
+   {
+    "text": "Premier",
+    "start": 0.145,
+    "end": 0.651
+   },
+   {
+    "text": "League",
+    "start": 0.651,
+    "end": 1.086
+   },
+   {
+    "text": "Games.",
+    "start": 1.086,
+    "end": 1.52
+   }
+  ]
+ },
+ "s3-calm.part2.wav": {
+  "key": "8a3e66adb768feaaf6e3ede7bed5e5af93349b01",
+  "words": [
+   {
+    "text": "Nobody",
+    "start": 0,
+    "end": 0.393
+   },
+   {
+    "text": "dribbled",
+    "start": 0.393,
+    "end": 0.916
+   },
+   {
+    "text": "past",
+    "start": 0.916,
+    "end": 1.178
+   },
+   {
+    "text": "him.",
+    "start": 1.178,
+    "end": 1.44
+   }
+  ]
+ },
+ "s4-bull1.part0.wav": {
+  "key": "9e449c818703c85be988b14ce43c13bfff6bde6c",
+  "words": [
+   {
+    "text": "Bullwont.",
+    "start": 0,
+    "end": 0.68
+   }
+  ]
+ },
+ "s4-bull1.part1.wav": {
+  "key": "f2a12573965eae2265477b69a4910e987235bc5a",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.146
+   },
+   {
+    "text": "shows",
+    "start": 0.146,
+    "end": 0.511
+   },
+   {
+    "text": "it",
+    "start": 0.511,
+    "end": 0.656
+   },
+   {
+    "text": "outside.",
+    "start": 0.656,
+    "end": 1.24
+   }
+  ]
+ },
+ "s4-bull1.part2.wav": {
+  "key": "8ff9a201f6d323cbc4ddc37b59ecac1f00ae64bd",
+  "words": [
+   {
+    "text": "into",
+    "start": 0,
+    "end": 0.308
+   },
+   {
+    "text": "the",
+    "start": 0.308,
+    "end": 0.538
+   },
+   {
+    "text": "fence.",
+    "start": 0.538,
+    "end": 1
+   }
+  ]
+ },
+ "s5-onetwo.part0.wav": {
+  "key": "4f847cddda10279a2a18158155dfda29eb83dbee",
+  "words": [
+   {
+    "text": "Bulls",
+    "start": 0,
+    "end": 0.5
+   },
+   {
+    "text": "2",
+    "start": 0.5,
+    "end": 0.6
+   },
+   {
+    "text": "and",
+    "start": 0.6,
+    "end": 0.9
+   },
+   {
+    "text": "3",
+    "start": 0.9,
+    "end": 1
+   },
+   {
+    "text": "try",
+    "start": 1,
+    "end": 1.3
+   },
+   {
+    "text": "a",
+    "start": 1.3,
+    "end": 1.4
+   },
+   {
+    "text": "1-2.",
+    "start": 1.4,
+    "end": 1.8
+   }
+  ]
+ },
+ "s5-onetwo.part1.wav": {
+  "key": "718ec3d3d41654b83fdf2ceaa429f3ef61c03e9f",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.124
+   },
+   {
+    "text": "just",
+    "start": 0.124,
+    "end": 0.371
+   },
+   {
+    "text": "steps",
+    "start": 0.371,
+    "end": 0.681
+   },
+   {
+    "text": "in",
+    "start": 0.681,
+    "end": 0.805
+   },
+   {
+    "text": "between.",
+    "start": 0.805,
+    "end": 1.3
+   }
+  ]
+ },
+ "s6-offside.part0.wav": {
+  "key": "051698b7c53e48b42c0d299a4c99dc2cf289f7c9",
+  "words": [
+   {
+    "text": "Bulls",
+    "start": 0,
+    "end": 0.509
+   },
+   {
+    "text": "4",
+    "start": 0.509,
+    "end": 0.611
+   },
+   {
+    "text": "and",
+    "start": 0.611,
+    "end": 0.916
+   },
+   {
+    "text": "5.",
+    "start": 0.916,
+    "end": 1.12
+   }
+  ]
+ },
+ "s6-offside.part1.wav": {
+  "key": "c8a7b896615ef95239a246f9452251e0c8123187",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.168
+   },
+   {
+    "text": "steps",
+    "start": 0.168,
+    "end": 0.588
+   },
+   {
+    "text": "up.",
+    "start": 0.588,
+    "end": 0.84
+   }
+  ]
+ },
+ "s6-offside.part2.wav": {
+  "key": "3a2ef3d584a6abb0d753e18e7c07f6034d741155",
+  "words": [
+   {
+    "text": "Offside.",
+    "start": 0,
+    "end": 0.84
+   }
+  ]
+ },
+ "s7-pepe.part0.wav": {
+  "key": "a3003b2d8fd9fc910a5a2694473564655c638beb",
+  "words": [
+   {
+    "text": "5",
+    "start": 0,
+    "end": 0.147
+   },
+   {
+    "text": "Bulls",
+    "start": 0.147,
+    "end": 0.88
+   }
+  ]
+ },
+ "s7-pepe.part1.wav": {
+  "key": "72907f9a6de09379c1691be61d7c7ebcac6eefc0",
+  "words": [
+   {
+    "text": "Zero",
+    "start": 0,
+    "end": 0.271
+   },
+   {
+    "text": "dribbles.",
+    "start": 0.271,
+    "end": 0.88
+   }
+  ]
+ },
+ "s7-pepe.part2.wav": {
+  "key": "f9fa7a8472d5cabd9d1984b08a9b798a650e7fa4",
+  "words": [
+   {
+    "text": "Then",
+    "start": 0,
+    "end": 0.264
+   },
+   {
+    "text": "comes",
+    "start": 0.264,
+    "end": 0.595
+   },
+   {
+    "text": "bull",
+    "start": 0.595,
+    "end": 0.859
+   },
+   {
+    "text": "number",
+    "start": 0.859,
+    "end": 1.256
+   },
+   {
+    "text": "six.",
+    "start": 1.256,
+    "end": 1.52
+   }
+  ]
+ },
+ "s7-pepe.part3.wav": {
+  "key": "c0e88ebc3ef591f4bc87e7f0a64a6f9e2458d30f",
+  "words": [
+   {
+    "text": "its",
+    "start": 0,
+    "end": 0.285
+   },
+   {
+    "text": "name.",
+    "start": 0.285,
+    "end": 0.76
+   }
+  ]
+ },
+ "s7-pepe.part4.wav": {
+  "key": "9fc425aef6454f6a716f79a67a1eff6db2a06809",
+  "words": [
+   {
+    "text": "Pay",
+    "start": 0,
+    "end": 0.274
+   },
+   {
+    "text": "Pay.",
+    "start": 0.274,
+    "end": 0.64
+   }
+  ]
+ },
+ "s8-record.part0.wav": {
+  "key": "6f848d6e4a328a02d59c0d1e6f2a0dbbbe570597",
+  "words": [
+   {
+    "text": "In",
+    "start": 0,
+    "end": 0.156
+   },
+   {
+    "text": "2019,",
+    "start": 0.156,
+    "end": 0.545
+   },
+   {
+    "text": "Nicholas",
+    "start": 0.545,
+    "end": 1.168
+   },
+   {
+    "text": "Paypay",
+    "start": 1.168,
+    "end": 1.635
+   },
+   {
+    "text": "ended",
+    "start": 1.635,
+    "end": 2.024
+   },
+   {
+    "text": "that",
+    "start": 2.024,
+    "end": 2.335
+   },
+   {
+    "text": "record.",
+    "start": 2.335,
+    "end": 2.88
+   }
+  ]
+ },
+ "s8-record.part1.wav": {
+  "key": "7f252eebe3be625bd3888dd9f27adf7cf1912dd8",
+  "words": [
+   {
+    "text": "Some",
+    "start": 0,
+    "end": 0.255
+   },
+   {
+    "text": "things",
+    "start": 0.255,
+    "end": 0.636
+   },
+   {
+    "text": "never",
+    "start": 0.636,
+    "end": 0.955
+   },
+   {
+    "text": "change.",
+    "start": 0.955,
+    "end": 1.4
+   }
+  ]
+ }
+}
