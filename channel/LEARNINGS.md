@@ -114,6 +114,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-11-03 · S2E01 Short (52 s, 3D, Follow-Gag) auf **YouTube Shorts**: nach 2 h 1.260 Aufrufe, Ø Wiedergabe **0:30 (≈ 58 %)**,
+  **44,8 % angesehen / 55,2 % weggewischt** (frühere Folgen ~26 % / 74 %). Bester Wert bisher: 3D-Stil + roter Faden + ~50 s funktioniert.
 - 2026-11-02 · S2E01 v3 (3D-Stil, 78 s, gepostet 20:13): nach ~2 h 599 Aufrufe, Ø Wiedergabe **21,4 s** (vorher ~9–10 s),
   6,87 % ganz gesehen, 15 Likes, 3 Kommentare, 6 Shares, 3 Saves, 0 Follower. Absolute Watchtime verdoppelt, relativ (27 %) aber
   unter 010 (37 %). Offen: Wo genau springen die Leute ab (Zuschauerbindungs-Kurve)? Abendliche Postzeit scheint besser zu laufen.
