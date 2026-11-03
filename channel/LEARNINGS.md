@@ -114,6 +114,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-11-03 · S2E02 Van Dijk (47 s) auf **TikTok** nach ~7 h: 1.040 Aufrufe, 44 Likes (4,2 %), 0 Kommentare, 3 Shares, 5 Saves,
+  Ø **13,9 s (30 %)**, 5,3 % ganz, **0 Follower**. Spitze in Stunde 2, danach Abfall. Erkenntnis: Follow-Gag ganz am Ende sehen nur ~5 %
+  → Follow-/Kommentar-Aufruf früher einbauen (Mitte, nach dem ersten Höhepunkt); ohne Kommentar-Frage kommen keine Kommentare.
 - 2026-11-03 · S2E01 Short (52 s, 3D, Follow-Gag) auf **YouTube Shorts**: nach 2 h 1.260 Aufrufe, Ø Wiedergabe **0:30 (≈ 58 %)**,
   **44,8 % angesehen / 55,2 % weggewischt** (frühere Folgen ~26 % / 74 %). Bester Wert bisher: 3D-Stil + roter Faden + ~50 s funktioniert.
 - 2026-11-02 · S2E01 v3 (3D-Stil, 78 s, gepostet 20:13): nach ~2 h 599 Aufrufe, Ø Wiedergabe **21,4 s** (vorher ~9–10 s),
