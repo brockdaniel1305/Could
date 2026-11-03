@@ -1,0 +1,681 @@
+{
+ "duration": 43.551,
+ "voice": "kokoro:am_adam",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 3.089,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 2.539,
+   "cues": {},
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.443
+    },
+    {
+     "text": "Virgil",
+     "start": 0.443,
+     "end": 0.795
+    },
+    {
+     "text": "Van Dijk",
+     "start": 0.795,
+     "end": 0.97
+    },
+    {
+     "text": "stop",
+     "start": 1.205,
+     "end": 1.439
+    },
+    {
+     "text": "the",
+     "start": 1.439,
+     "end": 1.615
+    },
+    {
+     "text": "running",
+     "start": 1.615,
+     "end": 2.025
+    },
+    {
+     "text": "of",
+     "start": 2.025,
+     "end": 2.143
+    },
+    {
+     "text": "the",
+     "start": 2.143,
+     "end": 2.318
+    },
+    {
+     "text": "bulls?",
+     "start": 2.318,
+     "end": 2.67
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 0.0,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s2-pamplona",
+   "start": 3.089,
+   "duration": 5.207,
+   "voice": "assets/voice/s2-pamplona.wav",
+   "voiceStart": 0.15,
+   "speech": 4.657,
+   "cues": {
+    "pam": 0.15,
+    "six": 1.152,
+    "ton": 2.218,
+    "run": 3.741
+   },
+   "words": [
+    {
+     "text": "Pamplona.",
+     "start": 0.15,
+     "end": 0.982
+    },
+    {
+     "text": "Six",
+     "start": 1.152,
+     "end": 1.452
+    },
+    {
+     "text": "bulls.",
+     "start": 1.452,
+     "end": 1.952
+    },
+    {
+     "text": "Over",
+     "start": 2.218,
+     "end": 2.519
+    },
+    {
+     "text": "half",
+     "start": 2.519,
+     "end": 2.82
+    },
+    {
+     "text": "a",
+     "start": 2.82,
+     "end": 2.896
+    },
+    {
+     "text": "ton",
+     "start": 2.896,
+     "end": 3.122
+    },
+    {
+     "text": "each.",
+     "start": 3.122,
+     "end": 3.498
+    },
+    {
+     "text": "Everyone",
+     "start": 3.741,
+     "end": 4.393
+    },
+    {
+     "text": "runs.",
+     "start": 4.393,
+     "end": 4.801
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s3-calm",
+   "start": 8.296,
+   "duration": 5.45,
+   "voice": "assets/voice/s3-calm.wav",
+   "voiceStart": 0.15,
+   "speech": 4.9,
+   "cues": {
+    "vvd": 0.15,
+    "fifty": 1.744,
+    "nobody": 3.493
+   },
+   "words": [
+    {
+     "text": "Van Dijk",
+     "start": 0.15,
+     "end": 0.648
+    },
+    {
+     "text": "doesn't",
+     "start": 0.648,
+     "end": 1.146
+    },
+    {
+     "text": "run.",
+     "start": 1.146,
+     "end": 1.43
+    },
+    {
+     "text": "Fifty",
+     "start": 1.744,
+     "end": 1.889
+    },
+    {
+     "text": "Premier",
+     "start": 1.889,
+     "end": 2.395
+    },
+    {
+     "text": "League",
+     "start": 2.395,
+     "end": 2.83
+    },
+    {
+     "text": "games.",
+     "start": 2.83,
+     "end": 3.264
+    },
+    {
+     "text": "Nobody",
+     "start": 3.493,
+     "end": 3.886
+    },
+    {
+     "text": "dribbled",
+     "start": 3.886,
+     "end": 4.409
+    },
+    {
+     "text": "past",
+     "start": 4.409,
+     "end": 4.671
+    },
+    {
+     "text": "him.",
+     "start": 4.671,
+     "end": 4.933
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-bull1",
+   "start": 13.746,
+   "duration": 3.994,
+   "voice": "assets/voice/s4-bull1.wav",
+   "voiceStart": 0.15,
+   "speech": 3.444,
+   "cues": {
+    "one": 0.15,
+    "show": 1.075,
+    "fence": 2.655
+   },
+   "words": [
+    {
+     "text": "Bull",
+     "start": 0.15,
+     "end": 0.513
+    },
+    {
+     "text": "one.",
+     "start": 0.513,
+     "end": 0.875
+    },
+    {
+     "text": "He",
+     "start": 1.075,
+     "end": 1.221
+    },
+    {
+     "text": "shows",
+     "start": 1.221,
+     "end": 1.586
+    },
+    {
+     "text": "it",
+     "start": 1.586,
+     "end": 1.731
+    },
+    {
+     "text": "outside.",
+     "start": 1.731,
+     "end": 2.315
+    },
+    {
+     "text": "Into",
+     "start": 2.655,
+     "end": 2.963
+    },
+    {
+     "text": "the",
+     "start": 2.963,
+     "end": 3.193
+    },
+    {
+     "text": "fence.",
+     "start": 3.193,
+     "end": 3.655
+    }
+   ],
+   "sfx": [
+    {
+     "name": "stomp",
+     "cue": "fence",
+     "offset": -0.05,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s5-onetwo",
+   "start": 17.74,
+   "duration": 4.107,
+   "voice": "assets/voice/s5-onetwo.wav",
+   "voiceStart": 0.15,
+   "speech": 3.557,
+   "cues": {
+    "two": 0.15,
+    "step": 2.256
+   },
+   "words": [
+    {
+     "text": "Bulls",
+     "start": 0.15,
+     "end": 0.65
+    },
+    {
+     "text": "two",
+     "start": 0.65,
+     "end": 0.75
+    },
+    {
+     "text": "and",
+     "start": 0.75,
+     "end": 1.05
+    },
+    {
+     "text": "three",
+     "start": 1.05,
+     "end": 1.15
+    },
+    {
+     "text": "try",
+     "start": 1.15,
+     "end": 1.45
+    },
+    {
+     "text": "a",
+     "start": 1.45,
+     "end": 1.55
+    },
+    {
+     "text": "one-two.",
+     "start": 1.55,
+     "end": 2.006
+    },
+    {
+     "text": "He",
+     "start": 2.256,
+     "end": 2.38
+    },
+    {
+     "text": "just",
+     "start": 2.38,
+     "end": 2.627
+    },
+    {
+     "text": "steps",
+     "start": 2.627,
+     "end": 2.937
+    },
+    {
+     "text": "in",
+     "start": 2.937,
+     "end": 3.061
+    },
+    {
+     "text": "between.",
+     "start": 3.061,
+     "end": 3.556
+    }
+   ],
+   "sfx": [
+    {
+     "name": "boing",
+     "cue": "step",
+     "offset": 0.75,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s6-offside",
+   "start": 21.847,
+   "duration": 4.037,
+   "voice": "assets/voice/s6-offside.wav",
+   "voiceStart": 0.15,
+   "speech": 3.487,
+   "cues": {
+    "four": 0.15,
+    "up": 1.616,
+    "off": 2.891
+   },
+   "words": [
+    {
+     "text": "Bulls",
+     "start": 0.15,
+     "end": 0.659
+    },
+    {
+     "text": "four",
+     "start": 0.659,
+     "end": 0.761
+    },
+    {
+     "text": "and",
+     "start": 0.761,
+     "end": 1.066
+    },
+    {
+     "text": "five.",
+     "start": 1.066,
+     "end": 1.366
+    },
+    {
+     "text": "He",
+     "start": 1.616,
+     "end": 1.784
+    },
+    {
+     "text": "steps",
+     "start": 1.784,
+     "end": 2.204
+    },
+    {
+     "text": "up.",
+     "start": 2.204,
+     "end": 2.456
+    },
+    {
+     "text": "Offside.",
+     "start": 2.891,
+     "end": 3.731
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whistle",
+     "cue": "off",
+     "offset": -0.05,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s7-pepe",
+   "start": 25.884,
+   "duration": 6.704,
+   "voice": "assets/voice/s7-pepe.wav",
+   "voiceStart": 0.15,
+   "speech": 6.154,
+   "cues": {
+    "five": 0.15,
+    "zero": 1.259,
+    "six": 2.604,
+    "name": 4.561,
+    "pepe": 5.621
+   },
+   "words": [
+    {
+     "text": "Five",
+     "start": 0.15,
+     "end": 0.297
+    },
+    {
+     "text": "bulls.",
+     "start": 0.297,
+     "end": 1.03
+    },
+    {
+     "text": "Zero",
+     "start": 1.259,
+     "end": 1.53
+    },
+    {
+     "text": "dribbles.",
+     "start": 1.53,
+     "end": 2.139
+    },
+    {
+     "text": "Then",
+     "start": 2.604,
+     "end": 2.868
+    },
+    {
+     "text": "comes",
+     "start": 2.868,
+     "end": 3.199
+    },
+    {
+     "text": "bull",
+     "start": 3.199,
+     "end": 3.463
+    },
+    {
+     "text": "number",
+     "start": 3.463,
+     "end": 3.86
+    },
+    {
+     "text": "six.",
+     "start": 3.86,
+     "end": 4.124
+    },
+    {
+     "text": "Its",
+     "start": 4.561,
+     "end": 4.846
+    },
+    {
+     "text": "name:",
+     "start": 4.846,
+     "end": 5.321
+    },
+    {
+     "text": "P\u00e9p\u00e9.",
+     "start": 5.621,
+     "end": 6.304
+    }
+   ],
+   "sfx": [
+    {
+     "name": "swoosh",
+     "cue": "pepe",
+     "offset": 0.6,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s8-record",
+   "start": 32.588,
+   "duration": 5.202,
+   "voice": "assets/voice/s8-record.wav",
+   "voiceStart": 0.15,
+   "speech": 4.652,
+   "cues": {
+    "y19": 0.15,
+    "never": 3.373
+   },
+   "words": [
+    {
+     "text": "In",
+     "start": 0.15,
+     "end": 0.306
+    },
+    {
+     "text": "2019,",
+     "start": 0.306,
+     "end": 0.777
+    },
+    {
+     "text": "Nicolas",
+     "start": 0.777,
+     "end": 1.382
+    },
+    {
+     "text": "P\u00e9p\u00e9",
+     "start": 1.382,
+     "end": 1.785
+    },
+    {
+     "text": "ended",
+     "start": 1.785,
+     "end": 2.174
+    },
+    {
+     "text": "that",
+     "start": 2.174,
+     "end": 2.485
+    },
+    {
+     "text": "record.",
+     "start": 2.485,
+     "end": 3.03
+    },
+    {
+     "text": "Some",
+     "start": 3.373,
+     "end": 3.628
+    },
+    {
+     "text": "things",
+     "start": 3.628,
+     "end": 4.009
+    },
+    {
+     "text": "never",
+     "start": 4.009,
+     "end": 4.328
+    },
+    {
+     "text": "change.",
+     "start": 4.328,
+     "end": 4.773
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s9-end",
+   "start": 37.79,
+   "duration": 5.761,
+   "voice": "assets/voice/s9-end.wav",
+   "voiceStart": 0.15,
+   "speech": 5.311,
+   "cues": {
+    "follow": 0.15,
+    "dont": 2.673,
+    "loop": 4.139
+   },
+   "words": [
+    {
+     "text": "Follow,",
+     "start": 0.15,
+     "end": 0.513
+    },
+    {
+     "text": "or",
+     "start": 0.513,
+     "end": 0.634
+    },
+    {
+     "text": "he",
+     "start": 0.634,
+     "end": 0.755
+    },
+    {
+     "text": "shows",
+     "start": 0.755,
+     "end": 1.058
+    },
+    {
+     "text": "you",
+     "start": 1.058,
+     "end": 1.24
+    },
+    {
+     "text": "onto",
+     "start": 1.24,
+     "end": 1.482
+    },
+    {
+     "text": "your",
+     "start": 1.482,
+     "end": 1.724
+    },
+    {
+     "text": "weaker",
+     "start": 1.724,
+     "end": 2.087
+    },
+    {
+     "text": "side.",
+     "start": 2.087,
+     "end": 2.39
+    },
+    {
+     "text": "Don't",
+     "start": 2.673,
+     "end": 2.995
+    },
+    {
+     "text": "run",
+     "start": 2.995,
+     "end": 3.189
+    },
+    {
+     "text": "with",
+     "start": 3.189,
+     "end": 3.446
+    },
+    {
+     "text": "bulls.",
+     "start": 3.446,
+     "end": 3.833
+    },
+    {
+     "text": "So",
+     "start": 4.139,
+     "end": 4.281
+    },
+    {
+     "text": "if",
+     "start": 4.281,
+     "end": 4.423
+    },
+    {
+     "text": "anyone",
+     "start": 4.423,
+     "end": 4.85
+    },
+    {
+     "text": "asks",
+     "start": 4.85,
+     "end": 5.135
+    },
+    {
+     "text": "you:",
+     "start": 5.135,
+     "end": 5.419
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}
