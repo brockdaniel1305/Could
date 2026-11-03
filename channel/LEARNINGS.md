@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-03 · S2E02 · **Jede Folge bekommt eigene, sehr unauffällige Hintergrundmusik**, die zum Thema passt, aber nicht ablenkt.
+  `narration.json` → `"music": {"theme": "flamenco" | "stadium" | "march", "volume": 0.17}`; `build_episode.py` erzeugt sie mit
+  `tools/make_music.py` auf die Folgenlänge (lokal synthetisiert, keine Lizenzen). Pegel ~16 dB unter der Stimme.
 - 2026-11-03 · S2E02 · **"Prime" + Zeitraum nennen**: Bei der Vorstellung einer Legende "Prime …" sagen und schreiben und die Fakten
   zeitlich einordnen (z. B. "March 2018 to August 2019: fifty Premier League games").
 - 2026-11-03 · S2E02 · **Animationen nie "stumpf"**: Sekundärbewegung immer an (Atmen, Federn, Vorlehnen beim Laufen), Staub hinter

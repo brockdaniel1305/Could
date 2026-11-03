@@ -356,6 +356,10 @@ def main():
                               f'data-start="{at:.3f}" data-duration="{fx_dur}" data-track-index="{30 + fx_n}" data-volume="{fx.get("volume", 0.35)}"></audio>')
             fx_n += 1
     music = cfg.get("music")
+    if music and music.get("theme"):
+        # quiet theme music, synthesised to the episode length (tools/make_music.py); regenerated when the length changes
+        music.setdefault("src", "assets/music/theme.wav")
+        subprocess.run([sys.executable, str(ROOT / "tools/make_music.py"), music["theme"], f"{total:.2f}", str(ep / music["src"])], check=True)
     if music:
         audio_tags.append(f'      <audio id="music" class="clip" src="{music["src"]}" data-start="0" data-duration="{total}" '
                           f'data-track-index="19" data-volume="{music.get("volume", 0.14)}" data-fade-out="1.5"></audio>')

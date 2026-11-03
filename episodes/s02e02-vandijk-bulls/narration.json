@@ -97,5 +97,9 @@
       "text": "{{follow}}Follow, or he shows you onto your weaker side. ||0.25|| {{dont}}Don't run with bulls. ||0.25|| {{loop}}So if anyone asks you:",
       "sfx": []
     }
-  ]
+  ],
+  "music": {
+    "theme": "flamenco",
+    "volume": 0.17
+  }
 }
