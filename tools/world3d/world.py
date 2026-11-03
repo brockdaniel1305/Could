@@ -51,6 +51,7 @@ CSS = """
     #w3-chars { position: absolute; inset: 0; }
     #w3-fg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; pointer-events: none; }
     #w3-bubs { position: absolute; inset: 0; }
+    #w3-ov { position: absolute; inset: 0; z-index: 9000; pointer-events: none; }
     .w3b { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-origin: 0 0; display: none; }
     .w3b g[id$="-legL"], .w3b g[id$="-legR"], .w3b g[id$="-armL"], .w3b g[id$="-armR"] { transform-box: fill-box; transform-origin: 50% 0; }
     .w3b g[id$="-spin"] { transform-box: fill-box; transform-origin: 50% 50%; }

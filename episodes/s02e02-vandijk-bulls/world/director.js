@@ -23,13 +23,14 @@ export default function plot(T) {
   const HOOK = (i) => [-11 - i * 2.2, ZZ[i]];
   // Van Dijk
   A.v = { h: 1.95, unit: 330, stride: 1.9, path: [
+    // (yawns right after the cut in the hook)
     [0, 0, 0], [SHOW - 0.1, 0, 0], [SHOW + 0.6, 0.6, -0.7, "s"], [FENCE, 1.0, -0.6, "o"],          // shows bull 1 outside
     [STEP - 0.05, 1.0, -0.6], [STEP + 0.35, 1.2, 0, "o"],                                           // steps into the one-two
     [UP - 0.05, 1.2, 0], [UP + 0.4, -0.5, 0, "o"],                                                  // steps up: offside
     [PEPE - 0.05, -0.5, 0], [PEPE + 0.15, -0.5, -0.45, "o"], [PEPE + 0.35, -0.5, 0.55, "s"],      // bites on the step-over
     [PEPE + 1.4, -0.3, 0.3, "s"],
     [s("s9") - 0.05, 0, 0, "j"],
-  ], ev: [["yawn", c("s3.nobody") + 0.2, 1.0], ["spin", PEPE + 0.5, 0.8], ["armR", OFF - 0.15, 1.6], ["armR", c("s9.follow"), 1.8]],
+  ], ev: [["yawn", 1.5, 0.9], ["yawn", c("s3.nobody") + 0.2, 1.0], ["spin", PEPE + 0.5, 0.8], ["armR", OFF - 0.15, 1.6], ["armR", c("s9.follow"), 1.8]],
     look: (t) => (t > PEPE + 0.4 && t < c("s8.y19") ? 1 : t > c("s7.six") && t < PEPE ? -0.6 : 0) };
 
   // bulls: hook charge -> corral -> pack run -> staged one by one -> duels
@@ -70,7 +71,10 @@ export default function plot(T) {
   const sh = [];
   const add = (o) => sh.push(o);
   const OPEN = { P: [3.0, 0.9, 0.5], T: [-4, 2.0, 0] };
-  add({ t0: 0, k: "path", P: [OPEN.P, [2.6, 0.95, 0.45]], T: [OPEN.T, [-4, 2.0, 0]], fov: [50, 46], ease: "i", blur: 1.8 });
+  // YouTube hook: frame 0 is the threat - riding in front of a charging bull (speed lines, dust); hard cut at 1.3 s to Van Dijk, unbothered
+  const CUT = 1.3, HOOKCAM = { k: "follow", who: "b1", off: [2.9, 0.75, 0.45], look: [-2, 1.35, 0], fov: [46, 46], roll: 6, blur: 2.4 };
+  add({ t0: 0, ...HOOKCAM });
+  add({ t0: CUT, k: "path", P: [[2.4, 0.95, 0.45], [2.2, 1.0, 0.42]], T: [[-4, 2.0, 0], [-4, 2.0, 0]], fov: [44, 40], ease: "i", blur: 1.8 });
   // s2: rise up the street towards the church as the gate opens; head-on with a bull; under a bull; the runners
   add({ t0: s("s2") + 0.1, blend: 0.45, whip: true, k: "path", P: [[-64, 2.5, 0.3], [-65, 10, 0.3], [-64, 19, 0.3]], T: [[-90, 4, 0], [-90, 6, 0], [-88, 2, 0]], fov: [56, 60], blur: 0.4 });
   add({ t0: c("s2.six") + 0.25, blend: 0.5, k: "follow", who: "b1", off: [[3.4, 1.1, 0.7], [3.0, 1.0, 0.6]], look: [-2, 1.2, 0], fov: [44, 40], blur: 2.2 });
@@ -98,7 +102,7 @@ export default function plot(T) {
   add({ t0: c("s8.never") - 0.2, blend: 0.6, k: "path", P: [[55.5, 2.2, 6.5], [56.2, 2.3, 7]], T: [[62, 1.2, 0], [62.5, 1.3, 0]], fov: [50, 46], roll: [3, 4], blur: 1.6 });
   // s9: Van Dijk, then the whip back into the opening picture
   add({ t0: s("s9") + 0.05, blend: 0.45, whip: true, k: "path", P: [[2.7, 1.4, 0.3], [2.4, 1.4, 0.3]], T: [[0, 1.65, 0], [0, 1.65, 0]], fov: [48, 44], blur: 2.4 });
-  add({ t0: c("s9.loop") - 0.35, blend: 0.3, whip: true, k: "path", P: [[3.4, 1.0, 0.5], OPEN.P], T: [[-4, 2.0, 0], OPEN.T], fov: [50, 50], ease: "o", blur: 1.8 });
+  add({ t0: c("s9.loop") - 0.3, blend: 0.3, whip: true, ...HOOKCAM });   // loop: back to the charging bull of frame 0
   sh.forEach((x, i) => { x.t1 = x.t1 ?? (sh[i + 1] ? sh[i + 1].t0 : END); });
   sh[sh.length - 1].t1 = END;
 
@@ -118,14 +122,15 @@ export default function plot(T) {
     html: `<div class="ck">${k}</div><div class="cv">${v}</div>` });
   const slam = (id, t0, t1, html, top, size = 128) => ({ id, t0, t1, slam: true, cls: "slam", style: `top:${top}px;font-size:${size}px`, html });
   const overlays = [
-    slam("sl-hook", -1, s("s2") - 0.05, "PRIME<br>VAN DIJK<br><b>vs.</b> 6 BULLS", 330, 112),
+    slam("sl-hook", -1, 1.3, "6 BULLS", 360, 150),
+    slam("sl-hook-b", 1.3, s("s2") - 0.05, "<b>vs.</b> PRIME<br>VAN DIJK", 360, 118),
     chip("c-bulls", c("s2.ton"), c("s2.run") - 0.1, "PAMPLONA · 6 BULLS", "500+ kg each", 110, 400, "gold"),
     chip("c-prime", c("s3.vvd"), c("s3.fifty") - 0.05, "PRIME VAN DIJK", "Liverpool · No. 4", 120, 400, "dark"),
     chip("c-fifty", c("s3.fifty"), s("s4") - 0.05, "MAR 2018 – AUG 2019 · PREMIER LEAGUE", "50 games · 0 dribbled past", 40, 400, "gold"),
     chip("c-zero", c("s7.five"), c("s7.six") - 0.1, "5 BULLS", "0 dribbles", 120, 400, "dark"),
     chip("c-y19", c("s8.y19"), s("s9") - 0.05, "AUG 2019 · LIVERPOOL 3–1 ARSENAL", "Pépé ends the run at 50", 50, 400, "gold"),
     chip("c-dont", c("s9.dont"), LOOPJ, "SAFETY", "Don't run with bulls", 120, 1040, "red", "left"),
-    slam("sl-hook2", END - 0.35, END + 1, "PRIME<br>VAN DIJK<br><b>vs.</b> 6 BULLS", 330, 112),
+    slam("sl-hook2", END - 0.3, END + 1, "6 BULLS", 360, 150),
   ];
 
   return {
@@ -133,7 +138,7 @@ export default function plot(T) {
     actors: A, shots: sh, props, bubbles, overlays,
     shake: [FENCE, HIT],
     bursts: [{ who: "b1", t: FENCE, text: "BAM!" }, { who: "b2", t: HIT, text: "BONK!" }],
-    speedlines: (t) => Math.max(0.45 * (1 - sstep(s("s2") - 0.6, s("s2"), t)), sstep(c("s4.one"), c("s4.one") + 0.3, t) * (1 - sstep(SHOW + 0.3, SHOW + 0.6, t)) * 0.4,
+    speedlines: (t) => Math.max(0.6 * (1 - sstep(1.2, 1.4, t)), 0.6 * sstep(END - 0.35, END - 0.2, t), 0.3 * (1 - sstep(s("s2") - 0.6, s("s2"), t)), sstep(c("s4.one"), c("s4.one") + 0.3, t) * (1 - sstep(SHOW + 0.3, SHOW + 0.6, t)) * 0.4,
       sstep(c("s6.four"), c("s6.four") + 0.3, t) * (1 - sstep(OFF - 0.3, OFF, t)) * 0.4),
     crowd: (t) => (t > c("s8.never") - 0.3 && t < s("s9") ? 0.45 : t > c("s2.run") - 0.5 && t < s("s4") ? 0.2 : 0.07),
   };
