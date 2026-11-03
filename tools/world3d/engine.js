@@ -37,7 +37,7 @@ export function createWorld(plot) {
   renderer.setPixelRatio(1); renderer.setSize(1080, 1920, false); renderer.outputColorSpace = THREE.SRGBColorSpace;
   const scene = new THREE.Scene();
   const cam = new THREE.PerspectiveCamera(58, 1080 / 1920, 0.1, 700);
-  const st = buildStadium(THREE, scene);
+  const st = (plot.buildWorld || buildStadium)(THREE, scene);
 
   // ---------------- actors ----------------
   const el = (id) => document.getElementById(id);
@@ -47,10 +47,13 @@ export function createWorld(plot) {
     const rig = (p) => node.querySelector(`[id$="-${p}"]`);
     actors[name] = { ...a, name, node, pos: path(a.path), ev: a.ev || [],
       legL: rig("legL"), legR: rig("legR"), armL: rig("armL"), armR: rig("armR"), pupL: rig("pupL"), pupR: rig("pupR"),
-      h: a.h || 1.75, unit: a.unit || 340, y: a.y || 0 };
+      h: a.h || 1.75, unit: a.unit || 340, y: a.y || 0,
+      legsA: node.querySelectorAll(".legA"), legsB: node.querySelectorAll(".legB"),
+      vSide: node.querySelector(".v-side"), vFront: node.querySelector(".v-front"), stars: rig("stars"),
+      mO: rig("m-o"), mSmile: rig("m-smile") };
   }
   const evOf = (a, k, t) => a.ev.filter((e) => e[0] === k && t >= e[1]);
-  const pA = new THREE.Vector3(), pB = new THREE.Vector3();
+  const pA = new THREE.Vector3(), pB = new THREE.Vector3(), camDir = new THREE.Vector3(0, 0, -1);
   function project(x, y, z, hM) {
     pA.set(x, y, z).project(cam); pB.set(x, y + hM, z).project(cam);
     const vis = pA.z < 1 && pA.z > -1 && cam.position.distanceTo(new THREE.Vector3(x, y, z)) > 0.6;
@@ -59,7 +62,7 @@ export function createWorld(plot) {
   function actorAt(a, t) {
     const p = a.pos(t), p2 = a.pos(t + 0.05);
     const speed = Math.hypot(p2.x - p.x, p2.z - p.z) / 0.05;
-    let rot = 0, sx = 1, dy = a.y, arms = null, show = true;
+    let rot = 0, sx = 1, dy = a.y, arms = null, armR = null, show = true, dizzy = false, yawn = false;
     for (const e of a.ev) {
       const [k, t0, d = 0.6] = e;
       if (t < t0) continue;
@@ -70,10 +73,14 @@ export function createWorld(plot) {
       if (k === "arms" && t < t0 + d) arms = 160;
       if (k === "armsUp" && t < t0 + d) arms = 175;
       if (k === "hide" && t < t0 + d) show = false;
+      if (k === "armR" && t < t0 + d) armR = 170;            // one arm up (offside!)
+      if (k === "dizzy" && t < t0 + d) dizzy = true;          // stars over the head
+      if (k === "yawn" && t < t0 + d) yawn = true;            // mouth open
+      if (k === "charge" && t < t0 + d) dy += Math.abs(Math.sin((t - t0) * 14)) * 0.12;
       if (k === "dive") { const f = sstep(t0, t0 + 0.3, t); rot = (e[3] || 1) * 85 * f; dy += Math.sin(Math.min(1, (t - t0) / 0.4) * Math.PI) * 0.6; }
     }
     if (a.only && !(t >= a.only[0] && t < a.only[1])) show = false;
-    return { x: p.x, z: p.z, d: p.d, speed, rot, sx, dy, arms, show };
+    return { x: p.x, z: p.z, d: p.d, vx: (p2.x - p.x) / 0.05, vz: (p2.z - p.z) / 0.05, speed, rot, sx, dy, arms, armR, show, dizzy, yawn };
   }
   function drawActor(a, t) {
     const s = actorAt(a, t);
@@ -82,24 +89,39 @@ export function createWorld(plot) {
     if (!pr.vis) { a.node.style.display = "none"; return; }
     a.node.style.display = "block";
     const k = Math.abs(pr.h) / a.unit;
-    const sx = Math.abs(s.sx) < 0.12 ? 0.12 * Math.sign(s.sx || 1) : s.sx;
+    let sx = Math.abs(s.sx) < 0.12 ? 0.12 * Math.sign(s.sx || 1) : s.sx;
+    // two-view sprites (bulls): head-on when running towards/away from the camera, else side view facing the way it runs
+    if (a.vSide) {
+      let front = a.view === "front";
+      if (s.speed > 0.4) {
+        const fx = camDir.x, fz = camDir.z, dot = (s.vx * fx + s.vz * fz) / (s.speed * Math.hypot(fx, fz) || 1);
+        front = Math.abs(dot) > 0.72;
+        if (!front) { const q = project(s.x + s.vx * 0.1, s.dy, s.z + s.vz * 0.1, a.h); sx *= q.X < pr.X ? -1 : 1; }
+      } else if (a.facing) sx *= a.facing(t);
+      a.vSide.style.display = front ? "none" : "inline"; a.vFront.style.display = front ? "inline" : "none";
+    }
+    if (a.stars) a.stars.setAttribute("opacity", s.dizzy ? "1" : "0");
+    if (a.mO) { a.mO.setAttribute("opacity", s.yawn ? "1" : "0"); if (a.mSmile) a.mSmile.setAttribute("opacity", s.yawn ? "0" : "1"); }
     a.node.style.transform = `translate(${pr.X.toFixed(1)}px, ${pr.Y.toFixed(1)}px) scale(${(k * sx).toFixed(4)}, ${k.toFixed(4)}) rotate(${s.rot.toFixed(1)}deg)`;
     a.node.style.zIndex = String(5000 - Math.round(pr.dist * 20));
     // run cycle from distance travelled; idle sway when standing
     const run = clamp(s.speed / 2.5, 0, 1), ph = (s.d / (a.stride || 1.9)) * Math.PI * 2;
     const sw = run * Math.sin(ph) * 32 + (1 - run) * Math.sin(t * 2.2 + a.unit) * 2;
     if (a.legL) { a.legL.style.transform = `rotate(${sw}deg)`; a.legR.style.transform = `rotate(${-sw}deg)`; }
+    for (const g of a.legsA) g.style.transform = `rotate(${sw}deg)`;
+    for (const g of a.legsB) g.style.transform = `rotate(${-sw}deg)`;
     if (a.armL) {
-      const al = s.arms != null ? s.arms : -sw * 0.8, ar = s.arms != null ? -s.arms : sw * 0.8;
+      const al = s.arms != null ? s.arms : -sw * 0.8, ar = s.armR != null ? -s.armR : s.arms != null ? -s.arms : sw * 0.8;
       a.armL.style.transform = `rotate(${al}deg)`; a.armR.style.transform = `rotate(${ar}deg)`;
     }
-    if (a.pupL) { const look = a.look ? a.look(t) : 0; a.pupL.style.transform = a.pupR.style.transform = `translateX(${look * 5}px)`; }
+    if (a.pupL || a.pupR) { const look = a.look ? a.look(t) : 0; for (const p of [a.pupL, a.pupR]) if (p) p.style.transform = `translateX(${look * 5}px)`; }
     return { ...s, pr };
   }
 
   // ---------------- ball ----------------
   // segments: { t0, t1, k: "at", who, dx, dz, y } | { t0, t1, k: "fly", a: [x,y,z], b: [x,y,z], h } | { t0, k: "rest", p: [x,y,z] }
-  const ballNode = el("w3-ball"), ballSpin = ballNode.querySelector('[id$="-spin"]');
+  const ballNode = el("w3-ball"), ballSpin = ballNode ? ballNode.querySelector('[id$="-spin"]') : null;
+  if (!plot.ball) plot.ball = [{ t0: 0, k: "rest", p: [0, -50, 0] }];
   const ballPos = (t) => {
     let seg = plot.ball[0];
     for (const s of plot.ball) if (t >= s.t0) seg = s;
@@ -154,6 +176,7 @@ export function createWorld(plot) {
     // a little handheld drift keeps every shot alive
     cam.rotation.z += Math.sin(t * 0.9) * 0.004; cam.rotation.x += Math.sin(t * 1.3 + 1) * 0.002;
     cam.updateMatrixWorld();
+    camDir.copy(pose.T).sub(pose.P);
     return { blur: pose.blur, whip };
   }
 
@@ -182,7 +205,7 @@ export function createWorld(plot) {
     for (const a of Object.values(actors)) drawActor(a, t);
     // ball
     const bp = ballPos(t), bpr = project(bp[0], bp[1], bp[2], 0.22);
-    const showBall = !(plot.ballHidden && plot.ballHidden(t));
+    const showBall = !!ballNode && !(plot.ballHidden && plot.ballHidden(t));
     if (bpr.vis && showBall) {
       ballNode.style.display = "block";
       ballNode.style.transform = `translate(${bpr.X.toFixed(1)}px, ${bpr.Y.toFixed(1)}px) scale(${(Math.abs(bpr.h) / 76).toFixed(4)})`;
@@ -192,7 +215,7 @@ export function createWorld(plot) {
       sh.style.transform = `translate(${spr.X.toFixed(1)}px, ${spr.Y.toFixed(1)}px) scale(${(Math.abs(spr.h) / 76).toFixed(4)})`;
       sh.style.zIndex = String(5000 - Math.round(spr.dist * 20)); sh.style.display = "block";
       sh.style.opacity = String(clamp(0.35 - bp[1] * 0.05, 0.05, 0.35));
-    } else { ballNode.style.display = "none"; el("w3-ballshadow").style.display = "none"; }
+    } else if (ballNode) { ballNode.style.display = "none"; el("w3-ballshadow").style.display = "none"; }
     // props
     for (const p of props) {
       const on = !p.only || (t >= p.only[0] && t < p.only[1]);

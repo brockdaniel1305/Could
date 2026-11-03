@@ -1,0 +1,96 @@
+{
+  "id": "S2E02",
+  "title": "Could Virgil van Dijk stop the running of the bulls?",
+  "season": 2,
+  "episode": 2,
+  "format": "short",
+  "loop": true,
+  "world": true,
+  "provider": "voicestudio",
+  "voice": "fable",
+  "model": "tts-1",
+  "preview_voice": "am_adam",
+  "speed": 1.05,
+  "caption": "Could Virgil van Dijk stop the running of the bulls? 50 games, nobody got past him. 🐂🧱 #could #vandijk #liverpool #pamplona #football #shorts #fyp",
+  "scenes": [
+    {
+      "id": "s1-hook",
+      "text": "Could Virgil {Van Dijk|Van Dyke} stop the running of the bulls?",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "at": 0.0,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s2-pamplona",
+      "text": "{{pam}}Pamplona. ||0.17|| {{six}}Six bulls. ||0.17|| {{ton}}Over half a ton each. ||0.2|| {{run}}Everyone runs.",
+      "sfx": []
+    },
+    {
+      "id": "s3-calm",
+      "text": "{{vvd}}{Van Dijk|Van Dyke} doesn't run. ||0.25|| {{fifty}}Fifty Premier League games. ||0.17|| {{nobody}}Nobody dribbled past him.",
+      "sfx": []
+    },
+    {
+      "id": "s4-bull1",
+      "text": "{{one}}Bull one. ||0.2|| {{show}}He shows it outside. ||0.3|| {{fence}}Into the fence.",
+      "sfx": [
+        {
+          "name": "stomp",
+          "cue": "fence",
+          "offset": -0.05,
+          "volume": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s5-onetwo",
+      "text": "{{two}}Bulls two and three try a one-two. ||0.25|| {{step}}He just steps in between.",
+      "sfx": [
+        {
+          "name": "boing",
+          "cue": "step",
+          "offset": 0.75,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s6-offside",
+      "text": "{{four}}Bulls four and five. ||0.25|| {{up}}He steps up. ||0.4|| {{off}}Offside.",
+      "sfx": [
+        {
+          "name": "whistle",
+          "cue": "off",
+          "offset": -0.05,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s7-pepe",
+      "text": "{{five}}Five bulls. ||0.17|| {{zero}}Zero dribbles. ||0.3|| {{six}}Then comes bull number six. ||0.4|| {{name}}Its name: ||0.3|| {{pepe}}{Pépé|Peh-peh}.",
+      "sfx": [
+        {
+          "name": "swoosh",
+          "cue": "pepe",
+          "offset": 0.6,
+          "volume": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s8-record",
+      "text": "{{y19}}In {2019|twenty nineteen}, Nicolas {Pépé|Peh-peh} ended that record. ||0.3|| {{never}}Some things never change.",
+      "sfx": []
+    },
+    {
+      "id": "s9-end",
+      "text": "{{follow}}Follow, or he shows you onto your weaker side. ||0.25|| {{dont}}Don't run with bulls. ||0.25|| {{loop}}So if anyone asks you:",
+      "sfx": []
+    }
+  ]
+}

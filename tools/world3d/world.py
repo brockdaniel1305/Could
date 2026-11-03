@@ -52,6 +52,7 @@ CSS = """
     .w3b { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-origin: 0 0; display: none; }
     .w3b g[id$="-legL"], .w3b g[id$="-legR"], .w3b g[id$="-armL"], .w3b g[id$="-armR"] { transform-box: fill-box; transform-origin: 50% 0; }
     .w3b g[id$="-spin"] { transform-box: fill-box; transform-origin: 50% 50%; }
+    .w3b .legA, .w3b .legB { transform-box: fill-box; transform-origin: 50% 0; }
     .w3-vig { position: absolute; inset: 0; pointer-events: none;
               background: radial-gradient(ellipse 85% 62% at 50% 52%, transparent 58%, rgba(4, 7, 18, 0.5) 100%); }
     .bub { position: absolute; left: 0; top: 0; display: none; padding: 10px 20px; border-radius: 22px; background: #f4efe6; border: 5px solid #1a1a2e;
@@ -98,8 +99,9 @@ CSS = """
 def write(ep, sprites, overlays, extra_css=""):
     ep = Path(ep)
     timing = json.loads((ep / "timing.json").read_text())
-    for src, dst in [(THREE, "assets/lib/three.module.min.js"), (HERE / "engine.js", "assets/world/engine.js"),
-                     (HERE / "stadium3d.js", "assets/world/stadium3d.js"), (ep / "world/director.js", "assets/world/director.js")]:
+    files = [(THREE, "assets/lib/three.module.min.js"), (ep / "world/director.js", "assets/world/director.js")]
+    files += [(f, f"assets/world/{f.name}") for f in HERE.glob("*.js") if f.name != "dbg.mjs"]   # engine + every world module
+    for src, dst in files:
         (ep / dst).parent.mkdir(parents=True, exist_ok=True)
         shutil.copy(src, ep / dst)
     T = {"duration": timing["duration"], "start": {}, "cue": {}}
