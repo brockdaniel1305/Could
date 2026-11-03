@@ -48,7 +48,7 @@ export default function plot(T) {
       [PEPE + 1.0, 3, -1.4, "l"], [c("s8.y19"), 5.5, -1.2, "l"], [c("s8.never"), 50, 0, "l"], [c("s8.never") + 1.0, 62, 0, "o"]);
     if (i === 6) ev.push(["jump", c("s8.never") + 1.0, 2.5]);
     p.push([LOOPJ, hx, hz, "j"]); ev.push(["up", LOOPJ]);
-    A["b" + i] = { path: p, ev, h: 1.55, unit: 230, stride: 3.0, view: "front" };
+    A["b" + i] = { path: p, ev, h: 1.55, unit: 230, stride: 3.0, view: "front", dust: true };
   }
   A.b1.facing = (t) => 1;
 
@@ -80,11 +80,11 @@ export default function plot(T) {
   add({ t0: s("s3"), blend: 0.6, k: "path", P: [[3.2, 1.5, -1.8], [3.4, 1.5, 0], [3.0, 1.55, 1.7]], T: [[0, 1.4, 0], [0, 1.45, 0], [0, 1.5, 0]], fov: [50, 48], blur: 2.4 });
   add({ t0: c("s3.nobody") - 0.2, blend: 0.5, k: "path", P: [[1.9, 1.8, 0.5], [1.55, 1.8, 0.4]], T: [[0, 1.75, 0], [0, 1.75, 0]], fov: [40, 36], blur: 2.8 });
   // s4: through the planks of the near fence (blurred foreground), then a close crash into the far fence
-  add({ t0: c("s4.one") - 0.2, blend: 0.6, k: "path", P: [[-4.2, 2.2, -2.7], [-2.8, 2.2, -2.7]], T: [[0, 0.9, 0.8], [1.2, 0.9, 1.2]], fov: [58, 56], blur: 1.6 });
-  add({ t0: FENCE - 0.25, blend: 0.25, k: "path", P: [[0.6, 1.25, 0.1], [0.9, 1.2, 0.3]], T: [[2.4, 0.9, 2.6], [2.4, 0.9, 2.6]], fov: [40, 34], roll: [-4, -8], blur: 2.0 });
+  add({ t0: c("s4.one") - 0.2, blend: 0.6, k: "path", P: [[6.2, 2.4, -1.6], [5.4, 2.2, -1.4]], T: [[-3, 1.0, 0.6], [-2, 1.0, 0.8]], fov: [54, 50], roll: [-3, -4], blur: 1.8 });
+  add({ t0: FENCE - 0.15, blend: 0.3, k: "path", P: [[4.6, 1.5, 0.2], [4.3, 1.45, 0.4]], T: [[2.3, 0.9, 2.5], [2.3, 0.9, 2.5]], fov: [42, 34], roll: [-4, -8], blur: 2.0 });
   // s5: straight down on the one-two, then zoom in on the collision
   add({ t0: c("s5.two") - 0.1, blend: 0.6, k: "path", P: [[5.0, 6.5, 0.2], [4.4, 6.0, 0.2]], T: [[-4, 0, 0], [-3, 0, 0]], fov: [56, 54], blur: 0.4 });
-  add({ t0: STEP + 0.3, blend: 0.4, k: "path", P: [[0.5, 4.2, 0.02], [0.5, 3.6, 0.02]], T: [[0.45, 0, 0], [0.45, 0, 0]], fov: [56, 50], blur: 0.6 });
+  add({ t0: STEP + 0.3, blend: 0.4, k: "path", P: [[1.6, 3.0, 1.2], [1.3, 2.7, 1.0]], T: [[0.2, 0.3, 0], [0.2, 0.3, 0]], fov: [54, 48], roll: [6, 9], blur: 1.2 });
   // s6: worm's-eye behind Van Dijk, push in as he steps up, then the two puzzled bull faces
   add({ t0: c("s6.four") - 0.1, blend: 0.5, k: "path", P: [[3.2, 0.6, 0.7], [2.6, 0.65, 0.65]], T: [[-6, 2.2, 0.2], [-6, 2.2, 0.2]], fov: [54, 50], roll: [4, 5], blur: 1.6 });
   add({ t0: OFF + 0.4, blend: 0.35, k: "path", P: [[-1.1, 1.5, -1.3], [-1.4, 1.5, -1.3]], T: [[-4.6, 1.3, 0.1], [-4.6, 1.3, 0.1]], fov: [56, 52], blur: 2.2 });
@@ -118,19 +118,23 @@ export default function plot(T) {
     html: `<div class="ck">${k}</div><div class="cv">${v}</div>` });
   const slam = (id, t0, t1, html, top, size = 128) => ({ id, t0, t1, slam: true, cls: "slam", style: `top:${top}px;font-size:${size}px`, html });
   const overlays = [
-    slam("sl-hook", -1, s("s2") - 0.05, "VAN DIJK<br><b>vs.</b> 6 BULLS", 360, 128),
+    slam("sl-hook", -1, s("s2") - 0.05, "PRIME<br>VAN DIJK<br><b>vs.</b> 6 BULLS", 330, 112),
     chip("c-bulls", c("s2.ton"), c("s2.run") - 0.1, "PAMPLONA · 6 BULLS", "500+ kg each", 110, 400, "gold"),
-    chip("c-fifty", c("s3.fifty"), s("s4") - 0.05, "PREMIER LEAGUE", "50 games · 0 dribbled past", 60, 400, "dark"),
+    chip("c-prime", c("s3.vvd"), c("s3.fifty") - 0.05, "PRIME VAN DIJK", "Liverpool · No. 4", 120, 400, "dark"),
+    chip("c-fifty", c("s3.fifty"), s("s4") - 0.05, "MAR 2018 – AUG 2019 · PREMIER LEAGUE", "50 games · 0 dribbled past", 40, 400, "gold"),
     chip("c-zero", c("s7.five"), c("s7.six") - 0.1, "5 BULLS", "0 dribbles", 120, 400, "dark"),
     chip("c-y19", c("s8.y19"), s("s9") - 0.05, "AUG 2019 · LIVERPOOL 3–1 ARSENAL", "Pépé ends the run at 50", 50, 400, "gold"),
     chip("c-dont", c("s9.dont"), LOOPJ, "SAFETY", "Don't run with bulls", 120, 1040, "red", "left"),
-    slam("sl-hook2", END - 0.35, END + 1, "VAN DIJK<br><b>vs.</b> 6 BULLS", 360, 128),
+    slam("sl-hook2", END - 0.35, END + 1, "PRIME<br>VAN DIJK<br><b>vs.</b> 6 BULLS", 330, 112),
   ];
 
   return {
     buildWorld: buildPamplona, camBounds: pamplonaBounds, fgBlur: 6,
     actors: A, shots: sh, props, bubbles, overlays,
     shake: [FENCE, HIT],
+    bursts: [{ who: "b1", t: FENCE, text: "BAM!" }, { who: "b2", t: HIT, text: "BONK!" }],
+    speedlines: (t) => Math.max(0.45 * (1 - sstep(s("s2") - 0.6, s("s2"), t)), sstep(c("s4.one"), c("s4.one") + 0.3, t) * (1 - sstep(SHOW + 0.3, SHOW + 0.6, t)) * 0.4,
+      sstep(c("s6.four"), c("s6.four") + 0.3, t) * (1 - sstep(OFF - 0.3, OFF, t)) * 0.4),
     crowd: (t) => (t > c("s8.never") - 0.3 && t < s("s9") ? 0.45 : t > c("s2.run") - 0.5 && t < s("s4") ? 0.2 : 0.07),
   };
 }

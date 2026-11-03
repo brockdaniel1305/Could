@@ -1,56 +1,61 @@
 {
  "s1-hook.part0.wav": {
-  "key": "fca436b80449228bfd2541d18076e4ec6a3e49f8",
+  "key": "de163fddfbf72d6ed0993d6ac48a4d4c625588bc",
   "words": [
    {
     "text": "Could",
     "start": 0,
-    "end": 0.293
+    "end": 0.317
+   },
+   {
+    "text": "Prime",
+    "start": 0.317,
+    "end": 0.633
    },
    {
     "text": "Virgil",
-    "start": 0.293,
-    "end": 0.645
+    "start": 0.633,
+    "end": 1.013
    },
    {
     "text": "van",
-    "start": 0.645,
-    "end": 0.82
+    "start": 1.013,
+    "end": 1.203
    },
    {
     "text": "Dyck",
-    "start": 0.82,
-    "end": 1.055
+    "start": 1.203,
+    "end": 1.457
    },
    {
     "text": "stop",
-    "start": 1.055,
-    "end": 1.289
+    "start": 1.457,
+    "end": 1.71
    },
    {
     "text": "the",
-    "start": 1.289,
-    "end": 1.465
+    "start": 1.71,
+    "end": 1.9
    },
    {
     "text": "running",
-    "start": 1.465,
-    "end": 1.875
+    "start": 1.9,
+    "end": 2.343
    },
    {
     "text": "of",
-    "start": 1.875,
-    "end": 1.993
+    "start": 2.343,
+    "end": 2.47
    },
    {
     "text": "the",
-    "start": 1.993,
-    "end": 2.168
+    "start": 2.47,
+    "end": 2.66
    },
    {
     "text": "Bulls?",
-    "start": 2.168,
-    "end": 2.52
+    "start": 2.66,
+    "end": 3.04
    }
   ]
  },
@@ -125,31 +130,66 @@
   ]
  },
  "s3-calm.part0.wav": {
-  "key": "c318e85e370624097c2709d514deb7c6ef1500a9",
+  "key": "0663f9fe4bce33e4508b82f89698e9b2d66ca5a8",
   "words": [
    {
-    "text": "Van",
+    "text": "Prime",
     "start": 0,
-    "end": 0.213
+    "end": 0.339
    },
    {
-    "text": "Dyke",
-    "start": 0.213,
-    "end": 0.498
+    "text": "van",
+    "start": 0.339,
+    "end": 0.543
+   },
+   {
+    "text": "Dyck",
+    "start": 0.543,
+    "end": 0.814
    },
    {
     "text": "doesn't",
-    "start": 0.498,
-    "end": 0.996
+    "start": 0.814,
+    "end": 1.289
    },
    {
     "text": "run.",
-    "start": 0.996,
-    "end": 1.28
+    "start": 1.289,
+    "end": 1.56
    }
   ]
  },
  "s3-calm.part1.wav": {
+  "key": "51da98269760b848ca3f4ba3eba71de1e0038f37",
+  "words": [
+   {
+    "text": "March",
+    "start": 0,
+    "end": 0.58
+   },
+   {
+    "text": "2018",
+    "start": 0.58,
+    "end": 1.044
+   },
+   {
+    "text": "\u2013",
+    "start": 1.044,
+    "end": 1.16
+   },
+   {
+    "text": "August",
+    "start": 1.16,
+    "end": 1.856
+   },
+   {
+    "text": "2019",
+    "start": 1.856,
+    "end": 2.32
+   }
+  ]
+ },
+ "s3-calm.part2.wav": {
   "key": "0f87d568512c26c79e9ecc60fbdbd9cf47b39d6f",
   "words": [
    {
@@ -171,31 +211,6 @@
     "text": "Games.",
     "start": 1.086,
     "end": 1.52
-   }
-  ]
- },
- "s3-calm.part2.wav": {
-  "key": "8a3e66adb768feaaf6e3ede7bed5e5af93349b01",
-  "words": [
-   {
-    "text": "Nobody",
-    "start": 0,
-    "end": 0.393
-   },
-   {
-    "text": "dribbled",
-    "start": 0.393,
-    "end": 0.916
-   },
-   {
-    "text": "past",
-    "start": 0.916,
-    "end": 1.178
-   },
-   {
-    "text": "him.",
-    "start": 1.178,
-    "end": 1.44
    }
   ]
  },
@@ -636,6 +651,31 @@
     "text": "you.",
     "start": 0.996,
     "end": 1.28
+   }
+  ]
+ },
+ "s3-calm.part3.wav": {
+  "key": "8a3e66adb768feaaf6e3ede7bed5e5af93349b01",
+  "words": [
+   {
+    "text": "Nobody",
+    "start": 0,
+    "end": 0.393
+   },
+   {
+    "text": "dribbled",
+    "start": 0.393,
+    "end": 0.916
+   },
+   {
+    "text": "past",
+    "start": 0.916,
+    "end": 1.178
+   },
+   {
+    "text": "him.",
+    "start": 1.178,
+    "end": 1.44
    }
   ]
  }

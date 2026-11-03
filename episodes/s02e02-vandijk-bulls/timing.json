@@ -1,60 +1,65 @@
 {
- "duration": 43.551,
+ "duration": 46.93,
  "voice": "kokoro:am_adam",
  "scenes": [
   {
    "id": "s1-hook",
    "start": 0.0,
-   "duration": 3.089,
+   "duration": 3.601,
    "voice": "assets/voice/s1-hook.wav",
    "voiceStart": 0.15,
-   "speech": 2.539,
+   "speech": 3.051,
    "cues": {},
    "words": [
     {
      "text": "Could",
      "start": 0.15,
-     "end": 0.443
+     "end": 0.467
+    },
+    {
+     "text": "prime",
+     "start": 0.467,
+     "end": 0.783
     },
     {
      "text": "Virgil",
-     "start": 0.443,
-     "end": 0.795
+     "start": 0.783,
+     "end": 1.163
     },
     {
      "text": "Van Dijk",
-     "start": 0.795,
-     "end": 0.97
+     "start": 1.163,
+     "end": 1.353
     },
     {
      "text": "stop",
-     "start": 1.205,
-     "end": 1.439
+     "start": 1.607,
+     "end": 1.86
     },
     {
      "text": "the",
-     "start": 1.439,
-     "end": 1.615
+     "start": 1.86,
+     "end": 2.05
     },
     {
      "text": "running",
-     "start": 1.615,
-     "end": 2.025
+     "start": 2.05,
+     "end": 2.493
     },
     {
      "text": "of",
-     "start": 2.025,
-     "end": 2.143
+     "start": 2.493,
+     "end": 2.62
     },
     {
      "text": "the",
-     "start": 2.143,
-     "end": 2.318
+     "start": 2.62,
+     "end": 2.81
     },
     {
      "text": "bulls?",
-     "start": 2.318,
-     "end": 2.67
+     "start": 2.81,
+     "end": 3.19
     }
    ],
    "sfx": [
@@ -67,7 +72,7 @@
   },
   {
    "id": "s2-pamplona",
-   "start": 3.089,
+   "start": 3.601,
    "duration": 5.207,
    "voice": "assets/voice/s2-pamplona.wav",
    "voiceStart": 0.15,
@@ -134,78 +139,109 @@
   },
   {
    "id": "s3-calm",
-   "start": 8.296,
-   "duration": 5.45,
+   "start": 8.808,
+   "duration": 8.317,
    "voice": "assets/voice/s3-calm.wav",
    "voiceStart": 0.15,
-   "speech": 4.9,
+   "speech": 7.767,
    "cues": {
     "vvd": 0.15,
-    "fifty": 1.744,
-    "nobody": 3.493
+    "fifty": 2.021,
+    "games": 4.611,
+    "nobody": 6.359
    },
    "words": [
     {
-     "text": "Van Dijk",
+     "text": "Prime",
      "start": 0.15,
-     "end": 0.648
+     "end": 0.489
+    },
+    {
+     "text": "Van Dijk",
+     "start": 0.489,
+     "end": 0.693
     },
     {
      "text": "doesn't",
-     "start": 0.648,
-     "end": 1.146
+     "start": 0.964,
+     "end": 1.439
     },
     {
      "text": "run.",
-     "start": 1.146,
-     "end": 1.43
+     "start": 1.439,
+     "end": 1.71
+    },
+    {
+     "text": "March",
+     "start": 2.021,
+     "end": 2.601
+    },
+    {
+     "text": "2018",
+     "start": 2.601,
+     "end": 2.949
+    },
+    {
+     "text": "to",
+     "start": 2.949,
+     "end": 3.181
+    },
+    {
+     "text": "August",
+     "start": 3.181,
+     "end": 3.877
+    },
+    {
+     "text": "2019.",
+     "start": 3.877,
+     "end": 4.411
     },
     {
      "text": "Fifty",
-     "start": 1.744,
-     "end": 1.889
+     "start": 4.611,
+     "end": 4.756
     },
     {
      "text": "Premier",
-     "start": 1.889,
-     "end": 2.395
+     "start": 4.756,
+     "end": 5.262
     },
     {
      "text": "League",
-     "start": 2.395,
-     "end": 2.83
+     "start": 5.262,
+     "end": 5.697
     },
     {
      "text": "games.",
-     "start": 2.83,
-     "end": 3.264
+     "start": 5.697,
+     "end": 6.131
     },
     {
      "text": "Nobody",
-     "start": 3.493,
-     "end": 3.886
+     "start": 6.359,
+     "end": 6.752
     },
     {
      "text": "dribbled",
-     "start": 3.886,
-     "end": 4.409
+     "start": 6.752,
+     "end": 7.275
     },
     {
      "text": "past",
-     "start": 4.409,
-     "end": 4.671
+     "start": 7.275,
+     "end": 7.537
     },
     {
      "text": "him.",
-     "start": 4.671,
-     "end": 4.933
+     "start": 7.537,
+     "end": 7.799
     }
    ],
    "sfx": []
   },
   {
    "id": "s4-bull1",
-   "start": 13.746,
+   "start": 17.125,
    "duration": 3.994,
    "voice": "assets/voice/s4-bull1.wav",
    "voiceStart": 0.15,
@@ -273,7 +309,7 @@
   },
   {
    "id": "s5-onetwo",
-   "start": 17.74,
+   "start": 21.119,
    "duration": 4.107,
    "voice": "assets/voice/s5-onetwo.wav",
    "voiceStart": 0.15,
@@ -355,7 +391,7 @@
   },
   {
    "id": "s6-offside",
-   "start": 21.847,
+   "start": 25.226,
    "duration": 4.037,
    "voice": "assets/voice/s6-offside.wav",
    "voiceStart": 0.15,
@@ -418,7 +454,7 @@
   },
   {
    "id": "s7-pepe",
-   "start": 25.884,
+   "start": 29.263,
    "duration": 6.704,
    "voice": "assets/voice/s7-pepe.wav",
    "voiceStart": 0.15,
@@ -503,7 +539,7 @@
   },
   {
    "id": "s8-record",
-   "start": 32.588,
+   "start": 35.967,
    "duration": 5.202,
    "voice": "assets/voice/s8-record.wav",
    "voiceStart": 0.15,
@@ -573,7 +609,7 @@
   },
   {
    "id": "s9-end",
-   "start": 37.79,
+   "start": 41.169,
    "duration": 5.761,
    "voice": "assets/voice/s9-end.wav",
    "voiceStart": 0.15,

@@ -46,6 +46,7 @@
       <circle cx="-12" cy="34" r="4.5" fill="#1a1a2e" /><circle cx="12" cy="34" r="4.5" fill="#1a1a2e" />
       <circle cx="0" cy="52" r="11" fill="none" stroke="#ffd23f" stroke-width="5" />
     </g>
+    <g class="steam" opacity="0"><circle cx="-26" cy="-96" r="12" fill="#f4f1ea" opacity="0.9" /><circle cx="26" cy="-96" r="12" fill="#f4f1ea" opacity="0.9" /><circle cx="-36" cy="-84" r="8" fill="#f4f1ea" opacity="0.7" /><circle cx="36" cy="-84" r="8" fill="#f4f1ea" opacity="0.7" /></g>
   </g>
   <g id="PFX-stars" opacity="0" transform="translate(0,-250)">
     <path d="M-50,0 l6,-14 l6,14 l-14,-8 h16 z M0,-20 l6,-14 l6,14 l-14,-8 h16 z M50,0 l6,-14 l6,14 l-14,-8 h16 z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="2" />

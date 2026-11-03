@@ -1,6 +1,6 @@
 {
   "id": "S2E02",
-  "title": "Could Virgil van Dijk stop the running of the bulls?",
+  "title": "Could prime Virgil van Dijk stop the running of the bulls?",
   "season": 2,
   "episode": 2,
   "format": "short",
@@ -11,11 +11,11 @@
   "model": "tts-1",
   "preview_voice": "am_adam",
   "speed": 1.05,
-  "caption": "Could Virgil van Dijk stop the running of the bulls? 50 games, nobody got past him. 🐂🧱 #could #vandijk #liverpool #pamplona #football #shorts #fyp",
+  "caption": "Could prime Virgil van Dijk stop the running of the bulls? 50 games, nobody got past him. 🐂🧱 #could #vandijk #liverpool #pamplona #football #shorts #fyp",
   "scenes": [
     {
       "id": "s1-hook",
-      "text": "Could Virgil {Van Dijk|Van Dyke} stop the running of the bulls?",
+      "text": "Could prime Virgil {Van Dijk|Van Dyke} stop the running of the bulls?",
       "sfx": [
         {
           "name": "impact-bass-1",
@@ -31,7 +31,7 @@
     },
     {
       "id": "s3-calm",
-      "text": "{{vvd}}{Van Dijk|Van Dyke} doesn't run. ||0.25|| {{fifty}}Fifty Premier League games. ||0.17|| {{nobody}}Nobody dribbled past him.",
+      "text": "{{vvd}}Prime {Van Dijk|Van Dyke} doesn't run. ||0.25|| {{fifty}}March {2018|twenty eighteen} to August {2019|twenty nineteen}. ||0.2|| {{games}}Fifty Premier League games. ||0.17|| {{nobody}}Nobody dribbled past him.",
       "sfx": []
     },
     {

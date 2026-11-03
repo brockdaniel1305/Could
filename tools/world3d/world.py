@@ -55,10 +55,15 @@ CSS = """
     .w3b g[id$="-legL"], .w3b g[id$="-legR"], .w3b g[id$="-armL"], .w3b g[id$="-armR"] { transform-box: fill-box; transform-origin: 50% 0; }
     .w3b g[id$="-spin"] { transform-box: fill-box; transform-origin: 50% 50%; }
     .w3b .legA, .w3b .legB { transform-box: fill-box; transform-origin: 50% 0; }
+    .w3b .steam { transform-box: fill-box; transform-origin: 50% 0; }
     .w3-vig { position: absolute; inset: 0; pointer-events: none;
               background: radial-gradient(ellipse 85% 62% at 50% 52%, transparent 58%, rgba(4, 7, 18, 0.5) 100%); }
     .bub { position: absolute; left: 0; top: 0; display: none; padding: 10px 20px; border-radius: 22px; background: #f4efe6; border: 5px solid #1a1a2e;
            font: 900 46px/1 "Inter"; color: #1a1a2e; white-space: nowrap; box-shadow: 6px 6px 0 #1a1a2e; transform-origin: 50% 100%; }
+    .pow { position: absolute; left: 0; top: 0; display: none; z-index: 7000; transform-origin: 50% 50%; }
+    .speedlines { position: absolute; inset: -40%; pointer-events: none; opacity: 0; z-index: 3;
+      background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,0) 0deg 4deg, rgba(255,255,255,0.55) 4deg 5deg);
+      -webkit-mask: radial-gradient(circle at 50% 50%, transparent 30%, black 62%); mask: radial-gradient(circle at 50% 50%, transparent 30%, black 62%); }
     .bub.dark { background: #1a1a2e; color: #ffd23f; border-color: #ffd23f; }
     .bub.red { background: #e0412f; color: #fff; }
     .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;

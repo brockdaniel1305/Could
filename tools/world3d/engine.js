@@ -55,8 +55,19 @@ export function createWorld(plot) {
       h: a.h || 1.75, unit: a.unit || 340, y: a.y || 0,
       legsA: node.querySelectorAll(".legA"), legsB: node.querySelectorAll(".legB"),
       vSide: node.querySelector(".v-side"), vFront: node.querySelector(".v-front"), stars: rig("stars"),
-      mO: rig("m-o"), mSmile: rig("m-smile") };
+      mO: rig("m-o"), mSmile: rig("m-smile"), steam: node.querySelector(".v-front .steam") };
   }
+  const puffTex = (() => { const c = document.createElement("canvas"); c.width = c.height = 64; const g = c.getContext("2d");
+    const gr = g.createRadialGradient(32, 32, 0, 32, 32, 32); gr.addColorStop(0, "rgba(214,196,160,0.9)"); gr.addColorStop(1, "rgba(214,196,160,0)");
+    g.fillStyle = gr; g.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c); })();
+  const puffs = [];
+  for (const a of Object.values(actors)) if (a.dust) for (let k = 0; k < 9; k++) {
+    const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: puffTex, transparent: true, depthWrite: false })); scene.add(sp); puffs.push({ a, k, sp }); }
+  const puffsAt = (t) => { for (const p of puffs) { const age = p.k * 0.08 + ((t * 12.5) % 1) * 0.08, tp = t - age;
+      const q = p.a.pos(tp), q2 = p.a.pos(tp + 0.05), v = Math.hypot(q2.x - q.x, q2.z - q.z) / 0.05;
+      const on = v > 3 ? 1 : 0, f = age / 0.75;
+      p.sp.visible = on > 0 && f < 1; p.sp.position.set(q.x - (q2.x - q.x) * 2, 0.25 + f * 0.5, q.z - (q2.z - q.z) * 2);
+      const sc = 0.5 + f * 1.4; p.sp.scale.set(sc, sc, 1); p.sp.material.opacity = (1 - f) * 0.55; } };
   const evOf = (a, k, t) => a.ev.filter((e) => e[0] === k && t >= e[1]);
   const pA = new THREE.Vector3(), pB = new THREE.Vector3(), camDir = new THREE.Vector3(0, 0, -1);
   function project(x, y, z, hM) {
@@ -107,7 +118,14 @@ export function createWorld(plot) {
     }
     if (a.stars) a.stars.setAttribute("opacity", s.dizzy ? "1" : "0");
     if (a.mO) { a.mO.setAttribute("opacity", s.yawn ? "1" : "0"); if (a.mSmile) a.mSmile.setAttribute("opacity", s.yawn ? "0" : "1"); }
-    a.node.style.transform = `translate(${pr.X.toFixed(1)}px, ${pr.Y.toFixed(1)}px) scale(${(k * sx).toFixed(4)}, ${k.toFixed(4)}) rotate(${s.rot.toFixed(1)}deg)`;
+    const run0 = clamp(s.speed / 2.5, 0, 1), ph0 = (s.d / (a.stride || 1.9)) * Math.PI * 2, seed = (a.unit * 0.37 + a.name.length) % 6.28;
+    const breathe = 1 + (1 - run0) * 0.014 * Math.sin(t * 2.4 + seed);                       // idle breathing
+    const bobPx = run0 * Math.abs(Math.sin(ph0)) * -0.05 * Math.abs(pr.h);                    // bounce on every stride
+    let lean = 0;
+    if (run0 > 0.2) { const q = project(s.x + s.vx * 0.1, s.dy, s.z + s.vz * 0.1, a.h); lean = clamp((q.X - pr.X) * 0.12, -7, 7) * run0; }
+    a.node.style.transform = `translate(${pr.X.toFixed(1)}px, ${(pr.Y + bobPx).toFixed(1)}px) scale(${(k * sx).toFixed(4)}, ${(k * breathe).toFixed(4)}) rotate(${(s.rot + lean).toFixed(1)}deg)`;
+    if (a.steam) { const c = ((t + seed) % 1.3) / 1.3, on = run0 < 0.6 ? 1 : 0.5;
+      a.steam.style.opacity = String((1 - c) * 0.85 * on); a.steam.style.transform = `translateY(${(c * 26).toFixed(1)}px) scale(${(0.4 + c * 1.1).toFixed(2)})`; }
     a.node.style.zIndex = String(5000 - Math.round(pr.dist * 20));
     // run cycle from distance travelled; idle sway when standing
     const run = clamp(s.speed / 2.5, 0, 1), ph = (s.d / (a.stride || 1.9)) * Math.PI * 2;
@@ -197,6 +215,10 @@ export function createWorld(plot) {
   }
   (plot.bubbles || []).forEach((b, i) => { b.id = b.id || "w3-bub" + i; const d = document.createElement("div"); d.id = b.id;
     d.className = "bub " + (b.cls || ""); d.textContent = b.text; (el("w3-bubs") || chars).appendChild(d); });
+  (plot.bursts || []).forEach((b, i) => { b.id = "w3-pow" + i; const d = document.createElement("div"); d.id = b.id; d.className = "pow";
+    d.innerHTML = `<svg viewBox="-110 -80 220 160" width="260" height="190"><path d="M0,-78 L22,-36 L76,-58 L50,-12 L106,4 L52,22 L72,72 L18,42 L-6,80 L-24,40 L-80,66 L-52,18 L-108,0 L-54,-20 L-84,-62 L-28,-38 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="7" stroke-linejoin="round"/><text x="0" y="16" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44" fill="#e0412f" stroke="#1a1a2e" stroke-width="2">${b.text}</text></svg>`;
+    (el("w3-bubs") || chars).appendChild(d); });
+  const speed = document.createElement("div"); speed.className = "speedlines"; el("w3").insertBefore(speed, el("w3-ov"));
   const ov = (plot.overlays || []).map((o) => ({ ...o, node: el(o.id) }));
   const shake = plot.shake || [];
   const texts = (plot.texts || []).map((x) => ({ ...x, node: el(x.id) }));
@@ -210,6 +232,7 @@ export function createWorld(plot) {
       for (const g of times) if (t >= g && t < g + 0.8) b = Math.max(b, Math.sin(((t - g) / 0.8) * Math.PI) * Math.exp(-(t - g) * 2));
       n.scale.x = 1 + b * 0.8; n.position.x = (side === "left" ? -1 : 1) * (52.5 + 1 + b * 0.8);
     }
+    puffsAt(t);
     renderer.render(scene, cam);
     let dmin = Infinity;
     for (const a of Object.values(actors)) { const r = drawActor(a, t); if (r && r.pr && r.pr.vis && !a.noOcclude && r.pr.X > -150 && r.pr.X < 1230 && r.pr.Y > 0 && r.pr.Y < 2300) dmin = Math.min(dmin, r.pr.dist); }
@@ -270,6 +293,13 @@ export function createWorld(plot) {
       o.node.style.transform = `translateX(${dx}px) scale(${sc}) rotate(${o.slam ? -3 : 0}deg)`;
     }
     for (const x of texts) x.node.textContent = x.at(t);
+    for (const b of plot.bursts || []) { const node = el(b.id), a = actors[b.who], f = (t - b.t) / 0.55;
+      if (f < 0 || f > 1) { node.style.display = "none"; continue; }
+      const st2 = actorAt(a, t), pr = project(st2.x, st2.dy + a.h * 0.75, st2.z, 0.5);
+      node.style.display = pr.vis ? "block" : "none"; node.style.opacity = String(f < 0.8 ? 1 : (1 - f) * 5);
+      node.style.transform = `translate(${pr.X.toFixed(0)}px, ${pr.Y.toFixed(0)}px) translate(-50%, -50%) scale(${(0.4 + Math.min(1, f * 5) * 0.8).toFixed(2)}) rotate(${(-8 + f * 10).toFixed(1)}deg)`; }
+    const sl = plot.speedlines ? plot.speedlines(t) : 0;
+    speed.style.opacity = String(sl); speed.style.transform = `rotate(${(t * 40) % 360}deg) scale(1.6)`;
     if (plot.custom) plot.custom(t, { el, sstep, clamp, lerp });
     // depth of field + whip blur
     const b = blur + whip * 9;
