@@ -36,6 +36,11 @@ export function createWorld(plot) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
   renderer.setPixelRatio(1); renderer.setSize(1080, 1920, false); renderer.outputColorSpace = THREE.SRGBColorSpace;
   const scene = new THREE.Scene();
+  // foreground pass: everything nearer than the closest character is drawn again on a second canvas ABOVE the 2D characters
+  // (blurred), so fences, lanterns, flowers etc. frame and occlude them like real foreground objects
+  const fgCanvas = document.getElementById("w3-fg");
+  const fgR = fgCanvas && plot.foreground !== false ? new THREE.WebGLRenderer({ canvas: fgCanvas, antialias: true, alpha: true, preserveDrawingBuffer: true }) : null;
+  if (fgR) { fgR.setPixelRatio(1); fgR.setSize(1080, 1920, false); fgR.outputColorSpace = THREE.SRGBColorSpace; fgR.setClearColor(0x000000, 0); }
   const cam = new THREE.PerspectiveCamera(58, 1080 / 1920, 0.1, 700);
   const st = (plot.buildWorld || buildStadium)(THREE, scene);
 
@@ -142,6 +147,7 @@ export function createWorld(plot) {
 
   // ---------------- camera ----------------
   const v3 = (a) => new THREE.Vector3(a[0], a[1], a[2]);
+  const rollOf = (s, u) => (Array.isArray(s.roll) ? lerp(s.roll[0], s.roll[1], EASE.s(u)) : s.roll || 0);
   function shotPose(s, t) {
     const u = clamp((t - s.t0) / (s.t1 - s.t0), 0, 1);
     if (s.k === "path") {
@@ -149,7 +155,7 @@ export function createWorld(plot) {
       const n = s.P.length - 1, i = Math.min(n - 1, Math.floor(e * n)), f = e * n - i;
       const P = n === 0 ? v3(s.P[0]) : v3(s.P[i]).lerp(v3(s.P[i + 1]), EASE.s(f));
       const T = n === 0 ? v3(s.T[0]) : v3(s.T[Math.min(i, s.T.length - 2)]).lerp(v3(s.T[Math.min(i + 1, s.T.length - 1)]), EASE.s(f));
-      return { P, T, fov: s.fov ? lerp(s.fov[0], s.fov[1] ?? s.fov[0], e) : 58, blur: s.blur ?? 0 };
+      return { P, T, fov: s.fov ? lerp(s.fov[0], s.fov[1] ?? s.fov[0], e) : 58, blur: s.blur ?? 0, roll: rollOf(s, e) };
     }
     // follow: an actor or the ball, with offsets (offsets may be [from, to] pairs over the shot)
     const tgt = s.who === "ball" ? ballPos(t) : posOf(s.who, t);
@@ -159,7 +165,7 @@ export function createWorld(plot) {
     const ry = s.rideY ? tgt[1] : 0; // rideY: the camera rises and falls with the ball (chase cam)
     const P = new THREE.Vector3(tgt[0] + o[0], (lag ?? 0) + ry + o[1], tgt[2] + o[2]);
     const T = new THREE.Vector3(tgt[0] + l[0], (s.who === "ball" && !s.flat && !s.rideY ? tgt[1] * 0.6 : ry) + l[1], tgt[2] + l[2]);
-    return { P, T, fov: s.fov ? lerp(s.fov[0], s.fov[1] ?? s.fov[0], u) : 58, blur: s.blur ?? 2.2 };
+    return { P, T, fov: s.fov ? lerp(s.fov[0], s.fov[1] ?? s.fov[0], u) : 58, blur: s.blur ?? 2.2, roll: rollOf(s, u) };
   }
   function camAt(t) {
     const S = plot.shots;
@@ -169,10 +175,13 @@ export function createWorld(plot) {
     const nx = S[i + 1];
     if (nx && nx.blend && t > nx.t0 - nx.blend) {
       const f = EASE.s(clamp((t - (nx.t0 - nx.blend)) / nx.blend, 0, 1)), q = shotPose(nx, nx.t0);
-      pose = { P: pose.P.clone().lerp(q.P, f), T: pose.T.clone().lerp(q.T, f), fov: lerp(pose.fov, q.fov, f), blur: lerp(pose.blur, q.blur, f) };
+      pose = { P: pose.P.clone().lerp(q.P, f), T: pose.T.clone().lerp(q.T, f), fov: lerp(pose.fov, q.fov, f), blur: lerp(pose.blur, q.blur, f),
+               roll: lerp(pose.roll || 0, q.roll || 0, f) };
       if (nx.whip) whip = Math.sin(f * Math.PI);
     }
+    if (plot.camBounds) plot.camBounds(pose.P);   // keep the camera out of walls
     cam.position.copy(pose.P); cam.fov = pose.fov; cam.updateProjectionMatrix(); cam.lookAt(pose.T);
+    if (pose.roll) cam.rotateZ((pose.roll * Math.PI) / 180);   // dutch angle
     // a little handheld drift keeps every shot alive
     cam.rotation.z += Math.sin(t * 0.9) * 0.004; cam.rotation.x += Math.sin(t * 1.3 + 1) * 0.002;
     cam.updateMatrixWorld();
@@ -187,7 +196,7 @@ export function createWorld(plot) {
     if (o.style) d.setAttribute("style", o.style); host.appendChild(d);
   }
   (plot.bubbles || []).forEach((b, i) => { b.id = b.id || "w3-bub" + i; const d = document.createElement("div"); d.id = b.id;
-    d.className = "bub " + (b.cls || ""); d.textContent = b.text; chars.appendChild(d); });
+    d.className = "bub " + (b.cls || ""); d.textContent = b.text; (el("w3-bubs") || chars).appendChild(d); });
   const ov = (plot.overlays || []).map((o) => ({ ...o, node: el(o.id) }));
   const shake = plot.shake || [];
   const texts = (plot.texts || []).map((x) => ({ ...x, node: el(x.id) }));
@@ -202,7 +211,21 @@ export function createWorld(plot) {
       n.scale.x = 1 + b * 0.8; n.position.x = (side === "left" ? -1 : 1) * (52.5 + 1 + b * 0.8);
     }
     renderer.render(scene, cam);
-    for (const a of Object.values(actors)) drawActor(a, t);
+    let dmin = Infinity;
+    for (const a of Object.values(actors)) { const r = drawActor(a, t); if (r && r.pr && r.pr.vis && !a.noOcclude && r.pr.X > -150 && r.pr.X < 1230 && r.pr.Y > 0 && r.pr.Y < 2300) dmin = Math.min(dmin, r.pr.dist); }
+    if (fgR) {
+      const far = Math.min(dmin, plot.fgMax || 60) - 0.7;
+      if (far > 0.5) {
+        const bg = scene.background, hidden = [];
+        scene.background = null;
+        scene.traverse((o) => { if (o.userData.noFg && o.visible) { o.visible = false; hidden.push(o); } });
+        const near = cam.near, f0 = cam.far; cam.near = 0.1; cam.far = far; cam.updateProjectionMatrix();
+        fgR.render(scene, cam);
+        cam.near = near; cam.far = f0; cam.updateProjectionMatrix();
+        hidden.forEach((o) => (o.visible = true)); scene.background = bg;
+        fgCanvas.style.display = "block"; fgCanvas.style.filter = `blur(${plot.fgBlur ?? 5}px)`;
+      } else { fgR.clear(); fgCanvas.style.display = "none"; }
+    }
     // ball
     const bp = ballPos(t), bpr = project(bp[0], bp[1], bp[2], 0.22);
     const showBall = !!ballNode && !(plot.ballHidden && plot.ballHidden(t));

@@ -3,7 +3,7 @@
 // Five bulls, zero dribbles - then bull number six is called Pépé (the player who ended his real 50-game run in 2019).
 // Street along x (bulls run towards +x, the bullring is at x ~ 74), fences at z = +-3, Van Dijk waits at x = 0.
 import { path, sstep, clamp, lerp } from "./engine.js";
-import { buildPamplona } from "./pamplona3d.js";
+import { buildPamplona, pamplonaBounds } from "./pamplona3d.js";
 
 export default function plot(T) {
   const c = (k) => { if (!(k in T.cue)) throw new Error("cue " + k); return T.cue[k]; };
@@ -20,7 +20,7 @@ export default function plot(T) {
   // ---------------- actors ----------------
   const A = {};
   const ZZ = [0, -1.2, 1.0, -0.2, 1.6, -1.6, 0.4];
-  const HOOK = (i) => [-15 - i * 2.4, ZZ[i]];
+  const HOOK = (i) => [-11 - i * 2.2, ZZ[i]];
   // Van Dijk
   A.v = { h: 1.95, unit: 330, stride: 1.9, path: [
     [0, 0, 0], [SHOW - 0.1, 0, 0], [SHOW + 0.6, 0.6, -0.7, "s"], [FENCE, 1.0, -0.6, "o"],          // shows bull 1 outside
@@ -35,7 +35,7 @@ export default function plot(T) {
   // bulls: hook charge -> corral -> pack run -> staged one by one -> duels
   const STAGE = [0, -14, -18, -22, -26, -30, -36];
   for (let i = 1; i <= 6; i++) {
-    const [hx, hz] = HOOK(i), z = ZZ[i] * 0.8, p = [[0, hx, hz], [S2J, hx + 8, hz, "l"], [S2J, -85 - i * 1.6, ZZ[i], "j"],
+    const [hx, hz] = HOOK(i), z = ZZ[i] * 0.8, p = [[0, hx, hz], [S2J, hx + 5, hz, "l"], [S2J, -85 - i * 1.6, ZZ[i], "j"],
       [c("s2.six"), -85 - i * 1.6, ZZ[i]], [c("s3.vvd"), -42 - i * 2.5, z, "l"], [c("s4.one") - 0.6, STAGE[i], z, "o"]], ev = [];
     if (i === 1) { p.push([c("s4.one") - 0.4, STAGE[1], 0.3], [SHOW + 0.55, -2, 0.3, "i"], [FENCE - 0.05, 2.2, 2.45, "l"], [FENCE + 0.2, 2.3, 2.5, "o"]);
       ev.push(["dizzy", FENCE, 2.2], ["fall", FENCE + 0.15, 0.4, 1]); }
@@ -65,32 +65,40 @@ export default function plot(T) {
   };
 
   // ---------------- camera ----------------
+  // Every frame full: low angles under the bunting, close-ups, shots through the fence planks (foreground pass blurs them),
+  // a top-down for the one-two, push-ins and dutch angles. The camera never leaves the street below roof height (camBounds).
   const sh = [];
   const add = (o) => sh.push(o);
-  const OPEN = { P: [4.3, 1.5, 0.6], T: [-5, 1.6, 0] };
-  add({ t0: 0, k: "path", P: [OPEN.P, [4.7, 1.6, 0.8]], T: [OPEN.T, [-5, 1.6, 0]], ease: "i", blur: 1.6 });
-  // s2: whip to the corral end from above the rooftops, ride above the pack, then low as the runners flee past
-  add({ t0: s("s2") + 0.1, blend: 0.45, whip: true, k: "path", P: [[-62, 18, 0.4], [-57, 24, 0.4]], T: [[-82, 0, 0], [-76, 0, 0]], blur: 0 });
-  add({ t0: c("s2.six") + 0.1, blend: 0.6, k: "follow", who: "b3", off: [[10, 10, 9], [12, 8, 8]], look: [-4, 0, 0], blur: 0.3, flat: true });
-  add({ t0: c("s2.run") - 0.3, blend: 0.45, k: "path", P: [[-11, 2.3, 0.3], [-9.5, 2.3, 0.3]], T: [[-30, 1.2, 0], [-28, 1.2, 0]], blur: 1.6 });
-  // s3: push in on Van Dijk, the bulls far behind him
-  add({ t0: s("s3"), blend: 0.6, k: "path", P: [[6.5, 1.7, 1.3], [3.6, 1.6, 0.7]], T: [[-4, 1.5, 0], [-2, 1.5, 0]], blur: 1.8 });
-  // s4: elevated side view across the street (the far fence and balconies behind)
-  add({ t0: c("s4.one") - 0.2, blend: 0.6, k: "path", P: [[-1.5, 4.2, -5.2], [0.5, 4.0, -5.0]], T: [[-1, 0.6, 1.5], [1, 0.6, 1.5]], blur: 0.8 });
-  // s5: from above for the one-two
-  add({ t0: c("s5.two") - 0.1, blend: 0.6, k: "path", P: [[1.6, 7.5, 3.4], [1.4, 6.2, 2.8]], T: [[0.3, 0, 0], [0.4, 0, 0]], fov: [50, 50], blur: 0.3 });
-  // s6: low behind Van Dijk looking at the two charging bulls
-  add({ t0: c("s6.four") - 0.1, blend: 0.5, k: "path", P: [[6, 3.0, 1.2], [5, 2.8, 1.0]], T: [[-8, 1.2, -0.3], [-8, 1.2, -0.3]], blur: 1.4 });
-  // s7: wide over the five beaten bulls, low for number six, side view for the step-over
-  add({ t0: c("s7.five") - 0.1, blend: 0.6, k: "path", P: [[7, 5, 7], [5, 4.2, 6]], T: [[0, 0.5, 0], [0, 0.5, 0]], blur: 0.4 });
-  add({ t0: c("s7.six") - 0.1, blend: 0.5, k: "path", P: [[4.2, 2.6, 1.6], [3.4, 2.5, 1.3]], T: [[-8, 1.3, -0.2], [-8, 1.3, -0.2]], blur: 1.6 });
-  add({ t0: PEPE - 0.35, blend: 0.3, k: "path", P: [[-0.5, 4.0, -5.0], [1.5, 4.0, -5.0]], T: [[-0.5, 0.6, 1.5], [1.5, 0.6, 1.5]], blur: 0.8 });
-  // s8: ride with Pépé into the bullring
-  add({ t0: c("s8.y19") - 0.1, blend: 0.5, k: "follow", who: "b6", off: [[-7, 2.6, 4], [-8, 3, 5]], look: [6, 1.2, 0], blur: 1.2 });
-  add({ t0: c("s8.never") - 0.2, blend: 0.6, k: "path", P: [[54, 3, 8], [55, 3.4, 9]], T: [[62, 1.4, 0], [63, 1.8, 0]], blur: 1.0 });
-  // s9: back to Van Dijk, then the loop
-  add({ t0: s("s9") + 0.05, blend: 0.45, whip: true, k: "path", P: [[4.2, 1.6, 0.1], [3.7, 1.6, 0.1]], T: [[-2, 1.6, 0.3], [-2, 1.6, 0.3]], blur: 1.6 });
-  add({ t0: c("s9.loop") - 0.35, blend: 0.3, whip: true, k: "path", P: [[5.2, 1.7, 1.0], OPEN.P], T: [[-5, 1.6, 0], OPEN.T], ease: "o", blur: 1.6 });
+  const OPEN = { P: [3.0, 0.9, 0.5], T: [-4, 2.0, 0] };
+  add({ t0: 0, k: "path", P: [OPEN.P, [2.6, 0.95, 0.45]], T: [OPEN.T, [-4, 2.0, 0]], fov: [50, 46], ease: "i", blur: 1.8 });
+  // s2: rise up the street towards the church as the gate opens; head-on with a bull; under a bull; the runners
+  add({ t0: s("s2") + 0.1, blend: 0.45, whip: true, k: "path", P: [[-64, 2.5, 0.3], [-65, 10, 0.3], [-64, 19, 0.3]], T: [[-90, 4, 0], [-90, 6, 0], [-88, 2, 0]], fov: [56, 60], blur: 0.4 });
+  add({ t0: c("s2.six") + 0.25, blend: 0.5, k: "follow", who: "b1", off: [[3.4, 1.1, 0.7], [3.0, 1.0, 0.6]], look: [-2, 1.2, 0], fov: [44, 40], blur: 2.2 });
+  add({ t0: c("s2.ton") - 0.05, blend: 0.4, k: "follow", who: "b3", off: [[2.0, 0.35, -1.4], [1.7, 0.35, -1.2]], look: [-1, 1.5, 0.2], fov: [48, 44], roll: [8, 11], blur: 2.4 });
+  add({ t0: c("s2.run") - 0.2, blend: 0.4, k: "follow", who: "m3", off: [[4.2, 1.3, 0.5], [3.6, 1.25, 0.4]], look: [-3, 1.5, 0], fov: [52, 48], blur: 2.2 });
+  // s3: slow orbit around Van Dijk while the runners flee past him, then push in for the yawn
+  add({ t0: s("s3"), blend: 0.6, k: "path", P: [[3.2, 1.5, -1.8], [3.4, 1.5, 0], [3.0, 1.55, 1.7]], T: [[0, 1.4, 0], [0, 1.45, 0], [0, 1.5, 0]], fov: [50, 48], blur: 2.4 });
+  add({ t0: c("s3.nobody") - 0.2, blend: 0.5, k: "path", P: [[1.9, 1.8, 0.5], [1.55, 1.8, 0.4]], T: [[0, 1.75, 0], [0, 1.75, 0]], fov: [40, 36], blur: 2.8 });
+  // s4: through the planks of the near fence (blurred foreground), then a close crash into the far fence
+  add({ t0: c("s4.one") - 0.2, blend: 0.6, k: "path", P: [[-4.2, 2.2, -2.7], [-2.8, 2.2, -2.7]], T: [[0, 0.9, 0.8], [1.2, 0.9, 1.2]], fov: [58, 56], blur: 1.6 });
+  add({ t0: FENCE - 0.25, blend: 0.25, k: "path", P: [[0.6, 1.25, 0.1], [0.9, 1.2, 0.3]], T: [[2.4, 0.9, 2.6], [2.4, 0.9, 2.6]], fov: [40, 34], roll: [-4, -8], blur: 2.0 });
+  // s5: straight down on the one-two, then zoom in on the collision
+  add({ t0: c("s5.two") - 0.1, blend: 0.6, k: "path", P: [[5.0, 6.5, 0.2], [4.4, 6.0, 0.2]], T: [[-4, 0, 0], [-3, 0, 0]], fov: [56, 54], blur: 0.4 });
+  add({ t0: STEP + 0.3, blend: 0.4, k: "path", P: [[0.5, 4.2, 0.02], [0.5, 3.6, 0.02]], T: [[0.45, 0, 0], [0.45, 0, 0]], fov: [56, 50], blur: 0.6 });
+  // s6: worm's-eye behind Van Dijk, push in as he steps up, then the two puzzled bull faces
+  add({ t0: c("s6.four") - 0.1, blend: 0.5, k: "path", P: [[3.2, 0.6, 0.7], [2.6, 0.65, 0.65]], T: [[-6, 2.2, 0.2], [-6, 2.2, 0.2]], fov: [54, 50], roll: [4, 5], blur: 1.6 });
+  add({ t0: OFF + 0.4, blend: 0.35, k: "path", P: [[-1.1, 1.5, -1.3], [-1.4, 1.5, -1.3]], T: [[-4.6, 1.3, 0.1], [-4.6, 1.3, 0.1]], fov: [56, 52], blur: 2.2 });
+  // s7: high over the beaten bulls; over Van Dijk's shoulder as number six comes; close on the name; through the fence for the step-over
+  add({ t0: c("s7.five") - 0.1, blend: 0.6, k: "path", P: [[3.5, 6.5, 5.4], [0.5, 6.2, 5.4]], T: [[2, 0.2, 0], [1, 0.2, 0]], fov: [60, 58], blur: 0.3 });
+  add({ t0: c("s7.six") - 0.1, blend: 0.5, k: "path", P: [[1.4, 1.5, 0.9], [1.1, 1.45, 0.85]], T: [[-8, 1.2, -0.2], [-8, 1.2, -0.2]], fov: [46, 40], blur: 2.0 });
+  add({ t0: c("s7.name") - 0.1, blend: 0.4, k: "follow", who: "b6", off: [[2.6, 1.3, 0.45], [2.2, 1.25, 0.4]], look: [-1, 1.2, 0], fov: [40, 36], blur: 2.4 });
+  add({ t0: PEPE - 0.35, blend: 0.3, k: "path", P: [[4.0, 2.2, -2.6], [3.2, 2.2, -2.6]], T: [[-1.8, 0.9, 0.4], [-0.6, 0.9, 0.4]], fov: [58, 56], blur: 1.6 });
+  // s8: chase Pépé up the street and into the ring, low angle with the full stands behind
+  add({ t0: c("s8.y19") - 0.1, blend: 0.5, k: "follow", who: "b6", off: [[-3.6, 1.6, 2.2], [-4.2, 1.8, 2.4]], look: [5, 1.3, 0], fov: [52, 50], roll: [-4, -6], blur: 1.8 });
+  add({ t0: c("s8.never") - 0.2, blend: 0.6, k: "path", P: [[55.5, 2.2, 6.5], [56.2, 2.3, 7]], T: [[62, 1.2, 0], [62.5, 1.3, 0]], fov: [50, 46], roll: [3, 4], blur: 1.6 });
+  // s9: Van Dijk, then the whip back into the opening picture
+  add({ t0: s("s9") + 0.05, blend: 0.45, whip: true, k: "path", P: [[2.7, 1.4, 0.3], [2.4, 1.4, 0.3]], T: [[0, 1.65, 0], [0, 1.65, 0]], fov: [48, 44], blur: 2.4 });
+  add({ t0: c("s9.loop") - 0.35, blend: 0.3, whip: true, k: "path", P: [[3.4, 1.0, 0.5], OPEN.P], T: [[-4, 2.0, 0], OPEN.T], fov: [50, 50], ease: "o", blur: 1.8 });
   sh.forEach((x, i) => { x.t1 = x.t1 ?? (sh[i + 1] ? sh[i + 1].t0 : END); });
   sh[sh.length - 1].t1 = END;
 
@@ -115,12 +123,12 @@ export default function plot(T) {
     chip("c-fifty", c("s3.fifty"), s("s4") - 0.05, "PREMIER LEAGUE", "50 games · 0 dribbled past", 60, 400, "dark"),
     chip("c-zero", c("s7.five"), c("s7.six") - 0.1, "5 BULLS", "0 dribbles", 120, 400, "dark"),
     chip("c-y19", c("s8.y19"), s("s9") - 0.05, "AUG 2019 · LIVERPOOL 3–1 ARSENAL", "Pépé ends the run at 50", 50, 400, "gold"),
-    chip("c-dont", c("s9.dont"), LOOPJ, "SAFETY", "Don't run with bulls", 120, 560, "red", "left"),
+    chip("c-dont", c("s9.dont"), LOOPJ, "SAFETY", "Don't run with bulls", 120, 1040, "red", "left"),
     slam("sl-hook2", END - 0.35, END + 1, "VAN DIJK<br><b>vs.</b> 6 BULLS", 360, 128),
   ];
 
   return {
-    buildWorld: buildPamplona,
+    buildWorld: buildPamplona, camBounds: pamplonaBounds, fgBlur: 6,
     actors: A, shots: sh, props, bubbles, overlays,
     shake: [FENCE, HIT],
     crowd: (t) => (t > c("s8.never") - 0.3 && t < s("s9") ? 0.45 : t > c("s2.run") - 0.5 && t < s("s4") ? 0.2 : 0.07),

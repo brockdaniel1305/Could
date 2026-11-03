@@ -22,6 +22,8 @@
     #w3-stage { position: absolute; inset: 0; }
     #w3-gl { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
     #w3-chars { position: absolute; inset: 0; }
+    #w3-fg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; pointer-events: none; }
+    #w3-bubs { position: absolute; inset: 0; }
     .w3b { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-origin: 0 0; display: none; }
     .w3b g[id$="-legL"], .w3b g[id$="-legR"], .w3b g[id$="-armL"], .w3b g[id$="-armR"] { transform-box: fill-box; transform-origin: 50% 0; }
     .w3b g[id$="-spin"] { transform-box: fill-box; transform-origin: 50% 50%; }
@@ -741,6 +743,8 @@
 </g></g></g><path d="M-30,-208 L0,-176 L30,-208 Z" fill="#d8202c" stroke="#1a1a2e" stroke-width="4" stroke-linejoin="round"/><rect x="-46" y="-128" width="92" height="16" rx="5" fill="#d8202c" stroke="#1a1a2e" stroke-width="4"/></svg></div>
             <div class="w3b" id="w3-lflag"><svg width="260" height="260" viewBox="-130 -240 260 260" style="position:absolute;left:-130px;top:-240px;overflow:visible"><rect x="-4" y="-200" width="8" height="200" fill="#6b4a2a" stroke="#1a1a2e" stroke-width="2"/><path d="M4,-200 L96,-200 L96,-140 L4,-140 Z" fill="#ffd23f" stroke="#1a1a2e" stroke-width="5"/><path d="M4,-200 L50,-170 L4,-140 M96,-200 L50,-170 L96,-140" fill="#e0412f" opacity="0.9"/></svg></div>
           </div>
+          <canvas id="w3-fg" width="1080" height="1920"></canvas>
+          <div id="w3-bubs"></div>
           <div class="w3-vig"></div>
         </div>
         <div class="logo">COULD<b>?</b></div>
