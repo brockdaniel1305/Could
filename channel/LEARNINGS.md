@@ -5,6 +5,11 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-03 · S2E02 · **"Prime" + Zeitraum nennen**: Bei der Vorstellung einer Legende "Prime …" sagen und schreiben und die Fakten
+  zeitlich einordnen (z. B. "March 2018 to August 2019: fifty Premier League games").
+- 2026-11-03 · S2E02 · **Animationen nie "stumpf"**: Sekundärbewegung immer an (Atmen, Federn, Vorlehnen beim Laufen), Staub hinter
+  Rennenden, Dampf/Schnauben, Comic-"BAM!" bei Zusammenstößen, Speedlines bei Angriffen. Die Kamera darf nie in eine Figur fahren
+  (Snapshots der Übergänge prüfen).
 - 2026-11-03 · S2E02 · **Jedes Bild ein volles Werk** (Referenzvideo): keine leeren Flächen (Himmel, Wände, Boden), Ebenen mit
   unscharfem Vordergrund, Figuren davor, detailreicher Hintergrund. Viele Nahaufnahmen, Zooms (fov-Fahrten), Untersichten,
   gekippte Winkel (`roll`), Draufsichten. **Kamera fährt nie durch Wände** (`camBounds` je Welt). Technik: Vordergrund-Pass in
