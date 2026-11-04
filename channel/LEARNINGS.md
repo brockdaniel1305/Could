@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-04 · S2E04 · **Musik spannender, aber unter dem Sprecher**: echte lizenzfreie Tracks (Openverse/Jamendo, CC BY → Credit in die
+  Caption) statt der synthetisierten Themen, ~8 dB unter der Stimme, mit Sidechain-Ducking (`remix_audio.py ... --duck`).
+  Freesound-Downloads sind aus der Cloud-Umgebung blockiert; Jamendo funktioniert.
 - 2026-11-04 · S2E04 · **Neue Sprecherstimme: ElevenLabs "Michael" (QngvLQR8bsLR5bzoa6Vv, British, expressive)** – vom Creator gewählt.
   Ablauf (spart Credits): ganzes Skript in EINEM ElevenLabs-Aufruf (Connector, `creative_generate_speech`, eleven_multilingual_v2),
   Take nach `assets/voice/el/takeA.mp3`, `python3 tools/split_master.py <ep> <take>` schneidet ihn in die Skript-Segmente,

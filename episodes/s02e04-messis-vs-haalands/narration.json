@@ -12,10 +12,12 @@
   "preview_voice": "am_adam",
   "speed": 1.0,
   "music": {
-    "theme": "stadium",
-    "volume": 0.17
+    "src": "assets/music/fusion.wav",
+    "volume": 0.22,
+    "duck": true,
+    "credit": "Music: \"Fusion - Dark Epic Trailer\" by E. Erkut (CC BY 3.0) jamendo.com/track/1308697"
   },
-  "caption": "11 Messis vs 11 Haalands ⚽ Skill or power - who wins? #messi #haaland #football #premierleague #footballtiktok #shorts",
+  "caption": "11 Messis vs 11 Haalands ⚽ Skill or power - who wins? #messi #haaland #football #premierleague #footballtiktok #shorts | Music: \"Fusion\" by E. Erkut (CC BY 3.0)",
   "scenes": [
     {
       "id": "s1-hook",
