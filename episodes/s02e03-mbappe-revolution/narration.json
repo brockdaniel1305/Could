@@ -1,6 +1,6 @@
 {
   "id": "S2E03",
-  "title": "Could Real Madrid's Kylian Mbappé lead the French Revolution?",
+  "title": "Could Real Madrid's Kylian Mbappé dictate the French Revolution?",
   "season": 2,
   "episode": 3,
   "format": "short",
@@ -15,11 +15,11 @@
     "theme": "march",
     "volume": 0.17
   },
-  "caption": "Real Madrid's Mbappé vs the French Revolution ⚽🇫🇷 Could Kylian Mbappé lead it? #mbappe #realmadrid #laliga #football #shorts",
+  "caption": "Real Madrid's dictator Mbappé vs the French Revolution ⚽🇫🇷 Could Kylian Mbappé dictate it? #mbappe #realmadrid #laliga #football #shorts",
   "scenes": [
     {
       "id": "s1-hook",
-      "text": "Could Real Madrid's Kylian {Mbappé|Em-bap-pay} lead the French Revolution?",
+      "text": "Could Real Madrid's Kylian {Mbappé|Em-bap-pay} dictate the French Revolution?",
       "sfx": [
         {
           "name": "gallop",
@@ -35,7 +35,7 @@
     },
     {
       "id": "s2-paris",
-      "text": "{{paris}}Paris, {1789|seventeen eighty nine}. ||0.2|| {{want}}The people want a leader.",
+      "text": "{{paris}}Paris, {1789|seventeen eighty nine}. ||0.2|| {{want}}The people want a leader. ||0.25|| {{dict}}They get a dictator.",
       "sfx": []
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "id": "s8-end",
-      "text": "{{next}}Who should lead the next revolution? ||0.2|| {{com}}Comment. ||0.3|| {{loop}}So if anyone asks you:",
+      "text": "{{next}}Who should dictate the next revolution? ||0.2|| {{com}}Comment. ||0.3|| {{loop}}So if anyone asks you:",
       "sfx": []
     }
   ]

@@ -1,51 +1,51 @@
 {
  "s1-hook.part0.wav": {
-  "key": "c78e2cf577c1da18d4163f14668dc87345814062",
+  "key": "08ad69823961a76830d29c7313dbc06502ed1779",
   "words": [
    {
     "text": "Could",
     "start": 0,
-    "end": 0.309
+    "end": 0.313
    },
    {
     "text": "Real",
-    "start": 0.309,
-    "end": 0.557
+    "start": 0.313,
+    "end": 0.563
    },
    {
     "text": "Madrid's",
-    "start": 0.557,
-    "end": 1.052
+    "start": 0.563,
+    "end": 1.063
    },
    {
     "text": "Kylian",
-    "start": 1.052,
-    "end": 1.423
+    "start": 1.063,
+    "end": 1.438
    },
    {
     "text": "Mbappe",
-    "start": 1.423,
-    "end": 1.795
+    "start": 1.438,
+    "end": 1.813
    },
    {
-    "text": "lead",
-    "start": 1.795,
-    "end": 2.042
+    "text": "dictate",
+    "start": 1.813,
+    "end": 2.25
    },
    {
     "text": "the",
-    "start": 2.042,
-    "end": 2.228
+    "start": 2.25,
+    "end": 2.438
    },
    {
     "text": "French",
-    "start": 2.228,
-    "end": 2.599
+    "start": 2.438,
+    "end": 2.813
    },
    {
     "text": "Revolution?",
-    "start": 2.599,
-    "end": 3.28
+    "start": 2.813,
+    "end": 3.5
    }
   ]
  },
@@ -530,37 +530,37 @@
   ]
  },
  "s8-end.part0.wav": {
-  "key": "205f0db171ca0a188a1fd41474ccc4599f1e7451",
+  "key": "1f7fa70f58699178ffb101153a387295dc5d1640",
   "words": [
    {
     "text": "who",
     "start": 0,
-    "end": 0.165
+    "end": 0.168
    },
    {
     "text": "should",
-    "start": 0.165,
-    "end": 0.494
+    "start": 0.168,
+    "end": 0.503
    },
    {
-    "text": "lead",
-    "start": 0.494,
-    "end": 0.713
+    "text": "dictate",
+    "start": 0.503,
+    "end": 0.894
    },
    {
     "text": "the",
-    "start": 0.713,
-    "end": 0.877
+    "start": 0.894,
+    "end": 1.062
    },
    {
     "text": "next",
-    "start": 0.877,
-    "end": 1.097
+    "start": 1.062,
+    "end": 1.285
    },
    {
     "text": "revolution.",
-    "start": 1.097,
-    "end": 1.7
+    "start": 1.285,
+    "end": 1.9
    }
   ]
  },
@@ -601,6 +601,31 @@
     "text": "you.",
     "start": 0.996,
     "end": 1.28
+   }
+  ]
+ },
+ "s2-paris.part2.wav": {
+  "key": "b96b8bc06dafa96286fde76d30d1031af3b68b4e",
+  "words": [
+   {
+    "text": "They",
+    "start": 0,
+    "end": 0.235
+   },
+   {
+    "text": "get",
+    "start": 0.235,
+    "end": 0.412
+   },
+   {
+    "text": "a",
+    "start": 0.412,
+    "end": 0.471
+   },
+   {
+    "text": "dictator.",
+    "start": 0.471,
+    "end": 1
    }
   ]
  }

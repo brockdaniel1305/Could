@@ -119,9 +119,10 @@ export default function plot(T) {
     html: `<div class="ck">${k}</div><div class="cv">${v}</div>` });
   const slam = (id, t0, t1, html, top, size = 128) => ({ id, t0, t1, slam: true, cls: "slam", style: `top:${top}px;font-size:${size}px`, html });
   const overlays = [
-    slam("sl-a", -1, CUT, "MBAPPÉ", 360, 150),
+    slam("sl-a", -1, CUT, "DICTATOR<br>MBAPPÉ", 340, 138),
     slam("sl-b", CUT, s("s2") - 0.05, "<b>vs.</b> 1789", 360, 150),
-    chip("c-leader", c("s2.want"), s("s3") - 0.05, "PARIS · 1789", "Leader wanted", 120, 400, "gold"),
+    chip("c-leader", c("s2.want"), c("s2.dict") - 0.05, "PARIS · 1789", "Leader wanted", 120, 400, "gold"),
+    chip("c-dict", c("s2.dict"), s("s3") - 0.05, "PARIS · 1789", "Dictator found", 120, 400, "red"),
     chip("c-wc", c("s3.wc"), s("s4") - 0.05, "WORLD CUP 2018", "Champion at 19", 120, 400, "dark"),
     chip("c-spd", c("s3.speed"), s("s4") - 0.05, "TOP SPEED", "≈ 38 km/h", 420, 560, "red", "left"),
     chip("c-hours", c("s4.hours"), c("s4.sprint") + 0.4, "14 JULY 1789 · THE CROWD", "took hours", 80, 400, "dark"),
@@ -129,10 +130,10 @@ export default function plot(T) {
     chip("c-m", c("s6.kmh"), c("s6.second") - 0.1, "MBAPPÉ", "≈ 38 km/h", 60, 400, "dark"),
     chip("c-h", c("s6.kmh") + 0.3, c("s6.second") - 0.1, "NAPOLEON'S HORSE", "≈ 45 km/h", 380, 560, "red", "left"),
     chip("c-2nd", c("s6.second"), s("s7") - 0.05, "FASTEST IN FRANCE", "No. 2", 120, 400, "gold"),
-    chip("c-rm", c("s7.rm"), c("s7.who") - 0.05, "REAL MADRID", "No. 10 · since 2024", 120, 400, "dark"),
+    chip("c-rm", c("s7.rm"), c("s7.who") - 0.05, "REAL MADRID", "Dictator since 2024", 120, 400, "dark"),
     chip("c-pen", c("s7.who"), GOAL + 0.3, "PENALTY TAKER", "?", 120, 400, "gold"),
-    chip("c-next", c("s8.next"), LOOPJ, "COMMENT", "Who leads the next revolution?", 40, 400, "red"),
-    slam("sl-end", END - 0.3, END + 1, "MBAPPÉ", 360, 150),
+    chip("c-next", c("s8.next"), LOOPJ, "COMMENT", "Who dictates the next revolution?", 40, 400, "red"),
+    slam("sl-end", END - 0.3, END + 1, "DICTATOR<br>MBAPPÉ", 340, 138),
   ];
 
   return {

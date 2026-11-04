@@ -1,60 +1,60 @@
 {
- "duration": 43.056,
+ "duration": 44.781,
  "voice": "kokoro:am_adam",
  "scenes": [
   {
    "id": "s1-hook",
    "start": 0.0,
-   "duration": 3.93,
+   "duration": 4.091,
    "voice": "assets/voice/s1-hook.wav",
    "voiceStart": 0.15,
-   "speech": 3.38,
+   "speech": 3.541,
    "cues": {},
    "words": [
     {
      "text": "Could",
      "start": 0.15,
-     "end": 0.459
+     "end": 0.463
     },
     {
      "text": "Real",
-     "start": 0.459,
-     "end": 0.707
+     "start": 0.463,
+     "end": 0.713
     },
     {
      "text": "Madrid's",
-     "start": 0.707,
-     "end": 1.202
+     "start": 0.713,
+     "end": 1.213
     },
     {
      "text": "Kylian",
-     "start": 1.202,
-     "end": 1.573
+     "start": 1.213,
+     "end": 1.588
     },
     {
      "text": "Mbapp\u00e9",
-     "start": 1.573,
-     "end": 1.945
+     "start": 1.588,
+     "end": 1.963
     },
     {
-     "text": "lead",
-     "start": 1.945,
-     "end": 2.192
+     "text": "dictate",
+     "start": 1.963,
+     "end": 2.4
     },
     {
      "text": "the",
-     "start": 2.192,
-     "end": 2.378
+     "start": 2.4,
+     "end": 2.588
     },
     {
      "text": "French",
-     "start": 2.378,
-     "end": 2.749
+     "start": 2.588,
+     "end": 2.963
     },
     {
      "text": "Revolution?",
-     "start": 2.749,
-     "end": 3.43
+     "start": 2.963,
+     "end": 3.65
     }
    ],
    "sfx": [
@@ -72,14 +72,15 @@
   },
   {
    "id": "s2-paris",
-   "start": 3.93,
-   "duration": 3.566,
+   "start": 4.091,
+   "duration": 4.936,
    "voice": "assets/voice/s2-paris.wav",
    "voiceStart": 0.15,
-   "speech": 3.016,
+   "speech": 4.386,
    "cues": {
     "paris": 0.15,
-    "want": 1.843
+    "want": 1.843,
+    "dict": 3.416
    },
    "words": [
     {
@@ -116,13 +117,33 @@
      "text": "leader.",
      "start": 2.67,
      "end": 3.083
+    },
+    {
+     "text": "They",
+     "start": 3.416,
+     "end": 3.651
+    },
+    {
+     "text": "get",
+     "start": 3.651,
+     "end": 3.828
+    },
+    {
+     "text": "a",
+     "start": 3.828,
+     "end": 3.887
+    },
+    {
+     "text": "dictator.",
+     "start": 3.887,
+     "end": 4.416
     }
    ],
    "sfx": []
   },
   {
    "id": "s3-cv",
-   "start": 7.496,
+   "start": 9.027,
    "duration": 4.057,
    "voice": "assets/voice/s3-cv.wav",
    "voiceStart": 0.15,
@@ -182,7 +203,7 @@
   },
   {
    "id": "s4-bastille",
-   "start": 11.553,
+   "start": 13.084,
    "duration": 5.373,
    "voice": "assets/voice/s4-bastille.wav",
    "voiceStart": 0.15,
@@ -265,7 +286,7 @@
   },
   {
    "id": "s5-fans",
-   "start": 16.926,
+   "start": 18.457,
    "duration": 5.029,
    "voice": "assets/voice/s5-fans.wav",
    "voiceStart": 0.15,
@@ -343,7 +364,7 @@
   },
   {
    "id": "s6-horse",
-   "start": 21.955,
+   "start": 23.486,
    "duration": 9.865,
    "voice": "assets/voice/s6-horse.wav",
    "voiceStart": 0.15,
@@ -493,7 +514,7 @@
   },
   {
    "id": "s7-madrid",
-   "start": 31.82,
+   "start": 33.351,
    "duration": 6.553,
    "voice": "assets/voice/s7-madrid.wav",
    "voiceStart": 0.15,
@@ -609,76 +630,76 @@
   },
   {
    "id": "s8-end",
-   "start": 38.373,
-   "duration": 4.683,
+   "start": 39.904,
+   "duration": 4.877,
    "voice": "assets/voice/s8-end.wav",
    "voiceStart": 0.15,
-   "speech": 4.233,
+   "speech": 4.427,
    "cues": {
     "next": 0.15,
-    "com": 2.078,
-    "loop": 3.061
+    "com": 2.271,
+    "loop": 3.254
    },
    "words": [
     {
      "text": "Who",
      "start": 0.15,
-     "end": 0.315
+     "end": 0.318
     },
     {
      "text": "should",
-     "start": 0.315,
-     "end": 0.644
+     "start": 0.318,
+     "end": 0.653
     },
     {
-     "text": "lead",
-     "start": 0.644,
-     "end": 0.863
+     "text": "dictate",
+     "start": 0.653,
+     "end": 1.044
     },
     {
      "text": "the",
-     "start": 0.863,
-     "end": 1.027
+     "start": 1.044,
+     "end": 1.212
     },
     {
      "text": "next",
-     "start": 1.027,
-     "end": 1.247
+     "start": 1.212,
+     "end": 1.435
     },
     {
      "text": "revolution?",
-     "start": 1.247,
-     "end": 1.85
+     "start": 1.435,
+     "end": 2.05
     },
     {
      "text": "Comment.",
-     "start": 2.078,
-     "end": 2.718
+     "start": 2.271,
+     "end": 2.911
     },
     {
      "text": "So",
-     "start": 3.061,
-     "end": 3.203
+     "start": 3.254,
+     "end": 3.396
     },
     {
      "text": "if",
-     "start": 3.203,
-     "end": 3.345
+     "start": 3.396,
+     "end": 3.538
     },
     {
      "text": "anyone",
-     "start": 3.345,
-     "end": 3.772
+     "start": 3.538,
+     "end": 3.965
     },
     {
      "text": "asks",
-     "start": 3.772,
-     "end": 4.057
+     "start": 3.965,
+     "end": 4.25
     },
     {
      "text": "you:",
-     "start": 4.057,
-     "end": 4.341
+     "start": 4.25,
+     "end": 4.534
     }
    ],
    "sfx": []

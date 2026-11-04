@@ -7,8 +7,25 @@ sys.path.insert(0, str(EP.parents[1] / "tools/world3d"))
 sys.path.insert(0, str(EP.parents[1] / "tools"))
 from world import sprite, write, SHADOW, real, ball  # noqa: E402
 from kit import part  # noqa: E402
+import re  # noqa: E402
 
-sprites = [sprite("m", SHADOW + part("mbappe", "w3-mx", KITC="#f4f4f2", SHORTC="#f4f4f2", SOCKC="#f4f4f2", NUMC="#1a1a2e"))]
+# Mbappé the dictator: olive tunic with gold buttons, epaulettes and medals, red-and-gold sash, dark trousers, boots, peaked cap
+OLIVE, GOLD, RED = "#3f4a32", "#d4a017", "#b0122b"
+d = part("mbappe", "w3-mx", KITC=OLIVE, SHORTC="#23272e", SOCKC="#111111", NUMC=GOLD).replace(">10</text>", "></text>")
+d = re.sub(r'(<g id="w3-mx-leg[LR]"><rect [^>]*?)fill="#8a5a3c"', r'\1fill="#23272e"', d)
+d = re.sub(r'(<g id="w3-mx-arm[LR]"><rect [^>]*?)fill="#8a5a3c"', r'\1fill="' + OLIVE + '"', d)
+d = d.replace('<g id="w3-mx-sash" opacity="0">', '<g id="w3-mx-sash">').replace('fill="#1d3f9b" stroke="#1a1a2e" stroke-width="3"', f'fill="{RED}" stroke="#1a1a2e" stroke-width="3"')
+d = d.replace('<path d="M-30,-210 L-16,-212 L50,-134 L48,-122 Z" fill="#f4f4f2" />', f'<path d="M-30,-210 L-16,-212 L50,-134 L48,-122 Z" fill="{GOLD}" />')
+deco = (f'<g>{"".join(f"<circle cx=\"0\" cy=\"{y}\" r=\"4.5\" fill=\"{GOLD}\" stroke=\"#1a1a2e\" stroke-width=\"2\"/>" for y in (-188, -168, -148, -128))}'
+        f'<rect x="-62" y="-212" width="26" height="12" rx="4" fill="{GOLD}" stroke="#1a1a2e" stroke-width="3"/><rect x="36" y="-212" width="26" height="12" rx="4" fill="{GOLD}" stroke="#1a1a2e" stroke-width="3"/>'
+        f'<circle cx="-30" cy="-176" r="6" fill="{GOLD}" stroke="#1a1a2e" stroke-width="2"/><circle cx="-18" cy="-174" r="6" fill="#c0262d" stroke="#1a1a2e" stroke-width="2"/><circle cx="-24" cy="-162" r="6" fill="#2b4f8f" stroke="#1a1a2e" stroke-width="2"/></g>')
+d = d.replace('<text id="w3-mx-num"', deco + '<text id="w3-mx-num"', 1)
+cap = (f'<path d="M-48,-26 Q-56,-78 0,-86 Q56,-78 48,-26 Z" fill="{OLIVE}" stroke="#1a1a2e" stroke-width="5" stroke-linejoin="round"/>'
+       f'<rect x="-48" y="-38" width="96" height="13" fill="{RED}" stroke="#1a1a2e" stroke-width="3"/>'
+       '<path d="M-52,-24 Q0,-6 52,-24 Q0,-30 -52,-24 Z" fill="#111" stroke="#1a1a2e" stroke-width="3"/>'
+       f'<circle cx="0" cy="-54" r="9" fill="{GOLD}" stroke="#1a1a2e" stroke-width="3"/>')
+d = d.replace('<g id="w3-mx-crown" opacity="0">', cap + '<g id="w3-mx-crown" opacity="0">', 1)
+sprites = [sprite("m", SHADOW + d)]
 CAPS = ["#c22f2f", "#c22f2f", "#2b4f8f", "#c22f2f", "#8a2b2b", "#c22f2f", "#2b4f8f", "#c22f2f"]
 for i in range(8):
     sprites.append(sprite(f"c{i}", SHADOW + part("citizen", f"w3-c{i}x", CAPC=CAPS[i])))
