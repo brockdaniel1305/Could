@@ -125,6 +125,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   Schieflage also nicht. Gemeinsam ist allen Folgen: der niedliche Cartoon-Stil (runde Köpfe, große Augen) und die Account-Historie.
   Und: S2E01 lief mit 60 % Frauen trotzdem am besten → Geschlechterverteilung ist nicht automatisch die Ursache für Flops.
   Offene Tests: YouTube-Demografie vergleichen, TikTok-Tab "Zuschauer*innen" (Alter, Land) und Traffic-Quellen prüfen.
+  **Update:** Messi vs Romans hat (vermutlich YouTube) **100 % männliches** Publikum – gleicher Cartoon-Stil. → Der Stil ist nicht die
+  Ursache; die Frauen-Schieflage ist ein TikTok-Seeding-Problem des Accounts. Stil bleibt, YouTube Shorts als Hauptplattform stärken.
 - 2026-11-03 · S2E02 Van Dijk (47 s) auf **TikTok** nach ~7 h: 1.040 Aufrufe, 44 Likes (4,2 %), 0 Kommentare, 3 Shares, 5 Saves,
   Ø **13,9 s (30 %)**, 5,3 % ganz, **0 Follower**. Spitze in Stunde 2, danach Abfall. Erkenntnis: Follow-Gag ganz am Ende sehen nur ~5 %
   → Follow-/Kommentar-Aufruf früher einbauen (Mitte, nach dem ersten Höhepunkt); ohne Kommentar-Frage kommen keine Kommentare.
