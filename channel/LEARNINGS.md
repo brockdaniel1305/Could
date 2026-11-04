@@ -5,6 +5,12 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-04 · S2E04 · **Neue Sprecherstimme: ElevenLabs "Michael" (QngvLQR8bsLR5bzoa6Vv, British, expressive)** – vom Creator gewählt.
+  Ablauf (spart Credits): ganzes Skript in EINEM ElevenLabs-Aufruf (Connector, `creative_generate_speech`, eleven_multilingual_v2),
+  Take nach `assets/voice/el/takeA.mp3`, `python3 tools/split_master.py <ep> <take>` schneidet ihn in die Skript-Segmente,
+  narration.json `"provider": "prerecorded"`. Wo der Sprecher keine Pause macht, die ||pause|| im Skript weglassen (Segmente zusammenlegen).
+- 2026-11-04 · S2E04 · **Figuren nie zu klein**: Szenen mit vielen Spielern nicht aus großer Höhe/Draufsicht zeigen, sondern eng
+  gruppiert, schräg von oben aus ~8–10 m, und jede Aktion mit einem klaren Effekt (z. B. "MISS!") lesbar machen.
 - 2026-11-03 · S2E02 · **Jede Folge bekommt eigene, sehr unauffällige Hintergrundmusik**, die zum Thema passt, aber nicht ablenkt.
   `narration.json` → `"music": {"theme": "flamenco" | "stadium" | "march", "volume": 0.17}`; `build_episode.py` erzeugt sie mit
   `tools/make_music.py` auf die Folgenlänge (lokal synthetisiert, keine Lizenzen). Pegel ~16 dB unter der Stimme.

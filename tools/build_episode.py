@@ -183,12 +183,24 @@ def trim(wav, max_gap=0.24, keep_gap=0.22, floor_db=-40):
         w.writeframes(out.tobytes())
 
 
+PRERECORDED = {"files": [], "next": 0}
+
+
 def synth(text, out, voice, speed, cache):
-    tag = f"{voice}|{speed}" if TTS["provider"] == "kokoro" else f"voicestudio|{TTS['model']}|{voice}|{speed}"
+    if TTS["provider"] == "prerecorded":
+        # a long take cut into segments by tools/split_master.py, used in script order
+        src = out.parent / "el" / PRERECORDED["files"][PRERECORDED["next"]]
+        PRERECORDED["next"] += 1
+        tag = f"prerecorded|{src.name}|{src.stat().st_mtime_ns}"
+    else:
+        src = None
+        tag = f"{voice}|{speed}" if TTS["provider"] == "kokoro" else f"voicestudio|{TTS['model']}|{voice}|{speed}"
     key = hashlib.sha1(f"{tag}|trim4|{text}".encode()).hexdigest()
     if cache.get(out.name, {}).get("key") == key and out.exists():
         return cache[out.name]["words"]
-    if TTS["provider"] == "voicestudio":
+    if src is not None:
+        run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-ac", "1", "-ar", "24000", "-sample_fmt", "s16", str(out)])
+    elif TTS["provider"] == "voicestudio":
         voicestudio_tts(text, out, voice, speed, TTS["model"])
     else:
         run(["npx", "--yes", "hyperframes", "tts", text, "-v", voice, "-s", str(speed), "-o", str(out), "--json"])
@@ -279,12 +291,14 @@ def main():
     cfg = json.loads((ep / "narration.json").read_text())
     voice, speed = cfg.get("voice", "bm_george"), cfg.get("speed", 1.0)
     TTS["provider"] = cfg.get("provider", "kokoro")
-    if preview and TTS["provider"] != "kokoro":
+    if preview and TTS["provider"] not in ("kokoro", "prerecorded"):
         print(f"PREVIEW: Kokoro {cfg.get('preview_voice', 'bm_george')} instead of {TTS['provider']} voice {voice!r}")
         TTS["provider"], voice = "kokoro", cfg.get("preview_voice", "bm_george")
     TTS["model"] = cfg.get("model", "tts-1")
-    if TTS["provider"] not in ("kokoro", "voicestudio"):
-        sys.exit(f"unknown provider {TTS['provider']!r} (kokoro | voicestudio)")
+    if TTS["provider"] == "prerecorded":
+        PRERECORDED["files"] = json.loads((ep / "assets/voice/el/segments.json").read_text())
+    if TTS["provider"] not in ("kokoro", "voicestudio", "prerecorded"):
+        sys.exit(f"unknown provider {TTS['provider']!r} (kokoro | voicestudio | prerecorded)")
     if TTS["provider"] == "voicestudio":
         voicestudio_health()
     vdir = ep / "assets/voice"

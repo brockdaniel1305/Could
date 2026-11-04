@@ -29,8 +29,8 @@ export default function plot(T) {
   const LZ = (i) => -9 + i * 1.8;
   jumpAll(CUT + 0.01, (n, i, m) => [m ? -1.6 : 1.6, LZ(i)]);
   // kick-off: Messis in a passing ring, H9 chases inside it, the other Haalands watch from outside
-  const RING = (i) => [Math.cos((i / 10) * 2 * Math.PI) * 4.6, Math.sin((i / 10) * 2 * Math.PI) * 4.6];
-  jumpAll(c("s3.ko") - 0.3, (n, i, m) => (n === "M0" ? [-51.5, 0] : n === "H0" ? [51.5, 0] : m ? RING(i - 1) : n === "H9" ? [0, 0] : [Math.cos(i * 0.7) * 8.5, Math.sin(i * 0.7) * 8.5]));
+  const RING = (i) => [Math.cos((i / 10) * 2 * Math.PI) * 3.4, Math.sin((i / 10) * 2 * Math.PI) * 3.4];
+  jumpAll(c("s3.ko") - 0.3, (n, i, m) => (n === "M0" ? [-51.5, 0] : n === "H0" ? [51.5, 0] : m ? RING(i - 1) : n === "H9" ? [0, 0] : [Math.cos(i * 0.7) * 14, -Math.abs(Math.sin(i * 0.7)) * 14 - 4]));
   // corner: eleven Haalands in Messi's box, Messis marking them
   const BOX = [[-49.5, -4], [-49, 0.5], [-49.4, 4.4], [-46.6, -2.6], [-46, 0], [-46.4, 3], [-43.6, -4], [-43.4, 1.2], [-44, 4.6]];
   jumpAll(c("s4.corner") - 0.3, (n, i, m) => {
@@ -82,10 +82,11 @@ export default function plot(T) {
     { t0: CUT + 0.01, k: "rest", p: [0, 0, 0] },
   ];
   // keep-ball: passes around the ring, faster and faster, H9 a step behind
+  const chases = [];
   const ringP = (k) => { const r = RING(k % 10); return [r[0], 0, r[1]]; };
   let tp = c("s3.keep"), k = 0;
   while (tp < c("s3.none") + 0.6) { const d = Math.max(0.14, 0.45 - k * 0.03), a = ringP(k), b = ringP(k + 3 + (k % 3));
-    ball.push({ t0: tp, t1: tp + d, k: "fly", a, b, h: 0.15 }); at("H9", tp + d * 0.9, b[0] * 0.55, b[2] * 0.55, "s"); tp += d; k += 3 + (k % 3); }
+    ball.push({ t0: tp, t1: tp + d, k: "fly", a, b, h: 0.15 }); at("H9", tp + d * 0.95, b[0] * 0.62, b[2] * 0.62, "o"); if (k % 2 === 0) chases.push(tp + d); tp += d; k += 3 + (k % 3); }
   W.H9.sort((p, q) => p[0] - q[0]);
   ball.push({ t0: tp, k: "rest", p: ringP(k) });
   ball.push({ t0: CK - 0.3, k: "rest", p: [-51.7, 0, 33.2] });
@@ -116,7 +117,8 @@ export default function plot(T) {
   add({ t0: c("s2.tm") + 0.1, blend: 0.5, k: "path", P: [[-4.6, 1.35, 8.5], [-4.6, 1.35, -7.5]], T: [[-1.6, 1.25, 8.5], [-1.6, 1.25, -7.5]], fov: [48, 48], blur: 2.0 });
   add({ t0: c("s2.th") + 0.05, blend: 0.4, whip: true, k: "path", P: [[4.8, 1.25, -8.5], [4.8, 1.25, 7.5]], T: [[1.6, 1.9, -8.5], [1.6, 1.9, 7.5]], fov: [48, 48], roll: [-3, -3], blur: 2.0 });
   add({ t0: c("s2.same") - 0.1, blend: 0.6, k: "path", P: [[0, 9, 18], [0, 16, 22]], T: [[0, 0.5, 0], [0, 0, 0]], fov: [52, 56], blur: 0.3 });
-  add({ t0: c("s3.ko") - 0.1, blend: 0.6, whip: true, k: "path", P: [[0.4, 17, 0.05], [0.4, 15, 0.05]], T: [[0.45, 0, 0], [0.45, 0, 0]], fov: [64, 62], blur: 0.2 });
+  add({ t0: c("s3.ko") - 0.1, blend: 0.6, whip: true, k: "path", P: [[0, 7.5, 10.5], [0, 5.6, 8.4]], T: [[0, 0.4, -0.4], [0, 0.6, -0.3]], fov: [54, 50], blur: 0.6 });
+  add({ t0: c("s3.ninety") - 0.1, blend: 0.5, k: "path", P: [[2.6, 1.7, 6.2], [1.2, 1.7, 6.0]], T: [[0, 1.3, 0], [0, 1.3, 0]], fov: [56, 54], roll: [3, 4], blur: 1.4 });
   add({ t0: c("s3.none") - 0.2, blend: 0.5, k: "follow", who: "H9", off: [[3.2, 1.5, 1.2], [2.6, 1.5, 1.0]], look: [0, 1.7, 0], fov: [44, 40], blur: 2.4 });
   add({ t0: c("s4.corner") - 0.1, blend: 0.45, whip: true, k: "path", P: [[-44.5, 0.55, 5.5], [-44.3, 0.6, 5.0]], T: [[-48.5, 2.6, -1], [-48.5, 2.6, -1]], fov: [56, 52], roll: [4, 6], blur: 1.6 });
   add({ t0: HEAD - 0.2, blend: 0.25, k: "path", P: [[-40.5, 3.2, 7.5], [-41.5, 3.0, 7.0]], T: [[-49, 1.6, 0.5], [-50, 1.5, 1.0]], fov: [50, 46], blur: 1.0 });
@@ -161,7 +163,7 @@ export default function plot(T) {
   ];
   const bubbles = [{ who: "M9", t0: c("s6.follow") + 0.1, t1: s("s7") - 0.1, text: "FOLLOW +", cls: "red follow" },
     { who: "H9", t0: c("s3.none"), t1: s("s4") - 0.2, text: "???", cls: "" }];
-  const bursts = [...N.map((t, j) => ({ who: Object.keys(NUT)[j], t: t + 0.05, text: "NUTMEG!" })), { who: "H9", t: B1, text: "BOOM!" }, { who: "H9", t: B2, text: "BOOM!" }];
+  const bursts = [...chases.slice(0, 5).map((t) => ({ who: "H9", t, text: "MISS!" })), ...N.map((t, j) => ({ who: Object.keys(NUT)[j], t: t + 0.05, text: "NUTMEG!" })), { who: "H9", t: B1, text: "BOOM!" }, { who: "H9", t: B2, text: "BOOM!" }];
 
   const minute = (t) => t >= c("s9.pens") ? "PEN" : t >= s("s8") ? "92'" : t >= s("s7") ? `${Math.round(lerp(55, 74, clamp((t - s("s7")) / 6, 0, 1)))}'` : t >= s("s5") ? "38'" : t >= s("s4") ? "17'" : "2'";
   return {

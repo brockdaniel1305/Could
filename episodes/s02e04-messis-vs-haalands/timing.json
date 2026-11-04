@@ -1,45 +1,45 @@
 {
- "duration": 44.457,
- "voice": "kokoro:am_adam",
+ "duration": 41.72,
+ "voice": "prerecorded:elevenlabs:Michael (QngvLQR8bsLR5bzoa6Vv)",
  "scenes": [
   {
    "id": "s1-hook",
    "start": 0.0,
-   "duration": 2.79,
+   "duration": 3.09,
    "voice": "assets/voice/s1-hook.wav",
    "voiceStart": 0.15,
-   "speech": 2.24,
+   "speech": 2.54,
    "cues": {},
    "words": [
     {
      "text": "Could",
      "start": 0.15,
-     "end": 0.539
+     "end": 0.613
     },
     {
      "text": "eleven",
-     "start": 0.539,
-     "end": 0.851
+     "start": 0.613,
+     "end": 0.983
     },
     {
      "text": "Messis",
-     "start": 0.851,
-     "end": 1.162
+     "start": 0.983,
+     "end": 1.354
     },
     {
      "text": "beat",
-     "start": 1.162,
-     "end": 1.474
+     "start": 1.354,
+     "end": 1.724
     },
     {
      "text": "eleven",
-     "start": 1.474,
-     "end": 1.86
+     "start": 1.724,
+     "end": 2.131
     },
     {
      "text": "Haalands?",
-     "start": 1.86,
-     "end": 2.39
+     "start": 2.131,
+     "end": 2.69
     }
    ],
    "sfx": [
@@ -52,76 +52,76 @@
   },
   {
    "id": "s2-height",
-   "start": 2.79,
-   "duration": 5.558,
+   "start": 3.09,
+   "duration": 5.34,
    "voice": "assets/voice/s2-height.wav",
    "voiceStart": 0.15,
-   "speech": 5.008,
+   "speech": 4.79,
    "cues": {
     "tm": 0.15,
-    "th": 2.313,
-    "same": 4.305
+    "th": 2.23,
+    "same": 4.21
    },
    "words": [
     {
      "text": "Team",
      "start": 0.15,
-     "end": 0.662
+     "end": 0.683
     },
     {
      "text": "Messi:",
-     "start": 0.662,
-     "end": 1.43
+     "start": 0.683,
+     "end": 1.483
     },
     {
      "text": "one",
-     "start": 1.43,
-     "end": 1.585
+     "start": 1.483,
+     "end": 1.607
     },
     {
      "text": "metre",
-     "start": 1.585,
-     "end": 1.802
+     "start": 1.607,
+     "end": 1.781
     },
     {
      "text": "seventy.",
-     "start": 1.802,
-     "end": 2.113
+     "start": 1.781,
+     "end": 2.03
     },
     {
      "text": "Team",
-     "start": 2.313,
-     "end": 2.804
+     "start": 2.23,
+     "end": 2.67
     },
     {
      "text": "Haaland:",
-     "start": 2.804,
-     "end": 3.237
+     "start": 2.67,
+     "end": 3.117
     },
     {
      "text": "one",
-     "start": 3.237,
-     "end": 3.454
+     "start": 3.117,
+     "end": 3.34
     },
     {
      "text": "ninety",
-     "start": 3.454,
-     "end": 3.801
+     "start": 3.34,
+     "end": 3.697
     },
     {
      "text": "five.",
-     "start": 3.801,
-     "end": 4.105
+     "start": 3.697,
+     "end": 4.01
     },
     {
      "text": "Same",
-     "start": 4.305,
-     "end": 4.705
+     "start": 4.21,
+     "end": 4.466
     },
     {
      "text": "pitch.",
-     "start": 4.705,
-     "end": 5.305
+     "start": 4.466,
+     "end": 4.85
     }
    ],
    "sfx": [
@@ -135,143 +135,143 @@
   },
   {
    "id": "s3-pass",
-   "start": 8.348,
-   "duration": 5.607,
+   "start": 8.43,
+   "duration": 4.97,
    "voice": "assets/voice/s3-pass.wav",
    "voiceStart": 0.15,
-   "speech": 5.057,
+   "speech": 4.42,
    "cues": {
     "ko": 0.15,
-    "keep": 1.004,
-    "ninety": 2.564,
-    "none": 3.852
+    "keep": 0.85,
+    "ninety": 2.23,
+    "none": 3.36
    },
    "words": [
     {
      "text": "Kick-off.",
      "start": 0.15,
-     "end": 0.854
+     "end": 0.7
     },
     {
      "text": "The",
-     "start": 1.004,
-     "end": 1.193
+     "start": 0.85,
+     "end": 1.003
     },
     {
      "text": "Messis",
-     "start": 1.193,
-     "end": 1.57
+     "start": 1.003,
+     "end": 1.359
     },
     {
      "text": "keep",
-     "start": 1.57,
-     "end": 1.821
+     "start": 1.359,
+     "end": 1.563
     },
     {
      "text": "the",
-     "start": 1.821,
-     "end": 2.01
+     "start": 1.563,
+     "end": 1.715
     },
     {
      "text": "ball.",
-     "start": 2.01,
-     "end": 2.324
+     "start": 1.715,
+     "end": 1.97
     },
     {
      "text": "Ninety",
-     "start": 2.564,
-     "end": 2.8
+     "start": 2.23,
+     "end": 2.645
     },
     {
      "text": "passes.",
-     "start": 2.8,
-     "end": 3.624
+     "start": 2.645,
+     "end": 3.13
     },
     {
      "text": "Haaland",
-     "start": 3.852,
-     "end": 4.248
+     "start": 3.36,
+     "end": 3.713
     },
     {
      "text": "hasn't",
-     "start": 4.248,
-     "end": 4.587
+     "start": 3.713,
+     "end": 4.016
     },
     {
      "text": "touched",
-     "start": 4.587,
-     "end": 4.982
+     "start": 4.016,
+     "end": 4.369
     },
     {
      "text": "it.",
-     "start": 4.982,
-     "end": 5.152
+     "start": 4.369,
+     "end": 4.52
     }
    ],
    "sfx": []
   },
   {
    "id": "s4-corner",
-   "start": 13.955,
-   "duration": 4.463,
+   "start": 13.4,
+   "duration": 4.13,
    "voice": "assets/voice/s4-corner.wav",
    "voiceStart": 0.15,
-   "speech": 3.913,
+   "speech": 3.58,
    "cues": {
     "corner": 0.15,
-    "box": 1.267,
-    "nil": 3.253
+    "box": 0.98,
+    "nil": 2.78
    },
    "words": [
     {
      "text": "Then",
      "start": 0.15,
-     "end": 0.43
+     "end": 0.35
     },
     {
      "text": "a",
-     "start": 0.43,
-     "end": 0.5
+     "start": 0.35,
+     "end": 0.4
     },
     {
      "text": "corner.",
-     "start": 0.5,
-     "end": 0.99
+     "start": 0.4,
+     "end": 0.75
     },
     {
      "text": "Eleven",
-     "start": 1.267,
-     "end": 1.632
+     "start": 0.98,
+     "end": 1.308
     },
     {
      "text": "Haalands",
-     "start": 1.632,
-     "end": 2.087
+     "start": 1.308,
+     "end": 1.717
     },
     {
      "text": "in",
-     "start": 2.087,
-     "end": 2.269
+     "start": 1.717,
+     "end": 1.864
     },
     {
      "text": "the",
-     "start": 2.269,
-     "end": 2.543
+     "start": 1.864,
+     "end": 2.085
     },
     {
      "text": "box.",
-     "start": 2.543,
-     "end": 2.907
+     "start": 2.085,
+     "end": 2.38
     },
     {
      "text": "Nil,",
-     "start": 3.253,
-     "end": 3.553
+     "start": 2.78,
+     "end": 3.255
     },
     {
      "text": "one.",
-     "start": 3.553,
-     "end": 4.063
+     "start": 3.255,
+     "end": 3.73
     }
    ],
    "sfx": [
@@ -297,74 +297,74 @@
   },
   {
    "id": "s5-nutmeg",
-   "start": 18.418,
-   "duration": 6.91,
+   "start": 17.53,
+   "duration": 6.78,
    "voice": "assets/voice/s5-nutmeg.wav",
    "voiceStart": 0.15,
-   "speech": 6.36,
+   "speech": 6.23,
    "cues": {
     "ans": 0.15,
-    "legs": 1.303,
-    "n1": 2.961,
-    "n2": 3.831,
-    "n3": 4.701,
-    "one": 5.721
+    "legs": 1.06,
+    "n1": 3.08,
+    "n2": 3.86,
+    "n3": 4.6,
+    "one": 5.47
    },
    "words": [
     {
      "text": "Messi's",
      "start": 0.15,
-     "end": 0.65
+     "end": 0.51
     },
     {
      "text": "answer:",
-     "start": 0.65,
-     "end": 1.15
+     "start": 0.51,
+     "end": 0.87
     },
     {
      "text": "long",
-     "start": 1.303,
-     "end": 1.623
+     "start": 1.06,
+     "end": 1.504
     },
     {
      "text": "legs,",
-     "start": 1.623,
-     "end": 2.023
+     "start": 1.504,
+     "end": 2.06
     },
     {
      "text": "big",
-     "start": 2.023,
-     "end": 2.263
+     "start": 2.06,
+     "end": 2.33
     },
     {
      "text": "gaps.",
-     "start": 2.263,
-     "end": 2.663
+     "start": 2.33,
+     "end": 2.78
     },
     {
      "text": "Nutmeg.",
-     "start": 2.961,
-     "end": 4.961
+     "start": 3.08,
+     "end": 3.58
     },
     {
      "text": "Nutmeg.",
-     "start": 3.831,
-     "end": 5.831
+     "start": 3.86,
+     "end": 4.45
     },
     {
      "text": "Nutmeg.",
-     "start": 4.701,
-     "end": 6.701
+     "start": 4.6,
+     "end": 5.17
     },
     {
      "text": "One,",
-     "start": 5.721,
-     "end": 6.115
+     "start": 5.47,
+     "end": 5.89
     },
     {
      "text": "one.",
-     "start": 6.115,
-     "end": 6.51
+     "start": 5.89,
+     "end": 6.31
     }
    ],
    "sfx": [
@@ -396,11 +396,11 @@
   },
   {
    "id": "s6-follow",
-   "start": 25.328,
-   "duration": 2.086,
+   "start": 24.31,
+   "duration": 1.96,
    "voice": "assets/voice/s6-follow.wav",
    "voiceStart": 0.15,
-   "speech": 1.536,
+   "speech": 1.41,
    "cues": {
     "follow": 0.15
    },
@@ -408,109 +408,109 @@
     {
      "text": "Follow",
      "start": 0.15,
-     "end": 0.492
+     "end": 0.482
     },
     {
      "text": "if",
-     "start": 0.492,
-     "end": 0.605
+     "start": 0.482,
+     "end": 0.593
     },
     {
      "text": "you",
-     "start": 0.605,
-     "end": 0.776
+     "start": 0.593,
+     "end": 0.759
     },
     {
      "text": "want",
-     "start": 0.776,
-     "end": 1.004
+     "start": 0.759,
+     "end": 0.981
     },
     {
      "text": "the",
-     "start": 1.004,
-     "end": 1.175
+     "start": 0.981,
+     "end": 1.147
     },
     {
      "text": "rematch.",
-     "start": 1.175,
-     "end": 1.63
+     "start": 1.147,
+     "end": 1.59
     }
    ],
    "sfx": []
   },
   {
    "id": "s7-shoot",
-   "start": 27.414,
-   "duration": 6.048,
+   "start": 26.27,
+   "duration": 5.46,
    "voice": "assets/voice/s7-shoot.wav",
    "voiceStart": 0.15,
-   "speech": 5.498,
+   "speech": 4.91,
    "cues": {
     "half": 0.15,
-    "shoots": 2.46,
-    "every": 3.577,
-    "two": 4.837
+    "shoots": 2.138,
+    "every": 2.908,
+    "two": 4.25
    },
    "words": [
     {
      "text": "Second",
      "start": 0.15,
-     "end": 0.558
+     "end": 0.535
     },
     {
      "text": "half:",
-     "start": 0.558,
-     "end": 0.83
+     "start": 0.535,
+     "end": 0.856
     },
     {
      "text": "Haaland",
-     "start": 0.83,
-     "end": 1.306
+     "start": 0.856,
+     "end": 1.304
     },
     {
      "text": "stops",
-     "start": 1.306,
-     "end": 1.646
+     "start": 1.304,
+     "end": 1.625
     },
     {
      "text": "passing.",
-     "start": 1.646,
-     "end": 2.19
+     "start": 1.625,
+     "end": 2.138
     },
     {
      "text": "He",
-     "start": 2.46,
-     "end": 2.595
+     "start": 2.138,
+     "end": 2.267
     },
     {
      "text": "just",
-     "start": 2.595,
-     "end": 2.866
+     "start": 2.267,
+     "end": 2.523
     },
     {
      "text": "shoots.",
-     "start": 2.866,
-     "end": 3.34
+     "start": 2.523,
+     "end": 2.908
     },
     {
      "text": "From",
-     "start": 3.577,
-     "end": 4.11
+     "start": 2.908,
+     "end": 3.164
     },
     {
      "text": "everywhere.",
-     "start": 4.11,
-     "end": 5.577
+     "start": 3.164,
+     "end": 3.87
     },
     {
      "text": "One,",
-     "start": 4.837,
-     "end": 5.243
+     "start": 4.25,
+     "end": 4.75
     },
     {
      "text": "two.",
-     "start": 5.243,
-     "end": 5.648
+     "start": 4.75,
+     "end": 5.25
     }
    ],
    "sfx": [
@@ -542,56 +542,56 @@
   },
   {
    "id": "s8-fk",
-   "start": 33.462,
-   "duration": 4.115,
+   "start": 31.73,
+   "duration": 3.68,
    "voice": "assets/voice/s8-fk.wav",
    "voiceStart": 0.15,
-   "speech": 3.565,
+   "speech": 3.13,
    "cues": {
     "min": 0.15,
-    "fk": 1.438,
-    "eq": 2.905
+    "fk": 1.16,
+    "eq": 2.38
    },
    "words": [
     {
      "text": "Minute",
      "start": 0.15,
-     "end": 0.93
+     "end": 0.657
     },
     {
      "text": "ninety",
-     "start": 0.93,
-     "end": 1.106
+     "start": 0.657,
+     "end": 0.83
     },
     {
      "text": "two.",
-     "start": 1.106,
-     "end": 1.238
+     "start": 0.83,
+     "end": 0.96
     },
     {
      "text": "Free",
-     "start": 1.438,
-     "end": 1.724
+     "start": 1.16,
+     "end": 1.377
     },
     {
      "text": "kick,",
-     "start": 1.724,
-     "end": 2.009
+     "start": 1.377,
+     "end": 1.594
     },
     {
      "text": "Messi.",
-     "start": 2.009,
-     "end": 2.505
+     "start": 1.594,
+     "end": 1.98
     },
     {
      "text": "Two,",
-     "start": 2.905,
-     "end": 3.31
+     "start": 2.38,
+     "end": 2.8
     },
     {
      "text": "two.",
-     "start": 3.31,
-     "end": 3.715
+     "start": 2.8,
+     "end": 3.22
     }
    ],
    "sfx": [
@@ -611,88 +611,88 @@
   },
   {
    "id": "s9-pens",
-   "start": 37.577,
-   "duration": 6.88,
+   "start": 35.41,
+   "duration": 6.31,
    "voice": "assets/voice/s9-pens.wav",
    "voiceStart": 0.15,
-   "speech": 6.43,
+   "speech": 5.86,
    "cues": {
     "pens": 0.15,
-    "last": 1.118,
-    "duel": 2.15,
-    "who": 3.773,
-    "loop": 5.257
+    "last": 0.94,
+    "duel": 1.76,
+    "who": 3.12,
+    "loop": 4.58
    },
    "words": [
     {
      "text": "Penalties.",
      "start": 0.15,
-     "end": 0.87
+     "end": 0.65
     },
     {
      "text": "Last",
-     "start": 1.118,
-     "end": 2.007
+     "start": 0.94,
+     "end": 1.162
     },
     {
      "text": "kick.",
-     "start": 2.007,
-     "end": 3.118
+     "start": 1.162,
+     "end": 1.44
     },
     {
      "text": "Messi",
-     "start": 2.15,
-     "end": 2.47
+     "start": 1.76,
+     "end": 2.005
     },
     {
      "text": "against",
-     "start": 2.47,
-     "end": 2.918
+     "start": 2.005,
+     "end": 2.348
     },
     {
      "text": "Haaland.",
-     "start": 2.918,
-     "end": 3.473
+     "start": 2.348,
+     "end": 2.82
     },
     {
      "text": "Who",
-     "start": 3.773,
-     "end": 3.978
+     "start": 3.12,
+     "end": 3.42
     },
     {
      "text": "scores?",
-     "start": 3.978,
-     "end": 4.387
+     "start": 3.42,
+     "end": 4.12
     },
     {
      "text": "Comment.",
-     "start": 4.387,
-     "end": 4.933
+     "start": 4.12,
+     "end": 4.12
     },
     {
      "text": "So",
-     "start": 5.257,
-     "end": 5.399
+     "start": 4.58,
+     "end": 4.736
     },
     {
      "text": "if",
-     "start": 5.399,
-     "end": 5.541
+     "start": 4.736,
+     "end": 4.891
     },
     {
      "text": "anyone",
-     "start": 5.541,
-     "end": 5.968
+     "start": 4.891,
+     "end": 5.358
     },
     {
      "text": "asks",
-     "start": 5.968,
-     "end": 6.253
+     "start": 5.358,
+     "end": 5.669
     },
     {
      "text": "you:",
-     "start": 6.253,
-     "end": 6.537
+     "start": 5.669,
+     "end": 5.98
     }
    ],
    "sfx": [

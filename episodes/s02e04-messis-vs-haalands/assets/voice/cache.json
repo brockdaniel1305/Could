@@ -1,576 +1,611 @@
 {
  "s1-hook.part0.wav": {
-  "key": "584f9af05ae535b1eeeef790dc88ab6d12e9ebcb",
+  "key": "c9e6b58828fff13d23b2c45f21c1a1d0411deee9",
   "words": [
    {
     "text": "Could",
     "start": 0,
-    "end": 0.389
+    "end": 0.463
    },
    {
     "text": "11",
-    "start": 0.389,
-    "end": 0.545
+    "start": 0.463,
+    "end": 0.648
    },
    {
     "text": "messes",
-    "start": 0.545,
-    "end": 1.012
+    "start": 0.648,
+    "end": 1.204
    },
    {
     "text": "beat",
-    "start": 1.012,
-    "end": 1.324
+    "start": 1.204,
+    "end": 1.574
    },
    {
     "text": "11",
-    "start": 1.324,
-    "end": 1.479
+    "start": 1.574,
+    "end": 1.759
    },
    {
-    "text": "Haalands?",
-    "start": 1.479,
-    "end": 2.18
+    "text": "Harlins?",
+    "start": 1.759,
+    "end": 2.5
    }
   ]
  },
  "s2-height.part0.wav": {
-  "key": "eec628c6f50ca148699ba0eae8f7105de32e1881",
+  "key": "9cd6ab29be630918f910174c3f6bb733b1268867",
   "words": [
    {
     "text": "Team",
     "start": 0,
-    "end": 0.512
+    "end": 0.533
    },
    {
     "text": "Messi,",
-    "start": 0.512,
-    "end": 1.28
+    "start": 0.533,
+    "end": 1.333
    },
    {
-    "text": "1m70.",
-    "start": 1.28,
-    "end": 1.92
+    "text": "1m",
+    "start": 1.333,
+    "end": 1.6
+   },
+   {
+    "text": "70.",
+    "start": 1.6,
+    "end": 2
    }
   ]
  },
  "s2-height.part1.wav": {
-  "key": "30fb348a45554ab2162650cd28af320c65414aeb",
+  "key": "2a822bc9c62e275a282f36d07677f6e5c5c7265c",
   "words": [
    {
-    "text": "Team",
+    "text": "team",
     "start": 0,
-    "end": 0.491
+    "end": 0.44
    },
    {
-    "text": "Holland",
-    "start": 0.491,
-    "end": 1.351
+    "text": "Harland,",
+    "start": 0.44,
+    "end": 1.32
    },
    {
-    "text": "195",
-    "start": 1.351,
-    "end": 1.72
+    "text": "195.",
+    "start": 1.32,
+    "end": 1.76
    }
   ]
  },
  "s2-height.part2.wav": {
-  "key": "4c363634cc52d8d26bbe95cd73704aa0c3f7e4a8",
+  "key": "b40286977a05bf40928e71a23ee06d5d347a31e4",
   "words": [
    {
-    "text": "Same",
+    "text": "same",
     "start": 0,
-    "end": 0.4
+    "end": 0.256
    },
    {
     "text": "pitch.",
-    "start": 0.4,
-    "end": 1
-   }
-  ]
- },
- "s3-pass.part0.wav": {
-  "key": "0ea34dfb82e79566fc3038b8fc68e2c1f192be9a",
-  "words": [
-   {
-    "text": "kick",
-    "start": 0,
-    "end": 0.32
-   },
-   {
-    "text": "off.",
-    "start": 0.32,
+    "start": 0.256,
     "end": 0.64
    }
   ]
  },
+ "s3-pass.part0.wav": {
+  "key": "7aae69382c12bd483e12fb7fc726dd2b6acf4361",
+  "words": [
+   {
+    "text": "kick",
+    "start": 0,
+    "end": 0.25
+   },
+   {
+    "text": "off.",
+    "start": 0.25,
+    "end": 0.5
+   }
+  ]
+ },
  "s3-pass.part1.wav": {
-  "key": "7086c8121a5fd962030058f9a40fa72f011cf070",
+  "key": "235c24c46ba1b35c43b015f9773c9ac22f68b5fe",
   "words": [
    {
     "text": "The",
     "start": 0,
-    "end": 0.189
+    "end": 0.153
    },
    {
-    "text": "messes",
-    "start": 0.189,
-    "end": 0.566
+    "text": "Messies",
+    "start": 0.153,
+    "end": 0.509
    },
    {
     "text": "keep",
-    "start": 0.566,
-    "end": 0.817
+    "start": 0.509,
+    "end": 0.713
    },
    {
     "text": "the",
-    "start": 0.817,
-    "end": 1.006
+    "start": 0.713,
+    "end": 0.865
    },
    {
     "text": "ball.",
-    "start": 1.006,
-    "end": 1.32
+    "start": 0.865,
+    "end": 1.12
    }
   ]
  },
  "s3-pass.part2.wav": {
-  "key": "ecca25cfe1378d26c085113d8a6ef79d3e62ae6b",
+  "key": "3689ffb9c16f21b53356c8a93a75f5e46822eda9",
   "words": [
    {
-    "text": "90",
+    "text": "Ninety",
     "start": 0,
-    "end": 0.236
+    "end": 0.415
    },
    {
     "text": "passes.",
-    "start": 0.236,
-    "end": 1.06
+    "start": 0.415,
+    "end": 0.9
    }
   ]
  },
  "s3-pass.part3.wav": {
-  "key": "f3d7bb57d46a1b74e7c8751a39c9bf28f33ae7b1",
+  "key": "c3914696ee199424957af92c734ff676a509f5cf",
   "words": [
    {
-    "text": "Holland",
+    "text": "Haaland",
     "start": 0,
-    "end": 0.396
+    "end": 0.353
    },
    {
     "text": "hasn't",
-    "start": 0.396,
-    "end": 0.735
+    "start": 0.353,
+    "end": 0.656
    },
    {
     "text": "touched",
-    "start": 0.735,
-    "end": 1.13
+    "start": 0.656,
+    "end": 1.009
    },
    {
     "text": "it.",
-    "start": 1.13,
-    "end": 1.3
+    "start": 1.009,
+    "end": 1.16
    }
   ]
  },
  "s4-corner.part0.wav": {
-  "key": "0acda0a613921ed578cffb6007505109fbe01ea0",
+  "key": "f3b90763499ef05a22af9a46cd5324c0ae785b4f",
   "words": [
    {
-    "text": "then",
+    "text": "than",
     "start": 0,
-    "end": 0.28
+    "end": 0.2
    },
    {
     "text": "a",
-    "start": 0.28,
-    "end": 0.35
+    "start": 0.2,
+    "end": 0.25
    },
    {
     "text": "corner.",
-    "start": 0.35,
-    "end": 0.84
+    "start": 0.25,
+    "end": 0.6
    }
   ]
  },
  "s4-corner.part1.wav": {
-  "key": "f2ae1d6515d0452d7d865d00aa785cc5e2780061",
+  "key": "406abd9f669c977fc810a8bbe59605f0d81927dc",
   "words": [
    {
     "text": "11",
     "start": 0,
-    "end": 0.182
+    "end": 0.147
    },
    {
-    "text": "haulans",
-    "start": 0.182,
-    "end": 0.82
+    "text": "Harlands",
+    "start": 0.147,
+    "end": 0.737
    },
    {
     "text": "in",
-    "start": 0.82,
-    "end": 1.002
+    "start": 0.737,
+    "end": 0.884
    },
    {
     "text": "the",
-    "start": 1.002,
-    "end": 1.276
+    "start": 0.884,
+    "end": 1.105
    },
    {
     "text": "box.",
-    "start": 1.276,
-    "end": 1.64
+    "start": 1.105,
+    "end": 1.4
    }
   ]
  },
  "s4-corner.part2.wav": {
-  "key": "0e3855194f60d38920308926a24181d8bbafb4e1",
+  "key": "ba823f4746ab1549615b004f97f12ace9354d2bd",
   "words": [
    {
-    "text": "nil",
+    "text": "Neil,",
     "start": 0,
-    "end": 0.3
+    "end": 0.629
    },
    {
-    "text": "want",
-    "start": 0.3,
-    "end": 0.7
+    "text": "1.",
+    "start": 0.629,
+    "end": 0.88
    }
   ]
  },
  "s5-nutmeg.part0.wav": {
-  "key": "0e974a839273ece5ef3f8f9a41cbd0727e259cbb",
+  "key": "6b5d39299fd8d5302b6cbeb77976241a08e5a53a",
   "words": [
    {
     "text": "Messi's",
     "start": 0,
-    "end": 0.5
+    "end": 0.36
    },
    {
     "text": "answer.",
+    "start": 0.36,
+    "end": 0.72
+   }
+  ]
+ },
+ "s5-nutmeg.part1.wav": {
+  "key": "f80a2ef7294a0dc510f9e727f5e6f40972fdfef5",
+  "words": [
+   {
+    "text": "Long",
+    "start": 0,
+    "end": 0.444
+   },
+   {
+    "text": "legs.",
+    "start": 0.444,
+    "end": 1
+   },
+   {
+    "text": "Big",
+    "start": 1,
+    "end": 1.27
+   },
+   {
+    "text": "gaps.",
+    "start": 1.27,
+    "end": 1.72
+   }
+  ]
+ },
+ "s5-nutmeg.part2.wav": {
+  "key": "d097eff8307f3dfb56c85ddc85b547317adf48a9",
+  "words": [
+   {
+    "text": "nutmeg.",
+    "start": 0,
+    "end": 0.5
+   }
+  ]
+ },
+ "s5-nutmeg.part3.wav": {
+  "key": "b15cc8a6ee597083ebc62f492116b3806af44408",
+  "words": [
+   {
+    "text": "Not",
+    "start": 0,
+    "end": 0.214
+   },
+   {
+    "text": "Meg.",
+    "start": 0.214,
+    "end": 0.5
+   }
+  ]
+ },
+ "s6-follow.part0.wav": {
+  "key": "6cb1807ac99921ec0f075f8c6c290268d321f124",
+  "words": [
+   {
+    "text": "Follow",
+    "start": 0,
+    "end": 0.332
+   },
+   {
+    "text": "if",
+    "start": 0.332,
+    "end": 0.443
+   },
+   {
+    "text": "you",
+    "start": 0.443,
+    "end": 0.609
+   },
+   {
+    "text": "want",
+    "start": 0.609,
+    "end": 0.831
+   },
+   {
+    "text": "the",
+    "start": 0.831,
+    "end": 0.997
+   },
+   {
+    "text": "rematch.",
+    "start": 0.997,
+    "end": 1.44
+   }
+  ]
+ },
+ "s7-shoot.part0.wav": {
+  "key": "3a88e8db102c7e67ca434f22190a35d567a7abc6",
+  "words": [
+   {
+    "text": "Second",
+    "start": 0,
+    "end": 0.385
+   },
+   {
+    "text": "half,",
+    "start": 0.385,
+    "end": 0.706
+   },
+   {
+    "text": "Harland",
+    "start": 0.706,
+    "end": 1.154
+   },
+   {
+    "text": "stops",
+    "start": 1.154,
+    "end": 1.475
+   },
+   {
+    "text": "passing,",
+    "start": 1.475,
+    "end": 1.988
+   },
+   {
+    "text": "he",
+    "start": 1.988,
+    "end": 2.117
+   },
+   {
+    "text": "just",
+    "start": 2.117,
+    "end": 2.373
+   },
+   {
+    "text": "shoots",
+    "start": 2.373,
+    "end": 2.758
+   },
+   {
+    "text": "from",
+    "start": 2.758,
+    "end": 3.014
+   },
+   {
+    "text": "everywhere.",
+    "start": 3.014,
+    "end": 3.72
+   }
+  ]
+ },
+ "s7-shoot.part1.wav": {
+  "key": "6fe59c5bad3bd010298d1c09a71ae69447ab05f1",
+  "words": [
+   {
+    "text": "One,",
+    "start": 0,
+    "end": 0.5
+   },
+   {
+    "text": "two.",
     "start": 0.5,
     "end": 1
    }
   ]
  },
- "s5-nutmeg.part1.wav": {
-  "key": "e89a367fab3f4d40b52306335356a89bf4d33cc5",
-  "words": [
-   {
-    "text": "Long",
-    "start": 0,
-    "end": 0.32
-   },
-   {
-    "text": "legs,",
-    "start": 0.32,
-    "end": 0.72
-   },
-   {
-    "text": "big",
-    "start": 0.72,
-    "end": 0.96
-   },
-   {
-    "text": "gaps.",
-    "start": 0.96,
-    "end": 1.36
-   }
-  ]
- },
- "s5-nutmeg.part2.wav": {
-  "key": "35c8e2d02a61e244beed4cc2e067f653a7bc244d",
-  "words": [
-   {
-    "text": "Nutmeg.",
-    "start": 0,
-    "end": 2
-   }
-  ]
- },
- "s5-nutmeg.part3.wav": {
-  "key": "35c8e2d02a61e244beed4cc2e067f653a7bc244d",
-  "words": [
-   {
-    "text": "Nutmeg.",
-    "start": 0,
-    "end": 2
-   }
-  ]
- },
- "s6-follow.part0.wav": {
-  "key": "1794214cdc01d7b20357bc020f5167e5cd5e8b71",
-  "words": [
-   {
-    "text": "Follow",
-    "start": 0,
-    "end": 0.342
-   },
-   {
-    "text": "if",
-    "start": 0.342,
-    "end": 0.455
-   },
-   {
-    "text": "you",
-    "start": 0.455,
-    "end": 0.626
-   },
-   {
-    "text": "want",
-    "start": 0.626,
-    "end": 0.854
-   },
-   {
-    "text": "the",
-    "start": 0.854,
-    "end": 1.025
-   },
-   {
-    "text": "rematch.",
-    "start": 1.025,
-    "end": 1.48
-   }
-  ]
- },
- "s7-shoot.part0.wav": {
-  "key": "868153fda21f83549790ceca61c1cd9682e6dea5",
-  "words": [
-   {
-    "text": "Second",
-    "start": 0,
-    "end": 0.408
-   },
-   {
-    "text": "half",
-    "start": 0.408,
-    "end": 0.68
-   },
-   {
-    "text": "Holland",
-    "start": 0.68,
-    "end": 1.156
-   },
-   {
-    "text": "stops",
-    "start": 1.156,
-    "end": 1.496
-   },
-   {
-    "text": "passing.",
-    "start": 1.496,
-    "end": 2.04
-   }
-  ]
- },
- "s7-shoot.part1.wav": {
-  "key": "14f6deccfcc28f06950b6aa3ff895d171924d3fb",
-  "words": [
-   {
-    "text": "He",
-    "start": 0,
-    "end": 0.135
-   },
-   {
-    "text": "just",
-    "start": 0.135,
-    "end": 0.406
-   },
-   {
-    "text": "shoots.",
-    "start": 0.406,
-    "end": 0.88
-   }
-  ]
- },
  "s7-shoot.part2.wav": {
-  "key": "f6fec67e49d7de54ac2af957cba97935b7502bf1",
-  "words": [
-   {
-    "text": "from",
-    "start": 0,
-    "end": 0.533
-   },
-   {
-    "text": "everywhere.",
-    "start": 0.533,
-    "end": 2
-   }
-  ]
- },
- "s7-shoot.part3.wav": {
-  "key": "3d9dc17c1835b0e57b0f1448c37f9b3169b9c935",
+  "key": "44396b11b9629d77887412d3faef473d34201447",
   "words": [
    {
     "text": "1",
     "start": 0,
-    "end": 0.24
-   },
+    "end": 0.5
+   }
+  ]
+ },
+ "s7-shoot.part3.wav": {
+  "key": "bf4242c02d6d10db80426cf1c12de51ebce9aa2e",
+  "words": [
    {
     "text": "2.",
-    "start": 0.24,
-    "end": 0.72
+    "start": 0,
+    "end": 0.3
    }
   ]
  },
  "s8-fk.part0.wav": {
-  "key": "4f32922389edfa66140a6773a63272a8cb71da56",
+  "key": "e0cd1c5be3c4b50011941c754e59be697fef71d1",
   "words": [
    {
     "text": "minute",
     "start": 0,
-    "end": 0.78
+    "end": 0.507
    },
    {
-    "text": "92",
-    "start": 0.78,
-    "end": 1.04
-   }
-  ]
- },
- "s8-fk.part1.wav": {
-  "key": "105d2e173f35d166f2b00d0a23e4b310fc21cbb0",
-  "words": [
-   {
-    "text": "Free",
-    "start": 0,
-    "end": 0.286
-   },
-   {
-    "text": "kick",
-    "start": 0.286,
-    "end": 0.571
-   },
-   {
-    "text": "messy.",
-    "start": 0.571,
-    "end": 1
-   }
-  ]
- },
- "s8-fk.part2.wav": {
-  "key": "9b52955c2ff0bfabb07c54d1f515f7c26aa9001d",
-  "words": [
-   {
-    "text": "2-2",
-    "start": 0,
+    "text": "92.",
+    "start": 0.507,
     "end": 0.76
    }
   ]
  },
+ "s8-fk.part1.wav": {
+  "key": "b79dfbfdcf51610c3ff48ee44b2840247adf66a1",
+  "words": [
+   {
+    "text": "Free",
+    "start": 0,
+    "end": 0.217
+   },
+   {
+    "text": "kick",
+    "start": 0.217,
+    "end": 0.434
+   },
+   {
+    "text": "messy.",
+    "start": 0.434,
+    "end": 0.76
+   }
+  ]
+ },
+ "s8-fk.part2.wav": {
+  "key": "a73074f798abf28fffcef519f4acbce047a718fa",
+  "words": [
+   {
+    "text": "Two,",
+    "start": 0,
+    "end": 0.42
+   },
+   {
+    "text": "two.",
+    "start": 0.42,
+    "end": 0.84
+   }
+  ]
+ },
  "s9-pens.part0.wav": {
-  "key": "864e976f2e2563b5534d601615735c047248dac6",
+  "key": "463b291ce4a359644044396eb2e5ea04fb34b20b",
   "words": [
    {
     "text": "Penalties",
     "start": 0,
-    "end": 0.72
+    "end": 0.5
    }
   ]
  },
  "s9-pens.part1.wav": {
-  "key": "f74b4395957dc2bc75a8fecc551e462b3ad27eb6",
+  "key": "50932b9bc4caae489b6ea2f831afa124bae79905",
   "words": [
    {
     "text": "Last",
     "start": 0,
-    "end": 0.889
+    "end": 0.222
    },
    {
-    "text": "kick.",
-    "start": 0.889,
-    "end": 2
+    "text": "kick!",
+    "start": 0.222,
+    "end": 0.5
    }
   ]
  },
  "s9-pens.part2.wav": {
-  "key": "89be543975543f48ca429343202c1d81725e68ea",
+  "key": "cec366ba8f0c9c5e846e43f08100fab39a46558e",
   "words": [
    {
-    "text": "Messi",
+    "text": "Messy",
     "start": 0,
-    "end": 0.32
+    "end": 0.245
    },
    {
     "text": "against",
-    "start": 0.32,
-    "end": 0.768
+    "start": 0.245,
+    "end": 0.588
    },
    {
     "text": "Holland.",
-    "start": 0.768,
-    "end": 1.28
+    "start": 0.588,
+    "end": 0.98
    }
   ]
  },
  "s9-pens.part3.wav": {
-  "key": "63c5eebd1e32c88b7b528572fc0e0205969daab2",
+  "key": "5fb5ee42e2e79bf70475840c47b510910e9fe440",
   "words": [
    {
-    "text": "who",
+    "text": "Who",
     "start": 0,
-    "end": 0.205
+    "end": 0.3
    },
    {
-    "text": "scores",
-    "start": 0.205,
-    "end": 0.614
+    "text": "scores?",
+    "start": 0.3,
+    "end": 1
    },
    {
-    "text": "comment.",
-    "start": 0.614,
-    "end": 1.16
+    "text": "Comment!",
+    "start": 1,
+    "end": 1
    }
   ]
  },
  "s9-pens.part4.wav": {
-  "key": "49d63c2fb80269e77f2005f4212ef6ee199a7c05",
+  "key": "999b68e60604f45d1c198384d5d9978228fb4906",
   "words": [
    {
     "text": "So",
     "start": 0,
-    "end": 0.142
+    "end": 0.156
    },
    {
     "text": "if",
-    "start": 0.142,
-    "end": 0.284
+    "start": 0.156,
+    "end": 0.311
    },
    {
     "text": "anyone",
-    "start": 0.284,
-    "end": 0.711
+    "start": 0.311,
+    "end": 0.778
    },
    {
     "text": "asks",
-    "start": 0.711,
-    "end": 0.996
+    "start": 0.778,
+    "end": 1.089
    },
    {
     "text": "you.",
-    "start": 0.996,
-    "end": 1.28
+    "start": 1.089,
+    "end": 1.4
    }
   ]
  },
  "s5-nutmeg.part4.wav": {
-  "key": "35c8e2d02a61e244beed4cc2e067f653a7bc244d",
+  "key": "088150db643ca381acd85185ab04eee1114e9cca",
   "words": [
    {
-    "text": "Nutmeg.",
+    "text": "Not",
     "start": 0,
-    "end": 2
+    "end": 0.214
+   },
+   {
+    "text": "mek.",
+    "start": 0.214,
+    "end": 0.5
    }
   ]
  },
  "s5-nutmeg.part5.wav": {
-  "key": "b0ab3beb0a2ce6c3d56a2c28021c0b9e0fce5fc4",
+  "key": "1681c0bea9638bb184baa5e0f20dcddb99e8e50b",
   "words": [
    {
-    "text": "1-1",
+    "text": "One,",
     "start": 0,
-    "end": 0.7
+    "end": 0.42
+   },
+   {
+    "text": "one.",
+    "start": 0.42,
+    "end": 0.84
    }
   ]
  }

@@ -6,11 +6,11 @@
   "format": "short",
   "loop": true,
   "world": true,
-  "provider": "voicestudio",
-  "voice": "fable",
+  "provider": "prerecorded",
+  "voice": "elevenlabs:Michael (QngvLQR8bsLR5bzoa6Vv)",
   "model": "tts-1",
   "preview_voice": "am_adam",
-  "speed": 1.05,
+  "speed": 1.0,
   "music": {
     "theme": "stadium",
     "volume": 0.17
@@ -106,7 +106,7 @@
     },
     {
       "id": "s7-shoot",
-      "text": "{{half}}Second half: {Haaland|Hah-land} stops passing. ||0.2|| {{shoots}}He just shoots. ||0.2|| {{every}}From everywhere. ||0.3|| {{two}}One, two.",
+      "text": "{{half}}Second half: {Haaland|Hah-land} stops passing. {{shoots}}He just shoots. {{every}}From everywhere. ||0.3|| {{two}}One, two.",
       "sfx": [
         {
           "name": "kick",
