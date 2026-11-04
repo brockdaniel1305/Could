@@ -178,6 +178,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- 3D-Welten: **kein CSS-`filter` auf `#w3-chars`** – das erzeugt einen eigenen Stapelkontext, und der Vordergrund-Canvas liegt dann über
+  allen Figuren (Figuren verschwinden in Nahaufnahmen). Farbkorrektur nur über `plot.grade` (wirkt auf den 3D-Canvas).
+- Neuer "Broadcast"-Figurenstil: `channel/kit/parts/athlete.svg` (athletisch, kleinere Augen, Kinnlinie; Haare/Bart per HAIRSVG).
 - Zoom auf eine SVG-Gruppe um einen absoluten Punkt: `svgOrigin: "x y"` (transformOrigin in px ist relativ zur Bounding-Box, der Zoom wanderte aus dem Bild).
 - Die Loop-Hülle in `scene.py` heißt `<sid>-loopcam`; eigene Gruppen nie `<sid>-cam` nennen (Kollision: ganzes Bild verschob sich, 007 musste neu gerendert werden).
 - Nur der Ton geändert? Nicht neu rendern: `tools/remix_audio.py episodes/<ep> <render.mp4> <final.mp4>` mischt Stimme+SFX aus

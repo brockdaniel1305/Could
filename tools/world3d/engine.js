@@ -306,8 +306,8 @@ export function createWorld(plot) {
     if (plot.custom) plot.custom(t, { el, sstep, clamp, lerp, st });
     // depth of field + whip blur
     const b = blur + whip * 9;
-    canvas.style.filter = `blur(${b.toFixed(2)}px) saturate(1.08)`;
-    el("w3-chars").style.filter = whip > 0.05 ? `blur(${(whip * 6).toFixed(2)}px)` : "none";
+    canvas.style.filter = `blur(${b.toFixed(2)}px) ${plot.grade || "saturate(1.08)"}`;
+    el("w3-chars").style.filter = (whip > 0.05 ? `blur(${(whip * 6).toFixed(2)}px) ` : "") + (plot.charGrade || "") || "none";
     // screen shake on impacts
     let sh = 0; for (const s of shake) if (t >= s && t < s + 0.3) sh = Math.max(sh, (1 - (t - s) / 0.3) * 14);
     el("w3-stage").style.transform = sh ? `translate(${(Math.sin(t * 90) * sh).toFixed(1)}px, ${(Math.cos(t * 77) * sh * 0.6).toFixed(1)}px)` : "none";
