@@ -1,0 +1,687 @@
+{
+ "duration": 43.056,
+ "voice": "kokoro:am_adam",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 3.93,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 3.38,
+   "cues": {},
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.459
+    },
+    {
+     "text": "Real",
+     "start": 0.459,
+     "end": 0.707
+    },
+    {
+     "text": "Madrid's",
+     "start": 0.707,
+     "end": 1.202
+    },
+    {
+     "text": "Kylian",
+     "start": 1.202,
+     "end": 1.573
+    },
+    {
+     "text": "Mbapp\u00e9",
+     "start": 1.573,
+     "end": 1.945
+    },
+    {
+     "text": "lead",
+     "start": 1.945,
+     "end": 2.192
+    },
+    {
+     "text": "the",
+     "start": 2.192,
+     "end": 2.378
+    },
+    {
+     "text": "French",
+     "start": 2.378,
+     "end": 2.749
+    },
+    {
+     "text": "Revolution?",
+     "start": 2.749,
+     "end": 3.43
+    }
+   ],
+   "sfx": [
+    {
+     "name": "gallop",
+     "at": 0.0,
+     "volume": 0.35
+    },
+    {
+     "name": "impact-bass-1",
+     "at": 1.3,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s2-paris",
+   "start": 3.93,
+   "duration": 3.566,
+   "voice": "assets/voice/s2-paris.wav",
+   "voiceStart": 0.15,
+   "speech": 3.016,
+   "cues": {
+    "paris": 0.15,
+    "want": 1.843
+   },
+   "words": [
+    {
+     "text": "Paris,",
+     "start": 0.15,
+     "end": 0.935
+    },
+    {
+     "text": "1789.",
+     "start": 0.935,
+     "end": 1.643
+    },
+    {
+     "text": "The",
+     "start": 1.843,
+     "end": 2.02
+    },
+    {
+     "text": "people",
+     "start": 2.02,
+     "end": 2.374
+    },
+    {
+     "text": "want",
+     "start": 2.374,
+     "end": 2.611
+    },
+    {
+     "text": "a",
+     "start": 2.611,
+     "end": 2.67
+    },
+    {
+     "text": "leader.",
+     "start": 2.67,
+     "end": 3.083
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s3-cv",
+   "start": 7.496,
+   "duration": 4.057,
+   "voice": "assets/voice/s3-cv.wav",
+   "voiceStart": 0.15,
+   "speech": 3.507,
+   "cues": {
+    "wc": 0.15,
+    "speed": 1.971
+   },
+   "words": [
+    {
+     "text": "World",
+     "start": 0.15,
+     "end": 0.583
+    },
+    {
+     "text": "champion",
+     "start": 0.583,
+     "end": 1.277
+    },
+    {
+     "text": "at",
+     "start": 1.277,
+     "end": 1.45
+    },
+    {
+     "text": "nineteen.",
+     "start": 1.45,
+     "end": 1.771
+    },
+    {
+     "text": "Thirty",
+     "start": 1.971,
+     "end": 2.271
+    },
+    {
+     "text": "eight",
+     "start": 2.271,
+     "end": 2.533
+    },
+    {
+     "text": "kilometres",
+     "start": 2.533,
+     "end": 2.982
+    },
+    {
+     "text": "an",
+     "start": 2.982,
+     "end": 3.15
+    },
+    {
+     "text": "hour.",
+     "start": 3.15,
+     "end": 3.571
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-bastille",
+   "start": 11.553,
+   "duration": 5.373,
+   "voice": "assets/voice/s4-bastille.wav",
+   "voiceStart": 0.15,
+   "speech": 4.823,
+   "cues": {
+    "step": 0.15,
+    "hours": 1.673,
+    "sprint": 3.309
+   },
+   "words": [
+    {
+     "text": "Step",
+     "start": 0.15,
+     "end": 0.817
+    },
+    {
+     "text": "one:",
+     "start": 0.817,
+     "end": 1.15
+    },
+    {
+     "text": "the",
+     "start": 1.15,
+     "end": 1.15
+    },
+    {
+     "text": "Bastille.",
+     "start": 1.15,
+     "end": 1.15
+    },
+    {
+     "text": "The",
+     "start": 1.673,
+     "end": 1.874
+    },
+    {
+     "text": "crowd",
+     "start": 1.874,
+     "end": 2.209
+    },
+    {
+     "text": "needed",
+     "start": 2.209,
+     "end": 2.611
+    },
+    {
+     "text": "hours.",
+     "start": 2.611,
+     "end": 3.013
+    },
+    {
+     "text": "Mbapp\u00e9",
+     "start": 3.309,
+     "end": 3.778
+    },
+    {
+     "text": "needs",
+     "start": 3.778,
+     "end": 4.168
+    },
+    {
+     "text": "one",
+     "start": 4.168,
+     "end": 4.402
+    },
+    {
+     "text": "sprint.",
+     "start": 4.402,
+     "end": 4.949
+    }
+   ],
+   "sfx": [
+    {
+     "name": "stomp",
+     "cue": "sprint",
+     "offset": 1.6,
+     "volume": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s5-fans",
+   "start": 16.926,
+   "duration": 5.029,
+   "voice": "assets/voice/s5-fans.wav",
+   "voiceStart": 0.15,
+   "speech": 4.479,
+   "cues": {
+    "seven": 0.15,
+    "fans": 1.779,
+    "follow": 3.189
+   },
+   "words": [
+    {
+     "text": "Seven",
+     "start": 0.15,
+     "end": 0.49
+    },
+    {
+     "text": "prisoners",
+     "start": 0.49,
+     "end": 1.102
+    },
+    {
+     "text": "freed.",
+     "start": 1.102,
+     "end": 1.51
+    },
+    {
+     "text": "Seven",
+     "start": 1.779,
+     "end": 2.179
+    },
+    {
+     "text": "new",
+     "start": 2.179,
+     "end": 2.419
+    },
+    {
+     "text": "fans.",
+     "start": 2.419,
+     "end": 2.819
+    },
+    {
+     "text": "Follow,",
+     "start": 3.189,
+     "end": 3.578
+    },
+    {
+     "text": "and",
+     "start": 3.578,
+     "end": 3.772
+    },
+    {
+     "text": "you're",
+     "start": 3.772,
+     "end": 4.031
+    },
+    {
+     "text": "number",
+     "start": 4.031,
+     "end": 4.419
+    },
+    {
+     "text": "eight.",
+     "start": 4.419,
+     "end": 4.629
+    }
+   ],
+   "sfx": [
+    {
+     "name": "ding",
+     "cue": "fans",
+     "offset": 0.1,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s6-horse",
+   "start": 21.955,
+   "duration": 9.865,
+   "voice": "assets/voice/s6-horse.wav",
+   "voiceStart": 0.15,
+   "speech": 9.315,
+   "cues": {
+    "prob": 0.15,
+    "nap": 1.239,
+    "horse": 2.319,
+    "kmh": 3.415,
+    "second": 5.497
+   },
+   "words": [
+    {
+     "text": "One",
+     "start": 0.15,
+     "end": 0.695
+    },
+    {
+     "text": "problem:",
+     "start": 0.695,
+     "end": 2.15
+    },
+    {
+     "text": "Napoleon.",
+     "start": 1.239,
+     "end": 1.959
+    },
+    {
+     "text": "He",
+     "start": 2.319,
+     "end": 2.459
+    },
+    {
+     "text": "has",
+     "start": 2.459,
+     "end": 2.669
+    },
+    {
+     "text": "a",
+     "start": 2.669,
+     "end": 2.739
+    },
+    {
+     "text": "horse.",
+     "start": 2.739,
+     "end": 3.159
+    },
+    {
+     "text": "Forty",
+     "start": 3.415,
+     "end": 3.588
+    },
+    {
+     "text": "five",
+     "start": 3.588,
+     "end": 3.736
+    },
+    {
+     "text": "kilometres",
+     "start": 3.736,
+     "end": 4.033
+    },
+    {
+     "text": "an",
+     "start": 4.033,
+     "end": 4.342
+    },
+    {
+     "text": "hour.",
+     "start": 4.342,
+     "end": 5.115
+    },
+    {
+     "text": "For",
+     "start": 5.497,
+     "end": 5.703
+    },
+    {
+     "text": "the",
+     "start": 5.703,
+     "end": 5.91
+    },
+    {
+     "text": "first",
+     "start": 5.91,
+     "end": 6.253
+    },
+    {
+     "text": "time,",
+     "start": 6.253,
+     "end": 6.597
+    },
+    {
+     "text": "Mbapp\u00e9",
+     "start": 6.597,
+     "end": 7.01
+    },
+    {
+     "text": "is",
+     "start": 7.01,
+     "end": 7.148
+    },
+    {
+     "text": "only",
+     "start": 7.148,
+     "end": 7.423
+    },
+    {
+     "text": "the",
+     "start": 7.423,
+     "end": 7.629
+    },
+    {
+     "text": "second",
+     "start": 7.629,
+     "end": 8.082
+    },
+    {
+     "text": "fastest",
+     "start": 8.082,
+     "end": 8.592
+    },
+    {
+     "text": "man",
+     "start": 8.592,
+     "end": 8.798
+    },
+    {
+     "text": "in",
+     "start": 8.798,
+     "end": 8.936
+    },
+    {
+     "text": "France.",
+     "start": 8.936,
+     "end": 9.417
+    }
+   ],
+   "sfx": [
+    {
+     "name": "gallop",
+     "cue": "horse",
+     "offset": 0,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s7-madrid",
+   "start": 31.82,
+   "duration": 6.553,
+   "voice": "assets/voice/s7-madrid.wav",
+   "voiceStart": 0.15,
+   "speech": 6.003,
+   "cues": {
+    "back": 0.15,
+    "rm": 2.547,
+    "who": 3.779,
+    "him": 5.449
+   },
+   "words": [
+    {
+     "text": "So",
+     "start": 0.15,
+     "end": 0.279
+    },
+    {
+     "text": "he",
+     "start": 0.279,
+     "end": 0.409
+    },
+    {
+     "text": "goes",
+     "start": 0.409,
+     "end": 0.668
+    },
+    {
+     "text": "back",
+     "start": 0.668,
+     "end": 0.926
+    },
+    {
+     "text": "to",
+     "start": 0.926,
+     "end": 1.056
+    },
+    {
+     "text": "his",
+     "start": 1.056,
+     "end": 1.25
+    },
+    {
+     "text": "real",
+     "start": 1.25,
+     "end": 1.509
+    },
+    {
+     "text": "dictatorship.",
+     "start": 1.509,
+     "end": 2.35
+    },
+    {
+     "text": "Real",
+     "start": 2.547,
+     "end": 2.931
+    },
+    {
+     "text": "Madrid.",
+     "start": 2.931,
+     "end": 3.507
+    },
+    {
+     "text": "Who",
+     "start": 3.779,
+     "end": 3.953
+    },
+    {
+     "text": "takes",
+     "start": 3.953,
+     "end": 4.244
+    },
+    {
+     "text": "the",
+     "start": 4.244,
+     "end": 4.418
+    },
+    {
+     "text": "penalties?",
+     "start": 4.418,
+     "end": 4.999
+    },
+    {
+     "text": "He",
+     "start": 5.449,
+     "end": 5.638
+    },
+    {
+     "text": "does.",
+     "start": 5.638,
+     "end": 6.109
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whistle",
+     "cue": "who",
+     "offset": 0.9,
+     "volume": 0.25
+    },
+    {
+     "name": "kick",
+     "cue": "him",
+     "offset": -0.35,
+     "volume": 0.4
+    },
+    {
+     "name": "net",
+     "cue": "him",
+     "offset": 0.05,
+     "volume": 0.45
+    }
+   ]
+  },
+  {
+   "id": "s8-end",
+   "start": 38.373,
+   "duration": 4.683,
+   "voice": "assets/voice/s8-end.wav",
+   "voiceStart": 0.15,
+   "speech": 4.233,
+   "cues": {
+    "next": 0.15,
+    "com": 2.078,
+    "loop": 3.061
+   },
+   "words": [
+    {
+     "text": "Who",
+     "start": 0.15,
+     "end": 0.315
+    },
+    {
+     "text": "should",
+     "start": 0.315,
+     "end": 0.644
+    },
+    {
+     "text": "lead",
+     "start": 0.644,
+     "end": 0.863
+    },
+    {
+     "text": "the",
+     "start": 0.863,
+     "end": 1.027
+    },
+    {
+     "text": "next",
+     "start": 1.027,
+     "end": 1.247
+    },
+    {
+     "text": "revolution?",
+     "start": 1.247,
+     "end": 1.85
+    },
+    {
+     "text": "Comment.",
+     "start": 2.078,
+     "end": 2.718
+    },
+    {
+     "text": "So",
+     "start": 3.061,
+     "end": 3.203
+    },
+    {
+     "text": "if",
+     "start": 3.203,
+     "end": 3.345
+    },
+    {
+     "text": "anyone",
+     "start": 3.345,
+     "end": 3.772
+    },
+    {
+     "text": "asks",
+     "start": 3.772,
+     "end": 4.057
+    },
+    {
+     "text": "you:",
+     "start": 4.057,
+     "end": 4.341
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}

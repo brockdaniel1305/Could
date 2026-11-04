@@ -90,6 +90,7 @@ export function createWorld(plot) {
       if (k === "armsUp" && t < t0 + d) arms = 175;
       if (k === "hide" && t < t0 + d) show = false;
       if (k === "armR" && t < t0 + d) armR = 170;            // one arm up (offside!)
+      if (k === "cross" && t < t0 + d) { arms = -55; armR = -55; }   // arms crossed (Mbappé celebration)
       if (k === "dizzy" && t < t0 + d) dizzy = true;          // stars over the head
       if (k === "yawn" && t < t0 + d) yawn = true;            // mouth open
       if (k === "charge" && t < t0 + d) dy += Math.abs(Math.sin((t - t0) * 14)) * 0.12;
@@ -116,6 +117,7 @@ export function createWorld(plot) {
       } else if (a.facing) sx *= a.facing(t);
       a.vSide.style.display = front ? "none" : "inline"; a.vFront.style.display = front ? "inline" : "none";
     }
+    if (!a.vSide && a.autoFlip && s.speed > 0.4) { const q = project(s.x + s.vx * 0.1, s.dy, s.z + s.vz * 0.1, a.h); if (q.X < pr.X) sx *= -1; }
     if (a.stars) a.stars.setAttribute("opacity", s.dizzy ? "1" : "0");
     if (a.mO) { a.mO.setAttribute("opacity", s.yawn ? "1" : "0"); if (a.mSmile) a.mSmile.setAttribute("opacity", s.yawn ? "0" : "1"); }
     const run0 = clamp(s.speed / 2.5, 0, 1), ph0 = (s.d / (a.stride || 1.9)) * Math.PI * 2, seed = (a.unit * 0.37 + a.name.length) % 6.28;
@@ -233,6 +235,7 @@ export function createWorld(plot) {
       n.scale.x = 1 + b * 0.8; n.position.x = (side === "left" ? -1 : 1) * (52.5 + 1 + b * 0.8);
     }
     puffsAt(t);
+    if (st.envAt) st.envAt(cam);
     renderer.render(scene, cam);
     let dmin = Infinity;
     for (const a of Object.values(actors)) { const r = drawActor(a, t); if (r && r.pr && r.pr.vis && !a.noOcclude && r.pr.X > -150 && r.pr.X < 1230 && r.pr.Y > 0 && r.pr.Y < 2300) dmin = Math.min(dmin, r.pr.dist); }
@@ -300,7 +303,7 @@ export function createWorld(plot) {
       node.style.transform = `translate(${pr.X.toFixed(0)}px, ${pr.Y.toFixed(0)}px) translate(-50%, -50%) scale(${(0.4 + Math.min(1, f * 5) * 0.8).toFixed(2)}) rotate(${(-8 + f * 10).toFixed(1)}deg)`; }
     const sl = plot.speedlines ? plot.speedlines(t) : 0;
     speed.style.opacity = String(sl); speed.style.transform = `rotate(${(t * 40) % 360}deg) scale(1.6)`;
-    if (plot.custom) plot.custom(t, { el, sstep, clamp, lerp });
+    if (plot.custom) plot.custom(t, { el, sstep, clamp, lerp, st });
     // depth of field + whip blur
     const b = blur + whip * 9;
     canvas.style.filter = `blur(${b.toFixed(2)}px) saturate(1.08)`;

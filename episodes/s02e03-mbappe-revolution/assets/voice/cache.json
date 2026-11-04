@@ -1,0 +1,607 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "c78e2cf577c1da18d4163f14668dc87345814062",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.309
+   },
+   {
+    "text": "Real",
+    "start": 0.309,
+    "end": 0.557
+   },
+   {
+    "text": "Madrid's",
+    "start": 0.557,
+    "end": 1.052
+   },
+   {
+    "text": "Kylian",
+    "start": 1.052,
+    "end": 1.423
+   },
+   {
+    "text": "Mbappe",
+    "start": 1.423,
+    "end": 1.795
+   },
+   {
+    "text": "lead",
+    "start": 1.795,
+    "end": 2.042
+   },
+   {
+    "text": "the",
+    "start": 2.042,
+    "end": 2.228
+   },
+   {
+    "text": "French",
+    "start": 2.228,
+    "end": 2.599
+   },
+   {
+    "text": "Revolution?",
+    "start": 2.599,
+    "end": 3.28
+   }
+  ]
+ },
+ "s2-paris.part0.wav": {
+  "key": "a5a444249e3cc40f30daae696e5cc1886c0cc5bc",
+  "words": [
+   {
+    "text": "Paris,",
+    "start": 0,
+    "end": 0.785
+   },
+   {
+    "text": "1789.",
+    "start": 0.785,
+    "end": 1.44
+   }
+  ]
+ },
+ "s2-paris.part1.wav": {
+  "key": "9f1bb4c84bac36bcb9796457c86bf2b9fd3f8f7d",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.177
+   },
+   {
+    "text": "people",
+    "start": 0.177,
+    "end": 0.531
+   },
+   {
+    "text": "want",
+    "start": 0.531,
+    "end": 0.768
+   },
+   {
+    "text": "a",
+    "start": 0.768,
+    "end": 0.827
+   },
+   {
+    "text": "leader.",
+    "start": 0.827,
+    "end": 1.24
+   }
+  ]
+ },
+ "s3-cv.part0.wav": {
+  "key": "9f49842083256fddda464e235014bbc6d03105f3",
+  "words": [
+   {
+    "text": "World",
+    "start": 0,
+    "end": 0.433
+   },
+   {
+    "text": "champion",
+    "start": 0.433,
+    "end": 1.127
+   },
+   {
+    "text": "at",
+    "start": 1.127,
+    "end": 1.3
+   },
+   {
+    "text": "19.",
+    "start": 1.3,
+    "end": 1.56
+   }
+  ]
+ },
+ "s3-cv.part1.wav": {
+  "key": "5af832f5bab65f84973404b9ff4ca0311599fd67",
+  "words": [
+   {
+    "text": "38",
+    "start": 0,
+    "end": 0.168
+   },
+   {
+    "text": "kilometers",
+    "start": 0.168,
+    "end": 1.011
+   },
+   {
+    "text": "an",
+    "start": 1.011,
+    "end": 1.179
+   },
+   {
+    "text": "hour.",
+    "start": 1.179,
+    "end": 1.6
+   }
+  ]
+ },
+ "s4-bastille.part0.wav": {
+  "key": "7c696b00ba35bb8fb576a68c307656f7082d648a",
+  "words": [
+   {
+    "text": "Step",
+    "start": 0,
+    "end": 0.667
+   },
+   {
+    "text": "1.",
+    "start": 0.667,
+    "end": 1
+   },
+   {
+    "text": "The",
+    "start": 1,
+    "end": 1
+   },
+   {
+    "text": "Bastille.",
+    "start": 1,
+    "end": 1
+   }
+  ]
+ },
+ "s4-bastille.part1.wav": {
+  "key": "43bfb6298537658fee3bbb62c287e78f5365701f",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.201
+   },
+   {
+    "text": "crowd",
+    "start": 0.201,
+    "end": 0.536
+   },
+   {
+    "text": "needed",
+    "start": 0.536,
+    "end": 0.938
+   },
+   {
+    "text": "hours.",
+    "start": 0.938,
+    "end": 1.34
+   }
+  ]
+ },
+ "s4-bastille.part2.wav": {
+  "key": "ae8a35cd87fde9d2435e0cf7be1b9c9bd364c18b",
+  "words": [
+   {
+    "text": "Mbappe",
+    "start": 0,
+    "end": 0.469
+   },
+   {
+    "text": "needs",
+    "start": 0.469,
+    "end": 0.859
+   },
+   {
+    "text": "one",
+    "start": 0.859,
+    "end": 1.093
+   },
+   {
+    "text": "sprint.",
+    "start": 1.093,
+    "end": 1.64
+   }
+  ]
+ },
+ "s5-fans.part0.wav": {
+  "key": "69862b6e30ab93d397d7c817ebfd4075ced3a698",
+  "words": [
+   {
+    "text": "Seven",
+    "start": 0,
+    "end": 0.34
+   },
+   {
+    "text": "prisoners",
+    "start": 0.34,
+    "end": 0.952
+   },
+   {
+    "text": "freed.",
+    "start": 0.952,
+    "end": 1.36
+   }
+  ]
+ },
+ "s5-fans.part1.wav": {
+  "key": "0883b624387a5f0410d5604617cf7054219b9132",
+  "words": [
+   {
+    "text": "Seven",
+    "start": 0,
+    "end": 0.4
+   },
+   {
+    "text": "new",
+    "start": 0.4,
+    "end": 0.64
+   },
+   {
+    "text": "fans.",
+    "start": 0.64,
+    "end": 1.04
+   }
+  ]
+ },
+ "s5-fans.part2.wav": {
+  "key": "13d0ee1a121feeb81b69512c6f383d5ce8860e3b",
+  "words": [
+   {
+    "text": "Follow",
+    "start": 0,
+    "end": 0.389
+   },
+   {
+    "text": "and",
+    "start": 0.389,
+    "end": 0.583
+   },
+   {
+    "text": "your",
+    "start": 0.583,
+    "end": 0.842
+   },
+   {
+    "text": "number",
+    "start": 0.842,
+    "end": 1.23
+   },
+   {
+    "text": "8.",
+    "start": 1.23,
+    "end": 1.36
+   }
+  ]
+ },
+ "s6-horse.part0.wav": {
+  "key": "468c58834d45d8620ec708ab7020f28c3a422736",
+  "words": [
+   {
+    "text": "One",
+    "start": 0,
+    "end": 0.545
+   },
+   {
+    "text": "problem.",
+    "start": 0.545,
+    "end": 2
+   }
+  ]
+ },
+ "s6-horse.part1.wav": {
+  "key": "5aa0d77838a3571de00fc807baecd3cd7641f3f2",
+  "words": [
+   {
+    "text": "NAPOLEON",
+    "start": 0,
+    "end": 0.72
+   }
+  ]
+ },
+ "s6-horse.part2.wav": {
+  "key": "659256099afa0e15c5276867b77fa319997629b9",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.14
+   },
+   {
+    "text": "has",
+    "start": 0.14,
+    "end": 0.35
+   },
+   {
+    "text": "a",
+    "start": 0.35,
+    "end": 0.42
+   },
+   {
+    "text": "horse.",
+    "start": 0.42,
+    "end": 0.84
+   }
+  ]
+ },
+ "s6-horse.part3.wav": {
+  "key": "648bf336eaa4888abd4c16f4dc9b272711afbf3e",
+  "words": [
+   {
+    "text": "45",
+    "start": 0,
+    "end": 0.309
+   },
+   {
+    "text": "km",
+    "start": 0.309,
+    "end": 0.618
+   },
+   {
+    "text": "an",
+    "start": 0.618,
+    "end": 0.927
+   },
+   {
+    "text": "hour.",
+    "start": 0.927,
+    "end": 1.7
+   }
+  ]
+ },
+ "s6-horse.part4.wav": {
+  "key": "60b5bc8d44676a9229ab9af24de35df285b5e804",
+  "words": [
+   {
+    "text": "For",
+    "start": 0,
+    "end": 0.206
+   },
+   {
+    "text": "the",
+    "start": 0.206,
+    "end": 0.413
+   },
+   {
+    "text": "first",
+    "start": 0.413,
+    "end": 0.756
+   },
+   {
+    "text": "time,",
+    "start": 0.756,
+    "end": 1.1
+   },
+   {
+    "text": "Mbappe",
+    "start": 1.1,
+    "end": 1.513
+   },
+   {
+    "text": "is",
+    "start": 1.513,
+    "end": 1.651
+   },
+   {
+    "text": "only",
+    "start": 1.651,
+    "end": 1.926
+   },
+   {
+    "text": "the",
+    "start": 1.926,
+    "end": 2.132
+   },
+   {
+    "text": "second-fastest",
+    "start": 2.132,
+    "end": 3.095
+   },
+   {
+    "text": "man",
+    "start": 3.095,
+    "end": 3.301
+   },
+   {
+    "text": "in",
+    "start": 3.301,
+    "end": 3.439
+   },
+   {
+    "text": "France.",
+    "start": 3.439,
+    "end": 3.92
+   }
+  ]
+ },
+ "s7-madrid.part0.wav": {
+  "key": "6bc127a15cba918b5c0c452276c07c4d0a75ed4c",
+  "words": [
+   {
+    "text": "so",
+    "start": 0,
+    "end": 0.129
+   },
+   {
+    "text": "he",
+    "start": 0.129,
+    "end": 0.259
+   },
+   {
+    "text": "goes",
+    "start": 0.259,
+    "end": 0.518
+   },
+   {
+    "text": "back",
+    "start": 0.518,
+    "end": 0.776
+   },
+   {
+    "text": "to",
+    "start": 0.776,
+    "end": 0.906
+   },
+   {
+    "text": "his",
+    "start": 0.906,
+    "end": 1.1
+   },
+   {
+    "text": "real",
+    "start": 1.1,
+    "end": 1.359
+   },
+   {
+    "text": "dictatorship.",
+    "start": 1.359,
+    "end": 2.2
+   }
+  ]
+ },
+ "s7-madrid.part1.wav": {
+  "key": "9115d1651dd36f63d7da57c4369b0bab88035520",
+  "words": [
+   {
+    "text": "Real",
+    "start": 0,
+    "end": 0.384
+   },
+   {
+    "text": "Madrid",
+    "start": 0.384,
+    "end": 0.96
+   }
+  ]
+ },
+ "s7-madrid.part2.wav": {
+  "key": "d6cd97a09654bd759491519273282e9207178fb6",
+  "words": [
+   {
+    "text": "Who",
+    "start": 0,
+    "end": 0.174
+   },
+   {
+    "text": "takes",
+    "start": 0.174,
+    "end": 0.465
+   },
+   {
+    "text": "the",
+    "start": 0.465,
+    "end": 0.639
+   },
+   {
+    "text": "penalties?",
+    "start": 0.639,
+    "end": 1.22
+   }
+  ]
+ },
+ "s7-madrid.part3.wav": {
+  "key": "e61119e5e750ed2c99cdac055767e6802aaa0169",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.189
+   },
+   {
+    "text": "does.",
+    "start": 0.189,
+    "end": 0.66
+   }
+  ]
+ },
+ "s8-end.part0.wav": {
+  "key": "205f0db171ca0a188a1fd41474ccc4599f1e7451",
+  "words": [
+   {
+    "text": "who",
+    "start": 0,
+    "end": 0.165
+   },
+   {
+    "text": "should",
+    "start": 0.165,
+    "end": 0.494
+   },
+   {
+    "text": "lead",
+    "start": 0.494,
+    "end": 0.713
+   },
+   {
+    "text": "the",
+    "start": 0.713,
+    "end": 0.877
+   },
+   {
+    "text": "next",
+    "start": 0.877,
+    "end": 1.097
+   },
+   {
+    "text": "revolution.",
+    "start": 1.097,
+    "end": 1.7
+   }
+  ]
+ },
+ "s8-end.part1.wav": {
+  "key": "ebe43748bec93fccb14c343f60f976cddbc7b71f",
+  "words": [
+   {
+    "text": "Comment!",
+    "start": 0,
+    "end": 0.64
+   }
+  ]
+ },
+ "s8-end.part2.wav": {
+  "key": "49d63c2fb80269e77f2005f4212ef6ee199a7c05",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.142
+   },
+   {
+    "text": "if",
+    "start": 0.142,
+    "end": 0.284
+   },
+   {
+    "text": "anyone",
+    "start": 0.284,
+    "end": 0.711
+   },
+   {
+    "text": "asks",
+    "start": 0.711,
+    "end": 0.996
+   },
+   {
+    "text": "you.",
+    "start": 0.996,
+    "end": 1.28
+   }
+  ]
+ }
+}
