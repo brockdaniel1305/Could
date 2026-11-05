@@ -69,27 +69,70 @@ for a, b in chunks:
 want = ["".join(sgm) for sgm in segs]
 N, M = len(segs), len(chunks)
 if M < N:
-    sys.exit(f"only {M} speech chunks for {N} segments - lower the silence threshold")
-INF = float("inf")
-best = [[INF] * (M + 1) for _ in range(N + 1)]
-back = [[0] * (M + 1) for _ in range(N + 1)]
-best[0][0] = 0.0
-for k in range(1, N + 1):
-    for m in range(k, M - (N - k) + 1):
-        for p in range(max(k - 1, m - 4), m):
-            if best[k - 1][p] == INF:
-                continue
-            got = "".join(heard[p:m])
-            cost = best[k - 1][p] + (1 - difflib.SequenceMatcher(None, got, want[k - 1]).ratio()) * max(len(got), len(want[k - 1]))
-            if cost < best[k][m]:
-                best[k][m], back[k][m] = cost, p
-bounds, m = [], M
-for k in range(N, 0, -1):
-    p = back[k][m]
-    bounds.append((chunks[p][0], chunks[m - 1][1]))
-    print(f"  seg {k - 1:02d}: {want[k - 1]!r} <- {''.join(heard[p:m])!r}")
-    m = p
-bounds.reverse()
+    # fast talkers barely pause: cut at word starts from one transcript of the whole take instead
+    print(f"only {M} speech chunks for {N} segments - cutting at word starts", flush=True)
+    r = subprocess.run(["npx", "--yes", "hyperframes", "transcribe", str(wav), "--model", "small.en", "--json"], capture_output=True, text=True, cwd=out)
+    words = []
+    for line in (r.stdout + "\n" + r.stderr).splitlines():
+        try:
+            ev = json.loads(line)
+        except ValueError:
+            continue
+        if ev.get("type") == "words":
+            words += ev["words"]
+    (out / "transcript.json").unlink(missing_ok=True)
+    heardw = [toks(w["text"]) for w in words]
+    flat = [(k, w) for k, sgm in enumerate(segs) for w in sgm]
+    first = {}
+    sm = difflib.SequenceMatcher(None, [w for _, w in flat], heardw, autojunk=False)
+    for blk in sm.get_matching_blocks():
+        for j in range(blk.size):
+            k = flat[blk.a + j][0]
+            if k not in first:
+                first[k] = (blk.a + j, words[blk.b + j]["start"])
+    # a segment whose first word was not matched: take its first matched word minus the words before it (~0.3 s each)
+    starts = []
+    for k in range(N):
+        if k in first:
+            idx, t = first[k]
+            lead = idx - next(i for i, (kk, _) in enumerate(flat) if kk == k)
+            starts.append(t - 0.3 * lead)
+        else:
+            starts.append(None)
+    for k in range(N):
+        if starts[k] is None:
+            prv = next((starts[j] for j in range(k - 1, -1, -1) if starts[j] is not None), 0.0)
+            nxt = next((starts[j] for j in range(k + 1, N) if starts[j] is not None), dur)
+            starts[k] = (prv + nxt) / 2
+            print(f"  seg {k:02d} start interpolated", flush=True)
+    starts = [max(0.0, min(dur, x)) for x in starts]
+    starts[0] = 0.0
+    bounds = [(starts[k] - (0.04 if k else 0), (starts[k + 1] - 0.03) if k + 1 < N else dur) for k in range(N)]
+    for k in range(N):
+        print(f"  seg {k:02d}: {bounds[k][0]:6.2f}-{bounds[k][1]:6.2f} {want[k]!r}" if False else f"  seg {k:02d}: {bounds[k][0]:6.2f}-{bounds[k][1]:6.2f}")
+    M = 0
+if M:
+    INF = float("inf")
+
+    best = [[INF] * (M + 1) for _ in range(N + 1)]
+    back = [[0] * (M + 1) for _ in range(N + 1)]
+    best[0][0] = 0.0
+    for k in range(1, N + 1):
+        for m in range(k, M - (N - k) + 1):
+            for p in range(max(k - 1, m - 4), m):
+                if best[k - 1][p] == INF:
+                    continue
+                got = "".join(heard[p:m])
+                cost = best[k - 1][p] + (1 - difflib.SequenceMatcher(None, got, want[k - 1]).ratio()) * max(len(got), len(want[k - 1]))
+                if cost < best[k][m]:
+                    best[k][m], back[k][m] = cost, p
+    bounds, m = [], M
+    for k in range(N, 0, -1):
+        p = back[k][m]
+        bounds.append((chunks[p][0], chunks[m - 1][1]))
+        print(f"  seg {k - 1:02d}: {want[k - 1]!r} <- {''.join(heard[p:m])!r}")
+        m = p
+    bounds.reverse()
 files = []
 for k, (a, b) in enumerate(bounds):
     lo = max(0.0, a - 0.06) if k == 0 else max(bounds[k - 1][1] + 0.02, a - 0.06)

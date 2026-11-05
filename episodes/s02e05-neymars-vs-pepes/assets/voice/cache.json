@@ -1,0 +1,642 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "8e727697e9fee8343036073ce486f3137220515f",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.411
+   },
+   {
+    "text": "11",
+    "start": 0.411,
+    "end": 0.575
+   },
+   {
+    "text": "Neymar's",
+    "start": 0.575,
+    "end": 1.232
+   },
+   {
+    "text": "beat",
+    "start": 1.232,
+    "end": 1.561
+   },
+   {
+    "text": "11",
+    "start": 1.561,
+    "end": 1.725
+   },
+   {
+    "text": "Pepe's?",
+    "start": 1.725,
+    "end": 2.3
+   }
+  ]
+ },
+ "s2-intro.part0.wav": {
+  "key": "1853c93ef104d4214d27cba36e3390fbaa164cd0",
+  "words": [
+   {
+    "text": "Team",
+    "start": 0,
+    "end": 0.364
+   },
+   {
+    "text": "Neymar.",
+    "start": 0.364,
+    "end": 1
+   }
+  ]
+ },
+ "s2-intro.part1.wav": {
+  "key": "b5639d06be1195f2118a731278ea0c3c89a7f820",
+  "words": [
+   {
+    "text": "the",
+    "start": 0,
+    "end": 0.227
+   },
+   {
+    "text": "last",
+    "start": 0.227,
+    "end": 0.53
+   },
+   {
+    "text": "true",
+    "start": 0.53,
+    "end": 0.832
+   },
+   {
+    "text": "yoga",
+    "start": 0.832,
+    "end": 1.135
+   },
+   {
+    "text": "bonitos.",
+    "start": 1.135,
+    "end": 1.74
+   }
+  ]
+ },
+ "s2-intro.part2.wav": {
+  "key": "61e9dd71fd97ac32ebffb4b47627b570eedf7934",
+  "words": [
+   {
+    "text": "14",
+    "start": 0,
+    "end": 0.156
+   },
+   {
+    "text": "minutes",
+    "start": 0.156,
+    "end": 0.701
+   },
+   {
+    "text": "on",
+    "start": 0.701,
+    "end": 0.856
+   },
+   {
+    "text": "the",
+    "start": 0.856,
+    "end": 1.09
+   },
+   {
+    "text": "floor",
+    "start": 1.09,
+    "end": 1.479
+   },
+   {
+    "text": "at",
+    "start": 1.479,
+    "end": 1.635
+   },
+   {
+    "text": "the",
+    "start": 1.635,
+    "end": 1.868
+   },
+   {
+    "text": "2018",
+    "start": 1.868,
+    "end": 2.179
+   },
+   {
+    "text": "World",
+    "start": 2.179,
+    "end": 2.569
+   },
+   {
+    "text": "Cup.",
+    "start": 2.569,
+    "end": 2.88
+   }
+  ]
+ },
+ "s2-intro.part3.wav": {
+  "key": "cfdaa671f7326caf08aae9bf4b3ed5cdc13be769",
+  "words": [
+   {
+    "text": "Team",
+    "start": 0,
+    "end": 0.32
+   },
+   {
+    "text": "Pepe.",
+    "start": 0.32,
+    "end": 0.72
+   }
+  ]
+ },
+ "s2-intro.part4.wav": {
+  "key": "419100c411d6838fb9d1d6d024c531574e001460",
+  "words": [
+   {
+    "text": "A",
+    "start": 0,
+    "end": 0.07
+   },
+   {
+    "text": "10",
+    "start": 0.07,
+    "end": 0.21
+   },
+   {
+    "text": "match",
+    "start": 0.21,
+    "end": 0.56
+   },
+   {
+    "text": "ban",
+    "start": 0.56,
+    "end": 0.77
+   },
+   {
+    "text": "for",
+    "start": 0.77,
+    "end": 0.98
+   },
+   {
+    "text": "kicking",
+    "start": 0.98,
+    "end": 1.47
+   },
+   {
+    "text": "a",
+    "start": 1.47,
+    "end": 1.54
+   },
+   {
+    "text": "man",
+    "start": 1.54,
+    "end": 1.75
+   },
+   {
+    "text": "on",
+    "start": 1.75,
+    "end": 1.89
+   },
+   {
+    "text": "the",
+    "start": 1.89,
+    "end": 2.1
+   },
+   {
+    "text": "floor.",
+    "start": 2.1,
+    "end": 2.52
+   }
+  ]
+ },
+ "s3-roll.part0.wav": {
+  "key": "14c6f339b14721b0462d675b020c50613e1e64bb",
+  "words": [
+   {
+    "text": "Kickoffs!",
+    "start": 0,
+    "end": 0.7
+   }
+  ]
+ },
+ "s3-roll.part1.wav": {
+  "key": "388599edca43fa41610527b56a2911e10ef603c4",
+  "words": [
+   {
+    "text": "first",
+    "start": 0,
+    "end": 0.317
+   },
+   {
+    "text": "tackle.",
+    "start": 0.317,
+    "end": 0.76
+   }
+  ]
+ },
+ "s3-roll.part2.wav": {
+  "key": "fd76968f31fad8ba888fe99ca0505de3ec0ff147",
+  "words": [
+   {
+    "text": "Name",
+    "start": 0,
+    "end": 0.615
+   },
+   {
+    "text": "our",
+    "start": 0.615,
+    "end": 1.077
+   },
+   {
+    "text": "roles.",
+    "start": 1.077,
+    "end": 2
+   }
+  ]
+ },
+ "s3-roll.part3.wav": {
+  "key": "25e739ac73dba7a4b7f09ccb2508cdfef0a254a3",
+  "words": [
+   {
+    "text": "Red",
+    "start": 0,
+    "end": 0.375
+   },
+   {
+    "text": "card?",
+    "start": 0.375,
+    "end": 1
+   }
+  ]
+ },
+ "s3-roll.part4.wav": {
+  "key": "78155ebcefacac418d869508d2ac606d2a1a3607",
+  "words": [
+   {
+    "text": "10",
+    "start": 0,
+    "end": 0.156
+   },
+   {
+    "text": "Pepe's.",
+    "start": 0.156,
+    "end": 0.7
+   }
+  ]
+ },
+ "s4-magic.part0.wav": {
+  "key": "a959c9cd4734426759d7be0e8a0147f38a2b0483",
+  "words": [
+   {
+    "text": "then",
+    "start": 0,
+    "end": 0.223
+   },
+   {
+    "text": "Neymar",
+    "start": 0.223,
+    "end": 0.558
+   },
+   {
+    "text": "remembers",
+    "start": 0.558,
+    "end": 1.059
+   },
+   {
+    "text": "he's",
+    "start": 1.059,
+    "end": 1.282
+   },
+   {
+    "text": "Brazilian.",
+    "start": 1.282,
+    "end": 1.84
+   }
+  ]
+ },
+ "s4-magic.part1.wav": {
+  "key": "55286b1d79667dcbed03cde997f788f904418694",
+  "words": [
+   {
+    "text": "Rainbow",
+    "start": 0,
+    "end": 0.538
+   },
+   {
+    "text": "flick.",
+    "start": 0.538,
+    "end": 1
+   }
+  ]
+ },
+ "s4-magic.part2.wav": {
+  "key": "27237a3bdc421353708f136057154186c718897a",
+  "words": [
+   {
+    "text": "Elastico?",
+    "start": 0,
+    "end": 0.64
+   }
+  ]
+ },
+ "s4-magic.part3.wav": {
+  "key": "d8fb608a45c6593e6827c01ed2ff5f421ec2da74",
+  "words": [
+   {
+    "text": "not",
+    "start": 0,
+    "end": 0.214
+   },
+   {
+    "text": "Meg.",
+    "start": 0.214,
+    "end": 0.5
+   }
+  ]
+ },
+ "s4-magic.part4.wav": {
+  "key": "de46fa768bbf46a8af62e7dad42b04aea1c11b2a",
+  "words": [
+   {
+    "text": "1",
+    "start": 0,
+    "end": 0.168
+   },
+   {
+    "text": "nil.",
+    "start": 0.168,
+    "end": 0.84
+   }
+  ]
+ },
+ "s5-follow.part0.wav": {
+  "key": "e938174b1beb36731a6cae0dd0a9d987d1800c41",
+  "words": [
+   {
+    "text": "Follow",
+    "start": 0,
+    "end": 0.368
+   },
+   {
+    "text": "if",
+    "start": 0.368,
+    "end": 0.49
+   },
+   {
+    "text": "you'd",
+    "start": 0.49,
+    "end": 0.796
+   },
+   {
+    "text": "rather",
+    "start": 0.796,
+    "end": 1.164
+   },
+   {
+    "text": "be",
+    "start": 1.164,
+    "end": 1.286
+   },
+   {
+    "text": "the",
+    "start": 1.286,
+    "end": 1.47
+   },
+   {
+    "text": "referee.",
+    "start": 1.47,
+    "end": 1.96
+   }
+  ]
+ },
+ "s6-header.part0.wav": {
+  "key": "eaafc9233c1eae4473c107649832b6d4df394826",
+  "words": [
+   {
+    "text": "Pepe's",
+    "start": 0,
+    "end": 0.295
+   },
+   {
+    "text": "answer?",
+    "start": 0.295,
+    "end": 0.64
+   }
+  ]
+ },
+ "s6-header.part1.wav": {
+  "key": "4f3a45c5a78a92b6f542ccbf6a1cf36fdf34c397",
+  "words": [
+   {
+    "text": "A",
+    "start": 0,
+    "end": 0.063
+   },
+   {
+    "text": "corner.",
+    "start": 0.063,
+    "end": 0.5
+   }
+  ]
+ },
+ "s6-header.part2.wav": {
+  "key": "564cf26f282b249a2df141fdc7bd96bc0a3fc79a",
+  "words": [
+   {
+    "text": "One",
+    "start": 0,
+    "end": 0.15
+   },
+   {
+    "text": "header.",
+    "start": 0.15,
+    "end": 0.5
+   }
+  ]
+ },
+ "s6-header.part3.wav": {
+  "key": "0f32cb88642469d1faeaeb671e6df8b31927cb99",
+  "words": [
+   {
+    "text": "1-1.",
+    "start": 0,
+    "end": 0.8
+   }
+  ]
+ },
+ "s7-reds.part0.wav": {
+  "key": "e5a316d88b835a3c15b6dd6b14887c48bb179445",
+  "words": [
+   {
+    "text": "Second",
+    "start": 0,
+    "end": 0.339
+   },
+   {
+    "text": "half,",
+    "start": 0.339,
+    "end": 0.621
+   },
+   {
+    "text": "the",
+    "start": 0.621,
+    "end": 0.791
+   },
+   {
+    "text": "Peppies",
+    "start": 0.791,
+    "end": 1.186
+   },
+   {
+    "text": "lose",
+    "start": 1.186,
+    "end": 1.412
+   },
+   {
+    "text": "patience.",
+    "start": 1.412,
+    "end": 1.92
+   }
+  ]
+ },
+ "s7-reds.part1.wav": {
+  "key": "6bb5efcf2380f47ab73ba9ed74335ed40955f5a9",
+  "words": [
+   {
+    "text": "Red.",
+    "start": 0,
+    "end": 0.5
+   }
+  ]
+ },
+ "s7-reds.part2.wav": {
+  "key": "4870da61f4dd9ab2a57931081c7af4d3faccc5ec",
+  "words": [
+   {
+    "text": "Red.",
+    "start": 0,
+    "end": 0.84
+   }
+  ]
+ },
+ "s7-reds.part3.wav": {
+  "key": "de1ef8f2ed1a06baa8d78ca17e48f43228e5f5b2",
+  "words": [
+   {
+    "text": "Red.",
+    "start": 0,
+    "end": 0.5
+   }
+  ]
+ },
+ "s8-pen.part0.wav": {
+  "key": "a1e58cb3584cd237a6bd9d675fddb34f90cc28d6",
+  "words": [
+   {
+    "text": "Last",
+    "start": 0,
+    "end": 0.244
+   },
+   {
+    "text": "minute,",
+    "start": 0.244,
+    "end": 0.672
+   },
+   {
+    "text": "penalty.",
+    "start": 0.672,
+    "end": 1.16
+   }
+  ]
+ },
+ "s8-pen.part1.wav": {
+  "key": "88ce1a8b31ff8c58536d437c65e8ff997034d97f",
+  "words": [
+   {
+    "text": "Name",
+    "start": 0,
+    "end": 0.221
+   },
+   {
+    "text": "our",
+    "start": 0.221,
+    "end": 0.387
+   },
+   {
+    "text": "stutter",
+    "start": 0.387,
+    "end": 0.773
+   },
+   {
+    "text": "run-up.",
+    "start": 0.773,
+    "end": 1.16
+   }
+  ]
+ },
+ "s8-pen.part2.wav": {
+  "key": "1db715e43682dd789baf4179a8d02f043e3cab92",
+  "words": [
+   {
+    "text": "Pepe",
+    "start": 0,
+    "end": 0.262
+   },
+   {
+    "text": "in",
+    "start": 0.262,
+    "end": 0.393
+   },
+   {
+    "text": "goal.",
+    "start": 0.393,
+    "end": 0.72
+   }
+  ]
+ },
+ "s8-pen.part3.wav": {
+  "key": "df89e01c7dd1397e5f333952baa8229482b32e8a",
+  "words": [
+   {
+    "text": "Who",
+    "start": 0,
+    "end": 0.375
+   },
+   {
+    "text": "wins?",
+    "start": 0.375,
+    "end": 1
+   }
+  ]
+ },
+ "s8-pen.part4.wav": {
+  "key": "7fa9f41512bad4aa7e4e6fb1bc5bbdaea4b9fae2",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.1
+   },
+   {
+    "text": "if",
+    "start": 0.1,
+    "end": 0.2
+   },
+   {
+    "text": "anyone",
+    "start": 0.2,
+    "end": 0.5
+   },
+   {
+    "text": "asks",
+    "start": 0.5,
+    "end": 0.7
+   },
+   {
+    "text": "you...",
+    "start": 0.7,
+    "end": 1
+   }
+  ]
+ }
+}
