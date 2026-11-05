@@ -34,6 +34,7 @@ Format wie in `episodes/001-neuer-titanic/narration.json`: `id`, `title`, `provi
 - Letzte Szene `s8-outro` immer mit genau diesem Text: `Could you imagine another scenario that we should do next? {{c}}Write it in the comments. ||0.2|| {{loop}}And if anyone asks you:`
   plus `"loop": true` (Loop-Folge, siehe LEARNINGS). Kurzfolgen: Like-Gag, dann `{{loop}}So next time someone asks you:`.
 - Jede Folge enthält einen eingebauten Like/Follow-Aufruf (siehe LEARNINGS).
+- Sprecher: ElevenLabs "bilbop" (voice_id R23cI2hqxAhT17IXmY7O), ganzes Skript in einem Take, dann `tools/split_master.py` (siehe LEARNINGS).
 - Jede Folge: leise Themen-Hintergrundmusik über `"music": {"theme": …}` in narration.json (siehe LEARNINGS).
 - Ab Staffel 2: 3D-Welt (`tools/world3d/`), Länge 40–50 s, Sprecher ~2,5 Wörter/s mit kurzen Pausen, ein Follow-Gag in der Handlung.
 - Markup: `{shown|spoken}`, `{{cue}}` vor jedem Wort, auf dem etwas passieren soll, `||0.4||` nur für echte Pointen-Pausen

@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-05 · **Standard-Sprecher ab S2E05: ElevenLabs "bilbop" (R23cI2hqxAhT17IXmY7O, YouTube-Shorts-Creator, hyped/energisch)** –
+  Michael war dem Creator zu einschläfernd. Gleicher Ablauf (ein Take → `tools/split_master.py` → `"provider": "prerecorded"`).
+  Michael (QngvLQR8bsLR5bzoa6Vv) bleibt als ruhigere Alternative.
 - 2026-11-04 · S2E04 · **Musik spannender, aber unter dem Sprecher**: echte lizenzfreie Tracks (Openverse/Jamendo, CC BY → Credit in die
   Caption) statt der synthetisierten Themen, ~8 dB unter der Stimme, mit Sidechain-Ducking (`remix_audio.py ... --duck`).
   Freesound-Downloads sind aus der Cloud-Umgebung blockiert; Jamendo funktioniert.
