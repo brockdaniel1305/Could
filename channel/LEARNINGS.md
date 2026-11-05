@@ -198,6 +198,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- **Lautheit nie mit einfachem `loudnorm` (single pass) normalisieren**: der regelt dynamisch nach und hebt nach ein paar Sekunden
+  jede Sprechpause an → Musik "wird lauter" (Creator-Feedback S2E05). `tools/remix_audio.py` mischt jetzt, misst die Lautheit und
+  setzt EINE feste Verstärkung + Limiter (−15 LUFS, Peak ≤ −1.4 dBFS). Finale Tonspur immer darüber erzeugen (`--duck` bei Musik).
 - 3D-Welten: **kein CSS-`filter` auf `#w3-chars`** – das erzeugt einen eigenen Stapelkontext, und der Vordergrund-Canvas liegt dann über
   allen Figuren (Figuren verschwinden in Nahaufnahmen). Farbkorrektur nur über `plot.grade` (wirkt auf den 3D-Canvas).
 - Neuer "Broadcast"-Figurenstil: `channel/kit/parts/athlete.svg` (athletisch, kleinere Augen, Kinnlinie; Haare/Bart per HAIRSVG).

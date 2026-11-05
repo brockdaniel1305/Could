@@ -27,11 +27,22 @@ if music and "--duck" in sys.argv:
     # the music dips under the narrator (sidechain) so it can be livelier without masking the voice
     m = music[0]
     flt = (";".join(chains) + f";{''.join(f'[a{i}]' for i in rest)}amix=inputs={len(rest)}:normalize=0:dropout_transition=0,asplit=2[fg][sc]"
-           f";[a{m}][sc]sidechaincompress=threshold=0.02:ratio=6:attack=15:release=350:makeup=1[mu]"
-           f";[fg][mu]amix=inputs=2:normalize=0:dropout_transition=0,loudnorm=I=-15:TP=-1.5:LRA=11,apad[out]")
+           f";[a{m}][sc]sidechaincompress=threshold=0.05:ratio=2.5:attack=120:release=1500:makeup=1[mu]"
+           f";[fg][mu]amix=inputs=2:normalize=0:dropout_transition=0,apad[out]")
 else:
     mix = "".join(f"[a{i}]" for i in range(1, len(clips) + 1))
-    flt = ";".join(chains) + f";{mix}amix=inputs={len(clips)}:normalize=0:dropout_transition=0,loudnorm=I=-15:TP=-1.5:LRA=11,apad[out]"
+    flt = ";".join(chains) + f";{mix}amix=inputs={len(clips)}:normalize=0:dropout_transition=0,apad[out]"
 args += ["-filter_complex", flt, "-map", "0:v", "-map", "[out]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out]
+# static loudness: mix first, measure, then ONE fixed gain + limiter (single-pass loudnorm is dynamic and lifts the music in
+# every speech pause after a few seconds)
+mixed = Path(out).with_suffix(".mix.mp4")
+args[-1] = str(mixed)
 subprocess.run(args, check=True)
+meas = subprocess.run(["ffmpeg", "-nostdin", "-i", str(mixed), "-vn", "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
+I = float(re.findall(r"I:\s+(-?[0-9.]+) LUFS", meas)[-1])
+gain = -15.0 - I
+subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mixed), "-map", "0:v", "-map", "0:a", "-c:v", "copy",
+                "-af", f"volume={gain:.2f}dB,alimiter=limit=0.84:level=false", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+mixed.unlink()
+print(f"mix {I:.1f} LUFS -> gain {gain:+.1f} dB")
 print(out, len(clips), "clips")
