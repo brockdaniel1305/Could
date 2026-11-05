@@ -370,42 +370,52 @@
   ]
  },
  "s5-follow.part0.wav": {
-  "key": "e938174b1beb36731a6cae0dd0a9d987d1800c41",
+  "key": "0373b549a8c039d7bc337128165e5e3ac56279da",
   "words": [
    {
-    "text": "Follow",
+    "text": "Like",
     "start": 0,
-    "end": 0.368
+    "end": 0.232
+   },
+   {
+    "text": "and",
+    "start": 0.232,
+    "end": 0.406
+   },
+   {
+    "text": "follow",
+    "start": 0.406,
+    "end": 0.753
    },
    {
     "text": "if",
-    "start": 0.368,
-    "end": 0.49
+    "start": 0.753,
+    "end": 0.869
    },
    {
     "text": "you'd",
-    "start": 0.49,
-    "end": 0.796
+    "start": 0.869,
+    "end": 1.159
    },
    {
     "text": "rather",
-    "start": 0.796,
-    "end": 1.164
+    "start": 1.159,
+    "end": 1.507
    },
    {
     "text": "be",
-    "start": 1.164,
-    "end": 1.286
+    "start": 1.507,
+    "end": 1.623
    },
    {
     "text": "the",
-    "start": 1.286,
-    "end": 1.47
+    "start": 1.623,
+    "end": 1.796
    },
    {
     "text": "referee.",
-    "start": 1.47,
-    "end": 1.96
+    "start": 1.796,
+    "end": 2.26
    }
   ]
  },
@@ -595,16 +605,26 @@
   ]
  },
  "s8-pen.part3.wav": {
-  "key": "df89e01c7dd1397e5f333952baa8229482b32e8a",
+  "key": "f7c87b98e253977e178393009c0e5eddb4cb669c",
   "words": [
    {
-    "text": "Who",
+    "text": "Comment",
     "start": 0,
-    "end": 0.375
+    "end": 0.389
    },
    {
-    "text": "wins?",
-    "start": 0.375,
+    "text": "who",
+    "start": 0.389,
+    "end": 0.556
+   },
+   {
+    "text": "will",
+    "start": 0.556,
+    "end": 0.778
+   },
+   {
+    "text": "win.",
+    "start": 0.778,
     "end": 1
    }
   ]

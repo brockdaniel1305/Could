@@ -1,5 +1,5 @@
 {
- "duration": 40.73,
+ "duration": 41.616,
  "voice": "prerecorded:elevenlabs:bilbop (R23cI2hqxAhT17IXmY7O)",
  "scenes": [
   {
@@ -395,55 +395,65 @@
   {
    "id": "s5-follow",
    "start": 24.11,
-   "duration": 1.98,
+   "duration": 2.85,
    "voice": "assets/voice/s5-follow.wav",
    "voiceStart": 0.15,
-   "speech": 1.43,
+   "speech": 2.3,
    "cues": {
     "follow": 0.15
    },
    "words": [
     {
-     "text": "Follow",
+     "text": "Like",
      "start": 0.15,
-     "end": 0.518
+     "end": 0.382
+    },
+    {
+     "text": "and",
+     "start": 0.382,
+     "end": 0.556
+    },
+    {
+     "text": "follow",
+     "start": 0.556,
+     "end": 0.903
     },
     {
      "text": "if",
-     "start": 0.518,
-     "end": 0.64
+     "start": 0.903,
+     "end": 1.019
     },
     {
      "text": "you'd",
-     "start": 0.64,
-     "end": 0.946
+     "start": 1.019,
+     "end": 1.309
     },
     {
      "text": "rather",
-     "start": 0.946,
-     "end": 1.314
+     "start": 1.309,
+     "end": 1.657
     },
     {
      "text": "be",
-     "start": 1.314,
-     "end": 1.436
+     "start": 1.657,
+     "end": 1.773
     },
     {
      "text": "the",
-     "start": 1.436,
-     "end": 1.62
+     "start": 1.773,
+     "end": 1.946
     },
     {
      "text": "referee.",
-     "start": 1.62,
-     "end": 2.11
+     "start": 1.946,
+     "end": 2.41
     }
    ],
    "sfx": []
   },
   {
    "id": "s6-header",
-   "start": 26.09,
+   "start": 26.96,
    "duration": 3.79,
    "voice": "assets/voice/s6-header.wav",
    "voiceStart": 0.15,
@@ -519,7 +529,7 @@
   },
   {
    "id": "s7-reds",
-   "start": 29.88,
+   "start": 30.75,
    "duration": 4.07,
    "voice": "assets/voice/s7-reds.wav",
    "voiceStart": 0.15,
@@ -594,17 +604,17 @@
   },
   {
    "id": "s8-pen",
-   "start": 33.95,
-   "duration": 6.78,
+   "start": 34.82,
+   "duration": 6.796,
    "voice": "assets/voice/s8-pen.wav",
    "voiceStart": 0.15,
-   "speech": 6.33,
+   "speech": 6.346,
    "cues": {
     "last": 0.15,
     "stut": 1.53,
     "pg": 2.96,
     "who": 4.02,
-    "loop": 5.4
+    "loop": 5.416
    },
    "words": [
     {
@@ -653,44 +663,49 @@
      "end": 3.68
     },
     {
-     "text": "Who",
+     "text": "Comment",
      "start": 4.02,
-     "end": 4.395
+     "end": 4.409
     },
     {
-     "text": "wins?",
-     "start": 4.395,
+     "text": "who",
+     "start": 4.409,
+     "end": 4.576
+    },
+    {
+     "text": "will",
+     "start": 4.576,
+     "end": 4.798
+    },
+    {
+     "text": "win.",
+     "start": 4.798,
      "end": 5.02
     },
     {
-     "text": "Comment.",
-     "start": 5.02,
-     "end": 5.1
-    },
-    {
      "text": "So",
-     "start": 5.4,
-     "end": 5.5
+     "start": 5.416,
+     "end": 5.516
     },
     {
      "text": "if",
-     "start": 5.5,
-     "end": 5.6
+     "start": 5.516,
+     "end": 5.616
     },
     {
      "text": "anyone",
-     "start": 5.6,
-     "end": 5.9
+     "start": 5.616,
+     "end": 5.916
     },
     {
      "text": "asks",
-     "start": 5.9,
-     "end": 6.1
+     "start": 5.916,
+     "end": 6.116
     },
     {
      "text": "you:",
-     "start": 6.1,
-     "end": 6.4
+     "start": 6.116,
+     "end": 6.416
     }
    ],
    "sfx": [

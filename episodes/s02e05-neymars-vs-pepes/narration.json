@@ -78,7 +78,7 @@
     },
     {
       "id": "s5-follow",
-      "text": "{{follow}}Follow if you'd rather be the referee.",
+      "text": "{{follow}}Like and follow if you'd rather be the referee.",
       "sfx": []
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "id": "s8-pen",
-      "text": "{{last}}Last minute: penalty. ||0.2|| {{stut}}Neymar's stutter run-up. ||0.15|| {{pg}}Pepe in goal. ||0.3|| {{who}}Who wins? Comment. ||0.3|| {{loop}}So if anyone asks you:",
+      "text": "{{last}}Last minute: penalty. ||0.2|| {{stut}}Neymar's stutter run-up. ||0.15|| {{pg}}Pepe in goal. ||0.3|| {{who}}Comment who will win. ||0.3|| {{loop}}So if anyone asks you:",
       "sfx": [
         {
           "name": "heartbeat",

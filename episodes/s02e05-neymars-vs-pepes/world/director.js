@@ -160,7 +160,7 @@ export default function plot(T) {
     lower("g1", G1 + 0.3, "Neymar (joga bonito)", "34'"),
     lower("g2", G2 + 0.3, "Pepe (header)", "44'"),
     { id: "c-pepes2", t0: RR[0], t1: s("s8") - 0.05, from: "right", cls: "chip red", style: "left:120px;top:400px", html: '<div class="ck">PEPES ON THE PITCH</div><div class="cv" id="pepen2">10</div>' },
-    chip("c-who", c("s8.who"), LOOPJ, "COMMENT", "Who wins?", 120, 400, "red"),
+    chip("c-who", c("s8.who"), LOOPJ, "COMMENT", "Who will win?", 120, 400, "red"),
     { id: "hud", t0: c("s3.ko") - 0.1, t1: LOOPJ, cls: "hud", style: "opacity:0",
       html: `<span class="t">NEY</span><span class="sc"><b id="hs">0</b>–<b id="as">0</b></span><span class="t">PEP</span><span class="mn" id="mn">1'</span>` },
     slam("sl-end", END - 0.3, END + 1, "11 NEYMARS<br><b>vs.</b> 11 PEPES", 340, 112),
@@ -169,7 +169,7 @@ export default function plot(T) {
     { who: "REF", t0: RED1, t1: RED1 + 1.1, text: ".", cls: "redcard" },
     ...RR.map((t) => ({ who: "REF", t0: t, t1: t + 0.42, text: ".", cls: "redcard" })),
     { who: "P2", t0: RED1 + 0.15, t1: c("s3.ten") + 0.6, text: "ME?!", cls: "" },
-    { who: "N9", t0: c("s5.follow") + 0.1, t1: s("s6") - 0.1, text: "FOLLOW +", cls: "red follow" },
+    { who: "N9", t0: c("s5.follow") + 0.1, t1: s("s6") - 0.1, text: "♥ LIKE + FOLLOW +", cls: "red follow" },
     { who: "N9", t0: STUT + 0.3, t1: FREEZE, text: "...", cls: "" },
   ];
   const bursts = [{ who: "N9", t: TK, text: "OUCH?" }, { who: "P5", t: RB + 0.3, text: "RAINBOW!" }, { who: "P6", t: EL + 0.1, text: "ELASTICO!" },

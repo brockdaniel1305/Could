@@ -5,6 +5,8 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-05 · S2E05 · **Follow-Aufruf immer zusammen mit Like-Aufruf** ("Like and follow if …", Blase "♥ LIKE + FOLLOW +").
+  **Schluss-Satz ab jetzt immer: "Comment who will win."** (statt "Who wins? Comment."), Karte "COMMENT · Who will win?".
 - 2026-11-05 · **Standard-Sprecher ab S2E05: ElevenLabs "bilbop" (R23cI2hqxAhT17IXmY7O, YouTube-Shorts-Creator, hyped/energisch)** –
   Michael war dem Creator zu einschläfernd. Gleicher Ablauf (ein Take → `tools/split_master.py` → `"provider": "prerecorded"`).
   Michael (QngvLQR8bsLR5bzoa6Vv) bleibt als ruhigere Alternative.
