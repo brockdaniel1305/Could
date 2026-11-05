@@ -129,6 +129,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-11-05 · S2E04 11 Messis vs 11 Haalands (41,75 s, Broadcast-Stil, ElevenLabs Michael, Fusion-Musik) auf **TikTok** nach ~4 h:
+  **2.012 Aufrufe**, 45 Likes, **8 Kommentare** (bisher bester Wert), 1 Share, 3 Saves, Ø **18,6 s (45 %)**, **17,2 % ganz** (bisher bester
+  TikTok-Wert), 2 Follower. → Format "X gegen Y – wer gewinnt?" mit zwei Stars + offener Kommentar-Frage am Ende funktioniert am besten.
 - 2026-11-04 · S2E03 Diktator-Mbappé (44,8 s) auf **TikTok** nach ~2 h: 464 Aufrufe, 16 Likes, 0 Kommentare, 0 Shares, 1 Save,
   Ø 14,9 s (33 %), 7,2 % ganz, **7 neue Follower** (bisher bester Wert → Follow-Aufruf in der Mitte wirkt). Publikum wieder **~70 % weiblich**.
   Annahme: Fantasie-/Geschichtssettings (Pamplona, Paris 1789) + Cartoon-Stil lassen TikTok das Video als Animation/Geschichte statt
