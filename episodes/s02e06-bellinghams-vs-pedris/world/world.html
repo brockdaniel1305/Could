@@ -1,0 +1,1020 @@
+      <style>
+    @font-face { font-family: "CouldMono"; font-weight: 400; src: url("assets/fonts/IBMPlexMono-400.woff2") format("woff2"); }
+    @font-face { font-family: "CouldMono"; font-weight: 700; src: url("assets/fonts/IBMPlexMono-700.woff2") format("woff2"); }
+    @font-face { font-family: "CouldSerif"; font-weight: 700; src: url("assets/fonts/PlayfairDisplay-700.woff2") format("woff2"); }
+    #w3 { position: absolute; inset: 0; overflow: hidden; background: #0b1426; z-index: 1; }
+    #w3-stage { position: absolute; inset: 0; }
+    #w3-gl { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #w3-chars { position: absolute; inset: 0; }
+    #w3-fg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; pointer-events: none; }
+    #w3-bubs { position: absolute; inset: 0; }
+    #w3-ov { position: absolute; inset: 0; z-index: 9000; pointer-events: none; }
+    .w3b { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-origin: 0 0; display: none; }
+    .w3b g[id$="-legL"], .w3b g[id$="-legR"], .w3b g[id$="-armL"], .w3b g[id$="-armR"] { transform-box: fill-box; transform-origin: 50% 0; }
+    .w3b g[id$="-spin"] { transform-box: fill-box; transform-origin: 50% 50%; }
+    .w3b .legA, .w3b .legB { transform-box: fill-box; transform-origin: 50% 0; }
+    .w3b .steam { transform-box: fill-box; transform-origin: 50% 0; }
+    .w3-vig { position: absolute; inset: 0; pointer-events: none;
+              background: radial-gradient(ellipse 85% 62% at 50% 52%, transparent 58%, rgba(4, 7, 18, 0.5) 100%); }
+    .bub { position: absolute; left: 0; top: 0; display: none; padding: 10px 20px; border-radius: 22px; background: #f4efe6; border: 5px solid #1a1a2e;
+           font: 900 46px/1 "Inter"; color: #1a1a2e; white-space: nowrap; box-shadow: 6px 6px 0 #1a1a2e; transform-origin: 50% 100%; }
+    .pow { position: absolute; left: 0; top: 0; display: none; z-index: 7000; transform-origin: 50% 50%; }
+    .speedlines { position: absolute; inset: -40%; pointer-events: none; opacity: 0; z-index: 3;
+      background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,0) 0deg 4deg, rgba(255,255,255,0.55) 4deg 5deg);
+      -webkit-mask: radial-gradient(circle at 50% 50%, transparent 30%, black 62%); mask: radial-gradient(circle at 50% 50%, transparent 30%, black 62%); }
+    .bub.dark { background: #1a1a2e; color: #ffd23f; border-color: #ffd23f; }
+    .bub.red { background: #e0412f; color: #fff; }
+    .logo { position: absolute; left: 56px; top: 184px; font: 900 40px/1 "Inter"; letter-spacing: 0.06em; color: #f4efe6;
+            -webkit-text-stroke: 2px #1a1a2e; paint-order: stroke fill; text-shadow: 3px 3px 0 #1a1a2e; }
+    .logo b { color: #ffd23f; }
+    .live { position: absolute; left: 56px; top: 238px; padding: 8px 14px; border-radius: 10px; background: rgba(10, 9, 8, 0.75);
+            border: 3px solid #1a1a2e; font: 700 28px/1 "CouldMono"; letter-spacing: 0.1em; color: #f4efe6; }
+    .live i { display: inline-block; width: 16px; height: 16px; margin-right: 10px; border-radius: 50%; background: #e0412f; }
+    .ov { position: absolute; opacity: 0; transform-origin: 50% 50%; }
+    .slam { left: 30px; right: 30px; text-align: center; font: 900 128px/0.95 "Inter"; color: #ffd23f;
+            -webkit-text-stroke: 9px #1a1a2e; paint-order: stroke fill; }
+    .slam b { color: #f4efe6; }
+    .chip { padding: 16px 26px 20px; background: #f4efe6; border: 6px solid #1a1a2e; border-radius: 22px; box-shadow: 10px 10px 0 #1a1a2e; white-space: nowrap; }
+    .chip .ck { font: 700 28px/1 "CouldMono"; letter-spacing: 0.08em; color: #6b6358; }
+    .chip .cv { margin-top: 8px; font: 900 64px/1 "Inter"; letter-spacing: -0.02em; color: #1a1a2e; }
+    .chip.gold { background: #ffd23f; } .chip.gold .ck { color: #5a4300; }
+    .chip.red { background: #e0412f; } .chip.red .ck, .chip.red .cv { color: #fff; }
+    .chip.dark { background: #1a1a2e; border-color: #ffd23f; } .chip.dark .ck { color: #ffd23f; } .chip.dark .cv { color: #f4efe6; }
+    .hud { position: absolute; left: 520px; top: 184px; display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: #1a1a2e;
+           border: 4px solid #f4efe6; border-radius: 14px; font: 700 30px/1 "CouldMono"; color: #f4efe6; opacity: 0; }
+    .hud .sc { font: 900 46px/1 "Inter"; color: #ffd23f; }
+    .hud .mn { margin-left: 6px; padding: 6px 10px; border-radius: 8px; background: #e0412f; color: #fff; font: 700 28px/1 "CouldMono"; }
+    .stam { position: absolute; left: 520px; top: 262px; display: flex; align-items: center; gap: 12px; font: 700 22px/1 "CouldMono"; color: #f4efe6;
+            padding: 8px 14px; background: rgba(26, 26, 46, 0.88); border-radius: 12px; opacity: 0; }
+    .stam .bar { position: relative; width: 230px; height: 18px; border: 3px solid #f4efe6; border-radius: 9px; overflow: hidden; }
+    .stam .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: #1f9d55; }
+    .ft { left: 80px; right: 80px; top: 330px; padding: 26px 30px 30px; background: #12162a; border: 6px solid #ffd23f;
+          border-radius: 18px; color: #f4efe6; text-align: center; }
+    .ft .fth { font: 900 64px/1 "Inter"; color: #ffd23f; }
+    .ft .fts { margin-top: 10px; font: 700 34px/1.2 "CouldMono"; }
+    .ft .fts b { color: #ffd23f; font-family: "Inter"; font-size: 46px; }
+    .ft table { width: 100%; margin-top: 16px; border-collapse: collapse; font: 700 27px/1.3 "CouldMono"; }
+    .ft td { padding: 7px 4px; border-top: 2px solid #2a3355; text-align: left; }
+    .ft td.k { text-align: right; width: 90px; color: #ffd23f; }
+    .ft td.h { text-align: left; width: 90px; color: #f4efe6; }
+    .conf { position: absolute; inset: 0; pointer-events: none; }
+    .conf i { position: absolute; display: block; width: 16px; height: 24px; opacity: 0; }
+    .bub.follow { font-size: 58px; padding: 16px 30px; border-radius: 44px; }
+    .var { left: 60px; right: 60px; top: 420px; text-align: center; padding: 22px 0 26px; background: #14141f; border: 6px solid #4fd1ff;
+           border-radius: 18px; color: #f4f4f2; font: 900 92px/1 "Inter"; letter-spacing: 0.06em; }
+    .var small { display: block; margin-top: 10px; font: 700 30px/1 "CouldMono"; color: #4fd1ff; letter-spacing: 0.2em; }
+      </style>
+      <div id="w3" data-layout-ignore>
+        <div id="w3-stage">
+          <canvas id="w3-gl" width="1080" height="1920"></canvas>
+          <div id="w3-chars">
+            <div class="w3b" id="w3-B0"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #2bb3a3 (shirt), #2bb3a3 (stripes, set 0 0..1), #1a1a2e, #2bb3a3, #1a1a2e, 1, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B0x, w3-B0x-body, w3-B0x-legL/-legR, w3-B0x-armL/-armR (origin top), w3-B0x-head, w3-B0x-pupL/-pupR,
+     w3-B0x-m-smile / w3-B0x-m-o, w3-B0x-lids. -->
+<g id="w3-B0x">
+  <g id="w3-B0x-body">
+    <g id="w3-B0x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#2bb3a3" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B0x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#2bb3a3" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1a1a2e" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B0x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#2bb3a3" />
+    <g clip-path="url(#w3-B0x-clip)" fill="#2bb3a3" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B0x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#1a1a2e" stroke="#14141f" stroke-width="2">1</text>
+    <g transform="translate(-54,-272)"><g id="w3-B0x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#2bb3a3" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B0x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#2bb3a3" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B0x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B0x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B0x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B0x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B0x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B0x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P0"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f2c230 (shirt), #f2c230 (stripes, set 0 0..1), #1a1a2e, #f2c230, #1a1a2e, 1, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P0x, w3-P0x-body, w3-P0x-legL/-legR, w3-P0x-armL/-armR (origin top), w3-P0x-head, w3-P0x-pupL/-pupR,
+     w3-P0x-m-smile / w3-P0x-m-o, w3-P0x-lids. -->
+<g id="w3-P0x">
+  <g id="w3-P0x-body">
+    <g id="w3-P0x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f2c230" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P0x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f2c230" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1a1a2e" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P0x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f2c230" />
+    <g clip-path="url(#w3-P0x-clip)" fill="#f2c230" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P0x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#1a1a2e" stroke="#14141f" stroke-width="2">1</text>
+    <g transform="translate(-54,-272)"><g id="w3-P0x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f2c230" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P0x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f2c230" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P0x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P0x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P0x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P0x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P0x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P0x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B1"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B1x, w3-B1x-body, w3-B1x-legL/-legR, w3-B1x-armL/-armR (origin top), w3-B1x-head, w3-B1x-pupL/-pupR,
+     w3-B1x-m-smile / w3-B1x-m-o, w3-B1x-lids. -->
+<g id="w3-B1x">
+  <g id="w3-B1x-body">
+    <g id="w3-B1x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B1x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B1x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B1x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B1x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B1x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B1x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B1x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B1x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B1x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B1x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B1x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B1x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P1"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P1x, w3-P1x-body, w3-P1x-legL/-legR, w3-P1x-armL/-armR (origin top), w3-P1x-head, w3-P1x-pupL/-pupR,
+     w3-P1x-m-smile / w3-P1x-m-o, w3-P1x-lids. -->
+<g id="w3-P1x">
+  <g id="w3-P1x-body">
+    <g id="w3-P1x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P1x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P1x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P1x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P1x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P1x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P1x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P1x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P1x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P1x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P1x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P1x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P1x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B2"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B2x, w3-B2x-body, w3-B2x-legL/-legR, w3-B2x-armL/-armR (origin top), w3-B2x-head, w3-B2x-pupL/-pupR,
+     w3-B2x-m-smile / w3-B2x-m-o, w3-B2x-lids. -->
+<g id="w3-B2x">
+  <g id="w3-B2x-body">
+    <g id="w3-B2x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B2x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B2x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B2x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B2x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B2x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B2x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B2x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B2x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B2x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B2x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B2x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B2x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P2"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P2x, w3-P2x-body, w3-P2x-legL/-legR, w3-P2x-armL/-armR (origin top), w3-P2x-head, w3-P2x-pupL/-pupR,
+     w3-P2x-m-smile / w3-P2x-m-o, w3-P2x-lids. -->
+<g id="w3-P2x">
+  <g id="w3-P2x-body">
+    <g id="w3-P2x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P2x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P2x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P2x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P2x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P2x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P2x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P2x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P2x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P2x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P2x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P2x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P2x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B3"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B3x, w3-B3x-body, w3-B3x-legL/-legR, w3-B3x-armL/-armR (origin top), w3-B3x-head, w3-B3x-pupL/-pupR,
+     w3-B3x-m-smile / w3-B3x-m-o, w3-B3x-lids. -->
+<g id="w3-B3x">
+  <g id="w3-B3x-body">
+    <g id="w3-B3x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B3x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B3x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B3x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B3x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B3x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B3x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B3x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B3x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B3x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B3x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B3x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B3x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P3"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P3x, w3-P3x-body, w3-P3x-legL/-legR, w3-P3x-armL/-armR (origin top), w3-P3x-head, w3-P3x-pupL/-pupR,
+     w3-P3x-m-smile / w3-P3x-m-o, w3-P3x-lids. -->
+<g id="w3-P3x">
+  <g id="w3-P3x-body">
+    <g id="w3-P3x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P3x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P3x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P3x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P3x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P3x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P3x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P3x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P3x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P3x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P3x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P3x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P3x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B4"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B4x, w3-B4x-body, w3-B4x-legL/-legR, w3-B4x-armL/-armR (origin top), w3-B4x-head, w3-B4x-pupL/-pupR,
+     w3-B4x-m-smile / w3-B4x-m-o, w3-B4x-lids. -->
+<g id="w3-B4x">
+  <g id="w3-B4x-body">
+    <g id="w3-B4x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B4x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B4x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B4x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B4x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B4x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B4x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B4x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B4x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B4x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B4x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B4x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B4x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P4"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P4x, w3-P4x-body, w3-P4x-legL/-legR, w3-P4x-armL/-armR (origin top), w3-P4x-head, w3-P4x-pupL/-pupR,
+     w3-P4x-m-smile / w3-P4x-m-o, w3-P4x-lids. -->
+<g id="w3-P4x">
+  <g id="w3-P4x-body">
+    <g id="w3-P4x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P4x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P4x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P4x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P4x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P4x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P4x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P4x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P4x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P4x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P4x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P4x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P4x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B5"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B5x, w3-B5x-body, w3-B5x-legL/-legR, w3-B5x-armL/-armR (origin top), w3-B5x-head, w3-B5x-pupL/-pupR,
+     w3-B5x-m-smile / w3-B5x-m-o, w3-B5x-lids. -->
+<g id="w3-B5x">
+  <g id="w3-B5x-body">
+    <g id="w3-B5x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B5x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B5x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B5x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B5x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B5x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B5x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B5x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B5x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B5x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B5x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B5x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B5x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P5"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P5x, w3-P5x-body, w3-P5x-legL/-legR, w3-P5x-armL/-armR (origin top), w3-P5x-head, w3-P5x-pupL/-pupR,
+     w3-P5x-m-smile / w3-P5x-m-o, w3-P5x-lids. -->
+<g id="w3-P5x">
+  <g id="w3-P5x-body">
+    <g id="w3-P5x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P5x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P5x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P5x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P5x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P5x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P5x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P5x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P5x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P5x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P5x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P5x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P5x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B6"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B6x, w3-B6x-body, w3-B6x-legL/-legR, w3-B6x-armL/-armR (origin top), w3-B6x-head, w3-B6x-pupL/-pupR,
+     w3-B6x-m-smile / w3-B6x-m-o, w3-B6x-lids. -->
+<g id="w3-B6x">
+  <g id="w3-B6x-body">
+    <g id="w3-B6x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B6x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B6x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B6x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B6x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B6x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B6x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B6x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B6x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B6x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B6x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B6x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B6x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P6"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P6x, w3-P6x-body, w3-P6x-legL/-legR, w3-P6x-armL/-armR (origin top), w3-P6x-head, w3-P6x-pupL/-pupR,
+     w3-P6x-m-smile / w3-P6x-m-o, w3-P6x-lids. -->
+<g id="w3-P6x">
+  <g id="w3-P6x-body">
+    <g id="w3-P6x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P6x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P6x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P6x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P6x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P6x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P6x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P6x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P6x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P6x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P6x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P6x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P6x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B7"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B7x, w3-B7x-body, w3-B7x-legL/-legR, w3-B7x-armL/-armR (origin top), w3-B7x-head, w3-B7x-pupL/-pupR,
+     w3-B7x-m-smile / w3-B7x-m-o, w3-B7x-lids. -->
+<g id="w3-B7x">
+  <g id="w3-B7x-body">
+    <g id="w3-B7x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B7x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B7x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B7x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B7x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B7x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B7x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B7x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B7x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B7x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B7x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B7x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B7x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P7"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P7x, w3-P7x-body, w3-P7x-legL/-legR, w3-P7x-armL/-armR (origin top), w3-P7x-head, w3-P7x-pupL/-pupR,
+     w3-P7x-m-smile / w3-P7x-m-o, w3-P7x-lids. -->
+<g id="w3-P7x">
+  <g id="w3-P7x-body">
+    <g id="w3-P7x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P7x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P7x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P7x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P7x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P7x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P7x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P7x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P7x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P7x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P7x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P7x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P7x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B8"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B8x, w3-B8x-body, w3-B8x-legL/-legR, w3-B8x-armL/-armR (origin top), w3-B8x-head, w3-B8x-pupL/-pupR,
+     w3-B8x-m-smile / w3-B8x-m-o, w3-B8x-lids. -->
+<g id="w3-B8x">
+  <g id="w3-B8x-body">
+    <g id="w3-B8x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B8x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B8x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B8x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B8x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B8x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B8x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B8x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B8x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B8x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B8x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B8x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B8x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P8"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P8x, w3-P8x-body, w3-P8x-legL/-legR, w3-P8x-armL/-armR (origin top), w3-P8x-head, w3-P8x-pupL/-pupR,
+     w3-P8x-m-smile / w3-P8x-m-o, w3-P8x-lids. -->
+<g id="w3-P8x">
+  <g id="w3-P8x-body">
+    <g id="w3-P8x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P8x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P8x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P8x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P8x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P8x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P8x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P8x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P8x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P8x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P8x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P8x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P8x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B9"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B9x, w3-B9x-body, w3-B9x-legL/-legR, w3-B9x-armL/-armR (origin top), w3-B9x-head, w3-B9x-pupL/-pupR,
+     w3-B9x-m-smile / w3-B9x-m-o, w3-B9x-lids. -->
+<g id="w3-B9x">
+  <g id="w3-B9x-body">
+    <g id="w3-B9x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B9x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B9x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B9x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B9x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B9x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B9x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B9x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B9x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B9x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B9x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B9x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B9x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P9"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P9x, w3-P9x-body, w3-P9x-legL/-legR, w3-P9x-armL/-armR (origin top), w3-P9x-head, w3-P9x-pupL/-pupR,
+     w3-P9x-m-smile / w3-P9x-m-o, w3-P9x-lids. -->
+<g id="w3-P9x">
+  <g id="w3-P9x-body">
+    <g id="w3-P9x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P9x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P9x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P9x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P9x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P9x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P9x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P9x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P9x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P9x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P9x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P9x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P9x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-B10"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #f4f4f2 (shirt), #f4f4f2 (stripes, set 0 0..1), #f4f4f2, #f4f4f2, #14141f, 5, #7a4e35, <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-B10x, w3-B10x-body, w3-B10x-legL/-legR, w3-B10x-armL/-armR (origin top), w3-B10x-head, w3-B10x-pupL/-pupR,
+     w3-B10x-m-smile / w3-B10x-m-o, w3-B10x-lids. -->
+<g id="w3-B10x">
+  <g id="w3-B10x-body">
+    <g id="w3-B10x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-B10x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#f4f4f2" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#f4f4f2" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-B10x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#f4f4f2" />
+    <g clip-path="url(#w3-B10x-clip)" fill="#f4f4f2" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-B10x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#14141f" stroke="#14141f" stroke-width="2">5</text>
+    <g transform="translate(-54,-272)"><g id="w3-B10x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-B10x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#7a4e35" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#f4f4f2" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#7a4e35" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-B10x-head">
+      <circle cx="-29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#7a4e35" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#7a4e35" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-B10x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-B10x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-B10x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#7a4e35" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-14 Q-34,-48 0,-50 Q34,-48 31,-14 Q24,-32 0,-33 Q-24,-32 -31,-14 Z" fill="#1a1210" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><circle cx="-18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-6" cy="-45" r="5" fill="#2a1c16"/><circle cx="6" cy="-45" r="5" fill="#2a1c16"/><circle cx="18" cy="-40" r="5" fill="#2a1c16"/><circle cx="-24" cy="-28" r="5" fill="#2a1c16"/><circle cx="24" cy="-28" r="5" fill="#2a1c16"/>
+      <path id="w3-B10x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-B10x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-P10"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #a50044 (shirt), #1d3f9b (stripes, set 1 0..1), #1d2f6f, #1d2f6f, #ffd23f, 8, #e3b48c, <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-P10x, w3-P10x-body, w3-P10x-legL/-legR, w3-P10x-armL/-armR (origin top), w3-P10x-head, w3-P10x-pupL/-pupR,
+     w3-P10x-m-smile / w3-P10x-m-o, w3-P10x-lids. -->
+<g id="w3-P10x">
+  <g id="w3-P10x-body">
+    <g id="w3-P10x-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-P10x-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#1d2f6f" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#1d2f6f" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-P10x-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#a50044" />
+    <g clip-path="url(#w3-P10x-clip)" fill="#1d3f9b" opacity="1"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-P10x-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2">8</text>
+    <g transform="translate(-54,-272)"><g id="w3-P10x-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-P10x-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#a50044" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-P10x-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-P10x-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-P10x-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-P10x-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-31,-12 Q-35,-48 0,-50 Q35,-48 31,-12 Q20,-30 -2,-26 Q-18,-24 -31,-12 Z" fill="#2a1a10" stroke="#14141f" stroke-width="4" stroke-linejoin="round"/><path d="M-26,-24 Q-6,-40 20,-30 Q2,-30 -26,-16 Z" fill="#3a2414"/>
+      <path id="w3-P10x-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-P10x-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-REF"><svg width="460" height="600" viewBox="-230 -520 460 600" style="position:absolute;left:-230px;top:-520px;overflow:visible"><ellipse cx="0" cy="4" rx="64" ry="13" fill="#000" opacity="0.38"/><!-- Athletic footballer, "broadcast" style (Season 2 style test): longer legs, broad shoulders, smaller head, small eyes, sharp brows,
+     a real jawline - less cute than the classic rig. Origin = between the feet, ~360 tall.
+     Placeholders: #111111 (shirt), #111111 (stripes, set 0 0..1), #111111, #111111, #ffd23f, , #e3b48c, <path d="M-30,-16 Q-33,-44 0,-46 Q33,-44 30,-16 Q22,-30 0,-31 Q-22,-30 -30,-16 Z" fill="#6b4a2a" stroke="#14141f" stroke-width="4"/> (inserted hair/beard markup).
+     Rig (same ids as the classic parts): w3-REFx, w3-REFx-body, w3-REFx-legL/-legR, w3-REFx-armL/-armR (origin top), w3-REFx-head, w3-REFx-pupL/-pupR,
+     w3-REFx-m-smile / w3-REFx-m-o, w3-REFx-lids. -->
+<g id="w3-REFx">
+  <g id="w3-REFx-body">
+    <g id="w3-REFx-legL"><rect x="-27" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-29" y="-66" width="25" height="52" rx="5" fill="#111111" stroke="#14141f" stroke-width="4" /><path d="M-36,-2 Q-36,-16 -18,-16 Q-4,-16 -2,-6 L-2,0 L-36,0 Z" fill="#111" /></g>
+    <g id="w3-REFx-legR"><rect x="6" y="-152" width="21" height="150" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="4" y="-66" width="25" height="52" rx="5" fill="#111111" stroke="#14141f" stroke-width="4" /><path d="M36,-2 Q36,-16 18,-16 Q4,-16 2,-6 L2,0 L36,0 Z" fill="#111" /></g>
+    <path d="M-38,-166 L38,-166 L40,-124 L4,-124 L0,-134 L-4,-124 L-40,-124 Z" fill="#111111" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <clipPath id="w3-REFx-clip"><path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" /></clipPath>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="#111111" />
+    <g clip-path="url(#w3-REFx-clip)" fill="#111111" opacity="0"><rect x="-56" y="-300" width="18" height="150" /><rect x="-20" y="-300" width="18" height="150" /><rect x="16" y="-300" width="18" height="150" /></g>
+    <path d="M-50,-276 Q-56,-214 -38,-162 L38,-162 Q56,-214 50,-276 Q0,-290 -50,-276 Z" fill="none" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+    <path d="M-34,-250 Q-10,-238 -6,-200 M34,-250 Q10,-238 6,-200" fill="none" stroke="#14141f" stroke-width="2.5" opacity="0.35" />
+    <path d="M-16,-282 L0,-266 L16,-282" fill="none" stroke="#14141f" stroke-width="5" stroke-linecap="round" />
+    <text id="w3-REFx-num" data-layout-ignore x="0" y="-206" text-anchor="middle" font-family="Inter" font-weight="900" font-size="42" fill="#ffd23f" stroke="#14141f" stroke-width="2"></text>
+    <g transform="translate(-54,-272)"><g id="w3-REFx-armL"><rect x="-9" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-11" y="-2" width="23" height="34" rx="8" fill="#111111" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <g transform="translate(54,-272)"><g id="w3-REFx-armR"><rect x="-10" y="0" width="19" height="104" rx="9" fill="#e3b48c" stroke="#14141f" stroke-width="5" /><rect x="-12" y="-2" width="23" height="34" rx="8" fill="#111111" stroke="#14141f" stroke-width="5" /><circle cx="0" cy="110" r="11" fill="#e3b48c" stroke="#14141f" stroke-width="5" /></g></g>
+    <rect x="-10" y="-298" width="20" height="20" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+    <g transform="translate(0,-322)"><g id="w3-REFx-head">
+      <circle cx="-29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <circle cx="29" cy="0" r="7" fill="#e3b48c" stroke="#14141f" stroke-width="4" />
+      <path d="M-29,-20 Q-31,18 -14,32 Q0,40 14,32 Q31,18 29,-20 Q0,-40 -29,-20 Z" fill="#e3b48c" stroke="#14141f" stroke-width="5" stroke-linejoin="round" />
+      <path d="M-14,30 Q0,36 14,30" fill="none" stroke="#14141f" stroke-width="2" opacity="0.4" />
+      <ellipse cx="-11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <ellipse cx="11" cy="-2" rx="7" ry="5.5" fill="#fff" stroke="#14141f" stroke-width="2.5" />
+      <circle id="w3-REFx-pupL" cx="-10" cy="-1.5" r="3.4" fill="#14141f" />
+      <circle id="w3-REFx-pupR" cx="12" cy="-1.5" r="3.4" fill="#14141f" />
+      <g id="w3-REFx-lids" opacity="0"><ellipse cx="-11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /><ellipse cx="11" cy="-2" rx="8" ry="6.5" fill="#e3b48c" /></g>
+      <path d="M-21,-13 L-4,-9" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M4,-9 L21,-13" stroke="#14141f" stroke-width="4.5" stroke-linecap="round" />
+      <path d="M0,0 L-3,10 L2,11" fill="none" stroke="#14141f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-30,-16 Q-33,-44 0,-46 Q33,-44 30,-16 Q22,-30 0,-31 Q-22,-30 -30,-16 Z" fill="#6b4a2a" stroke="#14141f" stroke-width="4"/>
+      <path id="w3-REFx-m-smile" d="M-9,20 Q0,25 9,20" fill="none" stroke="#14141f" stroke-width="3.5" stroke-linecap="round" />
+      <ellipse id="w3-REFx-m-o" cx="0" cy="22" rx="5" ry="6" fill="#4a1414" stroke="#14141f" stroke-width="3" opacity="0" />
+    </g></g>
+  </g>
+</g>
+</svg></div>
+            <div class="w3b" id="w3-ballshadow"><svg width="120" height="60" viewBox="-60 -30 120 60" style="position:absolute;left:-60px;top:-30px;overflow:visible"><ellipse cx="0" cy="0" rx="40" ry="10" fill="#000"/></svg></div><div class="w3b" id="w3-ball"><svg width="200" height="200" viewBox="-100 -160 200 200" style="position:absolute;left:-100px;top:-160px;overflow:visible"><g transform="translate(0,-38)"><g id="w3-b"><g id="w3-b-spin"><g transform="scale(1.0)"><!-- Football. Origin = centre, r = 22. -->
+<g id="w3-bf">
+  <circle r="22" fill="#fff" stroke="#1a1a2e" stroke-width="4" />
+  <path d="M0,-8 L8,-2 L5,8 L-5,8 L-8,-2 Z" fill="#1a1a2e" />
+  <path d="M0,-8 L0,-21 M8,-2 L20,-6 M5,8 L12,18 M-5,8 L-12,18 M-8,-2 L-20,-6" stroke="#1a1a2e" stroke-width="3" />
+</g>
+</g></g></g></g></svg></div>
+          </div>
+          <canvas id="w3-fg" width="1080" height="1920"></canvas>
+          <div id="w3-bubs"></div>
+          <div class="w3-vig"></div>
+        </div>
+        <div class="logo">COULD<b>?</b></div>
+        <div class="live"><i></i>LIVE RECONSTRUCTION</div>
+        <div id="w3-ov"></div>
+      </div>
+      <script>
+        window.__T = {"duration": 40.63, "start": {"s1": 0.0, "s1.end": 3.18, "s2": 3.18, "s2.end": 13.84, "s3": 13.84, "s3.end": 20.33, "s4": 20.33, "s4.end": 23.51, "s5": 23.51, "s5.end": 26.17, "s6": 26.17, "s6.end": 31.87, "s7": 31.87, "s7.end": 35.78, "s8": 35.78, "s8.end": 40.63}, "cue": {"s2.tb": 3.33, "s2.fee": 4.37, "s2.cl": 6.67, "s2.tp": 9.05, "s2.gb": 9.98, "s2.g73": 11.53, "s3.ko": 13.99, "s3.p1": 15.02, "s3.p2": 16.21, "s3.p3": 17.28, "s3.cant": 18.44, "s4.one": 20.48, "s4.nil": 22.19, "s5.follow": 23.66, "s5.rb": 24.76, "s6.ans": 26.32, "s6.stop": 27.36, "s6.late": 28.44, "s6.head": 30.02, "s6.eq": 30.71, "s7.min": 32.02, "s7.time": 33.36, "s7.win": 34.46, "s8.wait": 35.93, "s8.var": 36.56, "s8.who": 37.97, "s8.loop": 39.21}};
+        window.__hf = window.__hf || {};
+        window.__hf.buildReady = window.__hf.buildReady || {};
+        window.__hf.buildReady.world = new Promise((r) => { window.__worldReady = r; });
+      </script>
+      <script type="module">
+        import { createWorld } from "./assets/world/engine.js";
+        import plot from "./assets/world/director.js";
+        const w = createWorld(plot(window.__T));
+        window.addEventListener("hf-seek", (e) => w.renderAt(e.detail.time));
+        w.renderAt(0);
+        window.__worldReady();
+      </script>

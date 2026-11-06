@@ -91,6 +91,7 @@ export function createWorld(plot) {
       if (k === "hide" && t < t0 + d) show = false;
       if (k === "armR" && t < t0 + d) armR = 170;            // one arm up (offside!)
       if (k === "cross" && t < t0 + d) { arms = -55; armR = -55; }   // arms crossed (Mbappé celebration)
+      if (k === "wide" && t < t0 + d) { arms = 92; armR = 92; }       // arms spread wide (Bellingham celebration)
       if (k === "dizzy" && t < t0 + d) dizzy = true;          // stars over the head
       if (k === "yawn" && t < t0 + d) yawn = true;            // mouth open
       if (k === "charge" && t < t0 + d) dy += Math.abs(Math.sin((t - t0) * 14)) * 0.12;
