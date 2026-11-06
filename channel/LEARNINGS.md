@@ -134,6 +134,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-11-06 · S2E05 Neymars vs Pepes (41,6 s, bilbop, Samba) auf **TikTok** nach ~8 h: **2.786 Aufrufe**, 83 Likes (3,0 %), 5 Kommentare,
+  6 Saves, Ø **20,6 s (49 %)**, **24,7 % ganz** (neuer Bestwert). S2E04 Messis vs Haalands auf **YouTube Shorts**: Ø 0:27 (65 %),
+  **61,3 % angesehen / 38,7 % weggewischt** (Bestwert). → "11 gegen 11"-Format mit zwei Stars + Eigenheiten-Gags ist das Erfolgsformat.
 - 2026-11-05 · S2E04 11 Messis vs 11 Haalands (41,75 s, Broadcast-Stil, ElevenLabs Michael, Fusion-Musik) auf **TikTok** nach ~4 h:
   **2.012 Aufrufe**, 45 Likes, **8 Kommentare** (bisher bester Wert), 1 Share, 3 Saves, Ø **18,6 s (45 %)**, **17,2 % ganz** (bisher bester
   TikTok-Wert), 2 Follower. → Format "X gegen Y – wer gewinnt?" mit zwei Stars + offener Kommentar-Frage am Ende funktioniert am besten.
