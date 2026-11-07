@@ -158,7 +158,10 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-11-07 · S2E03 Diktator-Mbappé auf **YouTube Shorts** nach 2 Tagen: 18 Engaged Views, 47,4 % angesehen / 52,6 % weggewischt,
   Aufrufe einzeln und weit auseinander, keine Welle → **gar nicht im Shorts-Feed ausgespielt** (Creator: andere Videos mit mehr
   Wegwischen wurden trotzdem gepusht). Achtung: "Angesehen/Weggewischt" zählt auch Aufrufe aus der Suche - kein Beweis für einen Feed-Test.
-  S2E05 Neymar auf YouTube: nach 40 min 0 Aufrufe. Ursache offen (siehe Zugriffsquellen/Impressionen prüfen).
+  S2E05 Neymar auf YouTube: ebenfalls kaum Feed. Mbappé: 32 Aufrufe/48 h (20 Suche, nur 9 Shorts-Feed), Wiedergabe aber gut
+  (>100 % am Anfang, ~40 % am Ende) → nicht der Inhalt, YouTube hat gar nicht erst getestet. Ausgeschlossen: Upload-Abstand (24 h),
+  TikTok-Datei, Verstöße, Dateiformat (alle Renders identisch: 1080x1920, 30 fps, H.264), Titel (Neymar-Titel neutral → keine Änderung).
+  Offen: Einstufung des Bildinhalts (Revolution/Diktator, Rote Karten/Fouls) oder Zufall. Test: S2E06 Bellingham hochladen und beobachten.
 - 2026-11-03 · S2E02 Van Dijk (47 s) auf **TikTok** nach ~7 h: 1.040 Aufrufe, 44 Likes (4,2 %), 0 Kommentare, 3 Shares, 5 Saves,
   Ø **13,9 s (30 %)**, 5,3 % ganz, **0 Follower**. Spitze in Stunde 2, danach Abfall. Erkenntnis: Follow-Gag ganz am Ende sehen nur ~5 %
   → Follow-/Kommentar-Aufruf früher einbauen (Mitte, nach dem ersten Höhepunkt); ohne Kommentar-Frage kommen keine Kommentare.
