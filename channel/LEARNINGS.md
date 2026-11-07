@@ -155,6 +155,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   Offene Tests: YouTube-Demografie vergleichen, TikTok-Tab "Zuschauer*innen" (Alter, Land) und Traffic-Quellen prüfen.
   **Update:** Messi vs Romans hat (vermutlich YouTube) **100 % männliches** Publikum – gleicher Cartoon-Stil. → Der Stil ist nicht die
   Ursache; die Frauen-Schieflage ist ein TikTok-Seeding-Problem des Accounts. Stil bleibt, YouTube Shorts als Hauptplattform stärken.
+- 2026-11-07 · S2E03 Diktator-Mbappé auf **YouTube Shorts** nach 2 Tagen: 18 Engaged Views, **47,4 % angesehen / 52,6 % weggewischt**
+  (Messi-Haaland: 61,3 / 38,7). Das Video wurde im Feed getestet (kleine Testgruppe) und fiel durch → keine weitere Ausspielung.
+  Kein Sperr-Problem, sondern Inhalt/Einstieg: Nischen-Thema (Revolution/Diktator-Meme) zieht nicht. YouTube-Ziel: ≤ 40 % weggewischt.
 - 2026-11-03 · S2E02 Van Dijk (47 s) auf **TikTok** nach ~7 h: 1.040 Aufrufe, 44 Likes (4,2 %), 0 Kommentare, 3 Shares, 5 Saves,
   Ø **13,9 s (30 %)**, 5,3 % ganz, **0 Follower**. Spitze in Stunde 2, danach Abfall. Erkenntnis: Follow-Gag ganz am Ende sehen nur ~5 %
   → Follow-/Kommentar-Aufruf früher einbauen (Mitte, nach dem ersten Höhepunkt); ohne Kommentar-Frage kommen keine Kommentare.
