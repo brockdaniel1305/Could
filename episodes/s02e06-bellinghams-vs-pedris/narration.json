@@ -29,6 +29,18 @@
       "sfx": []
     },
     {
+      "id": "s2b-reg",
+      "text": "{{prob}}Problem: ||0.15|| {{nine}}{Barça|Barsa} can only register nine Pedris.",
+      "sfx": [
+        {
+          "name": "impact-bass-1",
+          "cue": "nine",
+          "offset": 1.2,
+          "volume": 0.25
+        }
+      ]
+    },
+    {
       "id": "s3-pass",
       "text": "{{ko}}Kick-off. ||0.15|| {{p1}}The Pedris pass. ||0.15|| {{p2}}And pass. ||0.15|| {{p3}}And pass. ||0.2|| {{cant}}The Bellinghams can't get near the ball.",
       "sfx": [
@@ -121,11 +133,12 @@
           "offset": -0.1,
           "volume": 0.35
         }
-      ]
+      ],
+      "tail": 2.0
     },
     {
       "id": "s8-var",
-      "text": "{{wait}}But wait. ||0.2|| {{var}}VAR is checking. ||0.3|| {{who}}Comment who will win. ||0.3|| {{loop}}So if anyone asks you:",
+      "text": "{{wait}}But wait. ||0.2|| {{var}}VAR is checking. ||1.6|| {{who}}Comment who will win. ||0.3|| {{loop}}So if anyone asks you:",
       "sfx": [
         {
           "name": "whistle",

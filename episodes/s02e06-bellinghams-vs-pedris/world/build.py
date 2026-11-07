@@ -36,6 +36,8 @@ sprites.append(ball())
 
 write(EP, sprites, "", extra_css="""
     .bub.follow { font-size: 58px; padding: 16px 30px; border-radius: 44px; }
-    .var { left: 60px; right: 60px; top: 420px; text-align: center; padding: 22px 0 26px; background: #14141f; border: 6px solid #4fd1ff;
+    .var { left: 60px; right: 60px; top: 300px; text-align: center; padding: 22px 0 26px; background: #14141f; border: 6px solid #4fd1ff;
            border-radius: 18px; color: #f4f4f2; font: 900 92px/1 "Inter"; letter-spacing: 0.06em; }
+    .bub.small { font-size: 26px; padding: 8px 14px; }
+    .bub.yellow { width: 70px; height: 96px; padding: 0; border-radius: 8px; background: #ffd23f; border: 5px solid #14141f; box-shadow: 6px 6px 0 #14141f; font-size: 0; }
     .var small { display: block; margin-top: 10px; font: 700 30px/1 "CouldMono"; color: #4fd1ff; letter-spacing: 0.2em; }""")

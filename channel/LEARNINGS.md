@@ -5,6 +5,11 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-07 · S2E06 · **Jede Folge ist auf Humor ausgelegt.** Guter Fußball allein reicht nicht (S2E06 v1 "fehlt der Humor").
+  Pro Folge mindestens 4 sichtbare Gags, verteilt über das ganze Video (spätestens alle ~8 s einer), aus bekannten Eigenheiten und
+  Fan-Memes beider Seiten (S2E06: Barça kann nur 9 Pedris registrieren, Bellinghams diskutieren mit dem Schiri statt zu pressen,
+  alle 11 machen den Arme-auf-Jubel als Kette und walzen den Schiri um "BONK!", VAR-Check dauert ewig: Uhr rast, Arme sinken, einer
+  schläft "Z z z"). Bild-Gags kosten keine Sprecherzeit; Sprecher-Gags kurz und trocken. Beim Skript die Gags als eigene Liste mitschicken.
 - 2026-11-05 · S2E05 · **Musik leiser**: echte Tracks mit `"volume": 0.13` (statt 0.22) + Ducking – ~13 dB unter dem Sprecher.
 - 2026-11-05 · S2E05 · **Follow-Aufruf immer zusammen mit Like-Aufruf** ("Like and follow if …", Blase "♥ LIKE + FOLLOW +").
   **Schluss-Satz ab jetzt immer: "Comment who will win."** (statt "Who wins? Comment."), Karte "COMMENT · Who will win?".

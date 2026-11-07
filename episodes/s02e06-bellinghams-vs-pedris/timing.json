@@ -1,5 +1,5 @@
 {
- "duration": 40.63,
+ "duration": 46.968,
  "voice": "prerecorded:elevenlabs:bilbop (R23cI2hqxAhT17IXmY7O)",
  "scenes": [
   {
@@ -205,8 +205,65 @@
    "sfx": []
   },
   {
-   "id": "s3-pass",
+   "id": "s2b-reg",
    "start": 13.84,
+   "duration": 3.438,
+   "voice": "assets/voice/s2b-reg.wav",
+   "voiceStart": 0.15,
+   "speech": 2.888,
+   "cues": {
+    "prob": 0.15,
+    "nine": 0.96
+   },
+   "words": [
+    {
+     "text": "Problem:",
+     "start": 0.15,
+     "end": 0.483
+    },
+    {
+     "text": "Bar\u00e7a",
+     "start": 0.96,
+     "end": 1.305
+    },
+    {
+     "text": "can",
+     "start": 1.305,
+     "end": 1.512
+    },
+    {
+     "text": "only",
+     "start": 1.512,
+     "end": 1.788
+    },
+    {
+     "text": "register",
+     "start": 1.788,
+     "end": 2.339
+    },
+    {
+     "text": "nine",
+     "start": 2.339,
+     "end": 2.619
+    },
+    {
+     "text": "Pedris.",
+     "start": 2.619,
+     "end": 3.038
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "nine",
+     "offset": 1.2,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s3-pass",
+   "start": 17.278,
    "duration": 6.49,
    "voice": "assets/voice/s3-pass.wav",
    "voiceStart": 0.15,
@@ -306,7 +363,7 @@
   },
   {
    "id": "s4-goal",
-   "start": 20.33,
+   "start": 23.768,
    "duration": 3.18,
    "voice": "assets/voice/s4-goal.wav",
    "voiceStart": 0.15,
@@ -375,7 +432,7 @@
   },
   {
    "id": "s5-follow",
-   "start": 23.51,
+   "start": 26.948,
    "duration": 2.66,
    "voice": "assets/voice/s5-follow.wav",
    "voiceStart": 0.15,
@@ -420,7 +477,7 @@
   },
   {
    "id": "s6-header",
-   "start": 26.17,
+   "start": 29.608,
    "duration": 5.7,
    "voice": "assets/voice/s6-header.wav",
    "voiceStart": 0.15,
@@ -527,8 +584,8 @@
   },
   {
    "id": "s7-late",
-   "start": 31.87,
-   "duration": 3.91,
+   "start": 35.308,
+   "duration": 5.51,
    "voice": "assets/voice/s7-late.wav",
    "voiceStart": 0.15,
    "speech": 3.36,
@@ -603,16 +660,16 @@
   },
   {
    "id": "s8-var",
-   "start": 35.78,
-   "duration": 4.85,
+   "start": 40.818,
+   "duration": 6.15,
    "voice": "assets/voice/s8-var.wav",
    "voiceStart": 0.15,
-   "speech": 4.4,
+   "speech": 5.7,
    "cues": {
     "wait": 0.15,
     "var": 0.78,
-    "who": 2.19,
-    "loop": 3.43
+    "who": 3.49,
+    "loop": 4.73
    },
    "words": [
     {
@@ -642,48 +699,48 @@
     },
     {
      "text": "Comment",
-     "start": 2.19,
-     "end": 2.532
+     "start": 3.49,
+     "end": 3.832
     },
     {
      "text": "who",
-     "start": 2.532,
-     "end": 2.679
+     "start": 3.832,
+     "end": 3.979
     },
     {
      "text": "will",
-     "start": 2.679,
-     "end": 2.874
+     "start": 3.979,
+     "end": 4.174
     },
     {
      "text": "win.",
-     "start": 2.874,
-     "end": 3.07
+     "start": 4.174,
+     "end": 4.37
     },
     {
      "text": "So",
-     "start": 3.43,
-     "end": 3.54
+     "start": 4.73,
+     "end": 4.84
     },
     {
      "text": "if",
-     "start": 3.54,
-     "end": 3.65
+     "start": 4.84,
+     "end": 4.95
     },
     {
      "text": "anyone",
-     "start": 3.65,
-     "end": 3.98
+     "start": 4.95,
+     "end": 5.28
     },
     {
      "text": "asks",
-     "start": 3.98,
-     "end": 4.2
+     "start": 5.28,
+     "end": 5.5
     },
     {
      "text": "you:",
-     "start": 4.2,
-     "end": 4.53
+     "start": 5.5,
+     "end": 5.83
     }
    ],
    "sfx": [
