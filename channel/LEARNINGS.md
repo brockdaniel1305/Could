@@ -162,6 +162,10 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   (>100 % am Anfang, ~40 % am Ende) → nicht der Inhalt, YouTube hat gar nicht erst getestet. Ausgeschlossen: Upload-Abstand (24 h),
   TikTok-Datei, Verstöße, Dateiformat (alle Renders identisch: 1080x1920, 30 fps, H.264), Titel (Neymar-Titel neutral → keine Änderung).
   Offen: Einstufung des Bildinhalts (Revolution/Diktator, Rote Karten/Fouls) oder Zufall. Test: S2E06 Bellingham hochladen und beobachten.
+- 2026-11-08 · S2E06 Bellingham v2 (Humor-Update, 47 s) auf **YouTube Shorts** nach ~8 h: **1.500 Aufrufe**, Ø 0:28 (≈ 60 %),
+  **63,3 % angesehen / 36,7 % weggewischt** (bester Wert bisher). Lief sofort normal an → Kanal, Upload-Weg und Stimme bilbop sind
+  in Ordnung. Die zwei Feed-Ausfälle (Mbappé-Diktator, Neymar mit Roten Karten/"violence") hatten schwere Themen gemeinsam.
+  → Für YouTube: Gewalt-, Diktator-, Kriegs-Themen meiden; harmloser Humor + Fußball-Debatte (Real/Barça, Ballon d'Or) läuft.
 - 2026-11-03 · S2E02 Van Dijk (47 s) auf **TikTok** nach ~7 h: 1.040 Aufrufe, 44 Likes (4,2 %), 0 Kommentare, 3 Shares, 5 Saves,
   Ø **13,9 s (30 %)**, 5,3 % ganz, **0 Follower**. Spitze in Stunde 2, danach Abfall. Erkenntnis: Follow-Gag ganz am Ende sehen nur ~5 %
   → Follow-/Kommentar-Aufruf früher einbauen (Mitte, nach dem ersten Höhepunkt); ohne Kommentar-Frage kommen keine Kommentare.
