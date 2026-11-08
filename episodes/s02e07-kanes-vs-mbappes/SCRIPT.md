@@ -1,4 +1,4 @@
-# S2E07 · Could 11 Kanes beat 11 Mbappés? (~43 s, Loop) – Skript v2 zur Freigabe
+# S2E07 · Could 11 Kanes beat 11 Mbappés? (~41 s, Loop) – Skript v2 (freigegeben)
 Aufhänger: die Ballon-d'Or-Debatte 2026. Kane gewann am 26.10.2026 mit 1.055 Punkten, Mbappé wurde mit 1.027 Zweiter
 (28 Punkte, einer der knappsten Ausgänge überhaupt). 3D-Stadion bei Nacht, Broadcast-Stil, Sprecher bilbop.
 Kane: weiß, Hose navy, Nr. 9. Mbappé: navy, Hose weiß, Nr. 10. Keine Wappen, keine Länder-Debatte.

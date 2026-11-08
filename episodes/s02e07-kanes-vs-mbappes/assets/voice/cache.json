@@ -1,0 +1,532 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "ca237b78f2afa618c0288bb3b56d42cc6883b00e",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.421
+   },
+   {
+    "text": "11",
+    "start": 0.421,
+    "end": 0.59
+   },
+   {
+    "text": "canes",
+    "start": 0.59,
+    "end": 1.011
+   },
+   {
+    "text": "beat",
+    "start": 1.011,
+    "end": 1.349
+   },
+   {
+    "text": "11",
+    "start": 1.349,
+    "end": 1.517
+   },
+   {
+    "text": "in",
+    "start": 1.517,
+    "end": 1.686
+   },
+   {
+    "text": "buffets?",
+    "start": 1.686,
+    "end": 2.36
+   }
+  ]
+ },
+ "s2-bdor.part0.wav": {
+  "key": "e6492a42c40598e90d6ff66f95b8643df2545647",
+  "words": [
+   {
+    "text": "This",
+    "start": 0,
+    "end": 0.213
+   },
+   {
+    "text": "year's",
+    "start": 0.213,
+    "end": 0.533
+   },
+   {
+    "text": "Ballon",
+    "start": 0.533,
+    "end": 0.853
+   },
+   {
+    "text": "d'Or!",
+    "start": 0.853,
+    "end": 1.12
+   }
+  ]
+ },
+ "s2-bdor.part1.wav": {
+  "key": "3273bcbb461f9c89a2ff3d6ade443273f2bb4cfd",
+  "words": [
+   {
+    "text": "Kane",
+    "start": 0,
+    "end": 0.427
+   },
+   {
+    "text": "1.",
+    "start": 0.427,
+    "end": 0.64
+   }
+  ]
+ },
+ "s2-bdor.part2.wav": {
+  "key": "4d6bf312c60c1d50da68c2b532508c4bc89a0ab4",
+  "words": [
+   {
+    "text": "by",
+    "start": 0,
+    "end": 0.218
+   },
+   {
+    "text": "28",
+    "start": 0.218,
+    "end": 0.436
+   },
+   {
+    "text": "points.",
+    "start": 0.436,
+    "end": 1.2
+   }
+  ]
+ },
+ "s2-bdor.part3.wav": {
+  "key": "1338083965604cbb5821b2912d376708a3e19c17",
+  "words": [
+   {
+    "text": "Bapei",
+    "start": 0,
+    "end": 0.373
+   },
+   {
+    "text": "was",
+    "start": 0.373,
+    "end": 0.597
+   },
+   {
+    "text": "second.",
+    "start": 0.597,
+    "end": 1.12
+   }
+  ]
+ },
+ "s3-ko.part0.wav": {
+  "key": "945135fdd1a7c082b388e1ddcfd0c25dbb50ae91",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.103
+   },
+   {
+    "text": "let's",
+    "start": 0.103,
+    "end": 0.36
+   },
+   {
+    "text": "settle",
+    "start": 0.36,
+    "end": 0.669
+   },
+   {
+    "text": "it,",
+    "start": 0.669,
+    "end": 0.823
+   },
+   {
+    "text": "nite.",
+    "start": 0.823,
+    "end": 1.08
+   }
+  ]
+ },
+ "s3-ko.part1.wav": {
+  "key": "1340b8028a9a8ce1bb00d9ed5c9bd2dad7f56176",
+  "words": [
+   {
+    "text": "kickoff.",
+    "start": 0,
+    "end": 0.5
+   }
+  ]
+ },
+ "s4-sprint.part0.wav": {
+  "key": "2ac6b06762b790fc02d8916133229bc9f5fdf494",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.196
+   },
+   {
+    "text": "Bap\u00e9",
+    "start": 0.196,
+    "end": 0.457
+   },
+   {
+    "text": "just",
+    "start": 0.457,
+    "end": 0.718
+   },
+   {
+    "text": "sprints.",
+    "start": 0.718,
+    "end": 1.24
+   }
+  ]
+ },
+ "s4-sprint.part1.wav": {
+  "key": "44a310b5991a52fde727dfb28a435b2f626d5ac6",
+  "words": [
+   {
+    "text": "through",
+    "start": 0,
+    "end": 0.467
+   },
+   {
+    "text": "all",
+    "start": 0.467,
+    "end": 0.667
+   },
+   {
+    "text": "11",
+    "start": 0.667,
+    "end": 0.8
+   },
+   {
+    "text": "canes.",
+    "start": 0.8,
+    "end": 1.2
+   }
+  ]
+ },
+ "s4-sprint.part2.wav": {
+  "key": "bba695975b67119c702f9dbd1c28aa0b3894d995",
+  "words": [
+   {
+    "text": "Neil",
+    "start": 0,
+    "end": 0.391
+   },
+   {
+    "text": "Wanns",
+    "start": 0.391,
+    "end": 0.88
+   }
+  ]
+ },
+ "s5-follow.part0.wav": {
+  "key": "e5279c888a42ad540b36f0fa702ff80ba78d331c",
+  "words": [
+   {
+    "text": "like",
+    "start": 0,
+    "end": 0.274
+   },
+   {
+    "text": "and",
+    "start": 0.274,
+    "end": 0.48
+   },
+   {
+    "text": "follow.",
+    "start": 0.48,
+    "end": 0.96
+   }
+  ]
+ },
+ "s5-follow.part1.wav": {
+  "key": "160d6b434d4da7d3ec29dc53d6e91be8d272dd37",
+  "words": [
+   {
+    "text": "Kane",
+    "start": 0,
+    "end": 0.345
+   },
+   {
+    "text": "or",
+    "start": 0.345,
+    "end": 0.517
+   },
+   {
+    "text": "Mbappe.",
+    "start": 0.517,
+    "end": 1.12
+   }
+  ]
+ },
+ "s6-long.part0.wav": {
+  "key": "3a76722a400ca2d9736d172e089f488dc0af1c9c",
+  "words": [
+   {
+    "text": "Cain's",
+    "start": 0,
+    "end": 0.332
+   },
+   {
+    "text": "answer?",
+    "start": 0.332,
+    "end": 0.72
+   }
+  ]
+ },
+ "s6-long.part1.wav": {
+  "key": "bf145503227873003ad5b2406c746119cb5a751a",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.14
+   },
+   {
+    "text": "drops",
+    "start": 0.14,
+    "end": 0.49
+   },
+   {
+    "text": "deep.",
+    "start": 0.49,
+    "end": 0.84
+   }
+  ]
+ },
+ "s6-long.part2.wav": {
+  "key": "6f439bd79d2f62d651cc531e6e4caaa95f749a4b",
+  "words": [
+   {
+    "text": "plays",
+    "start": 0,
+    "end": 0.333
+   },
+   {
+    "text": "a",
+    "start": 0.333,
+    "end": 0.4
+   },
+   {
+    "text": "long",
+    "start": 0.4,
+    "end": 0.667
+   },
+   {
+    "text": "ball.",
+    "start": 0.667,
+    "end": 1
+   }
+  ]
+ },
+ "s6-long.part3.wav": {
+  "key": "4b7feb000d782a53f66b51268c639bdbc9b1bcaa",
+  "words": [
+   {
+    "text": "to",
+    "start": 0,
+    "end": 0.136
+   },
+   {
+    "text": "himself.",
+    "start": 0.136,
+    "end": 0.68
+   }
+  ]
+ },
+ "s6-long.part4.wav": {
+  "key": "7f415563cbc43c30e5f29b2da692994c8e4fb9f1",
+  "words": [
+   {
+    "text": "1-1.",
+    "start": 0,
+    "end": 2
+   }
+  ]
+ },
+ "s7-pen.part0.wav": {
+  "key": "27a768770be105554fd5686a1b3e750882b431cf",
+  "words": [
+   {
+    "text": "minute",
+    "start": 0,
+    "end": 0.332
+   },
+   {
+    "text": "ninety?",
+    "start": 0.332,
+    "end": 0.72
+   }
+  ]
+ },
+ "s7-pen.part1.wav": {
+  "key": "27aec20cf6fc9767663b961f1b343e0c75de4648",
+  "words": [
+   {
+    "text": "Penalty,",
+    "start": 0,
+    "end": 0.443
+   },
+   {
+    "text": "Kane.",
+    "start": 0.443,
+    "end": 0.72
+   }
+  ]
+ },
+ "s7-pen.part2.wav": {
+  "key": "68e909ba61b4e2a33b8bd1af33a2363c0735d872",
+  "words": [
+   {
+    "text": "Against",
+    "start": 0,
+    "end": 0.403
+   },
+   {
+    "text": "Mbappe,",
+    "start": 0.403,
+    "end": 0.807
+   },
+   {
+    "text": "the",
+    "start": 0.807,
+    "end": 0.98
+   },
+   {
+    "text": "last",
+    "start": 0.98,
+    "end": 1.21
+   },
+   {
+    "text": "one",
+    "start": 1.21,
+    "end": 1.383
+   },
+   {
+    "text": "went",
+    "start": 1.383,
+    "end": 1.613
+   },
+   {
+    "text": "into",
+    "start": 1.613,
+    "end": 1.844
+   },
+   {
+    "text": "the",
+    "start": 1.844,
+    "end": 2.017
+   },
+   {
+    "text": "stands.",
+    "start": 2.017,
+    "end": 2.42
+   }
+  ]
+ },
+ "s8-end.part0.wav": {
+  "key": "7ea77bd14c23094860991461ea08b4d879276395",
+  "words": [
+   {
+    "text": "He",
+    "start": 0,
+    "end": 0.107
+   },
+   {
+    "text": "won",
+    "start": 0.107,
+    "end": 0.268
+   },
+   {
+    "text": "the",
+    "start": 0.268,
+    "end": 0.429
+   },
+   {
+    "text": "Ballon",
+    "start": 0.429,
+    "end": 0.752
+   },
+   {
+    "text": "d'Or!",
+    "start": 0.752,
+    "end": 1.02
+   }
+  ]
+ },
+ "s8-end.part1.wav": {
+  "key": "b55182d002a0f1338ee6872d3cd19effc2cb812e",
+  "words": [
+   {
+    "text": "But",
+    "start": 0,
+    "end": 0.15
+   },
+   {
+    "text": "this...",
+    "start": 0.15,
+    "end": 0.5
+   }
+  ]
+ },
+ "s8-end.part2.wav": {
+  "key": "818189ddb34f7f2fdf8503879ac1bef4ced722ee",
+  "words": [
+   {
+    "text": "Comment",
+    "start": 0,
+    "end": 0.358
+   },
+   {
+    "text": "who",
+    "start": 0.358,
+    "end": 0.511
+   },
+   {
+    "text": "will",
+    "start": 0.511,
+    "end": 0.716
+   },
+   {
+    "text": "win.",
+    "start": 0.716,
+    "end": 0.92
+   }
+  ]
+ },
+ "s8-end.part3.wav": {
+  "key": "b78e3184f67753eb60313498fce87238d90be25e",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.124
+   },
+   {
+    "text": "if",
+    "start": 0.124,
+    "end": 0.249
+   },
+   {
+    "text": "anyone",
+    "start": 0.249,
+    "end": 0.622
+   },
+   {
+    "text": "asks",
+    "start": 0.622,
+    "end": 0.871
+   },
+   {
+    "text": "you.",
+    "start": 0.871,
+    "end": 1.12
+   }
+  ]
+ }
+}
