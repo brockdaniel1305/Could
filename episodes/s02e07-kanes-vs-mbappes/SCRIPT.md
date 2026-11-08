@@ -1,25 +1,23 @@
-# S2E07 · Could 11 Kanes beat 11 Mbappés? (~46 s, Loop) – Skript zur Freigabe
-England gegen Frankreich, Revanche für das WM-Viertelfinale 2022. 3D-Stadion bei Nacht, Broadcast-Stil, Sprecher bilbop.
-Kane: England-Trikot weiß, Hose navy, Nr. 9. Mbappé: Frankreich navy, Hose weiß, Nr. 10. Keine Wappen.
-Roter Faden: Kanes Elfmeter von 2022, der auf der Tribüne landete. Am Ende bekommt er wieder einen Elfmeter – Cliffhanger.
+# S2E07 · Could 11 Kanes beat 11 Mbappés? (~43 s, Loop) – Skript v2 zur Freigabe
+Aufhänger: die Ballon-d'Or-Debatte 2026. Kane gewann am 26.10.2026 mit 1.055 Punkten, Mbappé wurde mit 1.027 Zweiter
+(28 Punkte, einer der knappsten Ausgänge überhaupt). 3D-Stadion bei Nacht, Broadcast-Stil, Sprecher bilbop.
+Kane: weiß, Hose navy, Nr. 9. Mbappé: navy, Hose weiß, Nr. 10. Keine Wappen, keine Länder-Debatte.
+Roter Faden: Kane hat den Ballon d'Or, aber wer gewinnt auf dem Platz? Der Elfmeter von 2022 kommt nur kurz am Ende vor.
 
 | # | Sprecher (EN) | Bild (DE) | Gag |
 |---|---|---|---|
-| 1 | Could eleven Kanes beat eleven Mbappés? | Frame 1: Mbappé sprintet groß auf die Kamera zu, Kane schlägt im Vordergrund einen langen Ball. Text „11 KANES vs 11 MBAPPÉS“. Erster Schnitt bei 1,3 s. | – |
-| 2 | Team Kane: England's record goalscorer. His first trophy took fourteen years. | Kane-Reihe. Karte „TOR-REKORD ENGLAND“. Ein Pokal steht am Rand; jedes Mal, wenn ein Kane danach greift, hüpft er weg. Zähler „TROPHÄEN: 0 … 0 … 1 (2025)“. | **Pokal-Fluch:** Pokal flieht vor Kane |
-| 3 | Team Mbappé: World Cup winner at nineteen. The fastest man on the pitch. | Mbappé-Reihe, Karte „WELTMEISTER 2018 · 19“, Tacho „≈ 36 km/h“. | – |
-| 4 | Kick-off. The Mbappés are so fast, they run past the ball. And come back for it. | Anstoß, die Mbappés sprinten los, rennen am Ball vorbei, bremsen mit Staubwolke und laufen rückwärts zurück. Die Kanes schauen verdutzt. | **Zu schnell für den Ball** |
-| 5 | Offside? The flag goes up. He's already gone. | Linienrichter hebt die Fahne, dreht sich um – Mbappé ist schon weg, nur Staub. Blase „?!“. | **Abseits zu spät** |
-| 6 | One sprint. Nil, one. | Mbappé läuft allein aufs Tor, schiebt ein. Jubel, Spielstand 0–1. | – |
-| 7 | Like and follow. England or France? | Kane und Mbappé Stirn an Stirn am Mittelkreis, Blase „♥ LIKE + FOLLOW +“, „ENGLAND?“ / „FRANCE?“. | – |
-| 8 | Kane's answer: he drops deep. All eleven of them. Nobody's in the box. | Alle elf Kanes lassen sich ins Mittelfeld fallen, drängen sich im Mittelkreis. Draufsicht-Minikarte: alle roten Punkte in der Mitte, Strafraum leer. Blase „WHO'S UP FRONT?“. | **Alle elf im Mittelfeld** |
-| 9 | (Bild-Gag, kein Text) | Die Mbappés verteidigen nicht: zehn stehen an der Mittellinie, einer gähnt, Blase „NOT MY JOB“. | **Mbappés verteidigen nicht** |
-| 10 | So he shoots from halfway. One, one. | Ein Kane schießt aus der eigenen Hälfte (wie gegen Darmstadt 2023), der Ball fliegt lange, Torwart rennt zurück – Tor. 1–1. | – |
-| 11 | Minute ninety. Penalty, Kane. Last time against Mbappé, it landed in the stands. | Elfmeter-Pfiff. Rückblende in Sepia „KATAR 2022“: der Ball fliegt über die Latte in die Tribüne, landet in einer Popcorn-Tüte – „POP!“. | **Popcorn-Rückblende** |
-| 12 | Will he score this time? Comment who will win. So if anyone asks you: | Zurück in der Gegenwart: Kane läuft an, alle elf Mbappés halten sich die Augen zu, Freeze, als der Ball fliegt. Karte „COMMENT · Who will win?“. Loop zurück zu Frame 1. | **Mbappés schauen nicht hin** |
+| 1 | Could eleven Kanes beat eleven Mbappés? | Frame 1: Mbappé sprintet groß auf die Kamera zu, dahinter Kane; der goldene Ballon d'Or liegt am Mittelkreis. Text „11 KANES vs 11 MBAPPÉS“. Erster Schnitt bei 1,3 s. | – |
+| 2 | This year's Ballon d'Or: Kane won. By twenty eight points. Mbappé was second. | Punktebalken „KANE 1.055 · MBAPPÉ 1.027“. Ein Mbappé stellt sich auf die Zehenspitzen und drückt seinen Balken hoch, er reicht nicht ganz. Blase „28?!“. | **Balken auf Zehenspitzen** |
+| 3 | So let's settle it. Kick-off. | Anstoß, Draufsicht. | – |
+| 4 | Mbappé just sprints. Through all eleven Kanes. Nil, one. | Mbappé läuft durch alle elf Kanes, die sich nacheinander wie Drehkreuze drehen. Der Linienrichter hebt die Fahne zu spät, da ist nur noch Staub („?!“). Tor, 0–1. | **Drehkreuz-Kanes, Fahne zu spät** |
+| 5 | Like and follow. Kane or Mbappé? | Kane und Mbappé Stirn an Stirn, Blasen „♥ LIKE + FOLLOW +“, „KANE?“ / „MBAPPÉ?“. | – |
+| 6 | Kane's answer: he drops deep. Plays a long ball. To himself. One, one. | Alle elf Kanes drängen sich im Mittelkreis, die Minikarte zeigt den leeren Strafraum („WHO'S UP FRONT?“). Ein Kane schlägt den langen Ball, sprintet hinterher und nimmt seinen eigenen Pass an („THANKS, ME“). Die zehn Mbappés stehen an der Mittellinie, einer gähnt: „NOT MY JOB“. Tor, 1–1. | **Alle im Mittelfeld, Pass an sich selbst, Mbappés verteidigen nicht** |
+| 7 | Minute ninety. Penalty, Kane. Against Mbappé, the last one went into the stands. | Elfmeter. Kane legt den goldenen Ballon d'Or auf den Punkt, der Schiri tauscht ihn kopfschüttelnd gegen einen echten Ball. Kurze Sepia-Rückblende (1,5 s, „2022“): Ball über die Latte in eine Popcorn-Tüte, „POP!“. | **Falscher Ball, Popcorn** |
+| 8 | He won the Ballon d'Or. But this? Comment who will win. So if anyone asks you: | Kane läuft an, alle elf Mbappés halten sich die Augen zu. Standbild, als der Ball fliegt. Karte „COMMENT · Who will win?“. Loop zu Frame 1. | **Augen zu** |
 
-**Gags (7):** Pokal flieht vor Kane, zu schnell für den Ball, Abseits zu spät, alle elf Kanes im Mittelfeld, Mbappés verteidigen nicht, Popcorn-Rückblende, Mbappés halten sich beim Elfer die Augen zu.
+**Gags (7):** Balken auf Zehenspitzen, Drehkreuz-Kanes, Fahne zu spät, Pass an sich selbst, Mbappés verteidigen nicht, Ballon d'Or auf dem Elfmeterpunkt, Augen zu.
 
-**Fakten-Check:** Kane ist Englands Rekordtorschütze (seit März 2023); erster Titel Bundesliga 2025, Profidebüt 2011 → 14 Jahre; Tor aus der eigenen Hälfte gegen Darmstadt (Okt. 2023). Mbappé Weltmeister 2018 mit 19; Höchsttempo ≈ 36 km/h. WM-Viertelfinale 2022 England 1–2 Frankreich, Kane schoss den zweiten Elfmeter über das Tor.
+**Fakten:** Ballon d'Or 2026 (26.10.2026, London) Kane 1.055 / Mbappé 1.027 Punkte; erster Engländer seit Michael Owen 2001.
+WM-Viertelfinale 2022 England 1–2 Frankreich, Kane schoss den zweiten Elfmeter über das Tor.
 
-**Länge:** ~105 Wörter → ca. 46 s. **Musik:** leise, spannend (Jamendo, CC BY). **Caption:** „11 Kanes vs 11 Mbappés ⚽ England or France – who wins? #kane #mbappe #england #france #football #shorts“ (neutral, YouTube-tauglich).
+**Länge:** ~80 Wörter + Bild-Gags → ca. 43 s. **Caption:** „11 Kanes vs 11 Mbappés ⚽ Ballon d'Or by 28 points – who really wins? #kane #mbappe #ballondor #football #shorts“
