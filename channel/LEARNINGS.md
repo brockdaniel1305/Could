@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-09 · S2E07 · **Keine Sprech-Hänger:** Pausen im Sprechertext höchstens ~0,6 s, nie 1,3–1,6 s für Bild-Gags (S2E07 Kane
+  wirkte stockend, frühes Wegwischen). Bild-Gags laufen *unter* dem Sprechen weiter oder bekommen einen kurzen Sprecher-Satz;
+  wenn Zeit fehlt, lieber einen Satz mehr schreiben als Stille. Szenen-`tail` ebenfalls kurz halten (≤ 0,6 s).
 - 2026-11-07 · S2E06 · **Jede Folge ist auf Humor ausgelegt.** Guter Fußball allein reicht nicht (S2E06 v1 "fehlt der Humor").
   Pro Folge mindestens 4 sichtbare Gags, verteilt über das ganze Video (spätestens alle ~8 s einer), aus bekannten Eigenheiten und
   Fan-Memes beider Seiten (S2E06: Barça kann nur 9 Pedris registrieren, Bellinghams diskutieren mit dem Schiri statt zu pressen,
