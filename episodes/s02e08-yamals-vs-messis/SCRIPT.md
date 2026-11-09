@@ -1,4 +1,4 @@
-# S2E08 · Could 11 Yamals beat 11 young Messis? (~48 s, Loop) – Skript v2 zur Freigabe
+# S2E08 · Could 11 Yamals beat 11 young Messis? (~45 s, Loop) – Skript v2 (freigegeben)
 Debatte: „Ist Yamal der neue Messi?“ Junger Messi (2006, 19 J., lange Haare, Barça-Streifen, Nr. 19) gegen Yamal (Spanien rot, Nr. 19).
 3D-Stadion bei Nacht, Broadcast-Stil, Sprecher bilbop – **keine Pausen über 0,6 s**, Bild-Gags laufen unter dem Text.
 Roter Faden: Die beiden kennen sich – 2007 hat Messi Baby-Yamal gebadet (echtes Foto). Am Ende schickt er ihn wieder „baden“.

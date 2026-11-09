@@ -42,7 +42,7 @@ dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=d
 edges = [0.0] + [x for pair in zip(st, en) for x in pair] + [dur]
 chunks = [(edges[i], edges[i + 1]) for i in range(0, len(edges) - 1, 2) if edges[i + 1] - edges[i] > 0.08]
 # transcribe every chunk on its own, then assign chunks to segments in order by text similarity (dynamic programming)
-NUM = {"0": "nil", "1": "one", "2": "two", "11": "eleven", "70": "seventy", "90": "ninety", "92": "ninetytwo", "28": "twentyeight", "twentyeight": "twentyeight", "195": "oneninetyfive",
+NUM = {"0": "nil", "1": "one", "2": "two", "11": "eleven", "70": "seventy", "90": "ninety", "92": "ninetytwo", "28": "twentyeight", "19": "nineteen", "17": "seventeen", "2006": "twothousandsix", "2007": "twothousandseven", "twentyeight": "twentyeight", "195": "oneninetyfive",
        "1m": "onemetre"}
 def toks(text):
     out = []
