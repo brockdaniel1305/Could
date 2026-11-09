@@ -340,76 +340,116 @@
   ]
  },
  "s6-celeb.part0.wav": {
-  "key": "62296108e88a58eea24eab32f669adb626e11e30",
+  "key": "b5d04781ad7a37be055e6e527d919ab8d0fb5ca9",
   "words": [
    {
     "text": "All",
     "start": 0,
-    "end": 0.217
+    "end": 0.185
    },
    {
     "text": "11",
-    "start": 0.217,
-    "end": 0.362
+    "start": 0.185,
+    "end": 0.308
    },
    {
     "text": "Yamals",
-    "start": 0.362,
-    "end": 0.796
+    "start": 0.308,
+    "end": 0.677
    },
    {
-    "text": "celebrate.",
-    "start": 0.796,
-    "end": 1.52
+    "text": "are",
+    "start": 0.677,
+    "end": 0.862
+   },
+   {
+    "text": "celebrating!",
+    "start": 0.862,
+    "end": 1.6
    }
   ]
  },
  "s6-celeb.part1.wav": {
-  "key": "5f80559c5ada571baabb97967f4ce02314e2f746",
+  "key": "f2b9f8f8ec7a76d2093fa2aae2e84455198898cd",
   "words": [
    {
     "text": "But",
     "start": 0,
-    "end": 0.176
+    "end": 0.155
+   },
+   {
+    "text": "while",
+    "start": 0.155,
+    "end": 0.414
+   },
+   {
+    "text": "doing",
+    "start": 0.414,
+    "end": 0.673
+   },
+   {
+    "text": "that,",
+    "start": 0.673,
+    "end": 0.932
+   },
+   {
+    "text": "they",
+    "start": 0.932,
+    "end": 1.139
+   },
+   {
+    "text": "don't",
+    "start": 1.139,
+    "end": 1.398
+   },
+   {
+    "text": "realize",
+    "start": 1.398,
+    "end": 1.76
    },
    {
     "text": "the",
-    "start": 0.176,
-    "end": 0.353
+    "start": 1.76,
+    "end": 1.915
    },
    {
     "text": "game",
-    "start": 0.353,
-    "end": 0.588
+    "start": 1.915,
+    "end": 2.122
    },
    {
-    "text": "goes",
-    "start": 0.588,
-    "end": 0.824
+    "text": "is",
+    "start": 2.122,
+    "end": 2.226
    },
    {
-    "text": "on.",
-    "start": 0.824,
-    "end": 1
+    "text": "on",
+    "start": 2.226,
+    "end": 2.329
+   },
+   {
+    "text": "again.",
+    "start": 2.329,
+    "end": 2.64
    }
   ]
  },
  "s6-celeb.part2.wav": {
-  "key": "70938e64c434edfedd9a216ab8a7f1ffcaf16eb5",
+  "key": "5f21402abf8e0169900dc96201aad927d46759aa",
   "words": [
    {
-    "text": "1,",
+    "text": "So",
     "start": 0,
+    "end": 0.222
+   },
+   {
+    "text": "I",
+    "start": 0.222,
     "end": 0.333
    },
    {
-    "text": "1,",
+    "text": "might.",
     "start": 0.333,
-    "end": 0.667
-   },
-   {
-    "text": "1.",
-    "start": 0.667,
     "end": 1
    }
   ]
@@ -661,6 +701,46 @@
     "text": "you.",
     "start": 0.902,
     "end": 1.16
+   }
+  ]
+ },
+ "s6-celeb.part3.wav": {
+  "key": "af6fc722050ff825cedc74823436ca988649bc4b",
+  "words": [
+   {
+    "text": "Messy",
+    "start": 0,
+    "end": 0.363
+   },
+   {
+    "text": "just",
+    "start": 0.363,
+    "end": 0.653
+   },
+   {
+    "text": "scores.",
+    "start": 0.653,
+    "end": 1.16
+   }
+  ]
+ },
+ "s6-celeb.part4.wav": {
+  "key": "70938e64c434edfedd9a216ab8a7f1ffcaf16eb5",
+  "words": [
+   {
+    "text": "1,",
+    "start": 0,
+    "end": 0.333
+   },
+   {
+    "text": "1,",
+    "start": 0.333,
+    "end": 0.667
+   },
+   {
+    "text": "1.",
+    "start": 0.667,
+    "end": 1
    }
   ]
  }

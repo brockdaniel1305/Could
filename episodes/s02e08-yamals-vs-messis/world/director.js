@@ -12,7 +12,7 @@ export default function plot(T) {
 
   const BATH = c("s4.bath"), BATHE = s("s5") - 0.1;                                             // 2007 flashback
   const SHOT1 = c("s5.one") - 0.7, G1 = c("s5.one") - 0.1;                                      // Yamal's curler, 1-0
-  const K2 = c("s6.on") + 0.35, G2 = c("s6.eq") - 0.1;                                          // Messi from halfway into the empty goal, 1-1
+  const K2 = c("s6.sc") - 0.45, G2 = c("s6.eq") - 0.1;                                          // Messi from halfway into the empty goal, 1-1
   const RUN0 = c("s9.sh") + 0.1, RUN1 = c("s9.bt") - 0.45, G3 = c("s9.bt") - 0.15;              // the solo, 1-2
   const FKK = c("s10.who") - 0.1;                                                                // free kick, freeze
   const CORNER = [48.6, 30.6];
@@ -78,7 +78,7 @@ export default function plot(T) {
     if (n === "Y10") ev.push(["charge", 0, CUT], ["armsUp", c("s2.wc"), c("s2.arg") - c("s2.wc") + 0.4], ["charge", SHOT1 - 0.6, 0.6], ["charge", FKK - 0.45, 0.45]);
     if (n === "M10") ev.push(["charge", 0, CUT], ["cross", c("s2.arg"), 1.3], ["armsUp", G2 + 0.1, 1.2], ["charge", RUN0, RUN1 - RUN0], ["armsUp", G3 + 0.2, 1.6]);
     if (!yy && i >= 1 && i <= 9 && i !== 10) ev.push(["cross", c("s2.arg") + 0.1, 1.2]);
-    if (yy) { for (let k = 0; k < 7; k++) ev.push(["jump", s("s6") + 0.1 + k * 0.42 + (i % 3) * 0.1, 0.3]);                 // the corner dance
+    if (yy) { for (let k = 0; k < Math.ceil((G2 - s("s6")) / 0.42); k++) ev.push(["jump", s("s6") + 0.1 + k * 0.42 + (i % 3) * 0.1, 0.3]);                 // the corner dance
       ev.push(["spin", s("s6") + 0.4 + (i % 4) * 0.3, 0.6], ["armsUp", s("s6") + 0.2, c("s6.eq") - s("s6")]); }
     if (n === "Y4") ev.push(["spin", G2 + 0.15, 0.4]);
     if (n === "Y7") ev.push(["yawn", c("s8.hw") + 0.2, 1.1]);
@@ -137,7 +137,7 @@ export default function plot(T) {
   add({ t0: c("s5.curl") - 0.15, whip: true, k: "follow", who: "Y10", off: [[-4.2, 1.5, 4.8], [-4.4, 1.5, 4.4]], look: [3, 1.0, -2.6], fov: [50, 48], blur: 1.8 });
   add({ t0: SHOT1 + 0.05, blend: 0.25, k: "path", P: [[45.2, 1.8, -12], [45.8, 1.9, -11.5]], T: [[50.5, 1.7, -1.5], [50.5, 1.7, -1.5]], fov: [48, 44], blur: 1.4 });
   add({ t0: s("s6") + 0.05, blend: 0.4, whip: true, k: "path", P: [[42.6, 1.7, 23.0], [43.2, 1.7, 23.6]], T: [[47.4, 1.4, 29.4], [47.4, 1.4, 29.4]], fov: [50, 46], blur: 2.0 });
-  add({ t0: K2 - 0.55, whip: true, k: "path", P: [[3.6, 1.5, 1.6], [3.4, 1.6, 1.6]], T: [[-6, 1.4, 0], [-8, 2.6, 0]], fov: [48, 50], blur: 1.6 });
+  add({ t0: c("s6.on") + 1.2, whip: true, k: "path", P: [[4.6, 1.55, 2.2], [4.3, 1.6, 2.1]], T: [[-2.8, 1.4, -0.8], [-5, 2.4, -1.0]], fov: [48, 50], blur: 1.6 });
   add({ t0: K2 + 0.35, blend: 0.3, k: "path", P: [[-43.5, 1.6, 7.5], [-44.5, 1.6, 7.0]], T: [[-52.5, 1.3, 0.3], [-52.5, 1.2, 0.3]], fov: [50, 46], blur: 1.4 });
   add({ t0: G2 + 0.15, whip: true, k: "path", P: [[43.2, 1.7, 23.6], [43.6, 1.7, 24.0]], T: [[47.4, 1.4, 29.4], [47.4, 1.4, 29.4]], fov: [46, 42], blur: 2.0 });
   add({ t0: s("s7") + 0.05, blend: 0.4, whip: true, k: "path", P: [[0, 1.55, 5.4], [0, 1.6, 4.6]], T: [[0, 1.65, 0], [0, 1.7, 0]], fov: [48, 42], blur: 2.4 });
@@ -185,6 +185,7 @@ export default function plot(T) {
     { who: "Y10", t0: c("s4.met") + 0.2, t1: BATH - 0.1, text: "...?", cls: "" },
     { who: "M10", t0: BATH + 0.6, t1: BATHE - 0.1, text: "SPLASH SPLASH", cls: "small" },
     { who: "Y10", t0: s("s6") + 0.2, t1: G2 - 0.3, text: "304!", cls: "red" },
+    { who: "M10", t0: c("s6.on") + 1.45, t1: K2 - 0.15, text: "GAME ON?", cls: "dark small" },
     { who: "Y4", t0: G2 + 0.3, t1: s("s7") - 0.1, text: "WAIT—", cls: "dark" },
     { who: "REF", t0: c("s7.follow") + 0.05, t1: c("s7.q") - 0.05, text: "♥ LIKE + FOLLOW +", cls: "red follow" },
     { who: "Y10", t0: c("s7.q"), t1: s("s8") - 0.1, text: "YAMAL?", cls: "red" },

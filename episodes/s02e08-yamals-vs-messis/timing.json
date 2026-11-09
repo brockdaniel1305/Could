@@ -1,5 +1,5 @@
 {
- "duration": 44.898,
+ "duration": 49.558,
  "voice": "prerecorded:elevenlabs:bilbop (R23cI2hqxAhT17IXmY7O)",
  "scenes": [
   {
@@ -399,73 +399,147 @@
   {
    "id": "s6-celeb",
    "start": 24.828,
-   "duration": 4.51,
+   "duration": 9.17,
    "voice": "assets/voice/s6-celeb.wav",
    "voiceStart": 0.15,
-   "speech": 3.96,
+   "speech": 8.62,
    "cues": {
     "cel": 0.15,
-    "on": 1.75,
-    "eq": 3.1
+    "on": 2.02,
+    "so": 5.04,
+    "sc": 6.08,
+    "eq": 7.76
    },
    "words": [
     {
      "text": "All",
      "start": 0.15,
-     "end": 0.367
+     "end": 0.335
     },
     {
      "text": "eleven",
-     "start": 0.367,
-     "end": 0.512
+     "start": 0.335,
+     "end": 0.458
     },
     {
      "text": "Yamals",
-     "start": 0.512,
-     "end": 0.946
+     "start": 0.458,
+     "end": 0.827
     },
     {
-     "text": "celebrate.",
-     "start": 0.946,
-     "end": 1.67
+     "text": "are",
+     "start": 0.827,
+     "end": 1.012
+    },
+    {
+     "text": "celebrating.",
+     "start": 1.012,
+     "end": 1.75
     },
     {
      "text": "But",
-     "start": 1.75,
-     "end": 1.926
+     "start": 2.02,
+     "end": 2.175
+    },
+    {
+     "text": "while",
+     "start": 2.175,
+     "end": 2.434
+    },
+    {
+     "text": "doing",
+     "start": 2.434,
+     "end": 2.693
+    },
+    {
+     "text": "that,",
+     "start": 2.693,
+     "end": 2.952
+    },
+    {
+     "text": "they",
+     "start": 2.952,
+     "end": 3.159
+    },
+    {
+     "text": "don't",
+     "start": 3.159,
+     "end": 3.418
+    },
+    {
+     "text": "realise",
+     "start": 3.418,
+     "end": 3.78
     },
     {
      "text": "the",
-     "start": 1.926,
-     "end": 2.103
+     "start": 3.78,
+     "end": 3.935
     },
     {
      "text": "game",
-     "start": 2.103,
-     "end": 2.338
+     "start": 3.935,
+     "end": 4.142
     },
     {
-     "text": "goes",
-     "start": 2.338,
-     "end": 2.574
+     "text": "is",
+     "start": 4.142,
+     "end": 4.246
     },
     {
-     "text": "on.",
-     "start": 2.574,
-     "end": 2.75
+     "text": "on",
+     "start": 4.246,
+     "end": 4.349
+    },
+    {
+     "text": "again.",
+     "start": 4.349,
+     "end": 4.66
+    },
+    {
+     "text": "So...",
+     "start": 5.04,
+     "end": 5.262
+    },
+    {
+     "text": "Messi",
+     "start": 6.08,
+     "end": 6.443
+    },
+    {
+     "text": "just",
+     "start": 6.443,
+     "end": 6.733
+    },
+    {
+     "text": "scores.",
+     "start": 6.733,
+     "end": 7.24
     },
     {
      "text": "One,",
-     "start": 3.1,
-     "end": 3.605
+     "start": 7.76,
+     "end": 8.265
     },
     {
      "text": "one.",
-     "start": 3.605,
-     "end": 4.11
+     "start": 8.265,
+     "end": 8.77
     }
    ],
    "sfx": [
+    {
+     "name": "whistle",
+     "cue": "on",
+     "offset": 1.4,
+     "volume": 0.25
+    },
+    {
+     "name": "kick",
+     "cue": "sc",
+     "offset": -0.45,
+     "volume": 0.35
+    },
     {
      "name": "net",
      "cue": "eq",
@@ -482,7 +556,7 @@
   },
   {
    "id": "s7-follow",
-   "start": 29.338,
+   "start": 33.998,
    "duration": 2.82,
    "voice": "assets/voice/s7-follow.wav",
    "voiceStart": 0.15,
@@ -527,7 +601,7 @@
   },
   {
    "id": "s8-ht",
-   "start": 32.158,
+   "start": 36.818,
    "duration": 2.3,
    "voice": "assets/voice/s8-ht.wav",
    "voiceStart": 0.15,
@@ -574,7 +648,7 @@
   },
   {
    "id": "s9-solo",
-   "start": 34.458,
+   "start": 39.118,
    "duration": 5.57,
    "voice": "assets/voice/s9-solo.wav",
    "voiceStart": 0.15,
@@ -665,7 +739,7 @@
   },
   {
    "id": "s10-end",
-   "start": 40.028,
+   "start": 44.688,
    "duration": 4.87,
    "voice": "assets/voice/s10-end.wav",
    "voiceStart": 0.15,
