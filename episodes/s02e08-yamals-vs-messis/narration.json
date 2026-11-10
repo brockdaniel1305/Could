@@ -70,7 +70,7 @@
     },
     {
       "id": "s6-celeb",
-      "text": "{{cel}}All eleven Yamals are celebrating. ||0.2|| {{on}}But while doing that, they don't realise the game is on again. ||0.3|| {{so}}So... ||0.25|| {{sc}}Messi just scores. ||0.3|| {{eq}}One, one.",
+      "text": "{{cel}}All eleven Yamals are celebrating. ||0.2|| {{on}}But while doing that, they don't realise the game is on again. ||0.3|| {{so}}So, {{sc}}Messi just scores. ||0.3|| {{eq}}One, one.",
       "sfx": [
         {
           "name": "whistle",

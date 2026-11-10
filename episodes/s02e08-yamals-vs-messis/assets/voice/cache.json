@@ -435,22 +435,27 @@
   ]
  },
  "s6-celeb.part2.wav": {
-  "key": "5f21402abf8e0169900dc96201aad927d46759aa",
+  "key": "9aa3ef6ceaa5a363b28e800ced92e52b02392d34",
   "words": [
    {
     "text": "So",
     "start": 0,
-    "end": 0.222
+    "end": 0.14
    },
    {
-    "text": "I",
-    "start": 0.222,
-    "end": 0.333
+    "text": "Messi",
+    "start": 0.14,
+    "end": 0.49
    },
    {
-    "text": "might.",
-    "start": 0.333,
-    "end": 1
+    "text": "just",
+    "start": 0.49,
+    "end": 0.77
+   },
+   {
+    "text": "scores.",
+    "start": 0.77,
+    "end": 1.26
    }
   ]
  },
@@ -705,22 +710,22 @@
   ]
  },
  "s6-celeb.part3.wav": {
-  "key": "af6fc722050ff825cedc74823436ca988649bc4b",
+  "key": "70938e64c434edfedd9a216ab8a7f1ffcaf16eb5",
   "words": [
    {
-    "text": "Messy",
+    "text": "1,",
     "start": 0,
-    "end": 0.363
+    "end": 0.333
    },
    {
-    "text": "just",
-    "start": 0.363,
-    "end": 0.653
+    "text": "1,",
+    "start": 0.333,
+    "end": 0.667
    },
    {
-    "text": "scores.",
-    "start": 0.653,
-    "end": 1.16
+    "text": "1.",
+    "start": 0.667,
+    "end": 1
    }
   ]
  },

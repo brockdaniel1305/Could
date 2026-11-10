@@ -220,6 +220,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- 2026-11-10 · S2E08 · ElevenLabs verschluckt sich an Auslassungspunkten ("So... <break/>"): danach Gebrabbel. Keine "..." im TTS-Text,
+  lieber Komma ("So, Messi just scores."). Nach dem Splitten jedes Segment transkribieren und auf Fremdwörter prüfen.
 - **Lautheit nie mit einfachem `loudnorm` (single pass) normalisieren**: der regelt dynamisch nach und hebt nach ein paar Sekunden
   jede Sprechpause an → Musik "wird lauter" (Creator-Feedback S2E05). `tools/remix_audio.py` mischt jetzt, misst die Lautheit und
   setzt EINE feste Verstärkung + Limiter (−15 LUFS, Peak ≤ −1.4 dBFS). Finale Tonspur immer darüber erzeugen (`--duck` bei Musik).

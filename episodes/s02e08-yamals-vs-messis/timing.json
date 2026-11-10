@@ -1,5 +1,5 @@
 {
- "duration": 49.558,
+ "duration": 48.429,
  "voice": "prerecorded:elevenlabs:bilbop (R23cI2hqxAhT17IXmY7O)",
  "scenes": [
   {
@@ -399,16 +399,16 @@
   {
    "id": "s6-celeb",
    "start": 24.828,
-   "duration": 9.17,
+   "duration": 8.041,
    "voice": "assets/voice/s6-celeb.wav",
    "voiceStart": 0.15,
-   "speech": 8.62,
+   "speech": 7.491,
    "cues": {
     "cel": 0.15,
     "on": 2.02,
     "so": 5.04,
-    "sc": 6.08,
-    "eq": 7.76
+    "sc": 5.18,
+    "eq": 6.631
    },
    "words": [
     {
@@ -497,34 +497,34 @@
      "end": 4.66
     },
     {
-     "text": "So...",
+     "text": "So,",
      "start": 5.04,
-     "end": 5.262
+     "end": 5.18
     },
     {
      "text": "Messi",
-     "start": 6.08,
-     "end": 6.443
+     "start": 5.18,
+     "end": 5.53
     },
     {
      "text": "just",
-     "start": 6.443,
-     "end": 6.733
+     "start": 5.53,
+     "end": 5.81
     },
     {
      "text": "scores.",
-     "start": 6.733,
-     "end": 7.24
+     "start": 5.81,
+     "end": 6.3
     },
     {
      "text": "One,",
-     "start": 7.76,
-     "end": 8.265
+     "start": 6.631,
+     "end": 7.136
     },
     {
      "text": "one.",
-     "start": 8.265,
-     "end": 8.77
+     "start": 7.136,
+     "end": 7.641
     }
    ],
    "sfx": [
@@ -556,7 +556,7 @@
   },
   {
    "id": "s7-follow",
-   "start": 33.998,
+   "start": 32.869,
    "duration": 2.82,
    "voice": "assets/voice/s7-follow.wav",
    "voiceStart": 0.15,
@@ -601,7 +601,7 @@
   },
   {
    "id": "s8-ht",
-   "start": 36.818,
+   "start": 35.689,
    "duration": 2.3,
    "voice": "assets/voice/s8-ht.wav",
    "voiceStart": 0.15,
@@ -648,7 +648,7 @@
   },
   {
    "id": "s9-solo",
-   "start": 39.118,
+   "start": 37.989,
    "duration": 5.57,
    "voice": "assets/voice/s9-solo.wav",
    "voiceStart": 0.15,
@@ -739,7 +739,7 @@
   },
   {
    "id": "s10-end",
-   "start": 44.688,
+   "start": 43.559,
    "duration": 4.87,
    "voice": "assets/voice/s10-end.wav",
    "voiceStart": 0.15,
