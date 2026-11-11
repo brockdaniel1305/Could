@@ -78,7 +78,7 @@ export function createWorld(plot) {
   function actorAt(a, t) {
     const p = a.pos(t), p2 = a.pos(t + 0.05);
     const speed = Math.hypot(p2.x - p.x, p2.z - p.z) / 0.05;
-    let rot = 0, sx = 1, dy = a.y, arms = null, armR = null, show = true, dizzy = false, yawn = false;
+    let rot = 0, sx = 1, dy = a.y, arms = null, armR = null, show = true, dizzy = false, yawn = false, legs = null;
     for (const e of a.ev) {
       const [k, t0, d = 0.6] = e;
       if (t < t0) continue;
@@ -86,7 +86,7 @@ export function createWorld(plot) {
       if (k === "fall") rot = (e[3] || -1) * 80 * sstep(t0, t0 + 0.35, t);
       if (k === "up") rot *= 1 - sstep(t0, t0 + 0.4, t);
       if (k === "jump" && t < t0 + d) dy += Math.abs(Math.sin((t - t0) * 9)) * 0.35;
-      if (k === "arms" && t < t0 + d) arms = 160;
+      if (k === "arms" && t < t0 + d) arms = e[3] == null ? 160 : e[3];        // e[3]: arm angle (Ronaldo "calma": ~40)
       if (k === "armsUp" && t < t0 + d) arms = 175;
       if (k === "hide" && t < t0 + d) show = false;
       if (k === "armR" && t < t0 + d) armR = 170;            // one arm up (offside!)
@@ -94,11 +94,13 @@ export function createWorld(plot) {
       if (k === "wide" && t < t0 + d) { arms = e[3] == null ? 92 : lerp(92, e[3], sstep(t0, t0 + d, t)); armR = arms; }  // arms spread wide (Bellingham celebration); e[3]: arms sink to this angle
       if (k === "dizzy" && t < t0 + d) dizzy = true;          // stars over the head
       if (k === "yawn" && t < t0 + d) yawn = true;            // mouth open
+      if (k === "stance" && t < t0 + d) legs = 24;            // legs wide (Ronaldo free-kick stance)
+      if (k === "leap" && t < t0 + d) dy += Math.sin(clamp((t - t0) / d, 0, 1) * Math.PI) * (e[3] || 1);   // one big jump, e[3] = height (m)
       if (k === "charge" && t < t0 + d) dy += Math.abs(Math.sin((t - t0) * 14)) * 0.12;
       if (k === "dive") { const f = sstep(t0, t0 + 0.3, t); rot = (e[3] || 1) * 85 * f; dy += Math.sin(Math.min(1, (t - t0) / 0.4) * Math.PI) * 0.6; }
     }
     if (a.only && !(t >= a.only[0] && t < a.only[1])) show = false;
-    return { x: p.x, z: p.z, d: p.d, vx: (p2.x - p.x) / 0.05, vz: (p2.z - p.z) / 0.05, speed, rot, sx, dy, arms, armR, show, dizzy, yawn };
+    return { x: p.x, z: p.z, d: p.d, vx: (p2.x - p.x) / 0.05, vz: (p2.z - p.z) / 0.05, speed, rot, sx, dy, arms, armR, show, dizzy, yawn, legs };
   }
   function drawActor(a, t) {
     const s = actorAt(a, t);
@@ -133,7 +135,7 @@ export function createWorld(plot) {
     // run cycle from distance travelled; idle sway when standing
     const run = clamp(s.speed / 2.5, 0, 1), ph = (s.d / (a.stride || 1.9)) * Math.PI * 2;
     const sw = run * Math.sin(ph) * 32 + (1 - run) * Math.sin(t * 2.2 + a.unit) * 2;
-    if (a.legL) { a.legL.style.transform = `rotate(${sw}deg)`; a.legR.style.transform = `rotate(${-sw}deg)`; }
+    if (a.legL) { const lw = s.legs != null ? s.legs : null; a.legL.style.transform = `rotate(${lw != null ? lw : sw}deg)`; a.legR.style.transform = `rotate(${lw != null ? -lw : -sw}deg)`; }
     for (const g of a.legsA) g.style.transform = `rotate(${sw}deg)`;
     for (const g of a.legsB) g.style.transform = `rotate(${-sw}deg)`;
     if (a.armL) {

@@ -1,0 +1,627 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "a1fcc8ba01349a673842bc0898afa9401d7d1e9a",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.521
+   },
+   {
+    "text": "11",
+    "start": 0.521,
+    "end": 0.73
+   },
+   {
+    "text": "Messi",
+    "start": 0.73,
+    "end": 1.251
+   },
+   {
+    "text": "beat",
+    "start": 1.251,
+    "end": 1.669
+   },
+   {
+    "text": "11",
+    "start": 1.669,
+    "end": 1.877
+   },
+   {
+    "text": "Ronaldo's?",
+    "start": 1.877,
+    "end": 2.92
+   }
+  ]
+ },
+ "s2-messi.part0.wav": {
+  "key": "3b05c02de5c644d70e9f9401e2407b474caa1c65",
+  "words": [
+   {
+    "text": "Prime",
+    "start": 0,
+    "end": 0.667
+   },
+   {
+    "text": "messy",
+    "start": 0.667,
+    "end": 1.333
+   },
+   {
+    "text": "2012.",
+    "start": 1.333,
+    "end": 2
+   }
+  ]
+ },
+ "s2-messi.part1.wav": {
+  "key": "c5963c5a5902a01bf66dad9cc9aa33715964b553",
+  "words": [
+   {
+    "text": "91",
+    "start": 0,
+    "end": 0.219
+   },
+   {
+    "text": "goals",
+    "start": 0.219,
+    "end": 0.766
+   },
+   {
+    "text": "in",
+    "start": 0.766,
+    "end": 0.985
+   },
+   {
+    "text": "one",
+    "start": 0.985,
+    "end": 1.313
+   },
+   {
+    "text": "year.",
+    "start": 1.313,
+    "end": 1.86
+   }
+  ]
+ },
+ "s3-ronaldo.part0.wav": {
+  "key": "05e02a5e65bc9a581af2e9546c374cf03578f53d",
+  "words": [
+   {
+    "text": "Prime",
+    "start": 0,
+    "end": 0.624
+   },
+   {
+    "text": "Ronaldo",
+    "start": 0.624,
+    "end": 1.496
+   },
+   {
+    "text": "2014.",
+    "start": 1.496,
+    "end": 2.12
+   }
+  ]
+ },
+ "s3-ronaldo.part1.wav": {
+  "key": "818aa1f6bfcaee53c34d9e431d2ff79cba5d1d21",
+  "words": [
+   {
+    "text": "Champions",
+    "start": 0,
+    "end": 0.59
+   },
+   {
+    "text": "League",
+    "start": 0.59,
+    "end": 0.983
+   },
+   {
+    "text": "and",
+    "start": 0.983,
+    "end": 1.179
+   },
+   {
+    "text": "Ballon",
+    "start": 1.179,
+    "end": 1.572
+   },
+   {
+    "text": "d'Or.",
+    "start": 1.572,
+    "end": 1.9
+   }
+  ]
+ },
+ "s4-stance.part0.wav": {
+  "key": "eb231a81dde6bae3f39a9ca47a930612e1e95403",
+  "words": [
+   {
+    "text": "Kick",
+    "start": 0,
+    "end": 0.288
+   },
+   {
+    "text": "offer!",
+    "start": 0.288,
+    "end": 0.72
+   }
+  ]
+ },
+ "s4-stance.part1.wav": {
+  "key": "8bfceda4dc58bf62b8a26c6c3cbf75311e9b764a",
+  "words": [
+   {
+    "text": "the",
+    "start": 0,
+    "end": 0.168
+   },
+   {
+    "text": "Ronaldo's",
+    "start": 0.168,
+    "end": 0.671
+   },
+   {
+    "text": "take",
+    "start": 0.671,
+    "end": 0.894
+   },
+   {
+    "text": "their",
+    "start": 0.894,
+    "end": 1.174
+   },
+   {
+    "text": "famous",
+    "start": 1.174,
+    "end": 1.509
+   },
+   {
+    "text": "stance.",
+    "start": 1.509,
+    "end": 1.9
+   }
+  ]
+ },
+ "s4-stance.part2.wav": {
+  "key": "8668ba077efc18332c8734afb35f0f32c9594c86",
+  "words": [
+   {
+    "text": "Legs",
+    "start": 0,
+    "end": 0.373
+   },
+   {
+    "text": "wide.",
+    "start": 0.373,
+    "end": 0.84
+   }
+  ]
+ },
+ "s5-nutmeg.part0.wav": {
+  "key": "f41aba9b0abc548443a42064e0bfd023c585d1b0",
+  "words": [
+   {
+    "text": "Big",
+    "start": 0,
+    "end": 0.256
+   },
+   {
+    "text": "mistake.",
+    "start": 0.256,
+    "end": 0.94
+   }
+  ]
+ },
+ "s5-nutmeg.part1.wav": {
+  "key": "20cf3f0879b90cf5817a5eaef7395395ac6e6caf",
+  "words": [
+   {
+    "text": "Messi",
+    "start": 0,
+    "end": 0.275
+   },
+   {
+    "text": "goes",
+    "start": 0.275,
+    "end": 0.495
+   },
+   {
+    "text": "through",
+    "start": 0.495,
+    "end": 0.88
+   },
+   {
+    "text": "every",
+    "start": 0.88,
+    "end": 1.155
+   },
+   {
+    "text": "pair",
+    "start": 1.155,
+    "end": 1.375
+   },
+   {
+    "text": "of",
+    "start": 1.375,
+    "end": 1.485
+   },
+   {
+    "text": "legs.",
+    "start": 1.485,
+    "end": 1.76
+   }
+  ]
+ },
+ "s5-nutmeg.part2.wav": {
+  "key": "0d595709e977c7ab63f75452bff6372a6272dddd",
+  "words": [
+   {
+    "text": "one",
+    "start": 0,
+    "end": 0.274
+   },
+   {
+    "text": "nil.",
+    "start": 0.274,
+    "end": 0.64
+   }
+  ]
+ },
+ "s6-follow.part0.wav": {
+  "key": "73929d87a430ee06826eb946d9347d2309be4d7d",
+  "words": [
+   {
+    "text": "like",
+    "start": 0,
+    "end": 0.297
+   },
+   {
+    "text": "and",
+    "start": 0.297,
+    "end": 0.52
+   },
+   {
+    "text": "follow.",
+    "start": 0.52,
+    "end": 1.04
+   }
+  ]
+ },
+ "s6-follow.part1.wav": {
+  "key": "857994bb10b2f0d0a3a7e516b1eea441d1293c5c",
+  "words": [
+   {
+    "text": "Messi",
+    "start": 0,
+    "end": 0.367
+   },
+   {
+    "text": "or",
+    "start": 0.367,
+    "end": 0.513
+   },
+   {
+    "text": "Ronaldo.",
+    "start": 0.513,
+    "end": 1.1
+   }
+  ]
+ },
+ "s7-header.part0.wav": {
+  "key": "ed5b37116c007418a9282cad414e56bad44ce409",
+  "words": [
+   {
+    "text": "Rinaldo's",
+    "start": 0,
+    "end": 0.428
+   },
+   {
+    "text": "answer?",
+    "start": 0.428,
+    "end": 0.76
+   }
+  ]
+ },
+ "s7-header.part1.wav": {
+  "key": "a1c022e8189939aff6fb54fd2bae1d00b2a9413e",
+  "words": [
+   {
+    "text": "A",
+    "start": 0,
+    "end": 0.091
+   },
+   {
+    "text": "header",
+    "start": 0.091,
+    "end": 0.634
+   },
+   {
+    "text": "2.5",
+    "start": 0.634,
+    "end": 0.905
+   },
+   {
+    "text": "meters",
+    "start": 0.905,
+    "end": 1.448
+   },
+   {
+    "text": "up.",
+    "start": 1.448,
+    "end": 1.72
+   }
+  ]
+ },
+ "s7-header.part2.wav": {
+  "key": "4a1271234a469ea166a409024f64b777c0c0b8ae",
+  "words": [
+   {
+    "text": "1",
+    "start": 0,
+    "end": 0.28
+   },
+   {
+    "text": "1.",
+    "start": 0.28,
+    "end": 0.84
+   }
+  ]
+ },
+ "s8-siuu.part0.wav": {
+  "key": "8c8073ee16989a3dea68ebc27ca68471e026a91c",
+  "words": [
+   {
+    "text": "Then",
+    "start": 0,
+    "end": 0.31
+   },
+   {
+    "text": "11,",
+    "start": 0.31,
+    "end": 0.543
+   },
+   {
+    "text": "see",
+    "start": 0.543,
+    "end": 0.775
+   },
+   {
+    "text": "you's.",
+    "start": 0.775,
+    "end": 1.24
+   }
+  ]
+ },
+ "s8-siuu.part1.wav": {
+  "key": "22a35e8d2cc26ad6f748f58d4e5942e79bf20c58",
+  "words": [
+   {
+    "text": "at",
+    "start": 0,
+    "end": 0.117
+   },
+   {
+    "text": "the",
+    "start": 0.117,
+    "end": 0.293
+   },
+   {
+    "text": "same",
+    "start": 0.293,
+    "end": 0.527
+   },
+   {
+    "text": "time.",
+    "start": 0.527,
+    "end": 0.82
+   }
+  ]
+ },
+ "s9-calma.part0.wav": {
+  "key": "6e54b299097d3c1306ba0c4f89688e2d04b11ae5",
+  "words": [
+   {
+    "text": "Ronaldo",
+    "start": 0,
+    "end": 0.333
+   },
+   {
+    "text": "tells",
+    "start": 0.333,
+    "end": 0.571
+   },
+   {
+    "text": "the",
+    "start": 0.571,
+    "end": 0.714
+   },
+   {
+    "text": "crowd.",
+    "start": 0.714,
+    "end": 1
+   }
+  ]
+ },
+ "s9-calma.part1.wav": {
+  "key": "f544fdf775dd6b051088ea15ef095fb69e7b2d55",
+  "words": [
+   {
+    "text": "Calm",
+    "start": 0,
+    "end": 0.373
+   },
+   {
+    "text": "down.",
+    "start": 0.373,
+    "end": 0.84
+   }
+  ]
+ },
+ "s10-shirt.part0.wav": {
+  "key": "fdd807e8f0be935f992b03d8904836d29fb0542f",
+  "words": [
+   {
+    "text": "minute",
+    "start": 0,
+    "end": 0.76
+   },
+   {
+    "text": "92.",
+    "start": 0.76,
+    "end": 1.14
+   }
+  ]
+ },
+ "s10-shirt.part1.wav": {
+  "key": "4b7b318b669497e7f1decc2109acaff16cb77f86",
+  "words": [
+   {
+    "text": "Messy!",
+    "start": 0,
+    "end": 0.5
+   }
+  ]
+ },
+ "s10-shirt.part2.wav": {
+  "key": "bca3a31993877362c5c5895c917e82b841cbca0f",
+  "words": [
+   {
+    "text": "Two,",
+    "start": 0,
+    "end": 0.5
+   },
+   {
+    "text": "one.",
+    "start": 0.5,
+    "end": 1
+   }
+  ]
+ },
+ "s10-shirt.part3.wav": {
+  "key": "525c80590ac45aa94b20e4c1821be5896e4dc2cf",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.209
+   },
+   {
+    "text": "he",
+    "start": 0.209,
+    "end": 0.348
+   },
+   {
+    "text": "shows",
+    "start": 0.348,
+    "end": 0.696
+   },
+   {
+    "text": "them",
+    "start": 0.696,
+    "end": 0.974
+   },
+   {
+    "text": "the",
+    "start": 0.974,
+    "end": 1.183
+   },
+   {
+    "text": "shirt.",
+    "start": 1.183,
+    "end": 1.6
+   }
+  ]
+ },
+ "s11-end.part0.wav": {
+  "key": "33fda5c82428c3483a3067e14fac17d80fe2b215",
+  "words": [
+   {
+    "text": "Last",
+    "start": 0,
+    "end": 0.335
+   },
+   {
+    "text": "chance.",
+    "start": 0.335,
+    "end": 0.92
+   }
+  ]
+ },
+ "s11-end.part1.wav": {
+  "key": "fb144555288ff5fbeb82b343138e9413cdc69fa1",
+  "words": [
+   {
+    "text": "Ronaldo",
+    "start": 0,
+    "end": 0.467
+   },
+   {
+    "text": "free",
+    "start": 0.467,
+    "end": 0.733
+   },
+   {
+    "text": "kick",
+    "start": 0.733,
+    "end": 1
+   }
+  ]
+ },
+ "s11-end.part2.wav": {
+  "key": "6851ba9bd64cc7275c2a106eef8646a275a3dc38",
+  "words": [
+   {
+    "text": "Comment",
+    "start": 0,
+    "end": 0.358
+   },
+   {
+    "text": "who",
+    "start": 0.358,
+    "end": 0.511
+   },
+   {
+    "text": "will",
+    "start": 0.511,
+    "end": 0.716
+   },
+   {
+    "text": "win.",
+    "start": 0.716,
+    "end": 0.92
+   }
+  ]
+ },
+ "s11-end.part3.wav": {
+  "key": "5ee0b54ecdcb215bf0a143e4452eb704ba275835",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.136
+   },
+   {
+    "text": "if",
+    "start": 0.136,
+    "end": 0.271
+   },
+   {
+    "text": "anyone",
+    "start": 0.271,
+    "end": 0.678
+   },
+   {
+    "text": "asks",
+    "start": 0.678,
+    "end": 0.949
+   },
+   {
+    "text": "you.",
+    "start": 0.949,
+    "end": 1.22
+   }
+  ]
+ }
+}

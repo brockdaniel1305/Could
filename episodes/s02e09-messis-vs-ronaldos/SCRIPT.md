@@ -1,4 +1,4 @@
-# S2E09 · Could 11 Messis beat 11 Ronaldos? (~47 s, Loop) – Skript zur Freigabe
+# S2E09 · Could 11 Messis beat 11 Ronaldos? (~44 s, Loop) – Skript (freigegeben)
 Die größte Debatte im Fußball, als Clásico: Prime Messi (Barça 2012, Streifen, Nr. 10) gegen Prime Ronaldo (Real 2014, weiß, Nr. 7).
 3D-Stadion bei Nacht, Broadcast-Stil, Sprecher bilbop. Pausen höchstens 0,6 s, keine „…“ im Text, Bild-Gags laufen unter dem Text.
 Roter Faden: Ronaldos berühmter Freistoß-Stand (Beine breit). Am Anfang wird er zur Falle, am Ende entscheidet er das Spiel.
