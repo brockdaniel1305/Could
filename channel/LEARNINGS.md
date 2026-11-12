@@ -142,6 +142,11 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 2026-10-28 · Neue Folgen sollen nur aus einer Idee entstehen: frühere Anpassungen gelten automatisch (dieses Dokument).
 
 ## Erfahrungen aus den Folgen
+- 2026-11-12 · S2E09 Messis vs Ronaldos (44 s) auf **YouTube Shorts** nach 19,5 h: **3.851 Aufrufe** (Platz 1 von 10), Ø 0:35 = **78,4 %**,
+  **70,8 % angesehen / 29,2 % weggewischt** (bester Wert bisher), 38 Likes. Auf TikTok nur durchschnittlich.
+  Was gewirkt hat: größte Debatte (GOAT), bekannte Memes beider Lager (Freistoß-Stand, Siuu, Calma, Trikot zeigen, 91 Tore),
+  ein Gag als roter Faden (Stand: Falle am Anfang, Cliffhanger am Ende), kurze Pausen, Fakten-Karten, Hook mit Gag im ersten Bild.
+  → YouTube ist für dieses Format der stärkere Kanal; Folgen zuerst auf YouTube ausrichten.
 - 2026-11-06 · S2E05 Neymars vs Pepes (41,6 s, bilbop, Samba) auf **TikTok** nach ~8 h: **2.786 Aufrufe**, 83 Likes (3,0 %), 5 Kommentare,
   6 Saves, Ø **20,6 s (49 %)**, **24,7 % ganz** (neuer Bestwert). S2E04 Messis vs Haalands auf **YouTube Shorts**: Ø 0:27 (65 %),
   **61,3 % angesehen / 38,7 % weggewischt** (Bestwert). → "11 gegen 11"-Format mit zwei Stars + Eigenheiten-Gags ist das Erfolgsformat.
