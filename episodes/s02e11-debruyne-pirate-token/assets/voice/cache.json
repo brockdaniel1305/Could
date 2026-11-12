@@ -1,0 +1,332 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "04c2a556ba86b5e9ccdda1c2b7b18c6d39a091d4",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.269
+   },
+   {
+    "text": "Kevin",
+    "start": 0.269,
+    "end": 0.538
+   },
+   {
+    "text": "De",
+    "start": 0.538,
+    "end": 0.645
+   },
+   {
+    "text": "Bruyne",
+    "start": 0.645,
+    "end": 0.968
+   },
+   {
+    "text": "find",
+    "start": 0.968,
+    "end": 1.183
+   },
+   {
+    "text": "the",
+    "start": 1.183,
+    "end": 1.344
+   },
+   {
+    "text": "Fortnite",
+    "start": 1.344,
+    "end": 1.775
+   },
+   {
+    "text": "pirate",
+    "start": 1.775,
+    "end": 2.097
+   },
+   {
+    "text": "token?",
+    "start": 2.097,
+    "end": 2.42
+   }
+  ]
+ },
+ "s2-odds.part0.wav": {
+  "key": "332d098a5703968ad14c79d4a512545a9e944b50",
+  "words": [
+   {
+    "text": "Players",
+    "start": 0,
+    "end": 0.509
+   },
+   {
+    "text": "say.",
+    "start": 0.509,
+    "end": 0.8
+   }
+  ]
+ },
+ "s2-odds.part1.wav": {
+  "key": "878556f66c718c3ac500856e8bb70e197d7bf47d",
+  "words": [
+   {
+    "text": "1",
+    "start": 0,
+    "end": 0.125
+   },
+   {
+    "text": "chest",
+    "start": 0.125,
+    "end": 0.75
+   },
+   {
+    "text": "in",
+    "start": 0.75,
+    "end": 1
+   },
+   {
+    "text": "700,000.",
+    "start": 1,
+    "end": 2
+   }
+  ]
+ },
+ "s3-vision.part0.wav": {
+  "key": "dd41fec4a0172c01f3a5bf2c49fa2c9f581f2143",
+  "words": [
+   {
+    "text": "but",
+    "start": 0,
+    "end": 0.196
+   },
+   {
+    "text": "De",
+    "start": 0.196,
+    "end": 0.327
+   },
+   {
+    "text": "Bruyne",
+    "start": 0.327,
+    "end": 0.719
+   },
+   {
+    "text": "sees",
+    "start": 0.719,
+    "end": 0.98
+   },
+   {
+    "text": "what",
+    "start": 0.98,
+    "end": 1.241
+   },
+   {
+    "text": "nobody",
+    "start": 1.241,
+    "end": 1.633
+   },
+   {
+    "text": "sees.",
+    "start": 1.633,
+    "end": 1.96
+   }
+  ]
+ },
+ "s4-find.part0.wav": {
+  "key": "3504e9bd06d0e5a80d6ae2dbe38f8adeeae78553",
+  "words": [
+   {
+    "text": "First",
+    "start": 0,
+    "end": 0.455
+   },
+   {
+    "text": "chest?",
+    "start": 0.455,
+    "end": 1
+   }
+  ]
+ },
+ "s4-find.part1.wav": {
+  "key": "347fac0d23ef0c2d6681b0a37b993d410613fb60",
+  "words": [
+   {
+    "text": "There",
+    "start": 0,
+    "end": 0.5
+   },
+   {
+    "text": "it",
+    "start": 0.5,
+    "end": 0.7
+   },
+   {
+    "text": "is.",
+    "start": 0.7,
+    "end": 1
+   }
+  ]
+ },
+ "s5-follow.part0.wav": {
+  "key": "f50db234602bd52eac06f6cc48fa036e6b7f8eb6",
+  "words": [
+   {
+    "text": "like,",
+    "start": 0,
+    "end": 0.373
+   },
+   {
+    "text": "and",
+    "start": 0.373,
+    "end": 0.597
+   },
+   {
+    "text": "follow.",
+    "start": 0.597,
+    "end": 1.12
+   }
+  ]
+ },
+ "s6-pass.part0.wav": {
+  "key": "a8fde078348b5d205567fe167bf44fa88630bf84",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.167
+   },
+   {
+    "text": "then",
+    "start": 0.167,
+    "end": 0.389
+   },
+   {
+    "text": "he",
+    "start": 0.389,
+    "end": 0.5
+   },
+   {
+    "text": "passes",
+    "start": 0.5,
+    "end": 0.833
+   },
+   {
+    "text": "it.",
+    "start": 0.833,
+    "end": 1
+   }
+  ]
+ },
+ "s6-pass.part1.wav": {
+  "key": "689c86b05b987d965e20b63214ca9dcb7a1b9f25",
+  "words": [
+   {
+    "text": "to",
+    "start": 0,
+    "end": 0.118
+   },
+   {
+    "text": "a",
+    "start": 0.118,
+    "end": 0.177
+   },
+   {
+    "text": "random",
+    "start": 0.177,
+    "end": 0.53
+   },
+   {
+    "text": "teammate.",
+    "start": 0.53,
+    "end": 1.06
+   }
+  ]
+ },
+ "s7-assist.part0.wav": {
+  "key": "d0268e1cfc509884de3177d848f33356d5759645",
+  "words": [
+   {
+    "text": "Of",
+    "start": 0,
+    "end": 0.187
+   },
+   {
+    "text": "course.",
+    "start": 0.187,
+    "end": 0.84
+   }
+  ]
+ },
+ "s7-assist.part1.wav": {
+  "key": "e3a7133e3f6ab623fe61f6f06c7bd68b76997794",
+  "words": [
+   {
+    "text": "another",
+    "start": 0,
+    "end": 0.45
+   },
+   {
+    "text": "assist.",
+    "start": 0.45,
+    "end": 0.9
+   }
+  ]
+ },
+ "s8-end.part0.wav": {
+  "key": "ef97d5c2faf95eaec5f3ad00b049f08ce3aea18f",
+  "words": [
+   {
+    "text": "Comment.",
+    "start": 0,
+    "end": 1
+   },
+   {
+    "text": "Would",
+    "start": 1,
+    "end": 1
+   },
+   {
+    "text": "you",
+    "start": 1,
+    "end": 1
+   },
+   {
+    "text": "pass",
+    "start": 1,
+    "end": 1
+   },
+   {
+    "text": "it?",
+    "start": 1,
+    "end": 1
+   }
+  ]
+ },
+ "s8-end.part1.wav": {
+  "key": "d4a831205a26a493eccb287f70570f5166606348",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.142
+   },
+   {
+    "text": "if",
+    "start": 0.142,
+    "end": 0.284
+   },
+   {
+    "text": "anyone",
+    "start": 0.284,
+    "end": 0.711
+   },
+   {
+    "text": "asks",
+    "start": 0.711,
+    "end": 0.996
+   },
+   {
+    "text": "you.",
+    "start": 0.996,
+    "end": 1.28
+   }
+  ]
+ }
+}

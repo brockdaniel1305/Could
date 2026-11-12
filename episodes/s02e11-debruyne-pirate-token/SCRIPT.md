@@ -1,4 +1,4 @@
-# S2E11 · Could Kevin De Bruyne find the Fortnite pirate token? (~21 s, Loop) – Skript zur Freigabe
+# S2E11 · Could Kevin De Bruyne find the Fortnite pirate token? (~22 s, Loop) – Skript (freigegeben, Schluss: „Comment: would you pass it?“)
 Kurzfolge, Satire: Der seltenste Fund im Spiel trifft den Mann, der Pässe sieht, die sonst keiner sieht – und er verschenkt ihn.
 Eigene Cartoon-Piratininsel (Sand, Palmen, Holzhütten, Schatzkisten, Meer) – keine Fortnite-Grafiken, Figuren oder Logos, nur der Name.
 KDB: rotblonde Haare, Belgien-Rot, Nr. 7. Teamkollege: ein namenloser Standard-Spieler im grauen Hoodie. Sprecher bilbop, Pausen ≤ 0,6 s.
