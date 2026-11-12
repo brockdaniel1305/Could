@@ -1,4 +1,4 @@
-# S2E10 · Could 11 Ronaldinhos beat 11 Zidanes? (~45 s, Loop) – Skript zur Freigabe
+# S2E10 · Could 11 Ronaldinhos beat 11 Zidanes? (~44 s, Loop) – Skript (freigegeben)
 Flair-Debatte als Clásico: Prime Ronaldinho (Barça 2005, Streifen, Nr. 10, Locken, Stirnband, breites Lächeln) gegen
 Prime Zidane (Real 2002, weiß, Nr. 5, Glatze). 3D-Stadion, Broadcast-Stil, Sprecher bilbop. Pausen ≤ 0,6 s, keine „…“.
 Roter Faden: Ronaldinho lächelt immer. Am Ende tun die Zidanes etwas, womit keiner rechnet: Sie applaudieren – wie das Bernabéu 2005.

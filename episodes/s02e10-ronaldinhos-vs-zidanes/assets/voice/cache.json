@@ -1,0 +1,602 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "e52943386666bbc6c504af250e54cf5c595d5366",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.5
+   },
+   {
+    "text": "11",
+    "start": 0.5,
+    "end": 0.7
+   },
+   {
+    "text": "Ronaldinos",
+    "start": 0.7,
+    "end": 1.7
+   },
+   {
+    "text": "beat",
+    "start": 1.7,
+    "end": 2.1
+   },
+   {
+    "text": "11",
+    "start": 2.1,
+    "end": 2.3
+   },
+   {
+    "text": "Zidans?",
+    "start": 2.3,
+    "end": 3
+   }
+  ]
+ },
+ "s2-dinho.part0.wav": {
+  "key": "8b9f88c80dcc8764940149895ef81539ee619ef7",
+  "words": [
+   {
+    "text": "Prime",
+    "start": 0,
+    "end": 0.589
+   },
+   {
+    "text": "Ronaldinho",
+    "start": 0.589,
+    "end": 1.768
+   },
+   {
+    "text": "2005",
+    "start": 1.768,
+    "end": 2.24
+   }
+  ]
+ },
+ "s2-dinho.part1.wav": {
+  "key": "9f0e91c95d0ab8eaae158cbd4f7be019c85708ba",
+  "words": [
+   {
+    "text": "Ballon",
+    "start": 0,
+    "end": 0.6
+   },
+   {
+    "text": "d'Or",
+    "start": 0.6,
+    "end": 1
+   }
+  ]
+ },
+ "s2-dinho.part2.wav": {
+  "key": "fe2b12941d1203bb94bf10cf022bad01f8dcb43c",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.176
+   },
+   {
+    "text": "always",
+    "start": 0.176,
+    "end": 0.529
+   },
+   {
+    "text": "smiling.",
+    "start": 0.529,
+    "end": 1
+   }
+  ]
+ },
+ "s3-zidane.part0.wav": {
+  "key": "a0b95716be5f398f2fea9b5a40c19fd1f4a5b507",
+  "words": [
+   {
+    "text": "Prime",
+    "start": 0,
+    "end": 0.769
+   },
+   {
+    "text": "Z",
+    "start": 0.769,
+    "end": 0.923
+   },
+   {
+    "text": "Dan",
+    "start": 0.923,
+    "end": 1.385
+   },
+   {
+    "text": "2002",
+    "start": 1.385,
+    "end": 2
+   }
+  ]
+ },
+ "s3-zidane.part1.wav": {
+  "key": "70989c26c9707ec29ecb456717e4f92c3cc5b1e3",
+  "words": [
+   {
+    "text": "Pure",
+    "start": 0,
+    "end": 0.308
+   },
+   {
+    "text": "elegance.",
+    "start": 0.308,
+    "end": 1
+   }
+  ]
+ },
+ "s4-roulette.part0.wav": {
+  "key": "4cd3707c4816b7e1613c589ee65bad04b5de7a6b",
+  "words": [
+   {
+    "text": "Kick",
+    "start": 0,
+    "end": 0.3
+   },
+   {
+    "text": "off!",
+    "start": 0.3,
+    "end": 0.6
+   }
+  ]
+ },
+ "s4-roulette.part1.wav": {
+  "key": "99d04dd6ab7e3baaff1efbdd3cd68974fbcf2998",
+  "words": [
+   {
+    "text": "All",
+    "start": 0,
+    "end": 0.22
+   },
+   {
+    "text": "11",
+    "start": 0.22,
+    "end": 0.367
+   },
+   {
+    "text": "ZDans",
+    "start": 0.367,
+    "end": 0.733
+   },
+   {
+    "text": "do",
+    "start": 0.733,
+    "end": 0.88
+   },
+   {
+    "text": "the",
+    "start": 0.88,
+    "end": 1.1
+   },
+   {
+    "text": "roulette.",
+    "start": 1.1,
+    "end": 1.76
+   }
+  ]
+ },
+ "s4-roulette.part2.wav": {
+  "key": "5cc6714394d86a86b95da5459b993a9518308a7d",
+  "words": [
+   {
+    "text": "at",
+    "start": 0,
+    "end": 0.129
+   },
+   {
+    "text": "the",
+    "start": 0.129,
+    "end": 0.321
+   },
+   {
+    "text": "same",
+    "start": 0.321,
+    "end": 0.579
+   },
+   {
+    "text": "time.",
+    "start": 0.579,
+    "end": 0.9
+   }
+  ]
+ },
+ "s5-juggle.part0.wav": {
+  "key": "6c2e936890c054690d2dd2a46f2a8425d9cdc157",
+  "words": [
+   {
+    "text": "The",
+    "start": 0,
+    "end": 0.175
+   },
+   {
+    "text": "Ronaldinos",
+    "start": 0.175,
+    "end": 0.759
+   },
+   {
+    "text": "don't",
+    "start": 0.759,
+    "end": 1.051
+   },
+   {
+    "text": "defend.",
+    "start": 1.051,
+    "end": 1.46
+   }
+  ]
+ },
+ "s5-juggle.part1.wav": {
+  "key": "564a9033eeb6cd37c36359baf64f128495d36055",
+  "words": [
+   {
+    "text": "They",
+    "start": 0,
+    "end": 0.182
+   },
+   {
+    "text": "juggle.",
+    "start": 0.182,
+    "end": 0.5
+   }
+  ]
+ },
+ "s6-volley.part0.wav": {
+  "key": "b7d829b64fb3af5d6107103d729356d17e001004",
+  "words": [
+   {
+    "text": "Zidane",
+    "start": 0,
+    "end": 0.414
+   },
+   {
+    "text": "on",
+    "start": 0.414,
+    "end": 0.552
+   },
+   {
+    "text": "the",
+    "start": 0.552,
+    "end": 0.759
+   },
+   {
+    "text": "volley",
+    "start": 0.759,
+    "end": 1.172
+   },
+   {
+    "text": "like",
+    "start": 1.172,
+    "end": 1.448
+   },
+   {
+    "text": "Glasgow.",
+    "start": 1.448,
+    "end": 2
+   }
+  ]
+ },
+ "s6-volley.part1.wav": {
+  "key": "7b1d049d7fc4c5d309fe0219eb90ab95b5cbf351",
+  "words": [
+   {
+    "text": "Neil",
+    "start": 0,
+    "end": 0.533
+   },
+   {
+    "text": "1.",
+    "start": 0.533,
+    "end": 0.8
+   }
+  ]
+ },
+ "s7-follow.part0.wav": {
+  "key": "b73cbd3f08857b39734887c8355b94ce33d96ae7",
+  "words": [
+   {
+    "text": "Like",
+    "start": 0,
+    "end": 0.286
+   },
+   {
+    "text": "and",
+    "start": 0.286,
+    "end": 0.5
+   },
+   {
+    "text": "follow.",
+    "start": 0.5,
+    "end": 1
+   }
+  ]
+ },
+ "s7-follow.part1.wav": {
+  "key": "221b685d76d0d7051c90bf71bd767564cb7a3c15",
+  "words": [
+   {
+    "text": "Ronaldinho",
+    "start": 0,
+    "end": 0.811
+   },
+   {
+    "text": "or",
+    "start": 0.811,
+    "end": 0.973
+   },
+   {
+    "text": "Zidane?",
+    "start": 0.973,
+    "end": 1.54
+   }
+  ]
+ },
+ "s8-nolook.part0.wav": {
+  "key": "62051f472a06fd89230cc4e874bd220fcd97f6ed",
+  "words": [
+   {
+    "text": "Ronaldinho",
+    "start": 0,
+    "end": 0.56
+   },
+   {
+    "text": "looks",
+    "start": 0.56,
+    "end": 0.84
+   },
+   {
+    "text": "left.",
+    "start": 0.84,
+    "end": 1.12
+   }
+  ]
+ },
+ "s8-nolook.part1.wav": {
+  "key": "e0c74ca3e7081bb319913a753e70bcb0a7c070bf",
+  "words": [
+   {
+    "text": "Pass",
+    "start": 0,
+    "end": 0.28
+   },
+   {
+    "text": "is",
+    "start": 0.28,
+    "end": 0.42
+   },
+   {
+    "text": "right.",
+    "start": 0.42,
+    "end": 0.84
+   }
+  ]
+ },
+ "s8-nolook.part2.wav": {
+  "key": "a54a4e5fa4e5d3ce7849cb75b72de790ac33a3b9",
+  "words": [
+   {
+    "text": "than",
+    "start": 0,
+    "end": 0.271
+   },
+   {
+    "text": "a",
+    "start": 0.271,
+    "end": 0.338
+   },
+   {
+    "text": "toe",
+    "start": 0.338,
+    "end": 0.542
+   },
+   {
+    "text": "poke.",
+    "start": 0.542,
+    "end": 0.88
+   }
+  ]
+ },
+ "s8-nolook.part3.wav": {
+  "key": "a832c0d77e0e81c870e090bff6771196baeb50e5",
+  "words": [
+   {
+    "text": "One,",
+    "start": 0,
+    "end": 0.45
+   },
+   {
+    "text": "one.",
+    "start": 0.45,
+    "end": 0.9
+   }
+  ]
+ },
+ "s9-elastico.part0.wav": {
+  "key": "9ecc5667877a2f3e58928a09fd9687c049f81303",
+  "words": [
+   {
+    "text": "minute",
+    "start": 0,
+    "end": 0.25
+   },
+   {
+    "text": "ninety",
+    "start": 0.25,
+    "end": 0.5
+   }
+  ]
+ },
+ "s9-elastico.part1.wav": {
+  "key": "9dd98b57ecd212e9bfe286efdec2b6a6c852bf34",
+  "words": [
+   {
+    "text": "Ronaldinho,",
+    "start": 0,
+    "end": 0.777
+   },
+   {
+    "text": "Elastico,",
+    "start": 0.777,
+    "end": 1.413
+   },
+   {
+    "text": "past",
+    "start": 1.413,
+    "end": 1.696
+   },
+   {
+    "text": "all",
+    "start": 1.696,
+    "end": 1.908
+   },
+   {
+    "text": "11.",
+    "start": 1.908,
+    "end": 2.12
+   }
+  ]
+ },
+ "s9-elastico.part2.wav": {
+  "key": "9c5db1dafdc7d02b844a3ab760cfeeb1079f8c8c",
+  "words": [
+   {
+    "text": "Two,",
+    "start": 0,
+    "end": 0.42
+   },
+   {
+    "text": "one.",
+    "start": 0.42,
+    "end": 0.84
+   }
+  ]
+ },
+ "s10-applause.part0.wav": {
+  "key": "aa80cc16b17bc24c4abe5e652de841da42c95e68",
+  "words": [
+   {
+    "text": "and",
+    "start": 0,
+    "end": 0.194
+   },
+   {
+    "text": "the",
+    "start": 0.194,
+    "end": 0.388
+   },
+   {
+    "text": "Zidans?",
+    "start": 0.388,
+    "end": 0.84
+   }
+  ]
+ },
+ "s10-applause.part1.wav": {
+  "key": "3643f55bcae456903d3e2b8ca8e718f56e6f020d",
+  "words": [
+   {
+    "text": "they",
+    "start": 0,
+    "end": 0.22
+   },
+   {
+    "text": "applaud.",
+    "start": 0.22,
+    "end": 0.66
+   }
+  ]
+ },
+ "s10-applause.part2.wav": {
+  "key": "41ff8ca4c3ec7daf25dd0318ef3764fb13c606ed",
+  "words": [
+   {
+    "text": "just",
+    "start": 0,
+    "end": 0.353
+   },
+   {
+    "text": "like",
+    "start": 0.353,
+    "end": 0.707
+   },
+   {
+    "text": "Madrid",
+    "start": 0.707,
+    "end": 1.237
+   },
+   {
+    "text": "did",
+    "start": 1.237,
+    "end": 1.502
+   },
+   {
+    "text": "in",
+    "start": 1.502,
+    "end": 1.678
+   },
+   {
+    "text": "2005.",
+    "start": 1.678,
+    "end": 2.12
+   }
+  ]
+ },
+ "s11-end.part0.wav": {
+  "key": "e97490591c87f5de2ae1fadd4e2eb7b3eaf9502d",
+  "words": [
+   {
+    "text": "Comment",
+    "start": 0,
+    "end": 0.358
+   },
+   {
+    "text": "who",
+    "start": 0.358,
+    "end": 0.511
+   },
+   {
+    "text": "will",
+    "start": 0.511,
+    "end": 0.716
+   },
+   {
+    "text": "win.",
+    "start": 0.716,
+    "end": 0.92
+   }
+  ]
+ },
+ "s11-end.part1.wav": {
+  "key": "192d4ed76113d8b975aff16d38ea754ee7700696",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.129
+   },
+   {
+    "text": "if",
+    "start": 0.129,
+    "end": 0.258
+   },
+   {
+    "text": "anyone",
+    "start": 0.258,
+    "end": 0.644
+   },
+   {
+    "text": "asks",
+    "start": 0.644,
+    "end": 0.902
+   },
+   {
+    "text": "you,",
+    "start": 0.902,
+    "end": 1.16
+   }
+  ]
+ }
+}
