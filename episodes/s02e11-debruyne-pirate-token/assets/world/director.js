@@ -75,7 +75,20 @@ export default function plot(T) {
   const VISION = '<svg width="1080" height="1920" viewBox="0 0 1080 1920">' +
     ['M140,1700 Q300,900 545,1000', 'M60,1500 Q380,760 545,1000', 'M300,1880 Q700,1400 545,1000', 'M900,1800 Q860,1200 545,1000'].map((d) => `<path d="${d}"/>`).join("") +
     '<circle cx="545" cy="1000" r="46" fill="none" stroke="#ffd23f" stroke-width="10"/></svg>';
+  // battle-royale HUD (our own design): minimap with the storm circle, players left, storm timer, health/shield, hotbar, feed
+  const MAP = '<svg viewBox="-110 -110 220 220" width="220" height="220"><circle r="108" fill="#1fa3c6"/><circle r="64" fill="#f0d59a"/><circle r="50" fill="#5cbf3a"/>' +
+    '<circle r="92" fill="none" stroke="#b36bff" stroke-width="7" stroke-dasharray="10 6"/><circle r="40" fill="none" stroke="#ffffff" stroke-width="3"/>' +
+    '<path id="mapme" d="M0,-12 L9,10 L0,5 L-9,10 Z" fill="#ffd23f" stroke="#14141f" stroke-width="2"/></svg>';
+  const HUD = [
+    { id: "hud-map", t0: -1, t1: END + 1, cls: "brmap", html: MAP },
+    { id: "hud-stat", t0: -1, t1: END + 1, cls: "brstat", html: '<span>👤 <b id="plyr">37</b></span><span>⛈ <b id="stormt">0:45</b></span>' },
+    { id: "hud-bars", t0: -1, t1: END + 1, cls: "brbars", html: '<div class="bar sh"><i></i><b>100</b></div><div class="bar hp"><i></i><b>100</b></div>' },
+    { id: "hud-hot", t0: -1, t1: END + 1, cls: "brhot", html: '<i>⛏</i><i></i><i id="slot3"></i><i></i><i></i>' },
+    { id: "feed1", t0: c("s4.there") + 0.15, t1: c("s4.there") + 3.2, cls: "brfeed", html: '<b>KDB</b> found <em>PIRATE TOKEN</em>' },
+    { id: "feed2", t0: CATCH + 0.05, t1: CATCH + 3.2, cls: "brfeed", html: '<b>KDB</b> ➜ <b>Random_Teammate</b> · <em>PIRATE TOKEN</em>' },
+  ];
   const overlays = [
+    ...HUD,
     slam("sl-a", -1, s("s2") - 0.05, "COULD KDB FIND<br><b>THE PIRATE TOKEN?</b>", 330, 84),
     { id: "c-odds", t0: c("s2.say"), t1: s("s3") - 0.05, from: "right", cls: "chip red", style: "left:80px;top:1180px",
       html: '<div class="ck">CHESTS OPENED · TOKENS: 0</div><div class="cv"><span id="chn">0</span> / 700,000</div>' },
@@ -99,6 +112,11 @@ export default function plot(T) {
     grade: "contrast(1.08) saturate(1.15) brightness(1.0)",
     custom: (t, { el }) => {
       el("chn").textContent = Math.round(1284 * sstep(c("s2.say"), s("s3") - 0.2, t)).toLocaleString("en-US");
+      el("plyr").textContent = String(37 - Math.floor(t / 1.6));
+      const st = Math.max(0, 45 - Math.floor(t * 1.4)); el("stormt").textContent = "0:" + String(st).padStart(2, "0");
+      el("slot3").textContent = t > OPEN + 0.3 && t < KICK ? "🪙" : "";
+      el("slot3").className = t > OPEN + 0.3 && t < KICK ? "gold" : "";
+      el("mapme").setAttribute("transform", `rotate(${(t * 20) % 360})`);
     },
   };
 }
