@@ -1,70 +1,70 @@
 {
- "duration": 41.308,
+ "duration": 41.223,
  "voice": "prerecorded:elevenlabs:bilbop (R23cI2hqxAhT17IXmY7O)",
  "scenes": [
   {
    "id": "s1-hook",
    "start": 0.0,
-   "duration": 3.34,
+   "duration": 3.35,
    "voice": "assets/voice/s1-hook.wav",
    "voiceStart": 0.15,
-   "speech": 2.79,
+   "speech": 2.8,
    "cues": {},
    "words": [
     {
      "text": "Could",
      "start": 0.15,
-     "end": 0.518
+     "end": 0.523
     },
     {
      "text": "Usain",
-     "start": 0.518,
-     "end": 0.885
+     "start": 0.523,
+     "end": 0.896
     },
     {
      "text": "Bolt",
-     "start": 0.885,
-     "end": 1.179
+     "start": 0.896,
+     "end": 1.194
     },
     {
      "text": "beat",
-     "start": 1.179,
-     "end": 1.473
+     "start": 1.194,
+     "end": 1.493
     },
     {
      "text": "a",
-     "start": 1.473,
-     "end": 1.547
+     "start": 1.493,
+     "end": 1.567
     },
     {
      "text": "T-Rex",
-     "start": 1.547,
-     "end": 1.914
+     "start": 1.567,
+     "end": 1.94
     },
     {
      "text": "in",
-     "start": 1.914,
-     "end": 2.061
+     "start": 1.94,
+     "end": 2.089
     },
     {
      "text": "a",
-     "start": 2.061,
-     "end": 2.107
+     "start": 2.089,
+     "end": 2.136
     },
     {
      "text": "hundred",
-     "start": 2.107,
-     "end": 2.247
+     "start": 2.136,
+     "end": 2.278
     },
     {
      "text": "metre",
-     "start": 2.247,
-     "end": 2.355
+     "start": 2.278,
+     "end": 2.388
     },
     {
      "text": "sprint?",
-     "start": 2.355,
-     "end": 2.87
+     "start": 2.388,
+     "end": 2.91
     }
    ],
    "sfx": [
@@ -77,15 +77,15 @@
   },
   {
    "id": "s2-bolt",
-   "start": 3.34,
-   "duration": 4.75,
+   "start": 3.35,
+   "duration": 4.74,
    "voice": "assets/voice/s2-bolt.wav",
    "voiceStart": 0.15,
-   "speech": 4.2,
+   "speech": 4.19,
    "cues": {
     "lane": 0.15,
-    "prime": 1.07,
-    "wr": 3.21
+    "prime": 1.06,
+    "wr": 3.2
    },
    "words": [
     {
@@ -96,52 +96,52 @@
     {
      "text": "four:",
      "start": 0.817,
-     "end": 0.92
+     "end": 0.91
     },
     {
      "text": "prime",
-     "start": 1.07,
-     "end": 1.447
+     "start": 1.06,
+     "end": 1.437
     },
     {
      "text": "Bolt,",
-     "start": 1.447,
-     "end": 1.824
+     "start": 1.437,
+     "end": 1.814
     },
     {
      "text": "two",
-     "start": 1.824,
-     "end": 2.094
+     "start": 1.814,
+     "end": 2.084
     },
     {
      "text": "thousand",
-     "start": 2.094,
-     "end": 2.633
+     "start": 2.084,
+     "end": 2.623
     },
     {
      "text": "nine.",
-     "start": 2.633,
-     "end": 3.01
+     "start": 2.623,
+     "end": 3.0
     },
     {
      "text": "Nine",
-     "start": 3.21,
-     "end": 3.463
+     "start": 3.2,
+     "end": 3.453
     },
     {
      "text": "point",
-     "start": 3.463,
-     "end": 3.759
+     "start": 3.453,
+     "end": 3.749
     },
     {
      "text": "five",
-     "start": 3.759,
-     "end": 4.012
+     "start": 3.749,
+     "end": 4.002
     },
     {
      "text": "eight.",
-     "start": 4.012,
-     "end": 4.35
+     "start": 4.002,
+     "end": 4.34
     }
    ],
    "sfx": []
@@ -187,12 +187,12 @@
     {
      "text": "Arms:",
      "start": 2.97,
-     "end": 3.237
+     "end": 3.269
     },
     {
      "text": "decorative.",
-     "start": 3.237,
-     "end": 3.97
+     "start": 3.269,
+     "end": 4.09
     }
    ],
    "sfx": []
@@ -200,10 +200,10 @@
   {
    "id": "s4-gun",
    "start": 12.5,
-   "duration": 2.84,
+   "duration": 2.86,
    "voice": "assets/voice/s4-gun.wav",
    "voiceStart": 0.15,
-   "speech": 2.29,
+   "speech": 2.31,
    "cues": {
     "bang": 0.15,
     "pers": 0.72
@@ -212,37 +212,37 @@
     {
      "text": "Bang.",
      "start": 0.15,
-     "end": 0.65
+     "end": 0.99
     },
     {
      "text": "The",
      "start": 0.72,
-     "end": 0.89
+     "end": 0.892
     },
     {
      "text": "T-Rex",
-     "start": 0.89,
-     "end": 1.173
+     "start": 0.892,
+     "end": 1.179
     },
     {
      "text": "takes",
-     "start": 1.173,
-     "end": 1.457
+     "start": 1.179,
+     "end": 1.465
     },
     {
      "text": "the",
-     "start": 1.457,
-     "end": 1.627
+     "start": 1.465,
+     "end": 1.637
     },
     {
      "text": "gun",
-     "start": 1.627,
-     "end": 1.797
+     "start": 1.637,
+     "end": 1.809
     },
     {
      "text": "personally.",
-     "start": 1.797,
-     "end": 2.42
+     "start": 1.809,
+     "end": 2.44
     }
    ],
    "sfx": [
@@ -262,11 +262,11 @@
   },
   {
    "id": "s5-nose",
-   "start": 15.34,
-   "duration": 3.06,
+   "start": 15.36,
+   "duration": 2.92,
    "voice": "assets/voice/s5-nose.wav",
    "voiceStart": 0.15,
-   "speech": 2.51,
+   "speech": 2.37,
    "cues": {
     "nose": 0.15
    },
@@ -274,156 +274,156 @@
     {
      "text": "But",
      "start": 0.15,
-     "end": 0.38
+     "end": 0.344
     },
     {
      "text": "nose",
-     "start": 0.38,
-     "end": 0.686
+     "start": 0.344,
+     "end": 0.602
     },
     {
      "text": "first,",
-     "start": 0.686,
-     "end": 1.145
+     "start": 0.602,
+     "end": 0.989
     },
     {
      "text": "it",
-     "start": 1.145,
-     "end": 1.299
+     "start": 0.989,
+     "end": 1.119
     },
     {
      "text": "starts",
-     "start": 1.299,
-     "end": 1.758
+     "start": 1.119,
+     "end": 1.506
     },
     {
      "text": "twelve",
-     "start": 1.758,
-     "end": 2.065
+     "start": 1.506,
+     "end": 1.764
     },
     {
      "text": "metres",
-     "start": 2.065,
-     "end": 2.371
+     "start": 1.764,
+     "end": 2.023
     },
     {
      "text": "ahead.",
-     "start": 2.371,
-     "end": 2.83
+     "start": 2.023,
+     "end": 2.41
     }
    ],
    "sfx": []
   },
   {
    "id": "s6-follow",
-   "start": 18.4,
-   "duration": 3.11,
+   "start": 18.28,
+   "duration": 2.83,
    "voice": "assets/voice/s6-follow.wav",
    "voiceStart": 0.15,
-   "speech": 2.56,
+   "speech": 2.28,
    "cues": {
     "follow": 0.15,
-    "q": 1.33
+    "q": 1.11
    },
    "words": [
     {
      "text": "Like",
      "start": 0.15,
-     "end": 0.436
+     "end": 0.356
     },
     {
      "text": "and",
-     "start": 0.436,
-     "end": 0.65
+     "start": 0.356,
+     "end": 0.51
     },
     {
      "text": "follow.",
-     "start": 0.65,
-     "end": 1.15
+     "start": 0.51,
+     "end": 0.87
     },
     {
      "text": "Bolt",
-     "start": 1.33,
-     "end": 1.797
+     "start": 1.11,
+     "end": 1.537
     },
     {
      "text": "or",
-     "start": 1.797,
-     "end": 2.03
+     "start": 1.537,
+     "end": 1.75
     },
     {
      "text": "T-Rex?",
-     "start": 2.03,
-     "end": 2.73
+     "start": 1.75,
+     "end": 2.39
     }
    ],
    "sfx": []
   },
   {
    "id": "s7-speed",
-   "start": 21.51,
-   "duration": 3.87,
+   "start": 21.11,
+   "duration": 3.8,
    "voice": "assets/voice/s7-speed.wav",
    "voiceStart": 0.15,
-   "speech": 3.32,
+   "speech": 3.25,
    "cues": {
     "bolt": 0.15,
-    "rex": 2.23
+    "rex": 2.28
    },
    "words": [
     {
      "text": "Bolt:",
      "start": 0.15,
-     "end": 0.737
+     "end": 0.731
     },
     {
      "text": "forty",
-     "start": 0.737,
-     "end": 0.869
+     "start": 0.731,
+     "end": 0.861
     },
     {
      "text": "five",
-     "start": 0.869,
-     "end": 0.981
+     "start": 0.861,
+     "end": 0.973
     },
     {
      "text": "kilometres",
-     "start": 0.981,
-     "end": 1.207
+     "start": 0.973,
+     "end": 1.196
     },
     {
      "text": "an",
-     "start": 1.207,
-     "end": 1.443
+     "start": 1.196,
+     "end": 1.429
     },
     {
      "text": "hour.",
-     "start": 1.443,
-     "end": 2.03
+     "start": 1.429,
+     "end": 2.01
     },
     {
      "text": "T-Rex:",
-     "start": 2.23,
-     "end": 3.005
+     "start": 2.28,
+     "end": 2.905
     },
     {
      "text": "nineteen.",
-     "start": 3.005,
-     "end": 3.47
+     "start": 2.905,
+     "end": 3.4
     }
    ],
    "sfx": []
   },
   {
    "id": "s8-lead",
-   "start": 25.38,
-   "duration": 3.619,
+   "start": 24.91,
+   "duration": 3.88,
    "voice": "assets/voice/s8-lead.wav",
    "voiceStart": 0.15,
-   "speech": 3.069,
+   "speech": 3.33,
    "cues": {
     "m35": 0.15,
-    "look": 2.299
+    "look": 2.39
    },
    "words": [
     {
@@ -463,28 +463,28 @@
     },
     {
      "text": "He",
-     "start": 2.299,
-     "end": 2.423
+     "start": 2.39,
+     "end": 2.519
     },
     {
      "text": "does",
-     "start": 2.423,
-     "end": 2.672
+     "start": 2.519,
+     "end": 2.777
     },
     {
      "text": "not",
-     "start": 2.672,
-     "end": 2.859
+     "start": 2.777,
+     "end": 2.97
     },
     {
      "text": "look",
-     "start": 2.859,
-     "end": 3.108
+     "start": 2.97,
+     "end": 3.228
     },
     {
      "text": "back.",
-     "start": 3.108,
-     "end": 3.419
+     "start": 3.228,
+     "end": 3.55
     }
    ],
    "sfx": [
@@ -498,232 +498,232 @@
   },
   {
    "id": "s9-finish",
-   "start": 28.999,
-   "duration": 3.479,
+   "start": 28.79,
+   "duration": 3.519,
    "voice": "assets/voice/s9-finish.wav",
    "voiceStart": 0.15,
-   "speech": 2.929,
+   "speech": 2.969,
    "cues": {
     "fin": 0.15,
-    "dip": 0.85
+    "dip": 0.89
    },
    "words": [
     {
      "text": "Finish.",
      "start": 0.15,
-     "end": 0.99
+     "end": 0.65
     },
     {
      "text": "The",
-     "start": 0.85,
-     "end": 1.056
+     "start": 0.89,
+     "end": 1.091
     },
     {
      "text": "T-Rex",
-     "start": 1.056,
-     "end": 1.401
+     "start": 1.091,
+     "end": 1.426
     },
     {
      "text": "tries",
-     "start": 1.401,
-     "end": 1.745
+     "start": 1.426,
+     "end": 1.762
     },
     {
      "text": "a",
-     "start": 1.745,
-     "end": 1.814
+     "start": 1.762,
+     "end": 1.829
     },
     {
      "text": "dip",
-     "start": 1.814,
-     "end": 2.02
+     "start": 1.829,
+     "end": 2.03
     },
     {
      "text": "finish",
-     "start": 2.02,
-     "end": 2.433
+     "start": 2.03,
+     "end": 2.432
     },
     {
      "text": "with",
-     "start": 2.433,
-     "end": 2.708
+     "start": 2.432,
+     "end": 2.701
     },
     {
      "text": "no",
-     "start": 2.708,
-     "end": 2.846
+     "start": 2.701,
+     "end": 2.835
     },
     {
      "text": "arms.",
-     "start": 2.846,
-     "end": 3.19
+     "start": 2.835,
+     "end": 3.17
     }
    ],
    "sfx": []
   },
   {
    "id": "s10-twist",
-   "start": 32.478,
-   "duration": 3.97,
+   "start": 32.309,
+   "duration": 4.011,
    "voice": "assets/voice/s10-twist.wav",
    "voiceStart": 0.15,
-   "speech": 3.42,
+   "speech": 3.461,
    "cues": {
     "wins": 0.15,
-    "line": 1.02,
-    "not": 2.49
+    "line": 1.011,
+    "not": 2.478
    },
    "words": [
     {
      "text": "Bolt",
      "start": 0.15,
-     "end": 0.559
+     "end": 0.523
     },
     {
      "text": "wins.",
-     "start": 0.559,
-     "end": 1.07
+     "start": 0.523,
+     "end": 0.99
     },
     {
      "text": "But",
-     "start": 1.02,
-     "end": 1.195
+     "start": 1.011,
+     "end": 1.191
     },
     {
      "text": "the",
-     "start": 1.195,
-     "end": 1.37
+     "start": 1.191,
+     "end": 1.371
     },
     {
      "text": "race",
-     "start": 1.37,
-     "end": 1.603
+     "start": 1.371,
+     "end": 1.611
     },
     {
      "text": "ends",
-     "start": 1.603,
-     "end": 1.837
+     "start": 1.611,
+     "end": 1.851
     },
     {
      "text": "at",
-     "start": 1.837,
-     "end": 1.953
+     "start": 1.851,
+     "end": 1.971
     },
     {
      "text": "the",
-     "start": 1.953,
-     "end": 2.128
+     "start": 1.971,
+     "end": 2.151
     },
     {
      "text": "line.",
-     "start": 2.128,
-     "end": 2.42
+     "start": 2.151,
+     "end": 2.451
     },
     {
      "text": "The",
-     "start": 2.49,
-     "end": 2.685
+     "start": 2.478,
+     "end": 2.666
     },
     {
      "text": "T-Rex",
-     "start": 2.685,
-     "end": 3.01
+     "start": 2.666,
+     "end": 2.978
     },
     {
      "text": "does",
-     "start": 3.01,
-     "end": 3.27
+     "start": 2.978,
+     "end": 3.228
     },
     {
      "text": "not.",
-     "start": 3.27,
-     "end": 3.53
+     "start": 3.228,
+     "end": 3.478
     }
    ],
    "sfx": []
   },
   {
    "id": "s11-end",
-   "start": 36.448,
-   "duration": 4.86,
+   "start": 36.32,
+   "duration": 4.903,
    "voice": "assets/voice/s11-end.wav",
    "voiceStart": 0.15,
-   "speech": 4.41,
+   "speech": 4.453,
    "cues": {
     "r2": 0.15,
-    "who": 1.83,
-    "loop": 3.47
+    "who": 1.903,
+    "loop": 3.403
    },
    "words": [
     {
      "text": "Round",
      "start": 0.15,
-     "end": 0.468
+     "end": 0.514
     },
     {
      "text": "two,",
-     "start": 0.468,
-     "end": 0.723
+     "start": 0.514,
+     "end": 0.805
     },
     {
      "text": "no",
-     "start": 0.723,
-     "end": 0.85
+     "start": 0.805,
+     "end": 0.95
     },
     {
      "text": "finish",
-     "start": 0.85,
-     "end": 1.232
+     "start": 0.95,
+     "end": 1.386
     },
     {
      "text": "line.",
-     "start": 1.232,
-     "end": 1.55
+     "start": 1.386,
+     "end": 1.75
     },
     {
      "text": "Comment",
-     "start": 1.83,
-     "end": 2.336
+     "start": 1.903,
+     "end": 2.339
     },
     {
      "text": "who",
-     "start": 2.336,
-     "end": 2.552
+     "start": 2.339,
+     "end": 2.525
     },
     {
      "text": "will",
-     "start": 2.552,
-     "end": 2.841
+     "start": 2.525,
+     "end": 2.774
     },
     {
      "text": "win.",
-     "start": 2.841,
-     "end": 3.13
+     "start": 2.774,
+     "end": 3.023
     },
     {
      "text": "So",
-     "start": 3.47,
-     "end": 3.574
+     "start": 3.403,
+     "end": 3.517
     },
     {
      "text": "if",
-     "start": 3.574,
-     "end": 3.678
+     "start": 3.517,
+     "end": 3.631
     },
     {
      "text": "anyone",
-     "start": 3.678,
-     "end": 3.99
+     "start": 3.631,
+     "end": 3.973
     },
     {
      "text": "asks",
-     "start": 3.99,
-     "end": 4.198
+     "start": 3.973,
+     "end": 4.201
     },
     {
      "text": "you:",
-     "start": 4.198,
-     "end": 4.51
+     "start": 4.201,
+     "end": 4.543
     }
    ],
    "sfx": []

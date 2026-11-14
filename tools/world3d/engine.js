@@ -244,7 +244,7 @@ export function createWorld(plot) {
     let dmin = Infinity;
     for (const a of Object.values(actors)) { const r = drawActor(a, t); if (r && r.pr && r.pr.vis && !a.noOcclude && r.pr.X > -150 && r.pr.X < 1230 && r.pr.Y > 0 && r.pr.Y < 2300) dmin = Math.min(dmin, r.pr.dist); }
     if (fgR) {
-      const far = Math.min(dmin, plot.fgMax || 60) - 0.7;
+      const far = Math.min(dmin, plot.fgMax || 12) - 0.7;   // capped: with no actor in view the whole scene would end up in the blurred foreground layer
       if (far > 0.5) {
         const bg = scene.background, hidden = [];
         scene.background = null;

@@ -99,7 +99,7 @@ export default function plot(T) {
   const bursts = [{ who: "S", t: G, text: "BANG!" }, { who: "R", t: c("s4.pers") + 0.15, text: "ROAR!" }];
 
   return {
-    actors: A, shots: sh, overlays, bubbles, bursts, buildWorld: buildTrack,
+    actors: A, shots: sh, overlays, bubbles, bursts, buildWorld: buildTrack, fgMax: 8,
     grade: "contrast(1.12) saturate(1.18) brightness(0.97)",
     shake: [c("s4.pers") + 0.2, M35, c("s10.not")],
     crowd: (t) => (t > G && t < RFIN + 1 ? 0.45 : 0.12), flashes: (t) => (t > FIN && t < FIN + 2 ? 0.3 : 0.05),

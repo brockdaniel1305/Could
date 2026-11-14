@@ -225,6 +225,12 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- 2026-11-14 · S2E12 · **ElevenLabs-Langtakes driften**: Eine 50-s-Aufnahme wurde ab der Mitte bis zu 12 dB leiser und klang wie ein
+  anderer Sprecher; an `<break>`-Stellen entsteht manchmal Gebrabbel. Jetzt: `tools/split_master.py` gleicht danach automatisch jedes
+  Segment auf −24 LUFS an (`tools/norm_segments.py`). Takes kürzer halten (≤ ~25 s, ggf. zwei Hälften), jedes Segment transkribieren,
+  verdächtige Zeilen einzeln neu sprechen (Einzelzeilen ohne Breaks waren bisher immer sauber).
+- 2026-11-14 · S2E12 · Engine: Ist keine Figur im Bild, landete die ganze Szene in der unscharfen Vordergrund-Ebene (Bahn verschwand,
+  Bild unscharf). Vordergrund jetzt auf 12 m begrenzt (`fgMax`), Bodenflächen als flache Box statt gespiegelter Plane.
 - 2026-11-10 · S2E08 · ElevenLabs verschluckt sich an Auslassungspunkten ("So... <break/>"): danach Gebrabbel. Keine "..." im TTS-Text,
   lieber Komma ("So, Messi just scores."). Nach dem Splitten jedes Segment transkribieren und auf Fremdwörter prüfen.
 - **Lautheit nie mit einfachem `loudnorm` (single pass) normalisieren**: der regelt dynamisch nach und hebt nach ein paar Sekunden

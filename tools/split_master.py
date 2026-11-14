@@ -143,3 +143,5 @@ for k, (a, b) in enumerate(bounds):
     files.append(f.name)
 (out / "segments.json").write_text(json.dumps(files, indent=1))
 print(f"{len(files)} segments written to {out}")
+# level every segment to the same loudness (long takes drift quieter towards the end)
+subprocess.run([sys.executable, str(ROOT / "tools/norm_segments.py"), str(ep)], check=True)

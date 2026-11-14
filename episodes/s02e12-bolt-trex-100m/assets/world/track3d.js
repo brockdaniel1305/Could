@@ -17,8 +17,10 @@ export function buildTrack(THREE, scene) {
   for (let m = 10; m < 100; m += 10) { g.fillStyle = "rgba(244,244,242,0.5)"; g.fillRect(px(x0 + m) - 1, 0, 2, 256); }
   g.font = "bold 22px Inter, Arial"; g.fillStyle = "#f4f4f2"; for (let i = 0; i < lanes; i++) g.fillText(String(i + 1), px(x0) - 26, i * 32 + 23);
   const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
-  const m = new THREE.Mesh(new THREE.PlaneGeometry(L, W), new THREE.MeshLambertMaterial({ map: tx }));
-  m.rotation.x = -Math.PI / 2; m.rotation.z = Math.PI; m.scale.x = -1; m.position.set((x0 - 8 + x1 + 8) / 2, 0.02, 0); m.userData.noFg = true; scene.add(m);
+  // a thin slab (not a single plane): its top face always faces up and sits clearly above the pitch, no culling or z-fighting
+  const top = new THREE.MeshLambertMaterial({ map: tx }), edge = new THREE.MeshLambertMaterial({ color: 0xa83524 });
+  const m = new THREE.Mesh(new THREE.BoxGeometry(L, 0.08, W), [edge, edge, top, edge, edge, edge]);
+  m.position.set((x0 - 8 + x1 + 8) / 2, 0.04, 0); scene.add(m);   // (no noFg: the foreground pass must draw it too, or the blurred pitch covers it)
   // starting blocks for lanes 4 and 5, a finish gantry with a timing board
   const blockM = new THREE.MeshLambertMaterial({ color: 0x2a2a33 });
   for (const n of [4, 5]) { const b = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.18, 0.35), blockM); b.position.set(x0 - 0.6, 0.09, laneZ(n)); scene.add(b); }
