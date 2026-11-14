@@ -94,7 +94,8 @@ export function createWorld(plot) {
       if (k === "wide" && t < t0 + d) { arms = e[3] == null ? 92 : lerp(92, e[3], sstep(t0, t0 + d, t)); armR = arms; }  // arms spread wide (Bellingham celebration); e[3]: arms sink to this angle
       if (k === "dizzy" && t < t0 + d) dizzy = true;          // stars over the head
       if (k === "yawn" && t < t0 + d) yawn = true;            // mouth open
-      if (k === "stance" && t < t0 + d) legs = 24;            // legs wide (Ronaldo free-kick stance)
+      if (k === "stance" && t < t0 + d) legs = 24;
+      if (k === "lean" && t < t0 + d) rot = (e[3] || 20) * Math.sin(clamp((t - t0) / d, 0, 1) * Math.PI);   // forward lean (dip finish), e[3] = degrees            // legs wide (Ronaldo free-kick stance)
       if (k === "leap" && t < t0 + d) dy += Math.sin(clamp((t - t0) / d, 0, 1) * Math.PI) * (e[3] || 1);   // one big jump, e[3] = height (m)
       if (k === "charge" && t < t0 + d) dy += Math.abs(Math.sin((t - t0) * 14)) * 0.12;
       if (k === "dive") { const f = sstep(t0, t0 + 0.3, t); rot = (e[3] || 1) * 85 * f; dy += Math.sin(Math.min(1, (t - t0) / 0.4) * Math.PI) * 0.6; }

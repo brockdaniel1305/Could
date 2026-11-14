@@ -1,4 +1,4 @@
-# S2E12 · Could Usain Bolt beat a T-Rex in a 100 m sprint? (~44 s, Loop) – Skript v2 zur Freigabe
+# S2E12 · Could Usain Bolt beat a T-Rex in a 100 m sprint? (~41 s, Loop) – Skript v2 (freigegeben)
 Remake von Folge 002 mit den Gags von damals, aber im neuen Look: 3D-Stadion bei Nacht mit roter 100-m-Bahn, Broadcast-Stil,
 Sprecher bilbop, Pausen ≤ 0,6 s, keine „…“, Like+Follow in der Mitte, Schluss „Comment who will win.“
 Bolt: Jamaika-Gelb/Grün mit Startnummer. T-Rex: grüner Cartoon-Dino mit Startnummer auf dem Bauch.
