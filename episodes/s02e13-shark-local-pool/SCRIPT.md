@@ -1,29 +1,27 @@
-# S2E13 · Could a great white shark enter your local swimming pool? (~46 s, Loop) – Skript zur Freigabe
-Neue Schiene: „Could X enter your local Y?“ – ein witziges Gedankenexperiment, Schritt für Schritt durchgerechnet.
-Neue, detailreichere 3D-Welt: ein ganz normales städtisches Hallenbad (Fliesen, 25-m-Becken mit Leinen, Startblöcke, Bademeister-Stuhl,
-Schilder „NO RUNNING“/„NO DIVING“, Schwimmnudeln, Kasse, Duschen, Uhr an der Wand). Der Hai ist ein freundlicher Cartoon-Weißer-Hai.
-Sprecher bilbop (kurze Takes, jede Zeile geprüft), Pausen ≤ 0,6 s, keine „…“. Kein Beißen, niemand in Gefahr.
+# S2E13 · Could a shark end up in your local swimming pool? (~48 s, Loop) – Skript v2 zur Freigabe
+Neue Schiene: echtes Gedankenexperiment. Wir prüfen ernsthaft jeden Weg, auf dem ein Hai ins Freibad gelangen könnte,
+und zeigen jeden Weg als saubere Animation. Mischung aus 3D (Freibad an einem Fluss, Stadt, Golfplatz-See) und klaren
+2D-Erklärgrafiken (Rohr-Querschnitt, animierte Karte, Wasserstand-Anzeige). Ergebnis ehrlich: Weißer Hai nein, Bullenhai möglich.
+Sprecher bilbop (kurze Takes, jede Zeile geprüft), Pausen ≤ 0,6 s. Kein Beißen; Sicherheits-Satz bei Hochwasser.
 
-| # | Sprecher (EN) | Bild (DE) | Gag |
+| # | Sprecher (EN) | Bild (DE) | Weg / Gag |
 |---|---|---|---|
-| 1 | Could a great white shark enter your local swimming pool? | Frame 1: Rückenflosse zieht durch ein normales Hallenbad, vorne treibt ein Schwimmring, der Bademeister lässt die Pfeife fallen. Text „COULD A GREAT WHITE ENTER YOUR POOL?“. | – |
-| 2 | Step one: the ticket. One adult, one shark. | Kasse: Der Hai legt eine Münze hin, die Kassiererin starrt. Preisschild ergänzt: „SHARKS OVER 5 M: DOUBLE“. | **Eintritt zahlen** |
-| 3 | Rule one: shower before swimming. | Der Hai steht (mit Badekappe) unter der Dusche, Schild „PLEASE SHOWER“. | **Duschpflicht** |
-| 4 | Step two: does it fit? Up to six metres. Over a ton. Your lane: twenty five metres. It fits. Barely. | Maßband-Animation über dem Hai, dann der Hai in Bahn 3 – Leinen links und rechts spannen sich. Karte „6 m · 1,000+ kg“. | **Passt gerade so** |
-| 5 | Problem: a great white can never stop swimming. So, laps. Forever. | Hai zieht Bahn um Bahn, Rundenzähler an der Wand rast hoch („LAPS: 412“), die Schwimmer in den Nachbarbahnen werden überholt. | **Endlos-Bahnen** |
-| 6 | Like and follow. | Bademeister hält ein Schild „♥ LIKE + FOLLOW +“. | – |
-| 7 | Bigger problem: pool water is fresh. Great whites need salt water. | Der Hai probiert das Wasser, verzieht das Gesicht. Karte „POOL: FRESH · SHARK: SALT“. | **Hai schmeckt ab** |
-| 8 | For your pool, that's about twenty tonnes of salt. | Ein riesiger Salzstreuer über dem Becken, ein Lkw kippt Salz hinein. Karte „≈ 20 t SALT“. | **Riesen-Salzstreuer** |
-| 9 | So: it can get in. It cannot stay. Please don't try this. Sharks belong in the ocean. | Der Hai winkt, wird von einem Hai-Rettungswagen sanft zurück ins Meer gebracht. | – |
-| 10 | Comment what we should put in your pool next. So if anyone asks you: | Bademeister pfeift, Schild „NO RUNNING · NO DIVING · NO SHARKS“. Karte „COMMENT · What goes in your pool next?“. Loop zu Frame 1. | **Neues Schild** |
+| 1 | Could a shark end up in your local pool? Let's check every way in. | Frame 1: Rückenflosse im Freibad, Badegäste auf Luftmatratzen, Bademeister lässt die Pfeife fallen. Checkliste erscheint: „PIPES · SEA · FLOOD“. | – |
+| 2 | Way one: the pipes. They're ten centimetres wide. A shark is not. | 2D-Querschnitt: Wasserleitung ins Becken, ein Hai versucht sich hineinzuquetschen und steckt fest wie ein Korken. Checkliste: PIPES ✗. | **Hai als Korken** |
+| 3 | Way two: the sea. Great whites need salt water. Dead end. | Animierte Karte: Weißer Hai schwimmt in eine Flussmündung, das Wasser wird „süß“, er dreht angewidert um. SEA (Great White) ✗. | **Süßwasser-Grimasse** |
+| 4 | But bull sharks swim up rivers. Thousands of kilometres up the Amazon. | Karte zoomt auf Südamerika, ein Bullenhai zieht eine lange Linie den Amazonas hinauf, Kilometerzähler läuft. | **Bullenhai-Roadtrip** |
+| 5 | Like and follow. | Bademeister hält ein Schild „♥ LIKE + FOLLOW +“. | – |
+| 6 | Way three: floods. Bull sharks have been filmed in flooded streets. | 3D-Stadt unter Wasser, eine Rückenflosse zieht zwischen Ampel und Briefkasten vorbei, ein Straßenschild „SPEED LIMIT 30“. | **Hai blinkt an der Ampel** |
+| 7 | In Australia, a flood left bull sharks in a golf course lake. For seventeen years. | 3D-Golfplatz, Golfer schaut ins Wasser, Schild „WATER HAZARD“ wird zu „SHARK HAZARD“. Jahreszähler 1996 → 2013. | **Shark Hazard** |
+| 8 | So: a flooded river, an outdoor pool, a bull shark. When the water drops, it's stuck. | Das Herzstück: Freibad direkt am Fluss, Wasserstand-Anzeige steigt, der Fluss läuft über den Zaun ins Becken, ein Bullenhai schwimmt mit hinein, das Wasser sinkt – er bleibt im Becken. FLOOD ✓. | **Animiertes Szenario** |
+| 9 | Great white: no. Bull shark: possible. If your street floods, stay out of the water. | Urteils-Karte: „GREAT WHITE ✗ · BULL SHARK ✓ (possible)“, darunter Warnschild „FLOOD? STAY OUT OF THE WATER“. | – |
+| 10 | Comment: would you still go swimming? So if anyone asks you: | Bademeister stellt ein neues Schild auf: „NO RUNNING · NO DIVING · NO SHARKS“. Loop zu Frame 1. | **Neues Schild** |
 
-**Gags (8):** Eintritt zahlen, Duschpflicht, passt gerade so, Endlos-Bahnen, Hai schmeckt ab, Riesen-Salzstreuer, Rettungswagen ins Meer, „NO SHARKS“-Schild.
+**Ehrlich bleiben:** Ein bestätigter Fall „Hai im Schwimmbad“ ist nicht dokumentiert – deshalb „possible“, nicht „happened“.
 
-**Schluss-Zeile:** Da es kein Duell ist, schlage ich „Comment what we should put in your pool next.“ vor – das bringt Ideen für die neue Schiene.
+**Fakten-Check:** Wasserleitungen in Bädern haben eher Zentimeter- als Meterquerschnitt (Hai passt nicht). Weiße Haie sind Salzwassertiere.
+Bullenhaie vertragen Süßwasser und wurden weit flussaufwärts gefunden, u. a. tausende Kilometer den Amazonas hinauf (Iquitos, Peru).
+Bullenhaie wurden bei Überschwemmungen in Queensland und Florida in überfluteten Straßen und Parks gefilmt (u. a. Hurrikan Ian 2022,
+Zyklon Seth 2022). Carbrook Golf Club (Queensland): Flut 1996 spülte Bullenhaie in einen See, gesichtet bis 2013 (≈ 17 Jahre).
 
-**Fakten-Check:** Weiße Haie werden meist 4–5 m lang, große Weibchen bis ca. 6 m, Gewicht oft über 1 Tonne. Sie atmen durch
-„Stauatmung“ (ram ventilation) und müssen schwimmen, damit Wasser über die Kiemen strömt. Weiße Haie sind Salzwassertiere und
-überleben in Süßwasser nicht. Meerwasser hat ca. 35 g Salz pro Liter; ein typisches 25-m-Becken (25 × 12,5 × 2 m ≈ 625 m³) bräuchte
-also rund 22 Tonnen Salz → „about twenty tonnes“.
-
-**Länge:** ~105 Wörter → ca. 46 s. **Caption:** „Could a great white shark enter your local swimming pool? 🦈🏊 #shark #greatwhite #swimmingpool #science #shorts“
+**Länge:** ~118 Wörter → ca. 48 s. **Caption:** „Could a shark end up in your local swimming pool? 🦈🏊 We checked every way in. #shark #bullshark #flood #science #shorts“
