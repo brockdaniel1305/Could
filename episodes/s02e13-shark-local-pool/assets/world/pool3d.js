@@ -6,7 +6,11 @@
 //   GOLF   (x ~ -200): a golf course with a lake, a green with a flag, a bunker and trees.
 // buildPool(THREE, scene) -> { crowd(t), flashAt, boardsAt, nets, envAt(cam) }.
 export const POOL = { L: 25, W: 12.5, deck: 0, water: -0.25, river: -26 };
-export const STREET_X = 200, GOLF_X = -200;
+export const STREET_X = 200, GOLF_X = -200, COAST_X = -500;
+// COAST (x ~ -500): a beach, the open sea (z > 13) and a river mouth; the river winds inland (towards -z) through jungle for 400 m.
+export const riverX = (z) => COAST_X + 8 * Math.sin(Math.min(0, z) / 28);
+// the drain pipe from the river bank to the pool (x = PIPE_X), its round mouth in a concrete headwall on the bank
+export const PIPE = { x: -8, y: -0.42, z: -18.12 };
 
 export function buildPool(THREE, scene) {
   const mulberry = (a) => () => { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a);
@@ -85,6 +89,14 @@ export function buildPool(THREE, scene) {
     for (let k = 0; k < 10; k++) { g.beginPath(); const y = rnd() * 256; for (let x = 0; x <= 256; x += 16) g.lineTo(x, y + Math.sin(x / 16 + k) * 3); g.stroke(); } }, [40, 3]);
   const river = flat(600, 16, lam({ map: riverT }), 0, -0.5, POOL.river); flat(600, 1.2, lam({ color: 0x9b8a6a }), 0, -0.2, POOL.river + 8.4); flat(600, 16, lam({ color: 0x5b4a33 }), 0, -1.6, POOL.river);
   for (let k = 0; k < 18; k++) tree(-90 + k * 10 + rnd() * 3, POOL.river - 12 - rnd() * 6, 1.3);
+  // the drain pipe: a concrete headwall on the bank with a small round mouth, the pipe drawn on the grass up to the pool (cutaway)
+  { const conM = lam({ color: 0xb9bcc0 });
+    box(2.6, 1.5, 0.8, conM, PIPE.x, -0.15, -17.7); box(2.8, 0.18, 1.0, conM, PIPE.x, 0.62, -17.7);
+    const hole = new THREE.Mesh(new THREE.CircleGeometry(0.16, 24), new THREE.MeshBasicMaterial({ color: 0x14141f })); hole.position.set(PIPE.x, PIPE.y, PIPE.z); hole.rotation.y = Math.PI; scene.add(hole);
+    const rim = new THREE.Mesh(new THREE.RingGeometry(0.16, 0.24, 24), lam({ color: 0x8a8f98 })); rim.position.set(PIPE.x, PIPE.y, PIPE.z - 0.005); rim.rotation.y = Math.PI; scene.add(rim);
+    const pipe = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 11.4, 16), lam({ color: 0x9aa5b1 })); pipe.rotation.x = Math.PI / 2; pipe.position.set(PIPE.x, 0.12, -11.9); scene.add(pipe);
+    const flow = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 11.4, 12), new THREE.MeshBasicMaterial({ color: 0x7fd3ef })); flow.rotation.x = Math.PI / 2; flow.position.set(PIPE.x, 0.2, -11.9); scene.add(flow); }
+
   // flood water: one big murky plane, raised by __flood(t)
   const floodT = tex(256, 256, (g) => { g.fillStyle = "#6d6a4f"; g.fillRect(0, 0, 256, 256); g.strokeStyle = "rgba(230,220,190,0.3)"; g.lineWidth = 3;
     for (let k = 0; k < 12; k++) { g.beginPath(); const y = rnd() * 256; for (let x = 0; x <= 256; x += 16) g.lineTo(x, y + Math.sin(x / 14 + k) * 4); g.stroke(); } }, [30, 30]);
@@ -126,9 +138,35 @@ export function buildPool(THREE, scene) {
   for (let k = 0; k < 14; k++) tree(GX - 60 + k * 9 + rnd() * 3, -40 - rnd() * 10, 1.4);
   for (let k = 0; k < 6; k++) tree(GX + 45 + rnd() * 10, -20 + k * 9, 1.2);
 
+  // ======================= COAST: sea, beach, river mouth, a long jungle river (the Amazon) =======================
+  const CX = COAST_X;
+  const sandM = lam({ color: 0xead9a8 });
+  flat(140, 12, sandM, CX, 0.0, 8);
+  const seaT = tex(256, 256, (g) => { g.fillStyle = "#1f6fb8"; g.fillRect(0, 0, 256, 256); g.strokeStyle = "rgba(255,255,255,0.35)"; g.lineWidth = 3;
+    for (let k = 0; k < 14; k++) { g.beginPath(); const y = rnd() * 256; for (let x = 0; x <= 256; x += 16) g.lineTo(x, y + Math.sin(x / 13 + k) * 4); g.stroke(); } }, [30, 24]);
+  const sea = new THREE.Mesh(new THREE.PlaneGeometry(500, 400), lam({ map: seaT })); sea.rotation.x = -Math.PI / 2; sea.position.set(CX, 0.03, 13 + 200); sea.userData.noFg = true; scene.add(sea);
+  for (let k = 0; k < 7; k++) { const w = new THREE.Mesh(new THREE.BoxGeometry(60, 0.04, 0.5), lam({ color: 0xffffff })); w.position.set(CX - 40 + k * 14, 0.05, 14 + (k % 3) * 0.7); w.userData.noFg = true; scene.add(w); }
+  const fresh = tex(256, 256, (g) => { g.fillStyle = "#4f8f6a"; g.fillRect(0, 0, 256, 256); g.strokeStyle = "rgba(255,255,255,0.25)"; g.lineWidth = 3;
+    for (let k = 0; k < 10; k++) { g.beginPath(); const x0 = rnd() * 256; for (let y = 0; y <= 256; y += 16) g.lineTo(x0 + Math.sin(y / 15 + k) * 3, y); g.stroke(); } });
+  fresh.wrapS = fresh.wrapT = THREE.RepeatWrapping;
+  const ribbon = (half, y, mat, uvScale) => { const pos = [], uv = [], idx = []; let n = 0;
+    for (let z = 15; z >= -430; z -= 2) { const x = riverX(z), dx = riverX(z - 1) - riverX(z + 1), len = Math.hypot(dx, 2), nx = 2 / len, nz = dx / len;
+      const w = half * (z > 4 ? 1 + (z - 4) * 0.12 : 1);
+      pos.push(x - nx * w, y, z - nz * w, x + nx * w, y, z + nz * w); uv.push(0, -z / uvScale, 1, -z / uvScale);
+      if (n) idx.push(2 * n - 2, 2 * n, 2 * n - 1, 2 * n - 1, 2 * n, 2 * n + 1); n++; }
+    const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2)); g.setIndex(idx); g.computeVertexNormals();
+    const m = new THREE.Mesh(g, mat); m.material.side = THREE.DoubleSide; m.userData.noFg = true; scene.add(m); return m; };
+  ribbon(6.2, 0.033, lam({ color: 0x7a6440 }), 10); ribbon(4.6, 0.04, lam({ map: fresh }), 12);
+  const jungleM = lam({ color: 0x2f7d32, flatShading: true }), jungle2 = lam({ color: 0x4caf50, flatShading: true });
+  for (let z = 2; z >= -420; z -= 4.5) for (const sd of [-1, 1]) { const d = 11 + rnd() * 12, x = riverX(z) + sd * d, sc = 1.2 + rnd() * 0.8;
+    box(0.35 * sc, 3 * sc, 0.35 * sc, trunkM, x, 1.5 * sc, z); const c = new THREE.Mesh(new THREE.IcosahedronGeometry(2.3 * sc, 0), rnd() > 0.5 ? jungleM : jungle2); c.position.set(x, 3.7 * sc, z); scene.add(c); }
+  for (let k = 0; k < 8; k++) { const x = CX - 40 + k * 11 + (k > 3 ? 8 : 0), z = 5 + rnd() * 3;          // palms on the beach
+    const tr = box(0.3, 4.2, 0.3, trunkM, x, 2.1, z); tr.rotation.z = (rnd() - 0.5) * 0.3;
+    for (let q = 0; q < 5; q++) { const l = box(2.6, 0.1, 0.6, leafM, x + Math.cos(q * 1.26) * 1.1, 4.2, z + Math.sin(q * 1.26) * 1.1); l.rotation.y = -q * 1.26; l.rotation.z = -0.35; } }
+
   const lvl = () => (typeof globalThis.__flood === "function" ? globalThis.__flood : () => 0);
   const crowd = (t) => {
-    waterT.offset.set((t * 0.01) % 1, (t * 0.006) % 1); riverT.offset.x = (t * 0.03) % 1; floodT.offset.set((t * 0.012) % 1, (t * 0.008) % 1); lakeT.offset.x = (t * 0.005) % 1;
+    waterT.offset.set((t * 0.01) % 1, (t * 0.006) % 1); riverT.offset.x = (t * 0.03) % 1; seaT.offset.set((t * 0.01) % 1, (t * 0.004) % 1); fresh.offset.y = (t * 0.08) % 1; floodT.offset.set((t * 0.012) % 1, (t * 0.008) % 1); lakeT.offset.x = (t * 0.005) % 1;
     const h = lvl()(t); flood.position.y = h <= 0 ? -5 : -0.5 + h;              // h = metres above the river surface
     river.position.y = -0.52;
     lamps.forEach((m, k) => (m.visible = Math.floor(t * 1.2) % 3 === k));

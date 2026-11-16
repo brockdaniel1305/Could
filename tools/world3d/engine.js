@@ -276,7 +276,7 @@ export function createWorld(plot) {
       const pr = project(pos[0], pos[1], pos[2], p.h);
       if (!on || !pr.vis) { p.node.style.display = "none"; continue; }
       p.node.style.display = "block";
-      p.node.style.transform = `translate(${pr.X.toFixed(1)}px, ${pr.Y.toFixed(1)}px) scale(${(Math.abs(pr.h) / p.unit).toFixed(4)}) rotate(${p.rot ? p.rot(t) : 0}deg)`;
+      p.node.style.transform = `translate(${pr.X.toFixed(1)}px, ${pr.Y.toFixed(1)}px) scale(${(Math.abs(pr.h) / p.unit * (p.sc ? p.sc(t)[0] : 1)).toFixed(4)}, ${(Math.abs(pr.h) / p.unit * (p.sc ? p.sc(t)[1] : 1)).toFixed(4)}) rotate(${p.rot ? p.rot(t) : 0}deg)`;   // sc(t) -> [sx, sy] squash / flip
       p.node.style.zIndex = String(5000 - Math.round(pr.dist * 20));
     }
     // bubbles over actors' heads

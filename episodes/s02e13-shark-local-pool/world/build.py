@@ -45,7 +45,31 @@ def sign(name, lines, bg="#f4f4f2", fg="#14141f", w=380):
                   w + 40, h + 120, h + 80)
 
 
-sprites = [fin("BULL", "#8a8370", "#c9c0a8"), fin("GW", "#7c8794", "#e9eef5"), fin("BULL2", "#8a8370", "#c9c0a8"),
+def body(name, col, belly, water):
+    # a whole shark side-on at the surface (nose right), the lower half under a band of water; origin = water line
+    shark = (f'<path d="M-150,0 Q-60,-62 90,-30 Q140,-20 170,-2 Q140,22 90,26 Q-60,52 -150,0 Z" fill="{col}" stroke="#14141f" stroke-width="6" stroke-linejoin="round"/>'
+             f'<path d="M-120,12 Q-40,40 90,22 Q40,8 -120,12 Z" fill="{belly}"/>'
+             f'<path d="M-20,-46 Q10,-120 50,-118 Q30,-80 40,-34 Z" fill="{col}" stroke="#14141f" stroke-width="6" stroke-linejoin="round"/>'
+             f'<path d="M-150,0 L-215,-60 Q-200,0 -215,56 Z" fill="{col}" stroke="#14141f" stroke-width="6" stroke-linejoin="round"/>'
+             '<circle cx="110" cy="-10" r="8" fill="#14141f"/><circle cx="113" cy="-13" r="2.5" fill="#fff"/>'
+             '<path d="M70,-14 Q74,0 70,12 M58,-16 Q62,0 58,14 M46,-16 Q50,0 46,16" fill="none" stroke="#14141f" stroke-width="4"/>'
+             '<path d="M120,10 Q140,18 160,6" fill="none" stroke="#14141f" stroke-width="4"/><path d="M126,12 l4,7 l4,-6 l4,7 l4,-6 l4,6" fill="#fff" stroke="#14141f" stroke-width="2"/>')
+    return sprite(name, f'<g transform="translate(0,-4)">{shark}</g><defs><linearGradient id="wb{name}" x1="0" x2="1"><stop offset="0" stop-color="{water}" stop-opacity="0"/><stop offset="0.15" stop-color="{water}"/><stop offset="0.85" stop-color="{water}"/><stop offset="1" stop-color="{water}" stop-opacity="0"/></linearGradient></defs><rect x="-250" y="2" width="460" height="34" fill="url(#wb{name})" opacity="0.95"/>'
+                        '<path d="M-240,4 Q-210,-6 -180,4 T-120,4 T-60,4 T0,4 T60,4 T120,4 T180,4 T200,4" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.85"/>',
+                  480, 260, 150)
+
+
+CUTOUT = ('<rect x="-7" y="-40" width="14" height="60" fill="#a8743f" stroke="#14141f" stroke-width="4"/>'
+          '<path d="M-150,-30 Q-110,-190 30,-200 Q-10,-120 60,-30 Z" fill="#c9a26b" stroke="#14141f" stroke-width="6" stroke-linejoin="round"/>'
+          '<path d="M-138,-36 Q-100,-180 22,-192 Q-16,-118 50,-36 Z" fill="#7c8794"/>'
+          '<path d="M-150,-30 L60,-30" stroke="#14141f" stroke-width="6"/>')
+
+sprites = [body("SHK", "#8a8370", "#c9c0a8", "#3a8394"), fin("BULL3", "#8a8370", "#c9c0a8"), sprite("cut", CUTOUT, 340, 280, 230), sprite("cutfin", CUTOUT.split("/>", 1)[1], 340, 280, 230),
+           sign("pipe10", ["PIPE", "Ø 10 cm"], "#f4f4f2", "#14141f", 240), sign("salt", ["SEA", "SALT WATER"], "#1d3f9b", "#ffffff", 330),
+           sign("fresh", ["RIVER", "FRESH WATER"], "#2bb34a", "#ffffff", 340), sign("deadend", ["DEAD END"], "#ffd23f", "#14141f", 320),
+           sign("amz", ["AMAZON"], "#2bb34a", "#ffffff", 300), sign("iq", ["IQUITOS · PERU", "4,000 km"], "#ffd23f", "#14141f", 380),
+           sign("hwy", ["HIGHWAY"], "#1f9d55", "#ffffff", 300),
+           fin("BULL", "#8a8370", "#c9c0a8"), fin("GW", "#7c8794", "#e9eef5"), fin("BULL2", "#8a8370", "#c9c0a8"),
            athlete("LG", CAP, "#d8202c", "#d8202c", "#c68863"), athlete("GOLF", HAIR("#6b4a2a"), "#f4f4f2", "#2a2a33", "#e3b48c"),
            sprite("FLOAT1", FLOAT, 300, 140, 110), sprite("FLOAT2", FLOAT.replace("#ff7a59", "#4f9dff").replace("#ffb199", "#9cc8ff"), 300, 140, 110),
            sprite("cup", CUP, 80, 130, 110), sprite("club", CLUB, 60, 170, 160),
@@ -60,6 +84,9 @@ write(EP, sprites, "", extra_css="""
              font: 900 40px/1.25 "Inter"; color: #f4f4f2; }
     .check .h { font: 700 22px/1 "CouldMono"; color: #ffd23f; letter-spacing: 0.18em; margin-bottom: 10px; }
     .check span { display: inline-block; width: 46px; text-align: center; margin-right: 8px; } .check .x { color: #ff5a4f; } .check .ok { color: #4ee07a; } .check .q { color: #8a94a1; }
+    .stamp { left: 140px; top: 640px; padding: 10px 40px; border: 16px solid #d8202c; border-radius: 18px; font: 900 170px/1 "Inter"; color: #d8202c;
+             transform-origin: 50% 50%; background: rgba(255,255,255,0.15); }
+    .kmc { left: 60px; right: 60px; top: 640px; text-align: center; font: 700 96px/1 "CouldMono"; color: #ffd23f; text-shadow: 0 5px 0 #14141f, 0 0 12px #14141f; }
     .panel { left: 50px; right: 50px; top: 470px; height: 760px; background: #f4efe6; border: 7px solid #14141f; border-radius: 22px; box-shadow: 10px 10px 0 #14141f; overflow: hidden; }
     .panel .cap { position: absolute; left: 24px; top: 18px; font: 700 26px/1 "CouldMono"; color: #14141f; letter-spacing: 0.14em; }
     .gauge { left: auto; right: 40px; top: 300px; width: 120px; height: 520px; background: #14141f; border: 5px solid #f4f4f2; border-radius: 16px; }
