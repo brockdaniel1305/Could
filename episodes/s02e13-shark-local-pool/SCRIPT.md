@@ -1,4 +1,4 @@
-# S2E13 · Could a shark end up in your local swimming pool? (~56 s, Loop) – Skript v3 zur Freigabe (länger)
+# S2E13 · Could a shark end up in your local swimming pool? (~51 s, Loop) – Skript v3 (freigegeben)
 Neue Schiene: echtes Gedankenexperiment. Wir prüfen ernsthaft jeden Weg, auf dem ein Hai ins Freibad gelangen könnte,
 und zeigen jeden Weg als saubere Animation. Mischung aus 3D (Freibad an einem Fluss, Stadt, Golfplatz-See) und klaren
 2D-Erklärgrafiken (Rohr-Querschnitt, animierte Karte, Wasserstand-Anzeige). Ergebnis ehrlich: Weißer Hai nein, Bullenhai möglich.

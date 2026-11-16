@@ -1,0 +1,882 @@
+{
+ "duration": 51.06,
+ "voice": "prerecorded:elevenlabs:bilbop (R23cI2hqxAhT17IXmY7O)",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 4.21,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 3.66,
+   "cues": {
+    "q": 0.15,
+    "check": 2.47
+   },
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.463
+    },
+    {
+     "text": "a",
+     "start": 0.463,
+     "end": 0.525
+    },
+    {
+     "text": "shark",
+     "start": 0.525,
+     "end": 0.838
+    },
+    {
+     "text": "end",
+     "start": 0.838,
+     "end": 1.025
+    },
+    {
+     "text": "up",
+     "start": 1.025,
+     "end": 1.15
+    },
+    {
+     "text": "in",
+     "start": 1.15,
+     "end": 1.275
+    },
+    {
+     "text": "your",
+     "start": 1.275,
+     "end": 1.525
+    },
+    {
+     "text": "local",
+     "start": 1.525,
+     "end": 1.838
+    },
+    {
+     "text": "pool?",
+     "start": 1.838,
+     "end": 2.15
+    },
+    {
+     "text": "Let's",
+     "start": 2.47,
+     "end": 2.756
+    },
+    {
+     "text": "check",
+     "start": 2.756,
+     "end": 3.041
+    },
+    {
+     "text": "every",
+     "start": 3.041,
+     "end": 3.327
+    },
+    {
+     "text": "way",
+     "start": 3.327,
+     "end": 3.499
+    },
+    {
+     "text": "in.",
+     "start": 3.499,
+     "end": 3.67
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 1.3,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s2-pipes",
+   "start": 4.21,
+   "duration": 5.24,
+   "voice": "assets/voice/s2-pipes.wav",
+   "voiceStart": 0.15,
+   "speech": 4.69,
+   "cues": {
+    "w1": 0.15,
+    "cm": 1.76,
+    "not": 3.53
+   },
+   "words": [
+    {
+     "text": "Way",
+     "start": 0.15,
+     "end": 0.441
+    },
+    {
+     "text": "one:",
+     "start": 0.441,
+     "end": 0.636
+    },
+    {
+     "text": "the",
+     "start": 0.636,
+     "end": 0.927
+    },
+    {
+     "text": "pipes.",
+     "start": 0.927,
+     "end": 1.51
+    },
+    {
+     "text": "They're",
+     "start": 1.76,
+     "end": 2.197
+    },
+    {
+     "text": "ten",
+     "start": 2.197,
+     "end": 2.422
+    },
+    {
+     "text": "centimetres",
+     "start": 2.422,
+     "end": 3.008
+    },
+    {
+     "text": "wide.",
+     "start": 3.008,
+     "end": 3.32
+    },
+    {
+     "text": "A",
+     "start": 3.53,
+     "end": 3.623
+    },
+    {
+     "text": "shark",
+     "start": 3.623,
+     "end": 4.09
+    },
+    {
+     "text": "is",
+     "start": 4.09,
+     "end": 4.277
+    },
+    {
+     "text": "not.",
+     "start": 4.277,
+     "end": 4.65
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s3-sea",
+   "start": 9.45,
+   "duration": 5.16,
+   "voice": "assets/voice/s3-sea.wav",
+   "voiceStart": 0.15,
+   "speech": 4.61,
+   "cues": {
+    "w2": 0.15,
+    "salt": 1.78,
+    "dead": 3.94
+   },
+   "words": [
+    {
+     "text": "Way",
+     "start": 0.15,
+     "end": 0.5
+    },
+    {
+     "text": "two:",
+     "start": 0.5,
+     "end": 0.733
+    },
+    {
+     "text": "the",
+     "start": 0.733,
+     "end": 1.083
+    },
+    {
+     "text": "sea.",
+     "start": 1.083,
+     "end": 1.55
+    },
+    {
+     "text": "Great",
+     "start": 1.78,
+     "end": 2.156
+    },
+    {
+     "text": "whites",
+     "start": 2.156,
+     "end": 2.607
+    },
+    {
+     "text": "need",
+     "start": 2.607,
+     "end": 2.908
+    },
+    {
+     "text": "salt",
+     "start": 2.908,
+     "end": 3.209
+    },
+    {
+     "text": "water.",
+     "start": 3.209,
+     "end": 3.66
+    },
+    {
+     "text": "Dead",
+     "start": 3.94,
+     "end": 4.3
+    },
+    {
+     "text": "end.",
+     "start": 4.3,
+     "end": 4.66
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-bull",
+   "start": 14.61,
+   "duration": 4.63,
+   "voice": "assets/voice/s4-bull.wav",
+   "voiceStart": 0.15,
+   "speech": 4.08,
+   "cues": {
+    "bull": 0.15,
+    "amazon": 2.24
+   },
+   "words": [
+    {
+     "text": "But",
+     "start": 0.15,
+     "end": 0.381
+    },
+    {
+     "text": "bull",
+     "start": 0.381,
+     "end": 0.688
+    },
+    {
+     "text": "sharks",
+     "start": 0.688,
+     "end": 1.15
+    },
+    {
+     "text": "swim",
+     "start": 1.15,
+     "end": 1.458
+    },
+    {
+     "text": "up",
+     "start": 1.458,
+     "end": 1.612
+    },
+    {
+     "text": "rivers.",
+     "start": 1.612,
+     "end": 2.15
+    },
+    {
+     "text": "Thousands",
+     "start": 2.24,
+     "end": 2.785
+    },
+    {
+     "text": "of",
+     "start": 2.785,
+     "end": 2.907
+    },
+    {
+     "text": "kilometres",
+     "start": 2.907,
+     "end": 3.513
+    },
+    {
+     "text": "up",
+     "start": 3.513,
+     "end": 3.634
+    },
+    {
+     "text": "the",
+     "start": 3.634,
+     "end": 3.816
+    },
+    {
+     "text": "Amazon.",
+     "start": 3.816,
+     "end": 4.24
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s5-follow",
+   "start": 19.24,
+   "duration": 1.6,
+   "voice": "assets/voice/s5-follow.wav",
+   "voiceStart": 0.15,
+   "speech": 1.05,
+   "cues": {
+    "follow": 0.15
+   },
+   "words": [
+    {
+     "text": "Like",
+     "start": 0.15,
+     "end": 0.436
+    },
+    {
+     "text": "and",
+     "start": 0.436,
+     "end": 0.65
+    },
+    {
+     "text": "follow.",
+     "start": 0.65,
+     "end": 1.15
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s6-flood",
+   "start": 20.84,
+   "duration": 7.52,
+   "voice": "assets/voice/s6-flood.wav",
+   "voiceStart": 0.15,
+   "speech": 6.97,
+   "cues": {
+    "w3": 0.15,
+    "street": 1.89,
+    "fake": 4.49
+   },
+   "words": [
+    {
+     "text": "Way",
+     "start": 0.15,
+     "end": 0.515
+    },
+    {
+     "text": "three:",
+     "start": 0.515,
+     "end": 0.758
+    },
+    {
+     "text": "floods.",
+     "start": 0.758,
+     "end": 1.61
+    },
+    {
+     "text": "Bull",
+     "start": 1.89,
+     "end": 2.124
+    },
+    {
+     "text": "sharks",
+     "start": 2.124,
+     "end": 2.436
+    },
+    {
+     "text": "have",
+     "start": 2.436,
+     "end": 2.655
+    },
+    {
+     "text": "been",
+     "start": 2.655,
+     "end": 2.873
+    },
+    {
+     "text": "filmed",
+     "start": 2.873,
+     "end": 3.201
+    },
+    {
+     "text": "in",
+     "start": 3.201,
+     "end": 3.31
+    },
+    {
+     "text": "flooded",
+     "start": 3.31,
+     "end": 3.693
+    },
+    {
+     "text": "streets.",
+     "start": 3.693,
+     "end": 4.13
+    },
+    {
+     "text": "And",
+     "start": 4.49,
+     "end": 4.667
+    },
+    {
+     "text": "no:",
+     "start": 4.667,
+     "end": 4.845
+    },
+    {
+     "text": "the",
+     "start": 4.845,
+     "end": 5.022
+    },
+    {
+     "text": "famous",
+     "start": 5.022,
+     "end": 5.376
+    },
+    {
+     "text": "shark",
+     "start": 5.376,
+     "end": 5.672
+    },
+    {
+     "text": "on",
+     "start": 5.672,
+     "end": 5.79
+    },
+    {
+     "text": "the",
+     "start": 5.79,
+     "end": 5.967
+    },
+    {
+     "text": "highway",
+     "start": 5.967,
+     "end": 6.381
+    },
+    {
+     "text": "photo",
+     "start": 6.381,
+     "end": 6.676
+    },
+    {
+     "text": "is",
+     "start": 6.676,
+     "end": 6.795
+    },
+    {
+     "text": "fake.",
+     "start": 6.795,
+     "end": 7.09
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "fake",
+     "offset": 2.2,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s7-golf",
+   "start": 28.36,
+   "duration": 5.0,
+   "voice": "assets/voice/s7-golf.wav",
+   "voiceStart": 0.15,
+   "speech": 4.45,
+   "cues": {
+    "golf": 0.15,
+    "years": 3.42
+   },
+   "words": [
+    {
+     "text": "In",
+     "start": 0.15,
+     "end": 0.268
+    },
+    {
+     "text": "Australia,",
+     "start": 0.268,
+     "end": 0.856
+    },
+    {
+     "text": "a",
+     "start": 0.856,
+     "end": 0.915
+    },
+    {
+     "text": "flood",
+     "start": 0.915,
+     "end": 1.209
+    },
+    {
+     "text": "left",
+     "start": 1.209,
+     "end": 1.444
+    },
+    {
+     "text": "bull",
+     "start": 1.444,
+     "end": 1.679
+    },
+    {
+     "text": "sharks",
+     "start": 1.679,
+     "end": 2.032
+    },
+    {
+     "text": "in",
+     "start": 2.032,
+     "end": 2.209
+    },
+    {
+     "text": "a",
+     "start": 2.209,
+     "end": 2.268
+    },
+    {
+     "text": "golf",
+     "start": 2.268,
+     "end": 2.503
+    },
+    {
+     "text": "course",
+     "start": 2.503,
+     "end": 2.856
+    },
+    {
+     "text": "lake.",
+     "start": 2.856,
+     "end": 3.22
+    },
+    {
+     "text": "For",
+     "start": 3.42,
+     "end": 3.758
+    },
+    {
+     "text": "seventeen",
+     "start": 3.758,
+     "end": 3.984
+    },
+    {
+     "text": "years.",
+     "start": 3.984,
+     "end": 4.66
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s8-pool",
+   "start": 33.36,
+   "duration": 7.77,
+   "voice": "assets/voice/s8-pool.wav",
+   "voiceStart": 0.15,
+   "speech": 7.22,
+   "cues": {
+    "so": 0.15,
+    "drop": 3.39,
+    "guard": 5.39
+   },
+   "words": [
+    {
+     "text": "So:",
+     "start": 0.15,
+     "end": 0.29
+    },
+    {
+     "text": "a",
+     "start": 0.29,
+     "end": 0.361
+    },
+    {
+     "text": "flooded",
+     "start": 0.361,
+     "end": 0.852
+    },
+    {
+     "text": "river,",
+     "start": 0.852,
+     "end": 1.274
+    },
+    {
+     "text": "an",
+     "start": 1.274,
+     "end": 1.414
+    },
+    {
+     "text": "outdoor",
+     "start": 1.414,
+     "end": 1.906
+    },
+    {
+     "text": "pool,",
+     "start": 1.906,
+     "end": 2.257
+    },
+    {
+     "text": "a",
+     "start": 2.257,
+     "end": 2.328
+    },
+    {
+     "text": "bull",
+     "start": 2.328,
+     "end": 2.609
+    },
+    {
+     "text": "shark.",
+     "start": 2.609,
+     "end": 3.03
+    },
+    {
+     "text": "When",
+     "start": 3.39,
+     "end": 3.619
+    },
+    {
+     "text": "the",
+     "start": 3.619,
+     "end": 3.79
+    },
+    {
+     "text": "water",
+     "start": 3.79,
+     "end": 4.076
+    },
+    {
+     "text": "drops,",
+     "start": 4.076,
+     "end": 4.419
+    },
+    {
+     "text": "it's",
+     "start": 4.419,
+     "end": 4.647
+    },
+    {
+     "text": "stuck.",
+     "start": 4.647,
+     "end": 4.99
+    },
+    {
+     "text": "Then",
+     "start": 5.39,
+     "end": 5.595
+    },
+    {
+     "text": "the",
+     "start": 5.595,
+     "end": 5.749
+    },
+    {
+     "text": "lifeguard",
+     "start": 5.749,
+     "end": 6.211
+    },
+    {
+     "text": "has",
+     "start": 6.211,
+     "end": 6.364
+    },
+    {
+     "text": "a",
+     "start": 6.364,
+     "end": 6.416
+    },
+    {
+     "text": "very",
+     "start": 6.416,
+     "end": 6.621
+    },
+    {
+     "text": "strange",
+     "start": 6.621,
+     "end": 6.98
+    },
+    {
+     "text": "morning.",
+     "start": 6.98,
+     "end": 7.39
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "cue": "guard",
+     "offset": 1.6,
+     "volume": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s9-verdict",
+   "start": 41.13,
+   "duration": 5.97,
+   "voice": "assets/voice/s9-verdict.wav",
+   "voiceStart": 0.15,
+   "speech": 5.42,
+   "cues": {
+    "gw": 0.15,
+    "bs": 1.78,
+    "safe": 3.39
+   },
+   "words": [
+    {
+     "text": "Great",
+     "start": 0.15,
+     "end": 0.579
+    },
+    {
+     "text": "white:",
+     "start": 0.579,
+     "end": 1.093
+    },
+    {
+     "text": "no.",
+     "start": 1.093,
+     "end": 1.35
+    },
+    {
+     "text": "Bull",
+     "start": 1.78,
+     "end": 2.18
+    },
+    {
+     "text": "shark:",
+     "start": 2.18,
+     "end": 2.78
+    },
+    {
+     "text": "possible.",
+     "start": 2.78,
+     "end": 2.78
+    },
+    {
+     "text": "If",
+     "start": 3.39,
+     "end": 3.507
+    },
+    {
+     "text": "your",
+     "start": 3.507,
+     "end": 3.74
+    },
+    {
+     "text": "street",
+     "start": 3.74,
+     "end": 4.091
+    },
+    {
+     "text": "floods,",
+     "start": 4.091,
+     "end": 4.499
+    },
+    {
+     "text": "stay",
+     "start": 4.499,
+     "end": 4.733
+    },
+    {
+     "text": "out",
+     "start": 4.733,
+     "end": 4.908
+    },
+    {
+     "text": "of",
+     "start": 4.908,
+     "end": 5.025
+    },
+    {
+     "text": "the",
+     "start": 5.025,
+     "end": 5.2
+    },
+    {
+     "text": "water.",
+     "start": 5.2,
+     "end": 5.55
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s10-end",
+   "start": 47.1,
+   "duration": 3.96,
+   "voice": "assets/voice/s10-end.wav",
+   "voiceStart": 0.15,
+   "speech": 3.51,
+   "cues": {
+    "who": 0.15,
+    "loop": 2.39
+   },
+   "words": [
+    {
+     "text": "Comment:",
+     "start": 0.15,
+     "end": 0.625
+    },
+    {
+     "text": "would",
+     "start": 0.625,
+     "end": 0.922
+    },
+    {
+     "text": "you",
+     "start": 0.922,
+     "end": 1.1
+    },
+    {
+     "text": "still",
+     "start": 1.1,
+     "end": 1.397
+    },
+    {
+     "text": "go",
+     "start": 1.397,
+     "end": 1.516
+    },
+    {
+     "text": "swimming?",
+     "start": 1.516,
+     "end": 2.05
+    },
+    {
+     "text": "So",
+     "start": 2.39,
+     "end": 2.528
+    },
+    {
+     "text": "if",
+     "start": 2.528,
+     "end": 2.666
+    },
+    {
+     "text": "anyone",
+     "start": 2.666,
+     "end": 3.079
+    },
+    {
+     "text": "asks",
+     "start": 3.079,
+     "end": 3.354
+    },
+    {
+     "text": "you:",
+     "start": 3.354,
+     "end": 3.63
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whistle",
+     "cue": "who",
+     "offset": -0.2,
+     "volume": 0.25
+    }
+   ]
+  }
+ ]
+}

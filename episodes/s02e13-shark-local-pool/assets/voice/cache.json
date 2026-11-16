@@ -1,0 +1,812 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "dff1287a5b9dca73f27394647b474fbf553c48f3",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.313
+   },
+   {
+    "text": "a",
+    "start": 0.313,
+    "end": 0.375
+   },
+   {
+    "text": "shark",
+    "start": 0.375,
+    "end": 0.688
+   },
+   {
+    "text": "end",
+    "start": 0.688,
+    "end": 0.875
+   },
+   {
+    "text": "up",
+    "start": 0.875,
+    "end": 1
+   },
+   {
+    "text": "in",
+    "start": 1,
+    "end": 1.125
+   },
+   {
+    "text": "your",
+    "start": 1.125,
+    "end": 1.375
+   },
+   {
+    "text": "local",
+    "start": 1.375,
+    "end": 1.688
+   },
+   {
+    "text": "pool?",
+    "start": 1.688,
+    "end": 2
+   }
+  ]
+ },
+ "s1-hook.part1.wav": {
+  "key": "f328151901a7d1d4d67c0d91dd3e64d30c82ba0e",
+  "words": [
+   {
+    "text": "Let's",
+    "start": 0,
+    "end": 0.286
+   },
+   {
+    "text": "check",
+    "start": 0.286,
+    "end": 0.571
+   },
+   {
+    "text": "every",
+    "start": 0.571,
+    "end": 0.857
+   },
+   {
+    "text": "way",
+    "start": 0.857,
+    "end": 1.029
+   },
+   {
+    "text": "in.",
+    "start": 1.029,
+    "end": 1.2
+   }
+  ]
+ },
+ "s2-pipes.part0.wav": {
+  "key": "bd0e202f8ded6fd4e4180538c19509ad80005402",
+  "words": [
+   {
+    "text": "Way",
+    "start": 0,
+    "end": 0.291
+   },
+   {
+    "text": "1,",
+    "start": 0.291,
+    "end": 0.486
+   },
+   {
+    "text": "the",
+    "start": 0.486,
+    "end": 0.777
+   },
+   {
+    "text": "pipes.",
+    "start": 0.777,
+    "end": 1.36
+   }
+  ]
+ },
+ "s2-pipes.part1.wav": {
+  "key": "6c36fe50da0de9b677c49fe1d7af256c2f9309e9",
+  "words": [
+   {
+    "text": "They're",
+    "start": 0,
+    "end": 0.437
+   },
+   {
+    "text": "10",
+    "start": 0.437,
+    "end": 0.562
+   },
+   {
+    "text": "centimeters",
+    "start": 0.562,
+    "end": 1.248
+   },
+   {
+    "text": "wide.",
+    "start": 1.248,
+    "end": 1.56
+   }
+  ]
+ },
+ "s2-pipes.part2.wav": {
+  "key": "3b9c5c9d8afac3e3d34b99102ecbb1ac1fcdeaeb",
+  "words": [
+   {
+    "text": "A",
+    "start": 0,
+    "end": 0.093
+   },
+   {
+    "text": "shark",
+    "start": 0.093,
+    "end": 0.56
+   },
+   {
+    "text": "is",
+    "start": 0.56,
+    "end": 0.747
+   },
+   {
+    "text": "not.",
+    "start": 0.747,
+    "end": 1.12
+   }
+  ]
+ },
+ "s3-sea.part0.wav": {
+  "key": "0ad55054391aa8f6c371abeb55e11399f5b6d9fa",
+  "words": [
+   {
+    "text": "Way",
+    "start": 0,
+    "end": 0.35
+   },
+   {
+    "text": "to",
+    "start": 0.35,
+    "end": 0.583
+   },
+   {
+    "text": "the",
+    "start": 0.583,
+    "end": 0.933
+   },
+   {
+    "text": "sea.",
+    "start": 0.933,
+    "end": 1.4
+   }
+  ]
+ },
+ "s3-sea.part1.wav": {
+  "key": "7384665571e366fe0e305cf46a688c56954e7bc2",
+  "words": [
+   {
+    "text": "Great",
+    "start": 0,
+    "end": 0.376
+   },
+   {
+    "text": "whites",
+    "start": 0.376,
+    "end": 0.827
+   },
+   {
+    "text": "need",
+    "start": 0.827,
+    "end": 1.128
+   },
+   {
+    "text": "salt",
+    "start": 1.128,
+    "end": 1.429
+   },
+   {
+    "text": "water.",
+    "start": 1.429,
+    "end": 1.88
+   }
+  ]
+ },
+ "s3-sea.part2.wav": {
+  "key": "2a25afa4f5374db53e49053204ff5075f40c265c",
+  "words": [
+   {
+    "text": "Dead",
+    "start": 0,
+    "end": 0.36
+   },
+   {
+    "text": "end.",
+    "start": 0.36,
+    "end": 0.72
+   }
+  ]
+ },
+ "s4-bull.part0.wav": {
+  "key": "8a63b7641d747f7502197dd40f054bca6d505742",
+  "words": [
+   {
+    "text": "but",
+    "start": 0,
+    "end": 0.231
+   },
+   {
+    "text": "bull",
+    "start": 0.231,
+    "end": 0.538
+   },
+   {
+    "text": "sharks",
+    "start": 0.538,
+    "end": 1
+   },
+   {
+    "text": "swim",
+    "start": 1,
+    "end": 1.308
+   },
+   {
+    "text": "up",
+    "start": 1.308,
+    "end": 1.462
+   },
+   {
+    "text": "rivers.",
+    "start": 1.462,
+    "end": 2
+   }
+  ]
+ },
+ "s4-bull.part1.wav": {
+  "key": "0aa04860de4a92624f6a51f3e7bedbf1d7141dd0",
+  "words": [
+   {
+    "text": "thousands",
+    "start": 0,
+    "end": 0.545
+   },
+   {
+    "text": "of",
+    "start": 0.545,
+    "end": 0.667
+   },
+   {
+    "text": "kilometers",
+    "start": 0.667,
+    "end": 1.273
+   },
+   {
+    "text": "up",
+    "start": 1.273,
+    "end": 1.394
+   },
+   {
+    "text": "the",
+    "start": 1.394,
+    "end": 1.576
+   },
+   {
+    "text": "Amazon.",
+    "start": 1.576,
+    "end": 2
+   }
+  ]
+ },
+ "s5-follow.part0.wav": {
+  "key": "ec1e9724a6df73d646448013d9ef254214862184",
+  "words": [
+   {
+    "text": "like",
+    "start": 0,
+    "end": 0.286
+   },
+   {
+    "text": "and",
+    "start": 0.286,
+    "end": 0.5
+   },
+   {
+    "text": "follow.",
+    "start": 0.5,
+    "end": 1
+   }
+  ]
+ },
+ "s6-flood.part0.wav": {
+  "key": "c104be23ca6a9dddaa211fdbfbe428bf8c2bed31",
+  "words": [
+   {
+    "text": "Way",
+    "start": 0,
+    "end": 0.365
+   },
+   {
+    "text": "3,",
+    "start": 0.365,
+    "end": 0.608
+   },
+   {
+    "text": "floods.",
+    "start": 0.608,
+    "end": 1.46
+   }
+  ]
+ },
+ "s6-flood.part1.wav": {
+  "key": "df5153a2357e9e5c2f4a1e50b24565c9ea556fda",
+  "words": [
+   {
+    "text": "Bullsharks",
+    "start": 0,
+    "end": 0.546
+   },
+   {
+    "text": "have",
+    "start": 0.546,
+    "end": 0.765
+   },
+   {
+    "text": "been",
+    "start": 0.765,
+    "end": 0.983
+   },
+   {
+    "text": "filmed",
+    "start": 0.983,
+    "end": 1.311
+   },
+   {
+    "text": "in",
+    "start": 1.311,
+    "end": 1.42
+   },
+   {
+    "text": "flooded",
+    "start": 1.42,
+    "end": 1.803
+   },
+   {
+    "text": "streets.",
+    "start": 1.803,
+    "end": 2.24
+   }
+  ]
+ },
+ "s6-flood.part2.wav": {
+  "key": "ab2a82685636430c50fda5f790f087ead52c01e5",
+  "words": [
+   {
+    "text": "And",
+    "start": 0,
+    "end": 0.177
+   },
+   {
+    "text": "no,",
+    "start": 0.177,
+    "end": 0.355
+   },
+   {
+    "text": "the",
+    "start": 0.355,
+    "end": 0.532
+   },
+   {
+    "text": "famous",
+    "start": 0.532,
+    "end": 0.886
+   },
+   {
+    "text": "shark",
+    "start": 0.886,
+    "end": 1.182
+   },
+   {
+    "text": "on",
+    "start": 1.182,
+    "end": 1.3
+   },
+   {
+    "text": "the",
+    "start": 1.3,
+    "end": 1.477
+   },
+   {
+    "text": "highway",
+    "start": 1.477,
+    "end": 1.891
+   },
+   {
+    "text": "photo",
+    "start": 1.891,
+    "end": 2.186
+   },
+   {
+    "text": "is",
+    "start": 2.186,
+    "end": 2.305
+   },
+   {
+    "text": "fake.",
+    "start": 2.305,
+    "end": 2.6
+   }
+  ]
+ },
+ "s7-golf.part0.wav": {
+  "key": "e4aa3f34b13c408548ac0cc275887cb54eca3a41",
+  "words": [
+   {
+    "text": "In",
+    "start": 0,
+    "end": 0.118
+   },
+   {
+    "text": "Australia,",
+    "start": 0.118,
+    "end": 0.706
+   },
+   {
+    "text": "a",
+    "start": 0.706,
+    "end": 0.765
+   },
+   {
+    "text": "flood",
+    "start": 0.765,
+    "end": 1.059
+   },
+   {
+    "text": "left",
+    "start": 1.059,
+    "end": 1.294
+   },
+   {
+    "text": "bull",
+    "start": 1.294,
+    "end": 1.529
+   },
+   {
+    "text": "sharks",
+    "start": 1.529,
+    "end": 1.882
+   },
+   {
+    "text": "and",
+    "start": 1.882,
+    "end": 2.059
+   },
+   {
+    "text": "a",
+    "start": 2.059,
+    "end": 2.118
+   },
+   {
+    "text": "golf",
+    "start": 2.118,
+    "end": 2.353
+   },
+   {
+    "text": "course",
+    "start": 2.353,
+    "end": 2.706
+   },
+   {
+    "text": "late.",
+    "start": 2.706,
+    "end": 3
+   }
+  ]
+ },
+ "s7-golf.part1.wav": {
+  "key": "88138989ef3af5cded9e2edff788d38df35de610",
+  "words": [
+   {
+    "text": "for",
+    "start": 0,
+    "end": 0.338
+   },
+   {
+    "text": "17",
+    "start": 0.338,
+    "end": 0.564
+   },
+   {
+    "text": "years.",
+    "start": 0.564,
+    "end": 1.24
+   }
+  ]
+ },
+ "s8-pool.part0.wav": {
+  "key": "f1fa96c4bb626d4ce93664b4d57df8ef03e417e6",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.14
+   },
+   {
+    "text": "a",
+    "start": 0.14,
+    "end": 0.211
+   },
+   {
+    "text": "flooded",
+    "start": 0.211,
+    "end": 0.702
+   },
+   {
+    "text": "river,",
+    "start": 0.702,
+    "end": 1.124
+   },
+   {
+    "text": "an",
+    "start": 1.124,
+    "end": 1.264
+   },
+   {
+    "text": "outdoor",
+    "start": 1.264,
+    "end": 1.756
+   },
+   {
+    "text": "pool,",
+    "start": 1.756,
+    "end": 2.107
+   },
+   {
+    "text": "a",
+    "start": 2.107,
+    "end": 2.178
+   },
+   {
+    "text": "bull",
+    "start": 2.178,
+    "end": 2.459
+   },
+   {
+    "text": "shark.",
+    "start": 2.459,
+    "end": 2.88
+   }
+  ]
+ },
+ "s8-pool.part1.wav": {
+  "key": "873a15dbf8dc0f7d8da020475034d081bf3ce6c0",
+  "words": [
+   {
+    "text": "when",
+    "start": 0,
+    "end": 0.229
+   },
+   {
+    "text": "the",
+    "start": 0.229,
+    "end": 0.4
+   },
+   {
+    "text": "water",
+    "start": 0.4,
+    "end": 0.686
+   },
+   {
+    "text": "drops,",
+    "start": 0.686,
+    "end": 1.029
+   },
+   {
+    "text": "it's",
+    "start": 1.029,
+    "end": 1.257
+   },
+   {
+    "text": "stuck.",
+    "start": 1.257,
+    "end": 1.6
+   }
+  ]
+ },
+ "s8-pool.part2.wav": {
+  "key": "b07534b595b3e5fbec3cba088faa1481fdb7ed1b",
+  "words": [
+   {
+    "text": "Then",
+    "start": 0,
+    "end": 0.205
+   },
+   {
+    "text": "the",
+    "start": 0.205,
+    "end": 0.359
+   },
+   {
+    "text": "lifeguard",
+    "start": 0.359,
+    "end": 0.821
+   },
+   {
+    "text": "has",
+    "start": 0.821,
+    "end": 0.974
+   },
+   {
+    "text": "a",
+    "start": 0.974,
+    "end": 1.026
+   },
+   {
+    "text": "very",
+    "start": 1.026,
+    "end": 1.231
+   },
+   {
+    "text": "strange",
+    "start": 1.231,
+    "end": 1.59
+   },
+   {
+    "text": "morning.",
+    "start": 1.59,
+    "end": 2
+   }
+  ]
+ },
+ "s9-verdict.part0.wav": {
+  "key": "b70d02bcc2808503b4d3b71a509f2f2707aa94c7",
+  "words": [
+   {
+    "text": "Great",
+    "start": 0,
+    "end": 0.429
+   },
+   {
+    "text": "white,",
+    "start": 0.429,
+    "end": 0.943
+   },
+   {
+    "text": "no?",
+    "start": 0.943,
+    "end": 1.2
+   }
+  ]
+ },
+ "s9-verdict.part1.wav": {
+  "key": "0706e9640aff9542ebc6a88c556510e4ef0f6c60",
+  "words": [
+   {
+    "text": "Bull",
+    "start": 0,
+    "end": 0.4
+   },
+   {
+    "text": "shark.",
+    "start": 0.4,
+    "end": 1
+   },
+   {
+    "text": "Possible.",
+    "start": 1,
+    "end": 1
+   }
+  ]
+ },
+ "s9-verdict.part2.wav": {
+  "key": "cee82d242b03abf01e6f090b9cc2c4ea56d40129",
+  "words": [
+   {
+    "text": "If",
+    "start": 0,
+    "end": 0.117
+   },
+   {
+    "text": "your",
+    "start": 0.117,
+    "end": 0.35
+   },
+   {
+    "text": "street",
+    "start": 0.35,
+    "end": 0.701
+   },
+   {
+    "text": "floods,",
+    "start": 0.701,
+    "end": 1.109
+   },
+   {
+    "text": "stay",
+    "start": 1.109,
+    "end": 1.343
+   },
+   {
+    "text": "out",
+    "start": 1.343,
+    "end": 1.518
+   },
+   {
+    "text": "of",
+    "start": 1.518,
+    "end": 1.635
+   },
+   {
+    "text": "the",
+    "start": 1.635,
+    "end": 1.81
+   },
+   {
+    "text": "water.",
+    "start": 1.81,
+    "end": 2.16
+   }
+  ]
+ },
+ "s10-end.part0.wav": {
+  "key": "864215d7da5dca303c5fc593087ff575f1360423",
+  "words": [
+   {
+    "text": "Comment,",
+    "start": 0,
+    "end": 0.475
+   },
+   {
+    "text": "would",
+    "start": 0.475,
+    "end": 0.772
+   },
+   {
+    "text": "you",
+    "start": 0.772,
+    "end": 0.95
+   },
+   {
+    "text": "still",
+    "start": 0.95,
+    "end": 1.247
+   },
+   {
+    "text": "go",
+    "start": 1.247,
+    "end": 1.366
+   },
+   {
+    "text": "swimming?",
+    "start": 1.366,
+    "end": 1.9
+   }
+  ]
+ },
+ "s10-end.part1.wav": {
+  "key": "b7c8b34900e870f0043ecf4cd40e4def9f52a02c",
+  "words": [
+   {
+    "text": "So",
+    "start": 0,
+    "end": 0.138
+   },
+   {
+    "text": "if",
+    "start": 0.138,
+    "end": 0.276
+   },
+   {
+    "text": "anyone",
+    "start": 0.276,
+    "end": 0.689
+   },
+   {
+    "text": "asks",
+    "start": 0.689,
+    "end": 0.964
+   },
+   {
+    "text": "you.",
+    "start": 0.964,
+    "end": 1.24
+   }
+  ]
+ }
+}

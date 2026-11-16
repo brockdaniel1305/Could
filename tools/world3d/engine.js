@@ -78,7 +78,7 @@ export function createWorld(plot) {
   function actorAt(a, t) {
     const p = a.pos(t), p2 = a.pos(t + 0.05);
     const speed = Math.hypot(p2.x - p.x, p2.z - p.z) / 0.05;
-    let rot = 0, sx = 1, dy = a.y, arms = null, armR = null, show = true, dizzy = false, yawn = false, legs = null;
+    let rot = 0, sx = 1, dy = a.yAt ? a.yAt(t) : a.y, arms = null, armR = null, show = true, dizzy = false, yawn = false, legs = null;
     for (const e of a.ev) {
       const [k, t0, d = 0.6] = e;
       if (t < t0) continue;
