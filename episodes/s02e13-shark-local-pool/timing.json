@@ -473,7 +473,7 @@
      "name": "impact-bass-1",
      "cue": "fake",
      "offset": 2.2,
-     "volume": 0.3
+     "volume": 0.12
     }
    ]
   },
@@ -706,7 +706,7 @@
      "name": "impact-bass-1",
      "cue": "guard",
      "offset": 1.6,
-     "volume": 0.3
+     "volume": 0.12
     }
    ]
   },
