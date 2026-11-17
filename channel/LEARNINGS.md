@@ -9,6 +9,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   ganze Folge (Uhr läuft / Ressource geht aus / Gefahr kommt näher, z. B. Sturm am Horizont), kurz vor der Endkarte passiert etwas
   Unerwartetes, das offen bleibt (Klopfen, Licht, Geräusch), und die A/B-Frage knüpft genau daran an. Humor bleibt, aber leiser:
   kurze trockene Sprüche zwischendurch, nie gegen die Spannung.
+- 2026-11-17 · S3E02 · **Beide A/B-Optionen müssen realistisch und logisch sein** – echte Abwägungen, die ein vernünftiger Mensch in genau
+  dem Moment treffen würde, jede mit einem echten Haken. Keine offensichtlich dumme Option (S3E02 v1 „300 m zu den Felsen rennen, wenn
+  der Sturm schon sichtbar ist“ → v2: „im Auto bleiben, aber Backofen“ vs. „hinters Auto legen, aber Sandstrahl“).
 - 2026-11-17 · S3E01 · **NEUES FORMAT ab Staffel 3: Serie "Could you survive …?" (POV).** Fußball-Nische eingestellt (traf nicht das
   Zielpublikum). Jede Folge beginnt mitten in einer dramatischen Situation (Absturz, Feuer, …) und ist EIN durchgehender Ich-Perspektive-
   Shot wie eine echte Aufnahme: flüssige 3D-Animation ohne Schnitt, keine Sekunde Standbild, kein Erzähler, keine Fakten-Karten.
