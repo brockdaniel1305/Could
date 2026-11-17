@@ -13,7 +13,7 @@ END = cfg["end"]
 
 # engine files
 dst = ep / "assets/pov"; dst.mkdir(parents=True, exist_ok=True)
-for f in ["engine.js", "people.js", "cabin.js"]: shutil.copy(ROOT / "tools/pov" / f, dst / f)
+for f in (ROOT / "tools/pov").glob("*.js"): shutil.copy(f, dst / f.name)
 shutil.copy(ROOT / "tools/world3d/lib/three.module.min.js", dst / "three.module.min.js")
 shutil.copy(ep / "world/director.js", dst / "director.js")
 

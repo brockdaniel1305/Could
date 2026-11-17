@@ -1,0 +1,44 @@
+{
+ "id": "S3E02",
+ "title": "Could you survive being stranded in the desert? (Part 1)",
+ "caption": "Could you survive being stranded in the desert? 🏜️ Part 1 — comment A or B and decide what happens in Part 2. #couldyousurvive #desert #sandstorm #pov #survival #shorts",
+ "end": 41.0,
+ "hook": "Your car just died<br><b>in the desert.</b>",
+ "speakers": {
+  "YOU": {"tag": "", "color": "#bfeeff"},
+  "MAYA": {"tag": "MAYA", "color": "#ffffff"},
+  "RADIO": {"tag": "CAR RADIO", "color": "#ffe8a0"}
+ },
+ "lines": [
+  ["ma_no", "MAYA", 0.35],
+  ["yo_dead", "YOU", 2.35],
+  ["ma_gps", "MAYA", 6.45],
+  ["yo_gps", "YOU", 9.0],
+  ["yo_water", "YOU", 12.95],
+  ["ma_bar1", "MAYA", 17.55],
+  ["ma_bar0", "MAYA", 18.9],
+  ["ma_town", "MAYA", 20.75],
+  ["yo_stay", "YOU", 23.55],
+  ["rd_warn", "RADIO", 27.95],
+  ["ma_what", "MAYA", 31.65],
+  ["yo_what", "YOU", 32.9]
+ ],
+ "sfx": [
+  ["engine", 0.0, 0.8],
+  ["wind", 0.0, 0.3, {"loop": true, "until": 41.0, "fadeOut": 1.0}],
+  ["rummage", 12.7, 0.6],
+  ["sunroof", 16.7, 0.6],
+  ["door", 20.45, 0.6],
+  ["static", 27.4, 0.45],
+  ["storm", 30.9, 0.8, {"until": 41.0, "fadeIn": 2.5, "fadeOut": 1.5, "loop": true}],
+  ["stinger", 34.75, 0.85]
+ ],
+ "music": ["tension", 0.09],
+ "endCard": {
+  "kicker": "COULD YOU SURVIVE?",
+  "question": "WHAT WOULD YOU DO?",
+  "a": {"label": "A · STAY IN THE CAR", "sub": "Windows up. But the car could get buried."},
+  "b": {"label": "B · RUN FOR THE ROCKS", "sub": "Solid cover, 300 m away. But you'd be outside when it hits."},
+  "cta": "Comment A or B for Part 2"
+ }
+}

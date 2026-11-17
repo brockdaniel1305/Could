@@ -1,0 +1,56 @@
+[
+  {
+    "text": "The",
+    "start": 0.16,
+    "end": 0.29,
+    "id": "w0"
+  },
+  {
+    "text": "GPS",
+    "start": 0.29,
+    "end": 0.58,
+    "id": "w1"
+  },
+  {
+    "text": "also",
+    "start": 0.58,
+    "end": 0.97,
+    "id": "w2"
+  },
+  {
+    "text": "said",
+    "start": 0.97,
+    "end": 1.36,
+    "id": "w3"
+  },
+  {
+    "text": "we've",
+    "start": 1.36,
+    "end": 1.84,
+    "id": "w4"
+  },
+  {
+    "text": "arrived",
+    "start": 1.84,
+    "end": 2.25,
+    "id": "w5"
+  },
+  {
+    "text": "an",
+    "start": 2.64,
+    "end": 2.8,
+    "id": "w6"
+  },
+  {
+    "text": "hour",
+    "start": 2.8,
+    "end": 3.28,
+    "id": "w7"
+  },
+  {
+    "text": "ago.",
+    "start": 3.28,
+    "end": 3.78,
+    "id": "w8"
+  }
+]

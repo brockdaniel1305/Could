@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Engine's",
+    "start": 0,
+    "end": 0.89,
+    "id": "w0"
+  },
+  {
+    "text": "dead.",
+    "start": 1.4,
+    "end": 1.42,
+    "id": "w1"
+  },
+  {
+    "text": "49",
+    "start": 1.42,
+    "end": 1.98,
+    "id": "w2"
+  },
+  {
+    "text": "degrees.",
+    "start": 1.98,
+    "end": 2.94,
+    "id": "w3"
+  },
+  {
+    "text": "No",
+    "start": 2.94,
+    "end": 3.09,
+    "id": "w4"
+  },
+  {
+    "text": "signal.",
+    "start": 3.09,
+    "end": 3.77,
+    "id": "w5"
+  }
+]

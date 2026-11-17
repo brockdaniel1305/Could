@@ -1,0 +1,44 @@
+[
+  {
+    "text": "There's",
+    "start": 0.14,
+    "end": 0.46,
+    "id": "w0"
+  },
+  {
+    "text": "a",
+    "start": 0.46,
+    "end": 0.52,
+    "id": "w1"
+  },
+  {
+    "text": "town,",
+    "start": 0.52,
+    "end": 0.88,
+    "id": "w2"
+  },
+  {
+    "text": "20",
+    "start": 1.01,
+    "end": 1.31,
+    "id": "w3"
+  },
+  {
+    "text": "kilometers.",
+    "start": 1.31,
+    "end": 2.2,
+    "id": "w4"
+  },
+  {
+    "text": "I'll",
+    "start": 2.22,
+    "end": 2.36,
+    "id": "w5"
+  },
+  {
+    "text": "walk.",
+    "start": 2.5,
+    "end": 2.69,
+    "id": "w6"
+  }
+]

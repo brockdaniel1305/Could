@@ -1,0 +1,44 @@
+[
+  {
+    "text": "The",
+    "start": 0.16,
+    "end": 0.24,
+    "id": "w0"
+  },
+  {
+    "text": "GPS",
+    "start": 0.35,
+    "end": 0.51,
+    "id": "w1"
+  },
+  {
+    "text": "said",
+    "start": 0.61,
+    "end": 0.89,
+    "id": "w2"
+  },
+  {
+    "text": "it",
+    "start": 1.06,
+    "end": 1.14,
+    "id": "w3"
+  },
+  {
+    "text": "was",
+    "start": 1.17,
+    "end": 1.44,
+    "id": "w4"
+  },
+  {
+    "text": "a",
+    "start": 1.44,
+    "end": 1.53,
+    "id": "w5"
+  },
+  {
+    "text": "shortcut.",
+    "start": 1.53,
+    "end": 2.32,
+    "id": "w6"
+  }
+]
