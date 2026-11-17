@@ -73,11 +73,11 @@ page = f"""<!doctype html>
       #pov-hook {{ position: absolute; left: 60px; right: 60px; top: 230px; opacity: 0; font: 900 70px/1.05 "Inter"; color: #fff; text-align: left;
                    text-shadow: 0 4px 0 #000, 0 0 18px rgba(0,0,0,0.8); }}
       #pov-hook b {{ color: #ffd23f; }}
-      #pov-cap {{ position: absolute; left: 50px; right: 50px; top: 1380px; text-align: center; opacity: 0; }}
-      #pov-tag {{ display: inline-block; margin-bottom: 12px; padding: 6px 16px; border-radius: 10px; background: rgba(10,12,18,0.82); border: 2px solid rgba(255,255,255,0.35);
-                  font: 800 26px/1 "Inter"; letter-spacing: 0.12em; color: #e8ecf2; }}
-      #pov-txt {{ font: 900 64px/1.12 "Inter"; color: #fff; text-shadow: 0 4px 0 #000, 0 0 14px rgba(0,0,0,0.9), 3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000; }}
-      #pov-txt span {{ opacity: 0.55; }} #pov-txt span.on {{ opacity: 1; }}
+      #pov-cap {{ position: absolute; left: 90px; right: 90px; top: 1590px; text-align: center; opacity: 0; }}
+      #pov-tag {{ display: inline-block; margin-bottom: 6px; font: 700 20px/1 "Inter"; letter-spacing: 0.14em; color: rgba(255,255,255,0.6);
+                  text-shadow: 0 1px 3px rgba(0,0,0,0.9); }}
+      #pov-txt {{ font: 600 38px/1.2 "Inter"; color: #fff; opacity: 0.88; text-shadow: 0 1px 2px rgba(0,0,0,0.95), 0 0 8px rgba(0,0,0,0.6); }}
+      #pov-txt span {{ opacity: 1; }}
       #pov-cap.inner #pov-txt {{ font-style: italic; }}
       #pov-end {{ position: absolute; inset: 0; display: none; text-align: center; padding-top: 470px; }}
       #pov-end > div {{ opacity: 0; }}

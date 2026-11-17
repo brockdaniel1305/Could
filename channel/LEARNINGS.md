@@ -9,7 +9,8 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   Zielpublikum). Jede Folge beginnt mitten in einer dramatischen Situation (Absturz, Feuer, …) und ist EIN durchgehender Ich-Perspektive-
   Shot wie eine echte Aufnahme: flüssige 3D-Animation ohne Schnitt, keine Sekunde Standbild, kein Erzähler, keine Fakten-Karten.
   Ton = Gespräche (innere Stimme YOU + Figuren, Funk/Durchsage), Geräusche, leise Spannungsmusik. Text nur: kurze Hook-Zeile in den ersten
-  ~2 s, Untertitel der Gespräche mit Namensschild, Endkarte "COULD YOU SURVIVE? · WHAT WOULD YOU DO?" mit zwei Optionen (A/B, je mit Haken)
+  ~2 s, Untertitel der Gespräche **klein und unscheinbar** (38 px, halbtransparent, ganz unten bei y≈1590, winziges Namensschild,
+  nichts verdecken – Wunsch des Creators), Endkarte "COULD YOU SURVIVE? · WHAT WOULD YOU DO?" mit zwei Optionen (A/B, je mit Haken)
   + "Comment A or B for Part 2" → die Kommentare entscheiden, wie Part 2 weitergeht. Vorbild: POV-Bus-Video des Creators (72 s).
   Humor bleibt: 3–4 Figuren-Gags pro Folge (S3E01: Frank filmt "for my followers", Duty-free-Koffer, Weste drinnen aufgeblasen).
   Echte Überlebensregeln in die Handlung einbauen (macht die A/B-Frage diskutierbar). Kein Blut, keine Toten, keine echte Marke/Airline.

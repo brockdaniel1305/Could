@@ -6,7 +6,7 @@
  "speakers": {
   "YOU": {
    "tag": "",
-   "color": "#7fe3ff"
+   "color": "#bfeeff"
   },
   "FRANK": {
    "tag": "FRANK \u00b7 SEAT 23C",
@@ -14,7 +14,7 @@
   },
   "CAPTAIN": {
    "tag": "CAPTAIN \u00b7 PA",
-   "color": "#ffd23f"
+   "color": "#ffe8a0"
   },
   "FA": {
    "tag": "FLIGHT ATTENDANT",
