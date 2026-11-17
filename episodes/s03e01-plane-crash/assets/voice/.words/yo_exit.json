@@ -1,0 +1,50 @@
+[
+  {
+    "text": "Exit.",
+    "start": 0.12,
+    "end": 1,
+    "id": "w0"
+  },
+  {
+    "text": "Four",
+    "start": 1,
+    "end": 1.17,
+    "id": "w1"
+  },
+  {
+    "text": "rows",
+    "start": 1.23,
+    "end": 1.37,
+    "id": "w2"
+  },
+  {
+    "text": "ahead.",
+    "start": 1.37,
+    "end": 1.65,
+    "id": "w3"
+  },
+  {
+    "text": "One,",
+    "start": 1.92,
+    "end": 2.26,
+    "id": "w4"
+  },
+  {
+    "text": "two,",
+    "start": 2.62,
+    "end": 2.96,
+    "id": "w5"
+  },
+  {
+    "text": "three,",
+    "start": 3.35,
+    "end": 4,
+    "id": "w6"
+  },
+  {
+    "text": "four.",
+    "start": 4.03,
+    "end": 4.67,
+    "id": "w7"
+  }
+]

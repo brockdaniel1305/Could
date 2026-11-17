@@ -1,0 +1,195 @@
+{
+ "id": "S3E01",
+ "title": "Could you survive a plane crash? (Part 1)",
+ "caption": "Could you survive a plane crash? \u2708\ufe0f\ud83c\udf0a Part 1 \u2014 comment A or B and decide what happens in Part 2. #couldyousurvive #planecrash #pov #survival #shorts",
+ "end": 54.0,
+ "speakers": {
+  "YOU": {
+   "tag": "",
+   "color": "#7fe3ff"
+  },
+  "FRANK": {
+   "tag": "FRANK \u00b7 SEAT 23C",
+   "color": "#ffffff"
+  },
+  "CAPTAIN": {
+   "tag": "CAPTAIN \u00b7 PA",
+   "color": "#ffd23f"
+  },
+  "FA": {
+   "tag": "FLIGHT ATTENDANT",
+   "color": "#ffffff"
+  },
+  "SG": {
+   "tag": "ROW 22",
+   "color": "#ffffff"
+  }
+ },
+ "lines": [
+  [
+   "fr_down",
+   "FRANK",
+   0.1
+  ],
+  [
+   "yo_mask",
+   "YOU",
+   2.35
+  ],
+  [
+   "cap_ditch_pa",
+   "CAPTAIN",
+   5.1
+  ],
+  [
+   "fa_heads",
+   "FA",
+   9.15
+  ],
+  [
+   "fr_film",
+   "FRANK",
+   11.0
+  ],
+  [
+   "yo_phone",
+   "YOU",
+   12.4
+  ],
+  [
+   "fr_follow",
+   "FRANK",
+   14.85
+  ],
+  [
+   "yo_belt",
+   "YOU",
+   16.6
+  ],
+  [
+   "yo_exit",
+   "YOU",
+   19.05
+  ],
+  [
+   "fa_brace",
+   "FA",
+   23.9
+  ],
+  [
+   "yo_float",
+   "YOU",
+   29.2
+  ],
+  [
+   "fa_leave",
+   "FA",
+   30.6
+  ],
+  [
+   "sg_duty",
+   "SG",
+   33.1
+  ],
+  [
+   "fr_vest",
+   "FRANK",
+   35.6
+  ],
+  [
+   "yo_inside",
+   "YOU",
+   37.35
+  ],
+  [
+   "fr_late",
+   "FRANK",
+   40.1
+  ],
+  [
+   "fr_which",
+   "FRANK",
+   45.55
+  ]
+ ],
+ "sfx": [
+  [
+   "dive",
+   0.0,
+   0.4,
+   {
+    "loop": true,
+    "until": 26.35,
+    "fadeOut": 0.15
+   }
+  ],
+  [
+   "masks",
+   2.7,
+   0.35
+  ],
+  [
+   "breath",
+   3.6,
+   0.4
+  ],
+  [
+   "chime",
+   4.3,
+   0.4
+  ],
+  [
+   "buckle",
+   17.3,
+   0.7
+  ],
+  [
+   "impact",
+   26.3,
+   0.95
+  ],
+  [
+   "ringing",
+   26.55,
+   0.35
+  ],
+  [
+   "water",
+   27.3,
+   0.32,
+   {
+    "loop": true,
+    "until": 54.0,
+    "fadeIn": 1.5
+   }
+  ],
+  [
+   "suitcase",
+   32.8,
+   0.65
+  ],
+  [
+   "vest",
+   41.25,
+   0.55
+  ]
+ ],
+ "music": [
+  "tension",
+  0.1
+ ],
+ "hook": "Your plane is<br><b>going down.</b>",
+ "endCard": {
+  "kicker": "COULD YOU SURVIVE?",
+  "question": "WHAT WOULD YOU DO?",
+  "a": {
+   "label": "A \u00b7 WING EXIT",
+   "sub": "Only four rows away. But the suitcase guy is blocking the aisle."
+  },
+  "b": {
+   "label": "B \u00b7 REAR DOOR",
+   "sub": "Nobody there. But the tail is sinking."
+  },
+  "cta": "Comment A or B for Part 2"
+ }
+}

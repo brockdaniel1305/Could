@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Not",
+    "start": 0.06,
+    "end": 0.3,
+    "id": "w0"
+  },
+  {
+    "text": "without",
+    "start": 0.3,
+    "end": 0.99,
+    "id": "w1"
+  },
+  {
+    "text": "my",
+    "start": 0.99,
+    "end": 1.19,
+    "id": "w2"
+  },
+  {
+    "text": "duty",
+    "start": 1.19,
+    "end": 1.53,
+    "id": "w3"
+  },
+  {
+    "text": "free!",
+    "start": 1.66,
+    "end": 2.12,
+    "id": "w4"
+  }
+]

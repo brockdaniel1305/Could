@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Frank.",
+    "start": 0.18,
+    "end": 1,
+    "id": "w0"
+  },
+  {
+    "text": "Phone.",
+    "start": 1.18,
+    "end": 2,
+    "id": "w1"
+  },
+  {
+    "text": "Away.",
+    "start": 2.01,
+    "end": 2.02,
+    "id": "w2"
+  }
+]

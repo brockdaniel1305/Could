@@ -1,0 +1,56 @@
+[
+  {
+    "text": "Ladies",
+    "start": 0.01,
+    "end": 0.45,
+    "id": "w0"
+  },
+  {
+    "text": "and",
+    "start": 0.45,
+    "end": 0.67,
+    "id": "w1"
+  },
+  {
+    "text": "gentlemen,",
+    "start": 0.67,
+    "end": 1.54,
+    "id": "w2"
+  },
+  {
+    "text": "we",
+    "start": 1.54,
+    "end": 1.72,
+    "id": "w3"
+  },
+  {
+    "text": "are",
+    "start": 1.72,
+    "end": 2,
+    "id": "w4"
+  },
+  {
+    "text": "ditching,",
+    "start": 2,
+    "end": 2.91,
+    "id": "w5"
+  },
+  {
+    "text": "brace",
+    "start": 2.99,
+    "end": 3.29,
+    "id": "w6"
+  },
+  {
+    "text": "for",
+    "start": 3.32,
+    "end": 3.52,
+    "id": "w7"
+  },
+  {
+    "text": "impact!",
+    "start": 3.6,
+    "end": 4.01,
+    "id": "w8"
+  }
+]

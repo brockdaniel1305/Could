@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Belt.",
+    "start": 0.13,
+    "end": 1,
+    "id": "w0"
+  },
+  {
+    "text": "Tight.",
+    "start": 1,
+    "end": 1.72,
+    "id": "w1"
+  },
+  {
+    "text": "Low.",
+    "start": 1.72,
+    "end": 2,
+    "id": "w2"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "text": "We're",
+    "start": 0.02,
+    "end": 0.25,
+    "id": "w0"
+  },
+  {
+    "text": "going",
+    "start": 0.25,
+    "end": 0.5,
+    "id": "w1"
+  },
+  {
+    "text": "down!",
+    "start": 0.5,
+    "end": 0.77,
+    "id": "w2"
+  },
+  {
+    "text": "We're",
+    "start": 1.01,
+    "end": 1.23,
+    "id": "w3"
+  },
+  {
+    "text": "going",
+    "start": 1.23,
+    "end": 1.59,
+    "id": "w4"
+  },
+  {
+    "text": "down!",
+    "start": 1.59,
+    "end": 2.01,
+    "id": "w5"
+  }
+]

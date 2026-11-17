@@ -5,6 +5,15 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-17 · S3E01 · **NEUES FORMAT ab Staffel 3: Serie "Could you survive …?" (POV).** Fußball-Nische eingestellt (traf nicht das
+  Zielpublikum). Jede Folge beginnt mitten in einer dramatischen Situation (Absturz, Feuer, …) und ist EIN durchgehender Ich-Perspektive-
+  Shot wie eine echte Aufnahme: flüssige 3D-Animation ohne Schnitt, keine Sekunde Standbild, kein Erzähler, keine Fakten-Karten.
+  Ton = Gespräche (innere Stimme YOU + Figuren, Funk/Durchsage), Geräusche, leise Spannungsmusik. Text nur: kurze Hook-Zeile in den ersten
+  ~2 s, Untertitel der Gespräche mit Namensschild, Endkarte "COULD YOU SURVIVE? · WHAT WOULD YOU DO?" mit zwei Optionen (A/B, je mit Haken)
+  + "Comment A or B for Part 2" → die Kommentare entscheiden, wie Part 2 weitergeht. Vorbild: POV-Bus-Video des Creators (72 s).
+  Humor bleibt: 3–4 Figuren-Gags pro Folge (S3E01: Frank filmt "for my followers", Duty-free-Koffer, Weste drinnen aufgeblasen).
+  Echte Überlebensregeln in die Handlung einbauen (macht die A/B-Frage diskutierbar). Kein Blut, keine Toten, keine echte Marke/Airline.
+  Länge ~50–60 s. Werkzeug: `tools/pov/` (siehe Technik).
 - 2026-11-09 · S2E07 · **Keine Sprech-Hänger:** Pausen im Sprechertext höchstens ~0,6 s, nie 1,3–1,6 s für Bild-Gags (S2E07 Kane
   wirkte stockend, frühes Wegwischen). Bild-Gags laufen *unter* dem Sprechen weiter oder bekommen einen kurzen Sprecher-Satz;
   wenn Zeit fehlt, lieber einen Satz mehr schreiben als Stille. Szenen-`tail` ebenfalls kurz halten (≤ 0,6 s).
@@ -225,6 +234,15 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- 2026-11-17 · S3E01 · **POV-Pipeline `tools/pov/`:** `pov.json` (Dialogzeilen `[id, Sprecher, Startzeit]`, sfx, Musik, Hook, Endkarte)
+  → `prep.py` (Wort-Timings per Whisper + 30-fps-Lautstärke-Hüllkurve je Zeile = Lippensynchron) → `build_pov.py` (kopiert Engine,
+  schreibt index.html; Loops/Fades der sfx werden als feste Dateien gerendert). Szene in `<ep>/world/director.js`: Kopfpfad
+  `[t, yaw, pitch, roll, x, y, z]` (yaw + = links), `shake(t)`, `fx(t)`, Hände im Kameraraum (Ärmel wird jedes Bild von der Schulter
+  zum Handgelenk gespannt – sonst ragt er durch die Linse), Figuren aus `people.js` (`makePerson`, stehend: root.y ≈ 0,9!), Kabine `cabin.js`.
+  Stimmen: pro Figur EIN ElevenLabs-v4-Take mit Regie-Tags ([shouting] …), dann `split_lines.py` bzw. Einzelstücke an Stillen schneiden und
+  jede Zeile per Whisper prüfen. Geräusche: ElevenLabs Sound Effects (`node_type sfx`), Dauer per `creative_update_node` duration_seconds
+  setzen (Auto-Dauer ist oft 1–2 s). Musik: eleven_music (Instrumental prüfen). Vorschaubilder: scratchpad `povshot.cjs` (Playwright).
+  Sichtachsen im Sitzen: Sitzlehnen ≤ Augenhöhe (Lehne 0,66 m, Auge 1,18 m), Nachbar einen Platz weiter (sonst füllt er das Bild).
 - 2026-11-14 · S2E12 · **ElevenLabs-Langtakes driften**: Eine 50-s-Aufnahme wurde ab der Mitte bis zu 12 dB leiser und klang wie ein
   anderer Sprecher; an `<break>`-Stellen entsteht manchmal Gebrabbel. Jetzt: `tools/split_master.py` gleicht danach automatisch jedes
   Segment auf −24 LUFS an (`tools/norm_segments.py`). Takes kürzer halten (≤ ~25 s, ggf. zwei Hälften), jedes Segment transkribieren,

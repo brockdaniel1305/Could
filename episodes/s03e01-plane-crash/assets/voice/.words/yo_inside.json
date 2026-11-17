@@ -1,0 +1,50 @@
+[
+  {
+    "text": "Not",
+    "start": 0.17,
+    "end": 0.28,
+    "id": "w0"
+  },
+  {
+    "text": "inside!",
+    "start": 0.28,
+    "end": 0.99,
+    "id": "w1"
+  },
+  {
+    "text": "You'll",
+    "start": 1.22,
+    "end": 1.43,
+    "id": "w2"
+  },
+  {
+    "text": "get",
+    "start": 1.51,
+    "end": 1.58,
+    "id": "w3"
+  },
+  {
+    "text": "stuck",
+    "start": 1.64,
+    "end": 1.88,
+    "id": "w4"
+  },
+  {
+    "text": "under",
+    "start": 1.88,
+    "end": 2.14,
+    "id": "w5"
+  },
+  {
+    "text": "the",
+    "start": 2.18,
+    "end": 2.32,
+    "id": "w6"
+  },
+  {
+    "text": "water!",
+    "start": 2.32,
+    "end": 2.6,
+    "id": "w7"
+  }
+]

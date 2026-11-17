@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Leave",
+    "start": 0.22,
+    "end": 0.35,
+    "id": "w0"
+  },
+  {
+    "text": "everything!",
+    "start": 0.35,
+    "end": 1.23,
+    "id": "w1"
+  },
+  {
+    "text": "Come",
+    "start": 1.46,
+    "end": 1.63,
+    "id": "w2"
+  },
+  {
+    "text": "to",
+    "start": 1.63,
+    "end": 1.81,
+    "id": "w3"
+  },
+  {
+    "text": "me!",
+    "start": 1.81,
+    "end": 2,
+    "id": "w4"
+  }
+]

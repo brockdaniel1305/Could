@@ -1,0 +1,26 @@
+[
+  {
+    "text": "It's",
+    "start": 0.02,
+    "end": 0.15,
+    "id": "w0"
+  },
+  {
+    "text": "for",
+    "start": 0.24,
+    "end": 0.43,
+    "id": "w1"
+  },
+  {
+    "text": "my",
+    "start": 0.43,
+    "end": 0.51,
+    "id": "w2"
+  },
+  {
+    "text": "followers!",
+    "start": 0.67,
+    "end": 1.32,
+    "id": "w3"
+  }
+]
