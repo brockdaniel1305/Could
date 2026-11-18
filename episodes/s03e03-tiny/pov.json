@@ -1,0 +1,17 @@
+{
+ "id": "S3E03",
+ "title": "Could you survive being 3 cm tall? (Part 1)",
+ "caption": "Could you survive being 3 cm tall? 🐈 Part 1 — comment A or B and decide what happens in Part 2. #couldyousurvive #tiny #pov #cat #survival #shorts",
+ "end": 35.0,
+ "hook": "You just shrank<br><b>to 3 cm.</b>",
+ "speakers": {"YOU": {"tag": "", "color": "#bfeeff"}, "BEN": {"tag": "BEN · ROOMMATE", "color": "#ffffff"}},
+ "lines": [],
+ "sfx": [],
+ "music": ["tension", 0.09],
+ "endCard": {
+  "kicker": "COULD YOU SURVIVE?", "question": "WHAT WOULD YOU DO?",
+  "a": {"label": "A · SPRINT FOR THE PHONE", "sub": "20 cm away, a marathon for you. Mochi is faster."},
+  "b": {"label": "B · HIDE IN THE SUGAR BOWL", "sub": "Claws can't reach you. But Ben is about to make coffee."},
+  "cta": "Comment A or B for Part 2"
+ }
+}
