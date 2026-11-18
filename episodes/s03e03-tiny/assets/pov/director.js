@@ -6,8 +6,8 @@ import { rnd } from "./people.js";
 import { buildKitchen } from "./kitchen.js";
 
 const C = {          // cue times (s) - match pov.json
-  slam: 3.6, ben1: 4.3, yell: 7.1, ben2: 8.7, plan: 11.2, run0: 14.9, sugar: 16.4, run1: 19.0, pop: 19.25, cat: 20.25, mochi: 21.8,
-  crouch: 25.0, what: 26.6, end: 28.6,
+  slam: 4.1, ben1: 4.6, yell: 8.05, ben2: 10.1, plan: 12.7, run0: 15.8, sugar: 17.0, run1: 19.6, pop: 19.85, cat: 20.85, mochi: 21.9,
+  crouch: 25.6, what: 26.9, end: 28.9,
 };
 const Y = 1.6;
 const RUN = [[-2, 9], [3, 6.6], [8, 4.9], [11.3, 4.0], [11.6, 3.9], [14.5, 5.2], [16.0, 5.8]];
@@ -15,18 +15,18 @@ const RUN = [[-2, 9], [3, 6.6], [8, 4.9], [11.3, 4.0], [11.6, 3.9], [14.5, 5.2],
 export default {
   C,
   head: [
-    [0.0, 34, 16, 3, -1, Y, 15], [2.8, 38, 18, -2, -1, Y, 15],                                     // the mug, a tower
-    [3.5, 36, 26, 0, -1, Y, 15], [4.2, 42, 12, 0, -1.2, Y, 14.6],                                  // the spoon slams down, coffee wave
-    [5.0, 172, 58, 0, -1.2, Y, 14.6], [6.9, 176, 62, 0, -1.2, Y, 14.6],                            // turn around, up: Ben
-    [7.3, 174, 56, 6, -1.2, Y + 0.2, 14.6], [8.5, 178, 60, -6, -1.2, Y + 0.2, 14.6],               // "BEN! DOWN HERE!"
-    [10.6, 172, 58, 0, -1.2, Y, 14.6],                                                             // "the toaster?"
-    [11.6, -60, 4, 0, -1, Y, 13], [14.6, -64, 2, 0, -1, Y, 12],                                     // the phone, far away
+    [0.0, 34, 16, 3, -1, Y, 15], [3.19, 38, 18, -2, -1, Y, 15],                                     // the mug, a tower
+    [3.99, 36, 26, 0, -1, Y, 15], [4.53, 42, 12, 0, -1.2, Y, 14.6],                                  // the spoon slams down, coffee wave
+    [5.46, 172, 66, 0, -1.2, Y, 14.6], [7.8, 176, 70, 0, -1.2, Y, 14.6],                            // turn around, up: Ben
+    [8.31, 174, 64, 6, -1.2, Y + 0.2, 14.6], [9.84, 178, 68, -6, -1.2, Y + 0.2, 14.6],               // "BEN! DOWN HERE!"
+    [12.08, 172, 66, 0, -1.2, Y, 14.6],                                                             // "the toaster?"
+    [13.04, -60, 4, 0, -1, Y, 13], [15.55, -64, 2, 0, -1, Y, 12],                                     // the phone, far away
     // the run (head path follows RUN, yaw towards the phone, with stride bob added in afterCam)
-    [15.6, -64, 0, 0, 3, Y, 8.6], [16.3, -66, -6, 0, 8, Y, 4.9], [16.9, -40, -14, 0, 11.3, Y, 4.0], [18.2, -36, -16, 0, 11.6, Y, 3.9],   // the sugar grain
-    [18.9, -70, 0, 0, 14.5, Y, 5.2], [19.3, -74, 0, 0, 15.2, Y, 5.6],
-    [19.75, 70, 14, 0, 15.6, Y, 5.8], [20.15, 66, 16, 0, 15.8, Y, 5.8],                           // the toaster pops behind you
-    [20.6, 60, 34, 0, 16.0, Y, 5.9], [24.9, 62, 37, 0, 16.0, Y, 5.9],                            // Mochi lands. Look up.
-    [26.4, 61, 24, 0, 16.2, Y - 0.2, 6.0], [35, 61, 20, 0, 16.4, Y - 0.3, 6.1],                   // she crouches, eye to eye
+    [16.36, -64, 0, 0, 3, Y, 8.6], [16.92, -66, -6, 0, 8, Y, 4.9], [17.5, -40, -14, 0, 11.3, Y, 4.0], [18.8, -36, -16, 0, 11.6, Y, 3.9],   // the sugar grain
+    [19.5, -70, 0, 0, 14.5, Y, 5.2], [19.9, -74, 0, 0, 15.2, Y, 5.6],
+    [20.35, 70, 14, 0, 15.6, Y, 5.8], [20.75, 66, 16, 0, 15.8, Y, 5.8],                           // the toaster pops behind you
+    [21.09, 60, 34, 0, 16.0, Y, 5.9], [25.48, 62, 37, 0, 16.0, Y, 5.9],                            // Mochi lands. Look up.
+    [26.74, 61, 24, 0, 16.2, Y - 0.2, 6.0], [35.3, 61, 20, 0, 16.4, Y - 0.3, 6.1],                   // she crouches, eye to eye
   ],
   fov: (t) => 74 - 14 * sstep(C.crouch, C.end + 1, t) + 6 * sstep(C.run0, C.run0 + 0.6, t) * (1 - sstep(C.run1, C.run1 + 0.4, t)),
   shake: (t) => {
@@ -35,7 +35,7 @@ export default {
   },
   fx: (t) => ({ dim: 0.6 * sstep(C.end, C.end + 0.5, t), sat: 1 - 0.1 * sstep(C.cat, C.end, t) }),
   afterCam: (t, S, cam) => {          // running bob
-    if (t > C.run0 && t < C.run1 + 0.2 && !(t > 16.9 && t < 18.2)) { const ph = t * 11; cam.position.y += Math.abs(Math.sin(ph)) * 0.18; cam.rotation.z += Math.sin(ph) * 0.03; }
+    if (t > C.run0 && t < C.run1 + 0.2 && !(t > 17.5 && t < 18.8)) { const ph = t * 11; cam.position.y += Math.abs(Math.sin(ph)) * 0.18; cam.rotation.z += Math.sin(ph) * 0.03; }
   },
 
   build(THREE, scene, cam) {
@@ -70,7 +70,7 @@ export default {
     const stir = t > C.slam && t < C.ben1 + 1.6 ? 1 : 0;
     H.arm.position.set(-9 + Math.sin(t * 9) * 1.4 * stir + 30 * outA, lerp(70, 33, inA) + 30 * outA, lerp(30, 5, inA) + Math.cos(t * 9) * 1.4 * stir + 20 * outA);
     H.arm.rotation.set(0.35 - 0.2 * inA, 0, 0.1);
-    H.benHead.rotation.set(0.5, t < C.ben2 ? Math.sin(t * 1.3) * 0.3 : lerp(0, 0.7, sstep(C.ben2, C.ben2 + 0.6, t)), 0);
+    H.benHead.rotation.set(-0.6, t < C.ben2 ? Math.sin(t * 1.3) * 0.3 : lerp(0, 0.7, sstep(C.ben2, C.ben2 + 0.6, t)), 0);
     H.benMouth.scale.y = 0.2 + S.mouthOf("BEN", t) * 1.2;
     H.ben.position.x = -10 * sstep(C.plan, C.plan + 3, t);
     H.ben.visible = t < C.run1;

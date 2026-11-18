@@ -77,8 +77,8 @@ export function buildKitchen(THREE, scene) {
   // ---------------- Ben: a giant arm + hand + spoon, his torso beyond the counter edge ----------------
   H.ben = new THREE.Group(); scene.add(H.ben);
   const skin = lam(0xe3b08a), shirt = lam(0x3f6fb5);
-  H.benTorso = box(60, 80, 26, shirt, -10, 32, 50, H.ben);
-  H.benHead = new THREE.Group(); H.benHead.position.set(-10, 98, 48); H.ben.add(H.benHead);
+  H.benTorso = box(56, 70, 24, shirt, -10, 30, 54, H.ben);
+  H.benHead = new THREE.Group(); H.benHead.position.set(-10, 92, 44); H.benHead.scale.setScalar(1.45); H.ben.add(H.benHead);
   add(new THREE.SphereGeometry(15, 32, 24), skin, 0, 0, 0, H.benHead);
   add(new THREE.SphereGeometry(15.4, 32, 16, 0, Math.PI * 2, 0, Math.PI * 0.42), lam(0x3b2a1e), 0, 1, 1, H.benHead);
   for (const sx of [-1, 1]) { add(new THREE.SphereGeometry(2.2, 14, 10), lam(0xffffff), sx * 5, 2, -13.4, H.benHead).scale.z = 0.5;

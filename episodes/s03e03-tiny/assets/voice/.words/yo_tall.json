@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Okay,",
+    "start": 0,
+    "end": 0.46,
+    "id": "w0"
+  },
+  {
+    "text": "okay,",
+    "start": 0.46,
+    "end": 0.9,
+    "id": "w1"
+  },
+  {
+    "text": "I'm",
+    "start": 0.93,
+    "end": 1.17,
+    "id": "w2"
+  },
+  {
+    "text": "three",
+    "start": 1.29,
+    "end": 1.57,
+    "id": "w3"
+  },
+  {
+    "text": "centimeters",
+    "start": 1.57,
+    "end": 2.44,
+    "id": "w4"
+  },
+  {
+    "text": "tall.",
+    "start": 2.44,
+    "end": 2.7,
+    "id": "w5"
+  }
+]

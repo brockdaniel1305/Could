@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Did",
+    "start": 0.01,
+    "end": 0.2,
+    "id": "w0"
+  },
+  {
+    "text": "the",
+    "start": 0.2,
+    "end": 0.4,
+    "id": "w1"
+  },
+  {
+    "text": "toaster",
+    "start": 0.4,
+    "end": 0.86,
+    "id": "w2"
+  },
+  {
+    "text": "just",
+    "start": 0.86,
+    "end": 1.13,
+    "id": "w3"
+  },
+  {
+    "text": "squeak?",
+    "start": 1.13,
+    "end": 1.65,
+    "id": "w4"
+  }
+]

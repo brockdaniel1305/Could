@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Bend",
+    "start": 0.04,
+    "end": 0.22,
+    "id": "w0"
+  },
+  {
+    "text": "down",
+    "start": 0.22,
+    "end": 0.44,
+    "id": "w1"
+  },
+  {
+    "text": "here.",
+    "start": 0.44,
+    "end": 0.81,
+    "id": "w2"
+  }
+]

@@ -1,17 +1,133 @@
 {
  "id": "S3E03",
  "title": "Could you survive being 3 cm tall? (Part 1)",
- "caption": "Could you survive being 3 cm tall? 🐈 Part 1 — comment A or B and decide what happens in Part 2. #couldyousurvive #tiny #pov #cat #survival #shorts",
- "end": 35.0,
+ "caption": "Could you survive being 3 cm tall? \ud83d\udc08 Part 1 \u2014 comment A or B and decide what happens in Part 2. #couldyousurvive #tiny #pov #cat #survival #shorts",
+ "end": 35.3,
  "hook": "You just shrank<br><b>to 3 cm.</b>",
- "speakers": {"YOU": {"tag": "", "color": "#bfeeff"}, "BEN": {"tag": "BEN · ROOMMATE", "color": "#ffffff"}},
- "lines": [],
- "sfx": [],
- "music": ["tension", 0.09],
+ "speakers": {
+  "YOU": {
+   "tag": "",
+   "color": "#bfeeff"
+  },
+  "BEN": {
+   "tag": "BEN \u00b7 ROOMMATE",
+   "color": "#ffffff"
+  }
+ },
+ "lines": [
+  [
+   "yo_tall",
+   "YOU",
+   0.3
+  ],
+  [
+   "bn_morning",
+   "BEN",
+   4.6
+  ],
+  [
+   "yo_ben",
+   "YOU",
+   8.05
+  ],
+  [
+   "bn_toaster",
+   "BEN",
+   10.1
+  ],
+  [
+   "yo_plan",
+   "YOU",
+   12.7
+  ],
+  [
+   "yo_sugar",
+   "YOU",
+   17.0
+  ],
+  [
+   "yo_mochi",
+   "YOU",
+   21.9
+  ],
+  [
+   "yo_what",
+   "YOU",
+   26.9
+  ]
+ ],
+ "sfx": [
+  [
+   "room",
+   0.0,
+   0.5,
+   {
+    "loop": true,
+    "until": 35.3,
+    "fadeOut": 1.0
+   }
+  ],
+  [
+   "stomp",
+   0.1,
+   0.7
+  ],
+  [
+   "stomp",
+   1.2,
+   0.6
+  ],
+  [
+   "clank",
+   4.0,
+   0.75
+  ],
+  [
+   "steps",
+   15.8,
+   0.7
+  ],
+  [
+   "pop",
+   19.8,
+   0.8
+  ],
+  [
+   "thump",
+   20.6,
+   0.9
+  ],
+  [
+   "chatter",
+   22.6,
+   0.5
+  ],
+  [
+   "breath",
+   26.0,
+   0.5
+  ],
+  [
+   "stinger",
+   28.8,
+   0.85
+  ]
+ ],
+ "music": [
+  "tension",
+  0.09
+ ],
  "endCard": {
-  "kicker": "COULD YOU SURVIVE?", "question": "WHAT WOULD YOU DO?",
-  "a": {"label": "A · SPRINT FOR THE PHONE", "sub": "20 cm away, a marathon for you. Mochi is faster."},
-  "b": {"label": "B · HIDE IN THE SUGAR BOWL", "sub": "Claws can't reach you. But Ben is about to make coffee."},
+  "kicker": "COULD YOU SURVIVE?",
+  "question": "WHAT WOULD YOU DO?",
+  "a": {
+   "label": "A \u00b7 SPRINT FOR THE PHONE",
+   "sub": "20 cm away, a marathon for you. Mochi is faster."
+  },
+  "b": {
+   "label": "B \u00b7 HIDE IN THE SUGAR BOWL",
+   "sub": "Claws can't reach you. But Ben is about to make coffee."
+  },
   "cta": "Comment A or B for Part 2"
  }
 }

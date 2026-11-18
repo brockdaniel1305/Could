@@ -1,0 +1,50 @@
+[
+  {
+    "text": "This",
+    "start": 0.15,
+    "end": 0.35,
+    "id": "w0"
+  },
+  {
+    "text": "sugar",
+    "start": 0.35,
+    "end": 0.79,
+    "id": "w1"
+  },
+  {
+    "text": "is",
+    "start": 0.79,
+    "end": 0.96,
+    "id": "w2"
+  },
+  {
+    "text": "the",
+    "start": 0.96,
+    "end": 1.22,
+    "id": "w3"
+  },
+  {
+    "text": "size",
+    "start": 1.22,
+    "end": 1.57,
+    "id": "w4"
+  },
+  {
+    "text": "of",
+    "start": 1.57,
+    "end": 1.73,
+    "id": "w5"
+  },
+  {
+    "text": "my",
+    "start": 1.77,
+    "end": 1.91,
+    "id": "w6"
+  },
+  {
+    "text": "head!",
+    "start": 1.91,
+    "end": 2.4,
+    "id": "w7"
+  }
+]

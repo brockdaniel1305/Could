@@ -1,0 +1,44 @@
+[
+  {
+    "text": "What",
+    "start": 0.25,
+    "end": 0.31,
+    "id": "w0"
+  },
+  {
+    "text": "would",
+    "start": 0.31,
+    "end": 0.56,
+    "id": "w1"
+  },
+  {
+    "text": "you",
+    "start": 0.61,
+    "end": 0.74,
+    "id": "w2"
+  },
+  {
+    "text": "do",
+    "start": 0.74,
+    "end": 0.85,
+    "id": "w3"
+  },
+  {
+    "text": "in",
+    "start": 0.86,
+    "end": 0.98,
+    "id": "w4"
+  },
+  {
+    "text": "this",
+    "start": 0.98,
+    "end": 1.23,
+    "id": "w5"
+  },
+  {
+    "text": "situation?",
+    "start": 1.23,
+    "end": 1.86,
+    "id": "w6"
+  }
+]

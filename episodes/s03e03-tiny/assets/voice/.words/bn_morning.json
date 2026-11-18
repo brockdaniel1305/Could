@@ -1,0 +1,26 @@
+[
+  {
+    "text": "Morning!",
+    "start": 0.01,
+    "end": 0.5,
+    "id": "w0"
+  },
+  {
+    "text": "Where's",
+    "start": 0.5,
+    "end": 1.11,
+    "id": "w1"
+  },
+  {
+    "text": "my",
+    "start": 1.11,
+    "end": 1.28,
+    "id": "w2"
+  },
+  {
+    "text": "phone?",
+    "start": 1.28,
+    "end": 1.79,
+    "id": "w3"
+  }
+]

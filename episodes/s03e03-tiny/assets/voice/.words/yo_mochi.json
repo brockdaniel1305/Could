@@ -1,0 +1,44 @@
+[
+  {
+    "text": "Mochi,",
+    "start": 0.18,
+    "end": 1.2,
+    "id": "w0"
+  },
+  {
+    "text": "good",
+    "start": 1.4,
+    "end": 1.56,
+    "id": "w1"
+  },
+  {
+    "text": "kitty.",
+    "start": 1.66,
+    "end": 2.24,
+    "id": "w2"
+  },
+  {
+    "text": "I",
+    "start": 2.24,
+    "end": 2.56,
+    "id": "w3"
+  },
+  {
+    "text": "fed",
+    "start": 2.56,
+    "end": 2.74,
+    "id": "w4"
+  },
+  {
+    "text": "you",
+    "start": 2.82,
+    "end": 2.95,
+    "id": "w5"
+  },
+  {
+    "text": "yesterday.",
+    "start": 2.97,
+    "end": 3.79,
+    "id": "w6"
+  }
+]

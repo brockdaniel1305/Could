@@ -1,0 +1,62 @@
+[
+  {
+    "text": "Don't",
+    "start": 0.1,
+    "end": 0.31,
+    "id": "w0"
+  },
+  {
+    "text": "get",
+    "start": 0.31,
+    "end": 0.46,
+    "id": "w1"
+  },
+  {
+    "text": "stepped",
+    "start": 0.51,
+    "end": 0.86,
+    "id": "w2"
+  },
+  {
+    "text": "on.",
+    "start": 0.89,
+    "end": 1.28,
+    "id": "w3"
+  },
+  {
+    "text": "Get",
+    "start": 1.29,
+    "end": 1.36,
+    "id": "w4"
+  },
+  {
+    "text": "to",
+    "start": 1.42,
+    "end": 1.5,
+    "id": "w5"
+  },
+  {
+    "text": "the",
+    "start": 1.5,
+    "end": 1.58,
+    "id": "w6"
+  },
+  {
+    "text": "phone.",
+    "start": 1.67,
+    "end": 1.91,
+    "id": "w7"
+  },
+  {
+    "text": "Text",
+    "start": 2.16,
+    "end": 2.4,
+    "id": "w8"
+  },
+  {
+    "text": "him.",
+    "start": 2.43,
+    "end": 2.73,
+    "id": "w9"
+  }
+]
