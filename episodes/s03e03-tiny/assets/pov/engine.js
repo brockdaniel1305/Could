@@ -4,6 +4,7 @@
 //     shake(t) -> amplitude, hands(t) -> {L:{...}, R:{...}}, fx(t) -> {red, black, blur, dim, tint}, fov(t) }
 // Captions (speaker tag + karaoke words) and the end card are DOM overlays driven by window.__POV (pov_timing.json + pov.json).
 import * as THREE from "./three.module.min.js";
+import { toonify, createInk } from "./ink.js";
 
 const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
 const sstep = (a, b, x) => { const f = clamp((x - a) / (b - a), 0, 1); return f * f * (3 - 2 * f); };
@@ -34,6 +35,9 @@ export function createPOV(plot, T) {
   const cam = new THREE.PerspectiveCamera(72, W / Hh, 0.03, 2500);
   cam.rotation.order = "YXZ"; scene.add(cam);
   const st = plot.build(THREE, scene, cam);
+  // comic look (default): cel shading + ink lines; a plot can opt out with ink: false
+  if (plot.toon) toonify(THREE, scene, plot.toonBands || 3);
+  const inkPass = plot.ink !== false ? createInk(THREE, renderer, scene, cam, W, Hh, plot.inkOpts || {}) : null;
   const head = keyed(plot.head);
 
   // ---------------- captions ----------------
@@ -77,7 +81,7 @@ export function createPOV(plot, T) {
                      (roll + noise(t * 0.6, 8) * sway * 0.6 + noise(t * 7, 9) * 1.8 * sh) * D);
     cam.fov = plot.fov ? plot.fov(t) : 72; cam.updateProjectionMatrix();
     if (plot.afterCam) plot.afterCam(t, st, cam);
-    renderer.render(scene, cam);
+    if (inkPass) inkPass(t); else renderer.render(scene, cam);
     const f = plot.fx ? plot.fx(t) : {};
     red.style.opacity = String(f.red || 0); black.style.opacity = String(f.black || 0); dim.style.opacity = String(f.dim || 0);
     canvas.style.filter = `blur(${(f.blur || 0).toFixed(2)}px) saturate(${(f.sat ?? 1).toFixed(2)}) brightness(${(f.bright ?? 1).toFixed(2)})`;

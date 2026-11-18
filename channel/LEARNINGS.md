@@ -245,6 +245,11 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- 2026-11-18 · S3E03 v2 · **Comic-Look ist Standard (Wunsch: "so detailliert wie echt, nicht billig")**: `tools/pov/ink.js` –
+  Nachbearbeitung mit Tuschelinien (Tiefen- + Normalensprünge, Papierkorn), in engine.js automatisch an (`ink: false` schaltet ab).
+  Cel-Shading (`toon: true`) ist noch fehlerhaft (zylindrische Objekte werden schwarz) → aus. Detailgrad: jede Szene braucht viel
+  Alltagskram mit Beschriftungen, Abnutzung, Flecken, Fugen-Dreck, Kabel, Griffe (siehe kitchen.js Detail-Pass). Vorbild: Comic-POV
+  von @mknowedit (Straße mit Schildern, Stromleitungen, Rauch, Fenstern).
 - 2026-11-17 · S3E01 · **POV-Pipeline `tools/pov/`:** `pov.json` (Dialogzeilen `[id, Sprecher, Startzeit]`, sfx, Musik, Hook, Endkarte)
   → `prep.py` (Wort-Timings per Whisper + 30-fps-Lautstärke-Hüllkurve je Zeile = Lippensynchron) → `build_pov.py` (kopiert Engine,
   schreibt index.html; Loops/Fades der sfx werden als feste Dateien gerendert). Szene in `<ep>/world/director.js`: Kopfpfad
