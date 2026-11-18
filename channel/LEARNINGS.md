@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-18 · S3E03 · **Szenarien unrealistischer / fiktiver machen.** S3E01 (Flugzeug) und S3E02 (Wüste) liefen schwach – zu
+  gewöhnlich/langweilig. Ab jetzt: absurde, fantastische Ausgangslagen (geschrumpft, Schwerkraft weg, fiktives Universum …), aber mit
+  innerer Logik, echter Spannung, Cliffhanger und zwei logischen A/B-Optionen. Eigene Welten, keine fremden Marken/Spiele/Filme kopieren.
 - 2026-11-17 · S3E02 · **Ab jetzt in JEDER Folge: Cliffhanger am Ende + insgesamt angespanntere Lage.** Die Situation eskaliert über die
   ganze Folge (Uhr läuft / Ressource geht aus / Gefahr kommt näher, z. B. Sturm am Horizont), kurz vor der Endkarte passiert etwas
   Unerwartetes, das offen bleibt (Klopfen, Licht, Geräusch), und die A/B-Frage knüpft genau daran an. Humor bleibt, aber leiser:
