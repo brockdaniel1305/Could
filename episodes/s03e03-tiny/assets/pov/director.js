@@ -4,6 +4,7 @@
 import { keyed, sstep, lerp, clamp, noise } from "./engine.js";
 import { rnd } from "./people.js";
 import { buildKitchen } from "./kitchen.js";
+import { makeLimb } from "./ik.js";
 
 const C = {          // cue times (s) - match pov.json
   slam: 4.1, ben1: 4.6, yell: 8.05, ben2: 10.1, plan: 12.7, run0: 15.8, sugar: 17.0, run1: 19.6, pop: 19.85, cat: 20.85, mochi: 21.9,
@@ -41,6 +42,11 @@ export default {
   build(THREE, scene, cam) {
     const S = { V3: THREE.Vector3 }, R = rnd(4);
     const H = buildKitchen(THREE, scene); S.H = H;
+    // Ben's arm: shoulder on his body -> elbow -> the hand that holds the spoon (always attached)
+    H.arm.children.slice(0, 2).forEach((m) => (m.visible = false));
+    S.benArm = makeLimb(THREE, H.ben, { upper: new THREE.MeshLambertMaterial({ color: 0x3f6fb5 }), lower: new THREE.MeshLambertMaterial({ color: 0xe3b08a }),
+                                        r1: 6.2, r2: 4.6, L1: 42, L2: 38 });
+    S.shoulder = new THREE.Vector3(14, 62, 46); S.pole = new THREE.Vector3(0.7, -0.3, 0.6);
     const lam = (c) => new THREE.MeshLambertMaterial({ color: c });
     // coffee drops (the wave from the spoon)
     S.drops = [];
@@ -70,6 +76,11 @@ export default {
     const stir = t > C.slam && t < C.ben1 + 1.6 ? 1 : 0;
     H.arm.position.set(-9 + Math.sin(t * 9) * 1.4 * stir + 30 * outA, lerp(70, 33, inA) + 30 * outA, lerp(30, 5, inA) + Math.cos(t * 9) * 1.4 * stir + 20 * outA);
     H.arm.rotation.set(0.35 - 0.2 * inA, 0, 0.1);
+    H.arm.updateMatrix();
+    const wrist = new S.V3(0, -16, 0).applyMatrix4(H.arm.matrix);                 // in Ben's space
+    S.shoulder.set(14 - 2 * inA, 62 - 6 * inA + Math.sin(t * 9) * 0.6 * stir, 46 - 4 * inA);
+    const W = S.benArm.set(S.shoulder, wrist, S.pole);
+    H.arm.position.add(W.clone().sub(wrist));                                       // if the target was out of reach, the hand follows the arm
     H.benHead.rotation.set(-0.6, t < C.ben2 ? Math.sin(t * 1.3) * 0.3 : lerp(0, 0.7, sstep(C.ben2, C.ben2 + 0.6, t)), 0);
     H.benMouth.scale.y = 0.2 + S.mouthOf("BEN", t) * 1.2;
     H.ben.position.x = -10 * sstep(C.plan, C.plan + 3, t);

@@ -245,6 +245,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- 2026-11-19 · S3E03 v3 · **Gliedmaßen nie frei schweben lassen** (Creator: "Arm hängt in der Luft, nicht am Körper"): Arme/Beine,
+  die zu einem Körper gehören, immer über `tools/pov/ik.js` (makeLimb: Schulter → Ellbogen → Handgelenk, jedes Bild gelöst) an den
+  Körper hängen; die Hand folgt dem Ziel. Vor dem Rendern jede Figur in Nah-Einstellungen auf lose Teile prüfen.
 - 2026-11-18 · S3E03 v2 · **Comic-Look ist Standard (Wunsch: "so detailliert wie echt, nicht billig")**: `tools/pov/ink.js` –
   Nachbearbeitung mit Tuschelinien (Tiefen- + Normalensprünge, Papierkorn), in engine.js automatisch an (`ink: false` schaltet ab).
   Cel-Shading (`toon: true`) ist noch fehlerhaft (zylindrische Objekte werden schwarz) → aus. Detailgrad: jede Szene braucht viel
