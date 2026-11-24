@@ -9,7 +9,7 @@
    "reverse": true
   },
   {
-   "src": "assets/clips/v2b.mp4",
+   "src": "assets/clips/v2w.mp4",
    "in": 0,
    "out": 5.0,
    "at": 4.5
@@ -140,7 +140,7 @@
   ],
   [
    "v2_stab",
-   7.0,
+   6.3,
    0.55
   ],
   [
