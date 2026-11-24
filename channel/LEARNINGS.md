@@ -5,6 +5,12 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-24 · S3E04 · **Verständlichkeit vor Atmosphäre.** KI-Animationen gut, Storytelling "extrem schlecht": neutrale Zuschauer
+  verstehen nicht, was passiert. Regeln: (1) Hook = ein klarer, simpler Satz, den jeder sofort versteht (Situation + Gefahr), gesprochen
+  in Sekunde 0–2 und als Text; (2) eine klare Erzählstimme, die in einfachen Worten sagt, was passiert ("You wave. It waves back… a
+  second too late.") – keine kryptischen Gedanken-Flüstersätze; (3) jede Szene muss auch OHNE Ton verständlich sein; (4) wenn die
+  Hauptfigur selbst Teil der Handlung ist (Spiegel, Doppelgänger …), NICHT reine Ich-Perspektive, sondern Über-die-Schulter/Third-Person,
+  damit man "dich" UND die Gefahr gleichzeitig sieht; POV nur, wo man alles Wichtige vor sich sieht.
 - 2026-11-24 · S3E04 · **Neues Rezept nach schwachen S3E01–03 (YT 44 % angesehen, TikTok Ø 8 s):** (1) Bild 0 = absurdester
   Moment in Bewegung + Satz in den ersten 0,5 s; (2) abgeschlossene Mini-Story mit Twist + Loop statt "Part 1"; (3) Optik per
   KI-Video statt eigenem 3D (Creator gab ~15–20k Credits frei). Erste Folge so: "Your reflection just blinked first".
