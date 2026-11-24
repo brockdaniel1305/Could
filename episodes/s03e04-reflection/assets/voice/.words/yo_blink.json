@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Did",
+    "start": 0,
+    "end": 0.21,
+    "id": "w0"
+  },
+  {
+    "text": "it",
+    "start": 0.21,
+    "end": 0.35,
+    "id": "w1"
+  },
+  {
+    "text": "just",
+    "start": 0.35,
+    "end": 0.43,
+    "id": "w2"
+  },
+  {
+    "text": "blink",
+    "start": 0.67,
+    "end": 1,
+    "id": "w3"
+  },
+  {
+    "text": "first?",
+    "start": 1.02,
+    "end": 1.54,
+    "id": "w4"
+  }
+]

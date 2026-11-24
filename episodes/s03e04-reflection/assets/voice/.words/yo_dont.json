@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Don't",
+    "start": 0,
+    "end": 0.33,
+    "id": "w0"
+  },
+  {
+    "text": "turn",
+    "start": 0.33,
+    "end": 0.57,
+    "id": "w1"
+  },
+  {
+    "text": "around.",
+    "start": 0.68,
+    "end": 1.16,
+    "id": "w2"
+  },
+  {
+    "text": "Don't",
+    "start": 1.16,
+    "end": 1.43,
+    "id": "w3"
+  },
+  {
+    "text": "turn",
+    "start": 1.43,
+    "end": 1.58,
+    "id": "w4"
+  },
+  {
+    "text": "around.",
+    "start": 1.58,
+    "end": 2,
+    "id": "w5"
+  }
+]

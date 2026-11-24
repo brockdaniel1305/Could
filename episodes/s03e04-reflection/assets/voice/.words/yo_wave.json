@@ -1,0 +1,44 @@
+[
+  {
+    "text": "Wave.",
+    "start": 0.15,
+    "end": 1.17,
+    "id": "w0"
+  },
+  {
+    "text": "It's",
+    "start": 1.21,
+    "end": 1.49,
+    "id": "w1"
+  },
+  {
+    "text": "late.",
+    "start": 1.49,
+    "end": 1.8,
+    "id": "w2"
+  },
+  {
+    "text": "Half",
+    "start": 2.28,
+    "end": 2.42,
+    "id": "w3"
+  },
+  {
+    "text": "a",
+    "start": 2.42,
+    "end": 2.47,
+    "id": "w4"
+  },
+  {
+    "text": "second",
+    "start": 2.51,
+    "end": 3.13,
+    "id": "w5"
+  },
+  {
+    "text": "late.",
+    "start": 3.13,
+    "end": 3.6,
+    "id": "w6"
+  }
+]
