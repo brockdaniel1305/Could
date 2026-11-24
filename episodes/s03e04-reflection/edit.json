@@ -66,7 +66,7 @@
    "kind": "smear",
    "text": "DON'T TURN AROUND",
    "x": 540,
-   "y": 640,
+   "y": 330,
    "reveal": 1.6,
    "size": 86
   },
@@ -76,7 +76,7 @@
    "kind": "smear",
    "text": "ALSO... FLOSS.",
    "x": 560,
-   "y": 760,
+   "y": 1130,
    "reveal": 0.7,
    "size": 60,
    "rot": 3
