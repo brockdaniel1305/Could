@@ -5,6 +5,9 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-24 · S3E04 · **Neues Rezept nach schwachen S3E01–03 (YT 44 % angesehen, TikTok Ø 8 s):** (1) Bild 0 = absurdester
+  Moment in Bewegung + Satz in den ersten 0,5 s; (2) abgeschlossene Mini-Story mit Twist + Loop statt "Part 1"; (3) Optik per
+  KI-Video statt eigenem 3D (Creator gab ~15–20k Credits frei). Erste Folge so: "Your reflection just blinked first".
 - 2026-11-18 · S3E03 · **Szenarien unrealistischer / fiktiver machen.** S3E01 (Flugzeug) und S3E02 (Wüste) liefen schwach – zu
   gewöhnlich/langweilig. Ab jetzt: absurde, fantastische Ausgangslagen (geschrumpft, Schwerkraft weg, fiktives Universum …), aber mit
   innerer Logik, echter Spannung, Cliffhanger und zwei logischen A/B-Optionen. Eigene Welten, keine fremden Marken/Spiele/Filme kopieren.
@@ -245,6 +248,11 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 - 001 · Kunstpause vor dem Urteil ("Titanic? ||0.8|| No. ||0.9|| But …") macht die Pointe. Kokoro macht sonst keine Pausen.
 
 ## Technik (bewährt)
+- 2026-11-24 · S3E04 · **KI-Clip-Pipeline:** ElevenLabs-Flow → 1 Charakter-Referenzbild (gpt-image-2.5-sunburst, Comic/Graphic-Novel,
+  Tuschelinien) → je Szene ein 9:16-Schlüsselbild mit der Referenz verbunden (gleiche Figur!) → Kling 2.5 Turbo image-to-video,
+  5 s, 9:16 (~2.100 Credits/Clip, liefert 1080×1920). **Max. 2 Clips gleichzeitig starten** – 7 parallel = alle "provider error".
+  Schrift auf Bildern (z. B. Spiegelschrift) nie von der KI, sondern selbst drüberlegen. Schnitt + Text + Ton: `tools/pov/assemble.py`
+  mit `<ep>/edit.json` (shots/text/lines/sfx/music) → renders/<ep>.mp4. Kosten S3E04: ~19.000 Credits gesamt.
 - 2026-11-19 · S3E03 v3 · **Gliedmaßen nie frei schweben lassen** (Creator: "Arm hängt in der Luft, nicht am Körper"): Arme/Beine,
   die zu einem Körper gehören, immer über `tools/pov/ik.js` (makeLimb: Schulter → Ellbogen → Handgelenk, jedes Bild gelöst) an den
   Körper hängen; die Hand folgt dem Ziel. Vor dem Rendern jede Figur in Nah-Einstellungen auf lose Teile prüfen.

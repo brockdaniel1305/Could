@@ -1,0 +1,8 @@
+file '/home/user/Could/episodes/s03e04-reflection/.build/shot00.mp4'
+file '/home/user/Could/episodes/s03e04-reflection/.build/shot01.mp4'
+file '/home/user/Could/episodes/s03e04-reflection/.build/shot02.mp4'
+file '/home/user/Could/episodes/s03e04-reflection/.build/shot03.mp4'
+file '/home/user/Could/episodes/s03e04-reflection/.build/shot04.mp4'
+file '/home/user/Could/episodes/s03e04-reflection/.build/shot05.mp4'
+file '/home/user/Could/episodes/s03e04-reflection/.build/shot06.mp4'
+file '/home/user/Could/episodes/s03e04-reflection/.build/shot07.mp4'
