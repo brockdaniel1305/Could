@@ -1,125 +1,107 @@
 {
- "end": 32.5,
+ "end": 31.0,
  "shots": [
   {
-   "src": "assets/clips/c1.mp4",
-   "in": 0.0,
+   "src": "assets/clips/v2a.mp4",
+   "in": 0.5,
    "out": 5.0,
-   "at": 0
+   "at": 0,
+   "reverse": true
   },
   {
-   "src": "assets/clips/c2.mp4",
-   "in": 0.3,
-   "out": 4.8,
-   "at": 5.0
+   "src": "assets/clips/v2b.mp4",
+   "in": 0,
+   "out": 5.0,
+   "at": 4.5
   },
   {
-   "src": "assets/clips/c3.mp4",
+   "src": "assets/clips/v2d.mp4",
    "in": 0.2,
-   "out": 4.7,
-   "at": 9.5
+   "out": 5.0,
+   "at": 13.5
   },
   {
-   "src": "assets/clips/c4.mp4",
-   "in": 0.2,
-   "out": 4.7,
-   "at": 14.0
+   "src": "assets/clips/v2e.mp4",
+   "in": 0,
+   "out": 4.5,
+   "at": 18.3
   },
   {
-   "src": "assets/clips/c5.mp4",
-   "in": 0.0,
-   "out": 2.5,
-   "at": 18.5
+   "src": "assets/clips/v2f.mp4",
+   "in": 0,
+   "out": 5.0,
+   "at": 22.8
   },
   {
-   "src": "assets/frames/K5.png",
-   "dur": 2.0,
-   "at": 21.0,
+   "src": "assets/frames/V2F_end.png",
+   "dur": 3.2,
+   "at": 27.8,
    "zoom": [
-    1.0,
-    1.12
+    1.12,
+    1.2
    ]
   },
   {
-   "src": "assets/clips/c6.mp4",
-   "in": 0.2,
-   "out": 4.7,
-   "at": 23.0
+   "src": "assets/frames/V2C.png",
+   "dur": 1.2,
+   "at": 9.5,
+   "zoom": [
+    1.0,
+    1.04
+   ]
   },
   {
-   "src": "assets/clips/c7.mp4",
-   "in": 0.0,
+   "src": "assets/clips/v2c.mp4",
+   "in": 2.2,
    "out": 5.0,
-   "at": 27.5
+   "at": 10.7
   }
  ],
  "text": [
   {
-   "t0": 0.0,
-   "t1": 2.4,
+   "t0": 0,
+   "t1": 3.9,
    "kind": "hook",
-   "text": "Your reflection<br>just blinked first."
+   "text": "At 3 AM, your reflection<br>stops copying you."
   },
   {
-   "t0": 10.3,
-   "t1": 14.0,
-   "kind": "smear",
-   "text": "DON'T TURN AROUND",
-   "x": 540,
-   "y": 330,
-   "reveal": 1.6,
-   "size": 86
-  },
-  {
-   "t0": 13.0,
-   "t1": 14.0,
-   "kind": "smear",
-   "text": "ALSO... FLOSS.",
-   "x": 560,
-   "y": 1130,
-   "reveal": 0.7,
-   "size": 60,
-   "rot": 3
-  },
-  {
-   "t0": 30.6,
-   "t1": 32.5,
-   "kind": "question",
-   "text": "Would you have turned around?",
-   "y": 1480
+   "t0": 27.8,
+   "t1": 31.0,
+   "kind": "endcard",
+   "text": "WHAT DOES<br>IT WANT?",
+   "sub": "Comment PART 2 for what happens next",
+   "y": 820
   }
  ],
  "lines": [
   [
-   "yo_blink",
-   "YOU",
-   1.1
+   "n_hook",
+   "NARRATOR",
+   0.4
   ],
   [
-   "yo_wave",
-   "YOU",
-   5.5
+   "n_wave",
+   "NARRATOR",
+   4.7
   ],
   [
-   "yo_why",
+   "yo_trip",
    "YOU",
-   12.4
+   10.0
   ],
   [
-   "yo_dont",
-   "YOU",
-   15.9
+   "n_tired",
+   "NARRATOR",
+   13.6
   ],
   [
-   "rf_turn",
-   "REFLECTION",
-   24.4
-  ],
-  [
-   "yo_would",
-   "YOU",
-   30.7
+   "n_watch",
+   "NARRATOR",
+   25.9
   ]
+ ],
+ "nosub": [
+  "n_hook"
  ],
  "sfx": [
   [
@@ -128,55 +110,43 @@
    0.4,
    {
     "loop": true,
-    "until": 32.5
+    "until": 31.0
    }
   ],
   [
    "brush",
    0.0,
-   0.5
+   0.45
   ],
   [
    "brush",
-   5.1,
-   0.3
+   2.0,
+   0.4
   ],
   [
-   "squeak",
-   10.3,
+   "v2_tap",
+   13.4,
    0.6
   ],
   [
-   "squeak",
-   13.0,
-   0.5
+   "v2_swell",
+   19.0,
+   0.7
   ],
   [
-   "door",
-   14.3,
-   0.7
+   "v2_giggle",
+   23.6,
+   0.9
   ],
   [
    "scare",
-   21.0,
+   27.8,
    0.8
-  ],
-  [
-   "glass",
-   27.6,
-   0.7
-  ],
-  [
-   "brush",
-   29.5,
-   0.35
   ]
  ],
  "music": [
   "tension",
-  0.07
- ],
- "nosub": [
-  "yo_would"
+  0.09,
+  18.3
  ]
 }

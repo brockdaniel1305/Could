@@ -1,0 +1,182 @@
+{
+ "end": 32.5,
+ "shots": [
+  {
+   "src": "assets/clips/c1.mp4",
+   "in": 0.0,
+   "out": 5.0,
+   "at": 0
+  },
+  {
+   "src": "assets/clips/c2.mp4",
+   "in": 0.3,
+   "out": 4.8,
+   "at": 5.0
+  },
+  {
+   "src": "assets/clips/c3.mp4",
+   "in": 0.2,
+   "out": 4.7,
+   "at": 9.5
+  },
+  {
+   "src": "assets/clips/c4.mp4",
+   "in": 0.2,
+   "out": 4.7,
+   "at": 14.0
+  },
+  {
+   "src": "assets/clips/c5.mp4",
+   "in": 0.0,
+   "out": 2.5,
+   "at": 18.5
+  },
+  {
+   "src": "assets/frames/K5.png",
+   "dur": 2.0,
+   "at": 21.0,
+   "zoom": [
+    1.0,
+    1.12
+   ]
+  },
+  {
+   "src": "assets/clips/c6.mp4",
+   "in": 0.2,
+   "out": 4.7,
+   "at": 23.0
+  },
+  {
+   "src": "assets/clips/c7.mp4",
+   "in": 0.0,
+   "out": 5.0,
+   "at": 27.5
+  }
+ ],
+ "text": [
+  {
+   "t0": 0.0,
+   "t1": 2.4,
+   "kind": "hook",
+   "text": "Your reflection<br>just blinked first."
+  },
+  {
+   "t0": 10.3,
+   "t1": 14.0,
+   "kind": "smear",
+   "text": "DON'T TURN AROUND",
+   "x": 540,
+   "y": 330,
+   "reveal": 1.6,
+   "size": 86
+  },
+  {
+   "t0": 13.0,
+   "t1": 14.0,
+   "kind": "smear",
+   "text": "ALSO... FLOSS.",
+   "x": 560,
+   "y": 1130,
+   "reveal": 0.7,
+   "size": 60,
+   "rot": 3
+  },
+  {
+   "t0": 30.6,
+   "t1": 32.5,
+   "kind": "question",
+   "text": "Would you have turned around?",
+   "y": 1480
+  }
+ ],
+ "lines": [
+  [
+   "yo_blink",
+   "YOU",
+   1.1
+  ],
+  [
+   "yo_wave",
+   "YOU",
+   5.5
+  ],
+  [
+   "yo_why",
+   "YOU",
+   12.4
+  ],
+  [
+   "yo_dont",
+   "YOU",
+   15.9
+  ],
+  [
+   "rf_turn",
+   "REFLECTION",
+   24.4
+  ],
+  [
+   "yo_would",
+   "YOU",
+   30.7
+  ]
+ ],
+ "sfx": [
+  [
+   "room",
+   0,
+   0.4,
+   {
+    "loop": true,
+    "until": 32.5
+   }
+  ],
+  [
+   "brush",
+   0.0,
+   0.5
+  ],
+  [
+   "brush",
+   5.1,
+   0.3
+  ],
+  [
+   "squeak",
+   10.3,
+   0.6
+  ],
+  [
+   "squeak",
+   13.0,
+   0.5
+  ],
+  [
+   "door",
+   14.3,
+   0.7
+  ],
+  [
+   "scare",
+   21.0,
+   0.8
+  ],
+  [
+   "glass",
+   27.6,
+   0.7
+  ],
+  [
+   "brush",
+   29.5,
+   0.35
+  ]
+ ],
+ "music": [
+  "tension",
+  0.07
+ ],
+ "nosub": [
+  "yo_would"
+ ]
+}

@@ -8,7 +8,8 @@ Reads <ep>/edit.json:
               {"t0": 10.3, "t1": 14, "kind": "smear", "text": "DON'T TURN AROUND", "x": 540, "y": 700, "reveal": 1.6} ],
     "lines": [ ["yo_blink", "YOU", 1.2], ... ]       # assets/voice/<id>.wav, subtitles from whisper words
     "sfx":   [ ["brush", 0.0, 0.5], ["room", 0, 0.35, {"loop": true, "until": 32.5}] ],
-    "music": ["tension", 0.08] }
+    "music": ["tension", 0.08, 18.3] }                 # optional 3rd value: start time
+  text kinds: hook, question, smear, endcard ({"text": "WHAT DOES<br>IT WANT?", "sub": "Comment PART 2 ..."})
 Writes <ep>/renders/<ep>.mp4 (loudness -15 LUFS)."""
 import json, subprocess, sys
 from pathlib import Path
@@ -35,6 +36,7 @@ for i, s in enumerate(sorted(cfg["shots"], key=lambda s: s["at"])):
         d = s["out"] - s["in"]
         vf = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},format=yuv420p" + (",hflip" if s.get("flip") else "")
         if s.get("speed"): vf = f"setpts=PTS/{s['speed']}," + vf
+        if s.get("reverse"): vf = "reverse," + vf      # play the trimmed part backwards
         run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(s["in"]), "-t", str(d * s.get("speed", 1)), "-i", str(src), "-an", "-vf", vf,
              "-frames:v", str(int(round(d * FPS))), str(out)])
     parts.append(out)
@@ -58,6 +60,14 @@ for k, t in enumerate(cfg.get("text", [])):
     elif t["kind"] == "question":
         f = ImageFont.truetype(FONT + "Inter-ExtraBold.otf", 58)
         overlays.append((png(f"q{k}", lambda im, f=f, t=t: shadow_text(im, (W // 2, t.get("y", 1500)), t["text"], f, (255, 255, 255), "mm")), t["t0"], t["t1"], 0.3))
+    elif t["kind"] == "endcard":
+        # cliffhanger card: darkened frame, big title, small call to action
+        fT = ImageFont.truetype(FONT + "Inter-Black.otf", t.get("size", 96)); fS = ImageFont.truetype(FONT + "Inter-SemiBold.otf", 46)
+        def d(im, t=t, fT=fT, fS=fS):
+            ImageDraw.Draw(im).rectangle((0, 0, W, H), fill=(0, 0, 0, 150))
+            for i, s in enumerate(t["text"].split("<br>")): shadow_text(im, (W // 2, t.get("y", 860) + i * 112), s, fT, (255, 255, 255) if i else (255, 210, 63), "mm", 10, 255)
+            if t.get("sub"): shadow_text(im, (W // 2, t.get("y", 860) + 330), t["sub"], fS, (235, 240, 245), "mm", 6, 230)
+        overlays.append((png(f"end{k}", d), t["t0"], t["t1"], 0.35))
     elif t["kind"] == "smear":
         # toothpaste writing on the glass: thick, slightly wobbly white letters, revealed letter by letter
         f = ImageFont.truetype(FONT + "Inter-Black.otf", t.get("size", 92)); txt = t["text"]; n = len(txt); steps = 8
@@ -77,7 +87,15 @@ for name, who, t0 in cfg["lines"]:
     if name in cfg.get("nosub", []): continue
     l = timing.get(name); text = " ".join(w[0] for w in l["words"]) if l else name
     d0 = l["dur"] if l else dur(ep / f"assets/voice/{name}.wav")
-    overlays.append((png(f"sub_{name}", lambda im, s=text: shadow_text(im, (W // 2, 1620), s, sub_font, (235, 245, 255, 235), "mm", 4, 230)), t0 - 0.05, t0 + d0 + 0.3, 0.12))
+    # wrap to lines that fit the frame (max ~900 px), stacked upward from y 1620
+    rows, cur = [], ""
+    for w in text.split():
+        if cur and sub_font.getlength(cur + " " + w) > 900: rows.append(cur); cur = w
+        else: cur = (cur + " " + w).strip()
+    rows.append(cur)
+    def dsub(im, rows=rows):
+        for i, r in enumerate(rows): shadow_text(im, (W // 2, 1620 - (len(rows) - 1 - i) * 50), r, sub_font, (235, 245, 255, 235), "mm", 4, 230)
+    overlays.append((png(f"sub_{name}", dsub), t0 - 0.05, t0 + d0 + 0.3, 0.12))
 
 # ---------------- 3. composite overlays onto the picture ----------------
 inputs, chain, last = ["-i", str(tmp / "picture.mp4")], "", "0:v"
@@ -100,7 +118,8 @@ for s in cfg.get("sfx", []):
         L = o.get("until", END) - t0; q = tmp / f"loop_{name}.wav"
         run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "-1", "-i", str(p), "-t", f"{L:.2f}", "-af", f"afade=t=out:st={max(0, L - 1):.2f}:d=1", str(q)]); p = q
     add(p, t0, vol)
-m, mv = cfg["music"]; add(ep / f"assets/music/{m}.wav", 0, mv, f",atrim=0:{END},afade=t=out:st={END - 1.5}:d=1.5")
+m, mv = cfg["music"][:2]; ms = cfg["music"][2] if len(cfg["music"]) > 2 else 0   # optional start time (music enters later)
+add(ep / f"assets/music/{m}.wav", ms, mv, f",atrim=0:{END - ms},afade=t=in:d={0.8 if ms else 0.01},afade=t=out:st={END - ms - 1.5}:d=1.5")
 fc = ";".join(fl) + ";" + "".join(f"[a{i}]" for i in range(k)) + f"amix=inputs={k}:normalize=0,atrim=0:{END},loudnorm=I=-15:TP=-1.5:LRA=11[aout]"
 out = ep / "renders" / f"{ep.name}.mp4"; out.parent.mkdir(exist_ok=True)
 run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp / "video.mp4"), *ain, "-filter_complex", fc,

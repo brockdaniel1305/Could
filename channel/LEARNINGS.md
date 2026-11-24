@@ -335,3 +335,9 @@ Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
   Funktion der Zeit: Pfade `[t, x, z, ease]` – `"j"` = Sprung ohne Gleiten –, Ball-Segmente, Kamera-Shots mit `blend`/`whip`, Overlays,
   Sprechblasen). Zeiten immer aus den Cues (`c("s3.press")`). Positionen prüfen ohne Render: `node dbg.mjs <ep> <t>`.
   Render dauert ca. 35–40 s pro Videosekunde (Software-GPU), also erst Snapshots, dann einmal komplett rendern.
+
+## Storytelling that works (S3E04 v2, creator's own revision)
+- **Lull, then shock behind the back:** after the first weird moment, let the hero explain it away ("Am I tripping?" → "You're just tired"), finish the routine normally and leave. The audience relaxes with him. THEN the camera goes back to what he turned his back on and shows that it was real (reflection stays, turns its head, laughs). The scare lands because the hero does not see it — only the viewer does.
+- End on an open question the comments answer ("WHAT DOES IT WANT?" · "Comment PART 2 for what happens next") instead of a closed twist.
+- One clear narrator line per beat says what is happening; the picture shows the same thing (works without sound).
+- AI clips: check each clip frame by frame. Kling sometimes does the opposite of the prompt (reflection starts copying instead of freezing) — playing the clip backwards (`"reverse": true` in edit.json) can turn it into exactly the right beat. Cut away messy middle parts and bridge them with the keyframe still.
