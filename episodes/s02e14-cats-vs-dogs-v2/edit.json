@@ -1,0 +1,464 @@
+{
+ "end": 39.0,
+ "shots": [
+  {
+   "src": "assets/clips/c01.mp4",
+   "in": 0,
+   "out": 2.3,
+   "at": 0
+  },
+  {
+   "src": "assets/clips/c02.mp4",
+   "in": 0,
+   "out": 3.9,
+   "at": 2.3
+  },
+  {
+   "src": "assets/clips/c03.mp4",
+   "in": 0.3,
+   "out": 3.7,
+   "at": 6.2
+  },
+  {
+   "src": "assets/clips/c04.mp4",
+   "in": 0,
+   "out": 3.25,
+   "at": 9.6
+  },
+  {
+   "src": "assets/clips/c05.mp4",
+   "in": 0,
+   "out": 3.15,
+   "at": 12.85
+  },
+  {
+   "src": "assets/clips/c06.mp4",
+   "in": 3.3,
+   "out": 5.0,
+   "at": 16.0
+  },
+  {
+   "src": "assets/frames/K07.png",
+   "dur": 2.3,
+   "at": 17.7,
+   "zoom": [
+    1.0,
+    1.1
+   ]
+  },
+  {
+   "src": "assets/clips/c08.mp4",
+   "in": 0,
+   "out": 2.4,
+   "at": 20.0
+  },
+  {
+   "src": "assets/clips/c09.mp4",
+   "in": 0,
+   "out": 1.75,
+   "speed": 0.8,
+   "at": 22.4
+  },
+  {
+   "src": "assets/clips/c10.mp4",
+   "in": 0,
+   "out": 2.35,
+   "speed": 0.81,
+   "at": 24.15
+  },
+  {
+   "src": "assets/frames/K11.png",
+   "dur": 2.9,
+   "at": 26.5,
+   "zoom": [
+    1.0,
+    1.08
+   ]
+  },
+  {
+   "src": "assets/clips/c11.mp4",
+   "in": 0,
+   "out": 1.6,
+   "at": 29.4
+  },
+  {
+   "src": "assets/clips/c12.mp4",
+   "in": 0,
+   "out": 3.4,
+   "at": 31.0
+  },
+  {
+   "src": "assets/clips/c13.mp4",
+   "in": 0,
+   "out": 2.75,
+   "at": 34.4
+  },
+  {
+   "src": "assets/frames/F13.png",
+   "dur": 1.85,
+   "at": 37.15,
+   "zoom": [
+    1.0,
+    1.06
+   ]
+  }
+ ],
+ "text": [
+  {
+   "t0": 0,
+   "t1": 2.2,
+   "kind": "hook",
+   "text": "11 CATS<br>vs. 11 DOGS"
+  },
+  {
+   "t0": 3.0,
+   "t1": 5.0,
+   "kind": "chip",
+   "label": "GREYHOUND",
+   "text": "70 KM/H",
+   "x": 70,
+   "y": 330,
+   "size": 70
+  },
+  {
+   "t0": 5.1,
+   "t1": 6.2,
+   "kind": "chip",
+   "label": "FOCUS",
+   "text": "0",
+   "x": 70,
+   "y": 330,
+   "size": 70
+  },
+  {
+   "t0": 6.7,
+   "t1": 8.6,
+   "kind": "chip",
+   "label": "CATS SLEEP",
+   "text": "16 H / DAY",
+   "x": 70,
+   "y": 330,
+   "size": 70
+  },
+  {
+   "t0": 8.7,
+   "t1": 9.6,
+   "kind": "chip",
+   "label": "TODAY",
+   "text": "STARTING XI",
+   "x": 70,
+   "y": 330,
+   "size": 70
+  },
+  {
+   "t0": 16.2,
+   "t1": 17.7,
+   "kind": "chip",
+   "label": "GOAL · 20'",
+   "text": "CATS 1–0",
+   "x": 70,
+   "y": 330,
+   "size": 70,
+   "fg": [
+    255,
+    210,
+    63
+   ]
+  },
+  {
+   "t0": 17.75,
+   "t1": 18.7,
+   "kind": "chip",
+   "label": "♥",
+   "text": "LIKE + FOLLOW",
+   "x": 70,
+   "y": 330,
+   "size": 70,
+   "bg": [
+    224,
+    65,
+    47
+   ],
+   "fg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "t0": 18.75,
+   "t1": 20.0,
+   "kind": "chip",
+   "label": "TEAM",
+   "text": "CAT?",
+   "x": 70,
+   "y": 330,
+   "size": 70,
+   "bg": [
+    123,
+    63,
+    228
+   ],
+   "fg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "t0": 19.0,
+   "t1": 20.0,
+   "kind": "chip",
+   "label": "TEAM",
+   "text": "DOG?",
+   "x": 560,
+   "y": 500,
+   "size": 70,
+   "bg": [
+    255,
+    122,
+    26
+   ],
+   "fg": [
+    26,
+    26,
+    46
+   ]
+  },
+  {
+   "t0": 20.6,
+   "t1": 22.4,
+   "kind": "chip",
+   "label": "IN THE CROWD",
+   "text": "LASER POINTER",
+   "x": 70,
+   "y": 330,
+   "size": 70,
+   "bg": [
+    224,
+    65,
+    47
+   ],
+   "fg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "t0": 22.9,
+   "t1": 24.15,
+   "kind": "chip",
+   "label": "GOAL · 55'",
+   "text": "1–1",
+   "x": 70,
+   "y": 330,
+   "size": 70
+  },
+  {
+   "t0": 26.6,
+   "t1": 27.7,
+   "kind": "chip",
+   "label": "MINUTE",
+   "text": "90'",
+   "x": 70,
+   "y": 330,
+   "size": 70
+  },
+  {
+   "t0": 27.9,
+   "t1": 29.4,
+   "kind": "chip",
+   "label": "REFEREE KIT",
+   "text": "= MAILMAN KIT",
+   "x": 70,
+   "y": 330,
+   "size": 70
+  },
+  {
+   "t0": 29.7,
+   "t1": 31.0,
+   "kind": "chip",
+   "label": "GAME",
+   "text": "PAUSED",
+   "x": 70,
+   "y": 330,
+   "size": 70,
+   "bg": [
+    224,
+    65,
+    47
+   ],
+   "fg": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "t0": 32.7,
+   "t1": 34.4,
+   "kind": "chip",
+   "label": "CATS AVAILABLE",
+   "text": "6",
+   "x": 70,
+   "y": 330,
+   "size": 70
+  },
+  {
+   "t0": 36.3,
+   "t1": 39.0,
+   "kind": "chip",
+   "label": "COMMENT",
+   "text": "Who will win?",
+   "x": 70,
+   "y": 330,
+   "size": 70,
+   "bg": [
+    224,
+    65,
+    47
+   ],
+   "fg": [
+    255,
+    255,
+    255
+   ]
+  }
+ ],
+ "lines": [
+  [
+   "n01",
+   "N",
+   0.15
+  ],
+  [
+   "n02",
+   "N",
+   2.35
+  ],
+  [
+   "n03",
+   "N",
+   6.4
+  ],
+  [
+   "n04",
+   "N",
+   9.75
+  ],
+  [
+   "n05",
+   "N",
+   12.95
+  ],
+  [
+   "n06",
+   "N",
+   17.75
+  ],
+  [
+   "n07",
+   "N",
+   20.2
+  ],
+  [
+   "n08",
+   "N",
+   22.45
+  ],
+  [
+   "n09",
+   "N",
+   26.7
+  ],
+  [
+   "n10",
+   "N",
+   31.0
+  ],
+  [
+   "n11",
+   "N",
+   34.6
+  ]
+ ],
+ "nosub": [
+  "n01"
+ ],
+ "sfx": [
+  [
+   "crowd",
+   0,
+   0.22,
+   {
+    "loop": true,
+    "until": 39.0
+   }
+  ],
+  [
+   "droppant",
+   0.9,
+   0.45
+  ],
+  [
+   "snore",
+   6.3,
+   0.6
+  ],
+  [
+   "pile",
+   9.8,
+   0.55
+  ],
+  [
+   "meow",
+   14.4,
+   0.5
+  ],
+  [
+   "rollnet",
+   15.2,
+   0.6
+  ],
+  [
+   "laser",
+   20.0,
+   0.55
+  ],
+  [
+   "kickgoal",
+   22.5,
+   0.6
+  ],
+  [
+   "droppant",
+   24.5,
+   0.45
+  ],
+  [
+   "chase",
+   29.3,
+   0.6
+  ],
+  [
+   "box",
+   31.0,
+   0.6
+  ],
+  [
+   "tension",
+   34.3,
+   0.55
+  ],
+  [
+   "whoosh",
+   36.5,
+   0.4
+  ]
+ ],
+ "music": [
+  "score",
+  0.13
+ ]
+}

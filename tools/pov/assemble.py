@@ -68,6 +68,18 @@ for k, t in enumerate(cfg.get("text", [])):
             for i, s in enumerate(t["text"].split("<br>")): shadow_text(im, (W // 2, t.get("y", 860) + i * 112), s, fT, (255, 255, 255) if i else (255, 210, 63), "mm", 10, 255)
             if t.get("sub"): shadow_text(im, (W // 2, t.get("y", 860) + 330), t["sub"], fS, (235, 240, 245), "mm", 6, 230)
         overlays.append((png(f"end{k}", d), t["t0"], t["t1"], 0.35))
+    elif t["kind"] == "chip":
+        # info card: small label + big value in a dark rounded box (e.g. "GREYHOUND" / "70 KM/H", "GOAL" / "1-0")
+        fk = ImageFont.truetype(FONT + "Inter-Bold.otf", 30); fv = ImageFont.truetype(FONT + "Inter-Black.otf", t.get("size", 70))
+        def d(im, t=t, fk=fk, fv=fv):
+            x, y = t.get("x", 70), t.get("y", 300); g = ImageDraw.Draw(im)
+            w = max(g.textlength(t["label"], font=fk), g.textlength(t["text"], font=fv)) + 56; h = 56 + t.get("size", 70)
+            sh = Image.new("RGBA", im.size, (0, 0, 0, 0)); ImageDraw.Draw(sh).rounded_rectangle((x + 8, y + 8, x + w + 8, y + h + 8), 22, fill=(0, 0, 0, 150))
+            im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(6)))
+            g.rounded_rectangle((x, y, x + w, y + h), 22, fill=tuple(t.get("bg", (26, 26, 46))) + (238,), outline=tuple(t.get("fg", (255, 210, 63))), width=5)
+            g.text((x + 28, y + 18), t["label"], font=fk, fill=tuple(t.get("fg", (255, 210, 63))))
+            g.text((x + 28, y + 52), t["text"], font=fv, fill=(255, 255, 255))
+        overlays.append((png(f"chip{k}", d), t["t0"], t["t1"], 0.15))
     elif t["kind"] == "smear":
         # toothpaste writing on the glass: thick, slightly wobbly white letters, revealed letter by letter
         f = ImageFont.truetype(FONT + "Inter-Black.otf", t.get("size", 92)); txt = t["text"]; n = len(txt); steps = 8
