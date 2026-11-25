@@ -5,6 +5,7 @@ Alles, was der Creator gewünscht, korrigiert oder abgelehnt hat, und was sich t
 Neue Einträge oben in die passende Rubrik, mit Datum und Folge.
 
 ## Wünsche des Creators (verbindlich)
+- 2026-11-25 · S3E04 · **Serie "Could you survive …?" / Horror eingestellt.** S3E04 ist auf beiden Plattformen das schlechteste Video überhaupt (YT 406 Aufrufe, 44,8 % angesehen; TikTok 634 Aufrufe, Ø 7,9 s, **2,6 % ganz**, 0 Kommentare) – trotz KI-Video für ~23k Credits. Bessere Optik ändert nichts, wenn das Thema nicht zum Publikum passt. Bestwerte hatte das Fußball-Format "Could 11 X beat 11 Y?" (S2E05 TikTok 24,7 % ganz, S2E09 YT 70,8 % angesehen) → zurück zu diesem Format.
 - 2026-11-24 · S3E04 · **Verständlichkeit vor Atmosphäre.** KI-Animationen gut, Storytelling "extrem schlecht": neutrale Zuschauer
   verstehen nicht, was passiert. Regeln: (1) Hook = ein klarer, simpler Satz, den jeder sofort versteht (Situation + Gefahr), gesprochen
   in Sekunde 0–2 und als Text; (2) eine klare Erzählstimme, die in einfachen Worten sagt, was passiert ("You wave. It waves back… a
