@@ -57,6 +57,7 @@ CSS = """
     .w3b g[id$="-spin"] { transform-box: fill-box; transform-origin: 50% 50%; }
     .w3b .legA, .w3b .legB { transform-box: fill-box; transform-origin: 50% 0; }
     .w3b .steam { transform-box: fill-box; transform-origin: 50% 0; }
+    .w3b .num { transform-box: fill-box; transform-origin: 50% 50%; }
     .w3-vig { position: absolute; inset: 0; pointer-events: none;
               background: radial-gradient(ellipse 85% 62% at 50% 52%, transparent 58%, rgba(4, 7, 18, 0.5) 100%); }
     .bub { position: absolute; left: 0; top: 0; display: none; padding: 10px 20px; border-radius: 22px; background: #f4efe6; border: 5px solid #1a1a2e;

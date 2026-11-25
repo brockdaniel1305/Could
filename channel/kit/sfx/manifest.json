@@ -138,5 +138,25 @@
     "file": "bubbles.wav",
     "duration": 1.6,
     "description": "Bubbles while sinking, 1.6 s."
+  },
+  "barks": {
+    "file": "barks.wav",
+    "duration": 2.48,
+    "description": "Pack of dogs barking all at once (ElevenLabs)."
+  },
+  "meow": {
+    "file": "meow.wav",
+    "duration": 1.2,
+    "description": "Single smug cat meow (ElevenLabs)."
+  },
+  "box": {
+    "file": "box.wav",
+    "duration": 1.76,
+    "description": "Cardboard box thump on grass + rustle (ElevenLabs)."
+  },
+  "pant": {
+    "file": "pant.wav",
+    "duration": 1.48,
+    "description": "Happy golden retriever pant + short bark (ElevenLabs)."
   }
 }

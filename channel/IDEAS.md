@@ -55,3 +55,7 @@ Tipp: Die besten neuen Ideen kommen aus den Kommentaren unter "Who should we sen
 | # | Frage | Status |
 |---|-------|--------|
 | S2E01 | Could prime Messi beat Real Madrid on his own? | ✅ |
+| S2E14 | Could 11 cats beat 11 dogs? (11 gegen 11 für die breite Masse) | ✅ |
+| – | Could 11 grandmas beat 11 toddlers? | 💡 |
+| – | Could 11 dads beat 11 moms? | 💡 |
+| – | Could 11 Gen Z beat 11 Boomers? | 💡 |

@@ -55,7 +55,7 @@ export function createWorld(plot) {
       h: a.h || 1.75, unit: a.unit || 340, y: a.y || 0,
       legsA: node.querySelectorAll(".legA"), legsB: node.querySelectorAll(".legB"),
       vSide: node.querySelector(".v-side"), vFront: node.querySelector(".v-front"), stars: rig("stars"),
-      mO: rig("m-o"), mSmile: rig("m-smile"), steam: node.querySelector(".v-front .steam") };
+      mO: rig("m-o"), mSmile: rig("m-smile"), steam: node.querySelector(".v-front .steam"), nums: node.querySelectorAll(".num") };
   }
   const puffTex = (() => { const c = document.createElement("canvas"); c.width = c.height = 64; const g = c.getContext("2d");
     const gr = g.createRadialGradient(32, 32, 0, 32, 32, 32); gr.addColorStop(0, "rgba(214,196,160,0.9)"); gr.addColorStop(1, "rgba(214,196,160,0)");
@@ -89,7 +89,8 @@ export function createWorld(plot) {
       if (k === "arms" && t < t0 + d) arms = e[3] == null ? 160 : e[3];        // e[3]: arm angle (Ronaldo "calma": ~40)
       if (k === "armsUp" && t < t0 + d) arms = 175;
       if (k === "hide" && t < t0 + d) show = false;
-      if (k === "armR" && t < t0 + d) armR = 170;            // one arm up (offside!)
+      if (k === "armR" && t < t0 + d) armR = e[3] == null ? 170 : e[3];   // one arm up (offside!); e[3]: angle
+      if (k === "paw" && t < t0 + d) armR = (e[3] || 50) * sstep(t0, t0 + (e[4] || 0.5), t);   // right paw reaches out slowly (cat pushes the ball)
       if (k === "cross" && t < t0 + d) { arms = -55; armR = -55; }   // arms crossed (Mbappé celebration)
       if (k === "wide" && t < t0 + d) { arms = e[3] == null ? 92 : lerp(92, e[3], sstep(t0, t0 + d, t)); armR = arms; }  // arms spread wide (Bellingham celebration); e[3]: arms sink to this angle
       if (k === "dizzy" && t < t0 + d) dizzy = true;          // stars over the head
@@ -113,7 +114,7 @@ export function createWorld(plot) {
     let sx = Math.abs(s.sx) < 0.12 ? 0.12 * Math.sign(s.sx || 1) : s.sx;
     // two-view sprites (bulls): head-on when running towards/away from the camera, else side view facing the way it runs
     if (a.vSide) {
-      let front = a.view === "front";
+      let front = a.viewAt ? a.viewAt(t) === "front" : a.view === "front";   // viewAt(t): switch views over time (e.g. a cat sits down)
       if (s.speed > 0.4) {
         const fx = camDir.x, fz = camDir.z, dot = (s.vx * fx + s.vz * fz) / (s.speed * Math.hypot(fx, fz) || 1);
         front = Math.abs(dot) > 0.72;
@@ -122,6 +123,7 @@ export function createWorld(plot) {
       a.vSide.style.display = front ? "none" : "inline"; a.vFront.style.display = front ? "inline" : "none";
     }
     if (!a.vSide && a.autoFlip && s.speed > 0.4) { const q = project(s.x + s.vx * 0.1, s.dy, s.z + s.vz * 0.1, a.h); if (q.X < pr.X) sx *= -1; }
+    if (a.nums) for (const nn of a.nums) nn.style.transform = sx < 0 ? "scaleX(-1)" : "none";   // shirt numbers stay readable when mirrored
     if (a.stars) a.stars.setAttribute("opacity", s.dizzy ? "1" : "0");
     if (a.mO) { a.mO.setAttribute("opacity", s.yawn ? "1" : "0"); if (a.mSmile) a.mSmile.setAttribute("opacity", s.yawn ? "0" : "1"); }
     const run0 = clamp(s.speed / 2.5, 0, 1), ph0 = (s.d / (a.stride || 1.9)) * Math.PI * 2, seed = (a.unit * 0.37 + a.name.length) % 6.28;
