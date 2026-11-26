@@ -1,0 +1,622 @@
+{
+ "s1-hook.part0.wav": {
+  "key": "c732d8ed8129ac98bf48659bf325e52f5bc31584",
+  "words": [
+   {
+    "text": "Could",
+    "start": 0,
+    "end": 0.281
+   },
+   {
+    "text": "Bayern's",
+    "start": 0.281,
+    "end": 0.731
+   },
+   {
+    "text": "injured",
+    "start": 0.731,
+    "end": 1.125
+   },
+   {
+    "text": "players",
+    "start": 1.125,
+    "end": 1.519
+   },
+   {
+    "text": "beat",
+    "start": 1.519,
+    "end": 1.744
+   },
+   {
+    "text": "Manchester",
+    "start": 1.744,
+    "end": 2.306
+   },
+   {
+    "text": "United?",
+    "start": 2.306,
+    "end": 2.7
+   }
+  ]
+ },
+ "s2-list.part0.wav": {
+  "key": "43da178e5fd1ddb4a8c4e52e84875bcd1800e371",
+  "words": [
+   {
+    "text": "Bayern",
+    "start": 0,
+    "end": 0.461
+   },
+   {
+    "text": "Munich's",
+    "start": 0.461,
+    "end": 1.075
+   },
+   {
+    "text": "injury",
+    "start": 1.075,
+    "end": 1.535
+   },
+   {
+    "text": "list,",
+    "start": 1.535,
+    "end": 1.919
+   },
+   {
+    "text": "nine",
+    "start": 1.919,
+    "end": 2.226
+   },
+   {
+    "text": "players.",
+    "start": 2.226,
+    "end": 2.84
+   },
+   {
+    "text": "Neuer,",
+    "start": 2.84,
+    "end": 3.396
+   },
+   {
+    "text": "Torntenden,",
+    "start": 3.396,
+    "end": 4.414
+   },
+   {
+    "text": "Muzziala,",
+    "start": 4.414,
+    "end": 5.247
+   },
+   {
+    "text": "Nabri,",
+    "start": 5.247,
+    "end": 5.803
+   },
+   {
+    "text": "Davies,",
+    "start": 5.803,
+    "end": 6.451
+   },
+   {
+    "text": "muscle",
+    "start": 6.451,
+    "end": 7.007
+   },
+   {
+    "text": "problems.",
+    "start": 7.007,
+    "end": 7.84
+   }
+  ]
+ },
+ "s3-united.part0.wav": {
+  "key": "553584f779ccb949a2ef061ecd73ddec37ae5755",
+  "words": [
+   {
+    "text": "Manchester",
+    "start": 0,
+    "end": 0.646
+   },
+   {
+    "text": "United,",
+    "start": 0.646,
+    "end": 1.098
+   },
+   {
+    "text": "nine",
+    "start": 1.098,
+    "end": 1.356
+   },
+   {
+    "text": "games",
+    "start": 1.356,
+    "end": 1.679
+   },
+   {
+    "text": "without",
+    "start": 1.679,
+    "end": 2.131
+   },
+   {
+    "text": "a",
+    "start": 2.131,
+    "end": 2.195
+   },
+   {
+    "text": "win",
+    "start": 2.195,
+    "end": 2.389
+   },
+   {
+    "text": "and",
+    "start": 2.389,
+    "end": 2.582
+   },
+   {
+    "text": "a",
+    "start": 2.582,
+    "end": 2.647
+   },
+   {
+    "text": "brand",
+    "start": 2.647,
+    "end": 2.97
+   },
+   {
+    "text": "new",
+    "start": 2.97,
+    "end": 3.164
+   },
+   {
+    "text": "manager.",
+    "start": 3.164,
+    "end": 3.68
+   }
+  ]
+ },
+ "s4-ko.part0.wav": {
+  "key": "dd8c20f56ce6240907616bb0c86cb96c995c4f04",
+  "words": [
+   {
+    "text": "Kick",
+    "start": 0,
+    "end": 0.335
+   },
+   {
+    "text": "off,",
+    "start": 0.335,
+    "end": 0.669
+   },
+   {
+    "text": "11",
+    "start": 0.669,
+    "end": 0.836
+   },
+   {
+    "text": "against",
+    "start": 0.836,
+    "end": 1.422
+   },
+   {
+    "text": "nine.",
+    "start": 1.422,
+    "end": 1.84
+   }
+  ]
+ },
+ "s5-pass.part0.wav": {
+  "key": "dc81d494616dc2e2e78ab1270d639173bb400abc",
+  "words": [
+   {
+    "text": "United's",
+    "start": 0,
+    "end": 0.438
+   },
+   {
+    "text": "first",
+    "start": 0.438,
+    "end": 0.712
+   },
+   {
+    "text": "pass",
+    "start": 0.712,
+    "end": 0.931
+   },
+   {
+    "text": "goes",
+    "start": 0.931,
+    "end": 1.149
+   },
+   {
+    "text": "straight",
+    "start": 1.149,
+    "end": 1.587
+   },
+   {
+    "text": "to",
+    "start": 1.587,
+    "end": 1.697
+   },
+   {
+    "text": "Bayern.",
+    "start": 1.697,
+    "end": 2.08
+   }
+  ]
+ },
+ "s6-musiala.part0.wav": {
+  "key": "8a2250d8f2fe7c69045a38c26e2ea456bdda2c2e",
+  "words": [
+   {
+    "text": "Muzzialla",
+    "start": 0,
+    "end": 0.626
+   },
+   {
+    "text": "can't",
+    "start": 0.626,
+    "end": 0.974
+   },
+   {
+    "text": "sprint,",
+    "start": 0.974,
+    "end": 1.46
+   },
+   {
+    "text": "so",
+    "start": 1.46,
+    "end": 1.599
+   },
+   {
+    "text": "he",
+    "start": 1.599,
+    "end": 1.738
+   },
+   {
+    "text": "dribbles",
+    "start": 1.738,
+    "end": 2.295
+   },
+   {
+    "text": "in",
+    "start": 2.295,
+    "end": 2.434
+   },
+   {
+    "text": "slow",
+    "start": 2.434,
+    "end": 2.712
+   },
+   {
+    "text": "motion,",
+    "start": 2.712,
+    "end": 3.199
+   },
+   {
+    "text": "somehow",
+    "start": 3.199,
+    "end": 3.686
+   },
+   {
+    "text": "it",
+    "start": 3.686,
+    "end": 3.825
+   },
+   {
+    "text": "works,",
+    "start": 3.825,
+    "end": 4.242
+   },
+   {
+    "text": "1-0!",
+    "start": 4.242,
+    "end": 4.52
+   }
+  ]
+ },
+ "s7-follow.part0.wav": {
+  "key": "f331c047acfc7265527d7272d0dd3180fbf10876",
+  "words": [
+   {
+    "text": "Like",
+    "start": 0,
+    "end": 0.276
+   },
+   {
+    "text": "and",
+    "start": 0.276,
+    "end": 0.483
+   },
+   {
+    "text": "follow,",
+    "start": 0.483,
+    "end": 0.966
+   },
+   {
+    "text": "Bayern",
+    "start": 0.966,
+    "end": 1.379
+   },
+   {
+    "text": "or",
+    "start": 1.379,
+    "end": 1.517
+   },
+   {
+    "text": "United.",
+    "start": 1.517,
+    "end": 2
+   }
+  ]
+ },
+ "s8-penalty.part0.wav": {
+  "key": "c00a7d4b00dab0aca0977eb827d727e1252275f1",
+  "words": [
+   {
+    "text": "United's",
+    "start": 0,
+    "end": 0.566
+   },
+   {
+    "text": "answer",
+    "start": 0.566,
+    "end": 0.991
+   },
+   {
+    "text": "a",
+    "start": 0.991,
+    "end": 1.062
+   },
+   {
+    "text": "penalty,",
+    "start": 1.062,
+    "end": 1.628
+   },
+   {
+    "text": "Noya",
+    "start": 1.628,
+    "end": 1.911
+   },
+   {
+    "text": "can't",
+    "start": 1.911,
+    "end": 2.265
+   },
+   {
+    "text": "dive",
+    "start": 2.265,
+    "end": 2.548
+   },
+   {
+    "text": "so",
+    "start": 2.548,
+    "end": 2.689
+   },
+   {
+    "text": "he",
+    "start": 2.689,
+    "end": 2.831
+   },
+   {
+    "text": "sticks",
+    "start": 2.831,
+    "end": 3.255
+   },
+   {
+    "text": "out",
+    "start": 3.255,
+    "end": 3.468
+   },
+   {
+    "text": "his",
+    "start": 3.468,
+    "end": 3.68
+   },
+   {
+    "text": "crutch,",
+    "start": 3.68,
+    "end": 4.175
+   },
+   {
+    "text": "SAVED!",
+    "start": 4.175,
+    "end": 4.6
+   }
+  ]
+ },
+ "s9-physio.part0.wav": {
+  "key": "762ecf85f44711684c3e2fae664bf433061b6b90",
+  "words": [
+   {
+    "text": "Half",
+    "start": 0,
+    "end": 0.29
+   },
+   {
+    "text": "time,",
+    "start": 0.29,
+    "end": 0.653
+   },
+   {
+    "text": "one",
+    "start": 0.653,
+    "end": 0.87
+   },
+   {
+    "text": "physio,",
+    "start": 0.87,
+    "end": 1.378
+   },
+   {
+    "text": "nine",
+    "start": 1.378,
+    "end": 1.668
+   },
+   {
+    "text": "patients.",
+    "start": 1.668,
+    "end": 2.32
+   }
+  ]
+ },
+ "s10-davies.part0.wav": {
+  "key": "9ce703c0064a87b3f81d283dec40f9fe44479d78",
+  "words": [
+   {
+    "text": "Minute",
+    "start": 0,
+    "end": 0.588
+   },
+   {
+    "text": "90,",
+    "start": 0.588,
+    "end": 0.883
+   },
+   {
+    "text": "Davies",
+    "start": 0.883,
+    "end": 1.471
+   },
+   {
+    "text": "sprints",
+    "start": 1.471,
+    "end": 2.157
+   },
+   {
+    "text": "on",
+    "start": 2.157,
+    "end": 2.354
+   },
+   {
+    "text": "one",
+    "start": 2.354,
+    "end": 2.648
+   },
+   {
+    "text": "leg.",
+    "start": 2.648,
+    "end": 3.04
+   },
+   {
+    "text": "Still",
+    "start": 3.04,
+    "end": 3.363
+   },
+   {
+    "text": "faster",
+    "start": 3.363,
+    "end": 3.75
+   },
+   {
+    "text": "than",
+    "start": 3.75,
+    "end": 4.008
+   },
+   {
+    "text": "United's",
+    "start": 4.008,
+    "end": 4.524
+   },
+   {
+    "text": "defence.",
+    "start": 4.524,
+    "end": 5.04
+   },
+   {
+    "text": "2-0.",
+    "start": 5.04,
+    "end": 5.88
+   }
+  ]
+ },
+ "s11-end.part0.wav": {
+  "key": "79f1553bf8c83c10f2a63db62359e452390a68a4",
+  "words": [
+   {
+    "text": "last",
+    "start": 0,
+    "end": 0.298
+   },
+   {
+    "text": "chance",
+    "start": 0.298,
+    "end": 0.744
+   },
+   {
+    "text": "for",
+    "start": 0.744,
+    "end": 0.968
+   },
+   {
+    "text": "United",
+    "start": 0.968,
+    "end": 1.414
+   },
+   {
+    "text": "and",
+    "start": 1.414,
+    "end": 1.638
+   },
+   {
+    "text": "empty",
+    "start": 1.638,
+    "end": 2.01
+   },
+   {
+    "text": "goal",
+    "start": 2.01,
+    "end": 2.308
+   },
+   {
+    "text": "comment",
+    "start": 2.308,
+    "end": 2.829
+   },
+   {
+    "text": "who",
+    "start": 2.829,
+    "end": 3.052
+   },
+   {
+    "text": "wins",
+    "start": 3.052,
+    "end": 3.35
+   },
+   {
+    "text": "the",
+    "start": 3.35,
+    "end": 3.573
+   },
+   {
+    "text": "rematch",
+    "start": 3.573,
+    "end": 4.094
+   },
+   {
+    "text": "so",
+    "start": 4.094,
+    "end": 4.243
+   },
+   {
+    "text": "if",
+    "start": 4.243,
+    "end": 4.392
+   },
+   {
+    "text": "anyone",
+    "start": 4.392,
+    "end": 4.839
+   },
+   {
+    "text": "asks",
+    "start": 4.839,
+    "end": 5.137
+   },
+   {
+    "text": "you",
+    "start": 5.137,
+    "end": 5.36
+   }
+  ]
+ }
+}

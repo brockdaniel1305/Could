@@ -1,0 +1,829 @@
+{
+ "duration": 48.395,
+ "voice": "prerecorded:elevenlabs:Nathaniel - Live Football Commentator (9rR45HW0vcBmpCbkc4m9)",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 3.188,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 2.638,
+   "cues": {},
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.431
+    },
+    {
+     "text": "Bayern's",
+     "start": 0.431,
+     "end": 0.881
+    },
+    {
+     "text": "injured",
+     "start": 0.881,
+     "end": 1.275
+    },
+    {
+     "text": "players",
+     "start": 1.275,
+     "end": 1.669
+    },
+    {
+     "text": "beat",
+     "start": 1.669,
+     "end": 1.894
+    },
+    {
+     "text": "Manchester",
+     "start": 1.894,
+     "end": 2.456
+    },
+    {
+     "text": "United?",
+     "start": 2.456,
+     "end": 2.85
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 1.3,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s2-list",
+   "start": 3.188,
+   "duration": 8.61,
+   "voice": "assets/voice/s2-list.wav",
+   "voiceStart": 0.15,
+   "speech": 8.06,
+   "cues": {
+    "list": 0.15,
+    "nine": 2.069,
+    "neuer": 2.99,
+    "mus": 4.613
+   },
+   "words": [
+    {
+     "text": "Bayern",
+     "start": 0.15,
+     "end": 0.611
+    },
+    {
+     "text": "Munich's",
+     "start": 0.611,
+     "end": 1.225
+    },
+    {
+     "text": "injury",
+     "start": 1.225,
+     "end": 1.685
+    },
+    {
+     "text": "list:",
+     "start": 1.685,
+     "end": 2.069
+    },
+    {
+     "text": "nine",
+     "start": 2.069,
+     "end": 2.376
+    },
+    {
+     "text": "players.",
+     "start": 2.376,
+     "end": 2.99
+    },
+    {
+     "text": "Neuer:",
+     "start": 2.99,
+     "end": 3.554
+    },
+    {
+     "text": "torn",
+     "start": 3.554,
+     "end": 3.978
+    },
+    {
+     "text": "tendon.",
+     "start": 3.978,
+     "end": 4.613
+    },
+    {
+     "text": "Musiala,",
+     "start": 4.613,
+     "end": 5.318
+    },
+    {
+     "text": "Gnabry,",
+     "start": 5.318,
+     "end": 5.953
+    },
+    {
+     "text": "Davies:",
+     "start": 5.953,
+     "end": 6.601
+    },
+    {
+     "text": "muscle",
+     "start": 6.601,
+     "end": 7.157
+    },
+    {
+     "text": "problems.",
+     "start": 7.157,
+     "end": 7.99
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s3-united",
+   "start": 11.798,
+   "duration": 4.253,
+   "voice": "assets/voice/s3-united.wav",
+   "voiceStart": 0.15,
+   "speech": 3.704,
+   "cues": {
+    "mu": 0.15,
+    "nine": 1.248,
+    "mgr": 2.539
+   },
+   "words": [
+    {
+     "text": "Manchester",
+     "start": 0.15,
+     "end": 0.796
+    },
+    {
+     "text": "United:",
+     "start": 0.796,
+     "end": 1.248
+    },
+    {
+     "text": "nine",
+     "start": 1.248,
+     "end": 1.506
+    },
+    {
+     "text": "games",
+     "start": 1.506,
+     "end": 1.829
+    },
+    {
+     "text": "without",
+     "start": 1.829,
+     "end": 2.281
+    },
+    {
+     "text": "a",
+     "start": 2.281,
+     "end": 2.345
+    },
+    {
+     "text": "win.",
+     "start": 2.345,
+     "end": 2.539
+    },
+    {
+     "text": "And",
+     "start": 2.539,
+     "end": 2.732
+    },
+    {
+     "text": "a",
+     "start": 2.732,
+     "end": 2.797
+    },
+    {
+     "text": "brand-new",
+     "start": 2.797,
+     "end": 3.314
+    },
+    {
+     "text": "manager.",
+     "start": 3.314,
+     "end": 3.83
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-ko",
+   "start": 16.051,
+   "duration": 2.173,
+   "voice": "assets/voice/s4-ko.wav",
+   "voiceStart": 0.15,
+   "speech": 1.623,
+   "cues": {
+    "ko": 0.15,
+    "count": 0.634
+   },
+   "words": [
+    {
+     "text": "Kick-off.",
+     "start": 0.15,
+     "end": 0.634
+    },
+    {
+     "text": "Eleven",
+     "start": 0.634,
+     "end": 0.986
+    },
+    {
+     "text": "against",
+     "start": 0.986,
+     "end": 1.572
+    },
+    {
+     "text": "nine.",
+     "start": 1.572,
+     "end": 1.99
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whistle",
+     "cue": "ko",
+     "offset": -0.1,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s5-pass",
+   "start": 18.224,
+   "duration": 2.588,
+   "voice": "assets/voice/s5-pass.wav",
+   "voiceStart": 0.15,
+   "speech": 2.038,
+   "cues": {
+    "pass": 0.15,
+    "bay": 1.299
+   },
+   "words": [
+    {
+     "text": "United's",
+     "start": 0.15,
+     "end": 0.588
+    },
+    {
+     "text": "first",
+     "start": 0.588,
+     "end": 0.862
+    },
+    {
+     "text": "pass",
+     "start": 0.862,
+     "end": 1.081
+    },
+    {
+     "text": "goes",
+     "start": 1.081,
+     "end": 1.299
+    },
+    {
+     "text": "straight",
+     "start": 1.299,
+     "end": 1.737
+    },
+    {
+     "text": "to",
+     "start": 1.737,
+     "end": 1.847
+    },
+    {
+     "text": "Bayern.",
+     "start": 1.847,
+     "end": 2.23
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "pass",
+     "offset": 0.1,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s6-musiala",
+   "start": 20.812,
+   "duration": 5.056,
+   "voice": "assets/voice/s6-musiala.wav",
+   "voiceStart": 0.15,
+   "speech": 4.506,
+   "cues": {
+    "mus": 0.15,
+    "slow": 1.61,
+    "works": 3.349,
+    "one": 4.392
+   },
+   "words": [
+    {
+     "text": "Musiala",
+     "start": 0.15,
+     "end": 0.776
+    },
+    {
+     "text": "can't",
+     "start": 0.776,
+     "end": 1.124
+    },
+    {
+     "text": "sprint.",
+     "start": 1.124,
+     "end": 1.61
+    },
+    {
+     "text": "So",
+     "start": 1.61,
+     "end": 1.749
+    },
+    {
+     "text": "he",
+     "start": 1.749,
+     "end": 1.888
+    },
+    {
+     "text": "dribbles",
+     "start": 1.888,
+     "end": 2.445
+    },
+    {
+     "text": "in",
+     "start": 2.445,
+     "end": 2.584
+    },
+    {
+     "text": "slow",
+     "start": 2.584,
+     "end": 2.862
+    },
+    {
+     "text": "motion.",
+     "start": 2.862,
+     "end": 3.349
+    },
+    {
+     "text": "Somehow,",
+     "start": 3.349,
+     "end": 3.836
+    },
+    {
+     "text": "it",
+     "start": 3.836,
+     "end": 3.975
+    },
+    {
+     "text": "works.",
+     "start": 3.975,
+     "end": 4.392
+    },
+    {
+     "text": "One,",
+     "start": 4.392,
+     "end": 4.524
+    },
+    {
+     "text": "nil!",
+     "start": 4.524,
+     "end": 4.656
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "one",
+     "offset": -0.5,
+     "volume": 0.25
+    },
+    {
+     "name": "net",
+     "cue": "one",
+     "offset": -0.1,
+     "volume": 0.3
+    },
+    {
+     "name": "impact-bass-1",
+     "cue": "one",
+     "offset": -0.1,
+     "volume": 0.22
+    }
+   ]
+  },
+  {
+   "id": "s7-follow",
+   "start": 25.868,
+   "duration": 2.414,
+   "voice": "assets/voice/s7-follow.wav",
+   "voiceStart": 0.15,
+   "speech": 1.864,
+   "cues": {
+    "follow": 0.15,
+    "q": 1.116
+   },
+   "words": [
+    {
+     "text": "Like",
+     "start": 0.15,
+     "end": 0.426
+    },
+    {
+     "text": "and",
+     "start": 0.426,
+     "end": 0.633
+    },
+    {
+     "text": "follow.",
+     "start": 0.633,
+     "end": 1.116
+    },
+    {
+     "text": "Bayern",
+     "start": 1.116,
+     "end": 1.529
+    },
+    {
+     "text": "or",
+     "start": 1.529,
+     "end": 1.667
+    },
+    {
+     "text": "United?",
+     "start": 1.667,
+     "end": 2.15
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s8-penalty",
+   "start": 28.282,
+   "duration": 5.196,
+   "voice": "assets/voice/s8-penalty.wav",
+   "voiceStart": 0.15,
+   "speech": 4.646,
+   "cues": {
+    "pen": 0.15,
+    "dive": 1.778,
+    "crutch": 2.698,
+    "saved": 4.325
+   },
+   "words": [
+    {
+     "text": "United's",
+     "start": 0.15,
+     "end": 0.716
+    },
+    {
+     "text": "answer:",
+     "start": 0.716,
+     "end": 1.141
+    },
+    {
+     "text": "a",
+     "start": 1.141,
+     "end": 1.212
+    },
+    {
+     "text": "penalty.",
+     "start": 1.212,
+     "end": 1.778
+    },
+    {
+     "text": "Neuer",
+     "start": 1.778,
+     "end": 2.061
+    },
+    {
+     "text": "can't",
+     "start": 2.061,
+     "end": 2.415
+    },
+    {
+     "text": "dive.",
+     "start": 2.415,
+     "end": 2.698
+    },
+    {
+     "text": "So",
+     "start": 2.698,
+     "end": 2.839
+    },
+    {
+     "text": "he",
+     "start": 2.839,
+     "end": 2.981
+    },
+    {
+     "text": "sticks",
+     "start": 2.981,
+     "end": 3.405
+    },
+    {
+     "text": "out",
+     "start": 3.405,
+     "end": 3.618
+    },
+    {
+     "text": "his",
+     "start": 3.618,
+     "end": 3.83
+    },
+    {
+     "text": "crutch.",
+     "start": 3.83,
+     "end": 4.325
+    },
+    {
+     "text": "Saved!",
+     "start": 4.325,
+     "end": 4.75
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "crutch",
+     "offset": 0.2,
+     "volume": 0.25
+    },
+    {
+     "name": "clang",
+     "cue": "saved",
+     "offset": -0.15,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s9-physio",
+   "start": 33.478,
+   "duration": 2.674,
+   "voice": "assets/voice/s9-physio.wav",
+   "voiceStart": 0.15,
+   "speech": 2.124,
+   "cues": {
+    "ht": 0.15,
+    "physio": 0.803,
+    "nine": 1.528
+   },
+   "words": [
+    {
+     "text": "Half-time.",
+     "start": 0.15,
+     "end": 0.803
+    },
+    {
+     "text": "One",
+     "start": 0.803,
+     "end": 1.02
+    },
+    {
+     "text": "physio.",
+     "start": 1.02,
+     "end": 1.528
+    },
+    {
+     "text": "Nine",
+     "start": 1.528,
+     "end": 1.818
+    },
+    {
+     "text": "patients.",
+     "start": 1.818,
+     "end": 2.47
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whistle",
+     "cue": "ht",
+     "offset": -0.1,
+     "volume": 0.22
+    }
+   ]
+  },
+  {
+   "id": "s10-davies",
+   "start": 36.152,
+   "duration": 6.347,
+   "voice": "assets/voice/s10-davies.wav",
+   "voiceStart": 0.15,
+   "speech": 5.797,
+   "cues": {
+    "min": 0.15,
+    "davies": 1.033,
+    "faster": 3.19,
+    "two": 5.19
+   },
+   "words": [
+    {
+     "text": "Minute",
+     "start": 0.15,
+     "end": 0.738
+    },
+    {
+     "text": "ninety.",
+     "start": 0.738,
+     "end": 1.033
+    },
+    {
+     "text": "Davies",
+     "start": 1.033,
+     "end": 1.621
+    },
+    {
+     "text": "sprints",
+     "start": 1.621,
+     "end": 2.307
+    },
+    {
+     "text": "on",
+     "start": 2.307,
+     "end": 2.504
+    },
+    {
+     "text": "one",
+     "start": 2.504,
+     "end": 2.798
+    },
+    {
+     "text": "leg.",
+     "start": 2.798,
+     "end": 3.19
+    },
+    {
+     "text": "Still",
+     "start": 3.19,
+     "end": 3.513
+    },
+    {
+     "text": "faster",
+     "start": 3.513,
+     "end": 3.9
+    },
+    {
+     "text": "than",
+     "start": 3.9,
+     "end": 4.158
+    },
+    {
+     "text": "United's",
+     "start": 4.158,
+     "end": 4.674
+    },
+    {
+     "text": "defence.",
+     "start": 4.674,
+     "end": 5.19
+    },
+    {
+     "text": "Two,",
+     "start": 5.19,
+     "end": 5.568
+    },
+    {
+     "text": "nil!",
+     "start": 5.568,
+     "end": 5.947
+    }
+   ],
+   "sfx": [
+    {
+     "name": "boing",
+     "cue": "davies",
+     "offset": 0.2,
+     "volume": 0.18
+    },
+    {
+     "name": "kick",
+     "cue": "two",
+     "offset": -0.5,
+     "volume": 0.25
+    },
+    {
+     "name": "net",
+     "cue": "two",
+     "offset": -0.1,
+     "volume": 0.3
+    },
+    {
+     "name": "impact-bass-1",
+     "cue": "two",
+     "offset": -0.1,
+     "volume": 0.22
+    }
+   ]
+  },
+  {
+   "id": "s11-end",
+   "start": 42.499,
+   "duration": 5.896,
+   "voice": "assets/voice/s11-end.wav",
+   "voiceStart": 0.15,
+   "speech": 5.446,
+   "cues": {
+    "last": 0.15,
+    "empty": 1.564,
+    "who": 2.458,
+    "loop": 4.244
+   },
+   "words": [
+    {
+     "text": "Last",
+     "start": 0.15,
+     "end": 0.448
+    },
+    {
+     "text": "chance",
+     "start": 0.448,
+     "end": 0.894
+    },
+    {
+     "text": "for",
+     "start": 0.894,
+     "end": 1.118
+    },
+    {
+     "text": "United:",
+     "start": 1.118,
+     "end": 1.564
+    },
+    {
+     "text": "an",
+     "start": 1.564,
+     "end": 1.788
+    },
+    {
+     "text": "empty",
+     "start": 1.788,
+     "end": 2.16
+    },
+    {
+     "text": "goal.",
+     "start": 2.16,
+     "end": 2.458
+    },
+    {
+     "text": "Comment",
+     "start": 2.458,
+     "end": 2.979
+    },
+    {
+     "text": "who",
+     "start": 2.979,
+     "end": 3.202
+    },
+    {
+     "text": "wins",
+     "start": 3.202,
+     "end": 3.5
+    },
+    {
+     "text": "the",
+     "start": 3.5,
+     "end": 3.723
+    },
+    {
+     "text": "rematch.",
+     "start": 3.723,
+     "end": 4.244
+    },
+    {
+     "text": "So",
+     "start": 4.244,
+     "end": 4.393
+    },
+    {
+     "text": "if",
+     "start": 4.393,
+     "end": 4.542
+    },
+    {
+     "text": "anyone",
+     "start": 4.542,
+     "end": 4.989
+    },
+    {
+     "text": "asks",
+     "start": 4.989,
+     "end": 5.287
+    },
+    {
+     "text": "you:",
+     "start": 5.287,
+     "end": 5.51
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}
