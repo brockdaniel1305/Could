@@ -1,0 +1,156 @@
+{
+ "id": "S2E16",
+ "title": "Could Chelsea beat 11 traffic cones?",
+ "season": 2,
+ "episode": 16,
+ "format": "short",
+ "loop": true,
+ "world": true,
+ "provider": "prerecorded",
+ "voice": "elevenlabs:Nathaniel - Live Football Commentator (9rR45HW0vcBmpCbkc4m9)",
+ "preview_voice": "am_adam",
+ "speed": 1.0,
+ "caption": "Could Chelsea beat 11 traffic cones? 🚧⚽ Would YOUR team beat the cones? YES or NO 👇 #chelsea #cfc #premierleague #football #could #shorts | Music: \"Fusion - Dark Epic Trailer\" by E. Erkut (CC BY 3.0)",
+ "music": {
+  "src": "assets/music/fusion.wav",
+  "volume": 0.11,
+  "duck": true,
+  "credit": "Music: \"Fusion - Dark Epic Trailer\" by E. Erkut (CC BY 3.0) jamendo.com/track/1308697"
+ },
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "text": "Could Chelsea beat eleven traffic cones?",
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 1.2,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s2-intro",
+   "text": "{{che}}Chelsea: {{three}}three defeats in a row. {{so}}So today's opponent: {{cones}}eleven traffic cones.",
+   "sfx": [
+    {
+     "name": "stomp",
+     "cue": "cones",
+     "offset": 0.3,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s3-tactic",
+   "text": "{{tac}}Their tactic? {{still}}Stand still.",
+   "sfx": []
+  },
+  {
+   "id": "s4-ko",
+   "text": "{{ko}}Kick-off. {{drib}}Chelsea dribble straight into {{cone}}the first cone.",
+   "sfx": [
+    {
+     "name": "whistle",
+     "cue": "ko",
+     "offset": -0.1,
+     "volume": 0.25
+    },
+    {
+     "name": "clang",
+     "cue": "cone",
+     "offset": 0.35,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s5-shot",
+   "text": "{{shot}}Shot! {{p1}}Off the post. {{c1}}Off a cone. {{p2}}Off the post again!",
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "shot",
+     "offset": 0,
+     "volume": 0.25
+    },
+    {
+     "name": "clang",
+     "cue": "p1",
+     "offset": -0.05,
+     "volume": 0.2
+    },
+    {
+     "name": "ding",
+     "cue": "c1",
+     "offset": -0.05,
+     "volume": 0.2
+    },
+    {
+     "name": "clang",
+     "cue": "p2",
+     "offset": -0.05,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s6-follow",
+   "text": "{{follow}}Like and follow. {{q}}Chelsea, or the cones?",
+   "sfx": []
+  },
+  {
+   "id": "s7-alonso",
+   "text": "{{xa}}Xabi Alonso has a plan: {{plan}}pass around them. {{hit}}The pass hits a cone.",
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "hit",
+     "offset": -0.2,
+     "volume": 0.22
+    },
+    {
+     "name": "ding",
+     "cue": "hit",
+     "offset": 0.3,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s8-goal",
+   "text": "{{min}}Ninetieth minute. {{clear}}A clearance bounces off a cone… {{own}}into Chelsea's own goal. {{one}}One, nil, cones!",
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "clear",
+     "offset": 0,
+     "volume": 0.25
+    },
+    {
+     "name": "ding",
+     "cue": "clear",
+     "offset": 0.9,
+     "volume": 0.2
+    },
+    {
+     "name": "net",
+     "cue": "own",
+     "offset": 0.9,
+     "volume": 0.3
+    },
+    {
+     "name": "impact-bass-1",
+     "cue": "one",
+     "offset": -0.1,
+     "volume": 0.22
+    }
+   ]
+  },
+  {
+   "id": "s9-end",
+   "text": "{{cel}}The cones celebrate by standing still. {{who}}Comment: would your team beat the cones? {{yn}}Yes, or no?",
+   "sfx": []
+  }
+ ]
+}

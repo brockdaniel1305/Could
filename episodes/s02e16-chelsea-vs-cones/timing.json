@@ -1,0 +1,696 @@
+{
+ "duration": 35.31,
+ "voice": "prerecorded:elevenlabs:Nathaniel - Live Football Commentator (9rR45HW0vcBmpCbkc4m9)",
+ "scenes": [
+  {
+   "id": "s1-hook",
+   "start": 0.0,
+   "duration": 2.457,
+   "voice": "assets/voice/s1-hook.wav",
+   "voiceStart": 0.15,
+   "speech": 1.907,
+   "cues": {},
+   "words": [
+    {
+     "text": "Could",
+     "start": 0.15,
+     "end": 0.473
+    },
+    {
+     "text": "Chelsea",
+     "start": 0.473,
+     "end": 0.924
+    },
+    {
+     "text": "beat",
+     "start": 0.924,
+     "end": 1.182
+    },
+    {
+     "text": "eleven",
+     "start": 1.182,
+     "end": 1.311
+    },
+    {
+     "text": "traffic",
+     "start": 1.311,
+     "end": 1.763
+    },
+    {
+     "text": "cones?",
+     "start": 1.763,
+     "end": 2.15
+    }
+   ],
+   "sfx": [
+    {
+     "name": "impact-bass-1",
+     "at": 1.2,
+     "volume": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s2-intro",
+   "start": 2.457,
+   "duration": 4.751,
+   "voice": "assets/voice/s2-intro.wav",
+   "voiceStart": 0.15,
+   "speech": 4.201,
+   "cues": {
+    "che": 0.15,
+    "three": 0.631,
+    "so": 1.938,
+    "cones": 3.107
+   },
+   "words": [
+    {
+     "text": "Chelsea:",
+     "start": 0.15,
+     "end": 0.631
+    },
+    {
+     "text": "three",
+     "start": 0.631,
+     "end": 0.975
+    },
+    {
+     "text": "defeats",
+     "start": 0.975,
+     "end": 1.457
+    },
+    {
+     "text": "in",
+     "start": 1.457,
+     "end": 1.594
+    },
+    {
+     "text": "a",
+     "start": 1.594,
+     "end": 1.663
+    },
+    {
+     "text": "row.",
+     "start": 1.663,
+     "end": 1.938
+    },
+    {
+     "text": "So",
+     "start": 1.938,
+     "end": 2.076
+    },
+    {
+     "text": "today's",
+     "start": 2.076,
+     "end": 2.557
+    },
+    {
+     "text": "opponent:",
+     "start": 2.557,
+     "end": 3.107
+    },
+    {
+     "text": "eleven",
+     "start": 3.107,
+     "end": 3.245
+    },
+    {
+     "text": "traffic",
+     "start": 3.245,
+     "end": 3.726
+    },
+    {
+     "text": "cones.",
+     "start": 3.726,
+     "end": 4.07
+    }
+   ],
+   "sfx": [
+    {
+     "name": "stomp",
+     "cue": "cones",
+     "offset": 0.3,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s3-tactic",
+   "start": 7.208,
+   "duration": 1.809,
+   "voice": "assets/voice/s3-tactic.wav",
+   "voiceStart": 0.15,
+   "speech": 1.259,
+   "cues": {
+    "tac": 0.298,
+    "still": 0.888
+   },
+   "words": [
+    {
+     "text": "Their",
+     "start": 0.298,
+     "end": 0.544
+    },
+    {
+     "text": "tactic?",
+     "start": 0.544,
+     "end": 0.888
+    },
+    {
+     "text": "Stand",
+     "start": 0.888,
+     "end": 1.135
+    },
+    {
+     "text": "still.",
+     "start": 1.135,
+     "end": 1.43
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s4-ko",
+   "start": 9.017,
+   "duration": 3.105,
+   "voice": "assets/voice/s4-ko.wav",
+   "voiceStart": 0.15,
+   "speech": 2.555,
+   "cues": {
+    "ko": 0.15,
+    "drib": 0.593,
+    "cone": 2.031
+   },
+   "words": [
+    {
+     "text": "Kick-off.",
+     "start": 0.15,
+     "end": 0.593
+    },
+    {
+     "text": "Chelsea",
+     "start": 0.593,
+     "end": 0.98
+    },
+    {
+     "text": "dribble",
+     "start": 0.98,
+     "end": 1.367
+    },
+    {
+     "text": "straight",
+     "start": 1.367,
+     "end": 1.81
+    },
+    {
+     "text": "into",
+     "start": 1.81,
+     "end": 2.031
+    },
+    {
+     "text": "the",
+     "start": 2.031,
+     "end": 2.197
+    },
+    {
+     "text": "first",
+     "start": 2.197,
+     "end": 2.473
+    },
+    {
+     "text": "cone.",
+     "start": 2.473,
+     "end": 2.75
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whistle",
+     "cue": "ko",
+     "offset": -0.1,
+     "volume": 0.25
+    },
+    {
+     "name": "clang",
+     "cue": "cone",
+     "offset": 0.35,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s5-shot",
+   "start": 12.122,
+   "duration": 3.529,
+   "voice": "assets/voice/s5-shot.wav",
+   "voiceStart": 0.15,
+   "speech": 2.979,
+   "cues": {
+    "shot": 0.15,
+    "p1": 0.45,
+    "c1": 1.275,
+    "p2": 1.95
+   },
+   "words": [
+    {
+     "text": "Shot!",
+     "start": 0.15,
+     "end": 0.45
+    },
+    {
+     "text": "Off",
+     "start": 0.45,
+     "end": 0.675
+    },
+    {
+     "text": "the",
+     "start": 0.675,
+     "end": 0.9
+    },
+    {
+     "text": "post.",
+     "start": 0.9,
+     "end": 1.275
+    },
+    {
+     "text": "Off",
+     "start": 1.275,
+     "end": 1.5
+    },
+    {
+     "text": "a",
+     "start": 1.5,
+     "end": 1.575
+    },
+    {
+     "text": "cone.",
+     "start": 1.575,
+     "end": 1.95
+    },
+    {
+     "text": "Off",
+     "start": 1.95,
+     "end": 2.175
+    },
+    {
+     "text": "the",
+     "start": 2.175,
+     "end": 2.4
+    },
+    {
+     "text": "post",
+     "start": 2.4,
+     "end": 2.7
+    },
+    {
+     "text": "again!",
+     "start": 2.7,
+     "end": 3.15
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "shot",
+     "offset": 0,
+     "volume": 0.25
+    },
+    {
+     "name": "clang",
+     "cue": "p1",
+     "offset": -0.05,
+     "volume": 0.2
+    },
+    {
+     "name": "ding",
+     "cue": "c1",
+     "offset": -0.05,
+     "volume": 0.2
+    },
+    {
+     "name": "clang",
+     "cue": "p2",
+     "offset": -0.05,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s6-follow",
+   "start": 15.651,
+   "duration": 2.634,
+   "voice": "assets/voice/s6-follow.wav",
+   "voiceStart": 0.15,
+   "speech": 2.084,
+   "cues": {
+    "follow": 0.15,
+    "q": 1.069
+   },
+   "words": [
+    {
+     "text": "Like",
+     "start": 0.15,
+     "end": 0.413
+    },
+    {
+     "text": "and",
+     "start": 0.413,
+     "end": 0.609
+    },
+    {
+     "text": "follow.",
+     "start": 0.609,
+     "end": 1.069
+    },
+    {
+     "text": "Chelsea,",
+     "start": 1.069,
+     "end": 1.528
+    },
+    {
+     "text": "or",
+     "start": 1.528,
+     "end": 1.659
+    },
+    {
+     "text": "the",
+     "start": 1.659,
+     "end": 1.856
+    },
+    {
+     "text": "cones?",
+     "start": 1.856,
+     "end": 2.234
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s7-alonso",
+   "start": 18.285,
+   "duration": 4.173,
+   "voice": "assets/voice/s7-alonso.wav",
+   "voiceStart": 0.15,
+   "speech": 3.623,
+   "cues": {
+    "xa": 0.15,
+    "plan": 1.491,
+    "hit": 2.55
+   },
+   "words": [
+    {
+     "text": "Xabi",
+     "start": 0.15,
+     "end": 0.453
+    },
+    {
+     "text": "Alonso",
+     "start": 0.453,
+     "end": 0.856
+    },
+    {
+     "text": "has",
+     "start": 0.856,
+     "end": 1.068
+    },
+    {
+     "text": "a",
+     "start": 1.068,
+     "end": 1.138
+    },
+    {
+     "text": "plan:",
+     "start": 1.138,
+     "end": 1.491
+    },
+    {
+     "text": "pass",
+     "start": 1.491,
+     "end": 1.774
+    },
+    {
+     "text": "around",
+     "start": 1.774,
+     "end": 2.197
+    },
+    {
+     "text": "them.",
+     "start": 2.197,
+     "end": 2.55
+    },
+    {
+     "text": "The",
+     "start": 2.55,
+     "end": 2.762
+    },
+    {
+     "text": "pass",
+     "start": 2.762,
+     "end": 3.044
+    },
+    {
+     "text": "hits",
+     "start": 3.044,
+     "end": 3.326
+    },
+    {
+     "text": "a",
+     "start": 3.326,
+     "end": 3.397
+    },
+    {
+     "text": "cone.",
+     "start": 3.397,
+     "end": 3.75
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "hit",
+     "offset": -0.2,
+     "volume": 0.22
+    },
+    {
+     "name": "ding",
+     "cue": "hit",
+     "offset": 0.3,
+     "volume": 0.2
+    }
+   ]
+  },
+  {
+   "id": "s8-goal",
+   "start": 22.458,
+   "duration": 7.398,
+   "voice": "assets/voice/s8-goal.wav",
+   "voiceStart": 0.15,
+   "speech": 6.848,
+   "cues": {
+    "min": 0.15,
+    "clear": 1.266,
+    "own": 3.804,
+    "one": 5.935
+   },
+   "words": [
+    {
+     "text": "Ninetieth",
+     "start": 0.15,
+     "end": 0.556
+    },
+    {
+     "text": "minute.",
+     "start": 0.556,
+     "end": 1.266
+    },
+    {
+     "text": "A",
+     "start": 1.266,
+     "end": 1.368
+    },
+    {
+     "text": "clearance",
+     "start": 1.368,
+     "end": 2.281
+    },
+    {
+     "text": "bounces",
+     "start": 2.281,
+     "end": 2.992
+    },
+    {
+     "text": "off",
+     "start": 2.992,
+     "end": 3.296
+    },
+    {
+     "text": "a",
+     "start": 3.296,
+     "end": 3.398
+    },
+    {
+     "text": "cone\u2026",
+     "start": 3.398,
+     "end": 3.804
+    },
+    {
+     "text": "into",
+     "start": 3.804,
+     "end": 4.21
+    },
+    {
+     "text": "Chelsea's",
+     "start": 4.21,
+     "end": 5.123
+    },
+    {
+     "text": "own",
+     "start": 5.123,
+     "end": 5.428
+    },
+    {
+     "text": "goal.",
+     "start": 5.428,
+     "end": 5.935
+    },
+    {
+     "text": "One,",
+     "start": 5.935,
+     "end": 6.138
+    },
+    {
+     "text": "nil,",
+     "start": 6.138,
+     "end": 6.341
+    },
+    {
+     "text": "cones!",
+     "start": 6.341,
+     "end": 6.95
+    }
+   ],
+   "sfx": [
+    {
+     "name": "kick",
+     "cue": "clear",
+     "offset": 0,
+     "volume": 0.25
+    },
+    {
+     "name": "ding",
+     "cue": "clear",
+     "offset": 0.9,
+     "volume": 0.2
+    },
+    {
+     "name": "net",
+     "cue": "own",
+     "offset": 0.9,
+     "volume": 0.3
+    },
+    {
+     "name": "impact-bass-1",
+     "cue": "one",
+     "offset": -0.1,
+     "volume": 0.22
+    }
+   ]
+  },
+  {
+   "id": "s9-end",
+   "start": 29.856,
+   "duration": 5.454,
+   "voice": "assets/voice/s9-end.wav",
+   "voiceStart": 0.15,
+   "speech": 5.004,
+   "cues": {
+    "cel": 0.15,
+    "who": 2.15,
+    "yn": 4.417
+   },
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.15
+    },
+    {
+     "text": "cones",
+     "start": 0.15,
+     "end": 0.483
+    },
+    {
+     "text": "celebrate",
+     "start": 0.483,
+     "end": 1.083
+    },
+    {
+     "text": "by",
+     "start": 1.083,
+     "end": 1.217
+    },
+    {
+     "text": "standing",
+     "start": 1.217,
+     "end": 1.75
+    },
+    {
+     "text": "still.",
+     "start": 1.75,
+     "end": 2.15
+    },
+    {
+     "text": "Comment:",
+     "start": 2.15,
+     "end": 2.683
+    },
+    {
+     "text": "would",
+     "start": 2.683,
+     "end": 3.017
+    },
+    {
+     "text": "your",
+     "start": 3.017,
+     "end": 3.283
+    },
+    {
+     "text": "team",
+     "start": 3.283,
+     "end": 3.55
+    },
+    {
+     "text": "beat",
+     "start": 3.55,
+     "end": 3.817
+    },
+    {
+     "text": "the",
+     "start": 3.817,
+     "end": 4.017
+    },
+    {
+     "text": "cones?",
+     "start": 4.017,
+     "end": 4.417
+    },
+    {
+     "text": "Yes,",
+     "start": 4.417,
+     "end": 4.617
+    },
+    {
+     "text": "or",
+     "start": 4.617,
+     "end": 4.75
+    },
+    {
+     "text": "no?",
+     "start": 4.75,
+     "end": 4.95
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}
