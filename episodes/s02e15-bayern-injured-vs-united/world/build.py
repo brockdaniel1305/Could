@@ -64,6 +64,7 @@ def player(name, num, kit, shorts, socks, numc, skin, hairsvg, inj=()):
         if k == "boot": svg = add(svg, name, "legR", BOOT)
         if k == "thigh": svg = add(svg, name, "legR", THIGH)
         if k == "thighL": svg = add(svg, name, "legL", f'<g transform="translate(-33,0)">{THIGH}</g>')
+        if k == "bootL": svg = add(svg, name, "legL", f'<g transform="translate(-33,0)">{BOOT}</g>')
         if k == "brace": svg = add(svg, name, "legL", f'<g transform="translate(-33,0)">{BRACE}</g>')
         if k == "crutch": svg = add(svg, name, "armR", CRUTCH)
     return sprite(name, SHADOW + svg, 520, 700, 560)
@@ -81,6 +82,8 @@ B = [  # name, num, skin, hair, injuries, kit override
     ("GNA", "7", "#7a4b2a", hair("buzz", "#14141f") + BEARD("#14141f"), ("thigh", "thighL"), None),
     ("DIA", "14", "#9a6a45", hair("curly", "#14141f"), ("crutch",), None),
     ("BUC", "40", "#efc49e", hair("short", "#6b4a2a"), ("brace",), None),
+    ("KAN", "9", "#f0c8a6", hair("short", "#b08a5a"), ("bootL", "crutch"), None),
+    ("OLI", "17", "#6b4226", hair("buzz", "#14141f"), ("crutch", "cast"), None),
 ]
 for n, num, skin, hs, inj, kit in B:
     sprites.append(player(n, num, kit or FCB, kit or FCB, kit or FCB, "#fff", skin, hs, inj))

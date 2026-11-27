@@ -1,5 +1,5 @@
 {
- "duration": 48.395,
+ "duration": 49.572,
  "voice": "prerecorded:elevenlabs:Nathaniel - Live Football Commentator (9rR45HW0vcBmpCbkc4m9)",
  "scenes": [
   {
@@ -58,192 +58,216 @@
   {
    "id": "s2-list",
    "start": 3.188,
-   "duration": 8.61,
+   "duration": 8.887,
    "voice": "assets/voice/s2-list.wav",
    "voiceStart": 0.15,
-   "speech": 8.06,
+   "speech": 8.337,
    "cues": {
     "list": 0.15,
-    "nine": 2.069,
-    "neuer": 2.99,
-    "mus": 4.613
+    "nine": 1.994,
+    "full": 2.732,
+    "neuer": 3.47,
+    "kane": 5.07,
+    "olise": 6.91
    },
    "words": [
     {
      "text": "Bayern",
      "start": 0.15,
-     "end": 0.611
+     "end": 0.593
     },
     {
      "text": "Munich's",
-     "start": 0.611,
-     "end": 1.225
+     "start": 0.593,
+     "end": 1.183
     },
     {
      "text": "injury",
-     "start": 1.225,
-     "end": 1.685
+     "start": 1.183,
+     "end": 1.626
     },
     {
      "text": "list:",
-     "start": 1.685,
-     "end": 2.069
+     "start": 1.626,
+     "end": 1.994
     },
     {
-     "text": "nine",
-     "start": 2.069,
-     "end": 2.376
+     "text": "eleven",
+     "start": 1.994,
+     "end": 2.142
     },
     {
      "text": "players.",
-     "start": 2.376,
-     "end": 2.99
+     "start": 2.142,
+     "end": 2.732
+    },
+    {
+     "text": "A",
+     "start": 2.732,
+     "end": 2.806
+    },
+    {
+     "text": "full",
+     "start": 2.806,
+     "end": 3.101
+    },
+    {
+     "text": "team.",
+     "start": 3.101,
+     "end": 3.47
     },
     {
      "text": "Neuer:",
-     "start": 2.99,
-     "end": 3.554
+     "start": 3.47,
+     "end": 4.035
     },
     {
      "text": "torn",
-     "start": 3.554,
-     "end": 3.978
+     "start": 4.035,
+     "end": 4.411
     },
     {
      "text": "tendon.",
-     "start": 3.978,
-     "end": 4.613
+     "start": 4.411,
+     "end": 5.07
     },
     {
-     "text": "Musiala,",
-     "start": 4.613,
-     "end": 5.318
+     "text": "Kane:",
+     "start": 5.07,
+     "end": 5.47
     },
     {
-     "text": "Gnabry,",
-     "start": 5.318,
-     "end": 5.953
+     "text": "torn",
+     "start": 5.47,
+     "end": 5.79
     },
     {
-     "text": "Davies:",
-     "start": 5.953,
-     "end": 6.601
+     "text": "ankle",
+     "start": 5.79,
+     "end": 6.19
     },
     {
-     "text": "muscle",
-     "start": 6.601,
-     "end": 7.157
+     "text": "ligament.",
+     "start": 6.19,
+     "end": 6.91
     },
     {
-     "text": "problems.",
-     "start": 7.157,
-     "end": 7.99
+     "text": "Olise:",
+     "start": 6.91,
+     "end": 7.531
+    },
+    {
+     "text": "on",
+     "start": 7.531,
+     "end": 7.738
+    },
+    {
+     "text": "crutches.",
+     "start": 7.738,
+     "end": 8.67
     }
    ],
    "sfx": []
   },
   {
    "id": "s3-united",
-   "start": 11.798,
-   "duration": 4.253,
+   "start": 12.075,
+   "duration": 4.891,
    "voice": "assets/voice/s3-united.wav",
    "voiceStart": 0.15,
-   "speech": 3.704,
+   "speech": 4.341,
    "cues": {
     "mu": 0.15,
-    "nine": 1.248,
-    "mgr": 2.539
+    "nine": 1.413,
+    "rel": 1.807,
+    "mgr": 2.912
    },
    "words": [
     {
      "text": "Manchester",
      "start": 0.15,
-     "end": 0.796
+     "end": 0.939
     },
     {
      "text": "United:",
-     "start": 0.796,
-     "end": 1.248
+     "start": 0.939,
+     "end": 1.413
     },
     {
-     "text": "nine",
-     "start": 1.248,
-     "end": 1.506
+     "text": "nineteenth.",
+     "start": 1.413,
+     "end": 1.807
     },
     {
-     "text": "games",
-     "start": 1.506,
-     "end": 1.829
+     "text": "Relegation",
+     "start": 1.807,
+     "end": 2.596
     },
     {
-     "text": "without",
-     "start": 1.829,
-     "end": 2.281
-    },
-    {
-     "text": "a",
-     "start": 2.281,
-     "end": 2.345
-    },
-    {
-     "text": "win.",
-     "start": 2.345,
-     "end": 2.539
+     "text": "zone.",
+     "start": 2.596,
+     "end": 2.912
     },
     {
      "text": "And",
-     "start": 2.539,
-     "end": 2.732
+     "start": 2.912,
+     "end": 3.149
     },
     {
      "text": "a",
-     "start": 2.732,
-     "end": 2.797
+     "start": 3.149,
+     "end": 3.227
     },
     {
      "text": "brand-new",
-     "start": 2.797,
-     "end": 3.314
+     "start": 3.227,
+     "end": 3.859
     },
     {
      "text": "manager.",
-     "start": 3.314,
-     "end": 3.83
+     "start": 3.859,
+     "end": 4.49
     }
    ],
    "sfx": []
   },
   {
    "id": "s4-ko",
-   "start": 16.051,
-   "duration": 2.173,
+   "start": 16.966,
+   "duration": 2.688,
    "voice": "assets/voice/s4-ko.wav",
    "voiceStart": 0.15,
-   "speech": 1.623,
+   "speech": 2.138,
    "cues": {
     "ko": 0.15,
-    "count": 0.634
+    "count": 0.553,
+    "tech": 1.542
    },
    "words": [
     {
      "text": "Kick-off.",
      "start": 0.15,
-     "end": 0.634
+     "end": 0.553
     },
     {
      "text": "Eleven",
-     "start": 0.634,
-     "end": 0.986
+     "start": 0.553,
+     "end": 0.846
     },
     {
      "text": "against",
-     "start": 0.986,
-     "end": 1.572
+     "start": 0.846,
+     "end": 1.387
     },
     {
-     "text": "nine.",
-     "start": 1.572,
-     "end": 1.99
+     "text": "eleven.",
+     "start": 1.387,
+     "end": 1.542
+    },
+    {
+     "text": "Technically.",
+     "start": 1.542,
+     "end": 2.47
     }
    ],
    "sfx": [
@@ -257,7 +281,7 @@
   },
   {
    "id": "s5-pass",
-   "start": 18.224,
+   "start": 19.654,
    "duration": 2.588,
    "voice": "assets/voice/s5-pass.wav",
    "voiceStart": 0.15,
@@ -314,7 +338,7 @@
   },
   {
    "id": "s6-musiala",
-   "start": 20.812,
+   "start": 22.242,
    "duration": 5.056,
    "voice": "assets/voice/s6-musiala.wav",
    "voiceStart": 0.15,
@@ -420,7 +444,7 @@
   },
   {
    "id": "s7-follow",
-   "start": 25.868,
+   "start": 27.298,
    "duration": 2.414,
    "voice": "assets/voice/s7-follow.wav",
    "voiceStart": 0.15,
@@ -465,7 +489,7 @@
   },
   {
    "id": "s8-penalty",
-   "start": 28.282,
+   "start": 29.712,
    "duration": 5.196,
    "voice": "assets/voice/s8-penalty.wav",
    "voiceStart": 0.15,
@@ -565,41 +589,41 @@
   },
   {
    "id": "s9-physio",
-   "start": 33.478,
-   "duration": 2.674,
+   "start": 34.908,
+   "duration": 2.421,
    "voice": "assets/voice/s9-physio.wav",
    "voiceStart": 0.15,
-   "speech": 2.124,
+   "speech": 1.871,
    "cues": {
     "ht": 0.15,
-    "physio": 0.803,
-    "nine": 1.528
+    "physio": 0.762,
+    "nine": 1.442
    },
    "words": [
     {
      "text": "Half-time.",
      "start": 0.15,
-     "end": 0.803
+     "end": 0.762
     },
     {
      "text": "One",
-     "start": 0.803,
-     "end": 1.02
+     "start": 0.762,
+     "end": 0.966
     },
     {
      "text": "physio.",
-     "start": 1.02,
-     "end": 1.528
+     "start": 0.966,
+     "end": 1.442
     },
     {
-     "text": "Nine",
-     "start": 1.528,
-     "end": 1.818
+     "text": "Eleven",
+     "start": 1.442,
+     "end": 1.578
     },
     {
      "text": "patients.",
-     "start": 1.818,
-     "end": 2.47
+     "start": 1.578,
+     "end": 2.19
     }
    ],
    "sfx": [
@@ -613,7 +637,7 @@
   },
   {
    "id": "s10-davies",
-   "start": 36.152,
+   "start": 37.329,
    "duration": 6.347,
    "voice": "assets/voice/s10-davies.wav",
    "voiceStart": 0.15,
@@ -725,7 +749,7 @@
   },
   {
    "id": "s11-end",
-   "start": 42.499,
+   "start": 43.676,
    "duration": 5.896,
    "voice": "assets/voice/s11-end.wav",
    "voiceStart": 0.15,

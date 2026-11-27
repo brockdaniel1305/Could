@@ -8,7 +8,7 @@ export default function plot(T) {
   const s = (k) => T.start[k];
   const END = T.duration, LOOPJ = c("s11.loop") - 0.12;
 
-  const BAY = ["NEU", "KIM", "DAV", "PAV", "MUS", "GNA", "DIA", "BUC"];
+  const BAY = ["NEU", "KAN", "OLI", "KIM", "DAV", "PAV", "MUS", "GNA", "DIA", "BUC"];
   const UTD = ["U1", "U2", "U3", "U4", "U5", "U6", "U7", "U8", "U9", "U10", "U11"];
   const names = [...BAY, ...UTD, "MGR", "PHY", "REF"];
   const W = {}; names.forEach((n) => (W[n] = []));
@@ -43,7 +43,7 @@ export default function plot(T) {
 
   // ---------- s4 kick-off: eleven against nine (+ wheelchair) ----------
   jumpAll(s("s4") - 0.05, (n) => { const b = BAY.indexOf(n), u = UTD.indexOf(n);
-    if (b >= 0) return n === "NEU" ? [-12, 0] : [-2.5 - (b % 3) * 3, -6 + Math.floor(b / 3) * 5];
+    if (b >= 0) return n === "NEU" ? [-12, 0] : [-2.5 - (b % 4) * 2.6, -6 + Math.floor(b / 4) * 4.5];
     if (u >= 0) return n === "U1" ? [13, 0] : [2.5 + (u % 3) * 2.8, -8 + Math.floor(u / 3) * 4.5];
     return n === "REF" ? [0, 7] : OFF(n); });
 
@@ -69,9 +69,9 @@ export default function plot(T) {
   at("U9", PK - 0.6, -40.6, 0.3); at("U9", PK, -41.3, 0.3, "i");
 
   // ---------- s9 half-time: one physio, nine patients ----------
-  const PAT = (k) => [-6 + (k % 4) * 3, -3 + Math.floor(k / 4) * 5];
+  const PAT = (k) => [-7.5 + (k % 5) * 3, -3 + Math.floor(k / 5) * 4.5];
   jumpAll(s("s9") - 0.05, (n) => { const b = BAY.indexOf(n); return b >= 0 ? PAT(b) : n === "PHY" ? [-7, -5] : OFF(n); });
-  [0, 5, 1, 4, 2, 7, 3, 6].forEach((b, k) => { const [x, z] = PAT(b); at("PHY", c("s9.physio") - 0.3 + k * 0.28, x + 0.9, z + 0.5, "s"); });
+  [0, 5, 1, 4, 2, 7, 3, 6, 8, 9].forEach((b, k) => { const [x, z] = PAT(b); at("PHY", c("s9.physio") - 0.3 + k * 0.2, x + 0.9, z + 0.5, "s"); });
 
   // ---------- s10 Davies sprints on one leg down the wing, still faster ----------
   const R0 = c("s10.davies") - 0.1, R1 = G2 - 0.7;
@@ -102,7 +102,7 @@ export default function plot(T) {
     if (n === "DAV") ev.push(["jump", R0, R1 - R0 + 0.6], ["armsUp", G2 + 0.25, 1.2]);
     if (n === "MGR") ev.push(["armR", c("s3.mgr"), s("s4") - c("s3.mgr"), 60]);
     if (n === "PHY") ev.push(["armsUp", c("s9.nine"), 0.8]);
-    if (["KIM", "PAV", "GNA", "BUC", "DIA"].includes(n)) ev.push(["fall", c("s9.ht") + 0.1 + BAY.indexOf(n) * 0.06, s("s10") - c("s9.ht") - 0.3, BAY.indexOf(n) % 2 ? 1 : -1],
+    if (["KIM", "PAV", "GNA", "BUC", "DIA", "KAN", "OLI"].includes(n)) ev.push(["fall", c("s9.ht") + 0.1 + BAY.indexOf(n) * 0.06, s("s10") - c("s9.ht") - 0.3, BAY.indexOf(n) % 2 ? 1 : -1],
       ["up", s("s10") - 0.05]);
     if (UTD.includes(n) && n !== "U1") ev.push(["jump", c("s4.count") + 0.05 * UTD.indexOf(n), 0.5]);
     A[n] = { path: W[n], ev, h: 1.82, unit: 360, stride: n === "MUS" ? 1.0 : n === "DAV" ? 2.6 : BAY.includes(n) ? 1.1 : 1.9, autoFlip: true };
@@ -153,9 +153,10 @@ export default function plot(T) {
   const HOOKCAM = { k: "path", P: [[-47.2, 1.0, 4.6], [-47.6, 1.0, 4.3]], T: [[-50.8, 0.95, 0.4], [-50.8, 0.95, 0.4]], fov: [50, 46], blur: 1.6 };
   add({ t0: 0, ...HOOKCAM });
   add({ t0: 1.7, k: "path", P: [[0, 2.2, 11], [0, 2.0, 9.5]], T: [[0, 0.9, -1.5], [0, 0.9, -1.5]], fov: [52, 50], blur: 1.2 });
-  add({ t0: s("s2") + 0.05, whip: true, k: "path", P: [[-6.5, 1.5, 6.5], [1.5, 1.5, 6.5]], T: [[-6, 1.1, -2], [1.5, 1.1, -2]], fov: [50, 50], blur: 1.2, ease: "l" });
+  add({ t0: s("s2") + 0.05, whip: true, k: "path", P: [[-6.5, 1.5, 6.5], [6.0, 1.5, 6.5]], T: [[-6, 1.1, -2], [6.0, 1.1, -2]], fov: [50, 50], blur: 1.2, ease: "l" });
   add({ t0: c("s2.neuer") - 0.1, blend: 0.3, k: "path", P: [[-6.6, 1.3, 3.2], [-6.8, 1.2, 2.8]], T: [[-7, 0.9, 0], [-7, 0.9, 0]], fov: [46, 42], blur: 1.6 });
-  add({ t0: c("s2.mus") - 0.1, blend: 0.3, k: "path", P: [[-0.5, 1.4, 4.6], [0.4, 1.4, 4.4]], T: [[0, 0.9, 0], [0.6, 0.9, 0]], fov: [50, 48], blur: 1.4 });
+  add({ t0: c("s2.kane") - 0.1, blend: 0.3, k: "path", P: [[-5.0, 1.3, 3.2], [-5.1, 1.2, 2.8]], T: [[-5.25, 0.9, 0], [-5.25, 0.9, 0]], fov: [46, 42], blur: 1.6 });
+  add({ t0: c("s2.olise") - 0.1, blend: 0.3, k: "path", P: [[-3.2, 1.3, 3.2], [-3.3, 1.2, 2.8]], T: [[-3.5, 0.9, 0], [-3.5, 0.9, 0]], fov: [46, 42], blur: 1.6 });
   add({ t0: s("s3") + 0.05, whip: true, k: "path", P: [[-6, 1.6, 6], [2, 1.6, 6.5]], T: [[-4, 1.2, -1], [3, 1.2, -1]], fov: [52, 52], blur: 1.2, ease: "l" });
   add({ t0: c("s3.mgr") - 0.05, blend: 0.3, k: "path", P: [[4.6, 1.6, 8.2], [4.4, 1.6, 7.8]], T: [[3.0, 1.4, 5.2], [3.0, 1.4, 5.2]], fov: [44, 40], blur: 1.8 });
   add({ t0: s("s4") + 0.05, whip: true, k: "path", P: [[0, 5.5, 17], [0, 4.6, 15]], T: [[0, 0, -1], [0, 0.2, -1]], fov: [54, 52], blur: 0.8 });
@@ -180,16 +181,20 @@ export default function plot(T) {
   const lower = (id, t0, who, min, y = 560, t1 = t0 + 1.4) => chip(id, t0, t1, "GOAL · " + min, who, 60, y, "dark", "left");
   const overlays = [
     slam("sl-a", -1, s("s2") - 0.05, "BAYERN'S INJURY LIST<br><b>vs.</b> MAN UNITED", 330, 86),
-    chip("c-inj", c("s2.nine"), c("s2.neuer") - 0.05, "BAYERN", "INJURED: 9", 100, 420, "red"),
-    chip("c-neu", c("s2.neuer"), c("s2.mus") - 0.05, "NEUER", "TORN TENDON", 100, 420, "dark"),
-    chip("c-mus", c("s2.mus"), s("s3") - 0.05, "MUSIALA · GNABRY · DAVIES", "MUSCLE PROBLEMS", 60, 420, "dark"),
-    chip("c-utd", c("s3.nine"), c("s3.mgr") - 0.05, "MAN UNITED · LAST 9 GAMES", "WINS: 0", 80, 420, "red"),
+    chip("c-inj", c("s2.nine"), c("s2.full") - 0.05, "BAYERN", "INJURED: 11", 100, 420, "red"),
+    chip("c-full", c("s2.full"), c("s2.neuer") - 0.05, "INJURED: 11", "= A FULL TEAM", 100, 420, "gold"),
+    chip("c-neu", c("s2.neuer"), c("s2.kane") - 0.05, "NEUER", "TORN TENDON", 100, 420, "dark"),
+    chip("c-kane", c("s2.kane"), c("s2.olise") - 0.05, "KANE · ANKLE LIGAMENT", "OUT ~3 MONTHS", 80, 420, "dark"),
+    chip("c-oli", c("s2.olise"), s("s3") - 0.05, "OLISE · FOOT", "ON CRUTCHES", 100, 420, "dark"),
+    chip("c-utd", c("s3.nine"), c("s3.rel") - 0.05, "MAN UNITED · PREMIER LEAGUE", "19th", 80, 420, "red"),
+    chip("c-rel", c("s3.rel"), c("s3.mgr") - 0.05, "PREMIER LEAGUE · 19th", "RELEGATION ZONE", 80, 420, "red"),
     chip("c-mgr", c("s3.mgr") + 0.2, s("s4") - 0.05, "NEW MANAGER", "FIRST DAY", 100, 420, "gold"),
-    chip("c-1192", c("s4.count"), s("s5") - 0.05, "PLAYERS", "11 vs 9", 140, 420, "gold"),
+    chip("c-1192", c("s4.count"), s("s5") - 0.05, "PLAYERS", "11 vs 11*", 140, 420, "gold"),
+    chip("c-tech", c("s4.tech"), s("s5") - 0.05, "*", "ALL INJURED", 170, 590, "red"),
     chip("c-slow", c("s6.slow"), G1 - 0.1, "MUSIALA", "SLOW-MO 0.5×", 100, 420, "dark"),
     lower("g1", G1 + 0.3, "Musiala (on one crutch)", "23'", 560, s("s7") - 0.05),
     chip("c-save", SAVE + 0.15, s("s9") - 0.05, "PENALTY", "SAVED (CRUTCH)", 80, 420, "gold"),
-    chip("c-phy", c("s9.physio"), s("s10") - 0.05, "PHYSIOS: 1", "PATIENTS: 9", 100, 420, "red"),
+    chip("c-phy", c("s9.physio"), s("s10") - 0.05, "PHYSIOS: 1", "PATIENTS: 11", 100, 420, "red"),
     chip("c-dav", c("s10.faster"), G2 - 0.2, "DAVIES · ON ONE LEG", "STILL FASTER", 60, 420, "gold"),
     lower("g2", G2 + 0.3, "Davies (one leg)", "90'"),
     chip("c-who", c("s11.who"), LOOPJ, "COMMENT", "Who wins the rematch?", 60, 460, "red"),
@@ -198,9 +203,10 @@ export default function plot(T) {
     slam("sl-end", END - 0.3, END + 1, "BAYERN'S INJURY LIST<br><b>vs.</b> MAN UNITED", 330, 86),
   ];
   const bubbles = [
-    { who: "NEU", t0: c("s2.neuer") + 0.3, t1: c("s2.mus") - 0.1, text: "I'M FINE.", cls: "small" },
+    { who: "NEU", t0: c("s2.neuer") + 0.3, t1: c("s2.kane") - 0.1, text: "I'M FINE.", cls: "small" },
+    { who: "KAN", t0: c("s2.kane") + 0.4, t1: c("s2.olise") - 0.1, text: "I CAN STILL SCORE.", cls: "small" },
     { who: "MGR", t0: c("s3.mgr") + 0.4, t1: s("s4") - 0.1, text: "WHO IS NO. 9?", cls: "small" },
-    { who: "U10", t0: c("s4.count") + 0.1, t1: s("s5") - 0.1, text: "...8, 9?", cls: "mun small" },
+    { who: "U10", t0: c("s4.count") + 0.1, t1: s("s5") - 0.1, text: "...10, 11?", cls: "mun small" },
     { who: "MUS", t0: c("s5.bay") + 0.3, t1: s("s6") - 0.1, text: "THANKS!", cls: "fcb small" },
     { who: "REF", t0: c("s7.follow") + 0.05, t1: c("s7.q") - 0.05, text: "♥ LIKE + FOLLOW +", cls: "red follow" },
     { who: "MUS", t0: c("s7.q"), t1: s("s8") - 0.1, text: "BAYERN?", cls: "fcb" },

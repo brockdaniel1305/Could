@@ -1,6 +1,6 @@
 {
  "s1-hook.part0.wav": {
-  "key": "c732d8ed8129ac98bf48659bf325e52f5bc31584",
+  "key": "d8acf4e74c07d1034c91252e1187272be93f08f3",
   "words": [
    {
     "text": "Could",
@@ -40,172 +40,197 @@
   ]
  },
  "s2-list.part0.wav": {
-  "key": "43da178e5fd1ddb4a8c4e52e84875bcd1800e371",
+  "key": "43df2c2b163759fc415e00a9a141baa2590ec682",
   "words": [
    {
     "text": "Bayern",
     "start": 0,
-    "end": 0.461
+    "end": 0.443
    },
    {
     "text": "Munich's",
-    "start": 0.461,
-    "end": 1.075
+    "start": 0.443,
+    "end": 1.033
    },
    {
     "text": "injury",
-    "start": 1.075,
-    "end": 1.535
+    "start": 1.033,
+    "end": 1.476
    },
    {
     "text": "list,",
-    "start": 1.535,
-    "end": 1.919
+    "start": 1.476,
+    "end": 1.844
    },
    {
-    "text": "nine",
-    "start": 1.919,
-    "end": 2.226
+    "text": "11",
+    "start": 1.844,
+    "end": 1.992
    },
    {
-    "text": "players.",
-    "start": 2.226,
-    "end": 2.84
-   },
-   {
-    "text": "Neuer,",
-    "start": 2.84,
-    "end": 3.396
-   },
-   {
-    "text": "Torntenden,",
-    "start": 3.396,
-    "end": 4.414
-   },
-   {
-    "text": "Muzziala,",
-    "start": 4.414,
-    "end": 5.247
-   },
-   {
-    "text": "Nabri,",
-    "start": 5.247,
-    "end": 5.803
-   },
-   {
-    "text": "Davies,",
-    "start": 5.803,
-    "end": 6.451
-   },
-   {
-    "text": "muscle",
-    "start": 6.451,
-    "end": 7.007
-   },
-   {
-    "text": "problems.",
-    "start": 7.007,
-    "end": 7.84
-   }
-  ]
- },
- "s3-united.part0.wav": {
-  "key": "553584f779ccb949a2ef061ecd73ddec37ae5755",
-  "words": [
-   {
-    "text": "Manchester",
-    "start": 0,
-    "end": 0.646
-   },
-   {
-    "text": "United,",
-    "start": 0.646,
-    "end": 1.098
-   },
-   {
-    "text": "nine",
-    "start": 1.098,
-    "end": 1.356
-   },
-   {
-    "text": "games",
-    "start": 1.356,
-    "end": 1.679
-   },
-   {
-    "text": "without",
-    "start": 1.679,
-    "end": 2.131
-   },
-   {
-    "text": "a",
-    "start": 2.131,
-    "end": 2.195
-   },
-   {
-    "text": "win",
-    "start": 2.195,
-    "end": 2.389
-   },
-   {
-    "text": "and",
-    "start": 2.389,
+    "text": "players,",
+    "start": 1.992,
     "end": 2.582
    },
    {
     "text": "a",
     "start": 2.582,
-    "end": 2.647
+    "end": 2.656
+   },
+   {
+    "text": "full",
+    "start": 2.656,
+    "end": 2.951
+   },
+   {
+    "text": "team.",
+    "start": 2.951,
+    "end": 3.32
+   },
+   {
+    "text": "Neuer,",
+    "start": 3.32,
+    "end": 3.885
+   },
+   {
+    "text": "torn",
+    "start": 3.885,
+    "end": 4.261
+   },
+   {
+    "text": "tendon.",
+    "start": 4.261,
+    "end": 4.92
+   },
+   {
+    "text": "Kane,",
+    "start": 4.92,
+    "end": 5.32
+   },
+   {
+    "text": "torn",
+    "start": 5.32,
+    "end": 5.64
+   },
+   {
+    "text": "ankle",
+    "start": 5.64,
+    "end": 6.04
+   },
+   {
+    "text": "ligament.",
+    "start": 6.04,
+    "end": 6.76
+   },
+   {
+    "text": "Elise,",
+    "start": 6.76,
+    "end": 7.381
+   },
+   {
+    "text": "on",
+    "start": 7.381,
+    "end": 7.588
+   },
+   {
+    "text": "crutches.",
+    "start": 7.588,
+    "end": 8.52
+   }
+  ]
+ },
+ "s3-united.part0.wav": {
+  "key": "f274a4dee4a009ec49c64b2a0eb55945c827040c",
+  "words": [
+   {
+    "text": "Manchester",
+    "start": 0,
+    "end": 0.789
+   },
+   {
+    "text": "United",
+    "start": 0.789,
+    "end": 1.263
+   },
+   {
+    "text": "19th,",
+    "start": 1.263,
+    "end": 1.657
+   },
+   {
+    "text": "Relegation",
+    "start": 1.657,
+    "end": 2.446
+   },
+   {
+    "text": "Zone",
+    "start": 2.446,
+    "end": 2.762
+   },
+   {
+    "text": "and",
+    "start": 2.762,
+    "end": 2.999
+   },
+   {
+    "text": "a",
+    "start": 2.999,
+    "end": 3.077
    },
    {
     "text": "brand",
-    "start": 2.647,
-    "end": 2.97
+    "start": 3.077,
+    "end": 3.472
    },
    {
     "text": "new",
-    "start": 2.97,
-    "end": 3.164
+    "start": 3.472,
+    "end": 3.709
    },
    {
     "text": "manager.",
-    "start": 3.164,
-    "end": 3.68
+    "start": 3.709,
+    "end": 4.34
    }
   ]
  },
  "s4-ko.part0.wav": {
-  "key": "dd8c20f56ce6240907616bb0c86cb96c995c4f04",
+  "key": "19d7ef4a1b68d8a9b22445f3dfc873a72d810b71",
   "words": [
    {
-    "text": "Kick",
+    "text": "kick",
     "start": 0,
-    "end": 0.335
+    "end": 0.309
    },
    {
-    "text": "off,",
-    "start": 0.335,
-    "end": 0.669
+    "text": "off",
+    "start": 0.309,
+    "end": 0.541
    },
    {
     "text": "11",
-    "start": 0.669,
-    "end": 0.836
+    "start": 0.541,
+    "end": 0.696
    },
    {
     "text": "against",
-    "start": 0.836,
-    "end": 1.422
+    "start": 0.696,
+    "end": 1.237
    },
    {
-    "text": "nine.",
-    "start": 1.422,
-    "end": 1.84
+    "text": "11",
+    "start": 1.237,
+    "end": 1.392
+   },
+   {
+    "text": "technically.",
+    "start": 1.392,
+    "end": 2.32
    }
   ]
  },
  "s5-pass.part0.wav": {
-  "key": "dc81d494616dc2e2e78ab1270d639173bb400abc",
+  "key": "74a70a5d6520f7e161f97689d937facf6992bc9a",
   "words": [
    {
     "text": "United's",
@@ -245,7 +270,7 @@
   ]
  },
  "s6-musiala.part0.wav": {
-  "key": "8a2250d8f2fe7c69045a38c26e2ea456bdda2c2e",
+  "key": "4039f1280c355cf9191d25d76356f7696f5dfea3",
   "words": [
    {
     "text": "Muzzialla",
@@ -308,14 +333,14 @@
     "end": 4.242
    },
    {
-    "text": "1-0!",
+    "text": "1-0.",
     "start": 4.242,
     "end": 4.52
    }
   ]
  },
  "s7-follow.part0.wav": {
-  "key": "f331c047acfc7265527d7272d0dd3180fbf10876",
+  "key": "2dd76005ca71d152e9d695499695514dfb7bb6bf",
   "words": [
    {
     "text": "Like",
@@ -350,7 +375,7 @@
   ]
  },
  "s8-penalty.part0.wav": {
-  "key": "c00a7d4b00dab0aca0977eb827d727e1252275f1",
+  "key": "a6093d3e32f39884f2a2d20b0a7c76c3b6edd11f",
   "words": [
    {
     "text": "United's",
@@ -425,42 +450,37 @@
   ]
  },
  "s9-physio.part0.wav": {
-  "key": "762ecf85f44711684c3e2fae664bf433061b6b90",
+  "key": "04032fa52e7538d3d1152b0c358973798cbf9430",
   "words": [
    {
-    "text": "Half",
+    "text": "halftime,",
     "start": 0,
-    "end": 0.29
-   },
-   {
-    "text": "time,",
-    "start": 0.29,
-    "end": 0.653
+    "end": 0.612
    },
    {
     "text": "one",
-    "start": 0.653,
-    "end": 0.87
+    "start": 0.612,
+    "end": 0.816
    },
    {
     "text": "physio,",
-    "start": 0.87,
-    "end": 1.378
+    "start": 0.816,
+    "end": 1.292
    },
    {
-    "text": "nine",
-    "start": 1.378,
-    "end": 1.668
+    "text": "11",
+    "start": 1.292,
+    "end": 1.428
    },
    {
     "text": "patients.",
-    "start": 1.668,
-    "end": 2.32
+    "start": 1.428,
+    "end": 2.04
    }
   ]
  },
  "s10-davies.part0.wav": {
-  "key": "9ce703c0064a87b3f81d283dec40f9fe44479d78",
+  "key": "0ed0e955f06e362edc35126f5ec5d1c0d9c65873",
   "words": [
    {
     "text": "Minute",
@@ -530,7 +550,7 @@
   ]
  },
  "s11-end.part0.wav": {
-  "key": "79f1553bf8c83c10f2a63db62359e452390a68a4",
+  "key": "b281839a5ce3e06696af44ed86035edf373bf2e2",
   "words": [
    {
     "text": "last",
